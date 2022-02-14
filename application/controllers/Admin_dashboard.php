@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_addoption extends CI_Controller {
+class Admin_dashboard extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -26,7 +26,7 @@ class Admin_addoption extends CI_Controller {
 		
 		
 		$this->load->view('admin/header');
-		$this->load->view('admin/addoption');
+		$this->load->view('admin/dashboard');
 		$this->load->view('admin/footer');
 	}
 }

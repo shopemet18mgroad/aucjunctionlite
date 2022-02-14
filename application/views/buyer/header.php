@@ -107,7 +107,34 @@ input[type=text] {
   border: none;
   border-bottom: 2px solid blue;
 }
+@font-face {
+  font-family: 'dentco';
+  src:  url('fonts/dentco.eot?291lp8');
+  src:  url('fonts/dentco.eot?291lp8#iefix') format('embedded-opentype'),
+    url('fonts/dentco.ttf?291lp8') format('truetype'),
+    url('fonts/dentco.woff?291lp8') format('woff'),
+    url('fonts/dentco.svg?291lp8#dentco') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dentco' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-placeholder:before {
+  content: "\e91d";
+}
 
 
 
@@ -200,7 +227,7 @@ input[type=text] {
             <p class="sidebar-menu-title">Dash menu</p>
           </li>
           
-          
+          <i class="icon-placeholder"></i>
           
        
                <li class="nav-item">
@@ -213,7 +240,8 @@ input[type=text] {
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a class="nav-link" href="#"> My Account</a></li>
            <li class="nav-item"><a class="nav-link" href="#">  Orders & Payments</a></li>
-             <li class="nav-item"><a class="nav-link" href="#">  My Ads </a></li>
+             <li class="nav-item"><a class="nav-link" href="#"> My auctions </a></li>
+             <li class="nav-item"><a class="nav-link" href="#"> Messages and Notification</a></li>
                 
                
                 
@@ -294,24 +322,25 @@ input[type=text] {
               </ul>
             </div>
           </li>
+          
             <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
-              <i class="typcn typcn-clipboard menu-icon text-info"></i>
-              <span class="menu-title">OTHERS</span>
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic6">
+              <i class="typcn typcn-news menu-icon text-info"></i>
+              <span class="menu-title">POLICIES</span>
               <i class="typcn typcn-chevron-right menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic4">
+            <div class="collapse" id="ui-basic6">
               <ul class="nav flex-column sub-menu">
                   
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>">Our Bussiness</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>">Deals & Offer</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>">  Privacy Policy</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>">About Us</a></li>
                
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>"> All India</a></li>
-                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>"> Download App</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>">Contact Us </a></li>
                 
               </ul>
             </div>
           </li>
+  
           
           
           

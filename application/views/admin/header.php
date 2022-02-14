@@ -35,10 +35,11 @@ $(document).ready( function () {
 
 	.card-header{
 		border-radius:20px;
+        
 	
 	}
     body{
-        font-family:Serif;
+        font-family:ProximaNova-Regular,Arial,Helvetica,sans-serif;
        
     }
     
@@ -61,12 +62,12 @@ $(document).ready( function () {
 
 .card{
      border-radius:20px;
-     font-family: Times New Roman;
+     font-family:ProximaNova-Regular,Arial,Helvetica,sans-serif;
 }
 #grad{
-     background-image: linear-gradient(90deg,#35D6ED,#7AE5F5,#97EBF4);
+     background-image: linear-gradient(180deg,#2196f363,white,#2196f363);
 border-radius:20px;
-font-family:monospace;
+font-family:ProximaNova-Regular,Arial,Helvetica,sans-serif;
 font-size:large;
 border:none;
 }
@@ -110,7 +111,7 @@ input[type=password] {
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>images/aucjunction.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="<?php echo base_url();?>Admin_dashboard"><img src="<?php echo base_url()."web_files/";?>images/aucjunction.png" alt="logo"/></a>
               <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url()."web_files/";?>images/aucjunction.png" alt="logo"/></a>
       
           <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex text-info" type="button" data-toggle="minimize">
@@ -119,6 +120,7 @@ input[type=password] {
            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="typcn typcn-th-menu text-info"></span>
           </button>
+          
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
       
