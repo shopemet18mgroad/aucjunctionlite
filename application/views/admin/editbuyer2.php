@@ -1,7 +1,7 @@
 <div class="main-panel">
           <div class="content-wrapper">
         
-         <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multiport/form-data">   
+            
             
             <div class="row">
               <div class="col-lg-12 d-flex grid-margin stretch-card">
@@ -155,10 +155,10 @@
 								
 							<div class="d-flex justify-content-around">
 							<div class="Col-sm-4">
-							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Submit</button>
+							<button type="button" class="btn btn-success btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Update</button>
 						</div>
 					<div class="Col-sm-4">
-							<button type="button" class="btn btn-info btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Cancel</button>
+							<button type="button" class="btn btn-success btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Cancel</button>
 							</div>
 							
 								
@@ -190,9 +190,7 @@
 				  
 				  
                 </div>
-				</form>
               </div>
-			  
             </div>
           
           </div>
