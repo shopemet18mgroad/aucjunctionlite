@@ -1,12 +1,26 @@
 
-<div class="container">
+<div class="container mt-5">
 	
 	
-	<center> <h3 class="font-weight-bold">The best way to sell your Car<br>
-List your vehicle for FREE<br>
-	POST YOUR AD</h3></center>
-	<div class="card col-md-12 container-fluid mr-5">
-	   <center> <h3>  SELECTED CATEGORY / Car </h3></center>
+  <center> <h3 style="background-color:#03a9f463;color:white;" class="mb-5 p-2"><center> <h3 class="font-weight-bold">THE BEST WAY TO SELL YOUR CAR
+LIST YOUR VEHICLE FOR FREE
+	POST YOUR AUCTION</h3></center> </h3></center>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="card col-md-12 container-fluid mr-5 mt-3">
+	  <h3> <center> SELECTED CATEGORY / Car </center></h3>
 	<hr>
 	   <center> <h3> INCLUDE SOME DETAILS </h3></center>
 
