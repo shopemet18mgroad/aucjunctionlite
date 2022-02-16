@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
  
 
@@ -105,6 +106,12 @@ option[type=text] {
   border: none;
   border-bottom: 2px solid blue;
 }
+.col{
+border:1px solid #d3d3d3;
+background-color:white;
+width:50px;
+height:100px;
+}
 
 
 
@@ -187,15 +194,15 @@ option[type=text] {
        
           <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic6">
-              <i class="typcn typcn-user menu-icon text-info"></i>
-              <span class="menu-title">categories</span>
+                  <i class="typcn  typcn-th-small menu-icon  text-info"  ></i>
+              <span class="menu-title">START AUCTION</span>
               <i class="typcn typcn-chevron-right menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic6">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>Seller_addauction">add Auction </a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>Seller_addauction"> Categories </a></li>
                
-                <li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>Admin_editsellerlist">Edit Auction</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>">Edit Auction</a></li>
                 
 
                 
@@ -205,7 +212,7 @@ option[type=text] {
             </div>
           </li>
           
-           <li class="nav-item ">
+      <!--     <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" href="#ui-meg" aria-expanded="false" aria-controls="ui-meg">
             
            
@@ -213,6 +220,7 @@ option[type=text] {
               <i class="typcn  typcn-th-small menu-icon  text-info"  ></i>
               <span class="menu-title">CATEGORIES</span>
               <i class="typcn typcn-chevron-right menu-arrow"></i>
+              
             </a>
             <div class="collapse" id="ui-meg">
               <ul class="nav flex-column sub-menu">
@@ -234,7 +242,7 @@ option[type=text] {
               
               </ul>
             </div>
-          </li>
+          </li>-->
           
           
         
@@ -243,42 +251,7 @@ option[type=text] {
           
           
           
-            <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic12" aria-expanded="false" aria-controls="ui-basic12">
-              <i class="typcn typcn-user menu-icon text-info"></i>
-              <span class="menu-title">BUYER</span>
-              <i class="typcn typcn-chevron-right menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic12">
-              <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_addbuyer">Add Buyer</a></li>
-              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_addbuyerlist">Edit Buyer</a></li>
-                
-               
-                
-              
-              </ul>
-            </div>
-          </li>
-             
-            <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-meg" aria-expanded="false" aria-controls="ui-meg">
-              <i class="typcn typcn-user menu-icon text-info rounded-circle"></i>
-              <span class="menu-title">Approval</span>
-              <i class="typcn typcn-chevron-right menu-arrow"></i>
-            </a>
-            <div class="collapse megha" id="ui-meg">
-              <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>     Admin_apprvalist">Approve Seller </a></li>
-                
-                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_addbuyerlist">Approve Buyer</a></li>
-                
-               
-                
-              
-              </ul>
-            </div>
-          </li>
+  
                
                   
        
@@ -288,24 +261,7 @@ option[type=text] {
           
           
           
-            <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic3">
-           <i class="typcn typcn-book menu-icon text-info"></i>
-              <span class="menu-title">AUCTION</span>
-              <i class="typcn typcn-chevron-gavel menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic3">
-              <ul class="nav flex-column sub-menu">
-                  
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_startauction">Create Auction</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_editauction">Edit Auction</a></li>
-               
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_viewforthcomingauction">View Forthcoming Auction</a></li>
-                
-              </ul>
-            </div>
-          </li>
-          
+
           
             <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
@@ -316,10 +272,10 @@ option[type=text] {
             <div class="collapse" id="ui-basic4">
               <ul class="nav flex-column sub-menu">
                   
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_bidsummary"> Bid Summary </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_bidwinner"> Bid Winner</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>"> Bid Summary </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>"> Bid Winner</a></li>
                
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_bidloser">Bid Loser </a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>">Bid Loser </a></li>
                 
               </ul>
             </div>

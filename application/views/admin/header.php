@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>CelestialUI Admin</title>
+    <title>Admin Dashboard</title>
     <!-- base:css -->
     <link rel="stylesheet" href="<?php echo base_url()."web_files/";?>vendors/typicons.font/font/typicons.css">
     <link rel="stylesheet" href="<?php echo base_url()."web_files/";?>vendors/css/vendor.bundle.base.css">
@@ -19,8 +19,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
  
 
@@ -65,7 +69,7 @@ $(document).ready( function () {
      font-family:ProximaNova-Regular,Arial,Helvetica,sans-serif;
 }
 #grad{
-     background-image: linear-gradient(180deg,#2196f363,white,#2196f363);
+     background-image: linear-gradient(180deg,#03a9f463,white)!important;
 border-radius:20px;
 font-family:ProximaNova-Regular,Arial,Helvetica,sans-serif;
 font-size:large;
@@ -99,6 +103,13 @@ input[type=password] {
   
   border: none;
   border-bottom: 2px solid blue;
+}
+
+.col{
+border:1px solid #d3d3d3;
+background-color:white;
+width:50px;
+height:100px;
 }
 
 
@@ -158,7 +169,7 @@ input[type=password] {
 
       <div class="container-fluid page-body-wrapper">
     
-        <nav class="sidebar sidebar-offcanvas bg-white" id="sidebar">
+        <nav class="sidebar sidebar-offcanvas bg-white active  " id="sidebar">
         <ul class="nav">
           <li class="nav-item">
             <div class="d-flex sidebar-profile">
@@ -225,7 +236,7 @@ input[type=password] {
             <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-meg" aria-expanded="false" aria-controls="ui-meg">
               <i class="typcn typcn-user menu-icon text-info rounded-circle"></i>
-              <span class="menu-title">Approval</span>
+              <span class="menu-title">APPROVAL</span>
               <i class="typcn typcn-chevron-right menu-arrow"></i>
             </a>
             <div class="collapse megha" id="ui-meg">
@@ -288,3 +299,18 @@ input[type=password] {
 
       </nav>
         <!-- partial -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

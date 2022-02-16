@@ -23327,9 +23327,12 @@ body.avgrund-active {
 }
 
 .sidebar .nav .nav-item.active > .nav-link {
-  background: #414147;
+  background: #03a9f463;
   position: relative;
+  border-radius:30px 50px 30px 50px;
+  font-family:monospace;
 }
+
 
 .sidebar .nav .nav-item.active > .nav-link .menu-title,
 .sidebar .nav .nav-item.active > .nav-link .menu-arrow {
@@ -23354,7 +23357,7 @@ body.avgrund-active {
 
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
   background:#2196f363;
-  color: #2196f3;
+  color: #fff;
   border-radius:30px 50px 30px 50px;
   font-family:monospace;
 }
@@ -23404,8 +23407,13 @@ body.avgrund-active {
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link:hover {
-  color:#939393;
+
+  color: #2196f3;
+
+  
   font-weight:bold;
+  
+  
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link.active {
