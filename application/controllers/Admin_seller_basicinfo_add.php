@@ -27,7 +27,7 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
 		$iemailid  = $this->input->post('iemailid');
-		$ipass = $this->input->post('ipass');
+		$ipass = base64_encode($this->input->post('ipass'));
 		$iconpass = base64_encode($this->input->post('iconpass'));
 		
 		$iadharcardfile  = $this->input->post('iadharcardfile');

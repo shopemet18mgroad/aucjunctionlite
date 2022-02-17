@@ -5,10 +5,9 @@
         <div class="main-panel">
           <div class="content-wrapper">
 		  
-		  <form name="myForm"  action="<?php echo base_url();?>admin_seller_basicsuccess_add" method="POST" enctype="multipart/form-data">
 		  
 		  
-        <form action="<?php echo base_url();?>Admin_seller_basicsuccess_add" method="POST"  enctype="multipart/form-data">
+        <form action="<?php echo base_url();?>Admin_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
             
             
             <div class="row">
@@ -41,6 +40,7 @@
 										
 											<label> <i class="fa fa-user mr-2 text-success fa-2x"></i>Full Name</label>
 											<input type="text" class="form-control" id="iname" name="iname" value="<?php echo $sqldata[0]->iname;?>">
+											<input type="hidden" class="form-control" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no;?>">
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-success fa-2x"></i>Contact Number*</label>
@@ -148,7 +148,7 @@
 										
 											<div class="d-flex justify-content-around">
 							<div class="Col-sm-4">
-							<button type="button" class="btn btn-success btn-rounded m-4 btn-lg Col-sm-4" onclick="return validateindiviual()" id="mm">Update</button>
+							<button type="Submit" name="submit" class="btn btn-success btn-rounded m-4 btn-lg Col-sm-4"  onclick="return validateindiviual()" id="mm">Update</button>
 						</div>
 					<div class="Col-sm-4">
 							<button type="button" class="btn btn-success btn-rounded btn-lg  Col-sm-4  m-4">Cancel</button>
