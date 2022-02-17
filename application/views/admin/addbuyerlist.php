@@ -86,7 +86,7 @@
                           </td>
                           <td>
 						  
-						<a href="Admin_editseller"><i class="fa fa-pencil m-2" style="font-size:24px;color:blue;"></i></a>
+						<a href="Admin_editbuyer2"><i class="fa fa-pencil m-2" style="font-size:24px;color:blue;"></i></a>
 						
 						<i class="fa fa-check" style="font-size:24px;color:green"></i>
 						
