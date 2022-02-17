@@ -20,8 +20,22 @@ class Admin_editbuyer2 extends CI_Controller {
 	 */
 	public function index()
 	{
+		
+		
+	$this->load->model('Admin_model');
+
+	$buysl_no = urldecode($this->uri->segment(3));
+	
+	$active = array('buysl_no'=>$buysl_no);
+	
+	$query = $this->Admin_model->getdatafromtable('buyerdetails', $active);
+	
+	$data['sqldata']= $query;
+		
+	
+	
 		$this->load->view('admin/header');
-		$this->load->view('admin/editbuyer2');
+		$this->load->view('admin/editbuyer2',$data);
 		$this->load->view('admin/footer');
 	}
 }

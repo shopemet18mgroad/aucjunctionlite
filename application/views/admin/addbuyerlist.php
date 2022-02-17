@@ -1,24 +1,8 @@
-
-      
-        
-        
-        <div class="main-panel">
+<div class="main-panel">
 		
           <div class="content-wrapper">
 		  
-		  
-		    
-
-	
-							
-         
-		
-			
-		  
-		  
-        
-            
-       <div class="col-lg-12 grid-margin stretch-card">
+		    <div class="col-lg-12 grid-margin stretch-card">
 	  
 	   
 	      
@@ -32,13 +16,7 @@
 				
 				
 				
-				
-				
-				
-				
-                 
-                
-                  <div class="table-responsive" style="border-radius:10px">
+				  <div class="table-responsive" style="border-radius:10px">
                     <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
                       <thead>
 					   <tr>
@@ -49,57 +27,55 @@
                             Sl. No .
                           </th>
                           <th>
-                            Buyer Name 
+                           NAME
                           </th>
                           <th>
-                              Name 
+						 ADAR NUMBER*
+                          </th>
+                          
+                          <th>
+                          EMAIL
                           </th>
                           <th>
-                            Buyer type 
-                          </th>
-                          <th>
-                           Contact Person
-                          </th>
-                          <th>
-                            Action
+                      ACTION
                           </th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-						 <td>
-                           1
-                          </td>
-                          <td>
-                            ABC
-                          </td>
-                          <td>
-                            Herman Beck
-                          </td>
-                          <td>
-                          
-                             individual
-                     
-                          </td>
-                          <td>
-                           8548857535
-                          </td>
-                          <td>
-						  
-						<a href="Admin_editbuyer2"><i class="fa fa-pencil m-2" style="font-size:24px;color:blue;"></i></a>
+					  
+					  
+					  
+					  
+                 <?php $count = 1;?>
+					
+			<?php foreach($data as $row){?>
+				<tr>												
+					<td><?php echo $count ?> </td>
+					<td><?php echo $row->buyername ?> </td>
+					<td><?php echo $row->buyerasdharnumber ?> </td>
+					<td><?php echo $row->buyeremail ?> </td>
+					
+					
+					<td >  
+					
+					
+		<a href="<?php echo base_url()."Admin_editbuyer2/index/".urldecode($row->buysl_no);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
+
+<i class="fa fa-eye" style="font-size:24px;color:gray"></i>		</td>		
+
+
+
+
+				
+				</tr>
+				<?php $count++ ?>
+				
+			<?php }?>
+  
+	
+				</tbody> 
 						
-						<i class="fa fa-check" style="font-size:24px;color:green"></i>
-						
-						
-						<i class="fa fa-ban" style="font-size:24px;color:red;"></i>
-						
-						
-						
-                          </td>
-                        </tr>
-                      
-                
-                      </tbody>
+	
                     </table>
                   </div>
                 </div>
@@ -111,11 +87,6 @@
           <!-- partial -->
         </div>
      
-        
-        
-        
-        
-        
         
         <!-- main-panel ends -->
       </div>

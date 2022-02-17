@@ -27,11 +27,11 @@ public function index()
 			$buyercontactnumber= $this->input->post('buyercontactnumber');
 			$buyerasdharnumber = $this->input->post('buyerasdharnumber');
 			$buyeremail = $this->input->post('buyeremail');
-			$buyerpass = $this->input->post('buyerpass');
-			$bconpassword = $this->input->post('bconpassword');
+			$buyerpass = base64_encode($this->input->post('buyerpass'));
+			$bconpassword = base64_encode($this->input->post('bconpassword'));
 			$buyeradharcard = $this->input->post('buyeradharcard');
-			$buyeraddress =  base64_encode($this->input->post('buyeraddress'));
-		$buyercity = base64_encode($this->input->post('buyercity'));
+			$buyeraddress = $this->input->post('buyeraddress');
+		    $buyercity =$this->input->post('buyercity');
 			$buyerstate = $this->input->post('buyerstate');
 			$buyercountry = $this->input->post('buyercountry');
 			$buyerpincode = $this->input->post('buyerpincode');
@@ -40,10 +40,13 @@ public function index()
 			
 			
 			$this->load->model('Admin_model');
-			  $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber, 'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail, 'buyerpass' => $buyerpass, 'bconpassword' => $bconpassword, 'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,'buyerpincode' => $buyerpincode,'buyercontactperson' => $bbuyercontactperson, 'addressproof' => $addressproof,);
+			  $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber, 'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail, 'buyerpass' => $buyerpass, 'bconpassword' => $bconpassword, 'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,'buyerpincode' => $buyerpincode,'buyercontactperson' => $buyercontactperson, 'addressproof' => $addressproof);
+			  
+			  //print_r($data2); die;
+			  
 		$datainserr = "Data Inserted Successfully";
-		$status = $this->Admin_model->insert('buyer_register', $data2);
-		header('location: '.base_url().'admin_buyerreg/index/'.$datainserr);
+		$status = $this->Admin_model->insert('buyerdetails', $data2);
+		header('location: '.base_url().'admin_addbuyer/index/'.$datainserr);
 		
 	
 		

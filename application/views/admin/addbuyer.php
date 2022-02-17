@@ -155,7 +155,7 @@
 								
 							<div class="d-flex justify-content-around">
 							<div class="Col-sm-4">
-							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Submit</button>
+							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" <!--onclick="return validatebuyer() "-->Submit</button>
 						</div>
 					<div class="Col-sm-4">
 							<button type="button" class="btn btn-info btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Cancel</button>

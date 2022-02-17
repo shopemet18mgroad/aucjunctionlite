@@ -29,36 +29,33 @@
 									
 	
 										<div class="form-group">
-										<label> <i class="fa fa-user mr-2 text-info fa-2x"></i>Full Name</label>
+										<label> <i class="fa fa-user mr-2 text-success fa-2x"></i>Full Name</label>
 											
-											<input type="text" class="form-control" id="buyername" name="buyername">
+											<input type="text" class="form-control" id="buyername" name="buyername" value="<?php echo $sqldata[0]->buyername ?>">
 										</div>
 										<div class="form-group">
-											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text" class="form-control" id="buyercontactnumber" name="buyercontactnumber">
+											<label> <i class="fa fa-mobile mr-2 text-success fa-2x"></i>Contact Number*</label>
+											<input type="text" class="form-control" id="buyercontactnumber" name="buyercontactnumber" value="<?php echo $sqldata[0]->buyercontactnumber ?>">
 										</div>
 										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" class="form-control" id ="buyerasdharnumber" name="buyerasdharnumber">
+											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Adhar Number*</label><br>
+											<input type="text" class="form-control" id ="buyerasdharnumber" name="buyerasdharnumber" value="<?php echo $sqldata[0]->buyerasdharnumber ?>">
 										</div>
 											
 										
 										<div class="form-group">
-										<label> <i class="fa fa-envelope  mr-2 text-info fa-2x"></i>Email Id </label>
-											<input type="email" class="form-control" id="buyeremail" name="buyeremail">
+										<label> <i class="fa fa-envelope  mr-2 text-success fa-2x"></i>Email Id </label>
+											<input type="email" class="form-control" id="buyeremail" name="buyeremail" value="<?php echo $sqldata[0]->buyeremail ?>">
 										</div>
 										<div class="form-group">
-										<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
-											<input type="password" class="form-control" id="buyerpass" name="buyerpass">
+											<label> <i class="fa fa-map-marker  mr-2 text-success fa-2x"></i>Address </label>
+											<input type="text" class="form-control" id="buyeraddress" name="buyeraddress" value="<?php echo $sqldata[0]->buyeraddress ?>">
 										</div>
 										
-											<div class="form-group">
-											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
-											<input type="password" class="form-control"id="bconpassword" name="bconpassword">
-										</div>
+										
 										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="buyeradharcard" name="buyeradharcard" >
+											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Aadhar card </label><br>
+											<input type="file" id="buyeradharcard" name="buyeradharcard" value="<?php echo $sqldata[0]->buyeradharcard ?>" >
 										</div>
 											
 										
@@ -67,18 +64,15 @@
 										</div>
 						
 										<div class="col-md-6">
-										<div class="form-group">
-											<label> <i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>Address </label>
-											<input type="text" class="form-control" id="buyeraddress" name="buyeraddress">
-										</div>
+										
 										
 										<div class="form-group">
-											<label><i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>City</label>
-											<input type="text" class="form-control" id="buyercity" name="buyercity">
+											<label><i class="fa fa-map-marker  mr-2 text-success fa-2x"></i>City</label>
+											<input type="text" class="form-control" id="buyercity" name="buyercity" value="<?php echo $sqldata[0]->buyercity ?>">
 										</div>
 										<div class="form-group">
 											<label>State/Union Ter.</label>
-											  <select class="custom-select" id="buyerstate" name="buyerstate" style="border-radius:20px;">
+											  <select class="custom-select" id="buyerstate" name="buyerstate" style="border-radius:20px;" value="<?php echo $sqldata[0]->buyerstate ?>">
                       <option value="Karnataka" selected>Karnataka</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                       <option value="Assam">Assam</option>
@@ -111,24 +105,27 @@
                     </select>
 										</div>
 										<div class="form-group">
-											<label>Country</label>
-											<input type="text" value="India" id="buyercountry" name="buyercountry" class="form-control">
+										<label> <i class="fa fa-flag mr-2 text-success fa-2x"></i>Country </label>
+											
+											<input type="text" value="India" id="buyercountry" name="buyercountry" class="form-control" value="<?php echo $sqldata[0]->buyercountry ?>">
 										</div>
 										<div class="form-group">
-											<label>Pincode</label>
-											<input type="text" class="form-control"id="buyerpincode" name="buyerpincode">
+											
+											<label><i class="fa fa-map-pin mr-2 text-success fa-2x"></i>Pincode*</label>
+											<input type="text" class="form-control"id="buyerpincode" name="buyerpincode" value="<?php echo $sqldata[0]->buyerpincode ?>" >
 										</div>
 										
 										
 											<div class="form-group">
-										<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
-											<input type="text" class="form-control" id="buyercontactperson" name="buyercontactperson">
+										<label><i class="fa fa-user mr-2 text-success fa-2x"></i>Contact person*</label>
+											<input type="text" class="form-control" id="buyercontactperson" name="buyercontactperson" value="<?php echo $sqldata[0]->buyercontactperson ?>">
 										</div>
 										
 												
 										<div class="form-group" >
-											<label>Address proof</label><br>
-											<input type="file" id="addressproof" name="addressproof" >
+										<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Address proof</label>
+										<br>
+											<input type="file" id="addressproof" name="addressproof" value="<?php echo $sqldata[0]->addressproof ?>">
 										</div>
 										
 										

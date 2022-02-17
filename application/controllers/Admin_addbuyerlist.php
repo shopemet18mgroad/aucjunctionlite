@@ -20,8 +20,26 @@ class Admin_addbuyerlist extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
+		
+		
+		$buyeroption = array('buyeroption'=>false);
+		
+	$query = $this->Admin_model->getdatafromtable('buyerdetails',$buyeroption);
+		
+		$adac['data'] = $query;
+		
+		
 		$this->load->view('admin/header');
-		$this->load->view('admin/addbuyerlist');
+		$this->load->view('admin/addbuyerlist',$adac);
 		$this->load->view('admin/footer');
-	}
+		
+		
+		
+		
+	}		
+	
 }
