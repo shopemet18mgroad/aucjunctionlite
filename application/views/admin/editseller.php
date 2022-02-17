@@ -5,10 +5,10 @@
         <div class="main-panel">
           <div class="content-wrapper">
 		  
-		  <form name="myForm"  action="<?php echo base_url();?>admin_seller_basicinfo_add" method="POST" enctype="multipart/form-data">
+		  <form name="myForm"  action="<?php echo base_url();?>admin_seller_basicsuccess_add" method="POST" enctype="multipart/form-data">
 		  
 		  
-        <form action="<?php echo base_url();?>Admin_seller_basicinfo_add" method="POST"  enctype="multipart/form-data">
+        <form action="<?php echo base_url();?>Admin_seller_basicsuccess_add" method="POST"  enctype="multipart/form-data">
             
             
             <div class="row">
@@ -25,7 +25,7 @@
 						<div class="col-md-12">
 							<div class="card">
 							
-								<div class="card-header bg-info" id="grad">
+								<div class="card-header bg-success" id="grad">
 									<center><h2 class="card-title mb-0">Add Seller Details (All field's marked * are mandatory)</h2></center>
 								</div>
 								<div class="card-body">
@@ -39,35 +39,33 @@
 	
 										<div class="form-group">
 										
-											<label> <i class="fa fa-user mr-2 text-info fa-2x"></i>Full Name</label>
-											<input type="text" class="form-control" id="iname" name="iname">
+											<label> <i class="fa fa-user mr-2 text-success fa-2x"></i>Full Name</label>
+											<input type="text" class="form-control" id="iname" name="iname" value="<?php echo $sqldata[0]->iname;?>">
 										</div>
 										<div class="form-group">
-											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control">
+											<label> <i class="fa fa-mobile mr-2 text-success fa-2x"></i>Contact Number*</label>
+											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control" value="<?php echo $sqldata[0]->iname;?>">
 										</div>
 										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" id="iadharnumber" name="iadharnumber" class="form-control" >
+											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Adhar Number*</label><br>
+											<input type="text" id="iadharnumber" name="iadharnumber" class="form-control" value="<?php echo $sqldata[0]->iname;?>" >
 										</div>
 											
 										
 										<div class="form-group">
-											<label> <i class="fa fa-envelope  mr-2 text-info fa-2x"></i>Email Id </label>
-											<input type="email" id="iemailid" name="iemailid" class="form-control">
+											<label> <i class="fa fa-envelope  mr-2 text-success fa-2x"></i>Email Id </label>
+											<input type="email" id="iemailid" name="iemailid" class="form-control" value="<?php echo $sqldata[0]->iname;?>">
 										</div>
-										<div class="form-group">
-											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
-											<input type="password" class="form-control" id="ipass" name="ipass">
+									
+									
+											<div class="form-group">
+											<label> <i class="fa fa-map-marker  mr-2 text-success fa-2x"></i>Address </label>
+											<input type="text" class="form-control" id="iaddres" name="iaddres" value="<?php echo $sqldata[0]->iaddres;?>">
 										</div>
 										
-											<div class="form-group">
-											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
-											<input type="password" class="form-control" id="iconpass" name="iconpass">
-										</div>
-										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="iadharcardfile" name="iadharcardfile" >
+											<div class="form-group" >
+											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Aadhar card </label><br>
+											<input type="file" id="iadharcardfile" name="iadharcardfile" value="<?php echo $sqldata[0]->iname;?>" >
 										</div>
 											
 										
@@ -76,17 +74,14 @@
 										</div>
 						
 										<div class="col-md-6">
-										<div class="form-group">
-											<label> <i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>Address </label>
-											<input type="text" class="form-control" id="iaddres" name="iaddres">
-										</div>
+									
 										
 										<div class="form-group">
-											<label><i class="fa fa-map-marker mr-2 text-info fa-2x"></i>City</label>
-											<input type="text" class="form-control" id="icity"name="icity">
+											<label><i class="fa fa-map-marker mr-2 text-success fa-2x"></i>City</label>
+											<input type="text" class="form-control" id="icity"name="icity" value="<?php echo $sqldata[0]->icity;?>">
 										</div>
 										<div class="form-group">
-											<label> <i class="fa fa-state mr-2 text-info fa-2x"></i>State/Union Ter.</label>
+											<label> <i class="fa fa-state mr-2 text-success fa-2x"></i>State/Union Ter.</label>
 											  <select class="custom-select" id="istate" name="istate" style="border-radius:20px;">
                       <option value="Karnataka" selected>Karnataka</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -120,23 +115,23 @@
                     </select>
 										</div>
 										<div class="form-group">
-											<label><i class="fa fa-country mr-2 text-info fa-2x"></i>Country</label>
-											<input type="text" value="India" id="icountry" name="icountry" class="form-control">
+											<label><i class="fa fa-flag mr-2 text-success fa-2x"></i>Country</label>
+	<input type="text" value="India" id="icountry" name="icountry" class="form-control" value="<?php echo $sqldata[0]->icountry;?>">
 										</div>
 										<div class="form-group">
-											<label><i class="fa fa-pincode mr-2 text-info fa-2x"></i>Pincode</label>
-											<input type="text" class="form-control" id="ipincode" name="ipincode">
+											<label><i class="fa fa-map-pin  mr-2 text-success fa-2x"></i>Pincode</label>
+											<input type="text" class="form-control" id="ipincode" name="ipincode" value="<?php echo $sqldata[0]->ipincode;?>">
 										</div>
 										
 										
 											<div class="form-group">
-											<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
-											<input type="text" class="form-control" id="icontactperson" name="icontactperson">
+											<label><i class="fa fa-user mr-2 text-success fa-2x"></i>Contact person*</label>
+											<input type="text" class="form-control" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson;?>">
 										</div>
 										
 												
 										<div class="form-group">
-											<label><i class="fa fa-id-card mr-2 text-info fa-2x"></i>Address proof</label><br>
+											<label><i class="fa fa-id-card mr-2 text-success fa-2x"></i>Address proof</label><br>
 											<input type="file" id="iaddresprof" name="iaddresprof" >
 										</div>
 										

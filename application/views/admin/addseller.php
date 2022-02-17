@@ -120,11 +120,14 @@
                     </select>
 										</div>
 										<div class="form-group">
-											<label><i class="fa fa-country mr-2 text-info fa-2x"></i>Country</label>
+											<label><i class="fa fa-flag mr-2 text-info fa-2x"></i>Country</label>
 											<input type="text" value="India" id="icountry" name="icountry" class="form-control">
 										</div>
 										<div class="form-group">
-											<label><i class="fa fa-pincode mr-2 text-info fa-2x"></i>Pincode</label>
+										
+									
+										
+											<label><i class="fa fa-map-pin mr-2 text-info fa-2x"></i>Pincode</label>
 											<input type="text" class="form-control" id="ipincode" name="ipincode">
 										</div>
 										

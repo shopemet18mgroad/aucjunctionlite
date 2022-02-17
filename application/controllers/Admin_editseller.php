@@ -20,8 +20,26 @@ class Admin_editseller extends CI_Controller {
 	 */
 	public function index()
 	{ 
+		
+		
+	$this->load->model('Admin_model');
+		
+	$sl_no = urldecode($this->uri->segment(3));
+		
+		$active = array('sl_no'=>$sl_no);
+		
+	
+		$query = $this->Admin_model->getdatafromtable('individual', $active);
+		
+		$data['sqldata']= $query;	
+		
+		
+		
+		
+		
+		
 		$this->load->view('admin/header');
-		$this->load->view('admin/editseller');
+		$this->load->view('admin/editseller',$data);
 		$this->load->view('admin/footer');
 	}
 }
