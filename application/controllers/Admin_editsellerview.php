@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_editsellerlist extends CI_Controller {
+class Admin_editsellerview extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,26 +19,9 @@ class Admin_editsellerlist extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{ 
-		
-		
-		$this->load->model('Admin_model');
-		$this->load->library('session');
-
-	    $ioption = array('ioption'=>false);
-		
-		$query = $this->Admin_model->getdatafromtable('individual',$ioption);
-		
-		$adac['data']  =  $query;
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		$active = array('ausername'=>$sess['sessi']);
-		
-        $this->load->view('admin/header');
-		$this->load->view('admin/editsellerlist',$adac);
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/editsellerview');
 		$this->load->view('admin/footer');
-		
-		
-		
 	}
 }
