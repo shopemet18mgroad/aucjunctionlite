@@ -1,10 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_buyer_basicinfo_add extends CI_Controller {
+class Admin_buyer_basicinfo_update extends CI_Controller {
 
 	/**
-	
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
@@ -19,17 +18,14 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
-
-public function index()
-	{
-		
-            $buyername = $this->input->post('buyername');
+	  
+	 	public function index()
+		{
+	$buyername = $this->input->post('buyername');
 			$buyercontactnumber= $this->input->post('buyercontactnumber');
 			$buyerasdharnumber = $this->input->post('buyerasdharnumber');
 			$buyeremail = $this->input->post('buyeremail');
-			$buyerpass = base64_encode($this->input->post('buyerpass'));
-			$bconpassword = base64_encode($this->input->post('bconpassword'));
+			$buysl_no = $this->input->post('buysl_no');
 			$buyeradharcard = $this->input->post('buyeradharcard');
 			$buyeraddress = $this->input->post('buyeraddress');
 		    $buyercity =$this->input->post('buyercity');
@@ -39,18 +35,21 @@ public function index()
 			$buyercontactperson = $this->input->post('buyercontactperson');
 			$addressproof = $this->input->post('addressproof');
 			
-			
 			$this->load->model('Admin_model');
-			  $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber, 'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail, 'buyerpass' => $buyerpass, 'bconpassword' => $bconpassword, 'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,'buyerpincode' => $buyerpincode,'buyercontactperson' => $buyercontactperson, 'addressproof' => $addressproof);
+			  $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber, 'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail,  'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,'buyerpincode' => $buyerpincode,'buyercontactperson' => $buyercontactperson, 'addressproof' => $addressproof);
 			  
-			  //print_r($data2); die;
-			  
-		$datainserr = "Data Inserted Successfully";
-		$status = $this->Admin_model->insert('buyerdetails', $data2);
-		header('location: '.base_url().'admin_addbuyer/index/'.$datainserr);
-		
 	
-		
-	}
+			
 
+			  
+			  $datainserr = "Data Inserted Successfully";
+			  $updatech = array('buysl_no' => $buysl_no);
+			 
+			  $status = $this->Admin_model->update_custom('buyer_register',$data2,$updatech,$updatech);
+		
+		header('location: '.base_url().'Admin_addbuyerlist/index/'.$datainserr);
+	}
 }
+
+
+	
