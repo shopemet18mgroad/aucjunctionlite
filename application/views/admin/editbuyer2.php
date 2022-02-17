@@ -1,7 +1,7 @@
 <div class="main-panel">
           <div class="content-wrapper">
         
-               <form action="<?php echo base_url();?>Admin_buyer_basicinfo_update" method="post" enctype="multiport/form-data">   
+ <form action="<?php echo base_url();?>Admin_buyer_basicinfo_update" method="post" enctype="multiport/form-data">   
             
             <div class="row">
               <div class="col-lg-12 d-flex grid-margin stretch-card">
@@ -34,7 +34,10 @@
 											<input type="text" class="form-control" id="buyername" name="buyername" value="<?php echo $sqldata[0]->buyername ?>">
 											
 											
-											<input type="hidden" class="form-control" id="buysl_no " name="buysl_no " value="<?php echo $sqldata[0]->buysl_no  ?>">
+											<input type="hidden" class="form-control" id="buysl_no" name="buysl_no" value="<?php echo $sqldata[0]->buysl_no ?>">	
+											
+											
+											
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-success fa-2x"></i>Contact Number*</label>

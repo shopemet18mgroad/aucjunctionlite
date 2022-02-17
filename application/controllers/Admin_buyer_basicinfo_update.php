@@ -19,13 +19,12 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	  
-	 	public function index()
-		{
+	 	public function index(){
 	$buyername = $this->input->post('buyername');
 			$buyercontactnumber= $this->input->post('buyercontactnumber');
 			$buyerasdharnumber = $this->input->post('buyerasdharnumber');
 			$buyeremail = $this->input->post('buyeremail');
-			$buysl_no = $this->input->post('buysl_no');
+			
 			$buyeradharcard = $this->input->post('buyeradharcard');
 			$buyeraddress = $this->input->post('buyeraddress');
 		    $buyercity =$this->input->post('buyercity');
@@ -34,9 +33,11 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 			$buyerpincode = $this->input->post('buyerpincode');
 			$buyercontactperson = $this->input->post('buyercontactperson');
 			$addressproof = $this->input->post('addressproof');
+			 $buysl_no = $this->input->post('buysl_no');
 			
 			$this->load->model('Admin_model');
 			  $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber, 'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail,  'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,'buyerpincode' => $buyerpincode,'buyercontactperson' => $buyercontactperson, 'addressproof' => $addressproof);
+			  //print_r($data2);die;
 			  
 	
 			
@@ -44,8 +45,9 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 			  
 			  $datainserr = "Data Inserted Successfully";
 			  $updatech = array('buysl_no' => $buysl_no);
-			 
-			  $status = $this->Admin_model->update_custom('buyer_register',$data2,$updatech,$updatech);
+			 // print_r ($updatech); die;
+		
+			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);
 		
 		header('location: '.base_url().'Admin_addbuyerlist/index/'.$datainserr);
 	}
