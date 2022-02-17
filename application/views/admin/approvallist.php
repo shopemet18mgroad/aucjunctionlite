@@ -8,7 +8,7 @@
 		  
 		  
 		    
-
+<link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
 	
 							
          
@@ -42,61 +42,68 @@
                     <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
                       <thead>
 					   <tr>
-		<th colspan="10">Company List<a href="<?php echo base_url();?>Admin_addoption"><button type="button" class="btn btn-info btn-rounded" style="width:20%;float:right;">Add Company</button></a>
-			   </th>  
+		<th colspan="10">Individual List<a href="<?php echo base_url();?>Admin_addoption"></a>
+			   </th>
+			  
       </tr>
-						 <th>
-                            Sl. No .
+	  <tr>
+						
+                          <th>Sl.No.</th>
+						  
+						     <th> 
+                           Name
                           </th>
-                          <th>
-                            Company Name 
-                          </th>
-                          <th>
-                              Name 
-                          </th>
-                          <th>
-                            Company type 
-                          </th>
-                          <th>
-                           Contact Person
-                          </th>
+                          
+                          <th>Adhar Number*</th>
+                          <th>EMAIL</th>
+                           
+                       
                           <th>
                             Action
                           </th>
                         </tr>
                       </thead>
                       <tbody>
+					   <?php  $count = 1;?>
+					  
+	<?php foreach($data as $row){?>
+					  
                         <tr>
-						 <td>
-                           1
-                          </td>
-                          <td>
-                            ABC
-                          </td>
-                          <td>
-                            Herman Beck
-                          </td>
-                          <td>
-                          
-                             individual
-                     
-                          </td>
-                          <td>
-                           8548857535
-                          </td>
-                          <td>
-						<a href="Admin_editseller"><i class="fa fa-edit m-2" style="font-size:25px;color:blue;"></i></a>
-						
-						<a href="Admin_editseller"><i class="fa fa-eye m-2" style="font-size:25px;color:yellow;"></i></a>
 						
 						
-						<i class="fa fa-trash" style="font-size:25px;color:red;"></i>
+						 <td data-label="Sl.No.">  <?php echo $count;?> </td>
+						 
+						 
+						 
+                           <td data-label="Name"><?php echo $row->iname ?></td>
+                          <td data-label="Adhar Number*"><?php echo $row->iadharnumber ?>      </td>
+                        <td data-label="EMAIL"><?php echo $row->iemailid ?></td>
+                        
+                          <td>
+						  
+						
+						  
+						  
+						  
+						  
+						<a href ="<?php echo base_url()."Admin_editseller/index/".urldecode($row->sl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
+						
+						<a href ="<?php echo base_url()."Admin_editsellerview/index/".urldecode($row->sl_no);?>"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
+						
+						
+				
+						
+						
+						
 						
 						
 						
                           </td>
                         </tr>
-                      
+						
+			<?php $count++;?>
+						
+	<?php }?>    
                 
                       </tbody>
                     </table>
@@ -104,10 +111,7 @@
                 </div>
               </div>
             </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       
-          <!-- partial -->
+          
         </div>
      
         

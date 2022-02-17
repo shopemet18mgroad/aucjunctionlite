@@ -20,8 +20,23 @@ class Admin_approvallist extends CI_Controller {
 	 */
 	public function index()
 	{
+		
+		$ioption = array('ioption'=>false);
+		$this->load->library('session');
+				$this->load->model('Admin_model');
+
+		$query = $this->Admin_model->getdatafromtable('individual',$ioption);
+		
+		$adac['data']  =  $query;
+		
+		$sess = array('sessi'=>$this->session->userdata('username'));
+		$active = array('ausername'=>$sess['sessi']);
+		
+		
+		
+		
 		$this->load->view('admin/header');
-		$this->load->view('admin/approvallist');
+		$this->load->view('admin/approvallist',$adac);
 		$this->load->view('admin/footer');
 	}
 }

@@ -22,10 +22,11 @@ class Admin_editsellerlist extends CI_Controller {
 	{ 
 		
 		
-		$this->load->model('Admin_model');
+		
 		$this->load->library('session');
 
 	    $ioption = array('ioption'=>false);
+		$this->load->model('Admin_model');
 		
 		$query = $this->Admin_model->getdatafromtable('individual',$ioption);
 		

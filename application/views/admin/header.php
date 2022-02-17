@@ -241,9 +241,9 @@ height:100px;
             </a>
             <div class="collapse megha" id="ui-meg">
               <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>     Admin_apprvalist">Approve Seller </a></li>
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_approvallist">Approve Seller </a></li>
                 
-                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_addbuyerlist">Approve Buyer</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_buyerapproval">Approve Buyer</a></li>
                 
                
                 
