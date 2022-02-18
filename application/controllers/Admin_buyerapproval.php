@@ -40,6 +40,43 @@ class Admin_buyerapproval extends CI_Controller {
 		
 		
 		
-	}		
+	}
+
+		public function buyerapprove(){
+		
+		 $buysl_no = urldecode($this->uri->segment(3));
+
+		$retriveval = array('buysl_no'=>$buysl_no);
+		
+		
+		
+		$this->load->model('Admin_model');
+		$app= array('buyeroption'=>true);
+		$query = $this->Admin_model->update_custom('buyerdetails', $app, $retriveval, $retriveval);
+		if($retriveval){
+			header('location: '.base_url().'Admin_buyerapproval/index/'.urlencode($retriveval));
+		}else{
+			echo "BYE";
+		}
+	
+	}
+		public function reject(){
+		$this->load->helper('url');
+		 $buysl_no = urldecode($this->uri->segment(3));
+
+		$retriveval = array('buysl_no'=>$buysl_no);
+		
+	$data2= array('buyeroption'=>2);
+		
+	
+		$this->load->model('Admin_model');
+	
+		$status = $this->Admin_model->update_custom('buyerdetails',$data2,$retriveval,$retriveval);
+		
+		header('location: '.base_url().'Admin_buyerapproval/index/'.urlencode($retriveval));
+		
+		die;
+	}
+	
 	
 }

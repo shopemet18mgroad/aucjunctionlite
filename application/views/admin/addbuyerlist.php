@@ -30,7 +30,7 @@
                            NAME
                           </th>
                           <th>
-						 ADAR NUMBER*
+						 AADHAAR NUMBER*
                           </th>
                           
                           <th>
@@ -60,8 +60,10 @@
 					
 					
 		<a href="<?php echo base_url()."Admin_editbuyer2/index/".urldecode($row->buysl_no);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
+		
+		<a href="<?php echo base_url()."Admin_buyerviewdetail/index/".urldecode($row->buysl_no);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
-<i class="fa fa-eye" style="font-size:24px;color:gray"></i>		</td>		
+	
 
 
 
