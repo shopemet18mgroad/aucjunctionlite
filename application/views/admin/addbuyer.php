@@ -58,7 +58,7 @@
 										</div>
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="buyeradharcard" name="buyeradharcard" >
+											<input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple >
 										</div>
 											
 										
@@ -128,7 +128,7 @@
 												
 										<div class="form-group" >
 											<label>Address proof</label><br>
-											<input type="file" id="addressproof" name="addressproof" >
+											<input type="file" id="addressproof" name="addressproof[]" multiple >
 										</div>
 										
 										
