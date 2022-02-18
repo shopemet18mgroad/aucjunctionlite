@@ -94,7 +94,7 @@
 						  
 						<a href ="<?php echo base_url()."Admin_editseller/index/".urldecode($row->sl_no);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 						
-						<a href ="<?php echo base_url()."Admin_editsellerview/index/".urldecode($row->sl_no);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey"></i></a>
+						<a href ="<?php echo base_url()."Admin_sellerviewdetail/index/".urldecode($row->sl_no);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey"></i></a>
 						
 						
 				
