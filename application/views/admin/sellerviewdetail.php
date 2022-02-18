@@ -4,11 +4,11 @@
 
 
     <div class="container-fluid card col-md-8 mt-5 mb-5">
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >SELLER DETAILES  </div></center>
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><?php echo $sqldata1[0]->role ?></i>DETAILES  </div></center>
 	
    <table class="table" style="color:grey;font-size:8px;">
 <tbody>
-    <tr>
+    <tr>   
    <td>FULL NAME   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
    <td><?php echo $sqldata1[0]->iname ?></td>
 	  </tr>
@@ -69,6 +69,38 @@
 	   <td><?php echo $sqldata1[0]->icontactperson ?></td>
       
     </tr>
+	<tr>   
+   <td>GST NUMBER <div style="font-size:10px;color:red;">( applicable ony for company)</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
+   <td><?php echo $sqldata1[0]->igstnumber ?></td>
+	  </tr>
+	  <tr>   
+   <td>COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:red;">( Applicable ony for company)</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
+   <td><?php echo $sqldata1[0]->itypeseller ?></td>
+	  </tr>
+	
+	
+	<tr>
+     
+      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+	   <td><?php $img = unserialize($sqldata1[0]->iaddresprof)?>
+<img class="img-thumbnail" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px"></td>
+    
+    </tr>
+	<tr>
+     
+      <td>AADHAAR PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+
+
+<td>	<?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
+<img class="" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px"></td>
+ 
+	
+      
+   </tr>
+	
+	
 	
   </tbody>
 </table>
