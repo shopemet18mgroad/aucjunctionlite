@@ -7,8 +7,8 @@
 		  
 		 
 		  
-		  
-        <form action="<?php echo base_url();?>Admin_seller_basicinfo_add" method="POST"  enctype="multipart/form-data">
+		  <form action= "<?php echo base_url();?>Admin_seller_basicinfo_add" method="post" enctype="multipart/form-data">
+       
             
             
             <div class="row">
@@ -144,6 +144,12 @@
 										</div>
 										
 										
+										<div class="form-group">
+											
+											<input type="hidden" id="role" name="role"  value="individual">
+										</div>
+										
+										
 												
 								
 									
@@ -159,7 +165,7 @@
 							<button type="submit" name="submit" class="btn btn-info btn-rounded m-4 Col-sm-4"  id="mm">Submit</button>
 						</div>
 					<div class="Col-sm-4">
-							<button type="button" class="btn btn-info btn-rounded Col-sm-4  m-4">Cancel</button>
+							<button type="reset" name="reset" class="btn btn-info btn-rounded Col-sm-4  m-4">Cancel</button>
 							</div>
 							
 								
@@ -182,8 +188,7 @@
 						
 						
 						
-				</form>   
-				   
+				
 				   
 				   
 				   
@@ -205,7 +210,8 @@
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
-       
+      
+				   
           <!-- partial -->
         </div>
      

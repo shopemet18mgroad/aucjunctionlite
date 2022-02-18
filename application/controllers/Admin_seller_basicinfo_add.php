@@ -23,7 +23,11 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
-	    $iname = $this->input->post('iname'); 
+		
+		
+	     $iname = $this->input->post('iname');
+	     $role = $this->input->post('role');
+	
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
 		$iemailid  = $this->input->post('iemailid');
@@ -58,7 +62,7 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 	
 		
 		
-		$data = array('iname' => $iname, 'icontactnumber' => $icontactnumber, 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'ipass' => $ipass,'iconpass' => $iconpass,'iadharcardfile'=> $iadharcardfile, 'iaddres' => $iaddres,' icity' => $icity, 'istate' => $istate, 'icountry' => $icountry, 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'iaddresprof'=>$iaddresprof );
+		$data = array('role'=>$role,'iname' => $iname, 'icontactnumber' => $icontactnumber, 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'ipass' => $ipass,'iconpass' => $iconpass,'iadharcardfile'=> $iadharcardfile, 'iaddres' => $iaddres,' icity' => $icity, 'istate' => $istate, 'icountry' => $icountry, 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'iaddresprof'=>$iaddresprof );
 		
 		
 		

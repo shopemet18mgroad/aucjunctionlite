@@ -42,7 +42,7 @@
                     <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
                       <thead>
 					   <tr>
-		<th colspan="10">Individual List<a href="<?php echo base_url();?>Admin_addoption"></a>
+		<th colspan="10">SELLER LIST
 			   </th>
 			  
       </tr>
@@ -54,12 +54,13 @@
                            Name
                           </th>
                           
-                          <th>Adhar Number*</th>
+                          <th>AADHAAR NUMBER*</th>
                           <th>EMAIL</th>
+						  <th>ROLE</th>
                            
                        
                           <th>
-                            Action
+                            ACTION
                           </th>
                         </tr>
                       </thead>
@@ -76,13 +77,18 @@
 						 
 						 
                            <td data-label="Name"><?php echo $row->iname ?></td>
-                          <td data-label="Adhar Number*"><?php echo $row->iadharnumber ?>      </td>
+                          <td data-label="Adhar Number*"><?php echo $row->iadharnumber ?> 
+
+						  </td>
                         <td data-label="EMAIL"><?php echo $row->iemailid ?></td>
                         
-                          <td>
+                         
+						    <td data-label="ROLE"><?php echo $row->role ?> 
+
+						  </td>
 						  
 						
-						  
+						  <td>
 						  
 						  
 						  

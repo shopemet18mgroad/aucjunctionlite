@@ -39,4 +39,48 @@ class Admin_approvallist extends CI_Controller {
 		$this->load->view('admin/approvallist',$adac);
 		$this->load->view('admin/footer');
 	}
+	
+	public function sellerapprove(){
+		
+		 $Sl_no = urldecode($this->uri->segment(3));
+		 
+		 
+
+
+		$retriveval = array('Sl_no'=>$Sl_no);
+		
+		
+		
+		$this->load->model('Admin_model');
+		$app= array('ioption'=>true);
+		$query = $this->Admin_model->update_custom('individual', $app, $retriveval, $retriveval);
+		if($retriveval){
+			header('location: '.base_url().'Admin_approvallist/index/'.urlencode($retriveval));
+		}else{
+			echo "BYE";
+		}
+	
+	}
+		public function reject(){
+		$this->load->helper('url');
+		 $Sl_no = urldecode($this->uri->segment(3));
+
+
+		$retriveval = array('Sl_no'=>$Sl_no);
+		
+		$data2 = array('ioption'=>2);
+	
+		$this->load->model('Admin_model');
+		
+		$status = $this->Admin_model->update_custom('individual',$data2,$retriveval,$retriveval);
+		
+		header('location: '.base_url().'Admin_approvallist/index/'.urlencode($retriveval));
+		
+		die;
+	}
+
+	
+	
+	
+	
 }

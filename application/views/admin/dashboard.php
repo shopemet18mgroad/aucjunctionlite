@@ -27,8 +27,8 @@
   
   
   
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-   <a href="<?php echo base_url();?>Admin_addseller" class="btn btn-primary btn-lg" role="button" style="border-radius:20px;" aria-disabled="true">REGISTER</a>
+    <p class="card-text"></p>
+   <a href="<?php echo base_url();?>Admin_addseller" class="btn btn-info btn-lg" role="button" style="border-radius:20px;" aria-disabled="true">REGISTER</a>
   </div>
 </div></center>
       
@@ -42,8 +42,8 @@
   <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>images/bussiness.png " alt="Card image cap"> 
   <div class="card-body">
    
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn btn-primary btn-lg" style="border-radius:20px;" role="button" aria-disabled="true">REGISTER</a>
+    <p class="card-text"></p>
+   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn btn-info btn-lg" style="border-radius:20px;" role="button" aria-disabled="true">REGISTER</a>
   </div>
 </div></center>
       

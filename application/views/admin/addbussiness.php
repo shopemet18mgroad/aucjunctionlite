@@ -4,7 +4,7 @@
         
         <div class="main-panel">
           <div class="content-wrapper">
-        
+         <form action="<?php echo base_url();?>Admin_bussiness_basicinfo_add" method="POST"  enctype="multipart/form-data">  
             
             
             <div class="row">
@@ -13,10 +13,8 @@
                   <div class="card-body">
                   
                    <div class= "row">
-				        
-						
-						
-						
+				     
+				
 						
 						<div class="col-md-12">
 							<div class="card">
@@ -25,31 +23,56 @@
 								</div>
 								<div class="card-body">
 							
-										<div class="row">
+											<div class="row">
 											<div class="col-md-6">
-											<div class="form-group" >
-											<label>Company Name*</label>
-											<input type="text" class="form-control" id="bname" name="bname" >
-										</div>
+											
 										
-									
+										
 									
 	
+										<div class="form-group">
+										
+											<label> <i class="fa fa-user mr-2 text-info fa-2x"></i>Full Name</label>
+											<input type="text" class="form-control" id="iname" name="iname">
+										</div>
+										<div class="form-group">
+											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
+											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control">
+										</div>
 									
 										<div class="form-group">
-											<label>Contact Number*</label>
-											<input type="text" class="form-control" id="bcontactnumber" name="bcontactnumber">
+											<label>GST Number </label> 
+											<input type="text" class="form-control" id="igstnumber"  name="igstnumber">
 										</div>
+											
+										
+										<div class="form-group">
+											<label> <i class="fa fa-envelope  mr-2 text-info fa-2x"></i>Email Id </label>
+											<input type="text" id="iemailid" name="iemailid" class="form-control">
+										</div>
+										<div class="form-group">
+											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
+											<input type="password" class="form-control" id="ipass" name="ipass">
+										</div>
+										
 											<div class="form-group">
-											<label>Contact person*</label>
-											<input type="text" class="form-control" id="bcontactperson" name="bcontactperson">
+											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
+											<input type="password" class="form-control" id="iconpass" name="iconpass">
 										</div>
 										
 										
+										
+									
+										
+	
+										
+										</div>
+						
+										<div class="col-md-6">
 										
 											<div class="form-group">
 											<label>Type of Seller</label>
-											  <select class="custom-select" id="btypeseller"  name="btypeseller" style="border-radius:20px;">
+											  <select class="custom-select" id="itypeseller"  name="itypeseller" style="border-radius:20px;">
     <option selected>Type of Seller</option>
     <option value="Govt Regd Company">Govt Regd Company </option>
     <option value="Ltd , Pvt Ltd , LLP, Corp">Ltd , Pvt Ltd , LLP, Corp</option>
@@ -59,70 +82,18 @@
 										</div>
 										
 										
-										
-											
-											
-											
-
-
-
-
-
-
-	<div class="form-group">
-											<label>Email Id</label>
-											<input type="email" class="form-control"  id="bemail"  name="bemail">
-										</div>
-											
-											
-											
-												<div class="form-group">
-											<label>Password *</label> 
-											<input type="password" class="form-control"  id="bpass"  name="bpass">
-										</div>
-										
-											<div class="form-group">
-											<label>Confirm Password*</label>
-											<input type="password" class="form-control"  id="bconpass"  name="bconpass">
-										</div>
-											
-
-
-
-
-
-
-
-									
-										
-										</div>
-										
-										
-								
-										
-										
-											
-										
-											
-											
-										<div class="col-md-6">
-										
-											<div class="form-group">
-											<label>GST Number </label> 
-											<input type="text" class="form-control" id="bgstnumber"  name="bgstnumber">
-										</div>
-											<div class="form-group">
-											<label>Address </label>
-											<input type="text" class="form-control" id="baddress"  name="baddress">
+										<div class="form-group">
+											<label> <i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>Address </label>
+											<input type="text" class="form-control" id="iaddres" name="iaddres">
 										</div>
 										
 										<div class="form-group">
-											<label>City</label>
-											<input type="text" class="form-control" id="bcite"  name="bcite">
+											<label><i class="fa fa-map-marker mr-2 text-info fa-2x"></i>City</label>
+											<input type="text" class="form-control" id="icity"name="icity">
 										</div>
 										<div class="form-group">
-											<label>State/Union Ter.</label>
-											  <select class="custom-select" id="bstate"  name="bstate" style="border-radius:20px;">
+											<label> <i class="fa fa-state mr-2 text-info fa-2x"></i>State/Union Ter.</label>
+											  <select class="custom-select" id="istate" name="istate" style="border-radius:20px;">
                       <option value="Karnataka" selected>Karnataka</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                       <option value="Assam">Assam</option>
@@ -155,25 +126,31 @@
                     </select>
 										</div>
 										<div class="form-group">
-											<label>Country</label>
-											<input type="text" value="India" id="bcountry"  name="bcountry" class="form-control">
+											<label><i class="fa fa-flag mr-2 text-info fa-2x"></i>Country</label>
+											<input type="text" value="India" id="icountry" name="icountry" class="form-control">
 										</div>
 										<div class="form-group">
-											<label>Pincode</label>
-											<input type="text" class="form-control" id="bpincode"  name="bpincode">
+										
+									
+										
+											<label><i class="fa fa-map-pin mr-2 text-info fa-2x"></i>Pincode</label>
+											<input type="text" class="form-control" id="ipincode" name="ipincode">
 										</div>
 										
 										
-									
+											<div class="form-group">
+											<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
+											<input type="text" class="form-control" id="icontactperson" name="icontactperson">
+										</div>
 										
+										<div class="form-group">
+											
+											<input type="hidden" id="role" name="role"  value="Bussiness">
+										</div>
 											
 										
 										
-												
 										
-									
-
-											
 											</div>
 											</div>
 											<div class="col-md-12">
@@ -188,10 +165,10 @@
 										</div>
 							
 							<div class="d-flex justify-content-around">
-							<button type="button" class="btn btn-info btn-rounded  m-4" style="width:30%;">Submit</button>
+							<button type="submit" type="submit" class="btn btn-info btn-rounded  m-4" style="width:30%;">Submit</button>
 						
 						
-							<button type="button" class="btn btn-info btn-rounded m-4" style="width:30%;">Cancel</button>
+							<button type="reset"  name="reset" class="btn btn-info btn-rounded m-4" style="width:30%;">Cancel</button>
 							</div>
 								
 								
@@ -213,7 +190,7 @@
 				  
 				  
 				  
-				  
+		  
 				  
 				  
 				  
@@ -230,7 +207,7 @@
         </div>
      
         
-        
+        </form>		
         
         
         

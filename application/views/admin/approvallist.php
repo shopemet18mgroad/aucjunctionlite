@@ -54,12 +54,12 @@
                            Name
                           </th>
                           
-                          <th>Adhar Number*</th>
+                          <th>AADHAAR NUMBER*</th>
                           <th>EMAIL</th>
                            
                        
                           <th>
-                            Action
+                            ACTION
                           </th>
                         </tr>
                       </thead>
@@ -86,9 +86,9 @@
 						  
 						  
 						  
-						<a href ="<?php echo base_url()."Admin_editseller/index/".urldecode($row->sl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
+						<a href ="<?php echo base_url()."Admin_approvallist/sellerapprove/".urldecode($row->sl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 						
-						<a href ="<?php echo base_url()."Admin_editsellerview/index/".urldecode($row->sl_no);?>"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
+						<a href ="<?php echo base_url()."Admin_approvallist/reject/".urldecode($row->sl_no);?>"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
 						
 						
 				
