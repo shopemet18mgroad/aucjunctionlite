@@ -158,7 +158,7 @@
 							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" <!--onclick="return validatebuyer() "-->Submit</button>
 						</div>
 					<div class="Col-sm-4">
-							<button type="button" class="btn btn-info btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Cancel</button>
+							<button type="reset" name="reset" class="btn btn-info btn-rounded btn-lg mb-4">Cancel</button>
 							</div>
 							
 								
