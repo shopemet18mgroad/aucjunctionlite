@@ -56,6 +56,7 @@
                           
                           <th>AADHAAR NUMBER*</th>
                           <th>EMAIL</th>
+						    <th>ROLE</th>
                            
                        
                           <th>
@@ -78,7 +79,7 @@
                            <td data-label="Name"><?php echo $row->iname ?></td>
                           <td data-label="Adhar Number*"><?php echo $row->iadharnumber ?>      </td>
                         <td data-label="EMAIL"><?php echo $row->iemailid ?></td>
-                        
+                        <td data-label="ROLE"><?php echo $row->role ?></td>
                           <td>
 						  
 						

@@ -48,7 +48,7 @@
 										</div>
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" id="iadharnumber" name="iadharnumber" class="form-control" >
+											<input type="text" id="iadharnumber" name="iadharnumber" onsubmit="validation()" class="form-control" >
 										</div>
 											
 										
@@ -225,3 +225,17 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
+	<script> 
+   function validation()
+       {   
+            
+            var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+           
+            var x=document.getElementById("iadharnumber").value;
+			if(regexp.test(x)) {
+			   window.alert("Good Luck, Your Valid Aadhar no.");   
+			}
+			else { 
+				window.alert("Sorry, Invalid Aadhar no.");
+			}
+   </script>

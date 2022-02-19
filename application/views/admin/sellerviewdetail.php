@@ -83,7 +83,7 @@
      
       <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
 	   <td><?php $img = unserialize($sqldata1[0]->iaddresprof)?>
-<img class="img-thumbnail" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px"></td>
     
     </tr>

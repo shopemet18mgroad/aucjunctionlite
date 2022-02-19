@@ -1,7 +1,7 @@
 <div class="main-panel">
           <div class="content-wrapper">
         
-         <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multiport/form-data">   
+         <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multipart/form-data">   
             
             <div class="row">
               <div class="col-lg-12 d-flex grid-margin stretch-card">
@@ -39,8 +39,11 @@
 										</div>
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" class="form-control" id ="buyerasdharnumber" name="buyerasdharnumber">
+											<input type="text" class="form-control"   id ="buyerasdharnumber" name="buyerasdharnumber">
 										</div>
+
+										
+										
 											
 										
 										<div class="form-group">
@@ -56,9 +59,9 @@
 											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
 											<input type="password" class="form-control"id="bconpassword" name="bconpassword">
 										</div>
-										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple >
+										<div class="form-group">
+											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhaar card </label><br>
+											<input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple  >
 										</div>
 											
 										
@@ -69,7 +72,7 @@
 										<div class="col-md-6">
 										<div class="form-group">
 											<label> <i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>Address </label>
-											<input type="text" class="form-control" id="buyeraddress" name="buyeraddress">
+											<input type="text" class="form-control" id="buyeraddress" name="buyeraddress" onclick="return validation()">
 										</div>
 										
 										<div class="form-group">
@@ -155,7 +158,7 @@
 								
 							<div class="d-flex justify-content-around">
 							<div class="Col-sm-4">
-							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" <!--onclick="return validatebuyer() "-->Submit</button>
+							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" > Submit</button>
 						</div>
 					<div class="Col-sm-4">
 							<button type="reset" name="reset" class="btn btn-info btn-rounded btn-lg mb-4">Cancel</button>
@@ -165,7 +168,7 @@
 							</div>	
 								
 								
-								
+							<!--onclick="return validatebuyer()"-->	
 							
 					</div>
 					</div>
@@ -293,3 +296,34 @@ function validateForm() {
     } 
  }
 </script> 
+
+	<script> 
+   $('[data-type="adhaar-number"]').on("change",function() {
+  var value = $(this).val();
+  value = value.replace(/\D/g, "").split(/(?:([\d]{4}))/g).filter(s => s.length > 0).join("-");
+  $(this).val(value);
+});
+
+$('[data-type="adhaar-number"]').on("change, blur", function() {
+  var value = $(this).val();
+  var maxLength = $(this).attr("maxLength");
+  if (value.length != maxLength) {
+    $(this).addClass("highlight-error");
+  } else {
+    $(this).removeClass("highlight-error");
+  }
+
+
+
+  if(value.length < maxLength ){
+	 swal( "aaa");
+  }
+  });
+   </script>
+	   
+	   
+	   
+	   
+	   
+	   
+	   

@@ -1,7 +1,7 @@
 <div class="main-panel">
           <div class="content-wrapper">
         
- <form action="<?php echo base_url();?>Admin_buyer_basicinfo_update" method="post" enctype="multiport/form-data">   
+ <form action="<?php echo base_url();?>Admin_buyer_basicinfo_update" method="post" enctype="multipart/form-data">   
             
             <div class="row">
               <div class="col-lg-12 d-flex grid-margin stretch-card">

@@ -44,4 +44,10 @@ class Admin_model extends CI_Model
 			$q = $this->db->get();
 			return $q->result_array();
 		  }
+		  	public function delete_data($table, $data)
+	{
+		if ($this->db->delete($table, $data)) {
+			return true;
+		}
+	}
 	}

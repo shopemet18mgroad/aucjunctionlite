@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_buyer_basicinfo_add extends CI_Controller {
 
 	/**
-	
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
@@ -19,35 +18,54 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
-
-public function index()
+	 
+	 function __construct() {
+        parent::__construct();
+        
+        // Load session library
+        $this->load->library('session');
+        // Load the captcha helper
+		//$this->load->helper('captcha');
+		$this->load->helper('url');
+		$this->load->helper('date');
+	
+		date_default_timezone_set("Asia/Kolkata");
+	 }
+	public function index()
 	{
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
 		
 		
-            $buyername = $this->input->post('buyername');
-			$buyercontactnumber= $this->input->post('buyercontactnumber');
-			$buyerasdharnumber = $this->input->post('buyerasdharnumber');
-			$buyeremail = $this->input->post('buyeremail');
-			$buyerpass = base64_encode($this->input->post('buyerpass'));
-			$bconpassword = base64_encode($this->input->post('bconpassword'));
-			$buyeradharcard = $this->input->post('buyeradharcard');
-			$buyeraddress = $this->input->post('buyeraddress');
-		    $buyercity =$this->input->post('buyercity');
-			$buyerstate = $this->input->post('buyerstate');
-			$buyercountry = $this->input->post('buyercountry');
-			$buyerpincode = $this->input->post('buyerpincode');
-			$buyercontactperson = $this->input->post('buyercontactperson');
-			$addressproof = $this->input->post('addressproof');
-			$a = $_FILES['buyeradharcard']['name']; 
-		     $b = $_FILES['addressproof']['name']; 
+	     $buyername = $this->input->post('buyername');
+	     $buyercontactnumber = $this->input->post('buyercontactnumber');
+	
+		$buyerasdharnumber = $this->input->post('buyerasdharnumber');
+		$buyeremail  = $this->input->post('buyeremail');
+		$buyerpass = base64_encode($this->input->post('buyerpass'));
+		$bconpassword = base64_encode($this->input->post('bconpassword'));
+		
+		
+		
+		$buyeradharcard  = $this->input->post('buyeradharcard');
+		
+		$buyeraddress  = $this->input->post('buyeraddress');
+		$buyercity  = $this->input->post('buyercity	');
+		$buyerstate  = $this->input->post('buyerstate');
+		$buyercountry  = $this->input->post('buyercountry');
+		$buyerpincode  = $this->input->post('buyerpincode');
+		$buyercontactperson  = $this->input->post('buyercontactperson');
+		$addressproof  = $this->input->post('addressproof');
+		
+	
+		 $_FILES['buyeradharcard']['name'];
+		 $_FILES['addressproof']['name'];
+		  
 		 
 			
 		      $pic_array1 = self::upload_files('buyeradharcard');
-		 
+		
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
@@ -56,7 +74,7 @@ public function index()
 			$pic_array1 = serialize($pic_array1);
 		}
 		
-		
+	
 			
 		      $pic_array2 = self::upload_files('addressproof');
 		//print_r($pic_array1); die;
@@ -67,32 +85,27 @@ public function index()
 		}else{
 			$pic_array2 = serialize($pic_array2);
 		}
-				
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			$this->load->model('Admin_model');
-			  $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber, 'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail, 'buyerpass' => $buyerpass, 'bconpassword' => $bconpassword, 'buyeradharcard'=> $pic_array1 , 'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,'buyerpincode' => $buyerpincode,'buyercontactperson' => $buyercontactperson, 'addressproof' => $pic_array2);
-			  
 		
-			  
-		$datainserr = "Data Inserted Successfully";
-		$status = $this->Admin_model->insert('buyerdetails', $data2);
-		header('location: '.base_url().'admin_addbuyer/index/'.$datainserr);
+		
 		
 	
+	
+		
+		
+		$data = array('buyername'=>$buyername,'buyercontactnumber' => $buyercontactnumber, 
+		'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail,
+		'buyerpass' => $buyerpass ,'bconpassword' => $bconpassword,'buyeradharcard' => $pic_array1,
+		'buyeraddress'=> $buyeraddress, 'buyercity' => $buyercity,' buyerstate' => $buyerstate, 
+		'buyercountry' => $buyercountry, 'buyerpincode' => $buyerpincode, 'buyercontactperson' => $buyercontactperson,
+		'addressproof'=>$pic_array2 );
+		
+		
+		
+		$datainserr = "Data Inserted Successfully";
+		$status = $this->Admin_model->insert('buyerdetails',$data);
+		header('location: '.base_url().'Admin_addbuyer/index/'.$datainserr);
+		
+		
 		
 	}
 	
@@ -155,3 +168,4 @@ public function index()
 
     
 		
+

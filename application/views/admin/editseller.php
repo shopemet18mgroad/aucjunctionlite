@@ -65,7 +65,7 @@
 										
 											<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="iadharcardfile" name="iadharcardfile" value="<?php echo $sqldata[0]->iname;?>" >
+											<input type="file" id="iadharcardfile" name="iadharcardfile[]" multiple >
 										</div>
 											
 										
@@ -132,7 +132,7 @@
 												
 										<div class="form-group">
 											<label><i class="fa fa-id-card mr-2 text-success fa-2x"></i>Address proof</label><br>
-											<input type="file" id="iaddresprof" name="iaddresprof" >
+											<input type="file" id="iaddresprof" name="iaddresprof[]" multiple >
 										</div>
 										
 										

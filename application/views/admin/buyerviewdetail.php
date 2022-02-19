@@ -68,6 +68,30 @@
       
     </tr>
 	
+	<tr>
+     
+      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px"></td>
+    
+    </tr>
+	<tr>
+     
+      <td>AADHAAR PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+
+
+<td>	<?php $img = unserialize($sqldata1[0]->addressproof)?>
+<img class="" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px"></td>
+ 
+	
+      
+   </tr>
+	
+	
+	
+	
   </tbody>
 </table>
 </div>
