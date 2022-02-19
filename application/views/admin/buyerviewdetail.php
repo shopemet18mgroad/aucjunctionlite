@@ -2,7 +2,7 @@
    
 
     <div class="container card col-md-8 mt-5">
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >SELLER DETAILES  </div></center>
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  </div></center>
 	
    <table class="table"  style="color:grey;font-size:8px;">
 <tbody >
@@ -70,7 +70,7 @@
 	
 	<tr>
      
-      <td>AADHAR CARD &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <td>AADHAR CARD &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
 	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModalCenter"></td>
@@ -78,7 +78,7 @@
     </tr>
 	<tr>
      
-      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
 	  <td><?php $img = unserialize($sqldata1[0]->addressproof)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModal"></td>
