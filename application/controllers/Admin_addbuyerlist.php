@@ -40,6 +40,39 @@ class Admin_addbuyerlist extends CI_Controller {
 		
 		
 		
-	}		
+	}	
+	
+	public function seller_delete(){
+
+$buysl_no = urldecode($this->uri->segment(3));
+
+
+$this->load->model('Admin_model');
+
+
+$adaction2 = array('buysl_no'=>$buysl_no);
+
+
+$query = $this->Admin_model->delete_data('buyerdetails',$adaction2);
+$this->load->helper('url');
+$this->load->library('session');
+
+
+if($buysl_no){
+header('location: '.base_url().'Admin_addbuyerlist/index/');
+}else{
+echo "BYE";
+}
+
+}	
+
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

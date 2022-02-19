@@ -96,7 +96,8 @@
 						
 						<a href ="<?php echo base_url()."Admin_sellerviewdetail/index/".urldecode($row->sl_no);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey"></i></a>
 						
-						<a href ="<?php echo base_url()."Admin_sellerviewdetail/index/".urldecode($row->sl_no);?>"><i class="fa fa-trash m-2" style="font-size:18px;color:grey"></i></a>
+						<a href ="<?php echo base_url()."Admin_editsellerlist/seller_delete/".urldecode($row->sl_no);?>">
+						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 				
 						
 						

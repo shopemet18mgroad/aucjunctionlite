@@ -63,6 +63,9 @@
 		
 		<a href="<?php echo base_url()."Admin_buyerviewdetail/index/".urldecode($row->buysl_no);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
+		
+		<a href ="<?php echo base_url()."Admin_addbuyerlist/seller_delete/".urldecode($row->buysl_no);?>">
+						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 	
 
 
