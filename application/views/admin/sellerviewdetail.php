@@ -81,22 +81,29 @@
 	
 	<tr>
      
-      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
 	   <td><?php $img = unserialize($sqldata1[0]->iaddresprof)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px"></td>
+ alt="Chania" width="200px" height="250px"  
+ data-toggle="modal" data-target="#exampleModal"></td>
     
     </tr>
 	<tr>
      
-      <td>AADHAAR PROOF &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <td>AADHAAR CARD &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
 
 
-<td>	<?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
-<img class="" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px"></td>
+<td>	
  
-	
+ 
+ 
+ 
+ <?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
+<img class="" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px"     
+ data-toggle="modal" data-target="#exampleModalCenter">
+
+	</td>
       
    </tr>
 	
@@ -104,5 +111,72 @@
 	
   </tbody>
 </table>
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">AADHAAR CARD</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+	  
+	   
+ <?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
+<img class="m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="400px" height="250px">
+		
+		
+		
+		
+		
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">ADDRESS PROOF</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+	  
+	   
+ <?php $img = unserialize($sqldata1[0]->iaddresprof)?>
+<img class="m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="400px" height="250px">
+		
+		
+		
+		
+		
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
 </div>
 
