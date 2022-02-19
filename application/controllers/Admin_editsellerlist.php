@@ -42,4 +42,27 @@ class Admin_editsellerlist extends CI_Controller {
 		
 		
 	}
+	public function seller_delete(){
+
+$sl_no = urldecode($this->uri->segment(3));
+
+
+$this->load->model('sl_no');
+$adaction2 = array('sl_no'=>$sl_no);
+
+//print_r($adaction2);die;
+$query = $this->Admin_mo
+del->delete_data('individual',$adaction2);
+$this->load->helper('url');
+$this->load->library('session');
+
+
+if($lotno){
+header('location: '.base_url().'admin_emdrequest/index/');
+}else{
+echo "BYE";
+}
+
+}
+
 }

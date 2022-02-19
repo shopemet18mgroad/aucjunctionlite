@@ -293,3 +293,18 @@ function validateForm() {
     } 
  }
 </script> 
+
+<script> 
+   function validation()
+       {   
+            
+            var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+           
+            var x=document.getElementById("buyeradharcard").value;
+			if(regexp.test(x)) {
+			   window.alert("Good Luck, Your Valid Aadhar no.");   
+			}
+			else { 
+				window.alert("Sorry, Invalid Aadhar no.");
+			}
+   </script>

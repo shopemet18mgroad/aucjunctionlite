@@ -161,7 +161,7 @@
 							<button type="submit" name="submit" class="btn btn-success btn-rounded btn-lg mb-4" onclick="return validatebuyer() ">Update</button>
 						</div>
 					<div class="Col-sm-4">
-							<button type="reset" name="rest class="btn btn-success btn-rounded btn-lg mb-4">Cancel</button>
+							<button type="reset" name="reset" class="btn btn-success btn-rounded btn-lg mb-4">Cancel</button>
 							</div>
 							
 								

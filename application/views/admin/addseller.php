@@ -225,3 +225,55 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
+	
+	
+	<script>
+	
+	function Validate()
+	{
+	Var aadhar = document.getElementById("aadharid").value;
+	var aadharTwelvedigit = /^\d{12}$/;
+	var aadharSixteenDigitdigit = /^\d{16}$/;
+	if(aadhar.matchI(aadharTwelveDigit))
+	{
+		return true;
+	}
+	else if(aadhar.match(aadharSixteenDigit))
+	{
+	return true;
+	}
+	else{
+		alert("Invalid AadharId");
+	return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

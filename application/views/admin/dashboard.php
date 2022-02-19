@@ -17,18 +17,18 @@
 			
 			
   <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>images/aucjunction.png" alt="logo"/ width="240px;" height="100px"></a> </h2>
-  <h5>SELECT ANY ONE OPTION FOR REGISTERATION</h5>
+  <h5>SELECT ANY ONE OPTION FOR REGISTRATION</h5>
   <br>
   <div class="row slideanim">
     <div class="col-sm-6">
 <center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
   <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>images/individual.png" alt="Card image cap">
   <div class="card-body">
-  
+  <i class="fa fa-child mr-2  fa-6x" style="color:danger;"></i>
   
   
     <p class="card-text"></p>
-   <a href="<?php echo base_url();?>Admin_addseller" class="btn btn-info btn-lg" role="button" style="border-radius:20px;" aria-disabled="true">REGISTER</a>
+   <a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" role="button" style="border-radius:20px;background-color:#03a9f463; color:white;" aria-disabled="true">REGISTER</a>
   </div>
 </div></center>
       
@@ -41,9 +41,10 @@
 	<center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
   <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>images/bussiness.png " alt="Card image cap"> 
   <div class="card-body">
+   <i class="fa fa-building mr-2  fa-6x" style="color:danger;"></i>
    
     <p class="card-text"></p>
-   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn btn-info btn-lg" style="border-radius:20px;" role="button" aria-disabled="true">REGISTER</a>
+   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
   </div>
 </div></center>
       
