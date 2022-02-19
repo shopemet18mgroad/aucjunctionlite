@@ -1,7 +1,10 @@
 
+
+
+
         
         
-        
+  
         <div class="main-panel">
           <div class="content-wrapper">
 		  
@@ -10,7 +13,8 @@
         <form action="<?php echo base_url();?>Admin_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
             
             
-            <div class="row">
+ 
+ <div class="row">
               <div class="col-lg-12 d-flex grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
