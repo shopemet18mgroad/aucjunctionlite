@@ -55,13 +55,18 @@ class Admin_startauction extends CI_Controller {
 			
 			
 		//$this->load->model('Admin_model');
-			$data = array('icategory' => $icategory, 'icontactperson' => $icontactperson, 
-			'irefid' => $irefid,'icompanyname' => $icompanyname, 'iauction_start' => $iauction_start,
+			$data = array('icategory' => $icategory, 
+			'icontactperson' => $icontactperson, 
+			'irefid' => $irefid,
+			'icompanyname' => $icompanyname,
+			'iauction_start' => $iauction_start,
 			'iauction_end' => $iauction_end );
+			print_r($data);die;
 			
 			$status = $this->Admin_model->insert('auction', $data);
 			
 			 $transfer = array('icategory'=> $icategory, 'iauctionid'=>$iauctionid,'icontactperson' => $icontactperson,'date'=>$date);
+			 
 			   if($status){
 				  $this->session->set_flashdata('txdata',$transfer);
 				  redirect('../admin_addlot');

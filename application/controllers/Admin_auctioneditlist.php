@@ -26,9 +26,9 @@ class Admin_auctioneditlist extends CI_Controller {
 		
 		
 		
-		$buyeroption = array('buyeroption'=>false);
+		$aoption = array('aoption'=>false);
 		
-	$query = $this->Admin_model->getdatafromtable('buyerdetails',$buyeroption);
+	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
 		
 		$adac['data'] = $query;
 		
@@ -44,22 +44,22 @@ class Admin_auctioneditlist extends CI_Controller {
 	
 	public function seller_delete(){
 
-$buysl_no = urldecode($this->uri->segment(3));
+$sl_ano  = urldecode($this->uri->segment(3));
 
 
 $this->load->model('Admin_model');
 
 
-$adaction2 = array('buysl_no'=>$buysl_no);
+$adaction2 = array('sl_ano'=>$sl_ano );
 
 
-$query = $this->Admin_model->delete_data('buyerdetails',$adaction2);
+$query = $this->Admin_model->delete_data('auction',$adaction2);
 $this->load->helper('url');
 $this->load->library('session');
 
 
-if($buysl_no){
-header('location: '.base_url().'Admin_auctioneditlist/index/');
+if($sl_ano){
+header('location: '.base_url().'Admin_addbuyerlist/index/');
 }else{
 echo "BYE";
 }

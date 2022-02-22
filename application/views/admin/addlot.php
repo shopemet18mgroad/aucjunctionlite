@@ -24,13 +24,13 @@
                    <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Product Name</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="Seller Name">
+                        <input type="text" class="form-control" id="iproductname" name="iproductname" placeholder="Product Name">
                       </div>
                     </div>
                   <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Product Category</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="scategory" name="scategory">
+                        <select class="form-control" id="icategory" name="icategory">
 				<option value="Select" selected>Select</option>
 				<option value="Cars">Cars</option>
 				<option value="Bikes">Bikes</option>
@@ -46,39 +46,39 @@
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="Reference Id">
+                        <textarea rows="4" cols="5" class="form-control" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="Auction Id">
+                        <input type="text" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Inspection Venue </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="Seller Company Name">
+                        <input type="text" class="form-control" id="inspectionvenue" name="inspectionvenue" placeholder="Inspection Venue ">
                       </div>
                     </div>
 					 <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label"> MRP</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="Venue Of Inspection">
+                        <input type="text" class="form-control" id="imrp" name="imrp" placeholder="MRP ">
                       </div>
                     </div>
                     
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Start Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="EMD Details">
+                        <input type="text" class="form-control" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
                     </div>
                     
                        <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" name="" placeholder="EMD Details">
+                        <input type="text" class="form-control" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
                       </div>
                     </div>
                    

@@ -276,7 +276,7 @@ color:#03AF463;
               <ul class="nav flex-column sub-menu">
                   
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_startauction">Create Auction</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_editauction">Edit Auction</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
                
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url();?>Admin_viewforthcomingauction">View Forthcoming Auction</a></li>
                 
