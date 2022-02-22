@@ -41,24 +41,27 @@ class Admin_startauction extends CI_Controller {
 			$this->load->library('fileupload');
 			$this->load->helper(array('url','form','file','html'));
 			$this->load->model('Admin_model');
-			$scategory = $this->input->post('scategory');
-			$sauctionid = $this->input->post('sauctionid');
-			$sname = $this->input->post('sname');
-			$srefid = $this->input->post('srefid');
-			$scompanyname = $this->input->post('scompanyname');
-			$sfrominpectdate_time = $this->input->post('sfrominpectdate_time');
-			$stoinpectdate_time  = $this->input->post('stoinpectdate_time');
-			$semddetail = $this->input->post('semddetail');
-			$slastdateemdsub = $this->input->post('slastdateemdsub');
-			$svinspection = $this->input->post('svinspection');
+			
+			
+				$icategory = $this->input->post('icategory');
+			$icontactperson = $this->input->post('icontactperson');
+			$irefid = $this->input->post('irefid');
+			$icompanyname = $this->input->post('icompanyname');
+			$iauctionid = $this->input->post('iauctionid');
+			$iauction_start = $this->input->post('iauction_start');
+			$iauction_end = $this->input->post('iauction_end');
+			
+			
 			
 			
 		//$this->load->model('Admin_model');
-			$data = array('scategory' => $scategory, 'sauctionid' => $sauctionid, 'sname' => $sname,'srefid' => $srefid, 'scompanyname' => $scompanyname, 'sfrominpectdate_time' => $sfrominpectdate_time, 'stoinpectdate_time' => $stoinpectdate_time,'semddetail' => $semddetail,'slastdateemdsub' => $slastdateemdsub, 'svinspection'=> $svinspection, 'saucstartdate_time' => $saucstartdate_time,'saucclosedate_time' => $saucclosedate_time,'sterms_condiaccept'=>$sterms_condiaccept,'sterms_condiupload' => $pic_array1 , 'sterms_text' => $sterms_text);
+			$data = array('icategory' => $icategory, 'icontactperson' => $icontactperson, 
+			'irefid' => $irefid,'icompanyname' => $icompanyname, 'iauction_start' => $iauction_start,
+			'iauction_end' => $iauction_end );
 			
 			$status = $this->Admin_model->insert('auction', $data);
 			
-			 $transfer = array('category'=> $scategory, 'auctionid'=>$sauctionid,'sname' => $sname,'date'=>$date);
+			 $transfer = array('icategory'=> $icategory, 'iauctionid'=>$iauctionid,'icontactperson' => $icontactperson,'date'=>$date);
 			   if($status){
 				  $this->session->set_flashdata('txdata',$transfer);
 				  redirect('../admin_addlot');
