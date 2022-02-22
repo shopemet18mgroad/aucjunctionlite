@@ -35,11 +35,14 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text" class="form-control" id="buyercontactnumber" name="buyercontactnumber">
+											<input type="text"  id="buyercontactnumber" name="buyercontactnumber" class="form-control buyercontactnumber">
 										</div>
+										
+										
+										
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" class="form-control"   id ="buyerasdharnumber" name="buyerasdharnumber">
+											<input type="text" id ="buyerasdharnumber" name="buyerasdharnumber" class="form-control buyerasdharnumber"   >
 										</div>
 
 										
@@ -297,33 +300,64 @@ function validateForm() {
  }
 </script> 
 
-	<script> 
-   $('[data-type="adhaar-number"]').on("change",function() {
-  var value = $(this).val();
-  value = value.replace(/\D/g, "").split(/(?:([\d]{4}))/g).filter(s => s.length > 0).join("-");
-  $(this).val(value);
-});
-
-$('[data-type="adhaar-number"]').on("change, blur", function() {
-  var value = $(this).val();
-  var maxLength = $(this).attr("maxLength");
-  if (value.length != maxLength) {
-    $(this).addClass("highlight-error");
-  } else {
-    $(this).removeClass("highlight-error");
-  }
 
 
 
-  if(value.length < maxLength ){
-	 swal( "aaa");
-  }
-  });
-   </script>
-	   
-	   
-	   
-	   
+
+
+
+<script type="text/javascript"> 
+
+	$(".buyerasdharnumber ").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^\d{12}$/;  
+  if(!regex.test(inputvalues)){      
+  $(".buyerasdharnumber").val("");    
+  swal("Alert!","Invalid Aadhaar Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+}); 
+
+</script> 
+
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".buyercontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".buyercontactnumber").val("");    
+  swal("Alert!","Invalid Buyer Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+	
+});    
+</script>	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	   
 	   
 	   
