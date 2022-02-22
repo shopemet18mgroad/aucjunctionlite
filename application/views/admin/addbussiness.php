@@ -37,12 +37,17 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control">
+											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control icontactnumber">
 										</div>
 									
 										<div class="form-group">
 											<label>GST Number </label> 
-											<input type="text" class="form-control" id="igstnumber"  name="igstnumber">
+											<input type="text" class="form-control igstnumber" id="igstnumber"  name="igstnumber">
+										</div>
+										
+										<div class="form-group">
+											<label>Company Name</label> 
+											<input type="text" class="form-control " id="icompanyname"  name="icompanyname">
 										</div>
 											
 										
@@ -52,12 +57,12 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
-											<input type="password" class="form-control" id="ipass" name="ipass">
+											<input type="password" class="form-control" id="ipass" name="ipass"  maxLength="15" placeholder="password should be maximum length 15 ">
 										</div>
 										
 											<div class="form-group">
 											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
-											<input type="password" class="form-control" id="iconpass" name="iconpass">
+											<input type="password" class="form-control" id="iconpass" name="iconpass" maxLength="15" placeholder="Repeat password should be maximum length 15 ">
 										</div>
 										
 										
@@ -216,4 +221,39 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
+	
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".igstnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^([0-9]){2}([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}([0-9]){1}([a-zA-Z]){1}([0-9A-Z]){1}?$/;    
+  if(!regex.test(inputvalues)){      
+  $(".igstnumber").val("");    
+  swal("Alert!","Invalid gst no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+});    
+</script>
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".icontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".icontactnumber").val("");    
+  swal("Alert!","Invalid Seller Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+});    
+</script>	
+	
+	
+	
+	
    

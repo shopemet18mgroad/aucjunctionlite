@@ -44,11 +44,11 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control">
+											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control icontactnumber">
 										</div>
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" id="iadharnumber" name="iadharnumber" onsubmit="validation()" class="form-control" >
+											<input type="text" id="iadharnumber" name="iadharnumber"  maxLength="12"  class="form-control iadharnumber" >
 										</div>
 											
 										
@@ -56,14 +56,14 @@
 											<label> <i class="fa fa-envelope  mr-2 text-info fa-2x"></i>Email Id </label>
 											<input type="text" id="iemailid" name="iemailid" class="form-control">
 										</div>
-										<div class="form-group">
+									<div class="form-group">
 											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
-											<input type="text" class="form-control" id="ipass" name="ipass">
+											<input type="password" class="form-control" id="ipass" name="ipass"  maxLength="15" placeholder="password should be maximum length 15 ">
 										</div>
 										
 											<div class="form-group">
 											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
-											<input type="password" class="form-control" id="iconpass" name="iconpass">
+											<input type="password" class="form-control" id="iconpass" name="iconpass" maxLength="15" placeholder="Repeat password should be maximum length 15 ">
 										</div>
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhar card </label><br>
@@ -150,7 +150,8 @@
 										</div>
 										
 										
-												
+										
+	
 								
 									
 
@@ -225,17 +226,36 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
-	<script> 
-   function validation()
-       {   
-            
-            var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
-           
-            var x=document.getElementById("iadharnumber").value;
-			if(regexp.test(x)) {
-			   window.alert("Good Luck, Your Valid Aadhar no.");   
-			}
-			else { 
-				window.alert("Sorry, Invalid Aadhar no.");
-			}
-   </script>
+
+<script type="text/javascript"> 
+
+	$(".iadharnumber ").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^\d{12}$/;  
+  if(!regex.test(inputvalues)){      
+  $(".iadharnumber").val("");    
+  swal("Alert!","Invalid Aadhaar Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+}); 
+
+</script> 
+
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".icontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".icontactnumber").val("");    
+  swal("Alert!","Invalid Seller Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+});    
+</script>	
+	
+	
+	

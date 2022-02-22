@@ -38,12 +38,13 @@ class Admin_model extends CI_Model
 		  } 
 	 
 		   
-		  public function get_lookalike($table,$col,$query){			  
-			$this->db->from($table);
-			$this->db->like($col,$query);
-			$q = $this->db->get();
-			return $q->result_array();
-		  }
+		 	public function get_lookalike($table, $col, $query)
+	{
+		$this->db->from($table);
+		$this->db->like($col, $query);
+		$q = $this->db->get();
+		return $q->result_array();
+	}
 		  	public function delete_data($table, $data)
 	{
 		if ($this->db->delete($table, $data)) {
