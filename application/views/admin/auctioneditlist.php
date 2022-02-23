@@ -32,7 +32,9 @@
                           <th>
 						 Seller Name
                           </th>
+						  <th>
                           Reference Id
+						  </th>
                           <th>
                          Auction Id
                           </th>

@@ -36,14 +36,13 @@ class Admin_startauction extends CI_Controller {
 	 
 	public function index()
 	{ 
-		   if($this->input->post('submit')){
+		  
 			$date =  Date('Y-m-d'); 
 			$this->load->library('fileupload');
 			$this->load->helper(array('url','form','file','html'));
 			$this->load->model('Admin_model');
-			
-			
-				$icategory = $this->input->post('icategory');
+			$irole = $this->input->post('irole');
+			$icategory = $this->input->post('icategory');
 			$icontactperson = $this->input->post('icontactperson');
 			$irefid = $this->input->post('irefid');
 			$icompanyname = $this->input->post('icompanyname');
@@ -53,30 +52,21 @@ class Admin_startauction extends CI_Controller {
 			
 			
 			
-			
-		//$this->load->model('Admin_model');
-			$data = array('icategory' => $icategory, 
+	
+			$data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson, 
 			'irefid' => $irefid,
 			'icompanyname' => $icompanyname,
 			'iauction_start' => $iauction_start,
 			'iauction_end' => $iauction_end );
-			print_r($data);die;
-			
-			$status = $this->Admin_model->insert('auction', $data);
-			
-			 $transfer = array('icategory'=> $icategory, 'iauctionid'=>$iauctionid,'icontactperson' => $icontactperson,'date'=>$date);
-			 
-			   if($status){
-				  $this->session->set_flashdata('txdata',$transfer);
-				  redirect('../admin_addlot');
-			  }else{
-				   header('location: ./admin_startauction/');
-			  }
-			
-			}	
-			
 		
+		
+		
+		
+		$status = $this->Admin_model->insert('auction', $data);
+			
+	
+
 		
 		
 		
@@ -89,7 +79,9 @@ class Admin_startauction extends CI_Controller {
 public function get_seller_table(){
 	$dataw = urldecode($this->uri->segment(3));
 	$this->load->model('Admin_model');
-	$search = $this->Admin_model->get_lookalike('individual','icompanyname',$dataw);	
+	$search = $this->Admin_model->get_lookalike('individual','icompanyname',$dataw);
+	
+	
 	
 	if($search){
 		foreach($search as $sear){
@@ -101,6 +93,24 @@ public function get_seller_table(){
 	}
 	
 }	
+public function get_email_table(){
+	$dataw1 = urldecode($this->uri->segment(3));
+	$this->load->model('Admin_model');
+	$search1 = $this->Admin_model->get_lookalike('individual','iemailid ',$dataw1);	
 	
+	if($search1){
+		foreach($search1 as $sear1){
+			echo "<li onclick=\"getPagin(this.id)\" id=\"".$sear1['iemailid'].'|'.$sear1['icontactperson']."\" class=\"option\">".$sear1['iemailid']."</li>\n";
+			
+		}
+	}else{
+		echo "<li onclick=\"\" value=\"1\" class=\"option\">No Results</li>";
+	}
+	
+}	
+
+
+
+
 	
 }
