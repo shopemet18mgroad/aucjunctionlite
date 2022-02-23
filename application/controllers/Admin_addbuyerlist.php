@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_auctioneditlist extends CI_Controller {
+class Admin_addbuyerlist extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -34,7 +34,7 @@ class Admin_auctioneditlist extends CI_Controller {
 		
 		
 		$this->load->view('admin/header');
-		$this->load->view('admin/auctioneditlist',$adac);
+		$this->load->view('admin/addbuyerlist',$adac);
 		$this->load->view('admin/footer');
 		
 		

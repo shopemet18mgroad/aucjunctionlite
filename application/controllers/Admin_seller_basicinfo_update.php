@@ -153,3 +153,4 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 }
 	
+	

@@ -22,13 +22,13 @@
                   
                   
                    <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Product Name</label>
+                      <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="iproductname" name="iproductname" placeholder="Product Name">
                       </div>
                     </div>
                   <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Product Category</label>
+                      <label for="" class="col-sm-3 col-form-label">Sub Category</label>
                       <div class="col-sm-9">
                         <select class="form-control" id="icategory" name="icategory">
 				<option value="Select" selected>Select</option>
@@ -55,21 +55,16 @@
                         <input type="text" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Inspection Venue </label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inspectionvenue" name="inspectionvenue" placeholder="Inspection Venue ">
-                      </div>
-                    </div>
+                   
 					 <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label"> MRP</label>
+                      <label for="" class="col-sm-3 col-form-label"> Expected price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="imrp" name="imrp" placeholder="MRP ">
+                        <input type="text" class="form-control" id="imrp" name="imrp" placeholder=" Expectprice ">
                       </div>
                     </div>
                     
                     <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Start Auction Price</label>
+                      <label for="" class="col-sm-3 col-form-label">Start  Price</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
@@ -82,6 +77,34 @@
                       </div>
                     </div>
                    
+				  
+						 <div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">Inspection date and time</label>
+                      <div class="col-sm-9">
+                       From: 	
+                        <input class="form-control" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
+                         To: 	
+		<input class="form-control" id="iauction_end" name="iauction_end" type="datetime-local" >
+                      </div>
+                    </div>
+					
+					
+					
+					
+			 <div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">Upload photos</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="mt-3" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
+                      </div>
+                    </div>
+                   		
+					
+					
+					
+					
+				
+					
+				
                  <center><button type="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>

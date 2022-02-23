@@ -116,62 +116,83 @@
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
     <!-- End custom js for this page-->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			// <script>
+
+// $('.ltype').click(function() {
+  // $('.ltype').not(this).prop('checked', false);
+// });
+
+// </script>		
+
+
 											
-			<script>
-
-$('.ltype').click(function() {
-  $('.ltype').not(this).prop('checked', false);
-});
-
-</script>		
-
-
-											
-	<script type="text/javascript"> 
+	// <script type="text/javascript"> 
 	
-	  window.onload = myFunction();
-	function myFunction() {
-  // Get the checkbox
+	  // window.onload = myFunction();
+	// function myFunction() {
+  // // Get the checkbox
 
-  var checkBox = document.getElementById("myCheck");
-  // Get the output text
-  var dvPassport = document.getElementById("dvPassport");
-  var dvPassport1 = document.getElementById("dvPassport1");
+  // var checkBox = document.getElementById("myCheck");
+  // // Get the output text
+  // var dvPassport = document.getElementById("dvPassport");
+  // var dvPassport1 = document.getElementById("dvPassport1");
 
-  // If the checkbox is checked, display the output text
-  if (checkBox.checked === true){
-    dvPassport.style.display = "block";
-	dvPassport1.style.display = "none";
-  } else {
-    dvPassport.style.display = "none";
-  }
-}
+  // // If the checkbox is checked, display the output text
+  // if (checkBox.checked === true){
+    // dvPassport.style.display = "block";
+	// dvPassport1.style.display = "none";
+  // } else {
+    // dvPassport.style.display = "none";
+  // }
+// }
 	
 	
  
-</script>
-	<script type="text/javascript"> 
+// </script>
+	// <script type="text/javascript"> 
 	
-	  window.onload = myFunction1();
-	function myFunction1() {
-  // Get the checkbox
-  var checkBox1 = document.getElementById("myCheck1");
-  // Get the output text
-  var dvPassport1 = document.getElementById("dvPassport1");
-  var dvPassport = document.getElementById("dvPassport");
+	  // window.onload = myFunction1();
+	// function myFunction1() {
+  // // Get the checkbox
+  // var checkBox1 = document.getElementById("myCheck1");
+  // // Get the output text
+  // var dvPassport1 = document.getElementById("dvPassport1");
+  // var dvPassport = document.getElementById("dvPassport");
 
-  // If the checkbox is checked, display the output text
-  if (checkBox1.checked === true){
-    dvPassport1.style.display = "block";
-	dvPassport.style.display = "none";
-  } else {
-    dvPassport1.style.display = "none";
-  }
-}
+  // // If the checkbox is checked, display the output text
+  // if (checkBox1.checked === true){
+    // dvPassport1.style.display = "block";
+	// dvPassport.style.display = "none";
+  // } else {
+    // dvPassport1.style.display = "none";
+  // }
+// }
 	
 	
  
-</script>
+// </script>
 
 					
 		

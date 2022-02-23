@@ -18,9 +18,13 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	  
-	 	public function index(){
-	$buyername = $this->input->post('buyername');
+	 
+	 	public function index()
+	{
+		$this->load->library('fileupload');
+		$this->load->helper(array('url','form','file','html'));
+		$this->load->model('Admin_model');
+	    $buyername = $this->input->post('buyername');
 			$buyercontactnumber= $this->input->post('buyercontactnumber');
 			$buyerasdharnumber = $this->input->post('buyerasdharnumber');
 			$buyeremail = $this->input->post('buyeremail');
@@ -34,10 +38,6 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 			$buyercontactperson = $this->input->post('buyercontactperson');
 			$addressproof = $this->input->post('addressproof');
 			 $buysl_no = $this->input->post('buysl_no');
-			 
-			 
-			 	$datar = array();
-		
 		
 			 $a = $_FILES['buyeradharcard']['name']; 
 			  $pic_array1 = self::upload_files('buyeradharcard');
@@ -63,23 +63,13 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		  
 		  
 		  
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			
+		  
+		  
+		
+		
+	
 			$this->load->model('Admin_model');
+			 $this->load->model('Admin_model');
 			  $data2 = array('buyername' => $buyername, 
 			  'buyercontactnumber' => $buyercontactnumber, 
 			  'buyerasdharnumber' => $buyerasdharnumber, 
@@ -89,28 +79,26 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 			  'buyerpincode' => $buyerpincode,
 			  'buyercontactperson' => $buyercontactperson, 
 			  'addressproof' =>$pic_array2);
-			
-			  
-	
-			
-
 			  
 			  $datainserr = "Data Inserted Successfully";
 			  $updatech = array('buysl_no' => $buysl_no);
-			 // print_r ($updatech); die;
-		
+
+			 
 			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);
 		
 		header('location: '.base_url().'Admin_addbuyerlist/index/'.$datainserr);
-	}
+	
+		
+		}
 		
 		
-	private function upload_files($nameid){
+		
+		private function upload_files($nameid){
     	
  
 	$datar = array();
       // Looping all files
-	if(($cntfiles = count($_FILES['buyeradharcard']['name'])) && ($cntfiles = count($_FILES['addressproof']['name']))){
+	if(($cntfiles = count($_FILES['addressproof']['name'])) && ($cntfiles = count($_FILES['buyeradharcard']['name']))){
 	
 	//print_r($_FILES['uploadproductimage']['name']); die;
 //print_r($cntfiles);die; 
@@ -160,10 +148,8 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		
 		
 		
-		}
-
-
-
-
-
+		
+		
+}
+	
 	

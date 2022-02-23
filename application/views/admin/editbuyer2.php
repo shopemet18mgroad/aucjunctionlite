@@ -131,7 +131,9 @@
 										<div class="form-group" >
 										<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Address proof</label>
 										<br>
-											<input type="file" id="addressproof" name="addressproof" value="<?php echo $sqldata[0]->addressproof ?>">
+											<input type="file" id=
+											
+											"addressproof" name="addressproof" value="<?php echo $sqldata[0]->addressproof ?>">
 										</div>
 										
 										
