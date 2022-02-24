@@ -97,7 +97,7 @@
 				
 					 
                     
-                 <center><button type="submit" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
+                 <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
                 </div>
@@ -266,6 +266,47 @@
  
 
 </script>
+	
+	
+<script>
+  
+function validatestartauction(){
+
+	var icategory = document.getElementById("icategory").value;
+	var iauctionid = document.getElementById("iauctionid").value;
+	var irole = document.getElementById("irole").value;
+	var icompanyname = document.getElementById("icompanyname").value;
+	var icontactperson = document.getElementById("icontactperson").value;
+	var iemailid = document.getElementById("iemailid").value;
+	var iauction_start = document.getElementById("iauction_start").value;
+	var iauction_end = document.getElementById("iauction_end").value;
+	
+	
+	
+
+if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || iemailid == '' || iauction_end == '' || iauction_start == ''){
+		swal("Alert!",  "Category,Auction id,Type,Company Name, Contact Person, E-Mail, Start Auction,End Auction cannot leave any field blank!", "error");
+		return false;
+	}
+	else{
+        $.ajax({
+            type:'submit',
+            data: {icategory:icategory,iauctionid:iauctionid,irole:irole,icompanyname:icompanyname,iemailid:iemailid,iauction_start:iauction_start,iauction_end:iauction_end},
+           success:function(data){
+                swal("Success", "Data Saved Successfully", "success");
+            },
+            error:function(xhr, thrownError, ajaxOptions){
+
+            },
+        });
+    }
+	
+	
+}
+  </script>
+	
+	
+	
 	
 	
 	
