@@ -10,7 +10,8 @@
                 <div class="card">
                   <div class="card-body">
                   
-                
+                 <form action= "<?php echo base_url();?>Admin_addlot_info"
+				 method="post" enctype="multipart/form-data"> 
 				  <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -21,21 +22,36 @@
                   <form class="forms-sample">
                   
                   
-                   <div class="form-group row">
+                    <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="iproductname" name="iproductname" placeholder="Product Name">
-                      </div>
-                    </div>
-                  <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Sub Category</label>
                       <div class="col-sm-9">
                         <select class="form-control" id="icategory" name="icategory">
 				<option value="Select" selected>Select</option>
+				<option value="Cars">Automobile</option>
+				<option value="Bikes">Home Appliance</option>
+				<option value="Laptop">Electronic Appliance </option>
+				<option value="Mobile">Mobile</option>
+				
+				
+				
+				</select>
+                      </div>
+                    </div>
+                    
+                    
+                  <div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">Sub Category</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="isubcategory" name="isubcategory">
+				<option value="Select" selected>Select</option>
 				<option value="Cars">Cars</option>
 				<option value="Bikes">Bikes</option>
+                <option value="Commercial">Commercial</option>
 				<option value="Laptop" >Laptop</option>
 				<option value="Mobile">Mobile</option>
+                <option value="TV">TV</option>
+                <option value="Washing Machine">Washing Machine</option>
+                <option value="Fridge">Fridge</option>
 				
 				
 				
@@ -94,7 +110,7 @@
 			 <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Upload photos</label>
                       <div class="col-sm-9">
-                        <input type="file" class="mt-3" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
+                        <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price">
                       </div>
                     </div>
                    		
@@ -118,7 +134,7 @@
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
-       
+       </form>
           <!-- partial -->
         </div>
      
