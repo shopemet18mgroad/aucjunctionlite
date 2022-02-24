@@ -48,6 +48,7 @@ class Admin_addlot_info extends CI_Controller {
 		 $iauction_start  = $this->input->post('iauction_start');
 		 $iauction_end  = $this->input->post('iauction_end');
 		 $imageupload  = $this->input->post('imageupload');
+		  $entryfee  = $this->input->post('entryfee');
 		
 		
 	
@@ -71,13 +72,13 @@ class Admin_addlot_info extends CI_Controller {
 		$data = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
 		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
-		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,' imageupload' => $pic_array1); 
+		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,' imageupload' => $pic_array1,'entryfee'=>$entryfee); 
 		
 	
 		
 		$datainserr = "Data Inserted Successfully";
 		$status = $this->Admin_model->insert('addlot',$data);
-		header('location: '.base_url().'admin_startauction/'.$datainserr);
+		header('location: '.base_url().'admin_startauction/index/'.$datainserr);
 		
 		
 		

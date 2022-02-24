@@ -23,7 +23,7 @@ class Admin_startauction extends CI_Controller {
         
         // Load session library
         $this->load->library('session');
-      
+     
 		$this->load->helper('url');
 		$this->load->helper('date');
 	
@@ -48,9 +48,6 @@ class Admin_startauction extends CI_Controller {
 			$iauction_start = $this->input->post('iauction_start');
 			$iauction_end = $this->input->post('iauction_end');
 			$iemailid = $this->input->post('iemailid');
-			
-			
-			
 	
 			$data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
@@ -63,22 +60,7 @@ class Admin_startauction extends CI_Controller {
 		  $transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,
 		'icontactperson' => $icontactperson,'date'=>$date);
 		
-		
-		$status = $this->Admin_model->insert('auction',$data);
-			
-	  
 	
-	
-	if($status){
-		$this->session->set_flashdata('txdata',$transfer);
-		
-		header('location: ./Admin_addlot/');
-		
-		
-	}
-	else{
-		header('location: ./admin_startauction/');
-	}
 		
 		
 		
@@ -87,6 +69,47 @@ class Admin_startauction extends CI_Controller {
 		$this->load->view('admin/footer');
 	
 	}
+	 public function insert_auc(){
+		 $date =  Date('Y-m-d'); 
+			$this->load->library('fileupload');
+			$this->load->helper(array('url','form','file','html'));
+			$this->load->model('Admin_model');
+			$irole = $this->input->post('irole');
+			$icategory = $this->input->post('icategory');
+			$icontactperson = $this->input->post('icontactperson');
+
+			$icompanyname = $this->input->post('icompanyname');
+			$iauctionid = $this->input->post('iauctionid');
+			$iauction_start = $this->input->post('iauction_start');
+			$iauction_end = $this->input->post('iauction_end');
+			$iemailid = $this->input->post('iemailid');
+	
+			$data = array('irole'=>$irole,'icategory' => $icategory, 
+			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
+			'iauctionid' => $iauctionid,
+			
+			'icompanyname' => $icompanyname,
+			'iauction_start' => $iauction_start,
+			'iauction_end' => $iauction_end );
+		
+		  
+	 $status = $this->Admin_model->insert('auction',$data);
+			
+	  
+	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,
+		'icontactperson' => $icontactperson,'date'=>$date);
+				
+	
+	if($status){
+	 $this->session->set_flashdata('txdata',$transfer);
+	
+	 
+	 
+	 header('location: '.base_url().'Admin_addlot/index/'.$datainserr);
+}else if(!$status){
+	header('location: ./admin_startauction/');
+	}
+	 }
 	
 public function get_seller_table(){
 	$dataw = urldecode($this->uri->segment(3));

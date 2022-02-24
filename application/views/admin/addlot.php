@@ -102,6 +102,14 @@
                         <input type="text" class="form-control" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
                       </div>
                     </div>
+					
+					     <div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">entry free </label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="End Auction Price">
+                      </div>
+                    </div>
+					
                    
 				  
 						 <div class="form-group row">

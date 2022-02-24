@@ -3,7 +3,7 @@
         <div class="main-panel">
           <div class="content-wrapper">
 		  
-		<form action="<?php echo base_url();?>Admin_startauction" method="post" enctype="multipart/form-data">   
+		<form action="<?php echo base_url();?>Admin_startauction/insert_auc" method="post" enctype="multipart/form-data">   
               
 		  
         

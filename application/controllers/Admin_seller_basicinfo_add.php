@@ -77,8 +77,7 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 	
 		
 		
-		$data = array('role'=>$role,'iname' => $iname, 
-		'icontactnumber' => $icontactnumber, 'iadharnumber' => $iadharnumber,
+		$data = array('role'=>$role,'iname' => $iname,'icontactnumber' => $icontactnumber, 'iadharnumber' => $iadharnumber,
 		'iemailid' => $iemailid ,'ipass' => $ipass,'iconpass' => $iconpass,
 		'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,' icity' => $icity, 
 		'istate' => $istate, 'icountry' => $icountry, 'ipincode' => $ipincode,
