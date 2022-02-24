@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_startauction extends CI_Controller {
+class Admin_startauction_add extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -42,8 +42,7 @@ class Admin_startauction extends CI_Controller {
 			$irole = $this->input->post('irole');
 			$icategory = $this->input->post('icategory');
 			$icontactperson = $this->input->post('icontactperson');
-
-			$icompanyname = $this->input->post('icompanyname');
+            $icompanyname = $this->input->post('icompanyname');
 			$iauctionid = $this->input->post('iauctionid');
 			$iauction_start = $this->input->post('iauction_start');
 			$iauction_end = $this->input->post('iauction_end');
@@ -54,35 +53,18 @@ class Admin_startauction extends CI_Controller {
 	
 			$data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
-			'iauctionid' => $iauctionid,
-			
-			'icompanyname' => $icompanyname,
+			'iauctionid' => $iauctionid,'icompanyname' => $icompanyname,
 			'iauction_start' => $iauction_start,
-			'iauction_end' => $iauction_end );
+			'iauction_end' => $iauction_end);
 		
-		  $transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,
-		'icontactperson' => $icontactperson,'date'=>$date);
-		
+		  
+		$datainserr = "Data Inserted Successfully";
 		
 		$status = $this->Admin_model->insert('auction',$data);
-			
-	  
-	
-	
-	if($status){
-		$this->session->set_flashdata('txdata',$transfer);
 		
-		header('location: ./Admin_addlot/');
+	  	header('location: '.base_url().'Admin_startauction/index/'.$datainserr);
 		
-		
-	}
-	else{
-		header('location: ./admin_startauction/');
-	}
-		
-		
-		
-		$this->load->view('admin/header');
+        $this->load->view('admin/header');
 		$this->load->view('admin/startauction');
 		$this->load->view('admin/footer');
 	
@@ -126,3 +108,4 @@ public function get_email_table(){
 
 	
 }
+

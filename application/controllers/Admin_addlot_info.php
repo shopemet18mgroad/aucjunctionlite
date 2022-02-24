@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_buyer_basicinfo_add extends CI_Controller {
+class Admin_addlot_info extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -38,33 +38,26 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 		$this->load->model('Admin_model');
 		
 		
-	     $buyername = $this->input->post('buyername');
-	     $buyercontactnumber = $this->input->post('buyercontactnumber');
-	
-		$buyerasdharnumber = $this->input->post('buyerasdharnumber');
-		$buyeremail  = $this->input->post('buyeremail');
-		$buyerpass = base64_encode($this->input->post('buyerpass'));
-		$bconpassword = base64_encode($this->input->post('bconpassword'));
+	     $icategory = $this->input->post('icategory');
+	     $isubcategory = $this->input->post('isubcategory');
+         $iproductdes = $this->input->post('iproductdes');
+		 $inspectiondate  = $this->input->post('inspectiondate');
+		 $imrp = $this->input->post('imrp');
+		 $startaucprice = $this->input->post('startaucprice');
+	     $endaucprice  = $this->input->post('endaucprice');
+		 $iauction_start  = $this->input->post('iauction_start');
+		 $iauction_end  = $this->input->post('iauction_end');
+		 $imageupload  = $this->input->post('imageupload');
 		
-		
-		
-		$buyeradharcard  = $this->input->post('buyeradharcard');
-		
-		$buyeraddress  = $this->input->post('buyeraddress');
-		$buyercity  = $this->input->post('buyercity	');
-		$buyerstate  = $this->input->post('buyerstate');
-		$buyercountry  = $this->input->post('buyercountry');
-		$buyerpincode  = $this->input->post('buyerpincode');
-		$buyercontactperson  = $this->input->post('buyercontactperson');
-		$addressproof  = $this->input->post('addressproof');
 		
 	
-		 $_FILES['buyeradharcard']['name'];
-		 $_FILES['addressproof']['name'];
+		$a =  $_FILES['imageupload']['name'];
+		//print_r($a); die;
+		
 		  
 		 
 			
-		      $pic_array1 = self::upload_files('buyeradharcard');
+		      $pic_array1 = self::upload_files('imageupload');
 		
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -74,36 +67,17 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 			$pic_array1 = serialize($pic_array1);
 		}
 		
-	
-			
-		      $pic_array2 = self::upload_files('addressproof');
-		//print_r($pic_array1); die;
-	   if(!count($pic_array2)){
-			echo '<script language="javascript">';
-			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
-			echo '</script>';
-		}else{
-			$pic_array2 = serialize($pic_array2);
-		}
 		
-		
+		$data = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
+		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
+		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,' imageupload' => $pic_array1); 
 		
 	
-	
 		
-		
-		$data = array('buyername'=>$buyername,'buyercontactnumber' => $buyercontactnumber, 
-		'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail,
-		'buyerpass' => $buyerpass ,'bconpassword' => $bconpassword,'buyeradharcard' => $pic_array1,
-		'buyeraddress'=> $buyeraddress, 'buyercity' => $buyercity,' buyerstate' => $buyerstate, 
-		'buyercountry' => $buyercountry, 'buyerpincode' => $buyerpincode, 'buyercontactperson' => $buyercontactperson,
-		'addressproof'=>$pic_array2 );
-		
-		
-		
-		
-		$status = $this->Admin_model->insert('buyerdetails',$data);
-		header('location: '.base_url().'Admin_addbuyer/index/'.$datainserr);
+		$datainserr = "Data Inserted Successfully";
+		$status = $this->Admin_model->insert('addlot',$data);
+		header('location: '.base_url().'admin_startauction/'.$datainserr);
 		
 		
 		
@@ -115,7 +89,7 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
  
 	$datar = array();
       // Looping all files
-	if(($cntfiles = count($_FILES['buyeradharcard']['name'])) && ($cntfiles = count($_FILES['addressproof']['name']))){
+	if($cntfiles = count($_FILES['imageupload']['name'])){
 	
 	//print_r($_FILES['uploadproductimage']['name']); die;
 //print_r($cntfiles);die; 
