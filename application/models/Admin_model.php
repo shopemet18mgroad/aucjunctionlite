@@ -51,4 +51,21 @@ class Admin_model extends CI_Model
 			return true;
 		}
 	}
+	
+		function getaddlotauctiondetails() {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->where('a.aoption',true);					 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					 
+					$result = $query->result();				
+					return $result;
+		
+			}
+	
+	
+	
 	}

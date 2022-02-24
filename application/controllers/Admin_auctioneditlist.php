@@ -59,7 +59,7 @@ $this->load->library('session');
 
 
 if($sl_ano){
-header('location: '.base_url().'Admin_addbuyerlist/index/');
+header('location: '.base_url().'Admin_auctioneditlist/index/');
 }else{
 echo "BYE";
 }
