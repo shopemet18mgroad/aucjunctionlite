@@ -29,7 +29,7 @@
  
 
     
-	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiFdr5Z0WRIXKUOqoRRvzRQ5SkzhkUVjk"></script>	
 	
 	
 	
@@ -128,6 +128,29 @@ color:#03AF463;
  list-style-type: none;
 
 }
+
+body {
+	font-family :Arial;
+}
+#map-layer {
+	margin: 20px 0px;
+	max-width: 600px;
+	min-height: 400;
+}
+#btnAction {
+	background: #3878c7;
+    padding: 10px 40px;
+    border: #3672bb 1px solid;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 0.9em;
+    cursor:pointer;
+    display:block;
+}
+#btnAction:disabled {
+    background: #6c99d2;
+}
+
 
   
 </style>

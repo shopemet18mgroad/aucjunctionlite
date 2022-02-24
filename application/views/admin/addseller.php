@@ -163,7 +163,7 @@
 										
 											<div class="d-flex justify-content-around">
 							<div class="Col-sm-4">
-							<button type="submit" name="submit" class="btn btn-info btn-rounded m-4 Col-sm-4"  id="mm">Submit</button>
+							<button type="submit" name="submit" class="btn btn-info btn-rounded m-4 Col-sm-4" onclick="return validateindiviual()"  id="mm">Submit</button>
 						</div>
 					<div class="Col-sm-4">
 							<button type="reset" name="reset" class="btn btn-info btn-rounded Col-sm-4  m-4">Cancel</button>
