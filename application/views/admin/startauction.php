@@ -3,7 +3,7 @@
         <div class="main-panel">
           <div class="content-wrapper">
 		  
-		<form action="<?php echo base_url();?>Admin_startauction_add" method="post" enctype="multipart/form-data">   
+		<form action="<?php echo base_url();?>Admin_startauction" method="post" enctype="multipart/form-data">   
               
 		  
         
@@ -23,7 +23,32 @@
                     
                   </p>
 				  
-	
+				  
+
+					
+				<div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">Type</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="irole" name="irole" onChange="meghasuma()">
+				<option value="Select" selected>Select</option>
+				<option value="company">Company</option>
+				<option value="individual">Individual</option>
+				
+				
+				
+				
+				</select>
+                      </div>
+                    </div>	
+					
+					
+				  
+				  
+				  
+				  
+				  
+				  
+                
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
@@ -39,7 +64,12 @@
 				</select>
                       </div>
                     </div>
-                   
+                    <div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">Seller Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="icontactperson" name="icontactperson" placeholder="Seller Name" readonly>
+                      </div>
+                    </div>
                  
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Auction Id</label>
@@ -47,36 +77,12 @@
                         <input type="text" class="form-control" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly>
                       </div>
                     </div>
-					
-					<div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Type</label>
-                      <div class="col-sm-9">
-                        <select class="form-control" id="irole" name="irole" onChange="meghasuma()">
-				<option value="Select" selected>Select</option>
-				<option value="company">Company</option>
-				<option value="individual">Individual</option>
-				
-				
-				
-				
-				</select>
-                      </div>
-                    </div>
-					
-					  <div class="form-group row icompanyname">
+                    <div class="form-group row icompanyname">
                       <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"   onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
                       </div>
                     </div>
-					 <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Seller Name</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="icontactperson" name="icontactperson" placeholder="Seller Name" readonly>
-                      </div>
-                    </div>
-					
-                  
 					<div class="form-group row iemailid">
                       <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
                       <div class="col-sm-9">
@@ -234,8 +240,8 @@
 		  $(".icompanyname").hide();
 		  $(".iemailid").show();
 		  
-		  
-		 
+		  $("#dp").show();
+		  $("#dpp").hide();
 		   return false;
 		   
 		   
@@ -251,7 +257,8 @@
 		  $(".iemailid").hide();
 		  
 		  
-		  
+		  $("#dp").show();
+		  $("#dpp").hide();
 		  
 		  
 
@@ -266,9 +273,6 @@
  
 
 </script>
-	
-	
-	
 	 
     
     

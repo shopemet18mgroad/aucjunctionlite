@@ -40,7 +40,7 @@
                     
                     
                   <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Sub Category</label>
+                      <label for="" class="col-sm-3 col-form-label">Sub-category</label>
                       <div class="col-sm-9">
                         <select class="form-control" id="isubcategory" name="isubcategory">
 				<option value="Select" selected>Select</option>
@@ -52,7 +52,7 @@
                 <option value="TV">TV</option>
                 <option value="Washing Machine">Washing Machine</option>
                 <option value="Fridge">Fridge</option>
-				
+				Sub Category
 				
 				
 				</select>
@@ -71,6 +71,16 @@
                         <input type="text" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
                     </div>
+					
+					<div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label">Current location </label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="currentlocation"="currentlocation" placeholder="current location ">
+                      </div>
+                    </div>
+                   
+					
+					
                    
 					 <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label"> Expected price</label>
@@ -80,7 +90,7 @@
                     </div>
                     
                     <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Start  Price</label>
+                      <label for="" class="col-sm-3 col-form-label">Start  Auction Price</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
@@ -121,7 +131,7 @@
 				
 					
 				
-                 <center><button type="submit" class="btn btn-info mr-2 w-50">Submit</button>
+                 <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
                 </div>
@@ -149,3 +159,37 @@
       <!-- page-body-wrapper ends -->
     </div>
 
+	<script> 
+function validateaddlot(){
+
+	var icategory = document.getElementById("icategory").value;
+	var isubcategory = document.getElementById("isubcategory").value;
+	var iproductdes = document.getElementById("iproductdes").value;
+	var inspectiondate = document.getElementById("inspectiondate").value;
+	var imrp = document.getElementById("imrp").value;
+	var startaucprice = document.getElementById("startaucprice").value;
+	var endaucprice = document.getElementById("endaucprice").value;
+	var iauction_start = document.getElementById("iauction_start").value;
+	var iauction_end = document.getElementById("iauction_end").value;
+	var imageupload = document.getElementById("imageupload").value;
+	
+	
+
+if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate == '' || imrp == '' || startaucprice == '' || endaucprice == '' || iauction_start == '' || iauction_end == ''|| imageupload == ''){
+		swal("Alert!",  "Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price, End Auction Price , Inspection date and time,Upload photos, Pin  cannot leave any field blank!", "error");
+		return false;
+	}
+	else{
+        $.ajax({
+            type:'submit',
+            data: {icategory:icategory,isubcategory:isubcategory, iproductdes: iproductdes,inspectiondate:inspectiondate,imrp:imrp,startaucprice:startaucprice,endaucprice :endaucprice ,iauction_start:iauction_start,iauction_end:iauction_end, imageupload: imageupload},
+           success:function(data){
+                swal("Success", "Data Saved Successfully", "success");
+            },
+            error:function(xhr, thrownError, ajaxOptions){
+
+            },
+        });
+    }
+}
+</script>	

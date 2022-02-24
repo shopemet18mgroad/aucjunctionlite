@@ -41,7 +41,7 @@
 	<center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
   <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>images/bussiness.png " alt="Card image cap"> 
   <div class="card-body">
-   <i class="fa fa-building mr-2  fa-6x" style="color:danger;"></i>
+   <i class="fa fa-building mr-3 mt-7  fa-6x" style="color:danger;"></i>
    
     <p class="card-text"></p>
    <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
