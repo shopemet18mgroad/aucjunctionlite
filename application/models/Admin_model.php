@@ -56,7 +56,7 @@ class Admin_model extends CI_Model
 			$this->db->select('
 					a.*,
 					b.*');
-					$this->db->where('a.aoption',true);					 			
+					$this->db->where('a.aoption',false);					 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
