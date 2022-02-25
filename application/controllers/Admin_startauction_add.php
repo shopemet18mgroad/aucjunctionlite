@@ -39,6 +39,7 @@ class Admin_startauction_add extends CI_Controller {
 			$this->load->library('fileupload');
 			$this->load->helper(array('url','form','file','html'));
 			$this->load->model('Admin_model');
+			
 			$irole = $this->input->post('irole');
 			$icategory = $this->input->post('icategory');
 			$icontactperson = $this->input->post('icontactperson');
@@ -54,13 +55,12 @@ class Admin_startauction_add extends CI_Controller {
 			$data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
 			'iauctionid' => $iauctionid,'icompanyname' => $icompanyname,
-			'iauction_start' => $iauction_start,
-			'iauction_end' => $iauction_end);
+			'iauction_start' => $iauction_start,'iauction_end' => $iauction_end);
 		
 		  
 		$datainserr = "Data Inserted Successfully";
 		
-		$status = $this->Admin_model->insert('auction',$data);
+		$status = $this->Admin_model->update_custom('auction',$data);
 		
 	  	header('location: '.base_url().'Admin_startauction/index/'.$datainserr);
 		

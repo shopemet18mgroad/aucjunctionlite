@@ -37,7 +37,7 @@ class Admin_addlot_info extends CI_Controller {
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
 		
-		
+		 $iauctionid = $this->input->post('iauctionid');
 	     $icategory = $this->input->post('icategory');
 	     $isubcategory = $this->input->post('isubcategory');
          $iproductdes = $this->input->post('iproductdes');
@@ -69,7 +69,7 @@ class Admin_addlot_info extends CI_Controller {
 		}
 		
 		
-		$data = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
+		$data = array('iauctionid'=>$iauctionid,'icategory'=>$icategory,'isubcategory' => $isubcategory, 
 		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
 		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,' imageupload' => $pic_array1,'entryfee'=>$entryfee); 

@@ -19,8 +19,25 @@ class Admin_editauction extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{   $this->load->view('admin/header');
-		$this->load->view('admin/editauction');
+	
+	{  
+		
+			$this->load->model('Admin_model');
+		
+     $sl_ano = urldecode($this->uri->segment(3));
+	
+	$active = array('sl_ano'=>$sl_ano);
+	
+	$query = $this->Admin_model->getdatafromtable('auction', $active);
+	
+	$data['sqldata']= $query;
+	
+	
+	    
+		
+		
+		$this->load->view('admin/header');
+		$this->load->view('admin/editauction',$data);
 		$this->load->view('admin/footer');
 	}
 }
