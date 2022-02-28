@@ -26,11 +26,12 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		$this->load->model('Admin_model');
 		$icategory = $this->input->post('icategory');
 		$isubcategory = $this->input->post('isubcategory');
-		$iproductdes = $this->input->post('iproductdes	');
-		$inspectiondate	 = $this->input->post('inspectiondate	');
+		$iproductdes = $this->input->post('iproductdes');
+		$inspectiondate	 = $this->input->post('inspectiondate');
+		$inspectiondate	 = $this->input->post('inspectiondate');
 		
 		
-		$imrp  = $this->input->post('imrp');
+		$sl_noadd  = $this->input->post('sl_noadd');
 		
 		$startaucprice  = $this->input->post('startaucprice');
 		$endaucprice  = $this->input->post('endaucprice	');
@@ -74,7 +75,7 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 
 			  
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('sl_ano ' => $sl_ano );
+			  $updatech = array('sl_noadd ' => $sl_noadd );
 
 			 
 			  $status = $this->Admin_model->update_custom('addlot',$data2,$updatech,$updatech);

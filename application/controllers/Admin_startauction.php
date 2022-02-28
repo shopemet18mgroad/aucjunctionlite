@@ -42,7 +42,7 @@ class Admin_startauction extends CI_Controller {
 			$irole = $this->input->post('irole');
 			$icategory = $this->input->post('icategory');
 			$icontactperson = $this->input->post('icontactperson');
-
+			
 			$icompanyname = $this->input->post('icompanyname');
 			$iauctionid = $this->input->post('iauctionid');
 			$iauction_start = $this->input->post('iauction_start');
@@ -87,7 +87,6 @@ class Admin_startauction extends CI_Controller {
 			$data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
 			'iauctionid' => $iauctionid,
-			
 			'icompanyname' => $icompanyname,
 			'iauction_start' => $iauction_start,
 			'iauction_end' => $iauction_end );
@@ -96,8 +95,7 @@ class Admin_startauction extends CI_Controller {
 	 $status = $this->Admin_model->insert('auction',$data);
 			
 	  
-	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,
-		'icontactperson' => $icontactperson,'date'=>$date);
+	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>`x$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'sl_no'=>$sl_no);
 				
 	
 	if($status){
@@ -105,7 +103,7 @@ class Admin_startauction extends CI_Controller {
 	
 	 
 	 
-	 header('location: '.base_url().'Admin_addlot/index/'.$datainserr);
+	 header('location: '.base_url().'Admin_addlot/lotmgt');
 }else if(!$status){
 	header('location: ./admin_startauction/');
 	}

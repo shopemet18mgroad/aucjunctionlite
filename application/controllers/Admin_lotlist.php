@@ -1,8 +1,7 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_editlot extends CI_Controller {
+class Admin_lotlist extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,27 +19,34 @@ class Admin_editlot extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{ 
+	{
+		$this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
 	
-	$this->load->model('Admin_model');
-
-	$iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
+			$iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
+			
+		
+		$iauctionid = array('iauctionid'=>$iauctionid);
+		
 	
-	
-	$active = array('iauctionid '=>$iauctionid);
-	
-	$query = $this->Admin_model->getdatafromtable('addlot',$active);
-
-	
-	$data['sqldata']= $query;
-	
+		
+	$query = $this->Admin_model->getdatafromtable('addlot',$iauctionid);
+		
+		$adac['data'] = $query;
+		
+		
 		$this->load->view('admin/header');
-		$this->load->view('admin/editlot',$data);
+		$this->load->view('admin/lotlist',$adac);
 		$this->load->view('admin/footer');
-	}
+		
+		
+		
+		
+	}	
 	
-	
-		public function seller_delete(){
+	public function seller_delete(){
 
 $sl_ano  = urldecode($this->uri->segment(3));
 
@@ -61,11 +67,16 @@ header('location: '.base_url().'Admin_auctioneditlist/index/');
 }else{
 echo "BYE";
 }
+
+}	
+
 	
 	
 	
 	
 	
 	
-}
+	
+	
+	
 }

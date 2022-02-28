@@ -66,17 +66,27 @@
                         <textarea rows="4" cols="5" class="form-control" id="iproductdes" name="iproductdes" placeholder="product Description " value="<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
                       </div>
                     </div>
+				
+					 <div class="form-group row">
+                     
+                      <div class="col-sm-9">
+                        <input type="hidden" class="form-control" id="sl_noadd" name="sl_noadd"  value="<?php echo $sqldata[0]->sl_noadd ?>" >
+                      </div>
+                    </div>
+					
+					
+					
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
+                        <input type="datetime-local" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
                       </div>
                     </div>
 					
 					<div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Current location </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="currentlocation"="currentlocation" placeholder="current location " value="<?php echo $sqldata[0]->currentlocation ?>" >
+                        <input type="text" class="form-control" id="currentlocation" name="currentlocation" placeholder="current location " value="<?php echo $sqldata[0]->currentlocation ?>" >
                       </div>
                     </div>
                    
@@ -100,14 +110,14 @@
                        <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="endaucprice" name="endaucprice" placeholder="endaucprice">
+                        <input type="text" class="form-control" id="endaucprice" name="endaucprice" placeholder="endaucprice" value="<?php echo $sqldata[0]->endaucprice ?>">
                       </div>
                     </div>
 					
 					     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">entry free </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="entryfee"value="<?php echo $sqldata[0]->entryfee ?>" >
+                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="entryfee" value="<?php echo $sqldata[0]->entryfee ?>" >
                       </div>
                     </div>
 					
@@ -117,11 +127,22 @@
                       <label for="" class="col-sm-3 col-form-label">Inspection date and time</label>
                       <div class="col-sm-9">
                        From: 	
-                        <input class="form-control" id="iauction_start" name="iauction_start" type="datetime-local" value="<?php echo $sqldata[0]->iauction_start ?>" ><br>
-                         To: 	
-		<input class="form-control" id="iauction_end" name="iauction_end" type="datetime-local" value="<?php echo $sqldata[0]->iauction_end ?>" > 
+                    
+						
+				  <input class="form-control " type="datetime-local"  id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)); ?>">		
+						
+						<br>
+                         
+
+To: 
+							
+							
+   <input class="form-control " type="datetime-local"  id="iauction_end" name="iauction_end" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)); ?>">
                       </div>
                     </div>
+					
+					
+
 					
 					
 					

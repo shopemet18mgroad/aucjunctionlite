@@ -20,11 +20,17 @@
                     <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
                       <thead>
 					   <tr>
-		<th colspan="10">Auction List<a href="<?php echo base_url();?>Admin_addbuyer"></a>
+		<th colspan="10">Auction List
 			   </th>   
       </tr>
 						 <th>
                             Sl. No .
+                          </th>
+						  <th>
+						  Product Description
+						  </th>
+						    <th>
+                      Email
                           </th>
 						     <th>
                          Auction Id
@@ -58,20 +64,25 @@
 			<?php foreach($data as $row){?>
 			
 			
- <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
+			
+			 <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
+			
+			
 			
 				<tr>												
 					<td><?php echo $count ?> </td>
-
-					 <td> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td><?php echo $row->icategory ?> </td>
-					<td><?php echo $row->icontactperson ?> </td>
+					<td><?php echo $row->sl_noadd ?></a></td>
+					 <td><?php echo $row->iproductdes ?></a></td>
+					<td><?php echo $row->iemailid ?> </td>
+					<td><?php echo $row->iauctionid ?> </td>
 					
 					
 					<td><?php echo $row->icompanyname ?> </td>
+					<td><?php echo $row->icompanyname ?> </td>
+					<td><?php echo $row->icompanyname ?> </td>
 					
 					<td><?php echo $row->iauction_start ?><br> to <br>
-					<?php echo $row->iauction_end ?> </td>
+					<?php echo $row->iauction_start ?> </td>
 					
 					
 					
@@ -80,13 +91,13 @@
 					<td >  
 					
 					
-		<a href="<?php echo base_url()."Admin_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
+		<a href="<?php echo base_url()."Admin_editlot/index/".urldecode($proid);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 		
-		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+		
 
 		
-		<a href ="<?php echo base_url()."Admin_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
-						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
+	<!--	<a href ="<?php// echo base_url()."Admin_editlot/seller_delete/".urldecode($row->sl_noadd);?>">
+						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>-->
 	
 
 

@@ -36,14 +36,14 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text"  id="buyercontactnumber" name="buyercontactnumber" class="form-control buyercontactnumber">
+											<input type="text"  id="buyercontactnumber" name="buyercontactnumber" class="form-control buyercontactnumber" maxLength="10">
 										</div>
 										
 										
 										
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" id ="buyerasdharnumber" name="buyerasdharnumber" class="form-control buyerasdharnumber"   >
+											<input type="text" id ="buyerasdharnumber" name="buyerasdharnumber" class="form-control buyerasdharnumber"  maxLength="12" >
 										</div>
 
 										
@@ -123,7 +123,7 @@
 										</div>
 										<div class="form-group">
 											<label>Pincode</label>
-											<input type="text" class="form-control"id="buyerpincode" name="buyerpincode">
+											<input type="text" class="form-control"id="buyerpincode" name="buyerpincode" maxLength="6">
 										</div>
 										
 										

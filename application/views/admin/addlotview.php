@@ -138,6 +138,11 @@
      
       <td>Upload photos* &nbsp;&nbsp;&nbsp;&nbsp;:</td>
 	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+	   
+	   
+	   
+	   
+
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px"  
  data-toggle="modal" data-target="#exampleModal">
@@ -166,16 +171,21 @@
       </div>
       <div class="modal-body">
     
+	  <?php foreach($sqldata1 as $sqldat){?> 
 	  
-	   
- <?php $img = unserialize($sqldata1[0]->imageupload)?>
-<img class="m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="400px" height="250px">
+	   <?php $img = unserialize($sqldat->imageupload);?>
+	  
+	  
+	  <?php foreach($img as $sql){?> 
+	  
+<div class="col-12">
+<img class="m-5" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="300px" height="250px">
+</div>		
 		
+	  <?php } ?>	
 		
-		
-		
-		
+	  <?php } ?>
 		
       </div>
       <div class="modal-footer">

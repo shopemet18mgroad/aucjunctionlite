@@ -112,9 +112,9 @@
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
                       <div class="col-sm-9">
                        From: 	
-                        <input class="form-control" id="iauction_start" name="iauction_start" value="<?php echo $sqldata[0]->iauction_start ?>" type="datetime-local" ><br>
+                        <input type="datetime-local" class="form-control" id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)) ?>"  ><br>
                          To: 	
-		<input class="form-control" id="iauction_end" name="iauction_end" type="datetime-local"  value="<?php echo $sqldata[0]->iauction_end ?>">
+		<input  type="datetime-local" class="form-control" id="iauction_end" name="iauction_end"  value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)) ?>">
                       </div>
                     </div>
 				

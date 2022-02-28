@@ -44,7 +44,7 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
-											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control icontactnumber">
+											<input type="text" id="icontactnumber" name="icontactnumber" maxLength="10" class="form-control icontactnumber">
 										</div>
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
@@ -58,7 +58,7 @@
 										</div>
 									<div class="form-group">
 											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
-											<input type="password" class="form-control" id="ipass" name="ipass"  maxLength="15" placeholder="password should be maximum length 15 ">
+											<input type="password" class="form-control" id="ipass" name="ipass"  maxLength="15" placeholder="password should be maximum length 15 "><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
 										</div>
 										
 											<div class="form-group">
@@ -83,7 +83,7 @@
 										
 										<div class="form-group">
 											<label><i class="fa fa-map-marker mr-2 text-info fa-2x"></i>City</label>
-											<input type="text" class="form-control" id="icity"name="icity">
+											<input type="text" class="form-control" id="icity"name="icity" >
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-state mr-2 text-info fa-2x"></i>State/Union Ter.</label>
@@ -121,14 +121,14 @@
 										</div>
 										<div class="form-group">
 											<label><i class="fa fa-flag mr-2 text-info fa-2x"></i>Country</label>
-											<input type="text" value="India" id="icountry" name="icountry" class="form-control">
+											<input type="text" value="India" id="icountry" name="icountry"  class="form-control">
 										</div>
 										<div class="form-group">
 										
 									
 										
 											<label><i class="fa fa-map-pin mr-2 text-info fa-2x"></i>Pincode</label>
-											<input type="text" class="form-control" id="ipincode" name="ipincode">
+											<input type="text" class="form-control" id="ipincode" name="ipincode" maxLength="6">
 										</div>
 										
 										
@@ -146,7 +146,7 @@
 										
 										<div class="form-group">
 											
-											<input type="hidden" id="role" name="role"  value="individual">
+											<input type="hidden" id="role" name="role"  value="INDIVIDUAL">
 										</div>
 										
 										
@@ -257,5 +257,15 @@ var inputvalues = $(this).val();
 });    
 </script>	
 	
-	
+<script>
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#ipass');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>	
 	

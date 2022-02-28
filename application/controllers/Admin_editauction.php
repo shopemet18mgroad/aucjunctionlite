@@ -22,6 +22,13 @@ class Admin_editauction extends CI_Controller {
 	
 	{  
 		
+		
+		
+		
+		
+		
+		
+		
 			$this->load->model('Admin_model');
 		
      $sl_ano = urldecode($this->uri->segment(3));

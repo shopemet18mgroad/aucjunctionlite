@@ -20,6 +20,35 @@
                     
                   </p>
                   <form class="forms-sample">
+				  
+				  <input type="hidden" class="form-control" id="iauctionid" name="iauctionid" value="<?php 
+				  if(isset($txdata['iauctionid'])){
+					   echo $txdata['iauctionid'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>">
+					 
+					  <input type="hidden" class="form-control" id="icontactperson" name="icontactperson" value="<?php 
+				  if(isset($txdata['icontactperson'])){
+					   echo $txdata['icontactperson'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>"> 
+					 
+				  <input type="hidden" class="form-control" id="sl_ano" name="sl_ano" value="<?php 
+				  if(isset($txdata['sl_ano'])){
+					   echo $txdata['sl_ano'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>">	 
+					 
+					 
                   
                   
                     <div class="form-group row">
@@ -65,10 +94,14 @@
                         <textarea rows="4" cols="5" class="form-control" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
                       </div>
                     </div>
+					
+					
+					
+					
                     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
+                        <input type="datetime-local" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
                     </div>
 					
@@ -106,14 +139,14 @@
 					     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">entry free </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="End Auction Price">
+                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="Entry Fee">
                       </div>
                     </div>
 					
                    
 				  
 						 <div class="form-group row">
-                      <label for="" class="col-sm-3 col-form-label">Inspection date and time</label>
+                      <label for="" class="col-sm-3 col-form-label">Inspection date<br> and time</label>
                       <div class="col-sm-9">
                        From: 	
                         <input class="form-control" id="iauction_start" name="iauction_start" type="datetime-local" ><br>

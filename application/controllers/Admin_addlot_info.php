@@ -38,6 +38,7 @@ class Admin_addlot_info extends CI_Controller {
 		$this->load->model('Admin_model');
 		
 		 $iauctionid = $this->input->post('iauctionid');
+		 //print_r($iauctionid);die;
 	     $icategory = $this->input->post('icategory');
 	     $isubcategory = $this->input->post('isubcategory');
          $iproductdes = $this->input->post('iproductdes');
@@ -53,12 +54,7 @@ class Admin_addlot_info extends CI_Controller {
 		
 	
 		$a =  $_FILES['imageupload']['name'];
-		//print_r($a); die;
-		
-		  
-		 
-			
-		      $pic_array1 = self::upload_files('imageupload');
+	    $pic_array1 = self::upload_files('imageupload');
 		
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -69,10 +65,9 @@ class Admin_addlot_info extends CI_Controller {
 		}
 		
 		
-		$data = array('iauctionid'=>$iauctionid,'icategory'=>$icategory,'isubcategory' => $isubcategory, 
-		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		$data = array('iauctionid'=>$iauctionid,'icategory'=>$icategory,'isubcategory' =>$isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
-		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,' imageupload' => $pic_array1,'entryfee'=>$entryfee); 
+		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,'imageupload' => $pic_array1,'entryfee'=>$entryfee); 
 		
 	
 		

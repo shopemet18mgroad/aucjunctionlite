@@ -24,4 +24,11 @@ class Admin_addlot extends CI_Controller {
 		$this->load->view('admin/addlot');
 		$this->load->view('admin/footer');
 	}
+	public function lotmgt(){
+		 $this->load->library('session');
+		$flashdata['txdata'] = $this->session->flashdata('txdata');
+		$this->load->view('admin/header');
+		$this->load->view('admin/addlot', $flashdata);
+		$this->load->view('admin/footer');
+	}
 }
