@@ -103,7 +103,7 @@
                        From: 	
                         <input class="form-control" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
                          To: 	
-		<input class="form-control" id="iauction_end" name="iauction_end" type="datetime-local" >
+		                <input class="form-control" id="iauction_end" name="iauction_end" type="datetime-local" >
                       </div>
                     </div>
 				

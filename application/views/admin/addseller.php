@@ -46,6 +46,8 @@
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
 											<input type="text" id="icontactnumber" name="icontactnumber" maxLength="10" class="form-control icontactnumber">
 										</div>
+										
+										
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
 											<input type="text" id="iadharnumber" name="iadharnumber"  maxLength="12"  class="form-control iadharnumber" >
@@ -81,10 +83,12 @@
 											<input type="text" class="form-control" id="iaddres" name="iaddres">
 										</div>
 										
+
 										<div class="form-group">
 											<label><i class="fa fa-map-marker mr-2 text-info fa-2x"></i>City</label>
 											<input type="text" class="form-control" id="icity"name="icity" >
 										</div>
+
 										<div class="form-group">
 											<label> <i class="fa fa-state mr-2 text-info fa-2x"></i>State/Union Ter.</label>
 											  <select class="custom-select" id="istate" name="istate" style="border-radius:20px;">
@@ -128,13 +132,20 @@
 									
 										
 											<label><i class="fa fa-map-pin mr-2 text-info fa-2x"></i>Pincode</label>
+
 											<input type="text" class="form-control" id="ipincode" name="ipincode" maxLength="6">
+		
 										</div>
 										
 										
 											<div class="form-group">
 											<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
 											<input type="text" class="form-control" id="icontactperson" name="icontactperson">
+										</div>
+										
+										<div class="form-group">
+											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>GST Number*</label>
+											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control icontactnumber">
 										</div>
 										
 												

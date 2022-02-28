@@ -36,14 +36,18 @@
 										</div>
 										<div class="form-group">
 											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
+
 											<input type="text"  id="buyercontactnumber" name="buyercontactnumber" class="form-control buyercontactnumber" maxLength="10">
+
 										</div>
 										
 										
 										
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
+
 											<input type="text" id ="buyerasdharnumber" name="buyerasdharnumber" class="form-control buyerasdharnumber"  maxLength="12" >
+
 										</div>
 
 										
@@ -123,7 +127,9 @@
 										</div>
 										<div class="form-group">
 											<label>Pincode</label>
+
 											<input type="text" class="form-control"id="buyerpincode" name="buyerpincode" maxLength="6">
+
 										</div>
 										
 										
@@ -230,7 +236,8 @@ function validatebuyer(){
 
 	
 
-if(buyername == '' || buyercontactnumber == '' ||  buyerasdharnumber == '' || buyeremail == '' ||  buyerpass == '' ||  bconpassword == '' || buyeradharcard == '' || buyeraddress == '' || buyercity == '' || buyerstate == '' || buyercountry == '' || buyerpincode == '' || buyercontactperson == '' || addressproof == ''){
+if(buyername == '' || buyercontactnumber == '' ||  buyerasdharnumber == '' || buyeremail == '' ||  buyerpass == '' ||  bconpassword == '' || buyeradharcard == '' || buyeraddress == '' || buyercity == '' || buyerstate == '' || buyercountry == '' || buyerpincode == '' || buyercontactperson == '' || addressproof == '')
+{
 		swal("Alert!",  "Buyer Name, Company Name, Company Type, Contact Person, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
 		return false;
 	}
