@@ -38,12 +38,7 @@
 	    <td><?php echo $sqldata1[0]->iaddres ?></td>
       
     </tr>
-	<tr>
-     
-      <td>CITY &nbsp;&nbsp;&nbsp;:</td>
-	    <td><?php echo $sqldata1[0]->icity ?></td>
-      
-    </tr>
+	
 	<tr>
      
       <td>STATE/UNION TERY &nbsp;&nbsp;&nbsp;:</td>
