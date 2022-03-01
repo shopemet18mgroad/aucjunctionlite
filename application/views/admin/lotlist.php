@@ -71,14 +71,14 @@
 			
 				<tr>												
 					<td><?php echo $count ?> </td>
-					<td><?php echo $row->sl_noadd ?></a></td>
+				
 					 <td><?php echo $row->iproductdes ?></a></td>
 					<td><?php echo $row->iemailid ?> </td>
 					<td><?php echo $row->iauctionid ?> </td>
 					
 					
-					<td><?php echo $row->icompanyname ?> </td>
-					<td><?php echo $row->icompanyname ?> </td>
+					<td><?php echo $row->icategory ?> </td>
+					<td><?php echo $row->icontactperson ?> </td>
 					<td><?php echo $row->icompanyname ?> </td>
 					
 					<td><?php echo $row->iauction_start ?><br> to <br>
@@ -99,7 +99,7 @@
 	<!--	<a href ="<?php// echo base_url()."Admin_editlot/seller_delete/".urldecode($row->sl_noadd);?>">
 						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>-->
 	
-
+</td>
 
 
 

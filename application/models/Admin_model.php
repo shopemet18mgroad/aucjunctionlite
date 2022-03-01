@@ -67,5 +67,20 @@ class Admin_model extends CI_Model
 			}
 	
 	
+
+
+	public function get_adminforthlookalike($table, $col, $query, $date)
+	{
+		$this->db->from($table);
+		$this->db->like($col, $query);
+		$this->db->where('iauction_start >=', $date);
+		$q = $this->db->get();
+		return $q->result_array();
+	}
+	
+
 	
 	}
+
+
+

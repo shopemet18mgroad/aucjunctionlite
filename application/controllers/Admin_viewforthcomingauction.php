@@ -19,9 +19,61 @@ class Admin_viewforthcomingauction extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{ 
+	{
+		$this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
+		
+		
+		$aoption = array('aoption'=>false);
+		
+	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
+		
+		$adac['data'] = $query;
+		
+		
 		$this->load->view('admin/header');
-		$this->load->view('admin/viewforthcomingauction');
+		$this->load->view('admin/viewforthcomingauction',$adac);
 		$this->load->view('admin/footer');
-	}
+		
+		
+		
+		
+	}	
+	
+	public function seller_delete(){
+
+$sl_ano  = urldecode($this->uri->segment(3));
+
+
+$this->load->model('Admin_model');
+
+
+$adaction2 = array('sl_ano'=>$sl_ano );
+
+
+$query = $this->Admin_model->delete_data('auction',$adaction2);
+$this->load->helper('url');
+$this->load->library('session');
+
+
+if($sl_ano){
+header('location: '.base_url().'Admin_auctioneditlist/index/');
+}else{
+echo "BYE";
 }
+
+}	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+

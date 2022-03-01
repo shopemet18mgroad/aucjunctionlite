@@ -39,11 +39,15 @@ class Admin_addlot_info extends CI_Controller {
 		
 		 $iauctionid = $this->input->post('iauctionid');
 		 //print_r($iauctionid);die;
-	     $icategory = $this->input->post('icategory');
+	     $irole = $this->input->post('irole');
+		  $iemailid = $this->input->post('iemailid');
+		   $icontactperson = $this->input->post('icontactperson');
+		    $icategory = $this->input->post('icategory');
 	     $isubcategory = $this->input->post('isubcategory');
          $iproductdes = $this->input->post('iproductdes');
 		 $inspectiondate  = $this->input->post('inspectiondate');
 		 $imrp = $this->input->post('imrp');
+		 $icompanyname = $this->input->post('icompanyname');
 		 $startaucprice = $this->input->post('startaucprice');
 	     $endaucprice  = $this->input->post('endaucprice');
 		 $iauction_start  = $this->input->post('iauction_start');
@@ -65,9 +69,9 @@ class Admin_addlot_info extends CI_Controller {
 		}
 		
 		
-		$data = array('iauctionid'=>$iauctionid,'icategory'=>$icategory,'isubcategory' =>$isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		$data = array('iauctionid'=>$iauctionid,'irole'=>$irole,'iemailid'=>$iemailid,'icontactperson' =>  $icontactperson,'icategory'=>$icategory,'isubcategory' =>$isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
-		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,'imageupload' => $pic_array1,'entryfee'=>$entryfee); 
+		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname); 
 		
 	
 		

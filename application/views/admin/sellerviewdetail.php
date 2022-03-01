@@ -22,7 +22,14 @@
     <tr>
      
       <td>AADHAAR NUMBER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</td>
-	  <td><?php echo $sqldata1[0]->iadharnumber ?></td>
+	  <td>
+	  
+	  
+	  
+	  <?php echo $sqldata1[0]->iadharnumber ?>
+	  
+	  
+	  </td>
       
     </tr><br>
 	
@@ -66,8 +73,93 @@
     </tr>
 	<tr>   
    <td>GST NUMBER <div style="font-size:10px;color:red;">( applicable ony for company)</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
-   <td><?php echo $sqldata1[0]->igstnumber ?></td>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+   
+<td>
+
+  <?php $gst = $sqldata1[0]->igstnumber ?>
+		   
+		<?php if ($gst == Null) {
+			 
+		   <?php echo "$gst" ; ?>
+		  
+
+
+ 
+		<?php } else { ?>
+			
+			
+		
+	<?php	 echo "NA" ; ?>
+			
+			
+	<?php	} ?>
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+	</td>
+      
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
 	  </tr>
+	  
+	  
+	  
+	  
+	  
 	  <tr>   
    <td>COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:red;">( Applicable ony for company)</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
    <td><?php echo $sqldata1[0]->itypeseller ?></td>
@@ -77,10 +169,31 @@
 	<tr>
      
       <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
-	   <td><?php $img = unserialize($sqldata1[0]->iaddresprof)?>
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+	   <td>
+	 
+	
+	   
+	   <?php $img = unserialize($sqldata1[0]->iaddresprof)?>
+		   
+		<?php if ($img == Null) {
+			 
+		   
+		   echo "NA"
+
+ ?>  
+ 
+		<?php } else { ?>
+			
+			
+			<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px"  
- data-toggle="modal" data-target="#exampleModal"></td>
+ data-toggle="modal" data-target="#exampleModal">
+			
+			
+			
+	<?php	} ?>
+ 
+ </td>
     
     </tr>
 	<tr>
@@ -88,15 +201,46 @@
       <td>AADHAAR CARD &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
 
 
-<td>	
- 
- 
- 
- 
+<td>
+
  <?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
-<img class="" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px"     
- data-toggle="modal" data-target="#exampleModalCenter">
+		   
+		<?php if ($img == Null) {
+			 
+		   
+		   echo "NA"
+
+ ?>  
+ 
+		<?php } else { ?>
+			
+			
+			<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px"  
+ data-toggle="modal" data-target="#exampleModal">
+			
+			
+			
+	<?php	} ?>
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 	</td>
       

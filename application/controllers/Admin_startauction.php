@@ -23,7 +23,7 @@ class Admin_startauction extends CI_Controller {
         
         // Load session library
         $this->load->library('session');
-     
+      
 		$this->load->helper('url');
 		$this->load->helper('date');
 	
@@ -33,42 +33,14 @@ class Admin_startauction extends CI_Controller {
 	
 	
 	 
-	 public function index(){ 
-
-			$date =  Date('Y-m-d'); 
-			$this->load->library('fileupload');
-			$this->load->helper(array('url','form','file','html'));
-			$this->load->model('Admin_model');
-			$irole = $this->input->post('irole');
-			$icategory = $this->input->post('icategory');
-			$icontactperson = $this->input->post('icontactperson');
-			
-			$icompanyname = $this->input->post('icompanyname');
-			$iauctionid = $this->input->post('iauctionid');
-			$iauction_start = $this->input->post('iauction_start');
-			$iauction_end = $this->input->post('iauction_end');
-			$iemailid = $this->input->post('iemailid');
-	
-			$data = array('irole'=>$irole,'icategory' => $icategory, 
-			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
-			'iauctionid' => $iauctionid,
-			
-			'icompanyname' => $icompanyname,
-			'iauction_start' => $iauction_start,
-			'iauction_end' => $iauction_end );
-		
-		  $transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,
-		'icontactperson' => $icontactperson,'date'=>$date);
-		
-	
-		
-		
-		
+	 
+	public function index()
+	{ 
 		$this->load->view('admin/header');
 		$this->load->view('admin/startauction');
 		$this->load->view('admin/footer');
-	
 	}
+	
 	 public function insert_auc(){
 		 $date =  Date('Y-m-d'); 
 			$this->load->library('fileupload');
@@ -95,7 +67,9 @@ class Admin_startauction extends CI_Controller {
 	 $status = $this->Admin_model->insert('auction',$data);
 			
 	  
-	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>`x$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'sl_no'=>$sl_no);
+	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'icompanyname'=>$icompanyname);
+	
+	//print_r($transfer);die;
 				
 	
 	if($status){
@@ -108,6 +82,7 @@ class Admin_startauction extends CI_Controller {
 	header('location: ./admin_startauction/');
 	}
 	 }
+	
 	
 public function get_seller_table(){
 	$dataw = urldecode($this->uri->segment(3));

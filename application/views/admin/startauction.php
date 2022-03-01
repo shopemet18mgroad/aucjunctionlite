@@ -205,6 +205,9 @@
     document.getElementById("icontactperson").value = a[1];
 	 $("#dp").hide();
  } 
+	  $('.ltype').click(function() {
+  $('.ltype').not(this).prop('checked', false);
+});
 	 
 	</script> 
 	 
@@ -222,6 +225,7 @@
 		 
 		   document.getElementById('iemailid').value = "";
 		   document.getElementById('icontactperson').value = "";
+		   document.getElementById('icompanyname').value = "NA";
 		  
 		  
 		  $(".icompanyname").hide();
@@ -237,6 +241,7 @@
 		
 		  document.getElementById('icompanyname').value = "";
 		  document.getElementById('icontactperson').value = "";
+		   document.getElementById('iemailid').value = "NA";
 		  
 
 		  

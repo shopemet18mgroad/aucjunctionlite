@@ -16,13 +16,13 @@
     <tr>
      
       <td>Sub-category &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-	  <td><?php echo $sqldata1[0]->icontactperson ?></td>
+	  <td><?php echo $sqldata1[0]->isubcategory ?></td>
       
     </tr><br>
     <tr>
      
       <td>product Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</td>
-	  <td><?php echo $sqldata1[0]->icompanyname ?></td>
+	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
       
     </tr><br>
 	
