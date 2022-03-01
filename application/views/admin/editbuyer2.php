@@ -61,7 +61,7 @@
 										
 										<div class="form-group" >
 											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="buyeradharcard" name="buyeradharcard" value="<?php echo $sqldata[0]->buyeradharcard ?>" >
+											<input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple value="<?php echo $sqldata[0]->buyeradharcard ?>" >
 										</div>
 											
 										
@@ -133,7 +133,7 @@
 										<br>
 											<input type="file" id=
 											
-											"addressproof" name="addressproof" value="<?php echo $sqldata[0]->addressproof ?>">
+											"addressproof" name="addressproof[]" multiple value="<?php echo $sqldata[0]->addressproof ?>">
 										</div>
 										
 										

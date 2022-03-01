@@ -21,7 +21,7 @@
                   </p>
                   <form class="forms-sample">
 				  
-				  <input type="hidden" class="form-control" id="iauctionid" name="iauctionid" value="<?php 
+				  <input type="text" class="form-control" id="iauctionid" name="iauctionid" value="<?php 
 				  if(isset($txdata['iauctionid'])){
 					   echo $txdata['iauctionid'];
 				  }else{
@@ -30,23 +30,44 @@
 				  
 				 ?>">
 					 
-					  <input type="hidden" class="form-control" id="icontactperson" name="icontactperson" value="<?php 
-				  if(isset($txdata['icontactperson'])){
-					   echo $txdata['icontactperson'];
+					  <input type="text" class="form-control" id="irole" name="irole" value="<?php 
+				  if(isset($txdata['irole'])){
+					   echo $txdata['irole'];
 				  }else{
 					  echo "NA";
 				  }
 				  
 				 ?>"> 
 					 
-				  <input type="hidden" class="form-control" id="sl_ano" name="sl_ano" value="<?php 
-				  if(isset($txdata['sl_ano'])){
-					   echo $txdata['sl_ano'];
+				  <input type="text" class="form-control" id="iemailid" name="iemailid" value="<?php 
+				  if(isset($txdata['iemailid'])){
+					   echo $txdata['iemailid'];
 				  }else{
 					  echo "NA";
 				  }
 				  
-				 ?>">	 
+				 ?>">
+					 
+					 
+					 	  <input type="text" class="form-control" id="icontactperson" name="icontactperson" value="<?php 
+				  if(isset($txdata['icontactperson'])){
+					   echo $txdata['icontactperson'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>">
+					 
+					 
+					 
+					 	  <input type="text" class="form-control" id="icompanyname" name="icompanyname" value="<?php 
+				  if(isset($txdata['icompanyname'])){
+					   echo $txdata['icompanyname'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>">
 					 
 					 
                   
@@ -56,9 +77,9 @@
                       <div class="col-sm-9">
                         <select class="form-control" id="icategory" name="icategory">
 				<option value="Select" selected>Select</option>
-				<option value="Cars">Automobile</option>
-				<option value="Bikes">Home Appliance</option>
-				<option value="Laptop">Electronic Appliance </option>
+				<option value="Automobile">Automobile</option>
+				<option value="Home Appliance">Home Appliance</option>
+				<option value="Electronic Appliance">Electronic Appliance </option>
 				<option value="Mobile">Mobile</option>
 				
 				
