@@ -1,76 +1,85 @@
+ <main id="main m-5">
 
+    <section id="hero" class="d-flex align-items-center">
+     
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    
+        
+
+      
+      <div class="container mt-5 mb-5">
+        <div class="row border border-dark">
    
 
-    <div class="container card col-md-8 mt-5">
 	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  </div></center>
 	
-   <table class="table"  style="color:grey;font-size:8px;">
+   <table class="table"  style="colorgrey;font-size8px;">
 <tbody >
     <tr>
-   <td>FULL NAME   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
+   <th scope="row"> FULL NAME   </th>
    <td><?php echo $sqldata1[0]->buyername ?></td>
 	  </tr>
 	 <br>
     <tr>
      
-      <td>CONTACT NUMBER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <th scope="row">CONTACT NUMBER</th>
 	  <td><?php echo $sqldata1[0]->buyercontactnumber ?></td>
       
     </tr><br>
     <tr>
      
-      <td>AADHAAR NUMBER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</td>
+      <th scope="row">AADHAAR NUMBER </th>
 	  <td><?php echo $sqldata1[0]->buyerasdharnumber ?></td>
       
     </tr><br>
 	
 	<tr>
      
-      <td>EMAIL ID :</td>
+      <th scope="row">EMAIL ID </th>
 	    <td><?php echo $sqldata1[0]->buyeremail ?></td>
       
     </tr>
 	<tr>
      
-      <td>ADDRESS &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <th scope="row">ADDRESS</th>
 	    <td><?php echo $sqldata1[0]->buyeraddress ?></td>
       
     </tr>
 	<tr>
      
-      <td>CITY &nbsp;&nbsp;&nbsp;:</td>
+      <th scope="row">CITY</th>
 	    <td><?php echo $sqldata1[0]->buyercity ?></td>
       
     </tr>
 	<tr>
      
-      <td>STATE/UNION TERY &nbsp;&nbsp;&nbsp;:</td>
+      <th scope="row">STATE/UNION TERY</th>
 	   <td><?php echo $sqldata1[0]->buyerstate ?></td>
       
     </tr>
 	<tr>
      
-      <td>COUNTRY &nbsp;&nbsp;&nbsp;:</td>
+      <th scope="row">COUNTRY</th>
 	   <td><?php echo $sqldata1[0]->buyercountry ?></td>
       
     </tr>
 	<tr>
      
-      <td>PINCODE &nbsp;&nbsp;&nbsp;&nbsp; :</td>
+      <th scope="row">PINCODE </th>
 	   <td><?php echo $sqldata1[0]->buyerpincode ?></td>
       
     </tr>
 	
 	<tr>
      
-      <td>CONTACT PERSON* &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <th scope="row">CONTACT PERSON*</th>
 	   <td><?php echo $sqldata1[0]->buyercontactperson ?></td>
       
     </tr>
 	
 	<tr>
      
-      <td>AADHAR CARD &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
+      <th scope="row">AADHAR CARD<div style="font-size10px;colorred;">Click on image to view full image</div></th>
 	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModalCenter"></td>
@@ -78,7 +87,7 @@
     </tr>
 	<tr>
      
-      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
+      <th scope="row">ADDRESS PROOF<div style="font-size10px;colorred;">Click on image to view full image</div></th>
 	  <td><?php $img = unserialize($sqldata1[0]->addressproof)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModal"></td>
@@ -90,11 +99,14 @@
 
   </tbody>
 </table>
-</div>
-<!-- Button trigger modal -->
+      </div>
+          
+      </div>
+        
+  
 
-
-<!-- Modal -->
+     
+    </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -117,14 +129,7 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
+</div>	
 
 
 <!-- Modal -->
@@ -151,4 +156,32 @@
     </div>
   </div>
 </div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </section>
+
+  </main><!-- End #main -->
+
+
+
+
+
+
+
+
+
 

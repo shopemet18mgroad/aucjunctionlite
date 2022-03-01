@@ -1,60 +1,7 @@
 
 <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- <section class="breadcrumbs">
-      <div class="container">
-        
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search">
-            <div class="input-group-append">
-              <button class="btn btn-secondary aliteblue" type="button">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-        </div>
-      </div>
-    </div>
 
-    </section> -->
-    
-    <!-- End Breadcrumbs -->
-    <!-- <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-12">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <a href="#"
-                      ><img src="assets/img/aucjunction.png" width="220px"
-                    /></a>
-                   
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          
-
-        </div>
-
-      </div>
-    </section> -->
     <section id="hero" class="d-flex align-items-center">
      
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -62,31 +9,7 @@
            
 
         </div>
-        
-      <!-- <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-9 text-center">
-           <a href="#"
-            ><img src="assets/img/aucjunction.png" width="220px"
-          /></a>
-          <h1>One Junction For All Auctions</h1>
-        </div>
-      </div>
-      <div class="text-center">
-        <a href="#about" class="btn-get-started scrollto">Start Auctioning</a>
-      </div> -->
-      
-   <!--    <div class="container mt-5 ">
-        <div class="row border border-dark">
-            <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
-              <label for="radio-three">Participate Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" value="maybe" />
-              <label for="radio-four">&nbsp;&nbsp;&nbsp;My Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              
-          </div>
-        </div>
-          
-      </div> -->
+ 
         
       <div class="row ">
 	  
@@ -98,19 +21,32 @@
 			<div id="services" class="container-fluid text-center">
 			
 			
-  <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>images/aucjunction.png" alt="logo"/ width="240px;" height="100px"></a> </h2>
+  <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" alt="logo"/ width="240px;" height="100px"></a> </h2>
   <h5>SELECT ANY ONE OPTION FOR REGISTRATION</h5>
   <br>
   <div class="row slideanim">
     <div class="col-sm-6">
 <center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
-  <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>images/individual.png" alt="Card image cap">
+  <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/company.jpg" alt="Card image cap">
   <div class="card-body">
-  <i class="fa fa-child mr-2  fa-6x" style="color:danger;"></i>
+ 
   
   
     <p class="card-text"></p>
-   <a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" role="button" style="border-radius:20px;background-color:#03a9f463; color:white;" aria-disabled="true">REGISTER</a>
+	
+	
+	   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+   
   </div>
 </div></center>
       
@@ -121,12 +57,13 @@
     <div class="col-sm-6">
 	
 	<center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
-  <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>images/bussiness.png " alt="Card image cap"> 
+  <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>assets/img/indiv.jpg" alt="Card image cap"> 
   <div class="card-body">
-   <i class="fa fa-building mr-3 mt-7  fa-6x" style="color:danger;"></i>
+  
    
     <p class="card-text"></p>
-   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
+	<a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" role="button" style="border-radius:20px;background-color:#03a9f463; color:white;" aria-disabled="true">REGISTER</a>
+
   </div>
 </div></center>
       
