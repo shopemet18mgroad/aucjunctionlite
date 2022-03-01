@@ -1,88 +1,141 @@
-
-
-
-
-        
-        
-  
-        <div class="main-panel">
-          <div class="content-wrapper">
-		  
-		  
-		  
-        <form action="<?php echo base_url();?>Admin_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
-            
-            
  
- <div class="row">
-              <div class="col-lg-12 d-flex grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
+
+  <main id="main">
+    <section class="h-100 h-custom-2 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
+
+     <form action="<?php echo base_url();?>Admin_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
+                 
+
+
+
+
+
+				 <div class="row">
+                 
+                    <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+                     <input type="text" class="form-control form-control-lg" id="iname" name="iname" value="<?php echo $sqldata[0]->iname ?>">
+											
+											
+											<input type="hidden" class="form-control form-control-lg" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no ?>">	
+								<label> Full Name</label>			
+                      </div>
+
+                    </div>
+                    
+                      <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+                      
+                    
+											<input type="text" class="form-control form-control-lg" id="icontactnumber" name="icontactnumber" value="<?php echo $sqldata[0]->icontactnumber ?>">
+
+  <label> Contact Number*</label>
+
+                      </div>
+
+                    </div>
+                    
+                       
+                      <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+            
+											<input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson ?>">
+											        <label>Contact person*</label>
+                      </div>
+
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                 
+                 
+                      <div class="form-outline">
+                 
+											<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?>">
+                   <label> Adhar Number*</label><br>
+                 
+                 
+                  </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline">
+                 <input type="file" id="iadharcardfile" name="iadharcardfile[]" multiple>
+                      <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                      <div class="form-outline">
+                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple >
+                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                      </div>
+
+                    </div>
+              
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-lg-6 bg-indigo text-white">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
                   
-                   <div class= "row">
-				        
-						
-						
-						
-						
-						<div class="col-md-12">
-							<div class="card">
-							
-								<div class="card-header bg-success" id="grad">
-									<center><h2 class="card-title mb-0">Add Seller Details (All field's marked * are mandatory)</h2></center>
-								</div>
-								<div class="card-body">
-							
-										<div class="row">
-											<div class="col-md-6">
-											
-										
-										
-									
-	
-										<div class="form-group">
-										
-											<label> <i class="fa fa-user mr-2 text-success fa-2x"></i>Full Name</label>
-											<input type="text" class="form-control" id="iname" name="iname" value="<?php echo $sqldata[0]->iname;?>">
-											<input type="hidden" class="form-control" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no;?>">
-										</div>
-										<div class="form-group">
-											<label> <i class="fa fa-mobile mr-2 text-success fa-2x"></i>Contact Number*</label>
-											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control" value="<?php echo $sqldata[0]->iname;?>">
-										</div>
-										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Adhar Number*</label><br>
-											<input type="text" id="iadharnumber" name="iadharnumber" class="form-control" value="<?php echo $sqldata[0]->iname;?>" >
-										</div>
-											
-										
-										<div class="form-group">
-											<label> <i class="fa fa-envelope  mr-2 text-success fa-2x"></i>Email Id </label>
-											<input type="email" id="iemailid" name="iemailid" class="form-control" value="<?php echo $sqldata[0]->iname;?>">
-										</div>
-									
-									
-											<div class="form-group">
-											<label> <i class="fa fa-map-marker  mr-2 text-success fa-2x"></i>Address </label>
-											<input type="text" class="form-control" id="iaddres" name="iaddres" value="<?php echo $sqldata[0]->iaddres;?>">
-										</div>
-										
-											<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-success fa-2x"></i>Aadhar card </label><br>
-											<input type="file" id="iadharcardfile" name="iadharcardfile[]" multiple >
-										</div>
-											
-										
-	
-										
-										</div>
-						
-										<div class="col-md-6">
-									
-									
-										<div class="form-group">
-											<label> <i class="fa fa-state mr-2 text-success fa-2x"></i>State/Union Ter.</label>
-											  <select class="custom-select" id="istate" name="istate" style="border-radius:20px;">
+											<input type="email" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php echo $sqldata[0]->iemailid ?>">
+												<label> Email Id </label>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+                    <div class="row">
+                    
+                        <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+   
+											<input type="text" class="form-control form-control-lg" id="iaddres" name="iaddres" value="<?php echo $sqldata[0]->iaddres ?>">
+											            <label> Address </label>
+                      </div>
+
+                    </div>
+                    
+                    <div class="col-md-12 mb-4 pb-2">
+
+                     
+                    </div>
+                    <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                      			  <select class="custom-select form-control form-control-lg form-control form-control-lg-lg" id="buyerstate" name="buyerstate" style="border-radius:20px;">
                       <option value="Karnataka" selected>Karnataka</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                       <option value="Assam">Assam</option>
@@ -113,104 +166,72 @@
                       <option value="Uttarakhand">Uttarakhand</option>
                       <option value="West Bengal">West Bengal</option>
                     </select>
-										</div>
-										<div class="form-group">
-											<label><i class="fa fa-flag mr-2 text-success fa-2x"></i>Country</label>
-	<input type="text" value="India" id="icountry" name="icountry" class="form-control" value="<?php echo $sqldata[0]->icountry;?>">
-										</div>
-										<div class="form-group">
-											<label><i class="fa fa-map-pin  mr-2 text-success fa-2x"></i>Pincode</label>
-											<input type="text" class="form-control" id="ipincode" name="ipincode" value="<?php echo $sqldata[0]->ipincode;?>">
-										</div>
-										
-										
-											<div class="form-group">
-											<label><i class="fa fa-user mr-2 text-success fa-2x"></i>Contact person*</label>
-											<input type="text" class="form-control" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson;?>">
-										</div>
-										
-											
+                        <label class="form-label" for="form3Examplea5">State</label>
+                      </div>
 
-
-											
-										<div class="form-group">
-											<label><i class="fa fa-id-card mr-2 text-success fa-2x"></i>Address proof</label><br>
-											<input type="file" id="iaddresprof" name="iaddresprof[]" multiple >
-										</div>
-										
-										
-												
-								
-									
-
-											
-											</div>
-											</div>
-											<div class="col-md-12">
-											
-										
-											<div class="d-flex justify-content-around">
-							<div class="Col-sm-4">
-							<button type="Submit" name="submit" class="btn btn-success btn-rounded m-4 btn-lg Col-sm-4"  onclick="return validateindiviual()" id="mm">Update</button>
-						</div>
-					<div class="Col-sm-4">
-							<button type="button" class="btn btn-success btn-rounded btn-lg  Col-sm-4  m-4">Cancel</button>
-							</div>
-							
-								
-							</div>
-											
-											
-											
-												
-											
-											
-											
-											</div>
-										</div>
-							
-							
-							
-					</div>
-					</div>
-						
-						
-						
-						
-				</form>   
-				   
-				   
-				   
-				   
+                    </div>
                   </div>
+                  
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                  
+											
+											<input type="text" class="form-control form-control-lg"id="ipincode" name="ipincode" value="<?php echo $sqldata[0]->ipincode ?>" >
+											<label>Pincode*</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                     
+											
+											<input type="text" value="India" id="icountry" name="icountry" class="form-control form-control-lg" value="<?php echo $sqldata[0]->icountry ?>">
+												<label>Country </label>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                 	<input type="hidden" id="role" name="role"  value="INDIVIDUAL"> 
+                  
+
+                 
+
+          
+
+                  <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                    <input
+                      class="form-check-input me-3"
+                      type="checkbox"
+                      value=""
+                      id="form2Example3c"
+                    />
+                    <label class="form-check-label text-white" for="form2Example3">
+                      I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
+                    </label>
+                  </div>
+<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer() ">Update</button>
+						
+				
+						
+						<button type="reset" name="reset" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Cancel</button>
+						</div>
+                  </form>
 				  
-				  
-				  
-				  
-				  
-				  
-				  
-				  
-				  
-				  
+
                 </div>
               </div>
             </div>
-          
           </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       
-          <!-- partial -->
         </div>
-     
-        
-        
-        
-        
-        
-        
-        <!-- main-panel ends -->
       </div>
-      <!-- page-body-wrapper ends -->
     </div>
+  </div>
+</section>
+
+    <!-- ======= Breadcrumbs ======= -->
+ 
