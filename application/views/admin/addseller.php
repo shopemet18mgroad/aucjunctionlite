@@ -174,85 +174,6 @@
                       <option value="Uttarakhand">Uttarakhand</option>
                       <option value="West Bengal">West Bengal</option>
                     </select>
-
-										
-										<div class="form-group">
-											<label><i class="fa fa-flag mr-2 text-info fa-2x"></i>Country</label>
-											<input type="text" value="India" id="icountry" name="icountry"  class="form-control">
-										</div>
-										<div class="form-group">
-										
-									
-										
-											<label><i class="fa fa-map-pin mr-2 text-info fa-2x"></i>Pincode</label>
-
-											<input type="text" class="form-control" id="ipincode" name="ipincode" maxLength="6">
-		
-										</div>
-										
-										
-											<div class="form-group">
-											<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
-											<input type="text" class="form-control" id="icontactperson" name="icontactperson">
-										</div>
-									
-												
-										<div class="form-group">
-											<label><i class="fa fa-id-card mr-2 text-info fa-2x"></i>Address proof</label><br>
-											<input type="file" id="iaddresprof" name="iaddresprof[]" multiple >
-										</div>
-										
-										
-										<div class="form-group">
-											
-											<input type="hidden" id="role" name="role"  value="INDIVIDUAL">
-										</div>
-										
-										
-										
-	
-								
-									
-
-											
-											</div>
-											</div>
-											<div class="col-md-12">
-											
-										
-											<div class="d-flex justify-content-around">
-							<div class="Col-sm-4">
-							<button type="submit" name="submit" class="btn btn-info btn-rounded m-4 Col-sm-4" onclick="return validateindiviual()"  id="mm">Submit</button>
-						</div>
-					<div class="Col-sm-4">
-							<button type="reset" name="reset" class="btn btn-info btn-rounded Col-sm-4  m-4">Cancel</button>
-							</div>
-							
-								
-							</div>
-											
-											
-											
-												
-											
-											
-											
-											</div>
-										</div>
-							
-							
-							
-					</div>
-					</div>
-						
-						
-						
-						
-				
-				   
-				   
-				   
-
                         <label class="form-label" for="form3Examplea5">State</label>
                       </div>
 
@@ -296,7 +217,6 @@
                     <label class="form-check-label text-white" for="form2Example3">
                       I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
                     </label>
-
                   </div>
 
                   <button type="submit" name="submit" onclick="return validateindiviual()" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
