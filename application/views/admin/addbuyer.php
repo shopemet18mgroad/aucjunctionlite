@@ -1,95 +1,149 @@
+ 
 
-<div class="main-panel">
-          <div class="content-wrapper">
-        
-         <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multipart/form-data">   
-            
-            <div class="row">
-              <div class="col-lg-12 d-flex grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
+  <main id="main">
+    <section class="h-100 h-custom-2 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
+
+  <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multipart/form-data">   <form action= "<?php echo base_url();?>Admin_seller_basicinfo_add" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                 
+                    <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+                      <input type="text" class="form-control form-control-lg" id="buyername" name="buyername">
+<label class="form-label" for="iname">Full Name</label>
+                      </div>
+
+                    </div>
+                    
+                      <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+                      
+                      
+                      
+                 		<input type="text" id="buyercontactnumber" name="buyercontactnumber" maxLength="10" class="form-control form-control-lg icontactnumber">
+<label class="form-label" for="icontactnumber">Contact Number</label>
+
+
+
+
+                      </div>
+
+                    </div>
+                    
+                       
+                      <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+                     	<input type="text" class="form-control form-control-lg" id="buyercontactperson" name="buyercontactperson">
+<label class="form-label" for="iname">Contact Person</label>
+                      </div>
+
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                 
+                 
+                      <div class="form-outline">
+                   <input type="text" id="buyerasdharnumber" name="buyerasdharnumber"  maxLength="12"  class="form-control form-control-lg iadharnumber" >
+<label class="form-label" for="iname">Aadhaar Number</label>
+                 
+                 
+                 
+                  </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline">
+                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple>
+                      <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                      <div class="form-outline">
+                       <input type="file" id="addressproof" name="addressproof[]" multiple >
+                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                      </div>
+
+                    </div>
+              
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-lg-6 bg-indigo text-white">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                  	<input type="text" id="buyeremail" name="buyeremail" class="form-control form-control-lg">
+                      <label class="form-label" for="form3Examplea2">Email Id</label>
+                    </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                   	<input type="password" class="form-control form-control-lg" id="buyerpass" name="buyerpass"  maxLength="15" placeholder="password should be maximum length 15 "><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
+                      <label class="form-label" for="form3Examplea3">Password</label>
+                    </div>
+                  </div>
                   
-                   <div class= "row">
-				        
-						
-						
-						
-						
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header" id="grad">
-									<center><h4 class="card-title mb-0" >Add User Details (All field's marked * are mandatory)</h4></center>
-								</div>
-								<div class="card-body">
-							
-										<div class="row">
-											<div class="col-md-6">
-											
-										
-										
-									
-	
-										<div class="form-group">
-										<label> <i class="fa fa-user mr-2 text-info fa-2x"></i>Full Name</label>
-											
-											<input type="text" class="form-control" id="buyername" name="buyername">
-										</div>
-										<div class="form-group">
-											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>Contact Number*</label>
+                  
+                   <div class="mb-4 pb-2">
+                    <div class="form-outline form-white mm">
+                    <input type="password" class="form-control form-control-lg" id="bconpassword" name="bconpassword" maxLength="15" placeholder="Repeat password should be maximum length 15 ">
+                      <label class="form-label" for="form3Examplea3"> Confirm Password</label>
+                    </div>
+                  </div>
+                  
+                  
+                    <div class="row">
+                    
+                        <div class="col-md-12 mb-4 pb-2">
 
-											<input type="text"  id="buyercontactnumber" name="buyercontactnumber" class="form-control buyercontactnumber" maxLength="10">
+                      <div class="form-outline form-white">
+                   <input type="text" class="form-control form-control-lg  " id="buyeraddress" name="buyeraddress">
+                        <label class="form-label" for="form3Examplea4">Address</label>
+                      </div>
 
-										</div>
-										
-										
-										
-										<div class="form-group" >
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Adhar Number*</label><br>
+                    </div>
+                    
+                    <div class="col-md-12 mb-4 pb-2">
 
-											<input type="text" id ="buyerasdharnumber" name="buyerasdharnumber" class="form-control buyerasdharnumber"  maxLength="12" >
+                      <div class="form-outline form-white">
+                	<input type="text" class="form-control form-control-lg" id="buyercity"name="buyercity" >
+                        <label class="form-label" for="form3Examplea4">city</label>
+                      </div>
 
-										</div>
+                    </div>
+                    <div class="col-md-12 mb-4 pb-2">
 
-										
-										
-											
-										
-										<div class="form-group">
-										<label> <i class="fa fa-envelope  mr-2 text-info fa-2x"></i>Email Id </label>
-											<input type="email" class="form-control" id="buyeremail" name="buyeremail">
-										</div>
-										<div class="form-group">
-										<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Password *</label>
-											<input type="password" class="form-control" id="buyerpass" name="buyerpass">
-										</div>
-										
-											<div class="form-group">
-											<label> <i class="fa fa-key mr-2 text-info fa-2x"></i>Confirm Password*</label>
-											<input type="password" class="form-control"id="bconpassword" name="bconpassword">
-										</div>
-										<div class="form-group">
-											<label> <i class="fa fa-id-card mr-2 text-info fa-2x"></i>Aadhaar card </label><br>
-											<input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple  >
-										</div>
-											
-										
-	
-										
-										</div>
-						
-										<div class="col-md-6">
-										<div class="form-group">
-											<label> <i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>Address </label>
-											<input type="text" class="form-control" id="buyeraddress" name="buyeraddress" onclick="return validation()">
-										</div>
-										
-										<div class="form-group">
-											<label><i class="fa fa-map-marker  mr-2 text-info fa-2x"></i>City</label>
-											<input type="text" class="form-control" id="buyercity" name="buyercity">
-										</div>
-										<div class="form-group">
-											<label>State/Union Ter.</label>
-											  <select class="custom-select" id="buyerstate" name="buyerstate" style="border-radius:20px;">
+                      <div class="form-outline form-white">
+                      			  <select class="custom-select form-control form-control-lg" id="buyerstate" name="buyerstate" style="border-radius:20px;">
                       <option value="Karnataka" selected>Karnataka</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                       <option value="Assam">Assam</option>
@@ -120,243 +174,63 @@
                       <option value="Uttarakhand">Uttarakhand</option>
                       <option value="West Bengal">West Bengal</option>
                     </select>
-										</div>
-										<div class="form-group">
-											<label>Country</label>
-											<input type="text" value="India" id="buyercountry" name="buyercountry" class="form-control">
-										</div>
-										<div class="form-group">
-											<label>Pincode</label>
+                        <label class="form-label" for="form3Examplea5">State</label>
+                      </div>
 
-											<input type="text" class="form-control"id="buyerpincode" name="buyerpincode" maxLength="6">
-
-										</div>
-										
-										
-											<div class="form-group">
-										<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
-											<input type="text" class="form-control" id="buyercontactperson" name="buyercontactperson">
-										</div>
-										
-												
-										<div class="form-group" >
-											<label>Address proof</label><br>
-											<input type="file" id="addressproof" name="addressproof[]" multiple >
-										</div>
-										
-										
-												
-										
-									
-
-											
-											</div>
-											</div>
-											<div class="col-md-12">
-										
-											</div>
-										</div>
-								
-							<div class="d-flex justify-content-around">
-							<div class="Col-sm-4">
-							<button type="submit" name="submit" class="btn btn-info btn-rounded btn-lg mb-4" onclick="return validatebuyer()" > Submit</button>
-						</div>
-					<div class="Col-sm-4">
-							<button type="reset" name="reset" class="btn btn-info btn-rounded btn-lg mb-4">Cancel</button>
-							</div>
-							
-								
-							</div>	
-								
-								
-							
-							
-					</div>
-					</div>
-						
-						
-						
-						
-				   
-				   
-				   
-				   
-				   
+                    </div>
                   </div>
-				  
-				  
-				  
-				  
-				  
-				  
-				  
-				  
-				  
-				  
-                </div>
-				</form>
-              </div>
-			  
-            </div>
+                  
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                   	<input type="text" class="form-control form-control-lg" id="buyerpincode" name="buyerpincode" maxLength="6">
+                        <label class="form-label" for="form3Examplea4">PinCode</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                     	<input type="text" value="India" id="buyercountry" name="buyercountry"  class="form-control form-control-lg">
+                        <label class="form-label" for="form3Examplea5">Country</label>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                 	<input type="hidden" id="role" name="role"  value="INDIVIDUAL"> 
+                  
+
+                 
+
           
+
+                  <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                    <input
+                      class="form-check-input me-3"
+                      type="checkbox"
+                      value=""
+                      id="form2Example3c"
+                    />
+                    <label class="form-check-label text-white" for="form2Example3">
+                      I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
+                    </label>
+                  </div>
+
+                  <button type="submit" name="submit" onclick="return validateindiviual()" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
+                  </form>
+
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       
-          <!-- partial -->
         </div>
-     
-        
-        
-        
-        
-        
-        
-        <!-- main-panel ends -->
       </div>
-      <!-- page-body-wrapper ends -->
     </div>
-	<script> 
-function validatebuyer(){
+  </div>
+</section>
 
-	var buyername = document.getElementById("buyername").value;
-	var buyercontactnumber = document.getElementById("buyercontactnumber").value;
-	var buyerasdharnumber = document.getElementById("buyerasdharnumber").value;
-	var buyeremail = document.getElementById("buyeremail").value;
-	var buyerpass = document.getElementById("buyerpass").value;
-	var bconpassword = document.getElementById("bconpassword").value;
-	var buyeradharcard = document.getElementById("buyeradharcard").value;
-	var buyeraddress = document.getElementById("buyeraddress").value;
-	var buyercity = document.getElementById("buyercity").value;
-	var buyerstate = document.getElementById("buyerstate").value;
-	var buyercountry = document.getElementById("buyercountry").value;
-	var buyerpincode = document.getElementById("buyerpincode").value;
-	var buyercontactperson = document.getElementById("buyercontactperson").value;
-	var addressproof = document.getElementById("addressproof").value;
+    <!-- ======= Breadcrumbs ======= -->
 
-	
-
-if(buyername == '' || buyercontactnumber == '' ||  buyerasdharnumber == '' || buyeremail == '' ||  buyerpass == '' ||  bconpassword == '' || buyeradharcard == '' || buyeraddress == '' || buyercity == '' || buyerstate == '' || buyercountry == '' || buyerpincode == '' || buyercontactperson == '' || addressproof == '')
-{
-		swal("Alert!",  "Buyer Name, Company Name, Company Type, Contact Person, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
-		return false;
-	}
-	else{
-        $.ajax({
-            type:'submit',
-            data: {buyername:buyername,buyercontactnumber:buyercontactnumber, buyerasdharnumber: buyerasdharnumber,buyeremail:buyeremail,buyerpass:buyerpass,bconpassword:bconpassword,buyeradharcard :buyeradharcard ,buyeraddress:buyeraddress,buyercity:buyercity, buyerstate: buyerstate,buyercountry:buyercountry,buyerpincode:buyerpincode,buyercontactperson :buyercontactperson ,addressproof:addressproof,},
-           success:function(data){
-                swal("Success", "Data Saved Successfully", "success");
-            },
-            error:function(xhr, thrownError, ajaxOptions){
-
-            },
-        });
-    }
-	
-	if (buyercontactnumber.value.length < 10 || buyercontactnumber.value.length > 10) {
-    swal("Alert!", "Mobile No. is not valid, Please Enter 10 Digit Mobile No.", "error");
-    return false;
-  }
-  else if (buyercontactnumber.value == "") {
-    swal("Alert!","Please enter your Mobile No.","error");
-    return false;
-  }
-	
-	if(buyerpass != bconpassword){
-		swal("Alert!",  "Password and Confirm Password Should Match!", "error");
-		return false;
-	}
-	
-}
-  </script>
- 
-  <script>
-function validateForm() {
-    //collect form data in JavaScript variables
-    var pw1 = document.getElementById("buyerpass").value;
-    var pw2 = document.getElementById("bconpassword").value;
-   
-  
-    //check empty password field
-
-    //minimum password length validation
-    if(pw1.length < 8) {
-      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
-      return false;
-    }
-
-    //maximum length of password validation
-    if(pw1.length > 15) {
-      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
-      return false;
-    }
-  
-    if(pw1 != pw2) {
-      document.getElementById("message2").innerHTML = "**Passwords are not same";
-      return false;
-    } 
- }
-</script> 
-
-
-
-
-
-
-
-<script type="text/javascript"> 
-
-	$(".buyerasdharnumber ").change(function () {      
-var inputvalues = $(this).val();      
-  var regex = /^\d{12}$/;  
-  if(!regex.test(inputvalues)){      
-  $(".buyerasdharnumber").val("");    
-  swal("Alert!","Invalid Aadhaar Number", "error");    
-  return regex.test(inputvalues);    
-  }    
-}); 
-
-</script> 
-
-<script type="text/javascript">    
-$(document).ready(function(){     
-        
-$(".buyercontactnumber").change(function () {      
-var inputvalues = $(this).val();      
-  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
-  if(!regex.test(inputvalues)){      
-  $(".buyercontactnumber").val("");    
-  swal("Alert!","Invalid Buyer Phone-Number no", "error");    
-  return regex.test(inputvalues);    
-  }    
-});      
-    
-	
-});    
-</script>	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	   
-	   
-	   
