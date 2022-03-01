@@ -24,20 +24,25 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
-	    $buyername = $this->input->post('buyername');
-			$buyercontactnumber= $this->input->post('buyercontactnumber');
-			$buyerasdharnumber = $this->input->post('buyerasdharnumber');
-			$buyeremail = $this->input->post('buyeremail');
-			
-			$buyeradharcard = $this->input->post('buyeradharcard');
-			$buyeraddress = $this->input->post('buyeraddress');
-		    $buyercity =$this->input->post('buyercity');
-			$buyerstate = $this->input->post('buyerstate');
-			$buyercountry = $this->input->post('buyercountry');
-			$buyerpincode = $this->input->post('buyerpincode');
-			$buyercontactperson = $this->input->post('buyercontactperson');
-			$addressproof = $this->input->post('addressproof');
-			 $buysl_no = $this->input->post('buysl_no');
+		
+		
+		
+		
+	    $buyername = $this->input->post('buyername'); 
+		$buyercontactnumber = $this->input->post('buyercontactnumber');
+		$buyerasdharnumber = $this->input->post('buyerasdharnumber');
+		$buyeremail  = $this->input->post('buyeremail');
+		$buyeradharcard  = $this->input->post('buyeradharcard');
+		$buyeraddress  = $this->input->post('buyeraddress');
+		$buyercity  = $this->input->post('buyercity');
+		$buyerstate  = $this->input->post('buyerstate');
+		$buyercountry  = $this->input->post('buyercountry');
+		$buyerpincode  = $this->input->post('buyerpincode');
+		$buyercontactperson  = $this->input->post('buyercontactperson');
+		$addressproof  = $this->input->post('addressproof');
+	
+		
+		
 		
 			 $a = $_FILES['buyeradharcard']['name']; 
 			  $pic_array1 = self::upload_files('buyeradharcard');
@@ -69,19 +74,16 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		
 	
 			$this->load->model('Admin_model');
-			 $this->load->model('Admin_model');
-			  $data2 = array('buyername' => $buyername, 
-			  'buyercontactnumber' => $buyercontactnumber, 
-			  'buyerasdharnumber' => $buyerasdharnumber, 
-			  'buyeremail' => $buyeremail,  'buyeradharcard'=>$pic_array1, 
-			  'buyeraddress' => $buyeraddress, 'buyercity' => $buyercity, 
-			  'buyerstate' =>$buyerstate,'buyercountry'=>$buyercountry,
-			  'buyerpincode' => $buyerpincode,
-			  'buyercontactperson' => $buyercontactperson, 
-			  'addressproof' =>$pic_array2);
-			  
+			 $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber,
+			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
+			 'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress,
+			 ' buyercity' => $buyercity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
+			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
+			 'addressproof'=>$pic_array2 );
+
+			  print_r($data2);die;
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('buysl_no' => $buysl_no);
+			  $updatech = array('buysl_no ' => $buysl_no );
 
 			 
 			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);
@@ -98,7 +100,7 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
  
 	$datar = array();
       // Looping all files
-	if(($cntfiles = count($_FILES['addressproof']['name'])) && ($cntfiles = count($_FILES['buyeradharcard']['name']))){
+	if(($cntfiles = count($_FILES['buyeradharcard']['name'])) && ($cntfiles = count($_FILES['addressproof']['name']))){
 	
 	//print_r($_FILES['uploadproductimage']['name']); die;
 //print_r($cntfiles);die; 

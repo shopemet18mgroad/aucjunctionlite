@@ -23,18 +23,7 @@
                     
                   </p>
 				  
-				  
-
-		
-					
-				  
-				  
-				  
-				  
-				  
-				  
-                
-                    <div class="form-group row">
+				     <div class="form-group row">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
                         <select class="form-control" id="icategory" name="icategory" onChange="auction_id()">
@@ -43,7 +32,6 @@
 				<option value="Bikes">Bikes</option>
 				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
-				
 				
 				
 				</select>
@@ -80,8 +68,6 @@
                     </div>
 								
 			
-					
-					
                  
                     <div class="form-group row icompanyname">
                       <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
@@ -170,11 +156,6 @@
 }
 </script>	 
 	 
-	 
-     
-     
-     
-  
 
    <script>
   function search_company1(){

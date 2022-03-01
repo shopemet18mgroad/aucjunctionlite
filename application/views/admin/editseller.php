@@ -131,12 +131,6 @@
 										
 											
 
-											<div class="form-group">
-											<label><i class="fa fa-user mr-2 text-success fa-2x"></i>GST NUMBER*</label>
-											<input type="text" class="form-control" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson;?>">
-										</div>
-										
-
 
 											
 										<div class="form-group">

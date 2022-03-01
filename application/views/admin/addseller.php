@@ -142,12 +142,7 @@
 											<label><i class="fa fa-user mr-2 text-info fa-2x"></i>Contact person*</label>
 											<input type="text" class="form-control" id="icontactperson" name="icontactperson">
 										</div>
-										
-										<div class="form-group">
-											<label> <i class="fa fa-mobile mr-2 text-info fa-2x"></i>GST Number*</label>
-											<input type="text" id="icontactnumber" name="icontactnumber" class="form-control icontactnumber">
-										</div>
-										
+									
 												
 										<div class="form-group">
 											<label><i class="fa fa-id-card mr-2 text-info fa-2x"></i>Address proof</label><br>
