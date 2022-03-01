@@ -37,7 +37,6 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -53,7 +52,7 @@
             <div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  Hi User
-                  <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
+                  <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>"assets/img/user.png">
               </a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Logout</a></li>
@@ -62,48 +61,49 @@
           </div>
 
           </li>
-          <li><a class="nav-link scrollto" href="#about"> Seller </a></li>
-          <li><a class="nav-link scrollto" href="#services">Buyer</a></li>
-          <li><a class="nav-link scrollto o" href="#portfolio">Approval</a></li>
-          <li><a class="nav-link scrollto" href="#team">Auction</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Reports</a></li>
-          
-          
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-          
-          
-          
+		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+            <li><a href="<?php echo base_url();?>Admin_dashboard">Add seller</a></li>
+             <li><a href="<?php echo base_url();?>Admin_editsellerlist"">Edit seller</a></li>
             </ul>
-          </li>
+            </li>
           
+		     <li class="dropdown"><a href="#"><span>Buyer</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>Admin_addbuyer">Add Buyer</a></li>
+             <li><a href="<?php echo base_url();?>Admin_addbuyerlist">Edit Buyer</a></li>
+            </ul>
+            </li>
+			   <li class="dropdown"><a href="#"><span>Approval</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>Admin_approvallist">Approve seller</a></li>
+             <li><a href="<?php echo base_url();?>Admin_buyerapproval">Approval Buyer</a></li>
+            </ul>
+            </li>
+			   <li class="dropdown"><a href="#"><span>Auction</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>Admin_startauction">Add Auction</a></li>
+             <li><a href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
+			 <li><a href="<?php echo base_url();?>Admin_viewforthcomingauction">View Forthcoming Auction</a></li>
+            </ul>
+            </li>
+			   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
+             <li><a href="<?php echo base_url();?>">Bid Winner</a></li>
+			 <li><a href="<?php echo base_url();?>">Bid Loser</a></li>
+            </ul>
+            </li>
+		  
+
           
-          
-          
-          
-          
-          
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-  
+
   
   
   
