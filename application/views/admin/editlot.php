@@ -1,26 +1,33 @@
 
 
-        
-        <div class="main-panel">
-          <div class="content-wrapper">
-        
+           <main id="main">
+    <section class="h-100 h-custom-2 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row m-5 m-5 d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row m-5 m-5 g-0">
+			  <div class="col-lg-12">
+                <div class="p-5">
             
-            
-            <div class="row">
-              <div class="col-lg-12 d-flex grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
+         
+
+
                   
+				  
+				  
+				  
+				  
+				  
                  <form action= "<?php echo base_url();?>Admin_editlot_basicinfo_update"
 				 method="post" enctype="multipart/form-data"> 
-				  <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
+			
                   <h4 class="card-title">EDIT LOT </h4>
                   <p class="card-description">
                     
                   </p>
-                  <form class="forms-sample">
+              
                   
                   
                     <div class="form-group row">
@@ -164,30 +171,22 @@ To:
                  <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-                </div>
-              </div>
-            </div>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       </form>
-          <!-- partial -->
-        </div>
-     
+           
+         </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		
+		   </section>
+         
+      </main>
         
         
-        
-        
-        
-        
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
-    </div>
+    
 
 	<script> 
 function validateaddlot(){

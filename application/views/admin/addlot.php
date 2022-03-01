@@ -1,27 +1,32 @@
 
-        
-        <div class="main-panel">
-          <div class="content-wrapper">
-        
+  	  
+        <main id="main">
+    <section class="h-100 h-custom-2 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row m-5 m-5 d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row m-5 m-5 g-0">
+			  <div class="col-lg-12">
+                <div class="p-5">
+                  
+     
             
             
-            <div class="row">
-              <div class="col-lg-12 d-flex grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
                   
                  <form action= "<?php echo base_url();?>Admin_addlot_info"
 				 method="post" enctype="multipart/form-data"> 
-				  <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
+				
+				
+				
                   <h4 class="card-title">ADD LOT </h4>
                   <p class="card-description">
                     
                   </p>
-                  <form class="forms-sample">
+                  
 				  
-				  <input type="text" class="form-control" id="iauctionid" name="iauctionid" value="<?php 
+				  <input type="hidden" class="form-control form-control-lg" id="iauctionid" name="iauctionid" value="<?php 
 				  if(isset($txdata['iauctionid'])){
 					   echo $txdata['iauctionid'];
 				  }else{
@@ -30,7 +35,7 @@
 				  
 				 ?>">
 					 
-					  <input type="text" class="form-control" id="irole" name="irole" value="<?php 
+					  <input type="hidden" class="form-control form-control-lg" id="irole" name="irole" value="<?php 
 				  if(isset($txdata['irole'])){
 					   echo $txdata['irole'];
 				  }else{
@@ -39,7 +44,7 @@
 				  
 				 ?>"> 
 					 
-				  <input type="text" class="form-control" id="iemailid" name="iemailid" value="<?php 
+				  <input type="hidden" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php 
 				  if(isset($txdata['iemailid'])){
 					   echo $txdata['iemailid'];
 				  }else{
@@ -49,7 +54,7 @@
 				 ?>">
 					 
 					 
-					 	  <input type="text" class="form-control" id="icontactperson" name="icontactperson" value="<?php 
+					 	  <input type="hidden" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php 
 				  if(isset($txdata['icontactperson'])){
 					   echo $txdata['icontactperson'];
 				  }else{
@@ -60,7 +65,7 @@
 					 
 					 
 					 
-					 	  <input type="text" class="form-control" id="icompanyname" name="icompanyname" value="<?php 
+					 	  <input type="hidden" class="form-control form-control-lg" id="icompanyname" name="icompanyname" value="<?php 
 				  if(isset($txdata['icompanyname'])){
 					   echo $txdata['icompanyname'];
 				  }else{
@@ -72,10 +77,10 @@
 					 
                   
                   
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="icategory" name="icategory">
+                        <select class="form-control form-control-lg" id="icategory" name="icategory">
 				<option value="Select" selected>Select</option>
 				<option value="Automobile">Automobile</option>
 				<option value="Home Appliance">Home Appliance</option>
@@ -89,10 +94,10 @@
                     </div>
                     
                     
-                  <div class="form-group row">
+                  <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Sub-category</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="isubcategory" name="isubcategory">
+                        <select class="form-control form-control-lg" id="isubcategory" name="isubcategory">
 				<option value="Select" selected>Select</option>
 				<option value="Cars">Cars</option>
 				<option value="Bikes">Bikes</option>
@@ -109,77 +114,77 @@
                       </div>
                     </div>
                    
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea rows="4" cols="5" class="form-control" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
+                        <textarea row m-5s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
                       </div>
                     </div>
 					
 					
 					
 					
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
-                        <input type="datetime-local" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
+                        <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
                     </div>
 					
-					<div class="form-group row">
+					<div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Current location </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="currentlocation" name="currentlocation" placeholder="current location ">
+                        <input type="text" class="form-control form-control-lg" id="currentlocation" name="currentlocation" placeholder="current location ">
                       </div>
                     </div>
                    
 					
 					
                    
-					 <div class="form-group row">
+					 <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label"> Expected price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="imrp" name="imrp" placeholder=" Expectprice ">
+                        <input type="text" class="form-control form-control-lg" id="imrp" name="imrp" placeholder=" Expectprice ">
                       </div>
                     </div>
                     
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Start  Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
+                        <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
                     </div>
                     
-                       <div class="form-group row">
+                       <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
+                        <input type="text" class="form-control form-control-lg" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
                       </div>
                     </div>
 					
-					     <div class="form-group row">
+					     <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">entry free </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="Entry Fee">
+                        <input type="text" class="form-control form-control-lg" id="entryfee" name="entryfee" placeholder="Entry Fee">
                       </div>
                     </div>
 					
                    
 				  
-						 <div class="form-group row">
+						 <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Inspection date<br> and time</label>
                       <div class="col-sm-9">
                        From: 	
-                        <input class="form-control" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
+                        <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
                          To: 	
-		<input class="form-control" id="iauction_end" name="iauction_end" type="datetime-local" >
+		<input class="form-control form-control-lg" id="iauction_end" name="iauction_end" type="datetime-local" >
                       </div>
                     </div>
 					
 					
 					
 					
-			 <div class="form-group row">
+			 <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Upload photos</label>
                       <div class="col-sm-9">
                         <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price">
@@ -196,30 +201,19 @@
                  <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-                </div>
-              </div>
-            </div>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       </form>
-          <!-- partial -->
-        </div>
-     
-        
-        
-        
-        
-        
-        
-        <!-- main-panel ends -->
+               
       </div>
-      <!-- page-body-wrapper ends -->
-    </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		
+		   </section>
+         
+      </main>
 
 	<script> 
 function validateaddlot(){
@@ -248,7 +242,7 @@ if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate 
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, thrownError, ajaxOptions){
+            error:function(xhr, throw m-5nError, ajaxOptions){
 
             },
         });

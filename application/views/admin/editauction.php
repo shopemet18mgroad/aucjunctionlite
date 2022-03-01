@@ -1,32 +1,33 @@
+      <main id="main">
+    <section class="h-100 h-custom-2 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row m-5 m-5 d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row m-5 m-5 g-0">
+			  <div class="col-lg-12">
+                <div class="p-5">
+            
+         
 
-        
-        <div class="main-panel">
-          <div class="content-wrapper">
+
+
+
 		  
 		<form action="<?php echo base_url();?>Admin_startauction_update" method="post" enctype="multipart/form-data">   
               
 		  
-        
-            
-            
-            <div class="row">
-              <div class="col-lg-12 d-flex grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                  
-                
-				  <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
+      
                   <h4 class="card-title"> EDIT START AUCTION </h4>
                   <p class="card-description">
                     
                   </p>
 
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="icategory" name="icategory" onChange="auction_id()">
+                        <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
 				<option value="<?php echo $sqldata[0]->icategory ?>" selected><?php echo $sqldata[0]->icategory ?></option>
 				<option value="Cars">Cars</option>
 				<option value="Bikes">Bikes</option>
@@ -41,25 +42,25 @@
 					
 					
 					
-					  <div class="form-group row">
+					  <div class="form-group row m-5">
                       
                       <div class="col-sm-9">
-                        <input type="hidden" class="form-control" id="sl_ano" name="sl_ano" placeholder="Seller Name" value="<?php echo $sqldata[0]->sl_ano ?>" readonly>
+                        <input type="hidden" class="form-control form-control-lg" id="sl_ano" name="sl_ano" placeholder="Seller Name" value="<?php echo $sqldata[0]->sl_ano ?>" readonly>
                       </div>
                     </div>
 			
 					
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Auction Id</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly value="<?php echo $sqldata[0]->iauctionid ?>" >
+                        <input type="text" class="form-control form-control-lg" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly value="<?php echo $sqldata[0]->iauctionid ?>" >
                       </div>
                     </div>
 					
-						<div class="form-group row">
+						<div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Type</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="" name="irole" onChange="meghasuma()" value="<?php echo $sqldata[0]->irole ?>">
+                        <select class="form-control form-control-lg" id="" name="irole" onChange="meghasuma()" value="<?php echo $sqldata[0]->irole ?>">
 				
 				<option value="<?php echo $sqldata[0]->irole ?>" selected><?php echo $sqldata[0]->irole ?></option>
 				<option value="company">Company</option>
@@ -81,10 +82,10 @@
 					
 					
 					
-                    <div class="form-group row">
+                    <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Seller Name</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="icontactperson" 
+                        <input type="text" class="form-control form-control-lg" id="icontactperson" 
 						name="icontactperson" placeholder="Seller Name" readonly
 						value="<?php echo $sqldata[0]->icontactperson ?>">
                       </div>
@@ -94,27 +95,27 @@
 					
 					
                  
-                    <div class="form-group row icompanyname">
+                    <div class="form-group row m-5 icompanyname">
                       <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"  value="<?php echo $sqldata[0]->icompanyname ?>"  onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
+                        <input type="text" class="form-control form-control-lg icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"  value="<?php echo $sqldata[0]->icompanyname ?>"  onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
                       </div>
                     </div>
-					<div class="form-group row iemailid">
+					<div class="form-group row m-5 iemailid">
                       <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="iemailid" value="<?php echo $sqldata[0]->iemailid ?>" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
+                        <input type="text" class="form-control form-control-lg" id="iemailid" value="<?php echo $sqldata[0]->iemailid ?>" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
                       </div>
                     </div>
 					
 		
-						 <div class="form-group row">
+						 <div class="form-group row m-5">
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
                       <div class="col-sm-9">
                        From: 	
-                        <input type="datetime-local" class="form-control" id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)) ?>"  ><br>
+                        <input type="datetime-local" class="form-control form-control-lg" id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)) ?>"  ><br>
                          To: 	
-		<input  type="datetime-local" class="form-control" id="iauction_end" name="iauction_end"  value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)) ?>">
+		<input  type="datetime-local" class="form-control form-control-lg" id="iauction_end" name="iauction_end"  value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)) ?>">
                       </div>
                     </div>
 				
@@ -123,30 +124,26 @@
                  <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-                </div>
-              </div>
-            </div>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       
-          <!-- partial -->
-        </div>
-     
+				      </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		
+		   </section>
+         
+      </main>
         
         
-        
-        
-        
-        
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
-    </div>
+              
+				  
+				  
+				  
+				  
+				  
      <script>
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
@@ -319,7 +316,7 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, thrownError, ajaxOptions){
+            error:function(xhr, throw m-5nError, ajaxOptions){
 
             },
         });

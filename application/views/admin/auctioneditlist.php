@@ -1,28 +1,27 @@
-<div class="main-panel">
-		
-          <div class="content-wrapper">
-		  
-		    <div class="col-lg-12 grid-margin stretch-card">
-	  
-	   
-	      
-	   
-	   
-              <div class="card">
-			  
-		
-                <div class="card-body">
-			
-				
-				
-				
-				  <div class="table-responsive" style="border-radius:10px">
-                    <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
-                      <thead>
-					   <tr>
-		<th colspan="10">Auction List<a href="<?php echo base_url();?>Admin_addbuyer"></a>
-			   </th>   
-      </tr>
+
+	
+
+	 <main id="main">
+
+    <section id="hero" class="d-flex align-items-center">
+     
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center mt-5">
+                <div class="col-xl-7 col-lg-9 text-center">
+           <a href="#"
+            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
+          /></a>
+        </div>
+
+        </div>
+        
+ 
+        
+      <div class="row ">
+        <table class="table table-striped">
+  <thead>
+  
+    <tr>
 						 <th>
                             Sl. No .
                           </th>
@@ -47,8 +46,11 @@
 						 Action
 						  </th>
                         </tr>
-                      </thead>
-                      <tbody>
+    
+    
+    
+  </thead>
+         <tbody>
 					  
 					  
 					  
@@ -100,23 +102,33 @@
   
 	
 				</tbody> 
-						
-	
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-       
-          <!-- partial -->
-        </div>
-     
+</table>
         
-        <!-- main-panel ends -->
+
       </div>
-      <!-- page-body-wrapper ends -->
+
+      <div class="row mb-5">
+        <div class="col-12 p-5">
+            <nav class="d-flex align-items-center justify-content-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+          </nav>
+        </div>
+          
+      </div>
     </div>
-    <!-- container-scroller -->
+  </section>
+
+  </main><!-- End #main -->
+
+	
+	
+	
+	
+	
  

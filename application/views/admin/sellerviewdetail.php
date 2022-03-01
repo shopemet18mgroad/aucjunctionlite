@@ -1,27 +1,39 @@
 
  
+ <main id="main">
 
+    <section id="hero" class="d-flex align-items-center">
+     
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    
+        
 
-
-    <div class="container-fluid card col-md-8 mt-5 mb-5">
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><?php echo $sqldata1[0]->role ?>&nbsp; DETAILS </i>  </div></center>
+      
+      <div class="container mt-5 mb-5">
+        <div class="row border border-dark">
+          
+			<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><?php echo $sqldata1[0]->role ?>&nbsp; DETAILS </i>  </div></center>
 	
-   <table class="table" style="color:grey;font-size:8px;">
+   <table class="table" style="color:grey;font-size:15px;margin:2px;">
 <tbody>
     <tr>   
-   <td>FULL NAME   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
+   
+   	  <th scope="row">FULL NAME</th>
    <td><?php echo $sqldata1[0]->iname ?></td>
 	  </tr>
 	 <br>
     <tr>
-     
-      <td>CONTACT NUMBER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+   
+	  
+	  <th scope="row">CONTACT NUMBER</th>
 	  <td><?php echo $sqldata1[0]->icontactnumber ?></td>
       
     </tr><br>
     <tr>
-     
-      <td>AADHAAR NUMBER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</td>
+    
+  
+	  
+	  <th scope="row">AADHAAR NUMBER</th>
 	  <td>
 	  
 	  
@@ -34,64 +46,58 @@
     </tr><br>
 	
 	<tr>
-     
-      <td>EMAIL ID :</td>
+   
+	  <th scope="row">EMAIL ID</th>
 	    <td><?php echo $sqldata1[0]->iemailid ?></td>
       
     </tr>
 	<tr>
      
-      <td>ADDRESS &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+   
+	  <th scope="row">ADDRESS</th>
 	    <td><?php echo $sqldata1[0]->iaddres ?></td>
       
     </tr>
 	
 	<tr>
      
-      <td>STATE/UNION TERY &nbsp;&nbsp;&nbsp;:</td>
+   
+	  <th scope="row">STATE/UNION TERY </th>
 	   <td><?php echo $sqldata1[0]->istate ?></td>
       
     </tr>
 	<tr>
-     
-      <td>COUNTRY &nbsp;&nbsp;&nbsp;:</td>
+    
+	  <th scope="row">COUNTRY</th>
 	   <td><?php echo $sqldata1[0]->icountry ?></td>
       
     </tr>
 	<tr>
      
-      <td>PINCODE &nbsp;&nbsp;&nbsp;&nbsp; :</td>
+   
+	  <th scope="row">PINCODE</th>
 	   <td><?php echo $sqldata1[0]->ipincode ?></td>
       
     </tr>
 	
 	<tr>
      
-      <td>CONTACT PERSON* &nbsp;&nbsp;&nbsp;&nbsp;:</td>
+     
+	  <th scope="row">CONTACT PERSON*</th>
 	   <td><?php echo $sqldata1[0]->icontactperson ?></td>
       
     </tr>
 	<tr>   
-   <td>GST NUMBER <div style="font-size:10px;color:red;">( applicable ony for company)</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
 
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-  
-   
+   	  <th scope="row">GST NUMBER <div style="font-size:10px;color:red;">( applicable ony for company)</div></th>
+
 <td>
 
   <?php $gst = $sqldata1[0]->igstnumber ?>
 		   
-		<?php if ($gst == Null) {
+		<?php if ($gst == Null) { ?>
 			 
 		   <?php echo "$gst" ; ?>
 		  
@@ -109,66 +115,20 @@
 
 
 
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
 	</td>
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
-   
-   
-   
-   
+  
 	  </tr>
 	  
-	  
-	  
-	  
-	  
+	 
 	  <tr>   
-   <td>COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:red;">( Applicable ony for company)</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</td>
+   <th scope="row">COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:red;">( Applicable ony for company)</div> </th>
    <td><?php echo $sqldata1[0]->itypeseller ?></td>
 	  </tr>
 	
 	
 	<tr>
      
-      <td>ADDRESS PROOF &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
+      <th scope="row">ADDRESS PROOF<div style="font-size:10px;color:red;">Click on image to view full image</div></th>
 	   <td>
 	 
 	
@@ -198,7 +158,7 @@
     </tr>
 	<tr>
      
-      <td>AADHAAR CARD &nbsp;&nbsp;&nbsp;&nbsp;:<div style="font-size:10px;color:red;">Click on image to view full image</div></td>
+      <th scope="row">AADHAAR CARD<div style="font-size:10px;color:red;">Click on image to view full image</div></th>
 
 
 <td>
@@ -224,24 +184,6 @@
 	<?php	} ?>
 
 
-
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
 	</td>
       
    </tr>
@@ -250,8 +192,17 @@
 	
   </tbody>
 </table>
-</div>
-<!-- Button trigger modal -->
+        </div>
+          
+      </div>
+        
+  
+
+     
+    </div>
+  </section>
+
+  </main><!-- End #main -->
 
 
 <!-- Modal -->
