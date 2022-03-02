@@ -3,11 +3,11 @@
            <main id="main">
     <section class="h-100 h-custom-2 gradient-custom-2">
   <div class="container py-5 h-100">
-    <div class="row m-5 m-5 d-flex justify-content-center align-items-center h-100">
+    <div class="row m-4 m-5 m-5 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">
           <div class="card-body p-0">
-            <div class="row m-5 m-5 g-0">
+            <div class="row m-4 m-5 m-5 g-0">
 			  <div class="col-lg-12">
                 <div class="p-5">
             
@@ -30,11 +30,12 @@
               
                   
                   
-                    <div class="form-group row">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="icategory" name="icategory" value="<?php echo $sqldata[0]->icategory ?>" >
-				<option value="Select" selected>Select</option>
+                        <select class="form-control form-control-lg" id="icategory" name="icategory" value="<?php echo $sqldata[0]->icategory ?>" >
+						<option value="<?php echo $sqldata[0]->icategory ?>"><?php echo $sqldata[0]->icategory ?></option>
+				
 				<option value="Cars">Automobile</option>
 				<option value="Bikes">Home Appliance</option>
 				<option value="Laptop">Electronic Appliance </option>
@@ -47,11 +48,14 @@
                     </div>
                     
                     
-                  <div class="form-group row">
+                  <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Sub-category</label>
                       <div class="col-sm-9">
-                        <select class="form-control" id="isubcategory" name="isubcategory" value="<?php echo $sqldata[0]->isubcategory ?>" >
-				<option value="Select" selected>Select</option>
+                        <select class="form-control form-control-lg" id="isubcategory" name="isubcategory" value="<?php echo $sqldata[0]->isubcategory ?>" >
+				
+				
+				<option value="<?php echo $sqldata[0]->isubcategory ?>"><?php echo $sqldata[0]->isubcategory ?></option>
+				
 				<option value="Cars">Cars</option>
 				<option value="Bikes">Bikes</option>
                 <option value="Commercial">Commercial</option>
@@ -67,76 +71,76 @@
                       </div>
                     </div>
                    
-                    <div class="form-group row">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea rows="4" cols="5" class="form-control" id="iproductdes" name="iproductdes" placeholder="product Description " value="<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
+                        <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
                       </div>
                     </div>
 				
-					 <div class="form-group row">
+					 <div class="form-group row m-4">
                      
                       <div class="col-sm-9">
-                        <input type="hidden" class="form-control" id="sl_noadd" name="sl_noadd"  value="<?php echo $sqldata[0]->sl_noadd ?>" >
+                        <input type="hidden" class="form-control form-control-lg" id="sl_noadd" name="sl_noadd"  value="<?php echo $sqldata[0]->sl_noadd ?>" >
                       </div>
                     </div>
 					
 					
 					
-                    <div class="form-group row">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
-                        <input type="datetime-local" class="form-control" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
+                        <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
                       </div>
                     </div>
 					
-					<div class="form-group row">
+					<div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Current location </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="currentlocation" name="currentlocation" placeholder="current location " value="<?php echo $sqldata[0]->currentlocation ?>" >
+                        <input type="text" class="form-control form-control-lg" id="currentlocation" name="currentlocation" placeholder="current location " value="<?php echo $sqldata[0]->currentlocation ?>" >
                       </div>
                     </div>
                    
 					
 					
                    
-					 <div class="form-group row">
+					 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label"> Expected price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="imrp" name="imrp" placeholder=" Expectprice "value="<?php echo $sqldata[0]->imrp ?>" >
+                        <input type="text" class="form-control form-control-lg" id="imrp" name="imrp" placeholder=" Expectprice "value="<?php echo $sqldata[0]->imrp ?>" >
                       </div>
                     </div>
                     
-                    <div class="form-group row">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Start  Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="startaucprice" name="startaucprice" placeholder="Start Auction Price"value="<?php echo $sqldata[0]->startaucprice ?>" >
+                        <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price"value="<?php echo $sqldata[0]->startaucprice ?>" >
                       </div>
                     </div>
                     
-                       <div class="form-group row">
+                       <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="endaucprice" name="endaucprice" placeholder="endaucprice" value="<?php echo $sqldata[0]->endaucprice ?>">
+                        <input type="text" class="form-control form-control-lg" id="endaucprice" name="endaucprice" placeholder="endaucprice" value="<?php echo $sqldata[0]->endaucprice ?>">
                       </div>
                     </div>
 					
-					     <div class="form-group row">
+					     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">entry free </label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="entryfee" name="entryfee" placeholder="entryfee" value="<?php echo $sqldata[0]->entryfee ?>" >
+                        <input type="text" class="form-control form-control-lg" id="entryfee" name="entryfee" placeholder="entryfee" value="<?php echo $sqldata[0]->entryfee ?>" >
                       </div>
                     </div>
 					
                    
 				  
-						 <div class="form-group row">
+						 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection date and time</label>
                       <div class="col-sm-9">
                        From: 	
                     
 						
-				  <input class="form-control " type="datetime-local"  id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)); ?>">		
+				  <input class="form-control form-control-lg " type="datetime-local"  id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)); ?>">		
 						
 						<br>
                          
@@ -144,7 +148,7 @@
 To: 
 							
 							
-   <input class="form-control " type="datetime-local"  id="iauction_end" name="iauction_end" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)); ?>">
+   <input class="form-control form-control-lg " type="datetime-local"  id="iauction_end" name="iauction_end" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)); ?>">
                       </div>
                     </div>
 					
@@ -154,10 +158,16 @@ To:
 					
 					
 					
-			 <div class="form-group row">
+			 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Upload photos</label>
                       <div class="col-sm-9">
-                        <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price"value="<?php echo $sqldata[0]->imageupload ?>" >
+                        <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price" value="<?php echo $sqldata[0]->imageupload ?>" >
+						  <?php $img = unserialize($sqldata[0]->imageupload)?>
+						
+						<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="200px" height="250px">
+						
+						
                       </div>
                     </div>
                    		
@@ -215,7 +225,7 @@ if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate 
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, thrownError, ajaxOptions){
+            error:function(xhr, throw m-4nError, ajaxOptions){
 
             },
         });

@@ -30,8 +30,8 @@
                       
                       
                       
-                 		<input type="text" id="buyercontactnumber" name="buyercontactnumber" maxLength="10" class="form-control form-control-lg icontactnumber">
-<label class="form-label" for="icontactnumber">Contact Number</label>
+                 		<input type="text" id="buyercontactnumber" name="buyercontactnumber" maxLength="10" class="form-control form-control-lg buyercontactnumber">
+<label class="form-label" for="buyercontactnumber">Contact Number</label>
 
 
 
@@ -65,7 +65,7 @@
                  
                  
                       <div class="form-outline">
-                   <input type="text" id="buyerasdharnumber" name="buyerasdharnumber"  maxLength="12"  class="form-control form-control-lg iadharnumber" >
+                   <input type="text" id="buyerasdharnumber" name="buyerasdharnumber"  maxLength="12"  class="form-control form-control-lg buyerasdharnumber" >
 <label class="form-label" for="iname">Aadhaar Number</label>
                  
                  
@@ -76,7 +76,7 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
                  <input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple>
-                      <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
+                      <br><label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
 
@@ -85,7 +85,7 @@
 
                       <div class="form-outline">
                        <input type="file" id="addressproof" name="addressproof[]" multiple >
-                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                       <br> <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
 
                     </div>
@@ -126,7 +126,7 @@
                         <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                   <input type="text" class="form-control form-control-lg  " id="buyeraddress" name="buyeraddress">
+                   <input type="text" class="form-control form-control-lg " id="buyeraddress" name="buyeraddress">
                         <label class="form-label" for="form3Examplea4">Address</label>
                       </div>
 
@@ -135,7 +135,7 @@
                     <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                	<input type="text" class="form-control form-control-lg" id="bcity"name="bcity" >
+                	<input type="text" class="form-control form-control-lg" id="bcity" name="bcity" >
                         <label class="form-label" for="form3Examplea4">city</label>
                       </div>
 
@@ -207,7 +207,7 @@
 
           
 
-                  <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                <!--  <div class="form-check d-flex justify-content-start mb-4 pb-3">
                     <input
                       class="form-check-input me-3"
                       type="checkbox"
@@ -217,9 +217,9 @@
                     <label class="form-check-label text-white" for="form2Example3">
                       I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
                     </label>
-                  </div>
+                  </div>-->
 
-                  <button type="submit" name="submit" onclick="return validateindiviual()" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
+                  <button type="submit" name="submit" onclick="return validatebuyer()" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
                   </form>
 
                 </div>
@@ -233,3 +233,126 @@
 </section>
 
     <!-- ======= Breadcrumbs ======= -->
+    
+    
+    	<script> 
+function validatebuyer(){
+
+	var buyername = document.getElementById("buyername").value;
+	var buyercontactnumber = document.getElementById("buyercontactnumber").value;
+	var buyerasdharnumber = document.getElementById("buyerasdharnumber").value;
+	var buyeremail = document.getElementById("buyeremail").value;
+	var buyerpass = document.getElementById("buyerpass").value;
+	var bconpassword = document.getElementById("bconpassword").value;
+	var buyeradharcard = document.getElementById("buyeradharcard").value;
+	var buyeraddress = document.getElementById("buyeraddress").value;
+	var bcity = document.getElementById("bcity").value;
+	var buyerstate = document.getElementById("buyerstate").value;
+	var buyercountry = document.getElementById("buyercountry").value;
+	var buyerpincode = document.getElementById("buyerpincode").value;
+	var buyercontactperson = document.getElementById("buyercontactperson").value;
+	var addressproof = document.getElementById("addressproof").value;
+
+	
+
+if(buyername == '' || buyercontactnumber == '' ||  buyerasdharnumber == '' || buyeremail == '' ||  buyerpass == '' ||  bconpassword == '' || buyeradharcard == '' || buyeraddress == '' || bcity == '' || buyerstate == '' || buyercountry == '' || buyerpincode == '' || buyercontactperson == '' || addressproof == '')
+{
+		swal("Alert!",  "Buyer Name, Company Name, Company Type, Contact Person, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
+		return false;
+	}
+	else{
+        $.ajax({
+            type:'submit',
+            data: {buyername:buyername,buyercontactnumber:buyercontactnumber, buyerasdharnumber: buyerasdharnumber,buyeremail:buyeremail,buyerpass:buyerpass,bconpassword:bconpassword,buyeradharcard :buyeradharcard ,buyeraddress:buyeraddress,buyercity:buyercity, buyerstate: buyerstate,buyercountry:buyercountry,buyerpincode:buyerpincode,buyercontactperson :buyercontactperson ,addressproof:addressproof,},
+           success:function(data){
+                swal("Success", "Data Saved Successfully", "success");
+            },
+            error:function(xhr, thrownError, ajaxOptions){
+
+            },
+        });
+    }
+	
+	if (buyercontactnumber.value.length < 10 || buyercontactnumber.value.length > 10) {
+    swal("Alert!", "Mobile No. is not valid, Please Enter 10 Digit Mobile No.", "error");
+    return false;
+  }
+  else if (buyercontactnumber.value == "") {
+    swal("Alert!","Please enter your Mobile No.","error");
+    return false;
+  }
+	
+	if(buyerpass != bconpassword){
+		swal("Alert!",  "Password and Confirm Password Should Match!", "error");
+		return false;
+	}
+	
+}
+  </script>
+ 
+  <script>
+function validateForm() {
+    //collect form data in JavaScript variables
+    var pw1 = document.getElementById("buyerpass").value;
+    var pw2 = document.getElementById("bconpassword").value;
+   
+  
+    //check empty password field
+
+    //minimum password length validation
+    if(pw1.length < 8) {
+      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
+      return false;
+    }
+
+    //maximum length of password validation
+    if(pw1.length > 15) {
+      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
+      return false;
+    }
+  
+    if(pw1 != pw2) {
+      document.getElementById("message2").innerHTML = "**Passwords are not same";
+      return false;
+    } 
+ }
+</script> 
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+
+	$(".buyerasdharnumber ").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^\d{12}$/;  
+  if(!regex.test(inputvalues)){      
+  $(".buyerasdharnumber").val("");    
+  swal("Alert!","Invalid Aadhaar Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+}); 
+
+</script> 
+
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".buyercontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".buyercontactnumber").val("");    
+  swal("Alert!","Invalid Buyer Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+	
+});    
+</script>	
+	
+	

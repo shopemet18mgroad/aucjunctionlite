@@ -76,7 +76,7 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
                  <input type="file" id="iadharcardfile" name="iadharcardfile[]" multiple>
-                      <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
+                    <br>  <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
 
@@ -85,7 +85,7 @@
 
                       <div class="form-outline">
                        <input type="file" id="iaddresprof" name="iaddresprof[]" multiple >
-                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                       <br> <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
 
                     </div>
@@ -233,5 +233,131 @@
 </section>
 
     <!-- ======= Breadcrumbs ======= -->
+  
+<script type="text/javascript"> 
+
+	$(".iadharnumber ").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^\d{12}$/;  
+  if(!regex.test(inputvalues)){      
+  $(".iadharnumber").val("");    
+  swal("Alert!","Invalid Aadhaar Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+}); 
+
+</script> 
+
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".icontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".icontactnumber").val("");    
+  swal("Alert!","Invalid Seller Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+});    
+</script>	
+	
+<script>
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#ipass');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>	
+     <script>
+  
+function validateindiviual(){
+
+	var iname = document.getElementById("iname").value;
+	var icontactnumber = document.getElementById("icontactnumber").value;
+	var iadharnumber = document.getElementById("iadharnumber").value;
+	var iemailid = document.getElementById("iemailid").value;
+	var ipass = document.getElementById("ipass").value;
+	var iconpass = document.getElementById("iconpass").value;
+	var iadharcardfile = document.getElementById("iadharcardfile").value;
+	var iaddres = document.getElementById("iaddres").value;
+	var iicity = document.getElementById("iicity").value;
+	var istate = document.getElementById("istate").value;
+	var icountry = document.getElementById("icountry").value;
+	var icontactperson = document.getElementById("icontactperson").value;
+	var iaddresprof = document.getElementById("iaddresprof").value;
+	
+	
+
+if(iname == '' || icontactnumber == '' || iadharnumber == '' || iemailid == '' || ipass == '' || iconpass == '' || iadharcardfile == '' || iaddres == '' || iicity == '' || istate == '' || icountry == '' || icontactperson == '' || iaddresprof == ''){
+		swal("Alert!",  "Seller Name, Company Name, aahdar card, aahdar Number, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
+		return false;
+	}
+	else{
+        $.ajax({
+            type:'submit',
+            data: {iname:iname,icontactnumber:icontactnumber,iadharnumber:iadharnumber,iemailid:iemailid,ipass:ipass,iconpass:iconpass,iadharcardfile:iadharcardfile,iaddres:iaddres,icity:icity,istate:istate,icountry:icountry,icontactperson:icontactperson,iaddresprof:iaddresprof},
+           success:function(data){
+                swal("Success", "Data Saved Successfully", "success");
+            },
+            error:function(xhr, thrownError, ajaxOptions){
+
+            },
+        });
+    }
+	
+	if (icontactnumber.value.length < 10 || icontactnumber.value.length > 10) {
+    swal("Alert!", "Mobile No. is not valid, Please Enter 10 Digit Mobile No.", "error");
+    return false;
+  }
+  else if (icontactnumber.value == "") {
+    swal("Alert!","Please enter your Mobile No.","error");
+    return false;
+  }
+	
+	if(ipass != iconpass){
+		swal("Alert!",  "Password and Confirm Password Should Match!", "error");
+		return false;
+	}
+	
+}
+  </script>
+<script>
+function validateForm() {
+    //collect form data in JavaScript variables
+    var pw1 = document.getElementById("ipass").value;
+    var pw2 = document.getElementById("iconpass").value;
+   
+  
+    //check empty password field
+
+    //minimum password length validation
+    if(pw1.length < 8) {
+      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
+      return false;
+    }
+
+    //maximum length of password validation
+    if(pw1.length > 15) {
+      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
+      return false;
+    }
+  
+    if(pw1 != pw2) {
+      document.getElementById("message2").innerHTML = "**Passwords are not same";
+      return false;
+    } 
+ }
+</script> 
+	  
+    
+    
+    
 
   
