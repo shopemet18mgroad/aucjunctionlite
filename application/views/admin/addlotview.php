@@ -15,7 +15,7 @@
 
 	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
 	
-   <table class="table" style="colorgrey;font-size15px;">
+   <table class="table table-striped" style="colorgrey;font-size15px;">
 <tbody>
     <tr>   
    <th scope="row">Category </th>
@@ -153,8 +153,7 @@
 	   
 
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px"  
- data-toggle="modal" data-target="#exampleModal">
+ alt="Chania" width="50px" height="50px">
 	   
 	   
 	   
