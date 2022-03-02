@@ -54,7 +54,7 @@ class Admin_bussiness_basicinfo_add extends CI_Controller {
 		
 		$datainserr = "Data Inserted Successfully";
 		$status = $this->Admin_model->insert('individual',$data);
-		header('location: '.base_url().'Admin_addseller/index/'.$datainserr);
+		header('location: '.base_url().'Admin_addbussiness/index/'.$datainserr);
 		
 		
 		
