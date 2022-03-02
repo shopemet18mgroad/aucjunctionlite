@@ -38,7 +38,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
  
+<style>
+#dp{
+background-color:#f5f5f5;
+color:#03AF463;
+ list-style-type: none;
+ font-size:20px;
+margin-top:10px;
 
+}
+#dpp{
+background-color:#f5f5f5;
+color:#03AF463;
+ list-style-type: none;
+font-size:20px;
+margin-top:10px;
+
+}
+
+
+
+
+
+</style>
   
   
 
@@ -74,7 +96,7 @@
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>Admin_dashboard">Add seller</a></li>
-             <li><a href="<?php echo base_url();?>Admin_editsellerlist"">Edit seller</a></li>
+             <li><a href="<?php echo base_url();?>Admin_editsellerlist">Edit seller</a></li>
             </ul>
             </li>
           
