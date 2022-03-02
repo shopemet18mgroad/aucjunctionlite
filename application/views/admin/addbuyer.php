@@ -76,7 +76,7 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
                  <input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple>
-                      <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
+                     <br> <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
 
@@ -85,7 +85,7 @@
 
                       <div class="form-outline">
                        <input type="file" id="addressproof" name="addressproof[]" multiple >
-                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                      <br>  <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
 
                     </div>
