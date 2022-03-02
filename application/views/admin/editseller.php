@@ -74,7 +74,7 @@
                       <div class="form-outline">
                  
 											<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?>">
-                   <label> Adhar Number*</label><br>
+                   <label> Aadhaar Number*</label><br>
                  
                  
                   </div>
@@ -82,8 +82,19 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="iadharcardfile" name="iadharcardfile[]" multiple>
-                      <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
+                 <input type="file" id="iadharcardfile" name="iadharcardfile"  value="<?php echo $sqldata[0]->iadharcardfile ?>">
+                 
+                  <?php $img = unserialize($sqldata[0]->iadharcardfile)?>
+                 
+                 
+                 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">
+                 
+                 
+                 
+                 
+                 
+                      <br><label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
 
@@ -91,8 +102,24 @@
                     <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
 
                       <div class="form-outline">
-                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple >
-                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple value=" 
+                       <?php $img = $sqldata[0]->iaddresprof ?>">
+                       
+                       
+                      
+                  <?php $img = unserialize($sqldata[0]->iaddresprof)?>
+                 
+                 
+                 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">
+                  
+                       
+                       
+                       
+                       
+                       
+                       
+                      <br>  <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
 
                     </div>
@@ -214,7 +241,8 @@
                       I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
                     </label>
                   </div>
-<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer() ">Update</button>
+                  
+<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer()">Update</button>
 						
 				
 						

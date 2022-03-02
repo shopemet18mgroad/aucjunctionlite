@@ -35,7 +35,7 @@ class Admin_bussiness_basicinfo_add extends CI_Controller {
 		$igstnumber  = $this->input->post('igstnumber');
 		$icompanyname  = $this->input->post('icompanyname');
 	    $iaddres  = $this->input->post('iaddres');
-		$icity  = $this->input->post('icity	');
+		$iicity  = $this->input->post('iicity');
 		$istate  = $this->input->post('istate');
 		$icountry  = $this->input->post('icountry');
 		$ipincode  = $this->input->post('ipincode');
@@ -47,7 +47,7 @@ class Admin_bussiness_basicinfo_add extends CI_Controller {
 		
 		$data = array('role'=>$role,'iname' => $iname, 'icontactnumber' => $icontactnumber,'iemailid' => $iemailid ,'ipass' => $ipass,
 		'iconpass' => $iconpass,'igstnumber'=>$igstnumber, 'iaddres' => $iaddres,
-		' icity' => $icity, 'istate' => $istate, 'icountry' => $icountry,
+		' iicity' => $iicity, 'istate' => $istate, 'icountry' => $icountry,
 		'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'icompanyname'=>$icompanyname );
 		
 		
