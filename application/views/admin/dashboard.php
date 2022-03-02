@@ -35,7 +35,7 @@
     <p class="card-text"></p>
 	
 	
-	   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
+	   <a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
 	
 	
 	

@@ -295,24 +295,24 @@ function validatecompany(){
 	var iemailid = document.getElementById("iemailid").value;
 	var ipass = document.getElementById("ipass").value;
 	var iconpass = document.getElementById("iconpass").value;
-	var iadharcardfile = document.getElementById("iadharcardfile").value;
-	var iaddres = document.getElementById("iaddres").value;
+    var iaddres = document.getElementById("iaddres").value;
 	var iicity = document.getElementById("iicity").value;
 	var istate = document.getElementById("istate").value;
 	var icountry = document.getElementById("icountry").value;
 	var icontactperson = document.getElementById("icontactperson").value;
-	var iaddresprof = document.getElementById("iaddresprof").value;
-	
-	
+    var igstnumber = document.getElementById("igstnumber").value;
+	var icompanyname = document.getElementById("icompanyname").value;
+	var ipincode = document.getElementById("ipincode").value;
+	var itypeseller = document.getElementById("itypeseller").value;
 
-if(iname == '' || icontactnumber == '' || iadharnumber == '' || iemailid == '' || ipass == '' || iconpass == '' || iadharcardfile == '' || iaddres == '' || iicity == '' || istate == '' || icountry == '' || icontactperson == '' || iaddresprof == ''){
+if(iname == '' || icontactnumber == '' || iadharnumber == '' || iemailid == '' || ipass == '' || iconpass == '' || iaddres == '' || iicity == '' || istate == '' || icountry == '' || icontactperson == '' || igstnumber == '' || icompanyname == '' || ipincode == '' || itypeseller == ''){
 		swal("Alert!",  "Seller Name, Company Name, aahdar card, aahdar Number, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
 		return false;
 	}
 	else{
         $.ajax({
             type:'submit',
-            data: {iname:iname,icontactnumber:icontactnumber,iadharnumber:iadharnumber,iemailid:iemailid,ipass:ipass,iconpass:iconpass,iadharcardfile:iadharcardfile,iaddres:iaddres,icity:icity,istate:istate,icountry:icountry,icontactperson:icontactperson,iaddresprof:iaddresprof},
+            data: {iname:iname,icontactnumber:icontactnumber,iadharnumber:iadharnumber,iemailid:iemailid,ipass:ipass,iconpass:iconpass,iaddres:iaddres,icity:icity,istate:istate,icountry:icountry,icontactperson:icontactperson,itypeseller:itypeseller,igstnumber:igstnumber,icompanyname:icompanyname,ipincode:ipincode},
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
