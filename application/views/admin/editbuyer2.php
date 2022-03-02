@@ -78,7 +78,10 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" multiple>
+                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" value="<?php echo $sqldata[0]->buyeradharcard ?>">
+					     <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
+						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">
                       <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
@@ -87,8 +90,15 @@
                     <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
 
                       <div class="form-outline">
-                       <input type="file" id="addressproof" name="addressproof[]" multiple >
-                        <label class="form-label" for="form3Examplev5">Address Proof</label>
+                       <input type="file" id="addressproof" name="addressproof[]" value="<?php echo $sqldata[0]->addressproof ?>">
+					     <?php $img = unserialize($sqldata[0]->addressproof)?>
+						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">
+                 
+                 
+                  
+                       
+                      <br> <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
 
                     </div>
