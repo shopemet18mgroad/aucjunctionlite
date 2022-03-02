@@ -128,7 +128,7 @@
 
                       <div class="form-outline form-white">
                 	
-											<input type="text" class="form-control form-control-lg" id="buyercity" name="buyercity" value="<?php echo $sqldata[0]->buyercity ?>">
+											<input type="text" class="form-control form-control-lg" id="bcity" name="bcity" value="<?php echo $sqldata[0]->bcity ?>">
 											<label>City</label>
                       </div>
 

@@ -48,7 +48,7 @@
 	<tr>
      
       <th scope="row">CITY</th>
-	    <td><?php echo $sqldata1[0]->buyercity ?></td>
+	    <td><?php echo $sqldata1[0]->bcity ?></td>
       
     </tr>
 	<tr>

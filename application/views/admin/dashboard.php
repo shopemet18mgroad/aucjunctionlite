@@ -26,8 +26,8 @@
   <br>
   <div class="row slideanim">
     <div class="col-sm-6">
-<center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
-  <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/company.jpg" alt="Card image cap">
+<center> <div class="card mt-2" style="width:18rem;height:300px;  border-radius: 25px;">
+  <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/nn.png" alt="Card image cap">
   <div class="card-body">
  
   
@@ -56,13 +56,13 @@
     </div>
     <div class="col-sm-6">
 	
-	<center>	<div class="card mt-2" style="width: 18rem; border-radius: 25px;">
-  <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>assets/img/indiv.jpg" alt="Card image cap"> 
+	<center>	<div class="card mt-2" style="width: 18rem; height:300px; border-radius: 25px;">
+  <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>assets/img/cc.jpg" alt="Card image cap"> 
   <div class="card-body">
   
    
     <p class="card-text"></p>
-	<a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" role="button" style="border-radius:20px;background-color:#03a9f463; color:white;" aria-disabled="true">REGISTER</a>
+	   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
 
   </div>
 </div></center>

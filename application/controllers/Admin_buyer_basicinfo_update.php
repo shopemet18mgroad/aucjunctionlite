@@ -34,7 +34,7 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		$buyeremail  = $this->input->post('buyeremail');
 		$buyeradharcard  = $this->input->post('buyeradharcard');
 		$buyeraddress  = $this->input->post('buyeraddress');
-		$buyercity  = $this->input->post('buyercity');
+		$bcity  = $this->input->post('bcity');
 		$buyerstate  = $this->input->post('buyerstate');
 		$buyercountry  = $this->input->post('buyercountry');
 		$buyerpincode  = $this->input->post('buyerpincode');
@@ -77,11 +77,11 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 			 $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber,
 			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
 			 'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress,
-			 ' buyercity' => $buyercity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
+			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
 			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
 			 'addressproof'=>$pic_array2 );
 
-			  print_r($data2);die;
+			 
 			  $datainserr = "Data Inserted Successfully";
 			  $updatech = array('buysl_no ' => $buysl_no );
 

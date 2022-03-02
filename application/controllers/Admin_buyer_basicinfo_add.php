@@ -51,7 +51,7 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 		$buyeradharcard  = $this->input->post('buyeradharcard');
 		
 		$buyeraddress  = $this->input->post('buyeraddress');
-		$buyercity  = $this->input->post('buyercity	');
+		$bcity  = $this->input->post('bcity');
 		$buyerstate  = $this->input->post('buyerstate');
 		$buyercountry  = $this->input->post('buyercountry');
 		$buyerpincode  = $this->input->post('buyerpincode');
@@ -95,7 +95,7 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 		$data = array('buyername'=>$buyername,'buyercontactnumber' => $buyercontactnumber, 
 		'buyerasdharnumber' => $buyerasdharnumber, 'buyeremail' => $buyeremail,
 		'buyerpass' => $buyerpass ,'bconpassword' => $bconpassword,'buyeradharcard' => $pic_array1,
-		'buyeraddress'=> $buyeraddress, 'buyercity' => $buyercity,' buyerstate' => $buyerstate, 
+		'buyeraddress'=> $buyeraddress, 'bcity' => $bcity,' buyerstate' => $buyerstate, 
 		'buyercountry' => $buyercountry, 'buyerpincode' => $buyerpincode, 'buyercontactperson' => $buyercontactperson,
 		'addressproof'=>$pic_array2 );
 		
