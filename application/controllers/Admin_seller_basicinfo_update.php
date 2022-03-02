@@ -34,7 +34,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		$iadharcardfile  = $this->input->post('iadharcardfile');
 		
 		$iaddres  = $this->input->post('iaddres');
-		$icity  = $this->input->post('icity	');
+		$iicity  = $this->input->post('iicity');
 		$istate  = $this->input->post('istate');
 		$icountry  = $this->input->post('icountry');
 		$ipincode  = $this->input->post('ipincode');
@@ -76,7 +76,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 			 $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
-			 ' icity' => $icity, 'istate' => $istate, 'icountry' => $icountry, 
+			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
 			 'iaddresprof'=>$pic_array2 );
 

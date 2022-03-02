@@ -10,7 +10,7 @@
                 <div class="p-5">
                   <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
 
-  <form action= "<?php echo base_url();?>Admin_seller_basicinfo_add" method="post" enctype="multipart/form-data">
+  <form action= "<?php echo base_url();?>Admin_bussiness_basicinfo_add" method="post" enctype="multipart/form-data">
                   <div class="row">
                  
                     <div class="col-md-12 mb-4 pb-2">
@@ -142,7 +142,7 @@
                     <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                	<input type="text" class="form-control form-control-lg" id="icity"name="icity" >
+                	<input type="text" class="form-control form-control-lg" id="iicity" name="iicity" >
                         <label class="form-label" for="form3Examplea4">city</label>
                       </div>
 
@@ -207,7 +207,7 @@
                     </div>
                   </div>
                   
-                 	<input type="hidden" id="role" name="role"  value="INDIVIDUAL"> 
+                 	<input type="hidden" id="role" name="role"  value="BUSSINESS"> 
                   
 
                  

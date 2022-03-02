@@ -13,7 +13,7 @@
 
 	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  </div></center>
 	
-   <table class="table"  style="colorgrey;font-size8px;">
+   <table class="table table-striped"  style="colorgrey;font-size8px;">
 <tbody >
     <tr>
    <th scope="row"> FULL NAME   </th>

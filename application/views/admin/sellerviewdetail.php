@@ -14,7 +14,7 @@
           
 			<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><?php echo $sqldata1[0]->role ?>&nbsp; DETAILS </i>  </div></center>
 	
-   <table class="table" style="color:grey;font-size:15px;margin:2px;">
+   <table class="table table-striped" style="color:grey;font-size:15px;margin:2px;">
 <tbody>
     <tr>   
    
