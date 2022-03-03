@@ -23,5 +23,20 @@ class Admin_addseller extends CI_Controller {
 	    $this->load->view('admin/header');
 		$this->load->view('admin/addseller');
 		$this->load->view('admin/footer');
+
 	}
+
+
+
+
+	 public function validate_buyerid11(){
+		$dat = urldecode($this->uri->segment(3));
+		$check_db = array('iemailid' => $dat);
+		$this->load->model('Admin_model');
+			  if($this->Admin_model->check('sellerdetails', $check_db)){
+				  echo "BYE";
+			  }else{
+				  echo "HI";
+			  }
 }
+			  }

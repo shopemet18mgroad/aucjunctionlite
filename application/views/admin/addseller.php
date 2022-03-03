@@ -126,7 +126,7 @@
                         <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                   <input type="text" class="form-control form-control-lg  " id="iaddres" name="iaddres">
+                   <input type="text" class="form-control form-control-lg  " id="iaddres" name="iaddres" onclick ="return validate_username()">
                         <label class="form-label" for="form3Examplea4">Address</label>
                       </div>
 
@@ -355,6 +355,26 @@ function validateForm() {
     } 
  }
 </script> 
+      <script>
+  function validate_username(){
+	  var val = document.getElementById("iemailid").value;
+		if(val != ''){
+			 $.get('<?php echo base_url() .'Admin_addseller/validate_buyerid11/'; ?>'+val, function(data2){				 
+				 if($.trim(data2) == "BYE"){
+					swal("Alert!",  "Email ID Already Exists", "error");
+					document.getElementById("iemailid").value = "";
+					return false;
+				}else{
+					return true;
+				}
+			 });
+			
+		}else{
+			swal("Alert!",  "Please Enter User Email ID!", "error");
+			return false;
+		}
+  }
+  </script>
 	  
     
     
