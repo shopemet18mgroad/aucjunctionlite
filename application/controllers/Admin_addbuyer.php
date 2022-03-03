@@ -24,4 +24,27 @@ class Admin_addbuyer extends CI_Controller {
 		$this->load->view('admin/addbuyer');
 		$this->load->view('admin/footer');
 	}
+	 public function validate_buyerid11(){
+		$dat = urldecode($this->uri->segment(3));
+		$check_db = array('buyeremail' => $dat);
+		$this->load->model('Admin_model');
+			  if($this->Admin_model->check('buyerdetails', $check_db)){
+				  echo "BYE";
+			  }else{
+				  echo "HI";
+			  }
+}
+ public function validate_buyer(){
+		$dat = urldecode($this->uri->segment(3));
+		$check_db = array('buyerasdharnumber' => $dat);
+		$this->load->model('Admin_model');
+			  if($this->Admin_model->check('buyerdetails', $check_db)){
+				  echo "BYE";
+			  }else{
+				  echo "HI";
+			  }
+}
+
+
+
 }
