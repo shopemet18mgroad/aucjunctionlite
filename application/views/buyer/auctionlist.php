@@ -1,182 +1,172 @@
+ <main id="main">
 
-  <div class="container-fluid">
- <h3 class="mt-5 ml-4 facol"> Auction</h3>
-  
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn btn-secondary aliteblue" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
 
-<ul class="nav nav-pills m-3  nav-justified col-12" id="pills-tab" role="tablist">
-  <li class="nav-item ">
+    </section><!-- End Breadcrumbs -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
 
-    <a class="nav-link active" id="pills-home-tab" style="border-radius:40px;" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-selected="true">Active Auctions</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" style="border-radius:40px;" data-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Participated</a>
-  </li>
-  
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">
-  
-aaa
-</div>
+        <div class="row gy-4">
 
-  <div class="tab-pane fade w-100" id="profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-   
-  
- 
-  <div class ="row w-100 container-fluid">
-  
-  <div class="card text-grey col-sm-12 col-md-4 m-2">
-  
-  <div  class="row d-flex justify-content-between ml-2">
-  <div class="col-sm-6 col-6 mt-2" style="font-size:10px;color:grey;"> 
- Auction Completed on<br>
-<div style="font-size:12px;color:black">05 jan 2022</div>
- </div>
- 
-<div class="col-sm-6 col-6 mt-2"  style="font-size:13px;color:grey;">
-#345678987654
-  </div>
-	  </div>
-  <hr>
+          <div class="col-lg-12">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
 
-  <div class="col-sm-12" style="font-size:13px;">
-  <img class="card-img-top mt-2" src="<?php echo base_url()."web_files/";?>images/categories/spare.jpg "  alt="Card image cap" style="border-radius:50px;">
-  <div class="mt-2" style="font-size:12px;">Swiggy Money Voucher -Rs .100<br>
-  Fullifilled by Officesmart</div>
-  
- 
- <div  class="row d-flex justify-content-between m-3">
+                <div class="swiper-slide">
+                  <a href="#"
+                      ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
+                    /></a>
+                    <!-- <h1>One Junction For All Auctions</h1> -->
+                </div>
 
- 
-<div class="" style="font-size:10px;color:grey;">Winner</div>
- 
- 
-<div class=""  style="font-size:13px;color:orange;">
-Bidding History
-  </div>
-	  </div> 
+                <div class="swiper-slide">
+                  <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section>
+    <section id="hero" class="d-flex align-items-center">
+     
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+           <a href="#"
+            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
+          /></a>
+          <h1>One Junction For All Auctions</h1>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#about" class="btn-get-started scrollto">Start Auctioning</a>
+      </div>
       
-  
-  
-</div>
-</div>
+      <div class="container mt-5 ">
+        <div class="row border border-dark">
+            <div class="switch-field justify-content-center py-3">
+              <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
+              <label for="radio-three">Today's Auctions</label>
+              <input type="radio" id="radio-four" name="switch-two" value="maybe" />
+              <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              
+          </div>
+        </div>
+          
+      </div>
+        
+      <div class="row icon-boxes">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box w-100">
+            <div class="icon d-flex justify-content-center"><i class="fa fa-motorcycle"></i></div>
+            <h4 class="title d-flex justify-content-center"><a href="">Bajaj Pulsar 150</a></h4>
+            <p class="description d-flex justify-content-center">MRP Price:<?php echo sqldata1[0]->productname?> 100000</p>
+            <p class="description d-flex justify-content-center">Start Price: 20000</p>
+            <p class="description d-flex justify-content-center">End Price: 40000</p>
+            <!-- <p class="description d-flex justify-content-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> -->
+             
+            <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2">View Details</button>
+            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+            </div>
+           
+          </div>
+        </div>
 
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+         <div class="icon-box w-100">
+            <div class="icon d-flex justify-content-center"><i class="fa fa-motorcycle"></i></div>
+            <h4 class="title d-flex justify-content-center"><a href="">Bajaj Pulsar 150</a></h4>
+            <p class="description d-flex justify-content-center">MRP Price: 100000</p>
+            <p class="description d-flex justify-content-center">Start Price: 20000</p>
+            <p class="description d-flex justify-content-center">End Price: 40000</p>
+            <!-- <p class="description d-flex justify-content-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> -->
+             
+            <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2">View Details</button>
+            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+            </div>
+           
+          </div>
+        </div>
 
-  <div class="card text-grey col-12 col-md-4 m-2 ">
-  
-  <div  class="row d-flex justify-content-between ml-2">
-  <div class="col-sm-6 col-6 mt-2" style="font-size:10px;color:grey;"> 
- Auction Completed on<br>
-<div style="font-size:12px;color:black">05 jan 2022</div>
- </div>
- 
-<div class="col-sm-6 col-6 mt-2"  style="font-size:13px;color:grey;">
-#345678987654
-  </div>
-	  </div>
-  <hr>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+         <div class="icon-box w-100">
+            <div class="icon d-flex justify-content-center"><i class="fa fa-motorcycle"></i></div>
+            <h4 class="title d-flex justify-content-center"><a href="">Bajaj Pulsar 150</a></h4>
+            <p class="description d-flex justify-content-center">MRP Price: 100000</p>
+            <p class="description d-flex justify-content-center">Start Price: 20000</p>
+            <p class="description d-flex justify-content-center">End Price: 40000</p>
+            <!-- <p class="description d-flex justify-content-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> -->
+             
+            <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2">View Details</button>
+            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+            </div>
+           
+          </div>
+        </div>
 
-  <div class="col-sm-12" style="font-size:13px;">
-  <img class="card-img-top mt-2" src="<?php echo base_url()."web_files/";?>images/categories/spare.jpg "  alt="Card image cap" style="border-radius:50px;">
-  <div class="mt-2" style="font-size:12px;">Swiggy Money Voucher -Rs .100<br>
-  Fullifilled by Officesmart</div>
-  
- 
- <div  class="row d-flex justify-content-between m-3">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+          <div class="icon-box w-100">
+            <div class="icon d-flex justify-content-center"><i class="fa fa-motorcycle"></i></div>
+            <h4 class="title d-flex justify-content-center"><a href="">Bajaj Pulsar 150</a></h4>
+            <p class="description d-flex justify-content-center">MRP Price: 100000</p>
+            <p class="description d-flex justify-content-center">Start Price: 20000</p>
+            <p class="description d-flex justify-content-center">End Price: 40000</p>
+            <!-- <p class="description d-flex justify-content-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> -->
+             
+            <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2">View Details</button>
+            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+            </div>
+           
+          </div>
+        </div>
+        
 
- 
-<div class="" style="font-size:10px;color:grey;">Winner</div>
- 
- 
-<div class=""  style="font-size:13px;color:orange;">
-Bidding History
-  </div>
-	  </div> 
-      
-  
-  
-</div>
-</div>
+      </div>
 
- 
+      <div class="row mb-5">
+        <div class="col-12 p-5">
+            <nav class="d-flex align-items-center justify-content-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+          </nav>
+        </div>
+          
+      </div>
+    </div>
+  </section>
 
-
-
-
-
-
-
-
-
-
- 
-
-</div>
-  
-  </div>
- 
-</div>
-</div>
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </main><!-- End #main -->

@@ -1,252 +1,220 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<style>
-   
-@import url('https://fonts.googleapis.com/css?family=Mukta');
-body{
-  font-family: 'Mukta', sans-serif;
-	height:100vh;
-	min-height:550px;
-	background-image: url(http://www.planwallpaper.com/static/images/Free-Wallpaper-Nature-Scenes.jpg);
-	background-repeat: no-repeat;
-	background-size:cover;
-	background-position:center;
-	position:relative;
-    overflow-y: hidden;
-}
-a{
-  text-decoration:none;
-  color:#444444;
-}
-.login-reg-panel{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-	text-align:center;
-    width:70%;
-	right:0;left:0;
-    margin:auto;
-    height:400px;
-   
-background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
-border-radius:10px;
-}
-.white-panel{
-    background-color: rgba(255,255, 255, 1);
-    height:500px;
-    position:absolute;
-    top:-50px;
-    width:50%;
-    right:calc(50% - 50px);
-    transition:.3s ease-in-out;
-    z-index:0;
-    box-shadow: 0 0 15px 9px #00000096;
-}
-.login-reg-panel input[type="radio"]{
-    position:relative;
-    display:none;
-}
-.login-reg-panel{
-    color:#B8B8B8;
-}
-.login-reg-panel #label-login, 
-.login-reg-panel #label-register{
-    border:1px solid #9E9E9E;
-    padding:5px 5px;
-    width:150px;
-    display:block;
-    text-align:center;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight: 600;
-    font-size: 18px;
-}
-.login-info-box{
-    width:30%;
-    padding:0 50px;
-    top:20%;
-    left:0;
-    position:absolute;
-    text-align:left;
-}
-.register-info-box{
-    width:30%;
-    padding:0 50px;
-    top:20%;
-    right:0;
-    position:absolute;
-    text-align:left;
-    
-}
-.right-log{right:50px !important;}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-.login-show, 
-.register-show{
-    z-index: 1;
-    display:none;
-    opacity:0;
-    transition:0.3s ease-in-out;
-    color:#242424;
-    text-align:left;
-    padding:50px;
-margin-top:10px;
-}
-.show-log-panel{
-    display:block;
-    opacity:0.9;
-}
-.login-show input[type="text"], .login-show input[type="password"]{
-    width: 100%;
-    display: block;
-    margin:20px 0;
-    padding: 15px;
-    border: 1px solid #b5b5b5;
-    outline: none;
-}
-.login-show input[type="button"] {
-    max-width: 150px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float:right;
-    cursor:pointer;
-}
-.login-show a{
-    display:inline-block;
-    padding:10px 0;
-}
+  <title>AUCJUNCTION LITE</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-.register-show input[type="text"], .register-show input[type="password"]{
-    width: 100%;
-    display: block;
-    margin:20px 0;
-    padding: 15px;
-    border: 1px solid #b5b5b5;
-    outline: none;
-}
-.register-show input[type="button"] {
-    max-width: 150px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float:right;
-    cursor:pointer;
-}
-.credit {
-    position:absolute;
-    bottom:10px;
-    left:10px;
-    color: #3B3B25;
-    margin: 0;
-    padding: 0;
-    font-family: Arial,sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    z-index: 99;
-}
-a{
-  text-decoration:none;
-  color:#2c7715;
-}
-.img-thumbnail{
-background-color: transparent !important;
-border:none!important;
-}
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    
-</style>
+  <!-- Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="<?php echo base_url()."web_files/";?> assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="<?php echo base_url()."web_files/";?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url()."web_files/";?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?php echo base_url()."web_files/";?>assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?php echo base_url()."web_files/";?>assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?php echo base_url()."web_files/";?>assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="<?php echo base_url()."web_files/";?>assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Template Main CSS File -->
+  <link href="<?php echo base_url()."web_files/";?>assets/css/style.css" rel="stylesheet">
 
+  
 </head>
 
 <body>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"<a href="#"
+            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
+          /></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li> 
 
 
+          </li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
+    </div>
+  </header><!-- End Header -->
 
-
-
-
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<div class="login-reg-panel">
-		<div class="login-info-box">
-			<h2>Have an account?</h2>
-			<p>Lorem ipsum dolor sit amet</p>
-			<label id="label-register" for="log-reg-show">Login</label>
-			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
-		</div>
-							
-		<div class="register-info-box">
-			<a class="responsive" href="<?php echo base_url();?>Admin_dashboard"><img src="<?php echo base_url()."web_files/";?>images/aucjunction.png" alt="logo" class="img-thumbnail"/></a>
-		
-		</div>
-							
-		<div class="white-panel">
-			<div class="login-show">
-				<h2>LOGIN</h2>
-				<input type="text" placeholder="Email">
-				<input type="password" placeholder="Password">
-				<input type="button" value="Login">
-				<a href="">Forgot password?</a>
-			</div>
-			<div class="register-show">
-				<h2>REGISTER</h2>
-				<input type="text" placeholder="Email">
-				<input type="password" placeholder="Password">
-				<input type="password" placeholder="Confirm Password">
-				<input type="button" value="Register">
-			</div>
-		</div>
-	</div>
-	<script>
-	
-    $(document).ready(function(){
-    $('.login-info-box').fadeOut();
-    $('.login-show').addClass('show-log-panel');
-});
-
-
-$('.login-reg-panel input[type="radio"]').on('change', function() {
-    if($('#log-login-show').is(':checked')) {
-        $('.register-info-box').fadeOut(); 
-        $('.login-info-box').fadeIn();
+  <main id="main">
+    <section class="vh-75 login">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-75">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid mt-1 pt-5 "
+          />
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+   <form class="user" action="<?php echo base_url()."home_login";?>" method="post">
         
-        $('.white-panel').addClass('right-log');
-        $('.register-show').addClass('show-log-panel');
-        $('.login-show').removeClass('show-log-panel');
-        
-    }
-    else if($('#log-reg-show').is(':checked')) {
-        $('.register-info-box').fadeIn();
-        $('.login-info-box').fadeOut();
-        
-        $('.white-panel').removeClass('right-log');
-        
-        $('.login-show').addClass('show-log-panel');
-        $('.register-show').removeClass('show-log-panel');
-    }
-});
+
+          <div class="divider d-flex align-items-center my-2">
+            <p class="text-center fw-bold mx-3 mb-0">LOGIN</p>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-2">
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">Email address</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-2">
+            <input type="password" id="form3Example4" class="form-control form-control-lg"
+              placeholder="" / name="pass">
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
+            </div>
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div>
+          
+          
+          
+             <div class="d-flex justify-content-between">
+               <div class="text-center text-lg-start mt-1 pt-2 pb-5">
+            <button type="submit" name="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              
+             
+             
+             </div>  
+                   <div class="container">
+        <div class="row">
+            <div class="switch-field justify-content-center py-3 ml-2" >
+              <input type="radio" id="radio-three" name="switch-two" value="seller" checked/>
+              <label for="radio-three">Seller</label>
+              <input type="radio" id="radio-four" name="switch-two" value="buyer" />
+              <label for="radio-four">Buyer</label>
+              <input type="radio" id="radio-five" name="switch-two" value="admin" />
+              <label for="radio-five">Admin</label>
+              
+          </div>
+        </div>
+          
+      </div>
+      </div>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+              
+              
+              
+                   <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                class="link-danger">Register</a></p>
+              
+              
+              
+              
+     
+       
+          
+          
+           
+          
+          
+       
+            
+                
+              
+                
+
+        </form>
+      </div>
+    </div>
+  </div>
   
+</section>
 
-	</script>
-	
-	
-	</body>
+
+    <!-- ======= Breadcrumbs ======= -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+ 
+            <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
+                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i> Auctions</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> WishList</a>
+            </nav>
+           
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/purecounter/purecounter.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/aos/aos.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="<?php echo base_url()."web_files/";?>assets/js/main.js"></script>
+
+</body>
+
 </html>

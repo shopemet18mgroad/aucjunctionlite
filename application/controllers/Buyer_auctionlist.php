@@ -20,6 +20,17 @@ class Buyer_auctionlist extends CI_Controller {
 	 */
 	public function index()
 	{ 
+		
+		
+		
+			
+	$this->load->model('Admin_model');
+     $active = array('aoption '=>true);
+	
+	$query = $this->Admin_model->auctionlist('auction', $active);
+	
+	$data['sqldata1']= $query;
+
 		$this->load->view('buyer/header');
 		$this->load->view('buyer/auctionlist');
 		$this->load->view('buyer/footer');
