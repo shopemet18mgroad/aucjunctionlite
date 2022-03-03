@@ -23,6 +23,18 @@
                       </div>
 
                     </div>
+					
+                  <div class="mb-4 pb-2">
+                 
+                 
+                      <div class="form-outline">
+                   <input type="text" id="buyerasdharnumber" name="buyerasdharnumber"  maxLength="12"  class="form-control form-control-lg buyerasdharnumber" >
+<label class="form-label" for="iname">Aadhaar Number</label>
+                 
+                 
+                 
+                  </div>
+                  </div>
                     
                       <div class="col-md-12 mb-4 pb-2">
 
@@ -30,7 +42,7 @@
                       
                       
                       
-                 		<input type="text" id="buyercontactnumber" name="buyercontactnumber" maxLength="10" class="form-control form-control-lg buyercontactnumber">
+                 		<input type="text" id="buyercontactnumber" name="buyercontactnumber" maxLength="10" class="form-control form-control-lg buyercontactnumber"onclick ="return validate_username11()">
 <label class="form-label" for="buyercontactnumber">Contact Number</label>
 
 
@@ -61,17 +73,6 @@
                     
                   </div>
 
-                  <div class="mb-4 pb-2">
-                 
-                 
-                      <div class="form-outline">
-                   <input type="text" id="buyerasdharnumber" name="buyerasdharnumber"  maxLength="12"  class="form-control form-control-lg buyerasdharnumber" >
-<label class="form-label" for="iname">Aadhaar Number</label>
-                 
-                 
-                 
-                  </div>
-                  </div>
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
@@ -126,7 +127,7 @@
                         <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                   <input type="text" class="form-control form-control-lg " id="buyeraddress" name="buyeraddress">
+                   <input type="text" class="form-control form-control-lg " id="buyeraddress" name="buyeraddress"onclick ="return validate_username()">
                         <label class="form-label" for="form3Examplea4">Address</label>
                       </div>
 
@@ -355,4 +356,67 @@ var inputvalues = $(this).val();
 });    
 </script>	
 	
-	
+	      <script>
+  function validate_username(){
+	  var val = document.getElementById("buyeremail").value;
+		if(val != ''){
+			 $.get('<?php echo base_url() .'Admin_addbuyer/validate_buyerid11/'; ?>'+val, function(data2){				 
+				 if($.trim(data2) == "BYE"){
+					swal("Alert!",  "Email ID Already Exists", "error");
+					document.getElementById("buyeremail").value = "";
+					return false;
+				}else{
+					return true;
+				}
+			 });
+			
+		}else{
+			swal("Alert!",  "Please Enter User Email ID!", "error");
+			return false;
+		}
+  }
+  </script>
+	  
+
+
+	      <script>
+  function validate_username11(){
+	  var val = document.getElementById("buyerasdharnumber").value;
+		if(val != ''){
+			 $.get('<?php echo base_url() .'Admin_addbuyer/validate_buyerid11/'; ?>'+val, function(data2){				 
+				 if($.trim(data2) == "BYE"){
+					swal("Alert!",  "Email ID Already Exists", "error");
+					document.getElementById("buyerasdharnumber").value = "";
+					return false;
+				}else{
+					return true;
+				}
+			 });
+			
+		}else{
+			swal("Alert!",  "Please Enter User Aadhaar!", "error");
+			return false;
+		}
+  }
+  </script>
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
