@@ -23,10 +23,7 @@ class Admin_addlotview extends CI_Controller {
 		
 		
 	$this->load->model('Admin_model');
-
-	$sl_ano  = urldecode($this->uri->segment(3));
-	
-	$active = array('sl_ano '=>$sl_ano );
+     $active = array('aoption '=>true);
 	
 	$query = $this->Admin_model->getaddlotauctiondetails('auction', $active);
 	
