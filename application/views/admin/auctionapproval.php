@@ -1,4 +1,7 @@
- <main id="main">
+
+	
+
+	 <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
      
@@ -11,22 +14,16 @@
         </div>
 
         </div>
-
+        
+ 
+        
       <div class="row ">
-                    <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
-                      <thead>
-					   <tr>
-		<th colspan="10">LOT LIST
-			   </th>   
-      </tr>
+        <table class="table table-striped">
+  <thead>
+  
+    <tr>
 						 <th>
                             Sl. No .
-                          </th>
-						  <th>
-						  Product Description
-						  </th>
-						    <th>
-                      Email
                           </th>
 						     <th>
                          Auction Id
@@ -45,10 +42,15 @@
 						  <th>
 						  Online Auction Start And End Date
 						  </th>
-					
+						  <th>
+						 Action
+						  </th>
                         </tr>
-                      </thead>
-                      <tbody>
+    
+    
+    
+  </thead>
+         <tbody>
 					  
 					  
 					  
@@ -58,30 +60,37 @@
 			<?php foreach($data as $row){?>
 			
 			
-			
-			 <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
-			
-			
+ <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
 					<td><?php echo $count ?> </td>
-				
-					 <td><?php echo $row->iproductdes ?></a></td>
-					<td><?php echo $row->iemailid ?> </td>
-					<td><?php echo $row->iauctionid ?> </td>
-					
-					
+
+					 <td> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td><?php echo $row->icategory ?> </td>
 					<td><?php echo $row->icontactperson ?> </td>
+					
+					
 					<td><?php echo $row->icompanyname ?> </td>
 					
 					<td><?php echo $row->iauction_start ?><br> to <br>
-					<?php echo $row->iauction_start ?> </td>
+					<?php echo $row->iauction_end ?> </td>
 					
 					
 					
 					
+					
+					<td >  
+					
+	    <a href ="<?php echo base_url()."Admin_auctionapproval/sellerapprove/".urldecode($proid);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 		
+		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+
+		
+		<a href ="<?php echo base_url()."Admin_auctionapproval/seller_delete/".urldecode($proid);?>">
+						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
+	
+
+
 
 
 				
@@ -92,14 +101,10 @@
   
 	
 				</tbody> 
-						
-	
-                    </table>
+</table>
+        
 
       </div>
-	  
-	  
-	  
 
       <div class="row mb-5">
         <div class="col-12 p-5">
@@ -119,4 +124,10 @@
   </section>
 
   </main><!-- End #main -->
+
+	
+	
+	
+	
+	
  

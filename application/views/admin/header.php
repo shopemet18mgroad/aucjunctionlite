@@ -116,7 +116,7 @@ margin-top:10px;
             <ul>
             <li><a href="<?php echo base_url();?>Admin_startauction">Add Auction</a></li>
              <li><a href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
-			 <li><a href="<?php echo base_url();?>Admin_viewforthcomingauction">View Forthcoming Auction</a></li>
+			 <li><a href="<?php echo base_url();?>Admin_auctionapproval">Approve Forthcoming Auction</a></li>
             </ul>
             </li>
 			   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>

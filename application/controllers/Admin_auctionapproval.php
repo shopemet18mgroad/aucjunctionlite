@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_viewforthcomingauction extends CI_Controller {
+class Admin_auctionapproval extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,22 +23,18 @@ class Admin_viewforthcomingauction extends CI_Controller {
 		$this->load->model('Admin_model');
 		$this->load->library('session');
 		
+
 		
-	
-			$iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
-			
 		
-		$iauctionid = array('iauctionid'=>$iauctionid);
+		$aoption = array('aoption'=>false);
 		
-	
-		
-	$query = $this->Admin_model->getdatafromtable('addlot',$iauctionid);
+	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
 		
 		$adac['data'] = $query;
 		
 		
 		$this->load->view('admin/header');
-		$this->load->view('admin/viewforthcomingauction',$adac);
+		$this->load->view('admin/auctionapproval',$adac);
 		$this->load->view('admin/footer');
 		
 		
@@ -46,15 +42,9 @@ class Admin_viewforthcomingauction extends CI_Controller {
 		
 	}	
 	
-	public function seller_delete(){
-
-$sl_ano  = urldecode($this->uri->segment(3));
-
-
-$this->load->model('Admin_model');
-
-
-$adaction2 = array('sl_ano'=>$sl_ano );
+public function seller_delete(){
+$iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
+$retriveval = array('iauctionid'=>$iauctionid);
 
 
 $query = $this->Admin_model->delete_data('auction',$adaction2);
@@ -62,21 +52,33 @@ $this->load->helper('url');
 $this->load->library('session');
 
 
-if($sl_ano){
-header('location: '.base_url().'Admin_auctioneditlist/index/');
+if($iauctionid){
+header('location: '.base_url().'Admin_auctionapproval/index/');
 }else{
 echo "BYE";
 }
 
-}	
+}
 
+
+	public function sellerapprove(){
+		
+		 $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
+         
+
+		$retriveval = array('iauctionid'=>$iauctionid);
+		
+		
+		
+		$this->load->model('Admin_model');
+		$app= array('aoption'=>true);
+		$query = $this->Admin_model->update_custom('auction', $app, $retriveval,$retriveval);
+		if($retriveval){
+			header('location: '.base_url().'Admin_auctionapproval/index/'.urlencode($retriveval));
+		}else{
+			echo "BYE";
+		}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
+
 }
