@@ -85,7 +85,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 			  $updatech = array('sl_no' => $sl_no);
 
 			 
-			  $status = $this->Admin_model->update_custom('individual',$data2,$updatech,$updatech);
+			  $status = $this->Admin_model->update_custom('sellerdetails',$data2,$updatech,$updatech);
 		
 		header('location: '.base_url().'Admin_editsellerlist/index/'.$datainserr);
 	

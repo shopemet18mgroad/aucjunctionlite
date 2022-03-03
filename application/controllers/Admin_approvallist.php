@@ -25,7 +25,7 @@ class Admin_approvallist extends CI_Controller {
 		$this->load->library('session');
 				$this->load->model('Admin_model');
 
-		$query = $this->Admin_model->getdatafromtable('individual',$ioption);
+		$query = $this->Admin_model->getdatafromtable('sellerdetails',$ioption);
 		
 		$adac['data']  =  $query;
 		
@@ -53,7 +53,7 @@ class Admin_approvallist extends CI_Controller {
 		
 		$this->load->model('Admin_model');
 		$app= array('ioption'=>true);
-		$query = $this->Admin_model->update_custom('individual', $app, $retriveval, $retriveval);
+		$query = $this->Admin_model->update_custom('sellerdetails', $app, $retriveval, $retriveval);
 		if($retriveval){
 			header('location: '.base_url().'Admin_approvallist/index/'.urlencode($retriveval));
 		}else{
@@ -72,7 +72,7 @@ class Admin_approvallist extends CI_Controller {
 	
 		$this->load->model('Admin_model');
 		
-		$status = $this->Admin_model->update_custom('individual',$data2,$retriveval,$retriveval);
+		$status = $this->Admin_model->update_custom('sellerdetails',$data2,$retriveval,$retriveval);
 		
 		header('location: '.base_url().'Admin_approvallist/index/'.urlencode($retriveval));
 		

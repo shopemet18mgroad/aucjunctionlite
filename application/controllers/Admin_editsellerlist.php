@@ -29,7 +29,7 @@ class Admin_editsellerlist extends CI_Controller {
 		//print_r( $ioption); die;
 		$this->load->model('Admin_model');
 		
-		$query = $this->Admin_model->getdatafromtable('individual',$ioption);
+		$query = $this->Admin_model->getdatafromtable('sellerdetails',$ioption);
 		
 		$adac['data']  =  $query;
 		
@@ -56,7 +56,7 @@ $this->load->model('Admin_model');
 $adaction2 = array('sl_no'=>$sl_no);
 
 
-$query = $this->Admin_model->delete_data('individual',$adaction2);
+$query = $this->Admin_model->delete_data('sellerdetails',$adaction2);
 $this->load->helper('url');
 $this->load->library('session');
 
