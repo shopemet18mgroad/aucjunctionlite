@@ -24,9 +24,9 @@
   <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" alt="logo"/ width="240px;" height="100px"></a> </h2>
   <h5>SELECT ANY ONE OPTION FOR REGISTRATION</h5>
   <br>
-  <div class="row slideanim">
+  <div class="row slideanim w-100" >
     <div class="col-sm-6">
-<center> <div class="card mt-2" style="width:18rem;height:400px;  border-radius: 25px;color:blue;">
+<center> <div class="card mt-2" style="width:25rem;height:450px;  border-radius: 25px;color:blue; ">
   <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/nn.png" alt="Card image cap">
   <div class="card-body">
  
@@ -56,7 +56,7 @@
     </div>
     <div class="col-sm-6">
 	
-	<center>	<div class="card mt-2" style="width: 18rem; height:400px; border-radius: 25px; color:blue">
+	<center>	<div class="card mt-2" style="width: 25rem; height:450px; border-radius: 25px; color:blue">
   <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>assets/img/cc.jpg" alt="Card image cap"> 
   <div class="card-body">
   
