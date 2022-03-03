@@ -92,7 +92,7 @@ margin-top:10px;
           </div>
 
           </li>
-		   <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+		   <li class="dropdown"><a href="#"><span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>">My Account</a></li>
              <li><a href="<?php echo base_url();?>">Orders & Payments</a></li>
@@ -101,33 +101,120 @@ margin-top:10px;
             </ul>
             </li>
           
-		     <li class="dropdown"><a href="#"><span>Buyer</span> <i class="bi bi-chevron-down"></i></a>
+		
+
+		
+		
+		
+		 <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>Admin_addbuyer">Add Buyer</a></li>
-             <li><a href="<?php echo base_url();?>Admin_addbuyerlist">Edit Buyer</a></li>
+         
+              <li class="dropdown"><a href="#"><span>Automobile</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Cars</a></li>
+                  <li><a href="#">Bikes</a></li>
+                  <li><a href="#">Commercial Vehicles</a></li>
+           
+                </ul>
+				
+              <li class="dropdown"><a href="#"><span>Home Appliance</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Washing Machine</a></li>
+                  <li><a href="#">Fridge</a></li>
+                  <li><a href="#">Cooler</a></li>
+           
+                </ul>
+			</li>
+			
+			
+			  <li class="dropdown"><a href="#"><span>Electronic Appliance</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">TV</a></li>
+                  <li><a href="#">Laptop</a></li>
+                
+           
+                </ul>
+			</li>
+			
+			
+			
+			
+			  <li class="dropdown"><a href="#"><span>MOBILE</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Old Mobile</a></li>
+                  <li><a href="#">New Mobile</a></li>
+                
+           
+                </ul>
+			</li>
+			
+			
+			
+			
+			
+			
+			
+			
+            
+             
             </ul>
-            </li>
-			   <li class="dropdown"><a href="#"><span>Approval</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+	<li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>Admin_approvallist">Approve seller</a></li>
-             <li><a href="<?php echo base_url();?>Admin_buyerapproval">Approval Buyer</a></li>
-            </ul>
-            </li>
-			   <li class="dropdown"><a href="#"><span>Auction</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-            <li><a href="<?php echo base_url();?>Admin_startauction">Add Auction</a></li>
-             <li><a href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
-			 <li><a href="<?php echo base_url();?>Admin_viewforthcomingauction">View Forthcoming Auction</a></li>
-            </ul>
-            </li>
-			   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-            <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
+            <li><a href="<?php echo base_url();?>">Auction Participated</a></li>
              <li><a href="<?php echo base_url();?>">Bid Winner</a></li>
-			 <li><a href="<?php echo base_url();?>">Bid Loser</a></li>
+                          <li><a href="<?php echo base_url();?>">Bid Loser </a></li>
+                                       
             </ul>
             </li>
-		  
+          	
+		
+		
+				
+	<li class="dropdown"><a href="#"><span>Policies</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>">Privacy Policy</a></li>
+             <li><a href="<?php echo base_url();?>">About Us</a></li>
+                          <li><a href="<?php echo base_url();?>">Contact Us </a></li>
+                                       
+            </ul>
+            </li>
+          	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
           
         </ul>
