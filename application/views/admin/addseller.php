@@ -375,6 +375,31 @@ function validateForm() {
 		}
   }
   </script>
+      <script>
+  function validate_username(){
+	  var val = document.getElementById("iadharnumber").value;
+		if(val != ''){
+			 $.get('<?php echo base_url() .'Admin_addseller/validate_aadharnumber/'; ?>'+val, function(data2){				 
+				 if($.trim(data2) == "BYE"){
+					swal("Alert!",  "Aadhaar Number Already Exists", "error");
+					document.getElementById("iadharnumber").value = "";
+					return false;
+				}else{
+					return true;
+				}
+			 });
+			
+		}else{
+			swal("Alert!",  "Please Enter User Aadhaar Number!", "error");
+			return false;
+		}
+  }
+  </script>    
+      
+      
+      
+      
+      
 	  
     
     
