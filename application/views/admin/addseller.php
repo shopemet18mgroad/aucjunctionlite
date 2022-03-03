@@ -40,15 +40,7 @@
 
                     </div>
                     
-                       
-                      <div class="col-md-12 mb-4 pb-2">
-
-                      <div class="form-outline">
-                     	<input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson">
-<label class="form-label" for="iname">Contact Person</label>
-                      </div>
-
-                    </div>
+                  
                     
                     
                     
@@ -71,11 +63,26 @@
                  
                  
                   </div>
+                  
+                       
+                      <div class="col-md-12 mb-4 pb-2">
+
+                      <div class="form-outline">
+                     	<input type="text" class="form-control form-control-lg" id="icontactperson" onclick="return validate_useraadharnumber()" name="icontactperson">
+<label class="form-label" for="iname">Contact Person</label>
+                      </div>
+
+                    </div>
+                  
+                  
+                  
+                  
+                  
                   </div>
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="iadharcardfile" name="iadharcardfile[]" multiple>
+                 <input type="file" id="iadharcardfile"  name="iadharcardfile[]" multiple>
                     <br>  <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
@@ -376,7 +383,7 @@ function validateForm() {
   }
   </script>
       <script>
-  function validate_username(){
+  function validate_useraadharnumber(){
 	  var val = document.getElementById("iadharnumber").value;
 		if(val != ''){
 			 $.get('<?php echo base_url() .'Admin_addseller/validate_aadharnumber/'; ?>'+val, function(data2){				 

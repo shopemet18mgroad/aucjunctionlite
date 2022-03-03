@@ -75,7 +75,7 @@
                     <div class="form-outline">
 					
 					
-               		<input type="text" class="form-control form-control-lg" id="icompanyname"  name="icompanyname"> 
+               		<input type="text" class="form-control form-control-lg" id="icompanyname"  name="icompanyname" onclick = "return validate_usergst()"> 
                       <label class="form-label" for="form3Examplev4">Company Name</label>
 					
                     </div>
@@ -133,7 +133,7 @@
                         <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                   <input type="text" class="form-control form-control-lg" id="iaddres" name="iaddres">
+                   <input type="text" class="form-control form-control-lg" id="iaddres" name="iaddres" onclick= "return validate_useremail()">
                         <label class="form-label" for="form3Examplea4">Address</label>
                       </div>
 
@@ -259,7 +259,28 @@ var inputvalues = $(this).val();
 });      
     
 });    
-</script>	
+</script>
+	
+    
+    
+    
+    
+    
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".igstnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^([0-9]){2}([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}([0-9]){1}([a-zA-Z]){1}([0-9A-Z]){1}?$/;    
+  if(!regex.test(inputvalues)){      
+  $(".igstnumber").val("");    
+  swal("Alert!","Invalid GST Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+});    
+</script>
 	
 <script>
 const togglePassword = document.querySelector('#togglePassword');
@@ -352,6 +373,51 @@ function validateForm() {
     } 
  }
 </script> 
+    
+          <script>
+  function validate_useremail(){
+	  var val = document.getElementById("iemailid").value;
+		if(val != ''){
+			 $.get('<?php echo base_url() .'Admin_addseller/validate_buyerid11/'; ?>'+val, function(data2){				 
+				 if($.trim(data2) == "BYE"){
+					swal("Alert!",  "Email ID Already Exists", "error");
+					document.getElementById("iemailid").value = "";
+					return false;
+				}else{
+					return true;
+				}
+			 });
+			
+		}else{
+			swal("Alert!",  "Please Enter User Email ID!", "error");
+			return false;
+		}
+  }
+  </script>
+      <script>
+  function validate_usergst(){
+	  var val = document.getElementById("igstnumber").value;
+		if(val != ''){
+			 $.get('<?php echo base_url() .'Admin_addseller/validate_aadharnumber/'; ?>'+val, function(data2){				 
+				 if($.trim(data2) == "BYE"){
+					swal("Alert!", "GST Number Already Exists", "error");
+					document.getElementById("igstnumber").value = "";
+					return false;
+				}else{
+					return true;
+				}
+			 });
+			
+		}else{
+			swal("Alert!",  "Please Enter User GST Number!", "error");
+			return false;
+		}
+  }
+  </script>    
+      
+      
+      
+      
 	  
     
     
