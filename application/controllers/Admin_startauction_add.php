@@ -73,7 +73,7 @@ class Admin_startauction_add extends CI_Controller {
 public function get_seller_table(){
 	$dataw = urldecode($this->uri->segment(3));
 	$this->load->model('Admin_model');
-	$search = $this->Admin_model->get_lookalike('individual','icompanyname',$dataw);
+	$search = $this->Admin_model->get_lookalike('sellerdetails','icompanyname',$dataw);
 	
 	
 	
@@ -90,7 +90,7 @@ public function get_seller_table(){
 public function get_email_table(){
 	$dataw1 = urldecode($this->uri->segment(3));
 	$this->load->model('Admin_model');
-	$search1 = $this->Admin_model->get_lookalike('individual','iemailid ',$dataw1);	
+	$search1 = $this->Admin_model->get_lookalike('sellerdetails','iemailid ',$dataw1);	
 	
 	if($search1){
 		foreach($search1 as $sear1){

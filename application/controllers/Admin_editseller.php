@@ -29,7 +29,7 @@ class Admin_editseller extends CI_Controller {
 		$active = array('sl_no'=>$sl_no);
 		
 	
-		$query = $this->Admin_model->getdatafromtable('individual', $active);
+		$query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
 		
 		$data['sqldata']= $query;	
 		
