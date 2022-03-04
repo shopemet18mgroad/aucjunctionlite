@@ -20,7 +20,8 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->library('fileupload');
+	
+      $this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
 		
@@ -144,10 +145,9 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 	
 	
 	
+}
 	
-	
-		  }
-	
+		
 	
 
     

@@ -31,8 +31,7 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 	
 		date_default_timezone_set("Asia/Kolkata");
 	 }
-	public function index()
-	{
+	public function index(){
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
@@ -58,13 +57,10 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 		$buyercontactperson  = $this->input->post('buyercontactperson');
 		$addressproof  = $this->input->post('addressproof');
 		
-	
 		 $_FILES['buyeradharcard']['name'];
 		 $_FILES['addressproof']['name'];
 		  
-		 
-			
-		      $pic_array1 = self::upload_files('buyeradharcard');
+		  $pic_array1 = self::upload_files('buyeradharcard');
 		
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -108,7 +104,7 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
 		
 		
 	}
-	
+
 	
 	private function upload_files($nameid){
     	
@@ -152,20 +148,6 @@ class Admin_buyer_basicinfo_add extends CI_Controller {
       }
 	return $datar;
     }	
+	}
 	
-	
-	
-	
-		  }
-	
-	
-	
-	
-	
-		  }
-	
-	
-
-    
-		
-
+	}

@@ -22,7 +22,19 @@ class Admin_buyerviewdetail extends CI_Controller {
 	{
 		
 		
-	$this->load->model('Admin_model');
+		$this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
+			$datainserr = "Invalid Login Session";
+			header('location: '.base_url().'login/index_error/'.$datainserr);
+			die;
+			}else{
+		$this->load->model('Admin_model');
+		
+		
+
 
 	$buysl_no = urldecode($this->uri->segment(3));
 	
@@ -31,11 +43,15 @@ class Admin_buyerviewdetail extends CI_Controller {
 	$query = $this->Admin_model->getdatafromtable('buyerdetails', $active);
 	
 	$data['sqldata1']= $query;
+		$sess = array('sessi'=>$this->session->userdata('username'));
+		
+		$active = array('aname'=>$sess['sessi']);
 		
 	
 	
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',$sess);
 		$this->load->view('admin/buyerviewdetail',$data);
 		$this->load->view('admin/footer');
 	}
+}
 }

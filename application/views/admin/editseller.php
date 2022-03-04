@@ -58,16 +58,11 @@
                     </div>
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                  </div>
+               
 
+<?php  $meg = $sqldata[0]->role ?>
+ <?php if($meg == "INDIVIDUAL"){?>
+ 
                   <div class="mb-4 pb-2">
                  
                  
@@ -79,6 +74,9 @@
                  
                   </div>
                   </div>
+
+        
+
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
@@ -98,8 +96,8 @@
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
+               
+                
 
                       <div class="form-outline">
                        <input type="file" id="iaddresprof" name="iaddresprof[]" multiple value=" 
@@ -113,23 +111,85 @@
                  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="50px" height="50px">
                   
-                       
-                       
-                       
-                       
-                       
-                       
                       <br>  <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
 
-                    </div>
               
+      
+	 
+ 
+       
+             
+	
+			  
+			  
+			  <?php }else if ($meg == "BUSSINESS" ) { ?> 
+			  
+			  
+			  
+			     <div class="mb-4 pb-2">
+                 
+                 
+                      <div class="form-outline">
+                 	<input type="text" class="form-control form-control-lg igstnumber" id="igstnumber"  name="igstnumber" value="<?php echo $sqldata[0]->igstnumber ?>">
+<label class="form-label" for="iname">GST Number</label>
+                 
+                 
+                 
                   </div>
+                  </div>   
+                    
+                    
+              
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline">
+					
+					
+               		<input type="text" class="form-control form-control-lg" id="icompanyname"  name="icompanyname" onclick = "return validate_usergst()" value="<?php echo $sqldata[0]->icompanyname ?>"> 
+                      <label class="form-label" for="form3Examplev4">Company Name</label>
+					
+                    </div>
+                  </div>
+      
+                 
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline">
+					
+                       							  <select class="custom-select form-control form-control-lg " id="itypeseller"  name="itypeseller" style="border-radius:20px;">
+    <option value="<?php echo $sqldata[0]->itypeseller ?>"><?php echo $sqldata[0]->itypeseller ?></option>
+    <option value="Govt Regd Company">Govt Regd Company </option>
+    <option value="Ltd , Pvt Ltd , LLP, Corp">Ltd , Pvt Ltd , LLP, Corp</option>
+    <option value="Partnership,Proprietorship , OPC">Partnership,Proprietorship , OPC</option>
+	 <option value="Other">Other</option>
+  </select>
+                        <label class="form-label" for="form3Examplev5">Type of Seller</label>
+                      </div>
 
-                </div>
-              </div>
+                    </div>
+            
+                 
+	  
+	  
+              
+
+			  <?php }?>
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+			  
+			  
+			  
               <div class="col-lg-6 bg-indigo text-white">
                 <div class="p-5">
+				
                   <h3 class="fw-normal mb-5">Contact Details</h3>
 
                   <div class="mb-4 pb-2">
@@ -223,7 +283,7 @@
                     </div>
                   </div>
                   
-                 	<input type="hidden" id="role" name="role"  value="INDIVIDUAL"> 
+                 
                   
 
                  

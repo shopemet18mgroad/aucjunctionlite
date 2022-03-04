@@ -37,8 +37,26 @@
 	  <td>
 	  
 	  
+  <?php $iadharnumber = $sqldata1[0]->iadharnumber ?>
+		   
+		<?php if ($iadharnumber == Null) { ?>
+			 
+		   
+		  
+<?php	 echo "NA" ; ?>
+
+ 
+		<?php } else { ?>
+			
+			<?php echo "$iadharnumber" ; ?>
+		
+	
+			
+			
+	<?php	} ?>
+
 	  
-	  <?php echo $sqldata1[0]->iadharnumber ?>
+
 	  
 	  
 	  </td>
@@ -99,16 +117,16 @@
 		   
 		<?php if ($gst == Null) { ?>
 			 
-		   <?php echo "$gst" ; ?>
+		   
 		  
-
+<?php	 echo "NA" ; ?>
 
  
 		<?php } else { ?>
 			
-			
+			<?php echo "$gst" ; ?>
 		
-	<?php	 echo "NA" ; ?>
+	
 			
 			
 	<?php	} ?>

@@ -20,6 +20,24 @@ class Admin_approvallist extends CI_Controller {
 	 */
 	public function index()
 	{
+			$this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
+			$datainserr = "Invalid Login Session";
+			header('location: '.base_url().'login/index_error/'.$datainserr);
+			die;
+			}else{
+		$this->load->model('Admin_model');
+		
+		$sess = array('sessi'=>$this->session->userdata('username'));
+		
+		$active = array('aname'=>$sess['sessi']);
+		
+
+		
+		
 		
 		$ioption = array('ioption'=>false);
 		$this->load->library('session');
@@ -35,11 +53,11 @@ class Admin_approvallist extends CI_Controller {
 		
 		
 		
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',$sess);	
 		$this->load->view('admin/approvallist',$adac);
 		$this->load->view('admin/footer');
 	}
-	
+	}
 	public function sellerapprove(){
 		
 		 $Sl_no = urldecode($this->uri->segment(3));
