@@ -31,7 +31,7 @@ class Admin_auctionapproval extends CI_Controller {
 	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
 		
 		$adac['data'] = $query;
-		
+		//print_r($adac['data']); die;
 		
 		$this->load->view('admin/header');
 		$this->load->view('admin/auctionapproval',$adac);

@@ -27,12 +27,12 @@
   <div class="row slideanim w-100" >
     <div class="col-sm-6">
 <center> <div class="card mt-2" style="width:25rem;height:450px;  border-radius: 25px;color:blue; ">
-  <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/nn.png" alt="Card image cap">
+  <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/com.jpg" alt="Card image cap">
   <div class="card-body">
  
   
   
-    <p class="card-text"> COMPANY</p>
+    <p class="card-text"style="color:black;"> COMPANY</p>
 	
 	
 	   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
@@ -61,7 +61,7 @@
   <div class="card-body">
   
    
-    <p class="card-text"> INDIVIDUAL</p>
+    <p class="card-text" style="color:black;"> INDIVIDUAL</p>
 	   <a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
 
   </div>
