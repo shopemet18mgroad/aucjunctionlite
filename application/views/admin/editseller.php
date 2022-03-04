@@ -79,6 +79,13 @@
                  
                   </div>
                   </div>
+                  <?php $meg = $sqldata[0]->role ?>
+                  
+                <?php  if( $meg == "INDIVIDUAL"){ ?>
+                  
+                  
+                  
+                  
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
@@ -128,6 +135,15 @@
 
                 </div>
               </div>
+              
+              
+              
+                  <?php  } ?>    
+                  
+                  
+                  
+                  
+                  
               <div class="col-lg-6 bg-indigo text-white">
                 <div class="p-5">
                   <h3 class="fw-normal mb-5">Contact Details</h3>

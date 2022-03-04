@@ -82,16 +82,18 @@ margin-top:10px;
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li> 
-            <div class="dropdown">
+        
+             <li> 
+        
+           <div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Hi  <?php echo $sessi; ?>
+                 Hi  <?php //echo $sessi; ?>
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
                 <ul class="dropdown-menu">
                 
                 
-                <a class="dropdown-item" href="<?php echo base_url(); ?>#" data-toggle="modal" data-target="#logoutModal"> Logout</a> 
+                <a class="dropdown-item" href="<?php echo base_url(); ?>#"> Logout</a> 
                 
                 
                   
@@ -99,6 +101,18 @@ margin-top:10px;
           </div>
 
           </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+         
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>Admin_dashboard">Add seller</a></li>
@@ -132,12 +146,28 @@ margin-top:10px;
 			 <li><a href="<?php echo base_url();?>">Bid Loser</a></li>
             </ul>
             </li>
+            
+            
+            
+            
+            
+            
 		  
 
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
+    
+        
+        
+        
       </nav><!-- .navbar -->
+      
+      
+      
+      
+      
 
     </div>
   </header><!-- End Header -->

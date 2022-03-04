@@ -71,9 +71,54 @@ class Admin_model extends CI_Model
 			$this->db->select('
 					a.*,
 					b.*');
+				$this->db->limit(4);
+				   
 					$this->db->where('a.aoption',true);					 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
+					$query = $this->db->get("auction a");
+					
+					
+					$result = $query->result();				
+					return $result;
+		
+			}
+		
+		
+	
+		
+		
+		
+		
+		
+		function auctionlist1() {			 
+			$this->db->select('
+					a.*,
+					b.*');
+				    $this->db->limit(4,12);
+					$this->db->where('a.aoption',true);					 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');
+				    
+					$query = $this->db->get("auction a");
+					 
+					$result = $query->result();				
+					return $result;
+		
+			}
+		
+		
+		
+			
+				function auctionlist2() {			 
+			$this->db->select('
+					a.*,
+					b.*');
+				    $this->db->limit(12,24);
+					$this->db->where('a.aoption',true);					 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');
+				    
 					$query = $this->db->get("auction a");
 					 
 					$result = $query->result();				

@@ -17,41 +17,7 @@
     </div>
 
     </section><!-- End Breadcrumbs -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-12">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <a href="#"
-                      ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
-                    /></a>
-                    <!-- <h1>One Junction For All Auctions</h1> -->
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-3.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          
-
-        </div>
-
-      </div>
-    </section>
+    
     <section id="hero" class="d-flex align-items-center">
      
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -122,9 +88,7 @@
     
        </div>
      
-      
-      
- <div class="row mb-5">
+      <div class="row mb-5">
         <div class="col-12 p-5">
             <nav class="d-flex align-items-center justify-content-center">
               <ul class="pagination">
@@ -140,6 +104,10 @@
           
       </div>
       
+      
+
+
+
     </div>
   </section>
 

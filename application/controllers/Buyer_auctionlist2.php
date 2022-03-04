@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Buyer_auctionlist extends CI_Controller {
+class Buyer_auctionlist2 extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -27,13 +27,13 @@ class Buyer_auctionlist extends CI_Controller {
 	$this->load->model('Admin_model');
      $active = array('aoption '=>true);
 	
-	$query = $this->Admin_model->auctionlist('auction', $active);
+	$query = $this->Admin_model->auctionlist2('auction', $active);
 	
 	$data['sqldata1']= $query;
 	//print_r($data['sqldata1']);die;
 
 		$this->load->view('buyer/header');
-		$this->load->view('buyer/auctionlist',$data);
+		$this->load->view('buyer/auctionlist2',$data);
 		$this->load->view('buyer/footer');
 	
 	}
