@@ -85,7 +85,7 @@ margin-top:10px;
           <li> 
             <div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Hi User
+                 Hi  <?php echo $sessi; ?>
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
                 <ul class="dropdown-menu">
