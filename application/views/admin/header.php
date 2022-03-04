@@ -87,7 +87,11 @@ margin-top:10px;
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Logout</a></li>
+                
+                
+                <a class="dropdown-item" href="<?php echo base_url(); ?>#" data-toggle="modal" data-target="#logoutModal"> Logout</a> 
+                
+                
                   
                 </ul>
           </div>
