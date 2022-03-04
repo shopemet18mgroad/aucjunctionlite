@@ -51,9 +51,16 @@
     
   </thead>
          <tbody>
-					  
-					  
-					  
+			  <?php 
+				if(!count($data)){
+			  ?>
+			  <tr>												
+<td colspan="12">No Data Found</td>
+</tr>
+				 <?php 
+				}
+			  ?>
+				
 					  
                  <?php $count = 1;?>
 					
