@@ -28,7 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url()."web_files/";?>assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -37,9 +37,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 <style>
 #dp{
 background-color:#f5f5f5;
@@ -85,6 +82,7 @@ margin-top:10px;
           <li> 
             <div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                  Hi  <?php echo $sessi; ?>
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
@@ -232,6 +230,17 @@ margin-top:10px;
               </a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Logout</a></li>
+=======
+                Hi <br> <?php echo $sessi; ?>
+                  <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
+              </a>
+                <ul class="dropdown-menu">
+                
+                
+                <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
+                
+                
+
                   
                 </ul>
           </div>

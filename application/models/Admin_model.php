@@ -91,11 +91,11 @@ class Admin_model extends CI_Model
 		
 		
 		
-		function auctionlist1() {			 
+		function auctionlist2() {			 
 			$this->db->select('
 					a.*,
 					b.*');
-				    $this->db->limit(4,12);
+				    $this->db->limit(8,4);
 					$this->db->where('a.aoption',true);					 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');
@@ -110,11 +110,11 @@ class Admin_model extends CI_Model
 		
 		
 			
-				function auctionlist2() {			 
+				function auctionlist3() {			 
 			$this->db->select('
 					a.*,
 					b.*');
-				    $this->db->limit(12,24);
+				    $this->db->limit(12,8);
 					$this->db->where('a.aoption',true);					 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');
