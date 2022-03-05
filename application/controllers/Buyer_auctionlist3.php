@@ -27,7 +27,7 @@ class Buyer_auctionlist3 extends CI_Controller {
 	$this->load->model('Admin_model');
      $active = array('aoption '=>true);
 	
-	$query = $this->Admin_model->auctionlist2('auction', $active);
+	$query = $this->Admin_model->auctionlist3('auction', $active);
 	
 	$data['sqldata1']= $query;
 	//print_r($data['sqldata1']);die;

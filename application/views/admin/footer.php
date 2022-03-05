@@ -21,7 +21,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="<?php echo base_url()."Logout/index/".$sessi;?>">Logout</a>
+          <a class="btn btn-primary" href="<?php echo base_url()."Login/index/"?>">Logout</a>
         </div>
       </div>
     </div>
@@ -57,6 +57,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 
-</body>
 
 </html>
