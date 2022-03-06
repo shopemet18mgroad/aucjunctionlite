@@ -70,7 +70,7 @@
           />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-   <form class="user" action="<?php echo base_url()."home_login";?>" method="post">
+   <form class="user" action="<?php echo base_url()."ResetPassword";?>" method="post">
    <?php 
    if(isset($errmsg) && $errmsg != NULL){ ?>
  <div class="alert alert-danger" role="alert">
@@ -82,32 +82,34 @@
          
 
           <div class="divider d-flex align-items-center my-2">
-            <p class="text-center fw-bold mx-3 mb-0">LOGIN</p>
+            <p class="text-center fw-bold mx-3 mb-0">New User Registration</p>
           </div>
 
           <!-- Email input -->
           <div class="form-outline mb-2">
             <input type="email" id="form3Example3" class="form-control form-control-lg"
               placeholder="" / name="user">
-            <label class="form-label" for="form3Example3">Email address</label>
+            <label class="form-label" for="form3Example3">Email address </label>
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">Phone Number</label>
+             <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">Password</label>
+             <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">Confirm Password</label>
           </div>
 
           <!-- Password input -->
-          <div class="form-outline mb-2">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="" / name="pass">
-            <label class="form-label" for="form3Example4">Password</label>
-          </div>
+    
 
           <div class="d-flex justify-content-between align-items-center">
             <!-- Checkbox -->
             <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
+            
             </div>
-            <a href="<?php echo base_url()."ForgotPassword";?>" class="link-danger">Forgot password?</a>
+           
           </div>
           
           
@@ -115,11 +117,12 @@
              <div class="d-flex justify-content-between">
                <div class="text-center text-lg-start mt-1 pt-2 pb-5">
             <button type="submit" name="submit" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Validate</button>
               
              
              
              </div>  
+
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
@@ -127,14 +130,28 @@
               <label for="radio-three">Seller</label>
               <input type="radio" id="radio-four" name="switch-two" value="buyer" />
               <label for="radio-four">Buyer</label>
-              <input type="radio" id="radio-five" name="switch-two" value="admin" />
-              <label for="radio-five">Admin</label>
               
           </div>
         </div>
+        
           
       </div>
       </div>
+       <div class="divider d-flex align-items-center my-2">
+            <p class="text-center fw-bold mx-3 mb-0">Validate Email & Phone Number</p>
+          </div>
+
+          <div class="form-outline mb-2">
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">Email OTP</label>
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">Phone Number OTP</label>
+            
+          </div>
+           <button type="submit" name="submit" class="btn btn-primary btn-lg mb-5"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Send OTP</button>
           
           
           
@@ -148,9 +165,7 @@
               
               
               
-                   <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="<?php echo base_url()."Register";?>"
-                class="link-primary">Register</a></p>
-              
+                  
               
               
               

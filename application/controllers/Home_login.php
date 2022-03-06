@@ -24,18 +24,22 @@ class Home_login extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->library('session');
 		$this->session->sess_expiration = '3600';
+		//print_r($this->input->post('switch-two'));die;
 		if($this->input->post('user')){
-			if($this->input->post('switch-two')=="Buyer"){
-				$table = "buyerdetails";
+			if($this->input->post('switch-two')=="buyer"){
+				$acctype = "Buyer";
+				$table = "buyerdetails"; 
 				$colname = "buyeremail";
 				$colname2 = "buyerpass";
 			     $status ="buyeroption";
-			}else if($this->input->post('switch-two')=="Seller"){
-				$table = "sellerdetails";
+			}else if($this->input->post('switch-two')=="seller"){
+				$acctype = "Seller";
+				$table = "sellerdetails"; 
 				$colname = "iemailid";
 				$colname2 = "ipass";
 				$status ="ioption";
 			}else{
+				$acctype = "Admin";
 				$table = "adminprofile";
 				$colname = "ausername";
 				$colname2 = "apassword";
@@ -66,8 +70,8 @@ class Home_login extends CI_Controller {
 					 die; 
 				  }
 			  }else{
-				  $datainserr = "Invalid Password";
-				  header('location: '.base_url().'#'. $datainserr);
+				  $datainserr = "Invalid Password For ".$acctype;
+				  header('location: '.base_url().'Login/index/'.$datainserr);
 				  die;
 			  }
 			  die;

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login  extends CI_Controller {
+class ForgotPassword  extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,7 @@ class Login  extends CI_Controller {
 	{ 
 		$error['errmsg'] = urldecode($this->uri->segment(3)); 
 		
-		$this->load->view('login', $error);
+		$this->load->view('forgotpassword', $error);
 		
 	}
 }
