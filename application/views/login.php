@@ -51,7 +51,7 @@
 
 
           </li>
-          <li><a class="nav-link scrollto" href="#">About Us</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url();?>">About Us</a></li>
           <li><a class="nav-link scrollto" href="#">Contact Us</a></li>
            <li><a class="nav-link scrollto" href="#">Privacy Policy</a></li>
         </ul>
