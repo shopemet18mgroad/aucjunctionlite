@@ -17,7 +17,41 @@
     </div>
 
     </section><!-- End Breadcrumbs -->
-    
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <a href="#"
+                      ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
+                    /></a>
+                    <!-- <h1>One Junction For All Auctions</h1> -->
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section>
     <section id="hero" class="d-flex align-items-center">
      
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -35,10 +69,19 @@
       
       <div class="container mt-5 ">
         <div class="row border border-dark">
+            <?php 
+                if($checked == "TA"){
+                    $chstata = "checked";
+                    $chstaaa = "";
+                }else{
+                    $chstata = "";
+                    $chstaaa = "checked";
+                }
+            ?>
             <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
+              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
               <label for="radio-three">Today's Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" value="maybe" />
+              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
               <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
               
           </div>
@@ -88,28 +131,25 @@
     
        </div>
      
-       <div class="row mb-5">
+      
+      
+ <div class="row mb-5">
         <div class="col-12 p-5">
             <nav class="d-flex align-items-center justify-content-center">
               <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="<?php echo base_url();?>buyer_auctionlist">1</a></li>
-                <li class="page-item"><a class="page-link" href="<?php echo base_url();?>buyer_auctionlist2">2</a></li>
-				 <li class="page-item"><a class="page-link" href="<?php echo base_url();?>buyer_auctionlist3">3</a></li>
-              
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <?php echo $links; ?>
               </ul>
           </nav>
         </div>
           
       </div>
       
-
-
-   
     </div>
   </section>
 
   </main><!-- End #main -->
+  <script>
+  
+  </script>
   
   

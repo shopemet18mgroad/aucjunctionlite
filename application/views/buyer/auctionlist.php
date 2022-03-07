@@ -70,9 +70,9 @@
       <div class="container mt-5 ">
         <div class="row border border-dark">
             <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
+              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/TA';return false;" value="TA" checked/>
               <label for="radio-three">Today's Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" value="maybe" />
+              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/AA';return false;" value="ALL" />
               <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
               
           </div>
@@ -139,5 +139,8 @@
   </section>
 
   </main><!-- End #main -->
+  <script>
+  
+  </script>
   
   

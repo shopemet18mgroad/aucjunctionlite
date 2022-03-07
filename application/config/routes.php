@@ -53,3 +53,5 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['buyer_auctionlist/(:num)'] = 'buyer_auctionlist';
+$route['buyer_auctionlist/index/TA/(:num)'] = 'buyer_auctionlist/index/TA';
+$route['buyer_auctionlist/index/AA/(:num)'] = 'buyer_auctionlist/index/AA';
