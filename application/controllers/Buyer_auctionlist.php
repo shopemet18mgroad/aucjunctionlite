@@ -29,20 +29,33 @@ class Buyer_auctionlist extends CI_Controller {
 	{ 
 		$config = array();
         $config["base_url"] = base_url() . "buyer_auctionlist";
-        echo $config["total_rows"] = $this->Admin_model->get_count('auction');
+        $config["total_rows"] = $this->Admin_model->get_count('auction');
+		$config['attributes'] = array('class' => 'page-link');
+		$config['num_tag_open'] = '<li class="page-item">'; 
+		$config['num_tag_close'] = '</li>'; 
+		$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="javascript:void(0);">'; 
+		$config['cur_tag_close'] = '</a></li>'; 
+		$config['next_link'] = 'Next'; 
+		$config['prev_link'] = 'Prev'; 
+		$config['next_tag_open'] = '<li class="page-item">'; 
+		$config['next_tag_close'] = '</li>'; 
+		$config['prev_tag_open'] = '<li class="page-item">'; 
+		$config['prev_tag_close'] = '</li>'; 
+		$config['first_tag_open'] = '<li class="page-item">'; 
+		$config['first_tag_close'] = '</li>'; 
+		$config['last_tag_open'] = '<li class="page-item">'; 
+		$config['last_tag_close'] = '</li>';
 		//die;
         $config["per_page"] = 4;
         $config["uri_segment"] = 2;
 		$this->pagination->initialize($config);
         $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
         $data["links"] = $this->pagination->create_links();
-        $data['authors'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
-		print_r($data);die;
-
-
-     $active = array('aoption'=>true);
-	$query = $this->Admin_model->auctionlist('auction', $active);
-	$data['sqldata1']= $query;
+        $data['sqldata1'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
+		//print_r($data["links"]);die;
+     //$active = array('aoption'=>true);
+	//$query = $this->Admin_model->auctionlist('auction', $active);
+	//$data['sqldata1']= $query;
 	//print_r($data['sqldata1']);die;
 
 		$this->load->view('buyer/header');

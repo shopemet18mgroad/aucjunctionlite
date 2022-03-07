@@ -128,12 +128,7 @@
         <div class="col-12 p-5">
             <nav class="d-flex align-items-center justify-content-center">
               <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="<?php echo base_url();?>buyer_auctionlist">1</a></li>
-                <li class="page-item"><a class="page-link" href="<?php echo base_url();?>buyer_auctionlist2">2</a></li>
-				 <li class="page-item"><a class="page-link" href="<?php echo base_url();?>buyer_auctionlist3">3</a></li>
-              
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <?php echo $links; ?>
               </ul>
           </nav>
         </div>
