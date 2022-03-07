@@ -29,30 +29,26 @@ class Admin_model extends CI_Model
 		$query = $this->db->get_where($table, $data);
 		return $query->result();
 	}
-	
-	
-	  public function update_custom($table,$data,$colname,$comp) { 
+	public function update_custom($table,$data,$colname,$comp) { 
 			 $this->db->set($data); 
 			 $this->db->where($colname, $comp);
 			 $this->db->update($table, $data); 
 		  } 
-	 
-		   
-		 	public function get_lookalike($table, $col, $query)
-	{
-		$this->db->from($table);
-		$this->db->like($col, $query);
-		$q = $this->db->get();
-		return $q->result_array();
-	}
-		  	public function delete_data($table, $data)
-	{
-		if ($this->db->delete($table, $data)) {
-			return true;
+	public function get_lookalike($table, $col, $query)
+		{
+			$this->db->from($table);
+			$this->db->like($col, $query);
+			$q = $this->db->get();
+			return $q->result_array();
 		}
-	}
+	public function delete_data($table, $data)
+		{
+			if ($this->db->delete($table, $data)) {
+				return true;
+			}
+		}
 	
-		function getaddlotauctiondetails() {			 
+	public function getaddlotauctiondetails() {			 
 			$this->db->select('
 					a.*,
 					b.*');
@@ -67,66 +63,23 @@ class Admin_model extends CI_Model
 			}
 		
 		
-		function auctionlist() {			 
+	public function get_auctionlist($limit, $start) {			 
 			$this->db->select('
 					a.*,
 					b.*');
-				$this->db->limit(4);
-				   
+					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);					 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
-					
-					
 					$result = $query->result();				
 					return $result;
 		
-			}
+	}
 		
-		
-	
-		
-		
-		
-		
-		
-		function auctionlist2() {			 
-			$this->db->select('
-					a.*,
-					b.*');
-				    $this->db->limit(8,4);
-					$this->db->where('a.aoption',true);					 			
-					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
-					'left outer');
-				    
-					$query = $this->db->get("auction a");
-					 
-					$result = $query->result();				
-					return $result;
-		
-			}
-		
-		
-		
-			
-				function auctionlist3() {			 
-			$this->db->select('
-					a.*,
-					b.*');
-				    $this->db->limit(12,8);
-					$this->db->where('a.aoption',true);					 			
-					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
-					'left outer');
-				    
-					$query = $this->db->get("auction a");
-					 
-					$result = $query->result();				
-					return $result;
-		
-			}
-		
-		
+	public function get_count($table) {
+        return $this->db->count_all($table);
+    }
 		
 	
 

@@ -39,8 +39,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"<a href="#"
-            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
+      <h1 class="logo"<a href="#"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
           /></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -81,7 +80,7 @@
         ?>
          
 
-          <div class="divider d-flex align-items-center my-2">
+          <div class="divider d-flex align-items-center my-3 pt-5">
             <p class="text-center fw-bold mx-3 mb-0">New User Registration</p>
           </div>
 
@@ -141,17 +140,15 @@
             <p class="text-center fw-bold mx-3 mb-0">Validate Email & Phone Number</p>
           </div>
 
-          <div class="form-outline mb-2">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
-            <label class="form-label" for="form3Example3">Email OTP</label>
+          <div class="form-outline mb-0">
+        
             <input type="email" id="form3Example3" class="form-control form-control-lg"
               placeholder="" / name="user">
             <label class="form-label" for="form3Example3">Phone Number OTP</label>
             
           </div>
-           <button type="submit" name="submit" class="btn btn-primary btn-lg mb-5"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Send OTP</button>
+           <button type="submit" name="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
           
           
           

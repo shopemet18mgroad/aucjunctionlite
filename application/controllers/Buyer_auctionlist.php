@@ -18,17 +18,30 @@ class Buyer_auctionlist extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+        parent:: __construct();
+        $this->load->helper('url');
+        $this->load->model('Admin_model');
+        $this->load->library("pagination");
+    }
+	
 	public function index()
 	{ 
-		
-		
-		
-			
-	$this->load->model('Admin_model');
-     $active = array('aoption '=>true);
-	
+		$config = array();
+        $config["base_url"] = base_url() . "buyer_auctionlist";
+        echo $config["total_rows"] = $this->Admin_model->get_count('auction');
+		//die;
+        $config["per_page"] = 4;
+        $config["uri_segment"] = 2;
+		$this->pagination->initialize($config);
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+        $data["links"] = $this->pagination->create_links();
+        $data['authors'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
+		print_r($data);die;
+
+
+     $active = array('aoption'=>true);
 	$query = $this->Admin_model->auctionlist('auction', $active);
-	
 	$data['sqldata1']= $query;
 	//print_r($data['sqldata1']);die;
 
