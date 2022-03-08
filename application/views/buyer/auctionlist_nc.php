@@ -114,7 +114,7 @@
     
              
             <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2">View Details</button>
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1">View Details</button>
             <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
             </div>
            
@@ -146,7 +146,27 @@
       
     </div>
   </section>
+  <div id="1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title">Auction Tittle</h4>
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Auction Details </p>
+      </div>
+      <div class="modal-footer">
+         
+        </div>
+     
+    </div>
+
+  </div>
+</div>
   </main><!-- End #main -->
   <script>
   
