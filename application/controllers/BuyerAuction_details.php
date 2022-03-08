@@ -27,9 +27,19 @@ class BuyerAuction_details extends CI_Controller {
 	
 	public function index()
 	{ 
+		date_default_timezone_set("Asia/Kolkata"); 
+		//$date = date('Y-m-d');
+		$date = "2022-03-05";
+		//$td = $this->Admin_model->get_auction_today($date);
+		//print_r(count($alfa));die;
 		$config = array();
         $config["base_url"] = base_url() . "BuyerAuction_details/index/".$this->uri->segment(3)."/";
-        $config["total_rows"] = $this->Admin_model->get_count('auction');
+		if($this->uri->segment(3) == "TA"){
+			$config["total_rows"] = count($this->Admin_model->get_auction_today($date));
+		}else{
+			$config["total_rows"] = $this->Admin_model->get_count('auction');
+		}
+       
 		$config['attributes'] = array('class' => 'page-link');
 		$config['num_tag_open'] = '<li class="page-item">'; 
 		$config['num_tag_close'] = '</li>'; 
@@ -52,7 +62,12 @@ class BuyerAuction_details extends CI_Controller {
         $data['checked'] = $this->uri->segment(3);
         $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $data["links"] = $this->pagination->create_links();
-        $data['sqldata1'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
+		if($this->uri->segment(3) == "TA"){
+			$data['sqldata1'] = $this->Admin_model->get_auctionlist_today($config["per_page"], $page, $date);
+		}else{
+			$data['sqldata1'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
+		}
+        
 		//print_r($data["links"]);die;
      //$active = array('aoption'=>true);
 	//$query = $this->Admin_model->auctionlist('auction', $active);

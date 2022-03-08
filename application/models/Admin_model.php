@@ -81,8 +81,25 @@ class Admin_model extends CI_Model
         return $this->db->count_all($table);
     }
 		
-	
-
+	public function get_auction_today($date){
+		$this->db->from('auction');
+		$this->db->where('DATE(iauction_start)', $date);
+		$q = $this->db->get();
+		return $q->result_array();
+	}
+	public function get_auctionlist_today($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
 
 	public function get_adminforthlookalike($table, $col, $query, $date)
 	{
