@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -55,12 +56,103 @@ font-size:20px;
 margin-top:10px;
 
 }
+ 
+	    <script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+<style>
+
+    body{
+        font-family:Serif;
+       
+    }
+    
+ @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+	/*  Force table to not be like tables anymore  */
+    table, thead, tbody, th, td, tr {  
+		 display: block!important;  
+		 width: 100%;
+	
+  } 
+
+ } 
+ 
+ 
+ html{
+    overflow-y:scroll; 
+}
+
+.card{
+
+     font-family: Times New Roman;
+}
+#grad{
+     background-image: linear-gradient(90deg, blue, white);
+
+font-family:monospace;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  
+  border: none;
+  border-bottom: 2px solid blue;
+}
+input[type=password] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  
+  border: none;
+  border-bottom: 2px solid blue;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  
+  border: none;
+  border-bottom: 2px solid blue;
+}
+textarea[type=text] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  
+  border: none;
+  border-bottom: 2px solid blue;
+}
+option[type=text] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  
+  border: none;
+  border-bottom: 2px solid blue;
+}
+.col{
+border:1px solid #d3d3d3;
+background-color:white;
+width:50px;
+height:100px;
+}
 
 
 
 
-
+  
 </style>
+
+
+
+
+
   
   
 
