@@ -29,8 +29,8 @@
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
 				<option value="Select" selected>Select</option>
-				<option value="Cars">Cars</option>
-				<option value="Bikes">Bikes</option>
+				<option value="Car">Car</option>
+				<option value="Bike">Bike</option>
 				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
 				

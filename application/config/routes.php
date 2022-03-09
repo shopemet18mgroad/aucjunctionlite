@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['buyer_auctionlist/(:num)'] = 'buyer_auctionlist';
 $route['buyer_auctionlist/index/TA/(:num)'] = 'buyer_auctionlist/index/TA';
 $route['buyer_auctionlist/index/AA/(:num)'] = 'buyer_auctionlist/index/AA';
+$route['BuyerAuction_car/index/TA/(:num)'] = 'BuyerAuction_car/index/TA';
+$route['BuyerAuction_car/index/AA/(:num)'] = 'BuyerAuction_car/index/AA';

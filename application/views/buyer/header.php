@@ -203,7 +203,7 @@ height:100px;
          
               <li class="dropdown"><a href="#"><span>Automobile</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Cars</a></li>
+                  <li><a href="<?php echo base_url(); ?>BuyerAuction_car ">Cars</a></li>
                   <li><a href="#">Bikes</a></li>
                   <li><a href="#">Commercial Vehicles</a></li>
            
