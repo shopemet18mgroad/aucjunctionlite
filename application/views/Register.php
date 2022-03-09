@@ -136,7 +136,7 @@
           
       </div>
       </div>
-       <div class="divider d-flex align-items-center my-2">
+       <div class="divider d-flex align-items-center my-1">
             <p class="text-center fw-bold mx-3 mb-0">Validate Email & Phone Number</p>
           </div>
 
@@ -145,6 +145,9 @@
             <input type="email" id="form3Example3" class="form-control form-control-lg"
               placeholder="" / name="user">
             <label class="form-label" for="form3Example3">Phone Number OTP</label>
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="" / name="user">
+            <label class="form-label" for="form3Example3">E-mail OTP</label>
             
           </div>
            <button type="submit" name="submit" class="btn btn-primary btn-lg"
