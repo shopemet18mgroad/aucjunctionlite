@@ -40,35 +40,9 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
  
 <style>
-#dp{
-background-color:#f5f5f5;
-color:#03AF463;
- list-style-type: none;
- font-size:20px;
-margin-top:10px;
 
-}
-#dpp{
-background-color:#f5f5f5;
-color:#03AF463;
- list-style-type: none;
-font-size:20px;
-margin-top:10px;
 
-}
- 
-	    <script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
-</script>
-<style>
-
-    body{
-        font-family:Serif;
-       
-    }
-    
+   
  @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px)  {
 
 
@@ -86,56 +60,11 @@ $(document).ready( function () {
     overflow-y:scroll; 
 }
 
-.card{
 
-     font-family: Times New Roman;
-}
-#grad{
-     background-image: linear-gradient(90deg, blue, white);
 
-font-family:monospace;
-}
 
-input[type=email] {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  
-  border: none;
-  border-bottom: 2px solid blue;
-}
-input[type=password] {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  
-  border: none;
-  border-bottom: 2px solid blue;
-}
-input[type=text] {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  
-  border: none;
-  border-bottom: 2px solid blue;
-}
-textarea[type=text] {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  
-  border: none;
-  border-bottom: 2px solid blue;
-}
-option[type=text] {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  
-  border: none;
-  border-bottom: 2px solid blue;
-}
+
+
 .col{
 border:1px solid #d3d3d3;
 background-color:white;
