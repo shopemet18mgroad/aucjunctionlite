@@ -166,7 +166,7 @@
     <div class="modal-content">
       <div class="modal-header">
         
-<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
+<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px; " ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
         <button type="button" class="btn btn-outline-info" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
@@ -174,7 +174,7 @@
 		
 	
 	
-   <table class="table table-striped" style="colorgrey;font-size15px;">
+   <table class="table table-striped" style="colorgrey;font-size15px;margin-top:-70px;">
 <tbody>
 	<tr>
      
