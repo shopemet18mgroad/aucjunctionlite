@@ -79,9 +79,9 @@
                 }
             ?>
             <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_mobile/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
+              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_camera/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
               <label for="radio-three">Today's Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_mobile/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
+              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_camera/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
               <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
               
           </div>
@@ -94,7 +94,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Mobile'){
+   <?php if($meg == 'Camera'){
 	   ?>
       
         
@@ -156,7 +156,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Mobile'){
+   <?php if($meg == 'Camera'){
 	   ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
