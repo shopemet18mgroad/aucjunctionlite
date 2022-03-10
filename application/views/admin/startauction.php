@@ -33,7 +33,14 @@
 				<option value="Bike">Bike</option>
 				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
-				
+				<option value="Properties">Properties</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Toys">Toys</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Fashion">Fashion</option>
 				
 				</select>
                       </div>

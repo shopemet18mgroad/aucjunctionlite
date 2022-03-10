@@ -46,7 +46,7 @@
     <div class="row">
     <div class="col"style="opacity: 0.4;">
 	<center>
-		 <a href="<?php echo base_url(); ?>BuyerAuction_Properties" >
+		 <a href="<?php echo base_url(); ?>BuyerAuction_properties" >
 	<span style="font-size: 3em;color:DodgerBlue;">
   <i class="fa fa-building m-3"></i>
 </span></a><br> 
@@ -112,6 +112,54 @@
 </div>
     
 	</div>
+	
+	
+	
+	
+
+       <div class="row">
+    <div class="col"style="  opacity: 0.5;">
+	<center>
+	<a href="<?php echo base_url(); ?>BuyerAuction_washingmachine" >
+	<span style="font-size: 3em;color:DodgerBlue;">
+
+  <i class="fa fa-alipay mt-3"></i>
+</span> </a><br> 
+<p style="color:black;font-size:12px;">Washing machine</p> </center>   </div>
+
+
+
+    <div class="col">
+    <center>
+	<a href="<?php echo base_url(); ?>BuyerAuction_fridge" >
+	<span style="font-size: 3em;color:DodgerBlue;">
+  <i class="fa fa-square mt-3"></i>
+</span></a><br> 
+ <p style="color:black;font-size:12px;"> Fridge</p> </center> 
+   </div>
+   
+   
+   
+    <div class="col"style="  opacity: 0.5;">
+	<center>
+	<a href="<?php echo base_url(); ?>BuyerAuction_laptop" >
+	<span style="font-size: 3em;color:DodgerBlue">
+  <i class="fa fa-laptop mt-3"></i>
+</span> </a><br> 
+<p style="color:black;font-size:12px;">Laptop</p> </center>
+</div>
+    
+	</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   
 </div>
 
