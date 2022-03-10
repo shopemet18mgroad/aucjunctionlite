@@ -94,7 +94,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'tv'){
+   <?php if($meg == 'TV'){
 	   ?>
       
         
@@ -156,7 +156,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'tv'){
+   <?php if($meg == 'TV'){
 	   ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
