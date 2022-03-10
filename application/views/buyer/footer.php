@@ -49,7 +49,13 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo base_url()."web_files/";?>assets/js/main.js"></script>
+  <script>
+    function addtocart(id){
+      var val = $('#ch-'+id).val();
+      alert(val);
 
+    }
+  </script>
 </body>
 
 </html>
