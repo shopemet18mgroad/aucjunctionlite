@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class BuyerAuction_mobile extends CI_Controller {
+class BuyerAuction_furniture extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -28,12 +28,12 @@ class BuyerAuction_mobile extends CI_Controller {
 	public function index()
 	{ 
 		date_default_timezone_set("Asia/Kolkata"); 
-		//$date = date('Y-m-d');
-		$date = "2022-03-05";
+		$date = date('Y-m-d');
+		//$date = "2022-03-05";
 		//$td = $this->Admin_model->get_auction_today($date);
 		//print_r(count($alfa));die;
 		$config = array();
-        $config["base_url"] = base_url() . "BuyerAuction_mobile/index/".$this->uri->segment(3)."/";
+        $config["base_url"] = base_url() . "BuyerAuction_furniture/index/".$this->uri->segment(3)."/";
 		if($this->uri->segment(3) == "TA"){
 			$config["total_rows"] = count($this->Admin_model->get_auction_today($date));
 		}else{
@@ -75,7 +75,7 @@ class BuyerAuction_mobile extends CI_Controller {
 	//print_r($data['sqldata1']);die;
 
 		$this->load->view('buyer/header');
-		$this->load->view('buyer/auctionlist_mobile',$data);
+		$this->load->view('buyer/auctionlist_furniture',$data);
 		$this->load->view('buyer/footer');
 	
 	}
