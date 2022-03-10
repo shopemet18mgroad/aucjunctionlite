@@ -21,7 +21,7 @@ class Admin_addbuyer extends CI_Controller {
 	public function index()
 	{ 
 	
-			$this->load->model('Admin_model');
+		$this->load->model('Admin_model');
 		$this->load->library('session');
 		
 		

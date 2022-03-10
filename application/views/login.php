@@ -87,15 +87,15 @@
 
           <!-- Email input -->
           <div class="form-outline mb-2">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+            <input type="email" id="user" class="form-control form-control-lg"
+              placeholder="" name="user"/>
             <label class="form-label" for="form3Example3">Email address</label>
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-2">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="" / name="pass">
+            <input type="password" id="pass" class="form-control form-control-lg"
+              placeholder=""  name="pass"/>
             <label class="form-label" for="form3Example4">Password</label>
           </div>
 
@@ -123,7 +123,7 @@
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-              <input type="radio" id="radio-three" name="switch-two" value="seller" checked/>
+              <input type="radio" id="radio-three" name="switch-two" value="seller" />
               <label for="radio-three">Seller</label>
               <input type="radio" id="radio-four" name="switch-two" value="buyer" />
               <label for="radio-four">Buyer</label>
