@@ -27,6 +27,27 @@ class BuyerAuction_car extends CI_Controller {
 	
 	public function index()
 	{ 
+		
+		
+		 $this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
+			$datainserr = "Invalid Login Session";
+			header('location: '.base_url().'login/index_error/'.$datainserr);
+			die;
+			}else{
+		$this->load->model('Admin_model');
+		
+		$sess = array('sessi'=>$this->session->userdata('username'));
+		
+		$active = array('buyeremail'=>$sess['sessi']);
+		
+		
+		
+		
+		
 		date_default_timezone_set("Asia/Kolkata"); 
 		$date = date('Y-m-d');
 		//$date = "2022-03-09";
@@ -73,6 +94,6 @@ class BuyerAuction_car extends CI_Controller {
 		$this->load->view('buyer/header');
 		$this->load->view('buyer/auctionlist_car',$data);
 		$this->load->view('buyer/footer');
-	
+		}
 	}
 }

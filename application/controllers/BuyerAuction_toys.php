@@ -27,13 +27,34 @@ class BuyerAuction_toys extends CI_Controller {
 	
 	public function index()
 	{ 
+		
+		 $this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
+			$datainserr = "Invalid Login Session";
+			header('location: '.base_url().'login/index_error/'.$datainserr);
+			die;
+			}else{
+		$this->load->model('Admin_model');
+		
+		$sess = array('sessi'=>$this->session->userdata('username'));
+		
+		$active = array('buyeremail'=>$sess['sessi']);
+		
+		
+		
+		
+		
+		
 		date_default_timezone_set("Asia/Kolkata"); 
 		$date = date('Y-m-d');
 		//$date = "2022-03-05";
 		//$td = $this->Admin_model->get_auction_today($date);
 		//print_r(count($alfa));die;
 		$config = array();
-        $config["base_url"] = base_url() . "BuyerAuction_toys/index/".$this->uri->segment(3)."/";
+        $config["base_url"] = base_url() ."BuyerAuction_toys/index/".$this->uri->segment(3)."/";
 		if($this->uri->segment(3) == "TA"){
 			$config["total_rows"] = count($this->Admin_model->get_auction_today($date));
 		}else{
@@ -74,9 +95,10 @@ class BuyerAuction_toys extends CI_Controller {
 	//$data['sqldata1']= $query;
 	//print_r($data['sqldata1']);die;
 
-		$this->load->view('buyer/header');
+		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_toys',$data);
 		$this->load->view('buyer/footer');
 	
-	}
+		}
+		}
 }
