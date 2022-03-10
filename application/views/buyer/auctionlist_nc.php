@@ -90,6 +90,7 @@
       </div>
       
         <div class="row icon-boxes">
+		 <?php $count = 1 ?>
     
       <?php foreach($sqldata1 as $row){?>
       
@@ -99,7 +100,7 @@
     
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box w-100">
-            <div class="icon d-flex justify-content-center"><?php $img = unserialize($sqldata1[0]->imageupload)?>
+            <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
 	   
 	   
 	   
@@ -114,7 +115,7 @@
     
              
             <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1">View Details</button>
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
             <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
             </div>
            
@@ -124,7 +125,7 @@
      
 
 
-       
+         <?php $count++ ?>
 
  
         <?php } ?>
@@ -146,153 +147,31 @@
       
     </div>
   </section>
-  <div id="1" class="modal fade" role="dialog">
+  
+   <?php $count = 1 ?>
+   <?php foreach($sqldata1 as $row){?>
+  
+  <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         
-        <h4 class="modal-title">Auction Tittle</h4>
-        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">&times;</button>
+<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
+        <button type="button" class="btn btn-outline-info" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p>Auction Details </p>
+       
 		
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
+	
 	
    <table class="table table-striped" style="colorgrey;font-size15px;">
 <tbody>
-    <tr>   
-   <th scope="row">Category </th>
-   <td><?php echo $sqldata1[0]->icategory ?></td>
-	  </tr>
-	 <br>
-    <tr>
-     
-      <th scope="row">Sub-category </th>
-	  <td><?php echo $sqldata1[0]->isubcategory ?></td>
-      
-    </tr><br>
-    <tr>
-     
-      <th scope="row">product Description  </th>
-	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
-      
-    </tr><br>
-	
 	<tr>
      
-      <th scope="row">Inspection Date </th>
-	    <td><?php echo $sqldata1[0]->iauctionid ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Current location </th>
-	   <td><?php echo $sqldata1[0]->iauction_start ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Expected price </th>
-	    <td><?php echo $sqldata1[0]->iauction_end ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Start  Auction Price </th>
-	   <td><?php echo $sqldata1[0]->iemailid ?></td>
-      
-    </tr>
-	
-	
-	
-	<tr>
-	
-	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
-	</tr>
-	
-	
-	<tr>
-     
-      <th scope="row">Category </th>
-	   <td><?php echo $sqldata1[0]->icategory ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Sub-category </th>
-	   <td><?php echo $sqldata1[0]->isubcategory ?></td>
-      
-    </tr>
-	
-	<tr>
-     
-      <th scope="row">product Description </th>
-	   <td><?php echo $sqldata1[0]->iproductdes ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Inspection Date </th>
-	   <td><?php echo $sqldata1[0]->inspectiondate ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row">Current location </th>
-	   <td><?php echo $sqldata1[0]->currentlocation ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row"> Expected price</th>
-	   <td><?php echo $sqldata1[0]->imrp ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row"> Expected price</th>
-	   <td><?php echo $sqldata1[0]->startaucprice ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row">entry free </th>
-	   <td><?php echo $sqldata1[0]->endaucprice ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row">Start  Auction Price </th>
-	   <td><?php echo $sqldata1[0]->entryfee ?></td>
-      
-    </tr>
-	
-	
-	<tr>
-     
-      <th scope="row">End Auction Price </th>
-	   <td><?php echo $sqldata1[0]->iauction_start ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $sqldata1[0]->iauction_end ?></td>
-      
-    </tr>
-	
-	<tr>
-     
-      <th scope="row">Upload photos* </th>
-	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+      <th scope="row"> Auction Images</th>
+	   <td><?php $img = unserialize($row->imageupload)?>
 	   
 	   
 	   
@@ -306,8 +185,94 @@
 	   </td>
       
     </tr>
+    <tr>   
+   <th scope="row">Category </th>
+   <td><?php echo $row->icategory ?></td>
+	  </tr>
+	 <br>
+    <tr>
+     
+      <th scope="row">Sub-category </th>
+	  <td><?php echo $row->isubcategory ?></td>
+      
+    </tr><br>
+    <tr>
+     
+      <th scope="row">product Description  </th>
+	  <td><?php echo $row->iproductdes ?></td>
+      
+    </tr><br>
+	
+	<tr>
+     
+      <th scope="row">Auction Id </th>
+	    <td><?php echo $row->iauctionid ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row"> Auction Start and End Time</th>
+	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
+      
+    </tr>
+	
+	<tr>
+	
+	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
+	</tr>
+	
+	
+	<tr>
+     
+      <th scope="row">Inspection Date </th>
+	   <td><?php echo$row->inspectiondate ?></td>
+      
+    </tr>
+	
+		
+		<tr>
+     
+      <th scope="row"> MRP</th>
+	   <td><?php echo $row->imrp ?></td>
+      
+    </tr>
+	
+		<tr>
+     
+      <th scope="row"> Start  Auction Price</th>
+	   <td><?php echo $row->startaucprice ?></td>
+      
+    </tr>
+	
+		<tr>
+     
+      <th scope="row">End Auction Price  </th>
+	   <td><?php echo $row->endaucprice ?></td>
+      
+    </tr>
+	
+		<tr>
+     
+      <th scope="row">Entry Fee </th>
+	   <td><?php echo $row->entryfee ?></td>
+      
+    </tr>
+	
+	
+	
+	<tr>
+     
+      <th scope="row">Inspection date and time  </th>
+	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
+      
+    </tr>
+	
 	<tbody>
 	</table>
+		
+		
+		
+		
       </div>
       <div class="modal-footer">
          
@@ -317,6 +282,8 @@
 
   </div>
 </div>
+  <?php $count++ ?>
+   <?php } ?>
   </main><!-- End #main -->
   <script>
   

@@ -177,10 +177,16 @@ height:100px;
                  Hi User
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Logout</a></li>
+               
+                       <ul class="dropdown-menu">
+                
+                
+                <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
+                
+                
                   
                 </ul>
+            
           </div>
 
           </li>
@@ -203,8 +209,8 @@ height:100px;
          
               <li class="dropdown"><a href="#"><span>Automobile</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="<?php echo base_url(); ?>BuyerAuction_car ">Cars</a></li>
-                  <li><a href="#">Bikes</a></li>
+                  <li><a href="<?php echo base_url(); ?>BuyerAuction_car ">Car</a></li>
+                  <li><a href="<?php echo base_url(); ?>BuyerAuction_bike">bike</a></li>
                   <li><a href="#">Commercial Vehicles</a></li>
            
                 </ul>
@@ -221,17 +227,24 @@ height:100px;
 			
 			  <li class="dropdown"><a href="#"><span>Electronic Appliance</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">TV</a></li>
-                  <li><a href="#">Laptop</a></li>
-                
+                  <li><a href="<?php echo base_url(); ?>BuyerAuction_tv ">tv</a></li>
+                  <li><a href="<?php echo base_url(); ?>BuyerAuction_camera ">camera</a></li>
            
                 </ul>
 			</li>
 			
+		
+                <ul>
+                  <li><a href="<?php echo base_url(); ?>BuyerAuction_properties ">properties</a></li>
+                
+                </ul>
+				
+				 <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_furniture">furniture</a></li>
+				 
+			</li>
 			
 			
-			
-			  <li class="dropdown"><a href="#"><span>MOBILE</span> <i class="bi bi-chevron-right"></i></a>
+			  <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_mobile">mobile</a></li>
                 <ul>
                   <li><a href="#">Old Mobile</a></li>
                   <li><a href="#">New Mobile</a></li>
@@ -241,9 +254,10 @@ height:100px;
 			</li>
 			
 			
+				  <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_toys">toys</a></li>
 			
 			
-			
+				  <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_fashion">fashion</a></li>
 			
 			
 			
