@@ -23,10 +23,18 @@ class Buyer_auctionlist extends CI_Controller {
         $this->load->helper('url');
         $this->load->model('Admin_model');
         $this->load->library("pagination");
+		$this->load->library('session');
+		
     }
 	
 	public function index()
 	{ 
+		if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
+			$datainserr = "Invalid Login Session";
+			header('location: '.base_url().'login/index'.$datainserr);
+			die;
+		}else{
+			$sess = array('sessi'=>$this->session->userdata('username'));
 		$config = array();
         $config["base_url"] = base_url() . "buyer_auctionlist";
         $config["total_rows"] = $this->Admin_model->get_count('auction');
@@ -58,9 +66,11 @@ class Buyer_auctionlist extends CI_Controller {
 	//$data['sqldata1']= $query;
 	//print_r($data['sqldata1']);die;
 
-		$this->load->view('buyer/header');
+		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist',$data);
 		$this->load->view('buyer/footer');
+
+	}
 	
 	}
 }
