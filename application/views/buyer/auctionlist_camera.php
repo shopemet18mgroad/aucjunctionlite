@@ -224,8 +224,21 @@
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?php $poo= $row->iauction_start;
+	   $ni = explode('.',$poo);
+       $poo = $ni[0];
+       echo  $poo;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $ais = $row->iauction_end; 
+       $sam = explode('.',$ais);
+       $ais = $sam[0];
+       echo  $ais;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
 	
 	<tr>
@@ -237,9 +250,20 @@
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+
+	   
+	   <td><?php $wse= $row->inspectiondate;
+	   $risk = explode('.',$wse);
+       $wse = $risk[0];
+       echo  $wse;	   
+	   
+
+	   ?>
+	     
+	   </td>
       
     </tr>
+	
 	
 		
 		<tr>
@@ -275,9 +299,27 @@
 	<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
-      
+	     
+	   <td><?php $hh= $row->iauction_end ;
+	   $hh11 = explode('.',$hh);
+       $hh = $hh11[0];
+       echo  $hh;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $jak = $row->iauction_start; 
+       $jak1 = explode('.',$jak);
+       $jak = $jak1[0];
+       echo  $jak;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
+	
 	
 	<tbody>
 	</table>

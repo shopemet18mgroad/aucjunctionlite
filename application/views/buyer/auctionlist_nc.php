@@ -230,20 +230,11 @@
 
 	   ?>	   <br>to	   <br>
 	   <?php $auce = $row->iauction_end; 
-       $cool = explode('.',$aucs);
+       $cool = explode('.',$auce);
        $auce = $cool[0];
        echo  $auce;	 
 	  ?>
 	  </td>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
 	  
 	  
     </tr>
@@ -266,16 +257,7 @@
 	   
 
 	   ?>
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
+	     
 	   </td>
       
     </tr>
@@ -314,11 +296,7 @@
 	<tr>
      
       <th scope="row">Inspection date and time  </th>
-	  
-	   
-	   
-	   
-	      
+	     
 	   <td><?php $inse= $row->iauction_end ;
 	   $ters = explode('.',$inse);
        $inse = $ters[0];
@@ -335,30 +313,8 @@
 	  ?>
 	  </td>
 	  
-	  
-	  
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
 	   </td>
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+       
     </tr>
 	
 	<tbody>

@@ -221,11 +221,24 @@
 	    <td><?php echo $row->iauctionid ?></td>
       
     </tr>
-	<tr>
+		<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?php $avr= $row->iauction_start;
+	   $avva = explode('.',$avr);
+       $avr = $avva[0];
+       echo  $avr;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $mudu = $row->iauction_end; 
+       $god = explode('.',$mudu);
+       $mudu = $god[0];
+       echo  $mudu;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
 	
 	<tr>
@@ -234,10 +247,21 @@
 	</tr>
 	
 	
+	
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+
+	   
+	   <td><?php $tag= $row->inspectiondate;
+	   $lin = explode('.',$tag);
+       $tag = $lin[0];
+       echo  $tag;	   
+	   
+
+	   ?>
+	     
+	   </td>
       
     </tr>
 	
@@ -271,12 +295,28 @@
     </tr>
 	
 	
-	
-	<tr>
+		<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
-      
+	     
+	   <td><?php $top= $row->iauction_end ;
+	   $lapi = explode('.',$top);
+       $top = $lapi[0];
+       echo  $top;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $des = $row->iauction_start; 
+       $topo = explode('.',$des);
+       $des = $topo[0];
+       echo  $des;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
 	
 	<tbody>

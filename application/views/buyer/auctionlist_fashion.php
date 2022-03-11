@@ -217,11 +217,24 @@
 	    <td><?php echo $row->iauctionid ?></td>
       
     </tr>
-	<tr>
+		<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?php $mesg= $row->iauction_start;
+	   $pra = explode('.',$mesg);
+       $mesg = $pra[0];
+       echo  $mesg;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $tham = $row->iauction_end; 
+       $lil = explode('.',$tham);
+       $tham = $lil[0];
+       echo  $tham;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
 	
 	<tr>
@@ -230,10 +243,21 @@
 	</tr>
 	
 	
+		
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+
+	   
+	   <td><?php $bil= $row->inspectiondate;
+	   $ud = explode('.',$bil);
+       $bil = $ud[0];
+       echo  $bil;	   
+	   
+
+	   ?>
+	     
+	   </td>
       
     </tr>
 	
@@ -267,12 +291,28 @@
     </tr>
 	
 	
-	
-	<tr>
+<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
-      
+	     
+	   <td><?php $sinc= $row->iauction_end ;
+	   $ces = explode('.',$sinc);
+       $sinc = $ces[0];
+       echo  $sinc;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $ec = $row->iauction_start; 
+       $ecr = explode('.',$ec);
+       $ec = $ecr[0];
+       echo  $ec;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
 	
 	<tbody>

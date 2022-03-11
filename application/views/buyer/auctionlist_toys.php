@@ -221,26 +221,48 @@
 	    <td><?php echo $row->iauctionid ?></td>
       
     </tr>
-	<tr>
+<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?pg $bbb= $row->iauction_start;
+	   $ggg = explode('.',$bbb);
+       $bbb = $ggg[0];
+       echo  $bbb;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $fff = $row->iauction_end; 
+       $zzz = explode('.',$fff);
+       $fff = $zzz[0];
+       echo  $fff;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
+	
 	
 	<tr>
 	
 	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
 	</tr>
 	
-	
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+
+	   
+	   <td><?php $ccc= $row->inspectiondate;
+	   $ddc = explode('.',$ccc);
+       $ccc = $ddc[0];
+       echo  $ccc;	   
+	   
+
+	   ?>
+	     
+	   </td>
       
     </tr>
-	
 		
 		<tr>
      
@@ -272,11 +294,29 @@
 	
 	
 	
+	
 	<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
-      
+	     
+	   <td><?php $shil= $row->iauction_end ;
+	   $pop = explode('.',$shil);
+       $shil = $pop[0];
+       echo  $shil;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $upi = $row->iauction_start; 
+       $sds = explode('.',$upi);
+       $upi = $sds[0];
+       echo  $upi;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
 	
 	<tbody>
