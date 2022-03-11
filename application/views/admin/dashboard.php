@@ -26,7 +26,7 @@
   <br>
   <div class="row slideanim w-100" >
     <div class="col-sm-6">
-<center> <div class="card mt-2" style="width:25rem;height:450px;  border-radius: 25px;color:blue; ">
+<center> <div class="card mt-2" style="width:20rem;height:380px;  border-radius: 25px;color:blue; ">
   <img class="card-img-top" style="border-radius: 25px;" src="<?php echo base_url()."web_files/";?>assets/img/com.jpg" alt="Card image cap">
   <div class="card-body">
  
@@ -56,7 +56,7 @@
     </div>
     <div class="col-sm-6">
 	
-	<center>	<div class="card mt-2" style="width: 25rem; height:450px; border-radius: 25px; color:blue">
+	<center>	<div class="card mt-2" style="width: 20rem; height:380px; border-radius: 25px; color:blue">
   <img class="card-img-top" style="border-radius: 25px;"  src="<?php echo base_url()."web_files/";?>assets/img/cc.jpg" alt="Card image cap"> 
   <div class="card-body">
   

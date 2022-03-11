@@ -169,16 +169,26 @@
    <table class="table table-striped" style="colorgrey;font-size15px;margin-top:-70px;">
 <tbody>
 	<tr>
+	
+	
+	
+	
+			
+	
      
       <th scope="row"> Auction Images</th>
 	   <td><?php $img = unserialize($row->imageupload)?>
 	   
-	   
+	      <?php foreach($img as $sql) { ?>
 	   
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px">
+ 
+ 
+ 
+		<?php } ?> 
 	   
 	   
 	   
@@ -212,8 +222,30 @@
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?php $aucs= $row->iauction_start;
+	   $temp = explode('.',$aucs);
+       $aucs = $temp[0];
+       echo  $aucs;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $auce = $row->iauction_end; 
+       $cool = explode('.',$aucs);
+       $auce = $cool[0];
+       echo  $auce;	 
+	  ?>
+	  </td>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     </tr>
 	
 	<tr>
@@ -225,33 +257,52 @@
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+
+	   
+	   <td><?php $insp= $row->inspectiondate;
+	   $ter = explode('.',$insp);
+       $insp = $ter[0];
+       echo  $insp;	   
+	   
+
+	   ?>
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   </td>
       
     </tr>
 	
 		
 		<tr>
      
-      <th scope="row"> MRP</th>
+      <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
 	   <td><?php echo $row->imrp ?></td>
       
     </tr>
 	
-		<tr>
+		<!--<tr>
      
       <th scope="row"> Start  Auction Price</th>
-	   <td><?php echo $row->startaucprice ?></td>
+	   <td><?php //echo $row->startaucprice ?></td>
       
     </tr>
 	
 		<tr>
      
       <th scope="row">End Auction Price  </th>
-	   <td><?php echo $row->endaucprice ?></td>
+	   <td><?php //echo $row->endaucprice ?></td>
       
-    </tr>
+    </tr> 
 	
-		<tr>
+		<tr>-->
      
       <th scope="row">Entry Fee </th>
 	   <td><?php echo $row->entryfee ?></td>
@@ -263,8 +314,51 @@
 	<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
+	  
+	   
+	   
+	   
+	      
+	   <td><?php $inse= $row->iauction_end ;
+	   $ters = explode('.',$inse);
+       $inse = $ters[0];
+       echo  $inse;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $aucn = $row->iauction_start; 
+       $coole = explode('.',$aucn);
+       $aucn = $coole[0];
+       echo  $aucn;	 
+	  ?>
+	  </td>
+	  
+	  
+	  
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   </td>
       
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     </tr>
 	
 	<tbody>

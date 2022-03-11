@@ -53,7 +53,7 @@ class BuyerAuction_Properties extends CI_Controller {
 		//$td = $this->Admin_model->get_auction_today($date);
 		//print_r(count($alfa));die;
 		$config = array();
-        $config["base_url"] = base_url() . "BuyerAuction_car/index/".$this->uri->segment(3)."/";
+        $config["base_url"] = base_url() . "BuyerAuction_properties/index/".$this->uri->segment(3)."/";
 		if($this->uri->segment(3) == "TA"){
 			$config["total_rows"] = count($this->Admin_model->get_auction_today($date));
 		}else{
@@ -91,7 +91,7 @@ class BuyerAuction_Properties extends CI_Controller {
 	
 
 		$this->load->view('buyer/header',$sess);
-		$this->load->view('buyer/auctionlist_Properties',$data);
+		$this->load->view('buyer/auctionlist_properties',$data);
 		$this->load->view('buyer/footer');
 		}
 	}

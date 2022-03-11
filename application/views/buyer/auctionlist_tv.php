@@ -179,14 +179,18 @@
 	<tr>
      
       <th scope="row"> Auction Images</th>
-	   <td><?php $img = unserialize($row->imageupload)?>
+ <td><?php $img = unserialize($row->imageupload)?>
 	   
-	   
+	      <?php foreach($img as $sql) { ?>
 	   
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px">
+ 
+ 
+ 
+		<?php } ?> 
 	   
 	   
 	   

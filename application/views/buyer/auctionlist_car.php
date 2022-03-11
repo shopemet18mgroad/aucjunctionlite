@@ -186,14 +186,19 @@
 	<tr>
      
       <th scope="row"> Auction Images</th>
+	  
 	   <td><?php $img = unserialize($row->imageupload)?>
 	   
-	   
+	      <?php foreach($img as $sql) { ?>
 	   
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px">
+ 
+ 
+ 
+		<?php } ?> 
 	   
 	   
 	   
@@ -240,14 +245,13 @@
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+	   <td><?php echo $row->inspectiondate ?></td>
       
     </tr>
 	
 		
 		<tr>
-     
-      <th scope="row"> MRP</th>
+          <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
 	   <td><?php echo $row->imrp ?></td>
       
     </tr>

@@ -133,68 +133,12 @@ height:100px;
 		
 		
 		
-		 <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			
+			
          
-              <li class="dropdown"><a href="#"><span>Automobile</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="<?php echo base_url(); ?>BuyerAuction_car ">Car</a></li>
-                  <li><a href="<?php echo base_url(); ?>BuyerAuction_bike">bike</a></li>
-                  <li><a href="#">Commercial Vehicles</a></li>
-           
-                </ul>
-				
-              <li class="dropdown"><a href="#"><span>Home Appliance</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Washing Machine</a></li>
-                  <li><a href="#">Fridge</a></li>
-                  <li><a href="#">Cooler</a></li>
-           
-                </ul>
-			</li>
-			
-			
-			  <li class="dropdown"><a href="#"><span>Electronic Appliance</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="<?php echo base_url(); ?>BuyerAuction_tv ">tv</a></li>
-                  <li><a href="<?php echo base_url(); ?>BuyerAuction_camera ">camera</a></li>
-           
-                </ul>
-			</li>
-			
-		
-                <ul>
-                  <li><a href="<?php echo base_url(); ?>BuyerAuction_properties ">properties</a></li>
-                
-                </ul>
-				
-				 <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_furniture">furniture</a></li>
-				 
-			</li>
-			
-			
-			  <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_mobile">mobile</a></li>
-                <ul>
-                  <li><a href="#">Old Mobile</a></li>
-                  <li><a href="#">New Mobile</a></li>
-                
-           
-                </ul>
-			</li>
-			
-			
-				  <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_toys">toys</a></li>
-			
-			
-				  <li class="dropdown"><a href="<?php echo base_url(); ?>BuyerAuction_fashion">fashion</a></li>
-			
-			
-			
-            
-             
-            </ul>
-          </li>
-		
 		
 		
 		

@@ -79,9 +79,9 @@
                 }
             ?>
             <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_Properties/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
+              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_properties/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
               <label for="radio-three">Today's Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_Properties/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
+              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_properties/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
               <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
               
           </div>
@@ -94,7 +94,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Properties'){
+   <?php if($meg == 'properties'){
 	   ?>
       
         
@@ -156,7 +156,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Properties'){
+   <?php if($meg == 'properties'){
 	   ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
@@ -181,24 +181,27 @@
 		
 	
 	
-   <table class="table table-striped" style="colorgrey;font-size15px;">
+   <table class="table table-striped" style="colorgrey;font-size15px;margin-top:-70px;">
 <tbody>
 	<tr>
      
       <th scope="row"> Auction Images</th>
-	   <td><?php $img = unserialize($row->imageupload)?>
+	    <td><?php $img = unserialize($row->imageupload)?>
 	   
-	   
+	      <?php foreach($img as $sql) { ?>
 	   
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px">
+ 
+ 
+ 
+		<?php } ?> 
 	   
 	   
 	   
 	   </td>
-      
     </tr>
     <tr>   
    <th scope="row">Category </th>
