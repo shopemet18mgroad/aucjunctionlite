@@ -224,17 +224,17 @@
 <tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?pg $bbb= $row->iauction_start;
-	   $ggg = explode('.',$bbb);
-       $bbb = $ggg[0];
-       echo  $bbb;	   
+	   <td><?php $bb= $row->iauction_start;
+	   $gl = explode('.',$bb);
+       $bb = $gl[0];
+       echo  $bb;	   
 	   
 
 	   ?>	   <br>to	   <br>
-	   <?php $fff = $row->iauction_end; 
-       $zzz = explode('.',$fff);
-       $fff = $zzz[0];
-       echo  $fff;	 
+	   <?php $fo = $row->iauction_end; 
+       $ez = explode('.',$fo);
+       $fo = $ez[0];
+       echo  $fo;	 
 	  ?>
 	  </td>
 	  
