@@ -221,12 +221,38 @@
 	    <td><?php echo $row->iauctionid ?></td>
       
     </tr>
+	
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?php $ka= $row->iauction_start;
+	   $la = explode('.',$ka);
+       $ka = $la[0];
+       echo  $ka;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $va = $row->iauction_end; 
+       $thi = explode('.',$va);
+       $va = $thi[0];
+       echo  $va;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<tr>
 	
@@ -237,9 +263,20 @@
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo$row->inspectiondate ?></td>
+
+	   
+	   <td><?php $mal= $row->inspectiondate;
+	   $ti = explode('.',$mal);
+       $mal = $ti[0];
+       echo  $mal;	   
+	   
+
+	   ?>
+	     
+	   </td>
       
     </tr>
+	
 	
 		
 		<tr>
@@ -275,9 +312,27 @@
 	<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
-      
+	     
+	   <td><?php $kuma= $row->iauction_end ;
+	   $ra = explode('.',$kuma);
+       $kuma = $ra[0];
+       echo  $kuma;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $basa = $row->iauction_start; 
+       $pa = explode('.',$basa);
+       $basa = $pa[0];
+       echo  $basa;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
+	
 	
 	<tbody>
 	</table>

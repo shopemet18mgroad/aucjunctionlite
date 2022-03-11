@@ -229,12 +229,47 @@
 	    <td><?php echo $row->iauctionid ?></td>
       
     </tr>
+	
+	
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php echo $row->iauction_start ?>to <?php echo $row->iauction_end ?></td>
-      
+	   <td><?php $ab= $row->iauction_start;
+	   $abc = explode('.',$ab);
+       $ab = $abc[0];
+       echo  $ab;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $ba = $row->iauction_end; 
+       $cba = explode('.',$ba);
+       $ba = $cba[0];
+       echo  $ba;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<tr>
 	
@@ -242,13 +277,31 @@
 	</tr>
 	
 	
-	<tr>
+
+	
+			<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo $row->inspectiondate ?></td>
+
+	   
+	   <td><?php $insp1= $row->inspectiondate;
+	   $ter1 = explode('.',$insp1);
+       $insp1 = $ter1[0];
+       echo  $insp1;	   
+	   ?>
+	     
+	   </td>
       
     </tr>
 	
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		<tr>
           <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
@@ -279,12 +332,42 @@
 	
 	
 	
-	<tr>
+	
+	
+		<tr>
      
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $row->iauction_end ?> To <?php echo $sqldata1[0]->iauction_start ?></td>
-      
+	     
+	   <td><?php $inse11= $row->iauction_end ;
+	   $ters22 = explode('.',$inse11);
+       $inse11 = $ters22[0];
+       echo  $inse11;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $aucn1 = $row->iauction_start; 
+       $coolee = explode('.',$aucn1);
+       $aucn1 = $coolee[0];
+       echo  $aucn1;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<tbody>
 	</table>
