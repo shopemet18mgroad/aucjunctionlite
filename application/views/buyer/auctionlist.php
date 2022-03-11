@@ -81,9 +81,9 @@
       </div>
       
         <div class="row icon-boxes">
-    
-      <?php foreach($sqldata1 as $row){?>
-      
+     
+      <?php $ctr=1; foreach($sqldata1 as $row){?>
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
     
       
         
@@ -106,7 +106,7 @@
              
             <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+            <button type="button" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)">Add to Cart</button>
             </div>
            
           </div>
@@ -118,7 +118,7 @@
        
 
  
-        <?php } ?>
+        <?php $ctr++; } ?>
     
        </div>
      

@@ -91,7 +91,7 @@ class BuyerAuction_car extends CI_Controller {
         
 	
 
-		$this->load->view('buyer/header');
+		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_car',$data);
 		$this->load->view('buyer/footer');
 		}

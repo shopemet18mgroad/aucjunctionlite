@@ -1,5 +1,5 @@
 
-        
+        <link href="<?php echo base_url()."web_files/";?>css/mediaform.css" rel="stylesheet" type="text/css">
       
 		  
 		<form action="<?php echo base_url();?>Admin_startauction/insert_auc" method="post" enctype="multipart/form-data">   
