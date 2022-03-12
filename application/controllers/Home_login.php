@@ -61,7 +61,7 @@ class Home_login extends CI_Controller {
 				      }else if($table == "sellerdetails"){
 					  $newdata = array('username'=>$user,'auth'=>'SELLER','logged_in' => TRUE);
 						$this->session->set_userdata($newdata);
-					  header('location: '.base_url().'seller_indexm');
+					  header('location: '.base_url().'Seller_sellerupdate');
 					  die;
 				  }else if($table == "adminprofile"){
 					  $newdata = array('username'=>$user,'auth'=>'ADMIN','logged_in' => TRUE);

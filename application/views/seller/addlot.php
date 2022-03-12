@@ -15,7 +15,7 @@
             
             
                   
-                 <form action= "<?php echo base_url();?>Admin_addlot_info"
+                 <form action= "<?php echo base_url();?>Seller_addlot_info"
 				 method="post" enctype="multipart/form-data"> 
 				
 				
