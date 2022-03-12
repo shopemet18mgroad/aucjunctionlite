@@ -2,7 +2,7 @@
         
       
 		  
-		<form action="<?php echo base_url();?>Admin_startauction/insert_auc" method="post" enctype="multipart/form-data">   
+		<form action="<?php echo base_url();?>seller_startauction/insert_auc" method="post" enctype="multipart/form-data">   
               
 		  
         <main id="main">

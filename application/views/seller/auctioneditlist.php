@@ -23,7 +23,7 @@
   
     <tr>
 						 <th>
-                            Sl. No .
+                            Sl.No.
                           </th>
 						     <th>
                          Auction Id
@@ -34,8 +34,7 @@
                           <th>
 						 Seller Name
                           </th>
-						
-                       
+
                           <th>
                     Seller Company Name
                           </th>
@@ -82,12 +81,12 @@
 					<td >  
 					
 					
-		<a href="<?php echo base_url()."Admin_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
+		<a href="<?php echo base_url()."Seller_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 		
-		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
 		
-		<a href ="<?php echo base_url()."Admin_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
+		<a href ="<?php echo base_url()."Seller_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
 						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 	
 

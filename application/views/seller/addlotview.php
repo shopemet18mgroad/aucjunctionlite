@@ -37,28 +37,32 @@
 	
 	<tr>
      
-      <th scope="row">Inspection Date </th>
+      <th scope="row">Auction Id </th>
 	    <td><?php echo $sqldata1[0]->iauctionid ?></td>
       
     </tr>
-	<tr>
+<tr>
      
-      <th scope="row">Current location </th>
-	   <td><?php echo $sqldata1[0]->iauction_start ?></td>
-      
+      <th scope="row"> Auction Start and End Time</th>
+	   <td><?php $aucs= $sqldata1[0]->iauction_start;
+	   $temp = explode('.',$aucs);
+       $aucs = $temp[0];
+       echo  $aucs;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $auce = $sqldata1[0]->iauction_end; 
+       $cool = explode('.',$auce);
+       $auce = $cool[0];
+       echo  $auce;	 
+	  ?>
+	  </td>
+	  
+	  
     </tr>
-	<tr>
-     
-      <th scope="row">Expected price </th>
-	    <td><?php echo $sqldata1[0]->iauction_end ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Start  Auction Price </th>
-	   <td><?php echo $sqldata1[0]->iemailid ?></td>
-      
-    </tr>
+	
+	
+	
 	
 	
 	
@@ -68,52 +72,32 @@
 	</tr>
 	
 	
-	<tr>
-     
-      <th scope="row">Category </th>
-	   <td><?php echo $sqldata1[0]->icategory ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Sub-category </th>
-	   <td><?php echo $sqldata1[0]->isubcategory ?></td>
-      
-    </tr>
 	
-	<tr>
-     
-      <th scope="row">product Description </th>
-	   <td><?php echo $sqldata1[0]->iproductdes ?></td>
-      
-    </tr>
+	
 	<tr>
      
       <th scope="row">Inspection Date </th>
-	   <td><?php echo $sqldata1[0]->inspectiondate ?></td>
-      
+	 
+       
+	   <td><?php $insp= $sqldata1[0]->inspectiondate;
+	   $ter = explode('.',$insp);
+       $insp = $ter[0];
+       echo  $insp;	   
+	   
+
+	   ?>
+	     
+	   </td>
     </tr>
 	
-		<tr>
+	<tr>
      
-      <th scope="row">Current location </th>
-	   <td><?php echo $sqldata1[0]->currentlocation ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row"> Expected price</th>
+      <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
 	   <td><?php echo $sqldata1[0]->imrp ?></td>
       
-    </tr>
+    </tr>	
 	
-		<tr>
-     
-      <th scope="row"> Expected price</th>
-	   <td><?php echo $sqldata1[0]->startaucprice ?></td>
-      
-    </tr>
+	
 	
 		<tr>
      
@@ -121,41 +105,45 @@
 	   <td><?php echo $sqldata1[0]->endaucprice ?></td>
       
     </tr>
-	
 		<tr>
      
-      <th scope="row">Start  Auction Price </th>
-	   <td><?php echo $sqldata1[0]->entryfee ?></td>
-      
-    </tr>
-	
-	
-	<tr>
-     
-      <th scope="row">End Auction Price </th>
-	   <td><?php echo $sqldata1[0]->iauction_start ?></td>
-      
-    </tr>
-	<tr>
-     
       <th scope="row">Inspection date and time  </th>
-	   <td><?php echo $sqldata1[0]->iauction_end ?></td>
-      
+	     
+	   <td><?php $inse= $sqldata1[0]->iauction_end ;
+	   $ters = explode('.',$inse);
+       $inse = $ters[0];
+       echo  $inse;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php $aucn = $sqldata1[0]->iauction_start; 
+       $coole = explode('.',$aucn);
+       $aucn = $coole[0];
+       echo  $aucn;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
     </tr>
+
+	
 	
 	<tr>
      
-      <th scope="row">Upload photos* </th>
+      <th scope="row">Upload photos* <br> <div style="font-size:10px; color:red;">click on image to view full images </div></th>
 	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
 	   
 	   
-	   
+	    <?php foreach($img as $sql){?> 
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal" >
 	   
-	   
+		<?php }?>
 	   
 	   </td>
       

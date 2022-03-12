@@ -75,9 +75,9 @@
                     <div class="form-outline">
 					
 					
-               		<input type="text" class="form-control form-control-lg" id="icompanyname"  name="icompanyname" onclick = "return validate_usergst()"> 
-                      <label class="form-label" for="form3Examplev4">Company Name</label>
-					
+               		<input type="text" class="form-control form-control-lg" id="icompanyname"  name="icompanyname" onclick = "return validate_usergst12()"> 
+                      <label class="form-label" for="form3Examplea4">Company Name</label>
+					  
                     </div>
                   </div>
 
@@ -395,7 +395,7 @@ function validateForm() {
   }
   </script>
       <script>
-  function validate_usergst(){
+  function validate_usergst12(){
 	  var val = document.getElementById("igstnumber").value;
 		if(val != ''){
 			 $.get('<?php echo base_url() .'Admin_addseller/validate_aadharnumber/'; ?>'+val, function(data2){				 

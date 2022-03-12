@@ -40,7 +40,7 @@ class Seller_startauction extends CI_Controller {
 		$this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SEllER"){
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index_error/'.$datainserr);
 			die;
@@ -49,10 +49,10 @@ class Seller_startauction extends CI_Controller {
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('iemailid'=>$sess['sessi']);
+		$active = array('aname'=>$sess['sessi']);
 		
 		$this->load->view('seller/header',$sess);
-		$this->load->view('seller/startauction');
+		$this->load->view('Seller/startauction');
 		$this->load->view('seller/footer');
 	}
 	}
@@ -92,9 +92,9 @@ class Seller_startauction extends CI_Controller {
 	
 	 
 	 
-	 header('location: '.base_url().'Seller_addlot/lotmgt');
+	 header('location: '.base_url().'seller_addlot/lotmgt');
 }else if(!$status){
-	header('location: ./Seller_startauction/');
+	header('location: ./seller_startauction/');
 	}
 	 }
 	

@@ -123,7 +123,7 @@
 	<a href="<?php echo base_url(); ?>BuyerAuction_washingmachine" >
 	<span style="font-size: 3em;color:DodgerBlue;">
 
-  <i class="fa fa-alipay mt-3"></i>
+<i class="fa fa-square mt-3"></i>
 </span> </a><br> 
 <p style="color:black;font-size:12px;">Washing machine</p> </center>   </div>
 
@@ -133,7 +133,8 @@
     <center>
 	<a href="<?php echo base_url(); ?>BuyerAuction_fridge" >
 	<span style="font-size: 3em;color:DodgerBlue;">
-  <i class="fa fa-square mt-3"></i>
+  
+  <i class="fa fa-square-o mt-3" aria-hidden="true"></i>
 </span></a><br> 
  <p style="color:black;font-size:12px;"> Fridge</p> </center> 
    </div>

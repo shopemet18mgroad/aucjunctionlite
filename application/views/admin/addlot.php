@@ -89,6 +89,9 @@
 				<option value="Properties">Properties</option>
 					<option value="Furniture">Furniture</option>
 				<option value="Toys">Toys</option>
+				<option value="Toys">Fridge</option>
+				<option value="Toys">Laptop</option>
+				<option value="Toys">Washing machine</option>
 				<option value="Toys">Fashion</option>
 				</select>
                       </div>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_editauction extends CI_Controller {
+class Seller_addlotview extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,14 +19,12 @@ class Admin_editauction extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	
-	{  
-		
-	$this->load->model('Admin_model');
+	{
+			$this->load->model('Admin_model');
 		$this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index_error/'.$datainserr);
 			die;
@@ -35,32 +33,20 @@ class Admin_editauction extends CI_Controller {
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
-		
-
+		$active = array('iemailid'=>$sess['sessi']);
 		
 		
 		
-		
-		
-		
-			$this->load->model('Admin_model');
-		
-     $sl_ano = urldecode($this->uri->segment(3));
+	$this->load->model('Admin_model');
+     $active = array('aoption '=>true);
 	
-	$active = array('sl_ano'=>$sl_ano);
+	$query = $this->Admin_model->getaddlotauctiondetails('auction', $active);
 	
-	$query = $this->Admin_model->getdatafromtable('auction', $active);
+	$data['sqldata1']= $query;
 	
-	$data['sqldata']= $query;
-	
-	
-	    
-		
-		
-		$this->load->view('admin/header',$sess);	
-		$this->load->view('admin/editauction',$data);
-		$this->load->view('admin/footer');
+	    $this->load->view('seller/header',$sess);
+		$this->load->view('seller/addlotview',$data);
+		$this->load->view('seller/footer');
 	}
-	}
+}
 }
