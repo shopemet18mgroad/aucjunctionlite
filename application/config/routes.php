@@ -73,3 +73,10 @@ $route['BuyerAuction_fashion/index/TA/(:num)'] = 'BuyerAuction_fashion/index/TA'
 $route['BuyerAuction_fashion/index/AA/(:num)'] = 'BuyerAuction_fashion/index/AA';
 $route['BuyerAuction_camera/index/TA/(:num)'] = 'BuyerAuction_camera/index/TA';
 $route['BuyerAuction_camera/index/AA/(:num)'] = 'BuyerAuction_camera/index/AA';
+
+$route['BuyerAuction_washingmachine/index/TA/(:num)'] = 'BuyerAuction_washingmachine/index/TA';
+$route['BuyerAuction_washingmachine/index/AA/(:num)'] = 'BuyerAuction_washingmachine/index/AA';
+$route['BuyerAuction_fridge/index/TA/(:num)'] = 'BuyerAuction_fridge/index/TA';
+$route['BuyerAuction_fridge/index/AA/(:num)'] = 'BuyerAuction_fridge/index/AA';
+$route['BuyerAuction_laptop/index/TA/(:num)'] = 'BuyerAuction_laptop/index/TA';
+$route['BuyerAuction_laptop/index/AA/(:num)'] = 'BuyerAuction_laptop/index/AA';

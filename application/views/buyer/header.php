@@ -108,7 +108,7 @@ height:100px;
               </a>
                
                        <ul class="dropdown-menu">
-                
+                  <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal">update Profile</a>
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -133,7 +133,7 @@ height:100px;
 		
 		
 		
-<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>
 			

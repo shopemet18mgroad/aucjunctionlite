@@ -16,7 +16,7 @@
    <table class="table table-striped"  style="colorgrey;font-size8px;">
 <tbody >
     <tr>
-   <th scope="row"> FULL NAME   </th>
+   <th scope="row">FULL NAME</th>
    <td><?php echo $sqldata1[0]->buyername ?></td>
 	  </tr>
 	 <br>
