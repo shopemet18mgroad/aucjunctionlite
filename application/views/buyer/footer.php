@@ -54,8 +54,14 @@
       var val = $('#ch-'+id).val();
       val = val.split('/').join('-');
       //alert(val);return false;
-      $.get('<?php echo base_url() .'Cart_wishlist/index/'; ?>'+val, function(data){
-            alert(data);
+     var check = '<i class="fa fa-check" aria-hidden="true"></i> Added';
+     
+      $.get('<?php echo base_url() .'Cart_wishlist/index/'; ?>'+val+'/'+id, function(data){
+            var res = data.split('|');
+            $('#bt-'+res[1]).removeClass('btn-warning').addClass('btn-success');
+             //$('#bt-'+res[1]).find("i").removeClass("fa fa-shopping-cart").addClass("fa fa-check");
+            $('#bt-'+res[1]).html(check);
+           
         });
     }
   </script>

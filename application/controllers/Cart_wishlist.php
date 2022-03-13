@@ -20,7 +20,7 @@ class Cart_wishlist extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->helper(array('url', 'html', 'date'));
+		$this->load->helper(array('url', 'html', 'date', 'cookie'));
 		//Setting  default time zone
         $this->load->library('session');
 		date_default_timezone_set('Asia/Kolkata');
@@ -29,6 +29,7 @@ class Cart_wishlist extends CI_Controller {
         $this->load->model('Admin_model');
 		//Loading Admin Model
         $aucid = $this->uri->segment(3);
+		$rid = $this->uri->segment(4);
         $aucid = str_ireplace("-","/",$aucid);
         //echo $aucid; die;
         $query = $this->Admin_model->get_singleauction($aucid);
@@ -39,7 +40,21 @@ class Cart_wishlist extends CI_Controller {
         $auctionsub = $query[0]->isubcategory;
         $aucstartprice = $query[0]->startaucprice;
         $aucendprice = $query[0]->endaucprice;
-        echo $sessi = $this->session->userdata('username');
+        $sessi = $this->session->userdata('username');
+		set_cookie($auctionid,$auctionid, 31536000); 
+		//====================Store Value to cart===========
+		$data = array('auction_id'=>$auctionid);
+		if($this->Admin_model->check('cart_payment', $data)){
+			echo "DE|".$rid;
+		}else{
+			$data = array('auction_id'=>$auctionid, 'entry_fee'=>$auctionimrp, 'cart'=>true, 'wishlist'=>false,'auction'=>false, 'user_email'=>$sessi);
+		 	$this->Admin_model->insert('cart_payment', $data);
+		 	echo "DI|".$rid;
+		}
+		//==============Setcookies========================
+
+
+		//==================================================
 
        
 
