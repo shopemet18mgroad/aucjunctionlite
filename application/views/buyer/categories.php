@@ -22,7 +22,7 @@
 
 
 
-    <div class="col" style="  opacity: 0.5;">
+    <div class="col" style="background-color: transparent;">
 	<center>
 	<a href="<?php echo base_url(); ?>BuyerAuction_bike" ><span style="font-size: 3em;color:DodgerBlue;">
   <i class="fa fa-motorcycle mt-3"></i>
@@ -44,7 +44,7 @@
 	 
 	
     <div class="row">
-    <div class="col"style="opacity: 0.4;">
+    <div class="col"style="background-color: transparent;">
 	<center>
 		 <a href="<?php echo base_url(); ?>BuyerAuction_properties" >
 	<span style="font-size: 3em;color:DodgerBlue;">
@@ -69,7 +69,7 @@
  
  
  
-    <div class="col"style="opacity: 0.5;">
+    <div class="col"style="background-color: transparent;">
 	<center>
 	<a href="<?php echo base_url(); ?>BuyerAuction_furniture" >
 	<span style="font-size: 3em;color:DodgerBlue;">
@@ -91,7 +91,7 @@
 
 
 
-    <div class="col"style="  opacity: 0.5;">
+    <div class="col"style="background-color: transparent;">
     <center>
 	<a href="<?php echo base_url(); ?>BuyerAuction_toys" >
 	<span style="font-size: 3em;color:DodgerBlue;">
@@ -118,7 +118,7 @@
 	
 
        <div class="row">
-    <div class="col"style="  opacity: 0.5;">
+    <div class="col"style="background-color: transparent;">
 	<center>
 	<a href="<?php echo base_url(); ?>BuyerAuction_washingmachine" >
 	<span style="font-size: 3em;color:DodgerBlue;">
@@ -141,7 +141,7 @@
    
    
    
-    <div class="col"style="  opacity: 0.5;">
+    <div class="col"style="background-color: transparent;">
 	<center>
 	<a href="<?php echo base_url(); ?>BuyerAuction_laptop" >
 	<span style="font-size: 3em;color:DodgerBlue">
