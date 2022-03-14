@@ -34,7 +34,7 @@ class BuyerAuction_camera extends CI_Controller {
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
