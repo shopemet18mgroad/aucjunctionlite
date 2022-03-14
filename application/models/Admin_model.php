@@ -100,6 +100,434 @@ class Admin_model extends CI_Model
 					$result = $query->result();				
 					return $result;
 	}
+		
+	
+	// 1.In buyer only to pull cartegory of car of particular days auction.
+	
+	public function get_auctionlist_todaycar($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Car');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//2.In buyer only to pull cartegory of car of particular All Auction.
+	
+	public function get_auctionlistcar($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Car');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	//1.In buyer only to pull cartegory of TV of particular days auction.
+	
+	public function get_auctionlist_todaytv($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','TV');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//2.In buyer only to pull cartegory of TV of particular All Auction.
+	
+	public function get_auctionlisttv($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','TV');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+		//1.In buyer only to pull cartegory of Bike of particular days auction.
+	
+	public function get_auctionlist_todaybike($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Bike');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Bike of particular All Auction.
+	
+	public function get_auctionlistbike($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Bike');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+			//In buyer only to pull cartegory of Camera of particular days auction.
+	
+	public function get_auctionlist_todaycamera($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Camera');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Camera of particular All Auction.
+	
+	public function get_auctionlistcamera($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Camera');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+	
+				//In buyer only to pull cartegory of Fridge of particular days auction.
+	
+	public function get_auctionlist_todayfridge($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Fridge');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Fridge of particular All Auction.
+	
+	public function get_auctionlistfridge($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Fridge');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+		
+				//In buyer only to pull cartegory of Mobile of particular days auction.
+	
+	public function get_auctionlist_todaymobile($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Mobile');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Mobile of particular All Auction.
+	
+	public function get_auctionlistmobile($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Mobile');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+					//In buyer only to pull cartegory of Toys of particular days auction.
+	
+	public function get_auctionlist_todaytoys($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Toys');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Toys of particular All Auction.
+	
+	public function get_auctionlisttoys($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Fashion');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+						//In buyer only to pull cartegory of Fashion of particular days auction.
+	
+	public function get_auctionlist_todayfashion($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Fashion');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Fashion of particular All Auction.
+	
+	public function get_auctionlistfashion($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Fashion');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+//In buyer only to pull cartegory of Laptop of particular days auction.
+	
+	public function get_auctionlist_todaylaptop($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Laptop');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Laptop of particular All Auction.
+	
+	public function get_auctionlistlaptop($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Laptop');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+	//In buyer only to pull cartegory of Washing Machine of particular days auction.
+	
+	public function get_auctionlist_todaywashingmachine($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Washing machine');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Washing Machine of particular All Auction.
+	
+	public function get_auctionlistwashingmachine($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Washing machine');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+		//In buyer only to pull cartegory of Furniture of particular days auction.
+	
+	public function get_auctionlist_todayfurniture($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Furniture');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Furniture of particular All Auction.
+	
+	public function get_auctionlistfurniture($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Furniture');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+	
+	
+			//In buyer only to pull cartegory of Furniture of particular days auction.
+	
+	public function get_auctionlist_todayproperties($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Furniture');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Properties of particular All Auction.
+	
+	public function get_auctionlistproperties($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Properties');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 
 	public function get_adminforthlookalike($table, $col, $query, $date)
 	{

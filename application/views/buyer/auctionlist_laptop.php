@@ -111,11 +111,11 @@
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			
-		
-            <p class="description d-flex justify-content-center">MRP Price:<?php echo $row->imrp ?></p>
-            <p class="description d-flex justify-content-center">Start Price:<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center">End Price:<?php echo $row->endaucprice ?></p>
+			<p class="description d-flex justify-content-center"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+            <p class="description d-flex justify-content-center"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex justify-content-center"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
              
             <div class="row">

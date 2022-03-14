@@ -99,7 +99,7 @@
       
         
     
-        <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box w-100">
             <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
 	   
@@ -110,11 +110,11 @@
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			
-		
-            <p class="description d-flex justify-content-center">MRP Price:<?php echo $row->imrp ?></p>
-            <p class="description d-flex justify-content-center">Start Price:<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center">End Price:<?php echo $row->endaucprice ?></p>
+			<p class="description d-flex justify-content-center"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+            <p class="description d-flex justify-content-center"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex justify-content-center"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
              
             <div class="row">
@@ -174,19 +174,24 @@
 		
 	
 	
-   <table class="table table-striped" style="colorgrey;font-size15px;">
+   <table class="table table-striped" style="margin-top:-80px;">
 <tbody>
 	<tr>
      
       <th scope="row"> Auction Images</th>
+		  
 	   <td><?php $img = unserialize($row->imageupload)?>
 	   
-	   
+	      <?php foreach($img as $sql) { ?>
 	   
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px">
+ 
+ 
+ 
+		<?php } ?> 
 	   
 	   
 	   
@@ -268,20 +273,7 @@
       
     </tr>
 	
-		<tr>
-     
-      <th scope="row"> Start  Auction Price</th>
-	   <td><?php echo $row->startaucprice ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row">End Auction Price  </th>
-	   <td><?php echo $row->endaucprice ?></td>
-      
-    </tr>
-	
+
 		<tr>
      
       <th scope="row">Entry Fee </th>

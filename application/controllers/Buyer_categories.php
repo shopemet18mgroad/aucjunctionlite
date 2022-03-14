@@ -40,7 +40,7 @@ class Buyer_categories extends CI_Controller {
 		
 		
 		
-		$this->load->view('buyer/header');
+		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/categories');
 		$this->load->view('buyer/footer');
 			}

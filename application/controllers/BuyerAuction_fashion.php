@@ -85,9 +85,9 @@ class BuyerAuction_fashion extends CI_Controller {
         $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $data["links"] = $this->pagination->create_links();
 		if($this->uri->segment(3) == "TA"){
-			$data['sqldata1'] = $this->Admin_model->get_auctionlist_today($config["per_page"], $page, $date);
+			$data['sqldata1'] = $this->Admin_model->get_auctionlist_todayfashion($config["per_page"], $page, $date);
 		}else{
-			$data['sqldata1'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
+			$data['sqldata1'] = $this->Admin_model->get_auctionlistfashion($config["per_page"], $page);
 		}
         
 		//print_r($data["links"]);die;
