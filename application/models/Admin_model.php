@@ -551,7 +551,7 @@ class Admin_model extends CI_Model
 					return $result;
 	}
 	
-	function auctionlist() {			 
+	public function auctionlist() {			 
 			$this->db->select('
 					a.*,
 					b.*');
@@ -565,7 +565,22 @@ class Admin_model extends CI_Model
 					return $result;
 		
 			}
-	
+    public function get_all_cart_user($uid){
+		$data = array('user_email'=>$uid, 'cart'=>true);
+		$query = $this->db->get_where('cart_payment', $data);
+		return $query->result();
+
+	}	
+	public function get_all_wishlist_user($uid){
+		$data = array('user_email'=>$uid, 'wishlist'=>true);
+		$query = $this->db->get_where('cart_payment', $data);
+		return $query->result();
+	}	
+	public function get_all_auctions_user($uid){
+		$data = array('user_email'=>$uid, 'auction'=>true);
+		$query = $this->db->get_where('cart_payment', $data);
+		return $query->result();
+	}	
 
 	
 	}

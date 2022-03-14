@@ -18,15 +18,22 @@ class Cart_wishlist extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+        parent:: __construct();
+        $this->load->helper(array('url', 'html', 'date', 'cookie'));
+		$this->load->library('session');
+		$this->load->model('Admin_model');
+    }
+	
 	public function index()
 	{
-		$this->load->helper(array('url', 'html', 'date', 'cookie'));
+		//$this->load->helper(array('url', 'html', 'date', 'cookie'));
 		//Setting  default time zone
-        $this->load->library('session');
+        //$this->load->library('session');
 		date_default_timezone_set('Asia/Kolkata');
 		//initaliazing the current time 
 		$time =  Date('Y-m-d H:i:s');
-        $this->load->model('Admin_model');
+        
 		//Loading Admin Model
         $aucid = $this->uri->segment(3);
 		$rid = $this->uri->segment(4);
@@ -59,6 +66,47 @@ class Cart_wishlist extends CI_Controller {
        
 
 		//print_r($query);
+	}
+
+	public function removefromcart(){
+		$sessi = $this->session->userdata('username');
+		$aucid = $this->uri->segment(3);
+		$cookieaucid = str_ireplace('-','/',$aucid);
+		$data = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi);
+		$this->Admin_model->delete_data('cart_payment', $data);
+		delete_cookie($cookieaucid);
+		echo "OK";
+	}
+	public function addtowishlist(){
+		$sessi = $this->session->userdata('username');
+		$aucid = $this->uri->segment(3);
+		$cookieaucid = str_ireplace('-','/',$aucid);
+		$data = array('cart'=>false,'wishlist'=>true,'auction'=>false);
+		$comp = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi);
+		$this->Admin_model->update_custom('cart_payment',$data,$comp,$comp);
+		delete_cookie($cookieaucid);
+		echo "OK";
+		//$this->Admin_model->delete_data('', $data);
+	}
+	public function movetocart(){
+		$sessi = $this->session->userdata('username');
+		$aucid = $this->uri->segment(3);
+		$cookieaucid = str_ireplace('-','/',$aucid);
+		$data = array('cart'=>true,'wishlist'=>false,'auction'=>false);
+		$comp = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi);
+		$this->Admin_model->update_custom('cart_payment',$data,$comp,$comp);
+		set_cookie($cookieaucid,$cookieaucid, 31536000);
+		//delete_cookie($cookieaucid);
+		echo "OK";
+	}
+	public function removefromwishlist(){
+		$sessi = $this->session->userdata('username');
+		$aucid = $this->uri->segment(3);
+		$cookieaucid = str_ireplace('-','/',$aucid);
+		$data = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi, 'wishlist'=>true);
+		$this->Admin_model->delete_data('cart_payment', $data);
+		delete_cookie($cookieaucid);
+		echo "OK";
 	}
 	
 }
