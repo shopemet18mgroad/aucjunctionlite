@@ -105,8 +105,9 @@ height:100px;
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
+				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
-			  <div style="color:#124265"><?php echo $sessi;?></div>
+			  
               
                        <ul class="dropdown-menu">
                   <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal">update Profile</a>
