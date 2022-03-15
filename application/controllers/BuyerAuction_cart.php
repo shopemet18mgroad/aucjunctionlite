@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Buyer_categories extends CI_Controller {
+class BuyerAuction_cart extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,31 +18,39 @@ class Buyer_categories extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+        parent:: __construct();
+        $this->load->helper('url');
+        $this->load->model('Admin_model');
+        $this->load->library("pagination");
+    }
+	
 	public function index()
 	{ 
 		
 		 $this->load->model('Admin_model');
-		$this->load->library('session');
-		
+		$this->load->library('session');	
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
-		
 		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('buyeremail'=>$sess['sessi']);
-		
-		
-		
-		
-		
+		$sqldata1 = $this->Admin_model->get_all_cart_user($this->session->userdata('username'));
+		$allaucarray =  array();
+
+		foreach($sqldata1 as $sql){
+			$aucdet = $this->Admin_model->get_singleauction($sql->auction_id);
+			array_push($allaucarray,$aucdet);
+		}
+		$allauc['allaucdata'] = $allaucarray;
+		//$active = array('buyeremail'=>$sess['sessi']);
 		$this->load->view('buyer/header',$sess);
-		$this->load->view('buyer/categories');
+		$this->load->view('buyer/auctionlist_cart',$allauc);
 		$this->load->view('buyer/footer');
-			}
-	}
+	
+		}
+		}
 }

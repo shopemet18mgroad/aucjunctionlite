@@ -105,10 +105,12 @@ height:100px;
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
+				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
-               
+			  
+              
                        <ul class="dropdown-menu">
-                
+                  <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal">update Profile</a>
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -119,7 +121,7 @@ height:100px;
           </div>
 
           </li>
-		   <li class="dropdown"><a href="#"><span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
+		   <li class="dropdown"><a href="#"><span>Accounts</span><i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>">My Account</a></li>
              <li><a href="<?php echo base_url();?>">Orders & Payments</a></li>
@@ -133,7 +135,7 @@ height:100px;
 		
 		
 		
-<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>
 			
@@ -163,8 +165,7 @@ height:100px;
 	<li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>">Auction Participated</a></li>
-             <li><a href="<?php echo base_url();?>">Bid Winner</a></li>
-                          <li><a href="<?php echo base_url();?>">Bid Loser </a></li>
+       
                                        
             </ul>
             </li>

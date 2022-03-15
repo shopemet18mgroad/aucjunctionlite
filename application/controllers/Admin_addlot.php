@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_addlot extends CI_Controller {
+class Seller_addlot extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -24,20 +24,20 @@ class Admin_addlot extends CI_Controller {
 		$this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		$active = array('iemailid'=>$sess['sessi']);
 		
-		$this->load->view('admin/header',$sess);
-		$this->load->view('admin/addlot');
-		$this->load->view('admin/footer');
+		$this->load->view('seller/header',$sess);
+		$this->load->view('seller/addlot');
+		$this->load->view('seller/footer');
 	}
 	}
 	public function lotmgt(){
@@ -47,14 +47,14 @@ class Admin_addlot extends CI_Controller {
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		$active = array('iemailid'=>$sess['sessi']);
 		
 		
 		 
@@ -62,9 +62,9 @@ class Admin_addlot extends CI_Controller {
 		 
 		 
 		$flashdata['txdata'] = $this->session->flashdata('txdata');
-		$this->load->view('admin/header',$sess);
-		$this->load->view('admin/addlot', $flashdata);
-		$this->load->view('admin/footer');
+		$this->load->view('seller/header',$sess);
+		$this->load->view('seller/addlot', $flashdata);
+		$this->load->view('seller/footer');
 			}
 	}
 }

@@ -107,7 +107,7 @@
                 <option value="TV">TV</option>
                 <option value="Washing Machine">Washing Machine</option>
                 <option value="Fridge">Fridge</option>
-				Sub Category
+				
 				
 				
 				</select>
@@ -231,7 +231,7 @@ function validateaddlot(){
 	
 	
 
-if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate == '' || imrp == '' || startaucprice == '' || endaucprice == '' || iauction_start == '' || iauction_end == ''|| imageupload == ''){
+if(icategory == '' || isubcategory == '' || iproductdes === '' || inspectiondate == '' || imrp == '' || startaucprice == '' || endaucprice == '' || iauction_start == '' || iauction_end == ''|| imageupload == ''){
 		swal("Alert!",  "Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price, End Auction Price , Inspection date and time,Upload photos, Pin  cannot leave any field blank!", "error");
 		return false;
 	}

@@ -35,7 +35,7 @@ class BuyerAuction_fridge extends CI_Controller {
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
@@ -84,9 +84,9 @@ class BuyerAuction_fridge extends CI_Controller {
         $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $data["links"] = $this->pagination->create_links();
 		if($this->uri->segment(3) == "TA"){
-			$data['sqldata1'] = $this->Admin_model->get_auctionlist_today($config["per_page"], $page, $date);
+			$data['sqldata1'] = $this->Admin_model->get_auctionlist_todayfridge($config["per_page"], $page, $date);
 		}else{
-			$data['sqldata1'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
+			$data['sqldata1'] = $this->Admin_model->get_auctionlistfridge($config["per_page"], $page);
 		}
         
 	

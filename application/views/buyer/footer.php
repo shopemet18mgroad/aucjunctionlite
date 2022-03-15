@@ -36,7 +36,7 @@
   
   
   <!-- Vendor JS Files -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/purecounter/purecounter.js"></script>
@@ -52,8 +52,46 @@
   <script>
     function addtocart(id){
       var val = $('#ch-'+id).val();
-      alert(val);
-
+      val = val.split('/').join('-');
+      //alert(val);return false;
+     var check = '<i class="fa fa-check" aria-hidden="true"></i> Added';
+     
+      $.get('<?php echo base_url() .'Cart_wishlist/index/'; ?>'+val+'/'+id, function(data){
+            var res = data.split('|');
+            $('#bt-'+res[1]).removeClass('btn-warning').addClass('btn-success');
+             //$('#bt-'+res[1]).find("i").removeClass("fa fa-shopping-cart").addClass("fa fa-check");
+            $('#bt-'+res[1]).html(check);
+           
+        });
+    }
+    function addtowishlist(id){
+      $.get('<?php echo base_url() .'Cart_wishlist/addtowishlist/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_cart/'; ?>" 
+          }
+        });
+      
+    }
+    function removefromcart(id){
+        $.get('<?php echo base_url() .'Cart_wishlist/removefromcart/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_cart/'; ?>" 
+          }
+        });
+    }
+    function movetocart(id){
+      $.get('<?php echo base_url() .'Cart_wishlist/movetocart/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_wishlist/'; ?>" 
+          }
+        });
+    }
+    function removefromwishlist(id){
+      $.get('<?php echo base_url() .'Cart_wishlist/removefromwishlist/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_wishlist/'; ?>" 
+          }
+        });
     }
   </script>
 </body>

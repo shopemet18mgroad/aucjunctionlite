@@ -106,7 +106,11 @@
              
             <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)">Add to Cart</button>
+            <?php if(get_cookie($row->iauctionid) == NULL){?>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+             <?php }else{?>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+                 <?php }?>
             </div>
            
           </div>

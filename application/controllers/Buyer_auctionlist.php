@@ -20,7 +20,7 @@ class Buyer_auctionlist extends CI_Controller {
 	 */
 	public function __construct() {
         parent:: __construct();
-        $this->load->helper('url');
+        $this->load->helper(array('url','cookie'));
         $this->load->model('Admin_model');
         $this->load->library("pagination");
 		$this->load->library('session');
@@ -31,10 +31,11 @@ class Buyer_auctionlist extends CI_Controller {
 	{ 
 		if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 		}else{
 			$sess = array('sessi'=>$this->session->userdata('username'));
+			//echo get_cookie('cookie_name'); die;
 		$config = array();
         $config["base_url"] = base_url() . "buyer_auctionlist";
         $config["total_rows"] = $this->Admin_model->get_count('auction');
