@@ -133,7 +133,7 @@
 	
 	<tr>
      
-      <th scope="row">Upload photos* <br> <div style="font-size:10px; color:red;">click on image to view full images </div></th>
+      <th scope="row">Upload photos* <br> <div style="font-size:10px;color:red;">click on image to view full images </div></th>
 	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
 	   
 	   

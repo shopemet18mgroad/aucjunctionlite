@@ -64,6 +64,35 @@
            
         });
     }
+    function addtowishlist(id){
+      $.get('<?php echo base_url() .'Cart_wishlist/addtowishlist/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_cart/'; ?>" 
+          }
+        });
+      
+    }
+    function removefromcart(id){
+        $.get('<?php echo base_url() .'Cart_wishlist/removefromcart/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_cart/'; ?>" 
+          }
+        });
+    }
+    function movetocart(id){
+      $.get('<?php echo base_url() .'Cart_wishlist/movetocart/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_wishlist/'; ?>" 
+          }
+        });
+    }
+    function removefromwishlist(id){
+      $.get('<?php echo base_url() .'Cart_wishlist/removefromwishlist/'; ?>'+id, function(data){
+          if(data=="OK"){
+            window.location = "<?php echo base_url() .'BuyerAuction_wishlist/'; ?>" 
+          }
+        });
+    }
   </script>
 </body>
 
