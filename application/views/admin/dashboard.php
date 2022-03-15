@@ -35,7 +35,7 @@
     <p class="card-text"style="color:black;"> COMPANY</p>
 	
 	
-	   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
+	   <a href="<?php echo base_url();?>Admin_addbussiness" class="btn  btn-lg" style="border-radius:20px;background-color:blue;color:white;" role="button" aria-disabled="true">REGISTER</a>
 	
 	
 	
@@ -62,7 +62,7 @@
   
    
     <p class="card-text" style="color:black;"> INDIVIDUAL</p>
-	   <a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" style="border-radius:20px;background-color:#03a9f463;color:white;" role="button" aria-disabled="true">REGISTER</a>
+	   <a href="<?php echo base_url();?>Admin_addseller" class="btn  btn-lg" style="border-radius:20px;background-color:blue;color:white;" role="button" aria-disabled="true">REGISTER</a>
 
   </div>
 </div></center>
