@@ -49,7 +49,7 @@ class Seller_startauction extends CI_Controller {
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		$active = array('iemailid'=>$sess['sessi']);
 		
 		$this->load->view('seller/header',$sess);
 		$this->load->view('Seller/startauction');

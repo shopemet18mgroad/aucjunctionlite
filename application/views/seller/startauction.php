@@ -140,7 +140,7 @@
  if(document.getElementById("icompanyname").value.length > 1){
 	 $("#dp").show();
 			var contents = $('#icompanyname').val(); 
-			$.get('<?php echo base_url() .'admin_startauction/get_seller_table/'; ?>'+contents, function(data){
+			$.get('<?php echo base_url() .'seller_startauction/get_seller_table/'; ?>'+contents, function(data){
 				$('#dp').html(data);
 			});
 
@@ -158,7 +158,7 @@
  if(document.getElementById("iemailid").value.length > 1){
 	 $("#dpp").show();
 			var contents = $('#iemailid').val(); 
-			$.get('<?php echo base_url() .'admin_startauction/get_email_table/'; ?>'+contents, function(data){
+			$.get('<?php echo base_url() .'seller_startauction/get_email_table/'; ?>'+contents, function(data){
 				$('#dpp').html(data);
 			});
 
@@ -192,13 +192,13 @@
  </script>
 	 <script>
 	 function getPagin(b){
-	 var a = b.split("|");
+	 var s = v.split("|");
 	
-	document.getElementById("iemailid").value = a[0];
+	document.getElementById("iemailid").value = s[0];
 	
 	
-    document.getElementById("icontactperson").value = a[1];
-	 $("#dp").hide();
+    document.getElementById("icontactperson").value = s[1];
+	 $("#dpp").hide();
  } 
 	  $('.ltype').click(function() {
   $('.ltype').not(this).prop('checked', false);

@@ -71,7 +71,13 @@ background-color:white;
 width:50px;
 height:100px;
 }
-
+#dp{
+background-color:#f5f5f5;
+color:#03AF463;
+ list-style-type:none;
+ font-size:20px;
+margin-top:10px;
+}
 
 
 
@@ -107,9 +113,7 @@ height:100px;
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
 				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
-			  
-              
-                       <ul class="dropdown-menu">
+          <ul class="dropdown-menu">
                   <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal">update Profile</a>
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 

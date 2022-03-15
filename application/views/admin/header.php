@@ -44,18 +44,16 @@
 #dp{
 background-color:#f5f5f5;
 color:#03AF463;
- list-style-type: none;
- font-size:20px;
+list-style-type: none;
+font-size:20px;
 margin-top:10px;
-
 }
 #dpp{
 background-color:#f5f5f5;
 color:#03AF463;
- list-style-type: none;
+ list-style-type:none;
 font-size:20px;
 margin-top:10px;
-
 }
 
 
@@ -74,11 +72,10 @@ margin-top:10px;
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"<a href="#"
+      <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
           /></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+     
 
       <nav id="navbar" class="navbar">
         <ul>
