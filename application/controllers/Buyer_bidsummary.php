@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_bidsummary extends CI_Controller {
+class Buyer_bidsummary extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -25,7 +25,7 @@ class Admin_bidsummary extends CI_Controller {
 		$this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index_error/'.$datainserr);
 			die;
@@ -40,9 +40,9 @@ class Admin_bidsummary extends CI_Controller {
 		
 		
 		
-		$this->load->view('admin/header',$sess);
-		$this->load->view('admin/bidsummary');
-		$this->load->view('admin/footer');
+		$this->load->view('buyer/header',$sess);
+		$this->load->view('buyer/bidsummary');
+		$this->load->view('buyer/footer');
 			}
 	}
 }

@@ -70,38 +70,11 @@ margin-top:10px;
 <body>
 
   <header id="header" class="fixed-top">
-  
-  
-  
-  
-
-  
-  
-  
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a href="#"
+      <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a>
-          
-          				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
-
-<script>
-function goBack() {
-  window.history.back();
-}
-</script>
-          
-          
- 
-          
-          
-          
-          
-          
-          
-          
-          </h1>
+          /></a></h1>
      
 
       <nav id="navbar" class="navbar">
@@ -161,18 +134,19 @@ function goBack() {
 			 <li><a href="<?php echo base_url();?>Admin_auctionapproval">Approve Forthcoming Auction</a></li>
             </ul>
             </li>
-			      <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+	   <li class="dropdown"><a href="<?php echo base_url();?>admin_aboutus"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>"> Auctions participated</a></li>
-             <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>">  Payment History</a></li>
+		
+				
+            <li><a href="<?php echo base_url();?>admin_aucparticipate"> Auction participated</a></li>
+             <li><a href="<?php echo base_url();?>admin_bidsummary">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>admin_win">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>admin_amount"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>admin_payment">  Payment History</a></li>
 			 
 			 
             </ul>
             </li>
-            
             
             
             

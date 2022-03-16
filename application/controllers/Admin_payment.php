@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_bidsummary extends CI_Controller {
+class Admin_payment extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -41,7 +41,7 @@ class Admin_bidsummary extends CI_Controller {
 		
 		
 		$this->load->view('admin/header',$sess);
-		$this->load->view('admin/bidsummary');
+		$this->load->view('admin/payment');
 		$this->load->view('admin/footer');
 			}
 	}

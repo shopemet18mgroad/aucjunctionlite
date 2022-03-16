@@ -81,7 +81,7 @@ margin-top:10px;
 
 .ab{
 	
-color:blue;	
+color:black;	
 font-size:30px;
 
 }
@@ -93,8 +93,31 @@ margin-top:-600px;
   
  .kk{
 	font-size:30px;
-	color:blue;
+	color:black;
  } 
+ .sums{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+ .nan{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+   .sd{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+  
+   .mode{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+   .ja{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+      
+  
   
 </style>
 
@@ -157,12 +180,19 @@ function goBack() {
           </div>
 
           </li>
+		  
 		   <li class="dropdown"><a href="#"><span>Accounts</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>">My Account</a></li>
-             <li><a href="<?php echo base_url();?>">Orders & Payments</a></li>
-                          <li><a href="<?php echo base_url();?>">My auctions</a></li>
-                                       <li><a href="<?php echo base_url();?>"> Messages and Notification</a></li>
+            <li><a href="<?php echo base_url();?>buyer_myaccount">My Account</a></li>
+			
+			
+             <li><a href="<?php echo base_url();?>buyer_orderpayment">Orders & Payments</a></li>
+			 
+			 
+                          <li><a href="<?php echo base_url();?>buyer_myauc">My auctions</a></li>
+						  
+						  
+                                       <li><a href="<?php echo base_url();?>buyer_message"> Messages and Notification</a></li>
             </ul>
             </li>
           
@@ -199,13 +229,15 @@ function goBack() {
 		
 			
 	
-	   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+	   <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>"> Auctions participated</a></li>
-             <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>">  Payment History</a></li>
+		
+				
+            <li><a href="<?php echo base_url();?>buyer_aucparticipate"> Auction participated</a></li>
+             <li><a href="<?php echo base_url();?>buyer_bidsummary">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>buyer_win">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>buyer_amount"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>buyer_payment">  Payment History</a></li>
 			 
 			 
             </ul>
@@ -217,11 +249,7 @@ function goBack() {
 	
 	
 	
-            <ul>
-            <li><a href="<?php echo base_url();?>">Auction Participated</a></li>
-       
-                                       
-            </ul>
+           
             </li>
           	
 		
