@@ -50,9 +50,23 @@
           <li> 
 
 
-          </li>
-          <li><a class="nav-link scrollto" href="<?php echo base_url();?>">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#">Contact Us</a></li>
+     
+		  		
+		
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			
+				
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			  
+		  
+		  
+		  
+		  
+
            <li><a class="nav-link scrollto" href="#">Privacy Policy</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
