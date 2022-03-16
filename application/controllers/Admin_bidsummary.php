@@ -40,3 +40,4 @@ class Admin_bidsummary extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 }
+			}

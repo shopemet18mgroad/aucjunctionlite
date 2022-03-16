@@ -42,8 +42,7 @@
       <h1 class="logo"<a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
           /></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -70,7 +69,14 @@
           />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-   <form class="user" action="<?php echo base_url()."ResetPassword";?>" method="post">
+  <form action= "<?php echo base_url();?>Forgot_password" method="post" enctype="multipart/form-data">
+   
+   
+   
+   
+   
+   
+   
    <?php 
    if(isset($errmsg) && $errmsg != NULL){ ?>
  <div class="alert alert-danger" role="alert">
@@ -80,6 +86,12 @@
           }
         ?>
          
+      
+            
+            
+            
+            
+            
 
           <div class="divider d-flex align-items-center my-2">
             <p class="text-center fw-bold mx-3 mb-0">Forgot Password</p>
@@ -87,8 +99,8 @@
 
           <!-- Email input -->
           <div class="form-outline mb-2">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+            <input type="email" id="email" name="email" class="form-control form-control-lg"
+              placeholder="" />
             <label class="form-label" for="form3Example3">Email address or Phone Number</label>
           </div>
 
@@ -108,7 +120,7 @@
              <div class="d-flex justify-content-between">
                <div class="text-center text-lg-start mt-1 pt-2 pb-5">
             <button type="submit" name="submit" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Reset</button>
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Sumbit</button>
               
              
              
@@ -116,12 +128,11 @@
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-              <input type="radio" id="radio-three" name="switch-two" value="seller" checked/>
+              <input type="radio" id="radio-three" name="switch-two" value="Seller"/>
               <label for="radio-three">Seller</label>
-              <input type="radio" id="radio-four" name="switch-two" value="buyer" />
+              <input type="radio" id="radio-four" name="switch-two" value="Buyer" />
               <label for="radio-four">Buyer</label>
-              <input type="radio" id="radio-five" name="switch-two" value="admin" />
-              <label for="radio-five">Admin</label>
+          
               
           </div>
         </div>

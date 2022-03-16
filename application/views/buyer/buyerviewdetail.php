@@ -82,7 +82,7 @@
       <th scope="row">AADHAR CARD<div style="font-size10px;colorred;">Click on image to view full image</div></th>
 	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModalCenter"></td>
+ alt="Chania" width="100px" height="150px" data-toggle="modal" data-target="#exampleModalCenter"></td>
     
     </tr>
 	<tr>
@@ -90,7 +90,7 @@
       <th scope="row">ADDRESS PROOF<div style="font-size10px;colorred;">Click on image to view full image</div></th>
 	  <td><?php $img = unserialize($sqldata1[0]->addressproof)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModal"></td>
+ alt="Chania" width="100px" height="150px" data-toggle="modal" data-target="#exampleModal"></td>
       
    </tr>
 	
