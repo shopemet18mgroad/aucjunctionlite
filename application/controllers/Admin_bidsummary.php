@@ -46,3 +46,4 @@ class Admin_bidsummary extends CI_Controller {
 			}
 	}
 }
+			}

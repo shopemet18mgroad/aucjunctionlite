@@ -12,7 +12,7 @@
                 <div class="p-5">
                   <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
 
-  <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multipart/form-data">   <form action= "<?php echo base_url();?>Admin_seller_basicinfo_add" method="post" enctype="multipart/form-data">
+  <form action="<?php echo base_url();?>Admin_buyer_basicinfo_add" method="post" enctype="multipart/form-data">   
                   <div class="row">
                  
                     <div class="col-md-12 mb-4 pb-2">

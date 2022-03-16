@@ -109,6 +109,7 @@ function goBack() {
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
                 <ul class="dropdown-menu">
+              
                                
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -132,7 +133,8 @@ function goBack() {
          
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>Seller_sellerupdate">Profile Update</a></li>
+            <li><a href="<?php echo base_url();?>Seller_sellerupdate">View Detail</a></li>
+            <li><a href="<?php echo base_url();?>Seller_ sellerviewdetail">Profile Update</a></li>
             
             </ul>
             </li>
@@ -147,11 +149,11 @@ function goBack() {
 			 
 			   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>"> Auctions participated</a></li>
-             <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>">  Payment History</a></li>
+            <li><a href="<?php echo base_url();?>Seller_auctionparticipated"> Auctions participated</a></li>
+             <li><a href="<?php echo base_url();?>Seller_bidsummary">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_winorlost">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_winnernameamount"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_paymenthistory">  Payment History</a></li>
 			 
 			 
             </ul>

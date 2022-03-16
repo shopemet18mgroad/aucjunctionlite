@@ -169,7 +169,7 @@ function goBack() {
 				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
           <ul class="dropdown-menu">
-                  <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal">update Profile</a>
+                  <a class="dropdown-item" href="<?php echo base_url(); ?>Buyer_buyerviewdetail">update Profile</a>
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
