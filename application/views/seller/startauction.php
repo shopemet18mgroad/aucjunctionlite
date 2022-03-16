@@ -1,8 +1,8 @@
 
-        
+        <link href="<?php echo base_url()."web_files/";?>css/mediaform.css" rel="stylesheet" type="text/css">
       
 		  
-		<form action="<?php echo base_url();?>seller_startauction/insert_auc" method="post" enctype="multipart/form-data">   
+		<form action="<?php echo base_url();?>Seller_startauction/insert_auc" method="post" enctype="multipart/form-data">   
               
 		  
         <main id="main">
@@ -33,7 +33,14 @@
 				<option value="Bike">Bike</option>
 				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
-				
+				<option value="Properties">Properties</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Toys">Toys</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Fashion">Fashion</option>
 				
 				</select>
                       </div>
@@ -111,13 +118,7 @@
 		   </section>
          
       </main>
-        
-        
-        
-        
-        
-
-     <script>
+       <script>
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
 	  //var cat2 = document.getElementById('irefid').value;
@@ -140,7 +141,7 @@
  if(document.getElementById("icompanyname").value.length > 1){
 	 $("#dp").show();
 			var contents = $('#icompanyname').val(); 
-			$.get('<?php echo base_url() .'admin_startauction/get_seller_table/'; ?>'+contents, function(data){
+			$.get('<?php echo base_url() .'seller_startauction/get_seller_table/'; ?>'+contents, function(data){
 				$('#dp').html(data);
 			});
 
@@ -158,7 +159,7 @@
  if(document.getElementById("iemailid").value.length > 1){
 	 $("#dpp").show();
 			var contents = $('#iemailid').val(); 
-			$.get('<?php echo base_url() .'admin_startauction/get_email_table/'; ?>'+contents, function(data){
+			$.get('<?php echo base_url() .'seller_startauction/get_email_table/'; ?>'+contents, function(data){
 				$('#dpp').html(data);
 			});
 
@@ -191,14 +192,14 @@
 
  </script>
 	 <script>
-	 function getPagin(b){
-	 var a = b.split("|");
+	 function getPagin(v){
+	 var s = v.split("|");
 	
-	document.getElementById("iemailid").value = a[0];
+	document.getElementById("iemailid").value = s[0];
 	
 	
-    document.getElementById("icontactperson").value = a[1];
-	 $("#dp").hide();
+    document.getElementById("icontactperson").value = s[1];
+	 $("#dpp").hide();
  } 
 	  $('.ltype').click(function() {
   $('.ltype').not(this).prop('checked', false);
@@ -289,16 +290,13 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, throw m-5nError, ajaxOptions){
 
-            },
         });
     }
 	
 	
 }
   </script>
-	
 	
 	
 	

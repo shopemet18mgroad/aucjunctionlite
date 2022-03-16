@@ -118,13 +118,7 @@
 		   </section>
          
       </main>
-        
-        
-        
-        
-        
-
-     <script>
+       <script>
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
 	  //var cat2 = document.getElementById('irefid').value;
@@ -198,14 +192,14 @@
 
  </script>
 	 <script>
-	 function getPagin(b){
-	 var a = b.split("|");
+	 function getPagin(v){
+	 var s = v.split("|");
 	
-	document.getElementById("iemailid").value = a[0];
+	document.getElementById("iemailid").value = s[0];
 	
 	
-    document.getElementById("icontactperson").value = a[1];
-	 $("#dp").hide();
+    document.getElementById("icontactperson").value = s[1];
+	 $("#dpp").hide();
  } 
 	  $('.ltype').click(function() {
   $('.ltype').not(this).prop('checked', false);
@@ -296,16 +290,13 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, throw m-5nError, ajaxOptions){
 
-            },
         });
     }
 	
 	
 }
   </script>
-	
 	
 	
 	

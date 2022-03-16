@@ -44,18 +44,17 @@
 #dp{
 background-color:#f5f5f5;
 color:#03AF463;
- list-style-type: none;
+ list-style-type:none;
  font-size:20px;
 margin-top:10px;
-
 }
+
 #dpp{
 background-color:#f5f5f5;
 color:#03AF463;
- list-style-type: none;
+list-style-type:none;
 font-size:20px;
 margin-top:10px;
-
 }
 
 
@@ -74,9 +73,30 @@ margin-top:10px;
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"<a href="#"
+      <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+          /></a>
+          
+          
+          
+                    				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+         
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
    
       <nav id="navbar" class="navbar">
         <ul>
@@ -89,6 +109,7 @@ margin-top:10px;
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
               </a>
                 <ul class="dropdown-menu">
+              
                                
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -112,7 +133,8 @@ margin-top:10px;
          
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>Seller_sellerupdate">Profile Update</a></li>
+            <li><a href="<?php echo base_url();?>Seller_sellerviewdetail">View Detail</a></li>
+ <li><a href="<?php echo base_url();?>Seller_sellerupdate">Profile Update</a></li>
             
             </ul>
             </li>
@@ -127,9 +149,13 @@ margin-top:10px;
 			 
 			   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
-             <li><a href="<?php echo base_url();?>">Bid Winner</a></li>
-			 <li><a href="<?php echo base_url();?>">Bid Loser</a></li>
+            <li><a href="<?php echo base_url();?>Seller_auctionparticipated"> Auctions participated</a></li>
+             <li><a href="<?php echo base_url();?>Seller_bidsummary">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_winorlost">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_winnernameamount"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_paymenthistory">  Payment History</a></li>
+			 
+			 
             </ul>
             </li>
             

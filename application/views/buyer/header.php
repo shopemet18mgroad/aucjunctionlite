@@ -43,7 +43,7 @@
 
 
    
- @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px)  {
+ @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px){
 
 
 	/*  Force table to not be like tables anymore  */
@@ -71,10 +71,53 @@ background-color:white;
 width:50px;
 height:100px;
 }
+#dp{
+background-color:#f5f5f5;
+color:#03AF463;
+ list-style-type:none;
+ font-size:20px;
+margin-top:10px;
+}
 
+.ab{
+	
+color:black;	
+font-size:30px;
 
+}
 
-
+.suma{
+padding-left:600px;
+margin-top:-600px;	  
+  }
+  
+ .kk{
+	font-size:30px;
+	color:black;
+ } 
+ .sums{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+ .nan{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+   .sd{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+  
+   .mode{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+   .ja{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+      
+  
   
 </style>
 
@@ -95,7 +138,25 @@ height:100px;
 
       <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+          /></a>
+		  
+	          				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+         	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  </h1>
      
 
       <nav id="navbar" class="navbar">
@@ -107,10 +168,8 @@ height:100px;
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
 				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
-			  
-              
-                       <ul class="dropdown-menu">
-                  <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal">update Profile</a>
+          <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="<?php echo base_url(); ?>Buyer_buyerviewdetail">update Profile</a>
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -121,12 +180,19 @@ height:100px;
           </div>
 
           </li>
+		  
 		   <li class="dropdown"><a href="#"><span>Accounts</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>">My Account</a></li>
-             <li><a href="<?php echo base_url();?>">Orders & Payments</a></li>
-                          <li><a href="<?php echo base_url();?>">My auctions</a></li>
-                                       <li><a href="<?php echo base_url();?>"> Messages and Notification</a></li>
+            <li><a href="<?php echo base_url();?>buyer_myaccount">My Account</a></li>
+			
+			
+             <li><a href="<?php echo base_url();?>buyer_orderpayment">Orders & Payments</a></li>
+			 
+			 
+                          <li><a href="<?php echo base_url();?>buyer_myauc">My auctions</a></li>
+						  
+						  
+                                       <li><a href="<?php echo base_url();?>buyer_message"> Messages and Notification</a></li>
             </ul>
             </li>
           
@@ -162,12 +228,28 @@ height:100px;
 		
 		
 			
-	<li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+	
+	   <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>">Auction Participated</a></li>
-       
-                                       
+		
+				
+            <li><a href="<?php echo base_url();?>buyer_aucparticipate"> Auction participated</a></li>
+             <li><a href="<?php echo base_url();?>buyer_bidsummary">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>buyer_win">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>buyer_amount"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>buyer_payment">  Payment History</a></li>
+			 
+			 
             </ul>
+            </li>
+            
+	
+	
+	
+	
+	
+	
+           
             </li>
           	
 		
@@ -176,9 +258,20 @@ height:100px;
 	<li class="dropdown"><a href="#"><span>Policies</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>">Privacy Policy</a></li>
-             <li><a href="<?php echo base_url();?>">About Us</a></li>
-                          <li><a href="<?php echo base_url();?>">Contact Us </a></li>
-                                       
+            
+                  <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			    
+                   
+		
+		
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			
+
+				   
             </ul>
             </li>
           	

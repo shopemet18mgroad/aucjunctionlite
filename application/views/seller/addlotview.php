@@ -28,12 +28,24 @@
 	  <td><?php echo $sqldata1[0]->isubcategory ?></td>
       
     </tr><br>
+	   <tr>
+     
+      <th scope="row">product Name </th>
+	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
+      
+    </tr><br>
+	
+	
+	
+	
+	
     <tr>
      
       <th scope="row">product Description  </th>
 	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
       
     </tr><br>
+	
 	
 	<tr>
      
@@ -72,8 +84,26 @@
 	</tr>
 	
 	
+		
+	<tr>
+     
+      <th scope="row">Category </th>
+	   <td><?php echo $sqldata1[0]->icategory ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row">Sub-category </th>
+	   <td><?php echo $sqldata1[0]->isubcategory ?></td>
+      
+    </tr>
 	
-	
+	<tr>
+     
+      <th scope="row">product Description </th>
+	   <td><?php echo $sqldata1[0]->iproductdes ?></td>
+      
+    </tr>
 	<tr>
      
       <th scope="row">Inspection Date </th>
@@ -89,6 +119,34 @@
 	     
 	   </td>
     </tr>
+	
+		<tr>
+     
+      <th scope="row">Current location </th>
+	   <td><?php echo $sqldata1[0]->currentlocation ?></td>
+      
+    </tr>
+	
+		<tr>
+     
+      <th scope="row"> Expected price</th>
+	   <td><?php echo $sqldata1[0]->imrp ?></td>
+      
+    </tr>
+	
+		<tr>
+     
+      <th scope="row"> Expected price</th>
+	   <td><?php echo $sqldata1[0]->startaucprice ?></td>
+      
+    </tr>
+	
+	
+	
+	
+	
+	
+
 	
 	<tr>
      
@@ -133,9 +191,9 @@
 	
 	<tr>
      
-      <th scope="row">Upload photos* <br> <div style="font-size:10px; color:red;">click on image to view full images </div></th>
+      <th scope="row">Upload photos* <br> <div style="font-size:10px;color:red;">click on image to view full images </div></th>
 	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
-	   
+	     
 	   
 	    <?php foreach($img as $sql){?> 
 	   
@@ -174,9 +232,9 @@
       </div>
       <div class="modal-body">
     
-	  <?php foreach($sqldata1 as $sqldat){?> 
+	
 	  
-	   <?php $img = unserialize($sqldat->imageupload);?>
+	   <?php $img = unserialize($sqldata1[0]->imageupload);?>
 	  
 	  
 	  <?php foreach($img as $sql){?> 
@@ -188,7 +246,7 @@
 		
 	  <?php } ?>	
 		
-	  <?php } ?>
+	
 		
       </div>
       <div class="modal-footer">

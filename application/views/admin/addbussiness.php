@@ -207,7 +207,7 @@
                     </div>
                   </div>
                   
-                 	<input type="hidden" id="role" name="role"  value="BUSSINESS"> 
+                 	<input type="hidden" id="role" name="role"  value="COMPANY"> 
                   
 
                  

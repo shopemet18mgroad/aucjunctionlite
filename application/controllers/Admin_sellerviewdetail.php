@@ -31,21 +31,17 @@ class Admin_sellerviewdetail extends CI_Controller {
 			}else{
 		$this->load->model('Admin_model');
 		
-		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		
+		$active = array('iemailid'=>$sess['sessi']);
 		
 	
-		
-	$this->load->model('Admin_model');
-
-	$sl_no = urldecode($this->uri->segment(3));
 	
-	$active = array('sl_no'=>$sl_no);
 	
 	$query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
-	
 	$data['sqldata1']= $query;
+	
+	$sess = array('sessi'=>$this->session->userdata('username'));
 		
 	
 	    $this->load->view('admin/header',$sess);	
