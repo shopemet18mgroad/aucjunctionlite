@@ -79,8 +79,22 @@ color:#03AF463;
 margin-top:10px;
 }
 
+.ab{
+	
+color:blue;	
+font-size:30px;
 
+}
 
+.suma{
+padding-left:600px;
+margin-top:-600px;	  
+  }
+  
+ .kk{
+	font-size:30px;
+	color:blue;
+ } 
   
 </style>
 
@@ -184,7 +198,25 @@ function goBack() {
 		
 		
 			
-	<li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+	
+	   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>"> Auctions participated</a></li>
+             <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>">  Payment History</a></li>
+			 
+			 
+            </ul>
+            </li>
+            
+	
+	
+	
+	
+	
+	
             <ul>
             <li><a href="<?php echo base_url();?>">Auction Participated</a></li>
        
@@ -198,9 +230,20 @@ function goBack() {
 	<li class="dropdown"><a href="#"><span>Policies</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>">Privacy Policy</a></li>
-             <li><a href="<?php echo base_url();?>">About Us</a></li>
-                          <li><a href="<?php echo base_url();?>">Contact Us </a></li>
-                                       
+            
+                  <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			    
+                   
+		
+		
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			
+
+				   
             </ul>
             </li>
           	

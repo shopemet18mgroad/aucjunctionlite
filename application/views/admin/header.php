@@ -161,11 +161,15 @@ function goBack() {
 			 <li><a href="<?php echo base_url();?>Admin_auctionapproval">Approve Forthcoming Auction</a></li>
             </ul>
             </li>
-			   <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+			      <li class="dropdown"><a href="#"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
-             <li><a href="<?php echo base_url();?>">Bid Winner</a></li>
-			 <li><a href="<?php echo base_url();?>">Bid Loser</a></li>
+            <li><a href="<?php echo base_url();?>"> Auctions participated</a></li>
+             <li><a href="<?php echo base_url();?>">Bid Summary</a></li>
+			 <li><a href="<?php echo base_url();?>">Win or Lost to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>"> Winner name and amount to be displayed</a></li>
+			 <li><a href="<?php echo base_url();?>">  Payment History</a></li>
+			 
+			 
             </ul>
             </li>
             

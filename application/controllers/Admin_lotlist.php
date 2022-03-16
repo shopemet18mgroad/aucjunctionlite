@@ -59,7 +59,7 @@ class Admin_lotlist extends CI_Controller {
 		
 		
 	}	
-	
+	}
 	public function seller_delete(){
 
 $sl_ano  = urldecode($this->uri->segment(3));
