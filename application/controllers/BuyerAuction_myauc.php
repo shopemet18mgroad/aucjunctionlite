@@ -27,7 +27,8 @@ class BuyerAuction_myauc extends CI_Controller {
 	
 	public function index()
 	{ 
-		
+		date_default_timezone_set("Asia/Kolkata"); 
+		$date = date('Y-m-d H:i:s'); 
 		 $this->load->model('Admin_model');
 		$this->load->library('session');	
 		
@@ -39,23 +40,28 @@ class BuyerAuction_myauc extends CI_Controller {
 		$this->load->model('Admin_model');
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		$sqldata1 = $this->Admin_model->get_all_auctions_user($this->session->userdata('username'));
+		//print_r($sqldata1);die;
 		$allaucarray =  array();
 
 		foreach($sqldata1 as $sql){
-			$aucdet = $this->Admin_model->get_singleauction($sql->auction_id);
-			array_push($allaucarray,$aucdet);
+			$aucdet = $this->Admin_model->get_singleauction($sql->auction_id, $date);
+			if(count($aucdet)){
+				array_push($allaucarray,$aucdet);
+			}
+			
 		}
 		$allauc['allaucdata'] = $allaucarray;
         $allauc['checked'] = "ALL";
-
+		//print_r( $allauc);die;
 		//$active = array('buyeremail'=>$sess['sessi']);
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_myauc',$allauc);
 		$this->load->view('buyer/footer');
-	
 		}
 		}
         public function live(){
+			date_default_timezone_set("Asia/Kolkata"); 
+			$date = date('Y-m-d H:i:s'); 
             $this->load->model('Admin_model');
             $this->load->library('session');	
             
@@ -70,14 +76,17 @@ class BuyerAuction_myauc extends CI_Controller {
             $allaucarray =  array();
     
             foreach($sqldata1 as $sql){
-                $aucdet = $this->Admin_model->get_singleauction($sql->auction_id);
-                array_push($allaucarray,$aucdet);
+                $aucdet = $this->Admin_model->get_singleauction_live($sql->auction_id, $date);
+				if(count($aucdet)){
+					array_push($allaucarray,$aucdet);
+				}
+               
             }
             $allauc['allaucdata'] = $allaucarray;
             $allauc['checked'] = "LIVE";
             //$active = array('buyeremail'=>$sess['sessi']);
             $this->load->view('buyer/header',$sess);
-            $this->load->view('buyer/auctionlist_myauc',$allauc);
+            $this->load->view('buyer/auctionlist_myauclive',$allauc);
             $this->load->view('buyer/footer');
         
             }
