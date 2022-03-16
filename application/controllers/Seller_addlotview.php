@@ -20,8 +20,8 @@ class Seller_addlotview extends CI_Controller {
 	 */
 	public function index()
 	{
-			$this->load->model('Admin_model');
-		$this->load->library('session');
+   $this->load->model('Admin_model');
+   $this->load->library('session');
 		
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
@@ -32,15 +32,15 @@ class Seller_addlotview extends CI_Controller {
 		$this->load->model('Admin_model');
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
+			$active = array('iemailid'=>$sess['sessi'],'aoption'=>true);
 		
-		$active = array('iemailid'=>$sess['sessi']);
 		
 		
 		
 	$this->load->model('Admin_model');
-     $active = array('aoption '=>true);
+  
 	
-	$query = $this->Admin_model->getaddlotauctiondetails('auction', $active);
+	$query = $this->Admin_model->getaddlotauctiondetails('auction',$active);
 	
 	$data['sqldata1']= $query;
 	
