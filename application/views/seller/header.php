@@ -133,8 +133,8 @@ function goBack() {
          
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>Seller_sellerupdate">View Detail</a></li>
-            <li><a href="<?php echo base_url();?>Seller_ sellerviewdetail">Profile Update</a></li>
+            <li><a href="<?php echo base_url();?>Seller_sellerviewdetail">View Detail</a></li>
+ <li><a href="<?php echo base_url();?>Seller_sellerupdate">Profile Update</a></li>
             
             </ul>
             </li>
