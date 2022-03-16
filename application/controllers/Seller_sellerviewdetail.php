@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_sellerviewdetail extends CI_Controller {
+class Seller_sellerviewdetail extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -24,29 +24,28 @@ class Admin_sellerviewdetail extends CI_Controller {
 		$this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
+	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
 		
-		
-		
-		$active = array('iemailid'=>$sess['sessi']);
-		
 	
-	
+		
+		$sess = array('sessi'=>$this->session->userdata('username'));
+			$active = array('iemailid'=>$sess['sessi']);
+		
+
 	
 	$query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
-	$data['sqldata1']= $query;
 	
-	$sess = array('sessi'=>$this->session->userdata('username'));
+	$data['sqldata1']= $query;
 		
 	
-	    $this->load->view('admin/header',$sess);	
-		$this->load->view('admin/sellerviewdetail',$data);
-		$this->load->view('admin/footer');
+	    $this->load->view('seller/header',$sess);	
+		$this->load->view('seller/sellerviewdetail',$data);
+		$this->load->view('seller/footer');
 	}
 }
 }

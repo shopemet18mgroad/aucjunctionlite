@@ -75,7 +75,28 @@ margin-top:10px;
 
       <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+          /></a>
+          
+          
+          
+                    				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+         
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
    
       <nav id="navbar" class="navbar">
         <ul>

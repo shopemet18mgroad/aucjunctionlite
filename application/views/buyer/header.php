@@ -43,7 +43,7 @@
 
 
    
- @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px)  {
+ @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px){
 
 
 	/*  Force table to not be like tables anymore  */
@@ -101,7 +101,25 @@ margin-top:10px;
 
       <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+          /></a>
+		  
+	          				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+         	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  </h1>
      
 
       <nav id="navbar" class="navbar">
