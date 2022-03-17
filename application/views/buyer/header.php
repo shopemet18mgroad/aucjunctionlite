@@ -235,10 +235,7 @@ function goBack() {
 		
 				
             <li><a href="<?php echo base_url();?>buyer_aucparticipate"> Auction participated</a></li>
-             <li><a href="<?php echo base_url();?>buyer_bidsummary">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_win">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_amount"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_payment">  Payment History</a></li>
+            
 			 
 			 
             </ul>

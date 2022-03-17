@@ -21,42 +21,18 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 	 
 	 	public function index()
 	{
-			$this->load->model('Admin_model');
-		$this->load->library('session');
-		
-		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
-			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('aname'=>$sess['sessi']);
-		
-		$this->load->view('admin/header',$sess);
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
-	    $iname = $this->input->post('iname'); 
+	    echo $iname = $this->input->post('iname'); die;
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
 		$iemailid  = $this->input->post('iemailid');
 		
 		
-		$iadharcardfile  = $this->input->post('iadharcardfile');
+		$iadharcardfile = $this->input->post('iadharcardfile');
 		
 		$iaddres  = $this->input->post('iaddres');
 		$iicity  = $this->input->post('iicity');
@@ -68,8 +44,14 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 		
 		
-			 $a = $_FILES['iadharcardfile']['name']; 
-			  $pic_array1 = self::upload_files('iadharcardfile');
+			 echo $a = $_FILES['iadharcardfile']['name']; 
+			 die;
+			 if($_FILES['iadharcardfile']['name'])){
+				 $pic_array1 = self::upload_files('iadharcardfile');
+			 }else{
+				 echo "No file"; die;
+			 }
+			  
 		 
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -81,7 +63,10 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		}
 		  
 			  $b = $_FILES['iaddresprof']['name']; 
-		  $pic_array2 = self::upload_files('iaddresprof');
+			   if(isset($_FILES['iadharcardfile']['name'])){
+				   $pic_array2 = self::upload_files('iaddresprof');
+			   }
+		  
 	   if(!count($pic_array2)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
