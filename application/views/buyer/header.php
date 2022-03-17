@@ -88,7 +88,9 @@ font-size:30px;
 
 .suma{
 padding-left:600px;
-margin-top:-600px;	  
+margin-top:-600px;
+   font-family: Arial, Helvetica, sans-serif;	 
+	  
   }
   
  .kk{
@@ -169,7 +171,7 @@ function goBack() {
 				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
           <ul class="dropdown-menu">
-                  <a class="dropdown-item" href="<?php echo base_url(); ?>Buyer_buyerviewdetail">update Profile</a>
+             
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -183,16 +185,15 @@ function goBack() {
 		  
 		   <li class="dropdown"><a href="#"><span>Accounts</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>buyer_myaccount">My Account</a></li>
+            <li><a href="<?php echo base_url();?>buyer_buyerviewdetail">My account</a></li>
 			
 			
              <li><a href="<?php echo base_url();?>buyer_orderpayment">Orders & Payments</a></li>
 			 
 			 
-                          <li><a href="<?php echo base_url();?>buyer_myauc">My auctions</a></li>
+                          <li><a href="<?php echo base_url();?>BuyerAuction_myauc">My auctions</a></li>
 						  
 						  
-                                       <li><a href="<?php echo base_url();?>buyer_message"> Messages and Notification</a></li>
             </ul>
             </li>
           

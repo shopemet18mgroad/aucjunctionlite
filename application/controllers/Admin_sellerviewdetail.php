@@ -26,22 +26,26 @@ class Admin_sellerviewdetail extends CI_Controller {
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index/'.$datainserr);
+			header('location: '.base_url().'login/index_error/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
 		
+		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		
-		$active = array('iemailid'=>$sess['sessi']);
+		$active = array('aname'=>$sess['sessi']);
 		
 	
+		
+	$this->load->model('Admin_model');
+
+	$sl_no = urldecode($this->uri->segment(3));
 	
+	$active = array('sl_no'=>$sl_no);
 	
 	$query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
-	$data['sqldata1']= $query;
 	
-	$sess = array('sessi'=>$this->session->userdata('username'));
+	$data['sqldata1']= $query;
 		
 	
 	    $this->load->view('admin/header',$sess);	
