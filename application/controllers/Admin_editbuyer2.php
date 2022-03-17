@@ -37,16 +37,7 @@ class Admin_editbuyer2 extends CI_Controller {
 		$active = array('aname'=>$sess['sessi']);
 		
 		
-		
-			$this->load->model('Admin_model');
-		
-     $sl_ano = urldecode($this->uri->segment(3));
 	
-	$active = array('sl_ano'=>$sl_ano);
-	
-	$query = $this->Admin_model->getdatafromtable('auction', $active);
-	
-	$data['sqldata']= $query;
 	
 	
 		

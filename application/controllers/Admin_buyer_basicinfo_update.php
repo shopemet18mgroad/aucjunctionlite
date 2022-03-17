@@ -41,6 +41,7 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		$buyerpincode  = $this->input->post('buyerpincode');
 		$buyercontactperson  = $this->input->post('buyercontactperson');
 		$addressproof  = $this->input->post('addressproof');
+	    $buysl_no  = $this->input->post('buysl_no');
 	
 		
 		
@@ -75,9 +76,9 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		
 	
 			$this->load->model('Admin_model');
-			 $data2 = array('buyername' => $buyername, 'buyercontactnumber' => $buyercontactnumber,
+			 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
 			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
-			 'buyeradharcard'=> $buyeradharcard, 'buyeraddress' => $buyeraddress,
+			 'buyeradharcard'=> $pic_array1, 'buyeraddress' => $buyeraddress,
 			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
 			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
 			 'addressproof'=>$pic_array2 );

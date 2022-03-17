@@ -8,47 +8,248 @@
    <div class="container  mr-5 mb-5 ">
     
 
-<span class="ab"><b>WWW.AUCJUNCTIONLITE.COM </span><br>a brand/subsidiary of Shopemet Networks Pvt Ltd
-           <br>Aucjunctionlite (Brand/Subsidiary)was Founded in March 2020 in Silicon City Of India.
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bid Summary</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Bid Winner</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+  
+  
+        <!-- partial -->
+        
+        
+        
+        
+        
+        
+        <div class="main-panel">
+		
+          <div class="content-wrapper">
+		  
+		  
+		  
+		  
+		  
+        
+            
+       <div class="col-lg-12 grid-margin stretch-card">
+	   
+	   
+	   
+	   
+	   
+              <div class="card">
+			  
+			  
+                <div class="card-body">
 				
-				 <div class="modal-body">Aucjunctionlite ie Shopemet Networks Pvt Ltd boasts of its people-friendly environment, with a  team  for new challenges, and constantly innovating.   we continuously strive to provide the best raw materials experience to our Industrial and other customers. Our core team has over years of combined experience in Smelting, Manufacturing, Internet, Technology, Operations Management and Retail, primarily in Silicon City.</div>
-				 
-				 <div class="modal-body">Here at Aucjunctionlite, our customers/buyers, Sellers/Suppliers and their interest is our topmost priority. We consistently strive to deliver the best-in class trusted New Rawmaterials and other manufacturing material procurement experience by providing a wide selection of products across diverse categories Like –1.Metals New, 2.Metals Secondary, 3.Ferrous,  4.Non Ferrous, 5.Minor Metals, 6.Industrial Supplies, 8.Construction materials, 9.Plastics, 10.Papers and other Raw Materials  - at the best price with seller and buyer negotiations!</div>
-				 
 			
-                    <h5 class="kk"><b>Our Mission @ Aucjunctionlite</h5>
-             
+					<hr>
 				
-				 To Provide the Best Supply and raw material procurement Solutions for all Industries; To build the largest network of Industrial Raw materials buyers at all levels; to build a platform where we can assimilate & process the world's Raw materials inventory and sync it with our customer and associates.</div>
-	
-				<h6 class="kk"><b> Our vision</b> </h6>Our vision is to participate consistently in extending generation limits and expanding our Raw material supplying, Auctioning and Multi business capacities with specific goals to meet the developing world wide demand and therefore hold our position at the front of Industrial and Service Business.
-To Be industry leader in delivering quality products and quality services and innovative solutions that address our partner suppliers and customers most challenging Raw material and supply needs and Disposal needs for the future. Our efforts is our belief we must operate as a company committed to BCOC and Principle Values.
-</div>
-				 
-				 <div class="modal-body">
-				 Our vision is about more than Metals it is about reinforcing the economic and social benefits associated with strong Indian and Global Manufacturing Capabilities of which metals is a foundational industry.
-We are committed to finding ways to innovate, grow, and overcome obstacles in order to create value and benefit the long-term interests of all Aucjunctionlite / Shopemet Networks Pvt Ltd stakeholders, employees, suppliers, customers, industries and the communities where we do business.
-</div>
-
-			<div class="modal-body">Aucjunctionlite’s biggest assets are our people, and we treasure what they have to say about their experience.
-
-Aucjunctionlite is defined by its fun, collegial, and high energy environment. At Aucjunctionlite, one can finds opportunities to grow professionally and personally, meet goals, and set higher benchmarks for oneself, We Love Encouraging Our Employees.</div>
-
-			
-                   <h5  class="kk"> <b>DEPARTMENTS </b></h5>
+				
+				
+				
+				
+				
+                  <h4 class="card-title">Bidding History list</h4>
+                
+                  <div class="table-responsive">
+                    <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
+                      <thead>
+					  <tr>
+		<th colspan="12">Bidding History</th>
+		</tr>
+                        <tr>
+						
+                          <th>
+                            AUCTION ID
+                          </th>
+                          <th>
+                              LOT NAME 
+                          </th>
+                          <th>
+                          Close Time
+                          </th>
                   
-				  
-				  <div class="modal-body">1- MARKETING<br/>
-											2-OPERATIONS<br/>
-											3-TECHNOLOGY<br/>
-											4-FINANCE<br/>
-											5-DIGITAL<br/>
-											6-ADMIN<br/>
-				</div>
+						 
+                        </tr>
+						
+                      </thead>
+                      <tbody>
+                        <tr>
+						 <td>
+                        
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                            
+                          </td>
+                          
+                      
+                        </tr>
+                      
+                
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+       
+          <!-- partial -->
+        </div>
+     
+        
+        
+        
+        
+        
+        
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
 
-<div class="modal-body">If you’re looking for a career-defining moment and not just another job opportunity, apply today: admin@Aucjunctionlite.com / hr@shopemet.com Jobs you may be interested in:
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  
+  
+  
+  
+  
+        <!-- partial -->
+        
+        
+        
+        
+        
+        
+        <div class="main-panel">
+		
+          <div class="content-wrapper">
+		  
+		  
+		  
+		  
+		  
+        
+            
+       <div class="col-lg-12 grid-margin stretch-card">
+	   
+	   
+	   
+	   
+	   
+              <div class="card">
+			  
+			  
+                <div class="card-body">
+				
+			
+					<hr>
+				
+				
+				
+				
+				
+				
+                  <h4 class="card-title">Bidding History list</h4>
+                
+                  <div class="table-responsive">
+                    <table class="table table-striped table-bordered" id="myTable" cellspacing="0" width="100%">
+                      <thead>
+					  <tr>
+		<th colspan="12">Bidding History</th>
+		</tr>
+                        <tr>
+						
+                          <th>
+                            AUCTION ID
+                          </th>
+                          <th>
+                              LOT NAME 
+                          </th>
+                          <th>
+                          Close Time
+                          </th>
+                  
+						 
+                        </tr>
+						
+                      </thead>
+                      <tbody>
+                        <tr>
+						 <td>
+                        
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                            
+                          </td>
+                          
+                      
+                        </tr>
+                      
+                
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+       
+          <!-- partial -->
+        </div>
+     
+        
+        
+        
+        
+        
+        
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
 
-Get to know us better by connecting with us on our Facebook, Twitter, Google , Youtube channels.</b>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+</div>
 			 
 </div>
 </div>

@@ -61,7 +61,7 @@ class Forgot_password extends CI_Controller {
     $emailContent .='<tr><td style="height:20px"></td></tr>';
     $emailContent .= "<tr><td style='color:white;padding: 2%;text-align: center;font-size: 13px;'><p style='margin-top:1px;'><a href='http://aucjunctionlite.com/' target='_blank' style='text-decoration:none;color: orange;'><b>www.Aucjunctionlite24.com</b></a></p></td></tr></table></body></html>";
                 
-print_r($emailContent);die;
+//print_r($emailContent);die;
 
     $config['protocol']  = 'smtp';
     $config['smtp_host']  = 'ssl://smtp.gmail.com';

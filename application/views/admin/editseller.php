@@ -322,49 +322,4 @@
 </section>
 
     <!-- ======= Breadcrumbs ======= -->
-    
-    
-    <script>
-
- function meghasuma(){
-	 var cat = document.getElementById('role').value;
-	
-	 
-	
-	 }
-	 if(cat == "INDIVIDUAL"){
-		 
-		   
-		   document.getElementById('iadharcardfile').value = "";
-           document.getElementById('iaddresprof').value = "";
-		  
-		  
-		   $(".iadharcardfile").hide();
-           $(".iaddresprof").hide();
-
-		   return false;
-		   
-		   
-	
- }
  
- 
- 
- 
- 
-
-</script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  

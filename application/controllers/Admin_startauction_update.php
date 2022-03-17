@@ -79,7 +79,7 @@ class Admin_startauction_update extends CI_Controller {
 		
 		
 		
-		
+	}	
 		
 }
 	

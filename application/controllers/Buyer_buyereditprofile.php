@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Buyer_myaccount extends CI_Controller {
+class Buyer_buyereditprofile extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,30 +19,32 @@ class Buyer_myaccount extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{ 
-		
-		 $this->load->model('Admin_model');
-		$this->load->library('session');
+	{
+			
+	        $this->load->model('Admin_model');
+            $this->load->library('session');
 		
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
+			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
 			}else{
 		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('buyeremail'=>$sess['sessi']);
-		
-		
-		
-		
-		
+			$sess = array('sessi'=>$this->session->userdata('username'));
+	
+	$buysl_no = urldecode($this->uri->segment(3));
+	
+	$active = array('buysl_no'=>$buysl_no,'buyeremail'=>$sess['sessi']);
+	
+	$query = $this->Admin_model->getdatafromtable('buyerdetails', $active);
+	
+	$data['sqldata'] = $query;
+	
+	
 		$this->load->view('buyer/header',$sess);
-		$this->load->view('buyer/myaccount');
+		$this->load->view('buyer/buyereditprofile',$data);
 		$this->load->view('buyer/footer');
-			}
 	}
+}
 }
