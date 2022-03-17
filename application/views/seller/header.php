@@ -120,9 +120,16 @@ function goBack() {
 
           </li>
         
+     
         
-        
-        
+
+		   <li class="dropdown"><a href="#"><span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>Seller_sellerviewdetail">My account</a></li>
+
+            
+            </ul>
+            </li>
         
         
         

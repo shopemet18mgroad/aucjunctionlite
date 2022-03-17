@@ -21,29 +21,6 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 	 
 	 	public function index()
 	{
-			$this->load->model('Admin_model');
-		$this->load->library('session');
-		
-		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
-			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('iemailid'=>$sess['sessi']);
-		
-		$this->load->view('seller/header',$sess);
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		$this->load->library('fileupload');
@@ -104,7 +81,7 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
 			 'iaddresprof'=>$pic_array2 );
-
+print_r($data2); die;
 			  
 			  $datainserr = "Data Inserted Successfully";
 			  $updatech = array('sl_no' => $sl_no);
@@ -112,10 +89,10 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 			 
 			  $status = $this->Admin_model->update_custom('sellerdetails',$data2,$updatech,$updatech);
 		
-		header('location: '.base_url().'Seller_editsellerlist/index/'.$datainserr);
+		header('location: '.base_url().'Admin_editsellerlist/index/'.$datainserr);
 	
 		
-		}
+	
 	}
 		
 		

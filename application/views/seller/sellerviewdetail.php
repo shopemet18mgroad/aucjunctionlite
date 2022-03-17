@@ -12,7 +12,20 @@
       <div class="container mt-5 mb-5">
         <div class="row border border-dark">
           
-			<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:25px;" ><i><?php echo $sqldata1[0]->role ?>&nbsp; DETAILS </i>  </div></center>
+			
+	
+	
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >DETAILS  
+	<a  href="<?php echo base_url()."Seller_editseller/index/".urldecode($sqldata1[0]->sl_no);?>"><i class="fas fa-edit" style="font-size:28px;" ></i><a> </div></center>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
    <table class="table table-striped" style="font-size:12px;">
 <tbody>
