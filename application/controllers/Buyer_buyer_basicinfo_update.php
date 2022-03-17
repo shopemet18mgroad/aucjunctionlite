@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_buyer_basicinfo_update extends CI_Controller {
+class Buyer_buyer_basicinfo_update extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -41,7 +41,7 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 		$buyerpincode  = $this->input->post('buyerpincode');
 		$buyercontactperson  = $this->input->post('buyercontactperson');
 		$addressproof  = $this->input->post('addressproof');
-	    $buysl_no  = $this->input->post('buysl_no');
+		$buysl_no  = $this->input->post('buysl_no');
 	
 		
 		
@@ -78,19 +78,20 @@ class Admin_buyer_basicinfo_update extends CI_Controller {
 			$this->load->model('Admin_model');
 			 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
 			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
-			 'buyeradharcard'=> $pic_array1, 'buyeraddress' => $buyeraddress,
+			 'buyeradharcard'=>$pic_array1, 'buyeraddress' => $buyeraddress,
 			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
 			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
 			 'addressproof'=>$pic_array2 );
-
+//print_r($data2);die;
 			 
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('buysl_no ' => $buysl_no );
+			  $updatech = array('buysl_no' => $buysl_no );
+			 // print_r($updatech); die;
 
 			 
 			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);
 		
-		header('location: '.base_url().'Admin_addbuyerlist/index/'.$datainserr);
+		header('location: '.base_url().'Buyer_buyerviewdetail/index/'.$datainserr);
 	
 		
 		}
