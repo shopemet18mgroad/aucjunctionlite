@@ -92,7 +92,7 @@ class Admin_startauction extends CI_Controller {
 	
 	 
 	 
-	 header('location: '.base_url().'Admin_addlot/lotmgt');
+	 header('location: '.base_url().'admin_addlot/lotmgt');
 }else if(!$status){
 	header('location: ./admin_startauction/');
 	}

@@ -11,13 +11,18 @@
         <div class="row border border-dark">
    
 
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  </div></center>
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  
+	<a  href="<?php echo base_url()."Buyer_buyereditprofile/index/".urldecode($sqldata1[0]->buysl_no);?>"><i class="fas fa-edit" style="font-size:28px;" ></i><a> </div></center>
+	    
 	
+	
+
    <table class="table table-striped"  style="colorgrey;font-size8px;">
 <tbody >
     <tr>
    <th scope="row">FULL NAME</th>
    <td><?php echo $sqldata1[0]->buyername ?></td>
+ 
 	  </tr>
 	 <br>
     <tr>

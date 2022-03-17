@@ -139,8 +139,7 @@ margin-top:-600px;
       <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
           /></a>
-		  
-	          				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+<i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
 
 <script>
 function goBack() {
@@ -169,7 +168,7 @@ function goBack() {
 				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
           <ul class="dropdown-menu">
-                  <a class="dropdown-item" href="<?php echo base_url(); ?>Buyer_buyerviewdetail">update Profile</a>
+        
                 
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
@@ -183,7 +182,7 @@ function goBack() {
 		  
 		   <li class="dropdown"><a href="#"><span>Accounts</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>buyer_myaccount">My Account</a></li>
+            <li><a href="<?php echo base_url();?>Buyer_buyerviewdetail">My Account</a></li>
 			
 			
              <li><a href="<?php echo base_url();?>buyer_orderpayment">Orders & Payments</a></li>
@@ -192,7 +191,7 @@ function goBack() {
                           <li><a href="<?php echo base_url();?>buyer_myauc">My auctions</a></li>
 						  
 						  
-                                       <li><a href="<?php echo base_url();?>buyer_message"> Messages and Notification</a></li>
+                                       
             </ul>
             </li>
           
@@ -234,10 +233,7 @@ function goBack() {
 		
 				
             <li><a href="<?php echo base_url();?>buyer_aucparticipate"> Auction participated</a></li>
-             <li><a href="<?php echo base_url();?>buyer_bidsummary">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_win">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_amount"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_payment">  Payment History</a></li>
+             
 			 
 			 
             </ul>

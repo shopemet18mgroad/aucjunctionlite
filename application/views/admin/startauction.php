@@ -118,6 +118,7 @@
 		   </section>
          
       </main>
+        
        <script>
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
@@ -126,12 +127,18 @@
 	   var m = d.getHours();
 	   var n = d.getMinutes();
 	   var s = d.getSeconds();
+	   var o = d.getDate();
+	   var l = d.getMonth()+1;
+	   
+
+	   
+	   
 	 if(cat == 'Select'){
 		 swal("Alert!", "Please Select Categoery First", "error");
 		 return false;
 	 }
 	 if(cat.length<21){
-		  document.getElementById('iauctionid').value = "AUC/"+cat+"/"+m+"/"+n+"/"+s;
+		  document.getElementById('iauctionid').value = o+"/"+l+"/"+cat+"/"+m+"/"+n+"/"+s;
 	 }
  }
  </script>
@@ -297,6 +304,13 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
 	
 }
   </script>
+	
+	
+	
+
+
+
+	
 	
 	
 	

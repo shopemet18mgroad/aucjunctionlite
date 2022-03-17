@@ -83,7 +83,7 @@
 					
 		<a href="<?php echo base_url()."Seller_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 		
-		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano)./."urldecode($proid)";?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano).$proid;?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
 		
 		<a href ="<?php echo base_url()."Seller_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
