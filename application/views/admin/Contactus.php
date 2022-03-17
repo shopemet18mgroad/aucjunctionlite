@@ -1,4 +1,4 @@
-   <main id="main">
+    <main id="main">
     <section class="h-100 mt-5 cart">
   <div class="container h-100 py-5">
     <div class="row d-flex justify-content-center align-items-center h-100">

@@ -42,15 +42,19 @@ if($checked == "ALL"){
               </div>
               <div class="col-md-7 col-lg-7 col-xl-7">
                 <p class="lead fw-normal mb-2 text-primary"><?php echo $allauc[0]->icategory;?></p>
+				 <p><span class="text-primary">Product Name: </span><?php echo $allauc[0]->iproductname ;?><span></p>
                 <p><span class="text-primary">Auction id: </span><?php echo $allauc[0]->iauctionid;?><span></p>
-                <p><span class="text-primary">Auction Start: </span><?php echo $allauc[0]->iauction_start;?><span></p>
-                <p><span class="text-primary">Auction End: </span><?php echo $allauc[0]->iauction_end;?><span></p>
+                <p><span class="text-primary">Auction MRP: </span><?php echo $allauc[0]->imrp;?><span></p>
+                <p><span class="text-primary">Auction Start: </span><?php echo $allauc[0]->startaucprice;?><span></p>
+				 <p><span class="text-primary">Auction End: </span><?php echo $allauc[0]->endaucprice;?><span></p>
+				
+				<button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
               </div>
               
              
               <div class="col-md-3 col-lg-3 col-xl-3 d-flex">
              
-              <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
+
                
               </div>
             </div>
