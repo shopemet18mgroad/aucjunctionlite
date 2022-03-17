@@ -1829,6 +1829,17 @@ section {
   .h-custom {
     height: 100%;
   }
+  
+}
+@media (min-width: 330px) and (max-width: 737px){
+	.divid_left{
+	border-bottom: 1px dashed #ddd;
+	}
+}
+@media (min-width: 740px){
+	.divid_left{
+	border-right: 1px dashed #ddd;
+	}
 }
 .login{
 width: 100%;
