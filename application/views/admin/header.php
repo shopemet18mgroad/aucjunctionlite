@@ -38,29 +38,93 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+ 
 <style>
 
 
+   
+ @media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px){
+
+
+	/*  Force table to not be like tables anymore  */
+    table, thead, tbody, th, td, tr {  
+		 display: block!important;  
+		 width: 100%;
+	
+  } 
+
+ } 
+ 
+ 
+ html{
+    overflow-y:scroll; 
+}
+
+
+
+
+
+
+.col{
+border:1px solid #d3d3d3;
+background-color:white;
+width:50px;
+height:100px;
+}
 #dp{
 background-color:#f5f5f5;
 color:#03AF463;
-list-style-type: none;
-font-size:20px;
-margin-top:10px;
-}
-#dpp{
-background-color:#f5f5f5;
-color:#03AF463;
  list-style-type:none;
-font-size:20px;
+ font-size:20px;
 margin-top:10px;
 }
 
+.ab{
+	
+color:black;	
+font-size:30px;
 
+}
 
-
-
+.suma{
+padding-left:600px;
+margin-top:-600px;	  
+  }
+  
+ .kk{
+	font-size:30px;
+	color:black;
+ } 
+ .sums{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+ .nan{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+   .sd{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+  
+   .mode{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+   .ja{
+  font-family: "Times New Roman", Times, serif;	 
+	 
+ } 
+      
+  
+  
 </style>
+
+
+
+
+
   
   
 
@@ -74,100 +138,157 @@ margin-top:10px;
 
       <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+          /></a>
+<i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+         	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  </h1>
      
 
       <nav id="navbar" class="navbar">
         <ul>
-        
-             <li> 
-        
-           <div class="dropdown">
+          <li> 
+            <div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Hello <?php echo $sessi; ?>
+                 
                   <img class="img-profile rounded-circle"  width="30px" src="<?php echo base_url()."web_files/";?>assets/img/user.png">
+				  <div style="color:#124265"><?php echo $sessi;?></div>
               </a>
-                <ul class="dropdown-menu">
+          <ul class="dropdown-menu">
+        
+                
                 <a class="dropdown-item" href="<?php echo base_url(); ?>#"  data-toggle="modal" data-target="#logoutModal"> Logout</a> 
                 
                 
                   
                 </ul>
+            
           </div>
 
           </li>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         
-         
-		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
+		  
+		   <li class="dropdown"><a href="#"><span>Accounts</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>Admin_dashboard">Add seller</a></li>
-             <li><a href="<?php echo base_url();?>Admin_editsellerlist">Edit seller</a></li>
+            <li><a href="<?php echo base_url();?>Buyer_buyerviewdetail">My Account</a></li>
+			
+			
+             <li><a href="<?php echo base_url();?>buyer_orderpayment">Orders & Payments</a></li>
+			 
+			 
+                          <li><a href="<?php echo base_url();?>buyer_myauc">My auctions</a></li>
+						  
+						  
+                                       
             </ul>
             </li>
           
-		     <li class="dropdown"><a href="#"><span>Buyer</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-            <li><a href="<?php echo base_url();?>Admin_addbuyer">Add Buyer</a></li>
-             <li><a href="<?php echo base_url();?>Admin_addbuyerlist">Edit Buyer</a></li>
-            </ul>
-            </li>
-			   <li class="dropdown"><a href="#"><span>Approval</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-            <li><a href="<?php echo base_url();?>Admin_approvallist">Approve seller</a></li>
-             <li><a href="<?php echo base_url();?>Admin_buyerapproval">Approval Buyer</a></li>
-            </ul>
-            </li>
-			   <li class="dropdown"><a href="#"><span>Auction</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-            <li><a href="<?php echo base_url();?>Admin_startauction">Add Auction</a></li>
-             <li><a href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
-			 <li><a href="<?php echo base_url();?>Admin_auctionapproval">Approve Forthcoming Auction</a></li>
-            </ul>
-            </li>
-	   <li class="dropdown"><a href="<?php echo base_url();?>admin_aboutus"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+		
+
+		
+		
+		
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			
+			
+         
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+	
+	   <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
 		
 				
-            <li><a href="<?php echo base_url();?>admin_aucparticipate"> Auction participated</a></li>
-             <li><a href="<?php echo base_url();?>admin_bidsummary">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>admin_win">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>admin_amount"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>admin_payment">  Payment History</a></li>
+            <li><a href="<?php echo base_url();?>buyer_aucparticipate"> Auction participated</a></li>
+             
 			 
 			 
             </ul>
             </li>
             
+	
+	
+	
+	
+	
+	
+           
+            </li>
+          	
+		
+		
+				
+	<li class="dropdown"><a href="#"><span>Policies</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a href="<?php echo base_url();?>">Privacy Policy</a></li>
             
-            
-            
-            
-		  
+                  <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			    
+                   
+		
+		
+<li class="dropdown"><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			
+
+				   
+            </ul>
+            </li>
+          	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-        
-    
-        
-        
-        
       </nav><!-- .navbar -->
-      
-      
-      
-      
-      
 
     </div>
   </header><!-- End Header -->

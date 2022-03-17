@@ -1,113 +1,188 @@
-   <main id="main">
-    <section class="h-100 mt-5 cart">
-  <div class="container h-100 py-5">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      
-            
-   
-   <div class="container  mr-5 mb-5 ">
+ <main id="main m-5">
+
+    <section id="hero" class="d-flex align-items-center">
+     
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
     
+        
 
-<span class="ab"><b>WWW.AUCJUNCTIONLITE.COM </span><br>a brand/subsidiary of Shopemet Networks Pvt Ltd
-           <br>Aucjunctionlite (Brand/Subsidiary)was Founded in March 2020 in Silicon City Of India.
-				
-				 <div class="modal-body">Aucjunctionlite ie Shopemet Networks Pvt Ltd boasts of its people-friendly environment, with a  team  for new challenges, and constantly innovating.   we continuously strive to provide the best raw materials experience to our Industrial and other customers. Our core team has over years of combined experience in Smelting, Manufacturing, Internet, Technology, Operations Management and Retail, primarily in Silicon City.</div>
-				 
-				 <div class="modal-body">Here at Aucjunctionlite, our customers/buyers, Sellers/Suppliers and their interest is our topmost priority. We consistently strive to deliver the best-in class trusted New Rawmaterials and other manufacturing material procurement experience by providing a wide selection of products across diverse categories Like –1.Metals New, 2.Metals Secondary, 3.Ferrous,  4.Non Ferrous, 5.Minor Metals, 6.Industrial Supplies, 8.Construction materials, 9.Plastics, 10.Papers and other Raw Materials  - at the best price with seller and buyer negotiations!</div>
-				 
-			
-                    <h5 class="kk"><b>Our Mission @ Aucjunctionlite</h5>
-             
-				
-				 To Provide the Best Supply and raw material procurement Solutions for all Industries; To build the largest network of Industrial Raw materials buyers at all levels; to build a platform where we can assimilate & process the world's Raw materials inventory and sync it with our customer and associates.</div>
+      
+      <div class="container mt-5 mb-5">
+        <div class="row border border-dark">
+   
+
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  </div></center>
 	
-				<h6 class="kk"><b> Our vision</b> </h6>Our vision is to participate consistently in extending generation limits and expanding our Raw material supplying, Auctioning and Multi business capacities with specific goals to meet the developing world wide demand and therefore hold our position at the front of Industrial and Service Business.
-To Be industry leader in delivering quality products and quality services and innovative solutions that address our partner suppliers and customers most challenging Raw material and supply needs and Disposal needs for the future. Our efforts is our belief we must operate as a company committed to BCOC and Principle Values.
+   <table class="table table-striped"  style="colorgrey;font-size8px;">
+<tbody >
+    <tr>
+   <th scope="row">FULL NAME</th>
+   <td><?php echo $sqldata1[0]->buyername ?></td>
+	  </tr>
+	 <br>
+    <tr>
+     
+      <th scope="row">CONTACT NUMBER</th>
+	  <td><?php echo $sqldata1[0]->buyercontactnumber ?></td>
+      
+    </tr><br>
+    <tr>
+     
+      <th scope="row">AADHAAR NUMBER </th>
+	  <td><?php echo $sqldata1[0]->buyerasdharnumber ?></td>
+      
+    </tr><br>
+	
+	<tr>
+     
+      <th scope="row">EMAIL ID </th>
+	    <td><?php echo $sqldata1[0]->buyeremail ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row">ADDRESS</th>
+	    <td><?php echo $sqldata1[0]->buyeraddress ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row">CITY</th>
+	    <td><?php echo $sqldata1[0]->bcity ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row">STATE/UNION TERY</th>
+	   <td><?php echo $sqldata1[0]->buyerstate ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row">COUNTRY</th>
+	   <td><?php echo $sqldata1[0]->buyercountry ?></td>
+      
+    </tr>
+	<tr>
+     
+      <th scope="row">PINCODE </th>
+	   <td><?php echo $sqldata1[0]->buyerpincode ?></td>
+      
+    </tr>
+	
+	<tr>
+     
+      <th scope="row">CONTACT PERSON*</th>
+	   <td><?php echo $sqldata1[0]->buyercontactperson ?></td>
+      
+    </tr>
+	
+	<tr>
+     
+      <th scope="row">AADHAR CARD<div style="font-size10px;colorred;">Click on image to view full image</div></th>
+	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="100px" height="150px" data-toggle="modal" data-target="#exampleModalCenter"></td>
+    
+    </tr>
+	<tr>
+     
+      <th scope="row">ADDRESS PROOF<div style="font-size10px;colorred;">Click on image to view full image</div></th>
+	  <td><?php $img = unserialize($sqldata1[0]->addressproof)?>
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="100px" height="150px" data-toggle="modal" data-target="#exampleModal"></td>
+      
+   </tr>
+	
+	
+	
+
+  </tbody>
+</table>
+      </div>
+          
+      </div>
+        
+  
+
+   </div>
+   </section>
+   </main>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">ADDRESS PROOF</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  <?php $img = unserialize($sqldata1[0]->addressproof)?>
+<img class="model m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="400px" height="250px">
+
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">AADHAAR CARD</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  <?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
+<img class="model m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="400px" height="250px">
+
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
 </div>
-				 
-				 <div class="modal-body">
-				 Our vision is about more than Metals it is about reinforcing the economic and social benefits associated with strong Indian and Global Manufacturing Capabilities of which metals is a foundational industry.
-We are committed to finding ways to innovate, grow, and overcome obstacles in order to create value and benefit the long-term interests of all Aucjunctionlite / Shopemet Networks Pvt Ltd stakeholders, employees, suppliers, customers, industries and the communities where we do business.
-</div>
 
-			<div class="modal-body">Aucjunctionlite’s biggest assets are our people, and we treasure what they have to say about their experience.
-
-Aucjunctionlite is defined by its fun, collegial, and high energy environment. At Aucjunctionlite, one can finds opportunities to grow professionally and personally, meet goals, and set higher benchmarks for oneself, We Love Encouraging Our Employees.</div>
-
-			
-                   <h5  class="kk"> <b>DEPARTMENTS </b></h5>
-                  
-				  
-				  <div class="modal-body">1- MARKETING<br/>
-											2-OPERATIONS<br/>
-											3-TECHNOLOGY<br/>
-											4-FINANCE<br/>
-											5-DIGITAL<br/>
-											6-ADMIN<br/>
-				</div>
-
-<div class="modal-body">If you’re looking for a career-defining moment and not just another job opportunity, apply today: admin@Aucjunctionlite.com / hr@shopemet.com Jobs you may be interested in:
-
-Get to know us better by connecting with us on our Facebook, Twitter, Google , Youtube channels.</b>
-			 
-</div>
-</div>
-</div>
-</div>
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-    <!-- ======= Breadcrumbs ======= -->
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </section>
 
   </main><!-- End #main -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
+
+
+
+
+
+
+
+
+
+

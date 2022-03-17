@@ -8,9 +8,9 @@
    <div class="container  mr-5 mb-5 ">
     
 
-<span class="ab"> <b>WWW.AUCJUNCTIONLITE.COM </b></span><br>
-<span class="sums">a brand/subsidiary of Shopemet Networks Pvt Ltd
-           <br>Aucjunctionlite (Brand/Subsidiary)was Founded in March 2020 in Silicon City Of India.
+<span class="ab"> <b>AUCJUNCTIONLITE </b></span><br>
+<span class="sums">&nbsp;&nbsp;&nbsp;&nbsp;a brand/subsidiary of Shopemet Networks Pvt Ltd
+           <br>&nbsp;&nbsp;&nbsp;&nbsp;Aucjunctionlite (Brand/Subsidiary)was Founded in March 2020 in Silicon City Of India.
 				
 				 <div class="modal-body">Aucjunctionlite ie Shopemet Networks Pvt Ltd boasts of its people-friendly environment, with a  team  for new challenges, and constantly innovating.   we continuously strive to provide the best raw materials experience to our Industrial and other customers. Our core team has over years of combined experience in Smelting, Manufacturing, Internet, Technology, Operations Management and Retail, primarily in Silicon City.</div>
 				 
@@ -19,8 +19,8 @@
 			
                     <h5 class="kk"><b>Our Mission @ Aucjunctionlite</b></h5>
              
-				
-				 To Provide the Best Supply and raw material procurement Solutions for all Industries; To build the largest network of Industrial Raw materials buyers at all levels; to build a platform where we can assimilate & process the world's Raw materials inventory and sync it with our customer and associates.</div>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				 To Provide the Best Supply and raw material procurement Solutions for all Industries; To build the largest network of Industrial Raw materials buyers at all levels; to build  &nbsp;&nbsp;&nbsp;&nbsp;a platform where we can assimilate & process the world's Raw materials inventory and sync it with our customer and associates.</div>
 	
 				<h6 class="kk"><b> Our vision</b> </h6>
 				<span class="nan">Our vision is to participate consistently in extending generation limits and expanding our Raw material supplying, Auctioning and Multi business capacities with specific goals to meet the developing world wide demand and therefore hold our position at the front of Industrial and Service Business.
@@ -40,14 +40,19 @@ Aucjunctionlite is defined by its fun, collegial, and high energy environment. A
                    <h5  class="kk"><b> DEPARTMENTS</b> </h5>
                   
 				  
-				  <span class="ja">1- MARKETING<br/>
-											2-OPERATIONS<br/>
-											3-TECHNOLOGY<br/>
-											4-FINANCE<br/>
-											5-DIGITAL<br/>
-											6-ADMIN<br/>
+				  <div>  <i class="fa fa-hand-o-right" style="color:dark;" aria-hidden="true"></i>          Marketing <br>
+								        <b> <i class="fa fa-hand-o-right" aria-hidden="true"></i>      </b> 
+											Operation<br>
+											<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+										Technology<br>
+										<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+											Finance<br>
+											<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+											Digital<br>
+											<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+										Admin<br>
 		
-	</span>	
+	</div>	
 <br><br>  <div class="ja">If you’re looking for a career-defining moment and not just another job opportunity, apply today: admin@Aucjunctionlite.com / hr@shopemet.com Jobs you may be interested in:
 
 Get to know us better by connecting with us on our Facebook, Twitter, Google , Youtube channels.

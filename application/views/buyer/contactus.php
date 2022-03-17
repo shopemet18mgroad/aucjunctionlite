@@ -17,23 +17,19 @@
 
 <br><br><br>
 <b><span class="ab">Aucjunctionlite</span></b>
+<br>Brand/Subsidiary of Shopemet Networks Pvt Ltd.
 <br>
-<b>Brand/Subsidiary of Shopemet Networks Pvt Ltd.</b>
 <br>
 
+Plot No 179, Second floor C.D Street, Opp. N T Pet, Mysore road cross, Bengaluru, Bengaluru District, Karnataka, India, 560 002.<br><br>
 
 
-<br>
-<b>
-Plot No 179, Second floor C.D Street, Opp. N T Pet, Mysore road cross, Bengaluru, Bengaluru District,<br> Karnataka, India, 560 002.<br><br>
-
-
-				<b>Corp Off – Plo No 23, 3rd Floor, Hari Prem Complex
+				Corp Off – Plo No 23, 3rd Floor, Hari Prem Complex
 				Binnamangala, Indiranagar 1st Stage, Bangalore
-				Karnataka, India, 560 038.<br/></b>
+				Karnataka, India, 560 038.<br/>
 			
 <br>
-	<b>	
+	
 		 General Support
 				 <br/>Customer Support<br/>
 				 Vendor/seller Support	
@@ -47,7 +43,7 @@ Plot No 179, Second floor C.D Street, Opp. N T Pet, Mysore road cross, Bengaluru
 		  Ph No : 080-42332722 / +91-9945454505<br>
 				
 Email :admin@shopemet.com
-</b>
+
 
 				 
 </div>

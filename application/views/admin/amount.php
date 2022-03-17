@@ -56,35 +56,11 @@ Get to know us better by connecting with us on our Facebook, Twitter, Google , Y
 </div>
 		
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </section>
     <!-- ======= Breadcrumbs ======= -->
 
 
   </main><!-- End #main -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   

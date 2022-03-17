@@ -537,12 +537,28 @@ class Admin_model extends CI_Model
 		$q = $this->db->get();
 		return $q->result_array();
 	}
-	public function get_singleauction($auctionid){
+	public function get_singleauction($auctionid, $date){
 		$this->db->select('
 					a.*,
 					b.*');
 					$this->db->where('a.aoption',true);
-					$this->db->where('a.iauctionid',$auctionid);				 			
+					$this->db->where('a.iauctionid',$auctionid);
+					$this->db->where('a.iauction_start >=',$date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					 
+					$result = $query->result();				
+					return $result;
+	}
+	public function get_singleauction_live($auctionid, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->where('a.aoption',true);
+					$this->db->where('a.iauctionid',$auctionid);
+					$this->db->where('a.iauction_start <=',$date);
+					$this->db->where('a.iauction_end >',$date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
