@@ -40,20 +40,25 @@ if($checked == "ALL"){
                 <img src="<?php echo base_url()."web_files/uploads/".$img[0];?>"
                   class="img-fluid rounded-3" alt="Cotton T-shirt">
               </div>
-              <div class="col-md-7 col-lg-7 col-xl-7">
+              <div class="col-md-6 col-lg-6 col-xl-6 divid_left ">
                 <p class="lead fw-normal mb-2 text-primary"><?php echo $allauc[0]->icategory;?></p>
-				 <p><span class="text-primary">Product Name: </span><?php echo $allauc[0]->iproductname ;?><span></p>
+				 <p><span class="text-primary">Product Name: </span>IFB Washing Machine<span></p>
                 <p><span class="text-primary">Auction id: </span><?php echo $allauc[0]->iauctionid;?><span></p>
                 <p><span class="text-primary">Auction MRP: </span><?php echo $allauc[0]->imrp;?><span></p>
-                <p><span class="text-primary">Auction Start: </span><?php echo $allauc[0]->startaucprice;?><span></p>
-				 <p><span class="text-primary">Auction End: </span><?php echo $allauc[0]->endaucprice;?><span></p>
+				 <p><span class="text-primary">Start Price: </span>1<span></p>
 				
 				<button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
               </div>
               
              
-              <div class="col-md-3 col-lg-3 col-xl-3 d-flex">
-             
+              <div class="col-md-4 col-lg-4 col-xl-4 h-100 ">
+              <p><span class="text-primary">Current Bid Value: </span> 1008099<span></p>
+              <p><span class="text-primary">My Bid Value: </span><span>1000000</p>
+              <p><span class="text-primary">Time Elapsed: </span>00:30:29<span></p>
+              <div class="form-group">
+              <input class="form-control input-sm" id="inputsm" type="text">
+              <button type="button" class="btn btn-primary btn-sm my-2">Bid</button>
+            </div>
 
                
               </div>

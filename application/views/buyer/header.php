@@ -235,10 +235,7 @@ function goBack() {
 		
 				
             <li><a href="<?php echo base_url();?>buyer_aucparticipate"> Auction participated</a></li>
-             <li><a href="<?php echo base_url();?>buyer_bidsummary">Bid Summary</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_win">Win or Lost to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_amount"> Winner name and amount to be displayed</a></li>
-			 <li><a href="<?php echo base_url();?>buyer_payment">  Payment History</a></li>
+            
 			 
 			 
             </ul>
@@ -258,8 +255,25 @@ function goBack() {
 				
 	<li class="dropdown"><a href="#"><span>Policies</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-            <li><a href="<?php echo base_url();?>">Privacy Policy</a></li>
-            
+			
+         
+			
+                  <li class="dropdown"><a href="<?php echo base_url();?>Buyer_privacypolicy"><span>Privacy Policy</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>
+			    
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
                   <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>

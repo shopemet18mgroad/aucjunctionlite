@@ -78,7 +78,7 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" value="<?php echo $sqldata[0]->buyeradharcard ?>">
+                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" accept="image/*" value="$img">
 					     <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
 						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="50px" height="50px">
@@ -90,7 +90,7 @@
                     <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
 
                       <div class="form-outline">
-                       <input type="file" id="addressproof" name="addressproof[]" value="<?php echo $sqldata[0]->addressproof ?>">
+ <input type="file" id="addressproof" accept="image/*" name="addressproof[]" value="$img">
 					     <?php $img = unserialize($sqldata[0]->addressproof)?>
 						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="50px" height="50px">

@@ -24,10 +24,10 @@
                     <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline">
-                     <input type="text" class="form-control form-control-lg" id="iname" name="iname" value="<?php echo $sqldata[0]->iname ?>">
+<input type="text" class="form-control form-control-lg" id="iname" name="iname" value="<?php echo $sqldata[0]->iname ?>">
 											
 											
-											<input type="hidden" class="form-control form-control-lg" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no ?>">	
+<input type="hidden" class="form-control form-control-lg" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no ?>">	
 								<label> Full Name</label>			
                       </div>
 
@@ -38,7 +38,7 @@
                       <div class="form-outline">
                       
                     
-											<input type="text" class="form-control form-control-lg" id="icontactnumber" name="icontactnumber" value="<?php echo $sqldata[0]->icontactnumber ?>">
+<input type="text" class="form-control form-control-lg" id="icontactnumber" name="icontactnumber" value="<?php echo $sqldata[0]->icontactnumber ?>">
 
   <label> Contact Number*</label>
 
@@ -50,8 +50,7 @@
                       <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline">
-            
-											<input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson ?>">
+<input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson ?>">
 											        <label>Contact person*</label>
                       </div>
 
@@ -68,7 +67,7 @@
                  
                       <div class="form-outline">
                  
-											<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?>">
+<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?>">
                    <label> Aadhaar Number*</label><br>
                  
                  
@@ -80,7 +79,8 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="iadharcardfile" name="iadharcardfile"  value="<?php echo $sqldata[0]->iadharcardfile ?>">
+<input type="file" id="iadharcardfile" name="iadharcardfile"  
+value="<?php echo base_url()."web_files/uploads/".$img[0];?>"
                  
                   <?php $img = unserialize($sqldata[0]->iadharcardfile)?>
                  
@@ -123,7 +123,7 @@
 	
 			  
 			  
-			  <?php }else if ($meg == "BUSSINESS" ) { ?> 
+			  <?php }else if ($meg == "COMPANY") { ?> 
 			  
 			  
 			  
