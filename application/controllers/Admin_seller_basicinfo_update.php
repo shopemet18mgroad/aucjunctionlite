@@ -25,7 +25,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
-	    echo $iname = $this->input->post('iname'); die;
+	    $iname = $this->input->post('iname'); 
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
@@ -45,7 +45,6 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 		
 			 echo $a = $_FILES['iadharcardfile']['name']; 
-			 die;
 			 if($_FILES['iadharcardfile']['name'])){
 				 $pic_array1 = self::upload_files('iadharcardfile');
 			 }else{
