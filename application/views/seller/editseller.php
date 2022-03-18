@@ -12,7 +12,7 @@
                 <div class="p-5">
                   <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
 
-     <form action="<?php echo base_url();?>Admin_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
+     <form action="<?php echo base_url();?>Seller_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
                  
 
 
@@ -24,10 +24,10 @@
                     <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline">
-                     <input type="text" class="form-control form-control-lg" id="iname" name="iname" value="<?php echo $sqldata[0]->iname ?>">
+<input type="text" class="form-control form-control-lg" id="iname" name="iname" value="<?php echo $sqldata[0]->iname ?>">
 											
 											
-											<input type="hidden" class="form-control form-control-lg" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no ?>">	
+<input type="hidden" class="form-control form-control-lg" id="sl_no" name="sl_no" value="<?php echo $sqldata[0]->sl_no ?>">	
 								<label> Full Name</label>			
                       </div>
 
@@ -38,7 +38,7 @@
                       <div class="form-outline">
                       
                     
-											<input type="text" class="form-control form-control-lg" id="icontactnumber" name="icontactnumber" value="<?php echo $sqldata[0]->icontactnumber ?>">
+<input type="text" class="form-control form-control-lg" id="icontactnumber" name="icontactnumber" value="<?php echo $sqldata[0]->icontactnumber ?>">
 
   <label> Contact Number*</label>
 
@@ -50,8 +50,7 @@
                       <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline">
-            
-											<input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson ?>">
+<input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata[0]->icontactperson ?>">
 											        <label>Contact person*</label>
                       </div>
 
@@ -68,7 +67,7 @@
                  
                       <div class="form-outline">
                  
-											<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?>">
+<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?> " >
                    <label> Aadhaar Number*</label><br>
                  
                  
@@ -80,7 +79,8 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="iadharcardfile" name="iadharcardfile"  value="<?php echo $sqldata[0]->iadharcardfile ?>">
+<input type="file" id="iadharcardfile" name="iadharcardfile[]"  accept="image/*" value="$img">
+
                  
                   <?php $img = unserialize($sqldata[0]->iadharcardfile)?>
                  
@@ -100,15 +100,14 @@
                 
 
                       <div class="form-outline">
-                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple value=" 
-                       <?php $img = $sqldata[0]->iaddresprof ?>">
+                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple accept="image/*" value="$img">
                        
                        
                       
                   <?php $img = unserialize($sqldata[0]->iaddresprof)?>
                  
                  
-                 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="50px" height="50px">
                   
                       <br>  <label class="form-label" for="form3Examplev5">Address Proof</label>
@@ -123,7 +122,7 @@
 	
 			  
 			  
-			  <?php }else if ($meg == "BUSSINESS" ) { ?> 
+			  <?php }else if ($meg == "COMPANY") { ?> 
 			  
 			  
 			  
