@@ -12,7 +12,7 @@
                 <div class="p-5">
                   <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
 
-     <form action="<?php echo base_url();?>Seller_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
+     <form action="<?php echo base_url();?>Admin_seller_basicinfo_update" method="POST"  enctype="multipart/form-data">
                  
 
 
@@ -322,49 +322,4 @@
 </section>
 
     <!-- ======= Breadcrumbs ======= -->
-    
-    
-    <script>
-
- function meghasuma(){
-	 var cat = document.getElementById('role').value;
-	
-	 
-	
-	 }
-	 if(cat == "INDIVIDUAL"){
-		 
-		   
-		   document.getElementById('iadharcardfile').value = "";
-           document.getElementById('iaddresprof').value = "";
-		  
-		  
-		   $(".iadharcardfile").hide();
-           $(".iaddresprof").hide();
-
-		   return false;
-		   
-		   
-	
- }
  
- 
- 
- 
- 
-
-</script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  

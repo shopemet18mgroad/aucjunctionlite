@@ -21,23 +21,6 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 	 
 	 	public function index()
 	{
-			$this->load->model('Admin_model');
-		$this->load->library('session');
-		
-		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
-			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('aname'=>$sess['sessi']);
-		
-		$this->load->view('admin/header',$sess);
-		
 		
 		
 		
@@ -54,9 +37,9 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
 		$iemailid  = $this->input->post('iemailid');
-		
-		
 		$iadharcardfile  = $this->input->post('iadharcardfile');
+		
+		$iaddresprof  = $this->input->post('iaddresprof');
 		
 		$iaddres  = $this->input->post('iaddres');
 		$iicity  = $this->input->post('iicity');
@@ -64,13 +47,15 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		$icountry  = $this->input->post('icountry');
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
-		$iaddresprof  = $this->input->post('iaddresprof');
+	
 		
 		
-		
-			 $a = $_FILES['iadharcardfile']['name']; 
-			  $pic_array1 = self::upload_files('iadharcardfile');
-		 
+	$a = $_FILES['iadharcardfile']['name']; 
+	if($_FILES['iadharcardfile']['name'][0]){
+		$pic_array1 = self::upload_files('iadharcardfile');
+		}
+			 
+	
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
@@ -79,9 +64,15 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 			$pic_array1 = serialize($pic_array1);
 		
 		}
+		
+		 $b = $_FILES['iaddresprof']['name']; 
+			  if($_FILES['iaddresprof']['name'][0]){
+				$pic_array2 = self::upload_files('iaddresprof');
+				}
+		
+		
 		  
-			  $b = $_FILES['iaddresprof']['name']; 
-		  $pic_array2 = self::upload_files('iaddresprof');
+			  
 	   if(!count($pic_array2)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
@@ -98,12 +89,26 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 	
 			$this->load->model('Admin_model');
+			
+if($_FILES['iadharcardfile']['name'][0] || $_FILES['iaddresprof']['name'][0]){
+						
+			 $data2 = array('iname' => $iname,'icontactnumber' => $icontactnumber,
+			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
+			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
+			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
+			 'iaddresprof'=>$pic_array2 );
+			 }else{
+				 		
 			 $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
 			 'iaddresprof'=>$pic_array2 );
+			 }
+			
+			
 
 			  
 			  $datainserr = "Data Inserted Successfully";
@@ -116,7 +121,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 	
 		
 		}
-	}
+	
 		
 		
 		private function upload_files($nameid){
@@ -124,7 +129,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
  
 	$datar = array();
       // Looping all files
-	if(($cntfiles = count($_FILES['iadharcardfile']['name'])) && ($cntfiles = count($_FILES['iaddresprof']['name']))){
+	if(($cntfiles = count($_FILES['iadharcardfile']['name'])) && ($cntfiles = count($_FILES['iadharcardfile']['name']))){
 	
 	//print_r($_FILES['uploadproductimage']['name']); die;
 //print_r($cntfiles);die; 
