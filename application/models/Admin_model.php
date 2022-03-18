@@ -551,6 +551,21 @@ class Admin_model extends CI_Model
 					$result = $query->result();				
 					return $result;
 	}
+	public function get_singleauction_nd($aucid){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->where('a.aoption',true);
+					$this->db->where('a.iauctionid',$aucid);
+									 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					 
+					$result = $query->result();				
+					return $result;
+	}
+	
 	public function get_singleauction_live($auctionid, $date){
 		$this->db->select('
 					a.*,

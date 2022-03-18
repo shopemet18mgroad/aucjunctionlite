@@ -39,7 +39,8 @@ class Cart_wishlist extends CI_Controller {
 		$rid = $this->uri->segment(4);
         $aucid = str_ireplace("-","/",$aucid);
         //echo $aucid; die;
-        $query = $this->Admin_model->get_singleauction($aucid);
+        $query = $this->Admin_model->get_singleauction_nd($aucid);
+		//print_r($query);die;
         $auctionid = $query[0]->iauctionid;
         $auctionst = $query[0]->iauction_start;
         $auctioned = $query[0]->iauction_end;
