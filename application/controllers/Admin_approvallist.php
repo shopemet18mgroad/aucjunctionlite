@@ -39,7 +39,7 @@ class Admin_approvallist extends CI_Controller {
 		
 		
 		
-		$ioption = array('ioption'=>false);
+		$ioption = array('ioption'=>2);
 		$this->load->library('session');
 				$this->load->model('Admin_model');
 
@@ -79,24 +79,6 @@ class Admin_approvallist extends CI_Controller {
 		}
 	
 	}
-		public function reject(){
-		$this->load->helper('url');
-		 $Sl_no = urldecode($this->uri->segment(3));
-
-
-		$retriveval = array('Sl_no'=>$Sl_no);
-		
-		$data2 = array('ioption'=>2);
-	
-		$this->load->model('Admin_model');
-		
-		$status = $this->Admin_model->update_custom('sellerdetails',$data2,$retriveval,$retriveval);
-		
-		header('location: '.base_url().'Admin_approvallist/index/'.urlencode($retriveval));
-		
-		die;
-	}
-
 	
 	
 	

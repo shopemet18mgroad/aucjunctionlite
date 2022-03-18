@@ -82,6 +82,7 @@
 					     <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
 						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="50px" height="50px">
+ <br>
                       <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>

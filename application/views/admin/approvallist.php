@@ -67,8 +67,7 @@
 						  
 						<a href ="<?php echo base_url()."Admin_approvallist/sellerapprove/".urldecode($row->sl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 						
-						<a href ="<?php echo base_url()."Admin_approvallist/reject/".urldecode($row->sl_no);?>"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
-						
+					
 						
 				
 						

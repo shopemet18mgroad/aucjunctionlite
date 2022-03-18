@@ -11,13 +11,18 @@
         <div class="row border border-dark">
    
 
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  </div></center>
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  
+	 </div></center>
+	    
 	
+	
+
    <table class="table table-striped"  style="colorgrey;font-size8px;">
 <tbody >
     <tr>
    <th scope="row">FULL NAME</th>
    <td><?php echo $sqldata1[0]->buyername ?></td>
+ 
 	  </tr>
 	 <br>
     <tr>
@@ -79,18 +84,18 @@
 	
 	<tr>
      
-      <th scope="row">AADHAR CARD<div style="font-size10px;colorred;">Click on image to view full image</div></th>
+      <th scope="row">AADHAAR CARD<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
 	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModalCenter"></td>
+ alt="Chania" width="50px" height="50px" style="border-radius:50%" data-toggle="modal" data-target="#exampleModalCenter"></td>
     
     </tr>
 	<tr>
      
-      <th scope="row">ADDRESS PROOF<div style="font-size10px;colorred;">Click on image to view full image</div></th>
+      <th scope="row">ADDRESS PROOF<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
 	  <td><?php $img = unserialize($sqldata1[0]->addressproof)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px" data-toggle="modal" data-target="#exampleModal"></td>
+ alt="Chania" width="50px" height="50px" style="border-radius:50%" data-toggle="modal" data-target="#exampleModal"></td>
       
    </tr>
 	
@@ -120,7 +125,7 @@
       <div class="modal-body">
 	  <?php $img = unserialize($sqldata1[0]->addressproof)?>
 <img class="model m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="400px" height="250px">
+ alt="Chania" width="200px" height="250px"   style="border-radius:50%">
 
  
       </div>
@@ -146,7 +151,7 @@
       <div class="modal-body">
 	  <?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
 <img class="model m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="400px" height="250px">
+ alt="Chania" width="200px" height="250px"   style="border-radius:50%">
 
  
       </div>
