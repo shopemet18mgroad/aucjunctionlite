@@ -21,10 +21,14 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 	 
 	 	public function index()
 	{
-
+			
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
+		
+		
+		
+		
 	    $iname = $this->input->post('iname'); 
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
@@ -41,16 +45,11 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
 		$iaddresprof  = $this->input->post('iaddresprof');
-		
-		
-		
-			 echo $a = $_FILES['iadharcardfile']['name']; 
-			 if($_FILES['iadharcardfile']['name'])){
+   $a = $_FILES['iadharcardfile']['name'][0]; 
+			 if($_FILES['iadharcardfile']['name'][0]){
 				 $pic_array1 = self::upload_files('iadharcardfile');
-			 }else{
-				 echo "No file"; die;
 			 }
-			  
+		 
 		 
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -61,10 +60,11 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 		}
 		  
-			  $b = $_FILES['iaddresprof']['name']; 
-			   if(isset($_FILES['iadharcardfile']['name'])){
-				   $pic_array2 = self::upload_files('iaddresprof');
-			   }
+			  $b = $_FILES['iaddresprof']['name'][0];
+			  
+			  if($_FILES['iaddresprof']['name'][0]){
+				$pic_array2 = self::upload_files('iaddresprof');
+				}
 		  
 	   if(!count($pic_array2)){
 			echo '<script language="javascript">';
@@ -73,23 +73,27 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		}else{
 			$pic_array2 = serialize($pic_array2);
 		}  
-		  
-		  
-		  
-		  
-		  
-		
-		
+$this->load->model('Admin_model');
+			 
+if($_FILES['iadharcardfile']['name'][0] && $_FILES['iaddresprof']['name'][0]){
 	
-			$this->load->model('Admin_model');
-			 $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
-			 'iaddresprof'=>$pic_array2 );
+			 'iaddresprof'=>$pic_array2);
+			 //print_r($data2);die;
+			 }else{
+				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
+			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
+		
+			 }
+			 
 
-			  
+			 
 			  $datainserr = "Data Inserted Successfully";
 			  $updatech = array('sl_no' => $sl_no);
 
@@ -100,7 +104,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 	
 		
 		}
-	}
+		
 		
 		
 		private function upload_files($nameid){

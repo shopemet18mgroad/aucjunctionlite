@@ -67,7 +67,7 @@
                  
                       <div class="form-outline">
                  
-<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?>">
+<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?> " >
                    <label> Aadhaar Number*</label><br>
                  
                  
@@ -79,8 +79,8 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-<input type="file" id="iadharcardfile" name="iadharcardfile"  
-value="<?php echo base_url()."web_files/uploads/".$img[0];?>"
+<input type="file" id="iadharcardfile" name="iadharcardfile[]"  accept="image/*" value="$img">
+
                  
                   <?php $img = unserialize($sqldata[0]->iadharcardfile)?>
                  
@@ -100,15 +100,14 @@ value="<?php echo base_url()."web_files/uploads/".$img[0];?>"
                 
 
                       <div class="form-outline">
-                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple value=" 
-                       <?php $img = $sqldata[0]->iaddresprof ?>">
+                       <input type="file" id="iaddresprof" name="iaddresprof[]" multiple accept="image/*" value="$img">
                        
                        
                       
                   <?php $img = unserialize($sqldata[0]->iaddresprof)?>
                  
                  
-                 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="50px" height="50px">
                   
                       <br>  <label class="form-label" for="form3Examplev5">Address Proof</label>
