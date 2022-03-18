@@ -143,7 +143,7 @@
 					
 		<a href="<?php echo base_url()."Admin_buyerapproval/buyerapprove/".urldecode($row->buysl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 
-<a href="<?php echo base_url()."Admin_buyerapproval/reject/".urldecode($row->buysl_no);?>"><i class="fa fa-ban m-2" style="font-size:18px;color:red;"></i></a>	
+	
 
 
 

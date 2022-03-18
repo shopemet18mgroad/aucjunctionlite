@@ -146,7 +146,7 @@
 						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 				
 						
-						
+						<a href ="<?php echo base_url()."Admin_editsellerlist/reject/".urldecode($row->sl_no);?>"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
 						
 						
 						

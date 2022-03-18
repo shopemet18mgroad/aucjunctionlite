@@ -57,8 +57,14 @@ class Admin_auctionapproval extends CI_Controller {
 		
 	}	
 	}
+	
+	
+	
+	
+	
 public function seller_delete(){
 $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
+print_r($iauctionid);die;
 $retriveval = array('iauctionid'=>$iauctionid);
 
 

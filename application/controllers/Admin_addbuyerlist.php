@@ -42,7 +42,7 @@ class Admin_addbuyerlist extends CI_Controller {
 		
 		
 		
-		$buyeroption = array('buyeroption'=>false);
+		$buyeroption = array('buyeroption'=>true);
 		
 	$query = $this->Admin_model->getdatafromtable('buyerdetails',$buyeroption);
 		
@@ -74,13 +74,29 @@ $this->load->library('session');
 
 
 if($buysl_no){
-header('location: '.base_url().'Admin_auctioneditlist/index/');
+header('location: '.base_url().'Admin_addbuyerlist/index/');
 }else{
 echo "BYE";
 }
 
 }	
+	public function reject(){
+		$this->load->helper('url');
+		 $buysl_no = urldecode($this->uri->segment(3));
 
+		$retriveval = array('buysl_no'=>$buysl_no);
+		
+	$data2= array('buyeroption'=>2);
+		
+	
+		$this->load->model('Admin_model');
+	
+		$status = $this->Admin_model->update_custom('buyerdetails',$data2,$retriveval,$retriveval);
+		
+		header('location: '.base_url().'Admin_addbuyerlist/index/'.urlencode($retriveval));
+		
+		die;
+	}
 	
 	
 	

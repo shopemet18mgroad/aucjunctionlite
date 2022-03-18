@@ -29,20 +29,11 @@ class Admin_editsellerlist extends CI_Controller {
 			header('location: '.base_url().'login/index_error/'.$datainserr);
 			die;
 			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('aname'=>$sess['sessi']);
 		
 
-		
-		
-		$this->load->library('session');
+	
+	    $ioption = array('ioption'=>true);
 
-	    $ioption = array('ioption'=>false);
-		//print_r( $ioption); die;
-		$this->load->model('Admin_model');
 		
 		$query = $this->Admin_model->getdatafromtable('sellerdetails',$ioption);
 		
@@ -83,5 +74,31 @@ echo "BYE";
 }
 
 }
+	
+	public function reject(){
+		$this->load->helper('url');
+		 $Sl_no = urldecode($this->uri->segment(3));
+
+
+		$retriveval = array('Sl_no'=>$Sl_no);
+		
+		$data2 = array('ioption'=>2);
+	
+		$this->load->model('Admin_model');
+		
+		$status = $this->Admin_model->update_custom('sellerdetails',$data2,$retriveval,$retriveval);
+		
+		header('location: '.base_url().'Admin_editsellerlist/index/'.urlencode($retriveval));
+		
+		die;
+	}
+
+		
+	
+	
+	
+	
+	
+	
 }
 
