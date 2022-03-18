@@ -1,6 +1,6 @@
 
  
- <main id="main">
+ <main id="main mt-5">
 
     <section id="hero" class="d-flex align-items-center">
      
@@ -12,9 +12,22 @@
       <div class="container mt-5 mb-5">
         <div class="row border border-dark">
           
-			<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><?php echo $sqldata1[0]->role ?>&nbsp; DETAILS </i>  </div></center>
+			
 	
-   <table class="table table-striped" style="color:grey;font-size:15px;margin:2px;">
+	
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><?php echo $sqldata1[0]->role ?>  DETAILS  
+	 </div></center>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+   <table class="table table-striped" style="font-size:12px;">
 <tbody>
     <tr>   
    
@@ -30,7 +43,9 @@
       
     </tr><br>
     <tr>
-    
+    	<?php $role = $sqldata1[0]->role ?>
+	
+	<?php if($role == "INDIVIDUAL" ){ ?>
   
 	  
 	  <th scope="row">AADHAAR NUMBER</th>
@@ -61,7 +76,11 @@
 	  
 	  </td>
       
-    </tr><br>
+    </tr>
+		<?php	} ?>
+	
+	
+	<br>
 	
 	<tr>
    
@@ -105,11 +124,21 @@
 	   <td><?php echo $sqldata1[0]->icontactperson ?></td>
       
     </tr>
+	
+	
+	<?php $role = $sqldata1[0]->role ?>
+	
+	<?php if($role == "COMPANY" ){ ?>
+		
+	
+	
+	
+	
 	<tr>   
 
    
    
-   	  <th scope="row">GST NUMBER <div style="font-size:10px;color:red;">( applicable ony for company)</div></th>
+   	  <th scope="row">GST NUMBER <div style="font-size:10px;color:#FF4500;">(applicable ony for company)</div></th>
 
 <td>
 
@@ -129,24 +158,64 @@
 	
 			
 			
-	<?php	} ?>
+	
 
 
 
 	</td>
   
 	  </tr>
+	  <?php }?>
 	  
 	 
 	  <tr>   
-   <th scope="row">COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:red;">( Applicable ony for company)</div> </th>
-   <td><?php echo $sqldata1[0]->itypeseller ?></td>
+   <th scope="row">COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:#FF4500;">( Applicable ony for company)</div> </th>
+   <td>
+   
+    <?php $gst1 = $sqldata1[0]->itypeseller ?>
+		   
+		<?php if ($gst1 == Null) { ?>
+			 
+		   
+		  
+<?php	 echo "NA" ; ?>
+
+ 
+		<?php } else { ?>
+			
+			<?php echo "$gst1" ; ?>
+   
+   <?php	} ?>
+
+   
+   </td>
+   
+   
+   
 	  </tr>
+	<?php	} ?>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<?php $role = $sqldata1[0]->role ?>
+	
+	<?php if($role == "INDIVIDUAL" ){ ?>
+	
+	
+	
 	
 	
 	<tr>
      
-      <th scope="row">ADDRESS PROOF<div style="font-size:10px;color:red;">Click on image to view full image</div></th>
+      <th scope="row">ADDRESS PROOF<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
 	   <td>
 	 
 	
@@ -164,7 +233,7 @@
 			
 			
 			<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px"  
+ alt="Chania" width="50px" height="50px"  style="border-radius:50%"
  data-toggle="modal" data-target="#exampleModal">
 			
 			
@@ -174,9 +243,16 @@
  </td>
     
     </tr>
+	<?php	} ?>
+	
+	
+	<?php $role = $sqldata1[0]->role ?>
+	
+	<?php if($role == "INDIVIDUAL" ){ ?>
+	
 	<tr>
      
-      <th scope="row">AADHAAR CARD<div style="font-size:10px;color:red;">Click on image to view full image</div></th>
+      <th scope="row">AADHAAR CARD<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
 
 
 <td>
@@ -194,8 +270,8 @@
 			
 			
 			<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px"  
- data-toggle="modal" data-target="#exampleModal">
+ alt="Chania" width="50px" height="50px" style="border-radius:50%"  
+ data-toggle="modal" data-target="#exampleModalCenter">
 			
 			
 			
@@ -206,7 +282,7 @@
       
    </tr>
 	
-	
+	<?php	} ?>
 	
   </tbody>
 </table>
@@ -225,7 +301,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-cente#FF4500" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">AADHAAR CARD</h5>
@@ -239,7 +315,7 @@
 	   
  <?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
 <img class="m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="400px" height="250px">
+ alt="Chania" style="height:100%;width:250px;object-fit:contain;border-radius:50%;">
 		
 		
 		
@@ -258,7 +334,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-cente#FF4500" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">ADDRESS PROOF</h5>
@@ -272,7 +348,7 @@
 	   
  <?php $img = unserialize($sqldata1[0]->iaddresprof)?>
 <img class="m-5" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="400px" height="250px">
+ alt="Chania" style="height:100%;width:250px;object-fit:contain;border-radius:50%;">
 		
 		
 		

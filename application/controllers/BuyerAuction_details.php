@@ -20,9 +20,11 @@ class BuyerAuction_details extends CI_Controller {
 	 */
 	public function __construct() {
         parent:: __construct();
-        $this->load->helper('url');
+        $this->load->helper(array('url','cookie'));
         $this->load->model('Admin_model');
         $this->load->library("pagination");
+		$this->load->library('session');
+		
     }
 	
 	public function index()
@@ -32,24 +34,18 @@ class BuyerAuction_details extends CI_Controller {
 		$this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
+if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index/'.$datainserr);
 			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('buyeremail'=>$sess['sessi']);
+		}else{
+			$sess = array('sessi'=>$this->session->userdata('username'));
 	
 		
 		
 		date_default_timezone_set("Asia/Kolkata"); 
 		$date = date('Y-m-d');
-		//$date = "2022-03-05";
-		//$td = $this->Admin_model->get_auction_today($date);
-		//print_r(count($alfa));die;
+	
 		$config = array();
         $config["base_url"] = base_url() . "BuyerAuction_details/index/".$this->uri->segment(3)."/";
 		if($this->uri->segment(3) == "TA"){

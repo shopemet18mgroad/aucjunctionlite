@@ -92,9 +92,9 @@
         <div class="row icon-boxes">
 		 <?php $count = 1 ?>
     
-      <?php foreach($sqldata1 as $row){?>
+      <?php $ctr=1; foreach($sqldata1 as $row){?>
       
-    
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
       
         
     
@@ -112,13 +112,17 @@
 			<p class="description d-flex justify-content-center"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
             <p class="description d-flex justify-content-center"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
       <p class="description d-flex justify-content-center"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center"><b>Auc Id:</b><?php echo $row->iauctionid ?></p>
+            <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
              
             <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+            <?php if(get_cookie($row->iauctionid) == NULL){?>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr;?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+             <?php }else{?>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+                 <?php }?>
             </div>
            
           </div>
@@ -131,6 +135,7 @@
 
  
         <?php } ?>
+		 <?php $ctr++  ?>
     
        </div>
      
@@ -272,22 +277,6 @@
       
     </tr>
 	
-		<!--<tr>
-     
-      <th scope="row"> Start  Auction Price</th>
-	   <td><?php //echo $row->startaucprice ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row">End Auction Price  </th>
-	   <td><?php //echo $row->endaucprice ?></td>
-      
-    </tr> 
-	
-		<tr>-->
-     
       <th scope="row">Entry Fee </th>
 	   <td><?php echo $row->entryfee ?></td>
       
