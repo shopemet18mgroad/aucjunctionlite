@@ -167,6 +167,45 @@
 	  </tr>
 	  <?php }?>
 	  
+	  	<tr>   
+
+   
+   
+   	  <th scope="row">Company Name <div style="font-size:10px;color:#FF4500;">(applicable ony for company)</div></th>
+
+<td>
+
+  <?php $gst1 = $sqldata1[0]->icompanyname ?>
+		   
+		<?php if ($gst1 == Null) { ?>
+			 
+		   
+		  
+<?php	 echo "NA" ; ?>
+
+ 
+		<?php } else { ?>
+			
+			<?php echo "$gst1" ; ?>
+		
+	
+			
+			
+	
+
+
+
+	</td>
+  
+	  </tr>
+	  <?php }?>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	 
 	  <tr>   
    <th scope="row">COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:#FF4500;">( Applicable ony for company)</div> </th>

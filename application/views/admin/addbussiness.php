@@ -64,7 +64,7 @@
                  
                       <div class="form-outline">
                  	<input type="text" class="form-control form-control-lg igstnumber" id="igstnumber"  name="igstnumber">
-<label class="form-label" for="iname">GST Number</label>
+<label class="form-label" for="">GST Number</label>
                  
                  
                  
@@ -398,7 +398,7 @@ function validateForm() {
   function validate_usergst12(){
 	  var val = document.getElementById("igstnumber").value;
 		if(val != ''){
-			 $.get('<?php echo base_url() .'Admin_addseller/validate_aadharnumber/'; ?>'+val, function(data2){				 
+			 $.get('<?php echo base_url() .'Admin_addbussiness/validate_gstnumber/'; ?>'+val, function(data2){				 
 				 if($.trim(data2) == "BYE"){
 					swal("Alert!", "GST Number Already Exists", "error");
 					document.getElementById("igstnumber").value = "";

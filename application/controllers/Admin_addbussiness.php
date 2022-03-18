@@ -40,4 +40,20 @@ class Admin_addbussiness extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 }
+ 
+		 public function validate_gstnumber(){
+		$dat = urldecode($this->uri->segment(3));
+		$check_db = array('igstnumber' => $dat);
+		$this->load->model('Admin_model');
+			  if($this->Admin_model->check('sellerdetails', $check_db)){
+				  echo "BYE";
+			  }else{
+				  echo "HI";
+			  }
+} 
+
+		 
+
+
+
 }

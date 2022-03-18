@@ -32,24 +32,11 @@
                       
                  		<input type="text" id="icontactnumber" name="icontactnumber" maxLength="10" class="form-control form-control-lg icontactnumber">
 <label class="form-label" for="icontactnumber">Contact Number</label>
-
-
-
-
-                      </div>
+     </div>
 
                     </div>
                     
                   
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     
                   </div>
 
@@ -107,7 +94,7 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline form-white">
-                  	<input type="text" id="iemailid" name="iemailid" class="form-control form-control-lg">
+                  	<input type="text" id="iemailid" name="iemailid" class="form-control form-control-lg iemailid">
                       <label class="form-label" for="form3Examplea2">Email Id</label>
                     </div>
                   </div>
