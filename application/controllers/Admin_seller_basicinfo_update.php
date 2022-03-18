@@ -29,26 +29,25 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 		
 		
-	    $buyername = $this->input->post('buyername'); 
-		$buyercontactnumber = $this->input->post('buyercontactnumber');
-		$buyerasdharnumber = $this->input->post('buyerasdharnumber');
-		$buyeremail  = $this->input->post('buyeremail');
-		$buyeradharcard  = $this->input->post('buyeradharcard');
-		$buyeraddress  = $this->input->post('buyeraddress');
-		$bcity  = $this->input->post('bcity');
-		$buyerstate  = $this->input->post('buyerstate');
-		$buyercountry  = $this->input->post('buyercountry');
-		$buyerpincode  = $this->input->post('buyerpincode');
-		$buyercontactperson  = $this->input->post('buyercontactperson');
-		$addressproof  = $this->input->post('addressproof');
-	    $buysl_no  = $this->input->post('buysl_no');
-	
+	    $iname = $this->input->post('iname'); 
+		$sl_no = $this->input->post('sl_no');
+		$icontactnumber = $this->input->post('icontactnumber');
+		$iadharnumber  = $this->input->post('iadharnumber');
+		$iemailid  = $this->input->post('iemailid');
 		
 		
+		$iadharcardfile = $this->input->post('iadharcardfile');
 		
-			 $a = $_FILES['buyeradharcard']['name']; 
-			 if($_FILES['buyeradharcard']['name'][0]){
-				 $pic_array1 = self::upload_files('buyeradharcard');
+		$iaddres  = $this->input->post('iaddres');
+		$iicity  = $this->input->post('iicity');
+		$istate  = $this->input->post('istate');
+		$icountry  = $this->input->post('icountry');
+		$ipincode  = $this->input->post('ipincode');
+		$icontactperson  = $this->input->post('icontactperson');
+		$iaddresprof  = $this->input->post('iaddresprof');
+   $a = $_FILES['iadharcardfile']['name'][0]; 
+			 if($_FILES['iadharcardfile']['name'][0]){
+				 $pic_array1 = self::upload_files('iadharcardfile');
 			 }
 		 
 		 
@@ -61,9 +60,10 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 		}
 		  
-			  $b = $_FILES['addressproof']['name']; 
-			  if($_FILES['addressproof']['name'][0]){
-				$pic_array2 = self::upload_files('addressproof');
+			  $b = $_FILES['iaddresprof']['name'][0];
+			  
+			  if($_FILES['iaddresprof']['name'][0]){
+				$pic_array2 = self::upload_files('iaddresprof');
 				}
 		  
 	   if(!count($pic_array2)){
@@ -73,41 +73,34 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		}else{
 			$pic_array2 = serialize($pic_array2);
 		}  
-		  
-		  
-		  
-		  
-		  
-		
-		
-	
-			$this->load->model('Admin_model');
+$this->load->model('Admin_model');
 			 
-			 if($_FILES['buyeradharcard']['name'][0] && $_FILES['addressproof']['name'][0]){
-				 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
-			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
-			 'buyeradharcard'=> $pic_array1, 'buyeraddress' => $buyeraddress,
-			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
-			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
-			 'addressproof'=>$pic_array2 );
+if($_FILES['iadharcardfile']['name'][0] && $_FILES['iaddresprof']['name'][0]){
+	
+$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
+			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
+			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
+			 'iaddresprof'=>$pic_array2);
+			 //print_r($data2);die;
 			 }else{
-				 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
-			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
-			 'buyeraddress' => $buyeraddress,
-			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
-			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson
-			 );
+				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
+			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
+		
 			 }
 			 
 
 			 
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('buysl_no ' => $buysl_no );
+			  $updatech = array('sl_no' => $sl_no);
 
 			 
-			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);
+			  $status = $this->Admin_model->update_custom('sellerdetails',$data2,$updatech,$updatech);
 		
-		header('location: '.base_url().'Admin_addbuyerlist/index/'.$datainserr);
+		header('location: '.base_url().'Admin_editsellerlist/index/'.$datainserr);
 	
 		
 		}
@@ -119,7 +112,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
  
 	$datar = array();
       // Looping all files
-	if(($cntfiles = count($_FILES['buyeradharcard']['name'])) && ($cntfiles = count($_FILES['addressproof']['name']))){
+	if(($cntfiles = count($_FILES['iadharcardfile']['name'])) && ($cntfiles = count($_FILES['iaddresprof']['name']))){
 	
 	//print_r($_FILES['uploadproductimage']['name']); die;
 //print_r($cntfiles);die; 

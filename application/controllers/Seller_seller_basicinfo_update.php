@@ -21,11 +21,14 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 	 
 	 	public function index()
 	{
-		
-		
+			
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
+		
+		
+		
+		
 	    $iname = $this->input->post('iname'); 
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
@@ -33,7 +36,7 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		$iemailid  = $this->input->post('iemailid');
 		
 		
-		$iadharcardfile  = $this->input->post('iadharcardfile');
+		$iadharcardfile = $this->input->post('iadharcardfile');
 		
 		$iaddres  = $this->input->post('iaddres');
 		$iicity  = $this->input->post('iicity');
@@ -42,11 +45,11 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
 		$iaddresprof  = $this->input->post('iaddresprof');
-		
-		
-		
-			 $a = $_FILES['iadharcardfile']['name']; 
-			  $pic_array1 = self::upload_files('iadharcardfile');
+   $a = $_FILES['iadharcardfile']['name'][0]; 
+			 if($_FILES['iadharcardfile']['name'][0]){
+				 $pic_array1 = self::upload_files('iadharcardfile');
+			 }
+		 
 		 
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -57,8 +60,12 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		
 		}
 		  
-			  $b = $_FILES['iaddresprof']['name']; 
-		  $pic_array2 = self::upload_files('iaddresprof');
+			  $b = $_FILES['iaddresprof']['name'][0];
+			  
+			  if($_FILES['iaddresprof']['name'][0]){
+				$pic_array2 = self::upload_files('iaddresprof');
+				}
+		  
 	   if(!count($pic_array2)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
@@ -66,34 +73,38 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		}else{
 			$pic_array2 = serialize($pic_array2);
 		}  
-		  
-		  
-		  
-		  
-		  
-		
-		
+$this->load->model('Admin_model');
+			 
+if($_FILES['iadharcardfile']['name'][0] && $_FILES['iaddresprof']['name'][0]){
 	
-			$this->load->model('Admin_model');
-			 $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
-			 'iaddresprof'=>$pic_array2 );
-print_r($data2); die;
-			  
+			 'iaddresprof'=>$pic_array2);
+			 //print_r($data2);die;
+			 }else{
+				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
+			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
+		
+			 }
+			 
+
+			 
 			  $datainserr = "Data Inserted Successfully";
 			  $updatech = array('sl_no' => $sl_no);
 
 			 
 			  $status = $this->Admin_model->update_custom('sellerdetails',$data2,$updatech,$updatech);
 		
-		header('location: '.base_url().'Admin_editsellerlist/index/'.$datainserr);
+		header('location: '.base_url().'Seller_sellerviewdetail/index/'.$datainserr);
 	
 		
-	
-	}
+		}
+		
 		
 		
 		private function upload_files($nameid){
