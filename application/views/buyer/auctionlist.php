@@ -83,7 +83,7 @@
         <div class="row icon-boxes">
      
       <?php $ctr=1; foreach($sqldata1 as $row){?>
-      <input type="text" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
     
       
         
