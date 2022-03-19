@@ -1,3 +1,4 @@
+
  <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -90,13 +91,17 @@
       </div>
       
         <div class="row icon-boxes">
-    <?php $count = 1 ?>
-      <?php foreach($sqldata1 as $row){?>
-	  <?php $meg = $row->isubcategory ?>
+     
+      <?php $ctr=1; foreach($sqldata1 as $row){?>
+	  
+  <?php $meg = $row->isubcategory ?>
       
    <?php if($meg == 'Camera'){
 	   ?>
-      
+	  
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
+	  
+	  
         
     
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
@@ -110,28 +115,26 @@
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			
-		
-            <p class="description d-flex justify-content-center">MRP Price:<?php echo $row->imrp ?></p>
-            <p class="description d-flex justify-content-center">Start Price:<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center">End Price:<?php echo $row->endaucprice ?></p>
+			<p class="description d-flex justify-content-start" style="font-size:16px;"><b>Product Name:&nbsp;&nbsp;&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+            <p class="description d-flex justify-content-start"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex justify-content-start"><b>Start Price:</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description justify-content-start"><b>Auction Id:</b>&nbsp;&nbsp;<?php echo $row->iauctionid ?></p>
+	<p class="description  justify-content-start"><b>Product Description:&nbsp;&nbsp;</b><br><?php echo $row->isubcategory ?></p>
     
-             
-            <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+                      <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
+            <?php if(get_cookie($row->iauctionid) == NULL){?>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+             <?php }else{?>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+                 <?php }?>
             </div>
-           
           </div>
         </div>
         
      
 
-
-       <?php $count++ ?>
-
- 
-        <?php } ?>
+<?php $ctr++; } ?>
 		<?php } ?>
     
        </div>
@@ -162,6 +165,13 @@
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
+
+
+
+
+
+
+
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -174,11 +184,12 @@
 		
 	
 	
-   <table class="table table-striped" style="margin-top:-70px;">
+   <table class="table table-striped" style="colorgrey;font-size15px;margin-top:-70px;">
 <tbody>
 	<tr>
      
       <th scope="row"> Auction Images</th>
+	  
 	   <td><?php $img = unserialize($row->imageupload)?>
 	   
 	      <?php foreach($img as $sql) { ?>
@@ -221,25 +232,47 @@
 	    <td><?php echo $row->iauctionid ?></td>
       
     </tr>
+	
+	
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php $poo= $row->iauction_start;
-	   $ni = explode('.',$poo);
-       $poo = $ni[0];
-       echo  $poo;	   
+	   <td><?php $ab= $row->iauction_start;
+	   $abc = explode('.',$ab);
+       $ab = $abc[0];
+       echo  $ab;	   
 	   
 
 	   ?>	   <br>to	   <br>
-	   <?php $ais = $row->iauction_end; 
-       $sam = explode('.',$ais);
-       $ais = $sam[0];
-       echo  $ais;	 
+	   <?php $ba = $row->iauction_end; 
+       $cba = explode('.',$ba);
+       $ba = $cba[0];
+       echo  $ba;	 
 	  ?>
 	  </td>
 	  
 	  
     </tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<tr>
 	
@@ -247,28 +280,34 @@
 	</tr>
 	
 	
-	<tr>
+
+	
+			<tr>
      
       <th scope="row">Inspection Date </th>
 
 	   
-	   <td><?php $wse= $row->inspectiondate;
-	   $risk = explode('.',$wse);
-       $wse = $risk[0];
-       echo  $wse;	   
-	   
-
+	   <td><?php $insp1= $row->inspectiondate;
+	   $ter1 = explode('.',$insp1);
+       $insp1 = $ter1[0];
+       echo  $insp1;	   
 	   ?>
 	     
 	   </td>
       
     </tr>
 	
-	
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		<tr>
-     
-      <th scope="row"> MRP</th>
+          <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
 	   <td><?php echo $row->imrp ?></td>
       
     </tr>
@@ -296,29 +335,41 @@
 	
 	
 	
-	<tr>
+	
+	
+		<tr>
      
       <th scope="row">Inspection date and time  </th>
 	     
-	   <td><?php $hh= $row->iauction_end ;
-	   $hh11 = explode('.',$hh);
-       $hh = $hh11[0];
-       echo  $hh;	   
+	   <td><?php $inse11= $row->iauction_end ;
+	   $ters22 = explode('.',$inse11);
+       $inse11 = $ters22[0];
+       echo  $inse11;	   
 	   
 
 	   ?>
 	   
 	      	   <br>to	   <br>
-	   <?php $jak = $row->iauction_start; 
-       $jak1 = explode('.',$jak);
-       $jak = $jak1[0];
-       echo  $jak;	 
+	   <?php $aucn1 = $row->iauction_start; 
+       $coolee = explode('.',$aucn1);
+       $aucn1 = $coolee[0];
+       echo  $aucn1;	 
 	  ?>
 	  </td>
 	  
 	   </td>
        
     </tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	<tbody>

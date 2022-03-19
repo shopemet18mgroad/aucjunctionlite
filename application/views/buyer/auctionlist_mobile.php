@@ -1,3 +1,4 @@
+
  <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -90,13 +91,17 @@
       </div>
       
         <div class="row icon-boxes">
-    <?php $count = 1 ?>
-      <?php foreach($sqldata1 as $row){?>
-	  <?php $meg = $row->isubcategory ?>
+     
+      <?php $ctr=1; foreach($sqldata1 as $row){?>
+	  
+  <?php $meg = $row->isubcategory ?>
       
    <?php if($meg == 'Mobile'){
 	   ?>
-      
+	  
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
+	  
+	  
         
     
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
@@ -110,28 +115,26 @@
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			
-		
-            <p class="description d-flex justify-content-center">MRP Price:<?php echo $row->imrp ?></p>
-            <p class="description d-flex justify-content-center">Start Price:<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center">End Price:<?php echo $row->endaucprice ?></p>
+			<p class="description d-flex justify-content-center"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+            <p class="description d-flex justify-content-center"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex justify-content-center"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
-             
-            <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+                      <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
+            <?php if(get_cookie($row->iauctionid) == NULL){?>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+             <?php }else{?>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+                 <?php }?>
             </div>
-           
           </div>
         </div>
         
      
 
-
-       <?php $count++ ?>
-
- 
-        <?php } ?>
+<?php $ctr++; } ?>
 		<?php } ?>
     
        </div>
@@ -157,10 +160,11 @@
 	  <?php $meg = $row->isubcategory ?>
       
    <?php if($meg == 'Mobile'){
-	   ?>
+	 ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
   <div class="modal-dialog">
+
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -179,7 +183,8 @@
 	<tr>
      
       <th scope="row"> Auction Images</th>
-	 <td><?php $img = unserialize($row->imageupload)?>
+	  
+	   <td><?php $img = unserialize($row->imageupload)?>
 	   
 	      <?php foreach($img as $sql) { ?>
 	   
@@ -222,20 +227,21 @@
       
     </tr>
 	
+	
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php $ka= $row->iauction_start;
-	   $la = explode('.',$ka);
-       $ka = $la[0];
-       echo  $ka;	   
+	   <td><?php $ab= $row->iauction_start;
+	   $abc = explode('.',$ab);
+       $ab = $abc[0];
+       echo  $ab;	   
 	   
 
 	   ?>	   <br>to	   <br>
-	   <?php $va = $row->iauction_end; 
-       $thi = explode('.',$va);
-       $va = $thi[0];
-       echo  $va;	 
+	   <?php $ba = $row->iauction_end; 
+       $cba = explode('.',$ba);
+       $ba = $cba[0];
+       echo  $ba;	 
 	  ?>
 	  </td>
 	  
@@ -243,45 +249,29 @@
     </tr>
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<tr>
 	
 	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
 	</tr>
-	
 	
 	<tr>
      
       <th scope="row">Inspection Date </th>
 
 	   
-	   <td><?php $mal= $row->inspectiondate;
-	   $ti = explode('.',$mal);
-       $mal = $ti[0];
-       echo  $mal;	   
-	   
-
+	   <td><?php $insp1= $row->inspectiondate;
+	   $ter1 = explode('.',$insp1);
+       $insp1 = $ter1[0];
+       echo  $insp1;	   
 	   ?>
 	     
 	   </td>
       
     </tr>
 	
-	
 		
 		<tr>
-     
-      <th scope="row"> MRP</th>
+          <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
 	   <td><?php echo $row->imrp ?></td>
       
     </tr>
@@ -309,29 +299,41 @@
 	
 	
 	
-	<tr>
+	
+	
+		<tr>
      
       <th scope="row">Inspection date and time  </th>
 	     
-	   <td><?php $kuma= $row->iauction_end ;
-	   $ra = explode('.',$kuma);
-       $kuma = $ra[0];
-       echo  $kuma;	   
+	   <td><?php $inse11= $row->iauction_end ;
+	   $ters22 = explode('.',$inse11);
+       $inse11 = $ters22[0];
+       echo  $inse11;	   
 	   
 
 	   ?>
 	   
 	      	   <br>to	   <br>
-	   <?php $basa = $row->iauction_start; 
-       $pa = explode('.',$basa);
-       $basa = $pa[0];
-       echo  $basa;	 
+	   <?php $aucn1 = $row->iauction_start; 
+       $coolee = explode('.',$aucn1);
+       $aucn1 = $coolee[0];
+       echo  $aucn1;	 
 	  ?>
 	  </td>
 	  
 	   </td>
        
     </tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	<tbody>

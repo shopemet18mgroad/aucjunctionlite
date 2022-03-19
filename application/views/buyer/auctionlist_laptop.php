@@ -91,13 +91,17 @@
       </div>
       
         <div class="row icon-boxes">
-    <?php $count = 1 ?>
-      <?php foreach($sqldata1 as $row){?>
-	  <?php $meg = $row->isubcategory ?>
+     
+      <?php $ctr=1; foreach($sqldata1 as $row){?>
+	  
+  <?php $meg = $row->isubcategory ?>
       
    <?php if($meg == 'Laptop'){
 	   ?>
-      
+	  
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
+	  
+	  
         
     
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
@@ -117,22 +121,20 @@
             <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
-             
-            <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+                      <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
+            <?php if(get_cookie($row->iauctionid) == NULL){?>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+             <?php }else{?>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+                 <?php }?>
             </div>
-           
           </div>
         </div>
         
      
 
-
-       <?php $count++ ?>
-
- 
-        <?php } ?>
+<?php $ctr++; } ?>
 		<?php } ?>
     
        </div>

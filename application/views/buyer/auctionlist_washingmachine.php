@@ -1,3 +1,4 @@
+
  <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -90,16 +91,20 @@
       </div>
       
         <div class="row icon-boxes">
-    <?php $count = 1 ?>
-      <?php foreach($sqldata1 as $row){?>
-	  <?php $meg = $row->isubcategory ?>
+     
+      <?php $ctr=1; foreach($sqldata1 as $row){?>
+	  
+  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Washing machine'){
+   <?php if($meg == 'Washingmachine'){
 	   ?>
-      
+	  
+      <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
+	  
+	  
         
     
-      <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box w-100">
             <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
 	   
@@ -116,22 +121,20 @@
             <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
-             
-            <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
-            <button type="button" class="btn btn-warning btn-sm">Add to Cart</button>
+                      <div class="row">
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
+            <?php if(get_cookie($row->iauctionid) == NULL){?>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+             <?php }else{?>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+                 <?php }?>
             </div>
-           
           </div>
         </div>
         
      
 
-
-       <?php $count++ ?>
-
- 
-        <?php } ?>
+<?php $ctr++; } ?>
 		<?php } ?>
     
        </div>
@@ -156,7 +159,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Washing machine'){
+   <?php if($meg == 'Washingmachine'){
 	   ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
@@ -234,17 +237,17 @@
 	<tr>
      
       <th scope="row"> Auction Start and End Time</th>
-	   <td><?php $ram= $row->iauction_start;
-	   $rem = explode('.',$ram);
-       $ram = $rem[0];
-       echo  $ram;	   
+	   <td><?php $ab= $row->iauction_start;
+	   $abc = explode('.',$ab);
+       $ab = $abc[0];
+       echo  $ab;	   
 	   
 
 	   ?>	   <br>to	   <br>
-	   <?php $waq = $row->iauction_end; 
-       $hg = explode('.',$waq);
-       $waq = $hg[0];
-       echo  $waq;	 
+	   <?php $ba = $row->iauction_end; 
+       $cba = explode('.',$ba);
+       $ba = $cba[0];
+       echo  $ba;	 
 	  ?>
 	  </td>
 	  
@@ -284,10 +287,10 @@
       <th scope="row">Inspection Date </th>
 
 	   
-	   <td><?php $sdf= $row->inspectiondate;
-	   $sd = explode('.',$sdf);
-       $sdf = $sd[0];
-       echo  $sdf;	   
+	   <td><?php $insp1= $row->inspectiondate;
+	   $ter1 = explode('.',$insp1);
+       $insp1 = $ter1[0];
+       echo  $insp1;	   
 	   ?>
 	     
 	   </td>
@@ -338,19 +341,19 @@
      
       <th scope="row">Inspection date and time  </th>
 	     
-	   <td><?php $tfg= $row->iauction_end ;
-	   $vfg = explode('.',$tfg);
-       $tfg = $vfg[0];
-       echo  $tfg;	   
+	   <td><?php $inse11= $row->iauction_end ;
+	   $ters22 = explode('.',$inse11);
+       $inse11 = $ters22[0];
+       echo  $inse11;	   
 	   
 
 	   ?>
 	   
 	      	   <br>to	   <br>
-	   <?php $got = $row->iauction_start; 
-       $got21 = explode('.',$got);
-       $got = $got21[0];
-       echo  $got;	 
+	   <?php $aucn1 = $row->iauction_start; 
+       $coolee = explode('.',$aucn1);
+       $aucn1 = $coolee[0];
+       echo  $aucn1;	 
 	  ?>
 	  </td>
 	  

@@ -141,7 +141,7 @@
 	   
 
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+ alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
 	   
 	   
 	   
