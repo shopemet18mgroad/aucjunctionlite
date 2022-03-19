@@ -41,13 +41,16 @@ class Buyer_buyer_basicinfo_update extends CI_Controller {
 		$buyerpincode  = $this->input->post('buyerpincode');
 		$buyercontactperson  = $this->input->post('buyercontactperson');
 		$addressproof  = $this->input->post('addressproof');
-		$buysl_no  = $this->input->post('buysl_no');
+	    $buysl_no  = $this->input->post('buysl_no');
 	
 		
 		
 		
 			 $a = $_FILES['buyeradharcard']['name']; 
-			  $pic_array1 = self::upload_files('buyeradharcard');
+			 if($_FILES['buyeradharcard']['name'][0]){
+				 $pic_array1 = self::upload_files('buyeradharcard');
+			 }
+		 
 		 
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -59,7 +62,10 @@ class Buyer_buyer_basicinfo_update extends CI_Controller {
 		}
 		  
 			  $b = $_FILES['addressproof']['name']; 
-		  $pic_array2 = self::upload_files('addressproof');
+			  if($_FILES['addressproof']['name'][0]){
+				$pic_array2 = self::upload_files('addressproof');
+				}
+		  
 	   if(!count($pic_array2)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
@@ -76,17 +82,27 @@ class Buyer_buyer_basicinfo_update extends CI_Controller {
 		
 	
 			$this->load->model('Admin_model');
-			 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
+			 
+			 if($_FILES['buyeradharcard']['name'][0] || $_FILES['addressproof']['name'][0]){
+				 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
 			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
-			 'buyeradharcard'=>$pic_array1, 'buyeraddress' => $buyeraddress,
+			 'buyeradharcard'=> $pic_array1, 'buyeraddress' => $buyeraddress,
 			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
 			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
 			 'addressproof'=>$pic_array2 );
-//print_r($data2);die;
+			 }else{
+				 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
+			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
+			 'buyeraddress' => $buyeraddress,
+			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
+			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson
+			 );
+			 }
+			 
+
 			 
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('buysl_no' => $buysl_no );
-			 // print_r($updatech); die;
+			  $updatech = array('buysl_no ' => $buysl_no );
 
 			 
 			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);

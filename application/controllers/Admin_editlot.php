@@ -36,29 +36,8 @@ class Admin_editlot extends CI_Controller {
 		
 		$active = array('aname'=>$sess['sessi']);
 		
-		
-		
-			$this->load->model('Admin_model');
-		
-     $sl_ano = urldecode($this->uri->segment(3));
-	
-	$active = array('sl_ano'=>$sl_ano);
-	
-	$query = $this->Admin_model->getdatafromtable('auction', $active);
-	
-	$data['sqldata']= $query;
 	
 	
-		
-	$this->load->model('Admin_model');
-
-	$buysl_no = urldecode($this->uri->segment(3));
-	
-	$active = array('buysl_no'=>$buysl_no);
-	
-	$query = $this->Admin_model->getdatafromtable('buyerdetails', $active);
-	
-	$data['sqldata']= $query;
 		
 
 	$this->load->model('Admin_model');
@@ -66,7 +45,7 @@ class Admin_editlot extends CI_Controller {
 	$iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
 	
 	
-	$active = array('iauctionid '=>$iauctionid);
+	$active = array('iauctionid'=>$iauctionid);
 	
 	$query = $this->Admin_model->getdatafromtable('addlot',$active);
 
@@ -80,7 +59,7 @@ class Admin_editlot extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 	
-	
+			}
 		public function seller_delete(){
 
 $sl_ano  = urldecode($this->uri->segment(3));

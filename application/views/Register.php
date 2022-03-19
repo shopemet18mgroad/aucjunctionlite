@@ -69,7 +69,15 @@
           />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-   <form class="user" action="<?php echo base_url()."ResetPassword";?>" method="post">
+      
+      
+      
+  
+   
+   
+ <form action="<?php echo base_url();?>Home_register" method="post" enctype="multipart/form-data">    
+   
+   
    <?php 
    if(isset($errmsg) && $errmsg != NULL){ ?>
  <div class="alert alert-danger" role="alert">
@@ -86,17 +94,17 @@
 
           <!-- Email input -->
           <div class="form-outline mb-2">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+            <input type="email" id="iemailid" class="form-control form-control-lg"
+              placeholder=""  name="iemailid"/>
             <label class="form-label" for="form3Example3">Email address </label>
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+            <input type="text" class="form-control form-control-lg"
+              placeholder="" name="icontactnumber" id="icontactnumber" />
             <label class="form-label" for="form3Example3">Phone Number</label>
-             <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+             <input type="password"  class="form-control form-control-lg"
+              placeholder=""  name="ipass" id="ipass"/>
             <label class="form-label" for="form3Example3">Password</label>
-             <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+             <input type="password" id="iconpass" class="form-control form-control-lg"
+              placeholder=""  name="iconpass"/>
             <label class="form-label" for="form3Example3">Confirm Password</label>
           </div>
 
@@ -120,15 +128,18 @@
               
              
              
-             </div>  
+             </div> 
+             
+             
+                     </form>
 
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-              <input type="radio" id="radio-three" name="switch-two" value="seller" checked/>
+              <input type="radio" id="radio-three" name="radio-three" value="seller"/>
               <label for="radio-three">Seller</label>
-              <input type="radio" id="radio-four" name="switch-two" value="buyer" />
-              <label for="radio-four">Buyer</label>
+              <input type="radio" id="radio-four" name="radio-four" value="buyer" />
+              <label for="radio-four"  >Buyer</label>
               
           </div>
         </div>
@@ -152,37 +163,8 @@
           </div>
            <button type="submit" name="submit" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-          
-          
-          
-          
-          
-          
-          
-          
+  
 
-          
-              
-              
-              
-                  
-              
-              
-              
-     
-       
-          
-          
-           
-          
-          
-       
-            
-                
-              
-                
-
-        </form>
       </div>
     </div>
   </div>

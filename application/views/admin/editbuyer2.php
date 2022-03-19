@@ -79,9 +79,25 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
                  <input type="file" id="buyeradharcard" name="buyeradharcard[]" accept="image/*" value="$img">
-					     <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
-						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+					   <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
+                      
+                     <?php if($img == NULL) { 
+                     
+                     echo "No Image"
+                     ?>
+                     
+                     <?php } else {
+                         ?>
+                             
+                              <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
+                 
+                 
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">    
+                             
+                             
+                             
+                     <?php } ?>
  <br>
                       <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
@@ -93,8 +109,24 @@
                       <div class="form-outline">
  <input type="file" id="addressproof" accept="image/*" name="addressproof[]" value="$img">
 					     <?php $img = unserialize($sqldata[0]->addressproof)?>
-						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+                      
+                     <?php if($img == NULL) { 
+                     
+                     echo "No Image"
+                     ?>
+                     
+                     <?php } else {
+                         ?>
+                             
+                              <?php $img = unserialize($sqldata[0]->addressproof)?>
+                 
+                 
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">    
+                             
+                             
+                             
+                     <?php } ?>
                  
                  
                   

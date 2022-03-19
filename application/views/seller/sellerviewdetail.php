@@ -15,7 +15,7 @@
 			
 	
 	
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >DETAILS  
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" > <?php echo $sqldata1[0]->role ?>    DETAILS  
 	<a  href="<?php echo base_url()."Seller_editseller/index/".urldecode($sqldata1[0]->sl_no);?>"><i class="fas fa-edit" style="font-size:28px;" ></i><a> </div></center>
 	
 	
@@ -197,6 +197,31 @@
 
 	
 	
+			  <tr>   
+   <th scope="row">COMPANY NAME<div style="font-size:10px;color:#FF4500;">( Applicable ony for company)</div> </th>
+   <td>
+   
+    <?php $gst2 = $sqldata1[0]->icompanyname ?>
+		   
+		<?php if ($gst2 == Null) { ?>
+			 
+		   
+		  
+<?php	 echo "NA" ; ?>
+
+ 
+		<?php } else { ?>
+			
+			<?php echo "$gst2" ; ?>
+   
+   <?php	} ?>
+
+   
+   </td>
+   
+   
+   
+	  </tr>
 	
 	
 	

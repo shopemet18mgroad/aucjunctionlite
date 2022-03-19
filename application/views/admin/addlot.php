@@ -3,11 +3,11 @@
         <main id="main">
     <section class="h-100 h-custom-2 gradient-custom-2">
   <div class="container py-5 h-100">
-    <div class="row m-5 m-5 d-flex justify-content-center align-items-center h-100">
+    <div class="row m-4 m-4 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">
           <div class="card-body p-0">
-            <div class="row m-5 m-5 g-0">
+            <div class="row m-4 m-4 g-0">
 			  <div class="col-lg-12">
                 <div class="p-5">
                   
@@ -77,7 +77,7 @@
 					 
                   
                   
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory">
@@ -95,7 +95,7 @@
                     </div>
                     
                     
-                  <div class="form-group row m-5">
+                  <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Sub-category</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="isubcategory" name="isubcategory">
@@ -119,24 +119,24 @@
                       </div>
                     </div>
                    
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea row m-5s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
+                        <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
                       </div>
                     </div>
 					
 					
 					
 					
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
                         <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
                     </div>
 					
-					<div class="form-group row m-5">
+					<div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Current location </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="currentlocation" name="currentlocation" placeholder="current location ">
@@ -146,28 +146,28 @@
 					
 					
                    
-					 <div class="form-group row m-5">
+					 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label"> Expected price</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="imrp" name="imrp" placeholder=" Expectprice ">
                       </div>
                     </div>
                     
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Start  Auction Price</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
                     </div>
                     
-                       <div class="form-group row m-5">
+                       <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
                       </div>
                     </div>
 					
-					     <div class="form-group row m-5">
+					     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">entry free </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="entryfee" name="entryfee" placeholder="Entry Fee">
@@ -176,7 +176,7 @@
 					
                    
 				  
-						 <div class="form-group row m-5">
+						 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection date<br> and time</label>
                       <div class="col-sm-9">
                        From: 	
@@ -189,7 +189,7 @@
 					
 					
 					
-			 <div class="form-group row m-5">
+			 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Upload photos</label>
                       <div class="col-sm-9">
                         <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price">
@@ -247,7 +247,7 @@ if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate 
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, throw m-5nError, ajaxOptions){
+            error:function(xhr, throw m-4nError, ajaxOptions){
 
             },
         });

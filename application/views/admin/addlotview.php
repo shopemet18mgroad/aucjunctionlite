@@ -50,7 +50,7 @@
        echo  $aucs;	   
 	   
 
-	   ?>	   <br>to	   <br>
+	   ?>	   <br>to <br>
 	   <?php $auce = $sqldata1[0]->iauction_end; 
        $cool = explode('.',$auce);
        $auce = $cool[0];
@@ -134,18 +134,44 @@
 	<tr>
      
       <th scope="row">Upload photos* </th>
-	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+	  
+	  
+	  
+	
+	  
+	  	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+		   
+		   
+	<?php 	if($img==Null ){ ?>
+	
+	
+	<?php echo "No Image"; ?>
+	
+			
+	<?php 	}else{ ?>  
+		    <?php foreach($img as $sql) { ?>
+		   <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
 	   
-	   
+	     
 	   
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+
+ 
+ 
+ 
+		<?php } ?> 
+		<?php } ?>
 	   
-	   
+	 
 	   
 	   </td>
+	  
+	  
+	  
+	  
+	  
       
     </tr>
 	<tbody>

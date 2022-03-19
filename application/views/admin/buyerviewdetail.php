@@ -17,7 +17,8 @@
 	
 	
 
-   <table class="table table-striped"  style="colorgrey;font-size8px;">
+	
+   <table class="table table-striped" style="font-size:12px;">
 <tbody >
     <tr>
    <th scope="row">FULL NAME</th>
@@ -85,17 +86,61 @@
 	<tr>
      
       <th scope="row">AADHAAR CARD<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
-	   <td><?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
+	   <td>
+	   <?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
+	   <?php if( $img == NULL){ ?>
+		   
+		   <?php echo "No Image"; ?>
+		   
+		   
+	   <?php } else { ?>
+		   
+		<?php $img = unserialize($sqldata1[0]->buyeradharcard)?>
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px" style="border-radius:50%" data-toggle="modal" data-target="#exampleModalCenter"></td>
+ alt="Chania" width="50px" height="50px" style="border-radius:50%" data-toggle="modal" data-target="#exampleModalCenter"></td>   
+		   
+		   
+		   
+		   
+	   <?php }?>
+	   
+	   
+	   
+	   
+	   
+	   
     
     </tr>
 	<tr>
      
       <th scope="row">ADDRESS PROOF<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
+	  
+	  
+	  
+	  
+	  
+	  
 	  <td><?php $img = unserialize($sqldata1[0]->addressproof)?>
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px" style="border-radius:50%" data-toggle="modal" data-target="#exampleModal"></td>
+	  
+	     <?php if( $img == NULL){ ?>
+		   
+		   <?php echo "No Image"; ?>
+		   
+		   
+	   <?php } else { ?>
+		   
+	<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px" style="border-radius:50%" data-toggle="modal" data-target="#exampleModal"></td>  
+		   
+		   
+		   
+		   
+	   <?php }?>
+	  
+	  
+	  
+	  
+
       
    </tr>
 	

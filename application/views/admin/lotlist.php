@@ -20,8 +20,11 @@
 			   </th>   
       </tr>
 						 <th>
-                            Sl. No .
+                            Sl.No.
                           </th>
+						    <th>
+						  Product Name
+						  </th>
 						  <th>
 						  Product Description
 						  </th>
@@ -67,8 +70,9 @@
 			
 				<tr>												
 					<td><?php echo $count ?> </td>
+					 <td><?php echo $row->iproductname ?></td>
 				
-					 <td><?php echo $row->iproductdes ?></a></td>
+					 <td><?php echo $row->iproductdes ?></td>
 					<td><?php echo $row->iemailid ?> </td>
 					<td><?php echo $row->iauctionid ?> </td>
 					

@@ -21,32 +21,36 @@ class Admin_addlotview extends CI_Controller {
 	public function index()
 	{
 			$this->load->model('Admin_model');
-		$this->load->library('session');
+		    $this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index/'.$datainserr);
-			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('aname'=>$sess['sessi']);
+         
+         $sl_ano = urldecode($this->uri->segment(3));
+		 $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(4)));
+
+		 $active1 = array('sl_ano'=>$sl_ano,'iauctionid'=>$iauctionid,'aoption '=>true);
 		
 		
 		
-	$this->load->model('Admin_model');
-     $active = array('aoption '=>true);
+		
 	
-	$query = $this->Admin_model->getaddlotauctiondetails('auction', $active);
+    
+	
+	$query = $this->Admin_model->getaddlotauctiondetails('addlot', $active1);
 	
 	$data['sqldata1']= $query;
+	
+//print_r($data['sqldata1']); die;
+
+
+	$sess = array('sessi'=>$this->session->userdata('username'));
+		$active = array('ausername'=>$sess['sessi']);
+	
 	
 	    $this->load->view('admin/header',$sess);
 		$this->load->view('admin/addlotview',$data);
 		$this->load->view('admin/footer');
-	}
+
+		
 }
 }

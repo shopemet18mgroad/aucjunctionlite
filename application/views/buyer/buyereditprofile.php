@@ -1,4 +1,6 @@
-<main id="main">
+ 
+
+  <main id="main">
     <section class="h-100 h-custom-2 gradient-custom-2">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -21,7 +23,7 @@
 											<input type="text" class="form-control form-control-lg" id="buyername" name="buyername" value="<?php echo $sqldata[0]->buyername ?>">
 											
 											
-											<input type="text" class="form-control form-control-lg" id="buysl_no" name="buysl_no" value="<?php echo $sqldata[0]->buysl_no ?>">	
+											<input type="hidden" class="form-control form-control-lg" id="buysl_no" name="buysl_no" value="<?php echo $sqldata[0]->buysl_no ?>">	
 								<label> Full Name</label>			
                       </div>
 
@@ -68,7 +70,7 @@
                       <div class="form-outline">
                  
 											<input type="text" class="form-control form-control-lg" id ="buyerasdharnumber" name="buyerasdharnumber" value="<?php echo $sqldata[0]->buyerasdharnumber ?>">
-                   <label> Aadhaar Number*</label><br>
+                   <label> Adhar Number*</label><br>
                  
                  
                   </div>
@@ -76,10 +78,27 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" value="<?php echo $sqldata[0]->buyeradharcard ?>">
-<?php $img = unserialize($sqldata[0]->buyeradharcard)?>
-						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+                 <input type="file" id="buyeradharcard" name="buyeradharcard[]" accept="image/*" value="$img">
+					   <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
+                      
+                     <?php if($img == NULL) { 
+                     
+                     echo "No Image"
+                     ?>
+                     
+                     <?php } else {
+                         ?>
+                             
+                              <?php $img = unserialize($sqldata[0]->buyeradharcard)?>
+                 
+                 
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">    
+                             
+                             
+                             
+                     <?php } ?>
+ <br>
                       <label class="form-label" for="form3Examplev4"> Aadhaar Card </label>
                     </div>
                   </div>
@@ -88,10 +107,26 @@
                     <div class="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
 
                       <div class="form-outline">
-<input type="file" id="addressproof" name="addressproof[]" value="<?php echo $sqldata[0]->addressproof ?>">
+ <input type="file" id="addressproof" accept="image/*" name="addressproof[]" value="$img">
 					     <?php $img = unserialize($sqldata[0]->addressproof)?>
-						  <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+                      
+                     <?php if($img == NULL) { 
+                     
+                     echo "No Image"
+                     ?>
+                     
+                     <?php } else {
+                         ?>
+                             
+                              <?php $img = unserialize($sqldata[0]->addressproof)?>
+                 
+                 
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">    
+                             
+                             
+                             
+                     <?php } ?>
                  
                  
                   
@@ -112,7 +147,7 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline form-white">
                   
-<input type="email" class="form-control form-control-lg" id="buyeremail" name="buyeremail" value="<?php echo $sqldata[0]->buyeremail ?>">
+											<input type="email" class="form-control form-control-lg" id="buyeremail" name="buyeremail" value="<?php echo $sqldata[0]->buyeremail ?>">
 												<label> Email Id </label>
                     </div>
                   </div>
@@ -126,7 +161,7 @@
 
                       <div class="form-outline form-white">
    
-<input type="text" class="form-control form-control-lg" id="buyeraddress" name="buyeraddress" value="<?php echo $sqldata[0]->buyeraddress ?>">
+											<input type="text" class="form-control form-control-lg" id="buyeraddress" name="buyeraddress" value="<?php echo $sqldata[0]->buyeraddress ?>">
 											            <label> Address </label>
                       </div>
 
@@ -136,7 +171,7 @@
 
                       <div class="form-outline form-white">
                 	
-<input type="text" class="form-control form-control-lg" id="bcity" name="bcity" value="<?php echo $sqldata[0]->bcity ?>">
+											<input type="text" class="form-control form-control-lg" id="bcity" name="bcity" value="<?php echo $sqldata[0]->bcity ?>">
 											<label>City</label>
                       </div>
 
@@ -188,7 +223,7 @@
                       <div class="form-outline form-white">
                   
 											
-<input type="text" class="form-control form-control-lg"id="buyerpincode" name="buyerpincode" value="<?php echo $sqldata[0]->buyerpincode ?>" >
+											<input type="text" class="form-control form-control-lg"id="buyerpincode" name="buyerpincode" value="<?php echo $sqldata[0]->buyerpincode ?>" >
 											<label>Pincode*</label>
                       </div>
 
@@ -198,7 +233,7 @@
                       <div class="form-outline form-white">
                      
 											
-<input type="text" value="India" id="buyercountry" name="buyercountry" class="form-control form-control-lg" value="<?php echo $sqldata[0]->buyercountry ?>">
+											<input type="text" value="India" id="buyercountry" name="buyercountry" class="form-control form-control-lg" value="<?php echo $sqldata[0]->buyercountry ?>">
 												<label>Country </label>
                       </div>
 
@@ -223,7 +258,7 @@
                       I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
                     </label>
                   </div>
-<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer()">Update</button>
+<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer() ">Update</button>
 						
 				
 						

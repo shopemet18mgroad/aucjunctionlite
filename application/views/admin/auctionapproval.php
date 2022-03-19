@@ -90,7 +90,7 @@
 					
 	    <a href ="<?php echo base_url()."Admin_auctionapproval/sellerapprove/".urldecode($proid);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 		
-		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano)."/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
 		
 		<a href ="<?php echo base_url()."Admin_auctionapproval/seller_delete/".urldecode($proid);?>">

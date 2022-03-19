@@ -175,9 +175,9 @@
 
 <td>
 
-  <?php $gst1 = $sqldata1[0]->icompanyname ?>
+  <?php $icompanyname = $sqldata1[0]->icompanyname ?>
 		   
-		<?php if ($gst1 == Null) { ?>
+		<?php if ($icompanyname == Null) { ?>
 			 
 		   
 		  
@@ -186,7 +186,7 @@
  
 		<?php } else { ?>
 			
-			<?php echo "$gst1" ; ?>
+			<?php echo "$icompanyname" ; ?>
 		
 	
 			
@@ -233,7 +233,8 @@
    
 	  </tr>
 	<?php	} ?>
-
+	
+	
 	
 	
 	

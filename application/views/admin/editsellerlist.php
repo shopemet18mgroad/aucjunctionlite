@@ -100,7 +100,7 @@
     <tr>
       <th scope="col">Sl.No.</th>
       <th scope="col"> Name</th>
-      <th scope="col">AADHAAR NUMBER*</th>
+    
       <th scope="col">EMAIL</th>
       <th scope="col">ROLE</th>
       <th scope="col"> ACTION</th>
@@ -123,7 +123,7 @@
 						 
 						 
                            <td data-label="Name"><?php echo $row->iname ?></td>
-                          <td data-label="Adhar Number*"><?php echo $row->iadharnumber ?> 
+                      
 
 						  </td>
                         <td data-label="EMAIL"><?php echo $row->iemailid ?></td>

@@ -35,7 +35,7 @@ class Admin_viewforthcomingauction extends CI_Controller {
 		
 		$active = array('aname'=>$sess['sessi']);
 		
-		$this->load->view('admin/header',$sess);
+	
 		
 		
 		
@@ -59,7 +59,7 @@ class Admin_viewforthcomingauction extends CI_Controller {
 		$adac['data'] = $query;
 		
 		
-
+	$this->load->view('admin/header',$sess);
 		$this->load->view('admin/viewforthcomingauction',$adac);
 		$this->load->view('admin/footer');
 		
@@ -67,7 +67,7 @@ class Admin_viewforthcomingauction extends CI_Controller {
 		
 		
 	}	
-	
+			}
 	public function seller_delete(){
 
 $sl_ano  = urldecode($this->uri->segment(3));
@@ -76,7 +76,7 @@ $sl_ano  = urldecode($this->uri->segment(3));
 $this->load->model('Admin_model');
 
 
-$adaction2 = array('sl_ano'=>$sl_ano );
+$adaction2 = array('sl_ano'=>$sl_ano);
 
 
 $query = $this->Admin_model->delete_data('auction',$adaction2);

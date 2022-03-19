@@ -77,6 +77,16 @@
                         <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
                       </div>
                     </div>
+					
+					 <div class="form-group row m-4">
+					 
+					 <label for="" class="col-sm-3 col-form-label">product Name</label>
+                     
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="iproductname" name="iproductname"  value="<?php echo $sqldata[0]->iproductname ?>" >
+                      </div>
+                    </div>
+					
 				
 					 <div class="form-group row m-4">
                      
@@ -90,7 +100,7 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
                       <div class="col-sm-9">
-                        <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
+                        <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date "  value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->inspectiondate)); ?>">
                       </div>
                     </div>
 					
@@ -161,11 +171,17 @@ To:
 			 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Upload photos</label>
                       <div class="col-sm-9">
-                        <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price" value="<?php echo $sqldata[0]->imageupload ?>" >
+                        <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple >
 						  <?php $img = unserialize($sqldata[0]->imageupload)?>
+						  
+						<?php foreach($img as $sql){ ?>
+							
+						<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="60px" height="60px">	
+							
+					<?php	} ?>  
 						
-						<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="200px" height="250px">
+						
 						
 						
                       </div>

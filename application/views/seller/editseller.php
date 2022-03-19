@@ -80,13 +80,35 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
 <input type="file" id="iadharcardfile" name="iadharcardfile[]"  accept="image/*" value="$img">
+ <?php $img = unserialize($sqldata[0]->iadharcardfile)?>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
+                      
+                     <?php if($img == NULL){ 
+                     
+                     echo "No Image";
+                     ?>
+                     
+                     <?php }else{
+                         ?>
+                             
+                              
                  
-                  <?php $img = unserialize($sqldata[0]->iadharcardfile)?>
                  
-                 
-                 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+               <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">    
+                             
+                             
+                             
+                     <?php } ?>
                  
                  
                  
@@ -101,14 +123,27 @@
 
                       <div class="form-outline">
                        <input type="file" id="iaddresprof" name="iaddresprof[]" multiple accept="image/*" value="$img">
-                       
-                       
+                      <?php $img = unserialize($sqldata[0]->iaddresprof)?>
                       
-                  <?php $img = unserialize($sqldata[0]->iaddresprof)?>
+                     <?php if($img == NULL) { 
+                     
+                     echo "No Image";
+                     ?>
+                     
+                     <?php } else {
+                         ?>
+                             
+                              <?php $img = unserialize($sqldata[0]->iaddresprof)?>
                  
                  
                <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px">
+ alt="Chania" width="50px" height="50px">    
+                             
+                             
+                             
+                     <?php } ?>
+                      
+             
                   
                       <br>  <label class="form-label" for="form3Examplev5">Address Proof</label>
                       </div>
@@ -122,7 +157,11 @@
 	
 			  
 			  
-			  <?php }else if ($meg == "COMPANY") { ?> 
+			  <?php }?> 
+              
+              
+              
+              <?php if ($meg == "COMPANY"){ ?> 
 			  
 			  
 			  
@@ -221,7 +260,8 @@
                     <div class="col-md-12 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                      			  <select class="custom-select form-control form-control-lg form-control form-control-lg-lg" id="buyerstate" name="buyerstate" style="border-radius:20px;">
+                      			  <select class="custom-select form-control form-control-lg form-control form-control-lg-lg" id="istate" name="istate" style="border-radius:20px;">
+                                    <option value="<?php echo $sqldata[0]->istate ?>"><?php echo $sqldata[0]->istate ?></option>
                       <option value="Karnataka" selected>Karnataka</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                       <option value="Assam">Assam</option>
@@ -268,6 +308,18 @@
 											<input type="text" class="form-control form-control-lg"id="ipincode" name="ipincode" value="<?php echo $sqldata[0]->ipincode ?>" >
 											<label>Pincode*</label>
                       </div>
+                      
+                      
+                            <div class="form-outline form-white">
+                  
+											
+											<input type="hidden" class="form-control form-control-lg"id="role" name="role" value="<?php echo $sqldata[0]->role ?>" >
+											
+                      </div>
+                      
+                      
+                      
+                      
 
                     </div>
                     <div class="col-md-6 mb-4 pb-2">

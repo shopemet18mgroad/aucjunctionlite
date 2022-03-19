@@ -21,22 +21,7 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 	 
 	 	public function index()
 	{
-			$this->load->model('Admin_model');
-		$this->load->library('session');
-		
-		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
-			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('aname'=>$sess['sessi']);
-		
-		$this->load->view('admin/header',$sess);
+	
 		$this->load->library('fileupload');
 		$this->load->helper(array('url','form','file','html'));
 		$this->load->model('Admin_model');
@@ -44,11 +29,8 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		$isubcategory = $this->input->post('isubcategory');
 		$iproductdes = $this->input->post('iproductdes');
 		$inspectiondate	 = $this->input->post('inspectiondate');
-		$inspectiondate	 = $this->input->post('inspectiondate');
-		
-		
+		$imrp = $this->input->post('imrp');
 		$sl_noadd  = $this->input->post('sl_noadd');
-		
 		$startaucprice  = $this->input->post('startaucprice');
 		$endaucprice  = $this->input->post('endaucprice	');
 		$iauction_start  = $this->input->post('iauction_start');
@@ -56,11 +38,14 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		$imageupload  = $this->input->post('imageupload');
 		$iauctionid  = $this->input->post('iauctionid');
         $entryfee  = $this->input->post('entryfee'); 
+		 $iproductname  = $this->input->post('iproductname');
 		
 		
 		
-			 $a = $_FILES['imageupload']['name']; 
-			  $pic_array1 = self::upload_files('imageupload');
+		
+			 if($_FILES['imageupload']['name'][0]){
+				 $pic_array1 = self::upload_files('imageupload');
+			 } 
 		 
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -71,23 +56,22 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		
 		}
 		  
-			  
+		 if($_FILES['imageupload']['name'][0]){	  
 		  
 		  
-		  
-		  
-		
-		
-	
-			$this->load->model('Admin_model');
-			
-		$data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
+		  $this->load->model('Admin_model');
+		  $data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
 		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
-		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,' imageupload' => $pic_array1,'entryfee'=>$entryfee); 
-		
+		'iauction_start'=> $iauction_start, 'iauction_end' =>$iauction_end,'entryfee'=>$entryfee,'imageupload'=>$pic_array1,'iproductname'=>$iproductname);
+		}else{
+			  $this->load->model('Admin_model');
+				$data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,'iauction_start'=> $iauction_start,'iauction_end' =>$iauction_end,'entryfee'=>$entryfee,'iproductname'=>$iproductname);
 			
-			 //print_r($data2); die;
+			
+				}
+	
 
 			  
 			  $datainserr = "Data Inserted Successfully";
@@ -102,7 +86,7 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		}
 		
 		
-		
+	
 		private function upload_files($nameid){
     	
  
