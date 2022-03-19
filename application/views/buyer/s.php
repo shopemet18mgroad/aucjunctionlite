@@ -79,9 +79,9 @@
                 }
             ?>
             <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
+              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_car/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
               <label for="radio-three">Today's Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
+              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_car/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
               <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
               
           </div>
@@ -90,11 +90,21 @@
       </div>
       
         <div class="row icon-boxes">
-		 <?php $count = 1 ?>
-    
+     
       <?php $ctr=1; foreach($sqldata1 as $row){?>
+	  
+  <?php $meg = $row->isubcategory ?>
       
+   <?php if($meg == 'Car'){
+	   ?>
+	  
       <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
+	  
+	  
+	  
+	  
+	  
+    
       
         
     
@@ -103,23 +113,25 @@
             <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
 	   
 	   
-	   
+	   <?php
+foreach($img as $sql){
+	?>
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="100px" height="100px"></div>
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+alt="Chania" width="60px" height="60px"><?php } ?>
+ </div>
+ 
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			<p class="description d-flex justify-content-center"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
-            <p class="description d-flex justify-content-center"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
-      <p class="description d-flex justify-content-center"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
-			  <p class="description d-flex justify-content-center"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
+            <p class="description d-flex justify-content-center">MRP Price:<?php echo $row->imrp ?></p>
+            <p class="description d-flex justify-content-center">Start Price:<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex justify-content-center">End Price:<?php echo $row->endaucprice ?></p>
     
              
             <div class="row">
-            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $count; ?>">View Details</button>
+            <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
             <?php if(get_cookie($row->iauctionid) == NULL){?>
-            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr;?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+            <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
              <?php }else{?>
                <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
                  <?php }?>
@@ -131,11 +143,11 @@
      
 
 
-         <?php $count++ ?>
+       
 
  
-        <?php } ?>
-		 <?php $ctr++  ?>
+        <?php $ctr++; } ?>
+		<?php } ?>
     
        </div>
      
@@ -157,6 +169,14 @@
   
    <?php $count = 1 ?>
    <?php foreach($sqldata1 as $row){?>
+   
+ 
+   
+   
+   
+   
+   
+   
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
   <div class="modal-dialog">

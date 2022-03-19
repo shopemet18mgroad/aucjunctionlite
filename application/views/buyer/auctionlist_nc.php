@@ -97,28 +97,33 @@
       
         
     
-        <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200" >
           <div class="icon-box w-100">
-            <div class="icon d-flex justify-content-center"><?php $img = unserialize($sqldata1[0]->imageupload)?>
+		  
+          <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
 	   
 	   
-	   
+	   <?php
+foreach($img as $sql){
+	?>
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="100px" height="100px"></div>
-            <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-            <p class="description d-flex justify-content-center">MRP Price:<?php echo $row->imrp ?></p>
-            <p class="description d-flex justify-content-center">Start Price:<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center">End Price:<?php echo $row->endaucprice ?></p>
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+alt="Chania" width="100px" height="100px"><?php } ?>
+ </div>
+                       <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
+			<p class="description d-flex justify-content-center"style="font-size:16px;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+            <p class="description d-flex justify-content-center"style="font-size:12px;"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex justify-content-center"style="font-size:12px;"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex justify-content-center"style="font-size:12px;"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+			  <p class="description d-flex justify-content-center" style="font-size:12px;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
-             
             <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
             <?php if(get_cookie($row->iauctionid) == NULL){?>
             <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
              <?php }else{?>
-               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
+               <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr;?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
                  <?php }?>
             </div>
            
@@ -161,7 +166,7 @@
     <div class="modal-content">
       <div class="modal-header">
         
-<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
+<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:12px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
         <button type="button" class="btn btn-outline-info" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
@@ -244,7 +249,7 @@
 	
 	<tr>
 	
-	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
+	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:12px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
 	</tr>
 	
 	

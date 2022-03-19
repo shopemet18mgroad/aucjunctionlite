@@ -20,9 +20,11 @@ class BuyerAuction_mobile extends CI_Controller {
 	 */
 	public function __construct() {
         parent:: __construct();
-        $this->load->helper('url');
+        $this->load->helper(array('url','cookie'));
         $this->load->model('Admin_model');
         $this->load->library("pagination");
+		$this->load->library('session');
+		
     }
 	
 	public function index()
