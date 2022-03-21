@@ -59,7 +59,7 @@ class BuyerAuction_laptop extends CI_Controller {
 		if($this->uri->segment(3) == "TA"){
 			$config["total_rows"] = count($this->Admin_model->get_auction_today($date));
 		}else{
-			$config["total_rows"] = $this->Admin_model->get_count('auction');
+			$config["total_rows"] = $this->Admin_model->get_count_cat('auction','Laptop');
 		}
        
 		$config['attributes'] = array('class' => 'page-link');

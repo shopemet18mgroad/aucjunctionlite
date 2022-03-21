@@ -96,7 +96,7 @@
 	  
   <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'TV){
+   <?php if($meg == 'TV'){
 	   ?>
 	  
       <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
@@ -159,7 +159,7 @@
       <?php foreach($sqldata1 as $row){?>
 	  <?php $meg = $row->isubcategory ?>
       
-   <?php if($meg == 'Tv'){
+   <?php if($meg == 'TV'){
 	   ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
