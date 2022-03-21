@@ -27,17 +27,51 @@ class Home_register  extends CI_Controller {
 		$this->load->model('Admin_model');
 		
 		
+	if($radiothree = $this->input->post('radiofour');){
+		
 		$icontactperson = $this->input->post('icontactperson');
 		$iemailid  = $this->input->post('iemailid');
 		$ipass = base64_encode($this->input->post('ipass'));
 	    $iconpass = base64_encode($this->input->post('iconpass'));
 		
+		 $data = array('icontactperson'=>$icontactperson,'iemailid' => $iemailid,'ipass' => $ipass,'iconpass' => $iconpass);
 		 
+		 //print_r($data);die;
 		 
+		 	$datainserr = "Data Inserted Successfully";
+		$status = $this->Admin_model->insert('sellerdetails',$data);
+		header('location: '.base_url().'Login/'.$datainserr);
+		
+		
+		
+		
+		
+		
+	}else($radiothree = $this->input->post('radiothree');){
+		
+	$buyercontactnumber = $this->input->post('buyercontactnumber');
+		$buyeremail  = $this->input->post('buyeremail');
+		$ipass = base64_encode($this->input->post('ipass'));
+	    $iconpass = base64_encode($this->input->post('iconpass'));
+		
+		 $data = array('icontactperson'=>$icontactperson,'iemailid' => $iemailid,'ipass' => $ipass,'iconpass' => $iconpass);
 		 
+		 //print_r($data);die;
 		 
-		 
-		 
+		 	$datainserr = "Data Inserted Successfully";
+		$status = $this->Admin_model->insert('sellerdetails',$data);
+		header('location: '.base_url().'Login/'.$datainserr);
+		
+		
+	}
+		
+		
+		
+		
+		
+		
+	
+
 		 
 		 
 		 $data = array('icontactperson'=>$icontactperson,'iemailid' => $iemailid,'ipass' => $ipass,'iconpass' => $iconpass);

@@ -136,10 +136,10 @@
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-              <input type="radio" id="radio-three" name="radio-three" value="seller"/>
+              <input type="radio" id="radiothree" name="radiothree" value="seller"/>
               <label for="radio-three">Seller</label>
-              <input type="radio" id="radio-four" name="radio-four" value="buyer" />
-              <label for="radio-four"  >Buyer</label>
+              <input type="radio" id="radiofour" name="radiofour" value="buyer" />
+              <label for="radio-four" >Buyer</label>
               
           </div>
         </div>
