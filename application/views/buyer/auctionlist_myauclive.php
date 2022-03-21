@@ -32,7 +32,29 @@ if($checked == "ALL"){
       </div>
 <?php if(count($allaucdata)){?>
        <?php $total = 0; $ctr = 1; foreach($allaucdata as $allauc){ $img = unserialize($allauc[0]->imageupload);?>
-
+ <input type="hidden" id="ref-<?php echo $ctr;?>" value="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid).'|'.$ctr; ?>"><!-- hidden value to send auction id and ctr value -->
+ <?php 
+				date_default_timezone_set('Asia/Kolkata');
+				$time =  Date('Y-m-d H:i:s');
+				$diff = (strtotime($allauc[0]->iauction_end) - strtotime($time));
+				//$diff = abs($time - $sqldata[0]->aucclosedate_time);  
+			//$diff = strtotime($query[0]->aucclosedate_time)-strtotime($time);
+		$years = floor($diff / (365*60*60*24));  
+			$months = floor(($diff - $years * 365*60*60*24)/ (30*60*60*24));   
+			$days = floor(($diff - $years * 365*60*60*24 -  $months*30*60*60*24)/ (60*60*24)); 
+			$hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24)/ (60*60));  
+$minutes = floor(($diff - $years * 365*60*60*24  - $months*30*60*60*24 - $days*60*60*24 - $hours*60*60)/ 60);  
+$seconds = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24 - $hours*60*60 - $minutes*60)); 
+$Remaining = $hours." Hours: ".$minutes." Minutes: ".$seconds." Seconds: ";
+if($diff <= 0){
+			$condtion = false;
+		}else{
+			$condtion = true;
+		}
+    //die;
+    
+				?>
+        <input type="hidden" id="telapsed-<?php echo $ctr;?>" value="<?php echo $diff;?>">
         <div class="card rounded-3 mb-4">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
@@ -44,17 +66,15 @@ if($checked == "ALL"){
                 <p class="lead fw-normal mb-2 text-primary"><?php echo $allauc[0]->icategory;?></p>
 				 <p><span class="text-primary">Product Name: </span>IFB Washing Machine<span></p>
                 <p><span class="text-primary">Auction id: </span><?php echo $allauc[0]->iauctionid;?><span></p>
-                <p><span class="text-primary">Auction MRP: </span><?php echo $allauc[0]->imrp;?><span></p>
-				 <p><span class="text-primary">Start Price: </span>1<span></p>
-				
+				  <p><span class="text-primary">Time Elapsed: </span><span class="text-success" id="timer-<?php echo $ctr;?>"><?php echo $Remaining;?><span></p>
 				<button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
               </div>
               
              
               <div class="col-md-4 col-lg-4 col-xl-4 h-100 ">
-              <p><span class="text-primary">Current Bid Value: </span> 1008099<span></p>
+              <p><span class="text-primary">Current Bid Value: </span> <?php echo $allauc[0]->cbid;?><span></p>
               <p><span class="text-primary">My Bid Value: </span><span>1000000</p>
-              <p><span class="text-primary">Time Elapsed: </span>00:30:29<span></p>
+            
               <div class="form-group">
               <input class="form-control input-sm" id="inputsm" type="text">
               <button type="button" class="btn btn-primary btn-sm my-2">Bid</button>
@@ -296,3 +316,45 @@ if($checked == "ALL"){
 </div>
   <?php $count++ ?>
    <?php } ?>
+
+   <script>
+  function telapsed() {
+	var totallot = 2//$('#total-lot').val();
+	//var i = 1;
+	if(totallot){
+				setInterval(function(){
+					for(i=1;i<totallot;i++){
+					var dvar = '#telapsed-'+i;
+					
+					var dtvar = '#timer-'+i;
+					
+			  var d = $(dvar).val();
+			  //alert(d);
+			var h = Math.floor(d / 3600);
+			var m = Math.floor(d % 3600 / 60);
+			var s = Math.floor(d % 3600 % 60);
+			var disp = h + " Hours: " + m + " Minutes: " + s + " Seconds"; 
+			if(d <= 0){
+				$(dtvar).html('Auction Closed');
+				//return false;
+			}else{
+				$(dtvar).html(disp); d--; $(dvar).val(d);
+			}
+			  
+			   //$(dtvar).html('Auction Closed'+i);
+		  } // you could choose not to continue on failure...
+		 
+				}, 1000);
+		//Run Foreach loop here
+	}
+  	
+  
+}
+$(document).ready(function() {
+	setTimeout(telapsed, 1000);
+  //alert("started");
+  // run the first time; all subsequent calls will take care of themselves
+  //setTimeout(executeQuery, 30000);
+  
+});
+ </script>
