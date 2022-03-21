@@ -38,6 +38,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+   
+  <script src="https:// cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+   
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <style>
 
 
@@ -56,7 +60,9 @@ font-size:20px;
 margin-top:10px;
 }
 
-
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
 
 
 
