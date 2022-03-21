@@ -80,6 +80,12 @@ class Admin_model extends CI_Model
 	public function get_count($table) {
         return $this->db->count_all($table);
     }
+	public function get_count_cat($table,$cat) {
+		$this->db->from($table);
+		$this->db->where('icategory=',$cat);
+		$q = $this->db->get();
+        return count($q->result_array());
+    }
 		
 	public function get_auction_today($date){
 		$this->db->from('auction');
