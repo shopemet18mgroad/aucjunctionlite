@@ -89,7 +89,7 @@
 				<option value="Properties">Properties</option>
 					<option value="Furniture">Furniture</option>
 				<option value="Toys">Toys</option>
-				<option value="Toys">Fashion</option>
+				<option value="Fashion">Fashion</option>
 				</select>
                       </div>
                     </div>
