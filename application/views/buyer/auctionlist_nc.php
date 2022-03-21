@@ -89,20 +89,24 @@
           
       </div>
       
+	  
+	  
+	  
         <div class="row icon-boxes">
      
       <?php $ctr=1; foreach($sqldata1 as $row){?>
       <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
     
       
-        
-    
+        <?php $img = unserialize($row->imageupload)?>
+    <?php if($img){ ?> 
+	
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200" >
           <div class="icon-box w-100">
 		  
           <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
 	   
-	   
+	   <?php if($img){ ?>
 	   <?php
 foreach($img as $sql){
 	?>
@@ -110,11 +114,18 @@ foreach($img as $sql){
 
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
 alt="Chania" width="100px" height="100px"><?php } ?>
+
+<?php } else{ echo "No Images"; ?>
+<?php }?>
+
  </div>
                        <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			<p class="description d-flex justify-content-center"style="font-size:16px;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
-            <p class="description d-flex justify-content-center"style="font-size:12px;"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+			<p class="description d-flex justify-content-center"style="font-size:12px"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+			
+            <p class="description d-flex justify-content-center"style="font-size:12px;"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2"></i><?php echo $row->imrp ?></p>
+			
       <p class="description d-flex justify-content-center"style="font-size:12px;"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+	  
             <p class="description d-flex justify-content-center"style="font-size:12px;"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			  <p class="description d-flex justify-content-center" style="font-size:12px;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
     
@@ -131,7 +142,7 @@ alt="Chania" width="100px" height="100px"><?php } ?>
         </div>
         
      
-
+<?php } ?>
 
        
 
