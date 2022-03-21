@@ -314,7 +314,7 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
             type:'submit',
             data: {icategory:icategory,iauctionid:iauctionid,irole:irole,icompanyname:icompanyname,iemailid:iemailid,iauction_start:iauction_start,iauction_end:iauction_end},
            success:function(data){
-                swal("Success", "Data Saved Successfully", "success");
+                swal("Success", "Data Saved Successfully","success");
             },
 
         });

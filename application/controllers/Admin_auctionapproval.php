@@ -63,11 +63,13 @@ class Admin_auctionapproval extends CI_Controller {
 	
 	
 public function seller_delete(){
+	
+	$this->load->model('Admin_model');
 $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));
-print_r($iauctionid);die;
-$retriveval = array('iauctionid'=>$iauctionid);
+//print_r($iauctionid);die;
+$adaction2 = array('iauctionid'=>$iauctionid);
 
-
+$query = $this->Admin_model->delete_data('addlot',$adaction2);
 $query = $this->Admin_model->delete_data('auction',$adaction2);
 $this->load->helper('url');
 $this->load->library('session');
