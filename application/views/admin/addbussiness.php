@@ -63,7 +63,7 @@
                  
                  
                       <div class="form-outline">
-                 	<input type="text" class="form-control form-control-lg igstnumber" id="igstnumber"  name="igstnumber">
+                 	<input type="text" class="form-control form-control-lg igstnumber" id="igstnumber" maxlength="15" name="igstnumber">
 <label class="form-label" for="">GST Number</label>
                  
                  
@@ -122,7 +122,7 @@
                   
                    <div class="mb-4 pb-2">
                     <div class="form-outline form-white mm">
-                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder="Repeat password should be maximum length 15 ">
+                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder="Repeat password should be maximum length 15 "><i class="bi bi-eye-slash errspan" id="togglePassword1"></i>
                       <label class="form-label" for="form3Examplea3"> Confirm Password</label>
                     </div>
                   </div>
@@ -286,6 +286,17 @@ var inputvalues = $(this).val();
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#ipass');
 togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>
+<script>
+const togglePassword1 = document.querySelector('#togglePassword1');
+const password = document.querySelector('#iconpass');
+togglePassword1.addEventListener('click', function (e) {
     // toggle the type attribute
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);

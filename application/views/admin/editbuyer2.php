@@ -34,7 +34,7 @@
                       <div class="form-outline">
                       
                     
-											<input type="text" class="form-control form-control-lg" id="buyercontactnumber" name="buyercontactnumber" value="<?php echo $sqldata[0]->buyercontactnumber ?>">
+	<input type="text" class="form-control form-control-lg buyercontactnumber" id="buyercontactnumber"maxLength="10" name="buyercontactnumber" value="<?php echo $sqldata[0]->buyercontactnumber ?>">
 
   <label> Contact Number*</label>
 
@@ -69,7 +69,7 @@
                  
                       <div class="form-outline">
                  
-											<input type="text" class="form-control form-control-lg" id ="buyerasdharnumber" name="buyerasdharnumber" value="<?php echo $sqldata[0]->buyerasdharnumber ?>">
+	<input type="text" class="form-control form-control-lg buyerasdharnumber" id ="buyerasdharnumber" name="buyerasdharnumber"maxLength="12" value="<?php echo $sqldata[0]->buyerasdharnumber ?>">
                    <label> Adhar Number*</label><br>
                  
                  
@@ -223,7 +223,7 @@
                       <div class="form-outline form-white">
                   
 											
-											<input type="text" class="form-control form-control-lg"id="buyerpincode" name="buyerpincode" value="<?php echo $sqldata[0]->buyerpincode ?>" >
+	<input type="text" class="form-control form-control-lg"id="buyerpincode" name="buyerpincode" maxLength="6" value="<?php echo $sqldata[0]->buyerpincode ?>" >
 											<label>Pincode*</label>
                       </div>
 
@@ -359,3 +359,34 @@ function validateForm() {
     } 
  }
 </script> 
+ 
+<script type="text/javascript"> 
+
+	$(".buyerasdharnumber ").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^\d{12}$/;  
+  if(!regex.test(inputvalues)){      
+  $(".buyerasdharnumber").val("");    
+  swal("Alert!","Invalid Aadhaar Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+}); 
+
+</script> 
+
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".buyercontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".buyercontactnumber").val("");    
+  swal("Alert!","Invalid Buyer Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+	
+});    
+</script>

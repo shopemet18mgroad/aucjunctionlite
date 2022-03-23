@@ -9,9 +9,7 @@
             <div class="modal-content" style="font-size:13px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>Privacy Policy</b></h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-window-close"></i>
-                    </button>
+                   
                 </div>
 				<div class="modal-body">We value the trust you place in us. we insist upon the highest standards for secure transactions and customer information privacy. </div>
                 <div class="modal-body"><h6><b>Please read the following statement about our information gathering and dissemination practices.</b></h6>

@@ -109,7 +109,7 @@
                   
                    <div class="mb-4 pb-2">
                     <div class="form-outline form-white mm">
-                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder="Repeat password should be maximum length 15 ">
+                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder="Repeat password should be maximum length 15 "><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
                       <label class="form-label" for="form3Examplea3"> Confirm Password</label>
                     </div>
                   </div>

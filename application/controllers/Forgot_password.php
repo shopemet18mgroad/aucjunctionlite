@@ -89,12 +89,70 @@ class Forgot_password extends CI_Controller {
     $this->session->set_flashdata('msg',"Mail has been sent successfully");
     $this->session->set_flashdata('msg_class','alert-success');
     return redirect('forgotpassword');
-	}
-	 
+   } else if($table == "sellerdetails"){
+				
+		$newdata = $this->Admin_model->getdatafromtable('sellerdetails',$check_db);
+		$iemailid = $newdata[0]->iemailid;
+		$iname	= $newdata[0]->iname	;
+		$ipass = base64_decode($newdata[0]->ipass);
+		//$bpassword = $newdata[0]->bpassword;		
+	     $to =  $this->input->post('email');  
+
 	
-			  
-		}
-	  }
+	// User email pass here
+    $subject = 'Welcome To Aucjunctionlite';
+
+    $from = 'shopemet18mgroad';    // Pass here your mail id
+
+    $emailContent = '<!DOCTYPE><html><head></head><body><table width="600px" style="border:0px solid #cccccc;margin: auto;border-spacing:0;"><tr><td style="padding-left:0%"></td></tr>';
+	$emailContent .='<tr style=""><td style="height:20px">Dear :'.$iname.'</td></tr>';
+    $emailContent .='<tr style=""><td style="height:20px">Your Seller Email Id is:'.$iemailid.'</td></tr>';
+	$emailContent .='<tr style=""><td style="height:20px">Your password is:'.$ipass.'</td></tr>';
+
+
+    $emailContent .= $this->input->post('message');  //   Post message available here
+
+
+    $emailContent .='<tr><td style="height:20px"></td></tr>';
+    $emailContent .= "<tr><td style='color:white;padding: 2%;text-align: center;font-size: 13px;'><p style='margin-top:1px;'><a href='http://aucjunctionlite.com/' target='_blank' style='text-decoration:none;color: orange;'><b>www.Aucjunctionlite24.com</b></a></p></td></tr></table></body></html>";
+                
+//print_r($emailContent);die;
+
+    $config['protocol']  = 'smtp';
+    $config['smtp_host']  = 'ssl://smtp.gmail.com';
+    $config['smtp_port']  = '465';
+    $config['smtp_timeout'] = '60';
+
+    $config['smtp_user']    = 'shopemet18mgroad';    //Important
+    $config['smtp_pass']    = '18mgroad';  //Important
+
+    $config['charset']    = 'utf-8';
+    $config['newline']    = "\r\n";
+    $config['mailtype'] = 'html'; // or html
+    $config['validation'] = TRUE; // bool whether to validate email or not 
+
+     
+
+    $this->email->initialize($config);
+    $this->email->set_mailtype("html");
+    $this->email->from($from);
+    $this->email->to($to);
+    $this->email->subject($subject);
+    $this->email->message($emailContent);
+    $this->email->send();
+
+    $this->session->set_flashdata('msg',"Mail has been sent successfully");
+    $this->session->set_flashdata('msg_class','alert-success');
+    return redirect('forgotpassword');
+		
+		
+		
+		
+		
+		
+		
+	}
+	 }
 			
 			$this->load->view('forgotpassword');
 			
@@ -111,3 +169,4 @@ class Forgot_password extends CI_Controller {
 }
 				 
 	 }
+}

@@ -10,14 +10,12 @@
             <div class="modal-content" style="font-size:13px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>Contact us</b></h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-window-close"></i>
-                    </button>
+
                 </div>
     
 	
 
-		<center><div id="map-container-google-1" class="z-depth-1-half map-container ml-2" style="height: 500px">
+		<center><div id="map-container-google-1" class="z-depth-1-half map-container mt-5" style="height: 500px">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6455384739625!2d77.62078961430403!3d12.930488719278884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156df8557c27%3A0xf2157df40ade4d79!2sShopemet%20Networks%20Private%20Limited!5e0!3m2!1sen!2sin!4v1636968487917!5m2!1sen!2sin" width="80%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
              </div>
 		</center>

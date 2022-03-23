@@ -38,7 +38,7 @@
                       <div class="form-outline">
                       
                     
-<input type="text" class="form-control form-control-lg" id="icontactnumber" name="icontactnumber" value="<?php echo $sqldata[0]->icontactnumber ?>">
+<input type="text" class="form-control form-control-lg buyercontactnumber" id="icontactnumber" name="icontactnumber" maxLength="10"  value="<?php echo $sqldata[0]->icontactnumber ?>">
 
   <label> Contact Number*</label>
 
@@ -67,7 +67,7 @@
                  
                       <div class="form-outline">
                  
-<input type="text" class="form-control form-control-lg" id ="iadharnumber" name="iadharnumber" value="<?php echo $sqldata[0]->iadharnumber ?> " >
+<input type="text" class="form-control form-control-lg buyerasdharnumber" id ="iadharnumber" name="iadharnumber" maxLength="12"  value="<?php echo $sqldata[0]->iadharnumber ?> " >
                    <label> Aadhaar Number*</label><br>
                  
                  
@@ -169,7 +169,8 @@
                  
                  
                       <div class="form-outline">
-                 	<input type="text" class="form-control form-control-lg igstnumber" id="igstnumber"  name="igstnumber" value="<?php echo $sqldata[0]->igstnumber ?>">
+                 	<input type="text" class="form-control form-control-lg igstnumber" id="igstnumber"  name="igstnumber"  maxLength="15" 
+					value="<?php echo $sqldata[0]->igstnumber ?>">
 <label class="form-label" for="iname">GST Number</label>
                  
                  
@@ -233,7 +234,7 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline form-white">
                   
-											<input type="email" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php echo $sqldata[0]->iemailid ?>">
+<input type="email" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php echo $sqldata[0]->iemailid ?>" readonly>
 												<label> Email Id </label>
                     </div>
                   </div>
@@ -247,7 +248,7 @@
 
                       <div class="form-outline form-white">
    
-											<input type="text" class="form-control form-control-lg" id="iaddres" name="iaddres" value="<?php echo $sqldata[0]->iaddres ?>">
+<input type="text" class="form-control form-control-lg" id="iaddres" name="iaddres" value="<?php echo $sqldata[0]->iaddres ?>" >
 											            <label> Address </label>
                       </div>
 
@@ -305,7 +306,7 @@
                       <div class="form-outline form-white">
                   
 											
-											<input type="text" class="form-control form-control-lg"id="ipincode" name="ipincode" value="<?php echo $sqldata[0]->ipincode ?>" >
+											<input type="text" class="form-control form-control-lg"id="ipincode" name="ipincode" maxLength="6"  value="<?php echo $sqldata[0]->ipincode ?>" >
 											<label>Pincode*</label>
                       </div>
                       
@@ -374,3 +375,52 @@
 
     <!-- ======= Breadcrumbs ======= -->
  
+<script type="text/javascript"> 
+
+	$(".buyerasdharnumber ").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^\d{12}$/;  
+  if(!regex.test(inputvalues)){      
+  $(".buyerasdharnumber").val("");    
+  swal("Alert!","Invalid Aadhaar Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+}); 
+
+</script> 
+
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".buyercontactnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+  if(!regex.test(inputvalues)){      
+  $(".buyercontactnumber").val("");    
+  swal("Alert!","Invalid Seller Phone-Number no", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+	
+});    
+</script>
+<script type="text/javascript">    
+$(document).ready(function(){     
+        
+$(".igstnumber").change(function () {      
+var inputvalues = $(this).val();      
+  var regex = /^([0-9]){2}([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}([0-9]){1}([a-zA-Z]){1}([0-9A-Z]){1}?$/;    
+  if(!regex.test(inputvalues)){      
+  $(".igstnumber").val("");    
+  swal("Alert!","Invalid GST Number", "error");    
+  return regex.test(inputvalues);    
+  }    
+});      
+    
+});    
+
+</script>
+ 
+
+
