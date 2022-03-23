@@ -58,6 +58,7 @@
      
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
+		    <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
                 <div class="col-xl-7 col-lg-9 text-center">
            <a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
@@ -92,7 +93,7 @@
       </div> -->
         
       <div class="row ">
-        <table class="table table-striped">
+        <table class="table table-striped" id="myTable">
   <thead>
   
   
@@ -101,13 +102,13 @@
    <tr>
 						
                            <th>
-                            Sl. No .
+                            Sl.No.
                           </th>
                           <th>
                            NAME
                           </th>
                           <th>
-						 AADHAAR NUMBER*
+						 AADHAAR NUMBER
                           </th>
                           
                           <th>
@@ -132,13 +133,13 @@
 					
 			<?php foreach($data as $row){?>
 				<tr>												
-					<td><?php echo $count ?> </td>
-					<td><?php echo $row->buyername ?> </td>
-					<td><?php echo $row->buyerasdharnumber ?> </td>
-					<td><?php echo $row->buyeremail ?> </td>
+					<td data-label="Sl.No."><?php echo $count ?> </td>
+					<td data-label="NAME"><?php echo $row->buyername ?> </td>
+					<td data-label="AADHAAR NUMBER"><?php echo $row->buyerasdharnumber ?> </td>
+					<td data-label="EMAIL"><?php echo $row->buyeremail ?> </td>
 					
 					
-					<td >  
+					<td data-label="ACTION" >  
 					
 					
 		<a href="<?php echo base_url()."Admin_buyerapproval/buyerapprove/".urldecode($row->buysl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>

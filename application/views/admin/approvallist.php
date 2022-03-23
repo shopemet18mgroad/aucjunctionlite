@@ -1,7 +1,8 @@
  <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
-     
+             <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
+			 
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
                 <div class="col-xl-7 col-lg-9 text-center">
@@ -55,28 +56,14 @@
 						 
 						 
                            <td data-label="Name"><?php echo $row->iname ?></td>
-                          <td data-label="Adhar Number*"><?php echo $row->iadharnumber ?>      </td>
+                          <td data-label="Aadhaar Number"><?php echo $row->iadharnumber ?>      </td>
                         <td data-label="EMAIL"><?php echo $row->iemailid ?></td>
                         <td data-label="ROLE"><?php echo $row->role ?></td>
-                          <td>
-						  
-						
-						  
-						  
-						  
-						  
+                          <td data-label="Action"><?php echo $row->iname ?>
+
 						<a href ="<?php echo base_url()."Admin_approvallist/sellerapprove/".urldecode($row->sl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 						
-					
-						
-				
-						
-						
-						
-						
-						
-						
-                          </td>
+					 </td>
                         </tr>
 						
 			<?php $count++;?>

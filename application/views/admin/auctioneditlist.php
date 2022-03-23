@@ -4,7 +4,7 @@
 	 <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
-     
+       <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
                 <div class="col-xl-7 col-lg-9 text-center">
@@ -18,12 +18,12 @@
  
         
       <div class="row ">
-        <table class="table table-striped">
+        <table class="table table-striped" id="  myTable">
   <thead>
   
     <tr>
 						 <th>
-                            Sl. No .
+                            Sl. No.
                           </th>
 						     <th>
                          Auction Id
@@ -63,23 +63,24 @@
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
-					<td><?php echo $count ?> </td>
+					<td data-label="Sl.No."><?php echo $count ?> </td>
 
-					 <td> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td><?php echo $row->icategory ?> </td>
-					<td><?php echo $row->icontactperson ?> </td>
+					 <td data-label=" Auction Id"> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					<td data-label="Category"><?php echo $row->icategory ?> </td>
+					<td data-label="Seller Name"><?php echo $row->icontactperson ?></td>
 					
 					
-					<td><?php echo $row->icompanyname ?> </td>
+					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
 					
-					<td><?php echo $row->iauction_start ?><br> to <br>
+					<td data-label="Online Auction Start And End Date"><br><?php echo $row->iauction_start ?><br>to <br>
 					<?php echo $row->iauction_end ?> </td>
 					
+					<td data-label="Company Name"><?php echo $row->icompanyname ?> </td>
 					
 					
 					
 					
-					<td >  
+					<td data-label="Action" >  
 					
 					
 		<a href="<?php echo base_url()."Admin_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>

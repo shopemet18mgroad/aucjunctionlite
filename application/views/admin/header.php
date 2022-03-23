@@ -39,9 +39,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
    
-  <script src="https:// cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
-   
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+   <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+   <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+   <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 <style>
 
 
@@ -64,7 +65,17 @@ $(document).ready( function () {
     $('#myTable').DataTable();
 } );
 
+@media only screen and (max-width: 600px) ,(min-device-width: 768px) and (max-device-width: 1024px)  {
 
+
+	/*  Force table to not be like tables anymore  */
+    table, thead, tbody, th, td, tr {  
+		 display: block!important;  
+		 width: 100%;
+	
+  } 
+
+ }
 
 </style>
   
