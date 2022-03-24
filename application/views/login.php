@@ -39,9 +39,19 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
+
+  
+		  
       <h1 class="logo"<a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+          /></a><i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>	 </h1>
+		  
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -49,9 +59,7 @@
         <ul>
           <li> 
 
-
-     
-		  		
+	  		
 		
 <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
            
@@ -62,11 +70,7 @@
            
 			</li>
 			  
-		  
-		  
-		  
-		  
-
+		 
            <li><a class="nav-link scrollto" href="#">Privacy Policy</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -109,7 +113,7 @@
           <!-- Password input -->
           <div class="form-outline mb-2">
             <input type="password" id="pass" class="form-control form-control-lg"
-              placeholder=""  name="pass"/>
+              placeholder=""  name="pass"/><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
             <label class="form-label" for="form3Example4">Password</label>
           </div>
 
@@ -128,7 +132,7 @@
           
              <div class="d-flex justify-content-between">
                <div class="text-center text-lg-start mt-1 pt-2 pb-5">
-            <button type="submit" name="submit" class="btn btn-primary btn-lg"
+            <button type="submit" name="submit" class="btn btn-primary btn-sm"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
               
              
@@ -199,7 +203,7 @@
             <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
                  <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i> Home</a>
                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i> Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i><br> Cart</a>
                 <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> WishList</a>
             </nav>
            
@@ -221,3 +225,14 @@
 </body>
 
 </html>
+<script>
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#pass');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>

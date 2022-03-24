@@ -50,7 +50,7 @@
        echo  $aucs;	   
 	   
 
-	   ?>	   <br>to <br>
+	   ?>	   <br>to	   <br>
 	   <?php $auce = $sqldata1[0]->iauction_end; 
        $cool = explode('.',$auce);
        $auce = $cool[0];
@@ -134,44 +134,21 @@
 	<tr>
      
       <th scope="row">Upload photos* </th>
+	   <td>  <?php $img = unserialize($sqldata1[0]->imageupload);?>
 	  
 	  
-	  
-	
-	  
-	  	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
-		   
-		   
-	<?php 	if($img==Null ){ ?>
-	
-	
-	<?php echo "No Image"; ?>
-	
-			
-	<?php 	}else{ ?>  
-		    <?php foreach($img as $sql) { ?>
-		   <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+	  <?php foreach($img as $sql){?>
+	   
+	   
+	   
+	   
+
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
 	   
-	     
 	   
-	   
-
-
- 
- 
- 
-		<?php } ?> 
-		<?php } ?>
-	   
-	 
-	   
+	  <?php }?>
 	   </td>
-	  
-	  
-	  
-	  
-	  
       
     </tr>
 	<tbody>
@@ -200,9 +177,9 @@
       </div>
       <div class="modal-body">
     
-	  <?php foreach($sqldata1 as $sqldat){?> 
+	 
 	  
-	   <?php $img = unserialize($sqldat->imageupload);?>
+	   <?php $img = unserialize($sqldata1[0]->imageupload);?>
 	  
 	  
 	  <?php foreach($img as $sql){?> 
@@ -214,7 +191,7 @@
 		
 	  <?php } ?>	
 		
-	  <?php } ?>
+	
 		
       </div>
       <div class="modal-footer">
