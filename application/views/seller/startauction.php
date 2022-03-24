@@ -10,12 +10,8 @@
   <div class="container py-5 h-100">
     <div class="row m-3 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row m-3 g-0">
-			  <div class="col-lg-12">
-                <div class="p-5">
-            
+      
+          
          
               
               
@@ -106,11 +102,8 @@
                  <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-           </div>
-		   </div>
-		   </div>
-		   </div>
-		   </div>
+        
+		 
 		   </div>
 		   </div>
 		   </div>

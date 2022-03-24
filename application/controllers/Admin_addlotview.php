@@ -33,17 +33,20 @@ class Admin_addlotview extends CI_Controller {
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		 $sl_ano = urldecode($this->uri->segment(3));
+		 $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(4)));
+
+		 $active = array('sl_ano'=>$sl_ano,'iauctionid'=>$iauctionid,'aoption '=>true);
 		
 		
 		
-	$this->load->model('Admin_model');
-     $active = array('aoption '=>true);
+	
+    
 	
 	$query = $this->Admin_model->getaddlotauctiondetails('auction', $active);
 	
 	$data['sqldata1']= $query;
-	
+	print_r($data['sqldata1'] );die;
 	    $this->load->view('admin/header',$sess);
 		$this->load->view('admin/addlotview',$data);
 		$this->load->view('admin/footer');

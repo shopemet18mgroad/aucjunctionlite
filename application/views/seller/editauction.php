@@ -1,13 +1,9 @@
       <main id="main">
     <section class="h-100 h-custom-2 gradient-custom-2">
   <div class="container py-5 h-100">
-    <div class="row m-5 m-5 d-flex justify-content-center align-items-center h-100">
+    <div class="row m-4 m-4 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row m-5 m-5 g-0">
-			  <div class="col-lg-12">
-                <div class="p-5">
+      
             
          
 
@@ -24,7 +20,7 @@
                     
                   </p>
 
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
@@ -42,7 +38,7 @@
 					
 					
 					
-					  <div class="form-group row m-5">
+					  <div class="form-group row m-4">
                       
                       <div class="col-sm-9">
                         <input type="hidden" class="form-control form-control-lg" id="sl_ano" name="sl_ano" placeholder="Seller Name" value="<?php echo $sqldata[0]->sl_ano ?>" readonly>
@@ -50,14 +46,14 @@
                     </div>
 			
 					
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Auction Id</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly value="<?php echo $sqldata[0]->iauctionid ?>" >
                       </div>
                     </div>
 					
-						<div class="form-group row m-5">
+						<div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Type</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="" name="irole" onChange="meghasuma()" value="<?php echo $sqldata[0]->irole ?>">
@@ -82,7 +78,7 @@
 					
 					
 					
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Seller Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="icontactperson" 
@@ -95,13 +91,13 @@
 					
 					
                  
-                    <div class="form-group row m-5 icompanyname">
+                    <div class="form-group row m-4 icompanyname">
                       <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"  value="<?php echo $sqldata[0]->icompanyname ?>"  onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
                       </div>
                     </div>
-					<div class="form-group row m-5 iemailid">
+					<div class="form-group row m-4 iemailid">
                       <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iemailid" value="<?php echo $sqldata[0]->iemailid ?>" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
@@ -109,7 +105,7 @@
                     </div>
 					
 		
-						 <div class="form-group row m-5">
+						 <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
                       <div class="col-sm-9">
                        From: 	
@@ -124,11 +120,7 @@
                  <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-				      </div>
-		   </div>
-		   </div>
-		   </div>
-		   </div>
+		
 		   </div>
 		   </div>
 		   </div>
@@ -138,13 +130,7 @@
       </main>
         
         
-              
-				  
-				  
-				  
-				  
-				  
-     <script>
+          <script>
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
 	  //var cat2 = document.getElementById('irefid').value;
@@ -152,12 +138,18 @@
 	   var m = d.getHours();
 	   var n = d.getMinutes();
 	   var s = d.getSeconds();
+	   var o = d.getDate();
+	   var l = d.getMonth()+1;
+	   
+
+	   
+	   
 	 if(cat == 'Select'){
 		 swal("Alert!", "Please Select Categoery First", "error");
 		 return false;
 	 }
 	 if(cat.length<21){
-		  document.getElementById('iauctionid').value = "AUC/"+cat+"/"+m+"/"+n+"/"+s;
+		  document.getElementById('iauctionid').value = o+"/"+l+"/"+cat+"/"+m+"/"+n+"/"+s;
 	 }
  }
  </script>
@@ -178,11 +170,6 @@
 }
 </script>	 
 	 
-	 
-     
-     
-     
-  
 
    <script>
   function search_company1(){
@@ -223,15 +210,18 @@
 
  </script>
 	 <script>
-	 function getPagin(b){
-	 var a = b.split("|");
+	 function getPagin(v){
+	 var s = v.split("|");
 	
-	document.getElementById("iemailid").value = a[0];
+	document.getElementById("iemailid").value = s[0];
 	
 	
-    document.getElementById("icontactperson").value = a[1];
-	 $("#dp").hide();
+    document.getElementById("icontactperson").value = s[1];
+	 $("#dpp").hide();
  } 
+	  $('.ltype').click(function() {
+  $('.ltype').not(this).prop('checked', false);
+});
 	 
 	</script> 
 	 
@@ -249,6 +239,7 @@
 		 
 		   document.getElementById('iemailid').value = "";
 		   document.getElementById('icontactperson').value = "";
+		   document.getElementById('icompanyname').value = "NA";
 		  
 		  
 		  $(".icompanyname").hide();
@@ -264,6 +255,7 @@
 		
 		  document.getElementById('icompanyname').value = "";
 		  document.getElementById('icontactperson').value = "";
+		   document.getElementById('iemailid').value = "NA";
 		  
 
 		  
@@ -314,20 +306,12 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
             type:'submit',
             data: {icategory:icategory,iauctionid:iauctionid,irole:irole,icompanyname:icompanyname,iemailid:iemailid,iauction_start:iauction_start,iauction_end:iauction_end},
            success:function(data){
-                swal("Success", "Data Saved Successfully", "success");
+                swal("Success", "Data Saved Successfully","success");
             },
-            error:function(xhr, throw m-5nError, ajaxOptions){
 
-            },
         });
     }
 	
 	
 }
   </script>
-	
-	
-	
-	
-
-

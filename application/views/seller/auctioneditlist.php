@@ -64,7 +64,7 @@
 				<tr>												
 					<td><?php echo $count ?> </td>
 
-					 <td> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					 <td> <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td><?php echo $row->icategory ?> </td>
 					<td><?php echo $row->icontactperson ?> </td>
 					
