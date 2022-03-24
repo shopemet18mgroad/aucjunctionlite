@@ -1,5 +1,5 @@
 
-	
+	 <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
 
 	 <main id="main">
 
@@ -23,7 +23,7 @@
   
     <tr>
 						 <th>
-                            Sl. No .
+                            Sl.No.
                           </th>
 						     <th>
                          Auction Id
@@ -70,23 +70,23 @@
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
-					<td><?php echo $count ?> </td>
+					<td data-label="Sl.No."><?php echo $count ?> </td>
 
-					 <td> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td><?php echo $row->icategory ?> </td>
-					<td><?php echo $row->icontactperson ?> </td>
+					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					<td data-label="Category"><?php echo $row->icategory ?> </td>
+					<td data-label="Seller Name" ><?php echo $row->icontactperson ?> </td>
 					
 					
-					<td><?php echo $row->icompanyname ?> </td>
+					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
 					
-					<td><?php echo $row->iauction_start ?><br> to <br>
+					<td data-label="Online Auction Start And End Date"><?php echo $row->iauction_start ?><br> to <br>
 					<?php echo $row->iauction_end ?> </td>
 					
 					
 					
 					
 					
-					<td >  
+					<td data-label="Action" >  
 					
 	    <a href ="<?php echo base_url()."Admin_auctionapproval/sellerapprove/".urldecode($proid);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 		

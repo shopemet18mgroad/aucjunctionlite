@@ -35,7 +35,9 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		
 		
 		
-		
+		 $igstnumber = $this->input->post('igstnumber');
+ $icompanyname = $this->input->post('icompanyname'); 
+ $itypeseller = $this->input->post('itypeseller');  
 	    $iname = $this->input->post('iname'); 
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
@@ -87,7 +89,7 @@ class Admin_seller_basicinfo_update extends CI_Controller {
 		}  
 $this->load->model('Admin_model');
 			 
-if($_FILES['iadharcardfile']['name'][0] && $_FILES['iaddresprof']['name'][0]){
+if($_FILES['iadharcardfile']['name'][0] || $_FILES['iaddresprof']['name'][0]){
 	
 $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
@@ -95,13 +97,13 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
 			 'iaddresprof'=>$pic_array2);
-			
+			//print_r($data2);die;
 			 }else{
 				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
-			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
-		
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
+		//print_r($data2);die;
 			 }
 			 
 
@@ -143,6 +145,9 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
 		$iaddresprof  = $this->input->post('iaddresprof');
+		 $igstnumber = $this->input->post('igstnumber');
+ $icompanyname = $this->input->post('icompanyname'); 
+ $itypeseller = $this->input->post('itypeseller');
 		
 		
 		 
@@ -155,13 +160,13 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
-			 'iaddresprof'=>$pic_array2);
+			 'iaddresprof'=>$pic_array2,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
 			
 			 }else{
 				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
-			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
 		
 			 }
 			 

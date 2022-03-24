@@ -94,13 +94,13 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
-			 'iaddresprof'=>$pic_array2);
+			 'iaddresprof'=>$pic_array2,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
 			
 			 }else{
 				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
-			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
 		
 			 }
 			 
@@ -132,7 +132,9 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
 		$iemailid  = $this->input->post('iemailid');
-		
+    $igstnumber = $this->input->post('igstnumber');
+ $icompanyname = $this->input->post('icompanyname'); 
+ $itypeseller = $this->input->post('itypeseller');
 		
 		$iadharcardfile = $this->input->post('iadharcardfile');
 		
@@ -155,13 +157,13 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
-			 'iaddresprof'=>$pic_array2);
+			 'iaddresprof'=>$pic_array2,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
 			
 			 }else{
 				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
-			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson);
+			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
 		
 			 }
 			 

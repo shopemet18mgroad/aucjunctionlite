@@ -9,9 +9,7 @@
             <div class="modal-content" style="font-size:13px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>About us</b></h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-window-close"></i>
-                    </button>
+
                 </div>
 				<div class="modal-body">Aucjunctionlite a brand/subsidiary of Shopemet Networks Pvt Ltd</div>
                 <div class="modal-body">Aucjunctionlite (Brand/Subsidiary)was Founded in March 2020 in Silicon City Of India.</div>
