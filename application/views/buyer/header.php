@@ -201,12 +201,9 @@ function goBack() {
 
 		
 		
-		
-<li class="dropdown"><a href="<?php echo base_url();?>buyer_categories"><span>Category</span><i class="bi bi-chevron-down"></i></a>
-           
-			</li>
+
 			
-			
+                          <li><a href="<?php echo base_url();?>buyer_categories">Category</a></li>
          
 		
 		
@@ -258,7 +255,7 @@ function goBack() {
 			
          
 			
-                  <li class="dropdown"><a href="<?php echo base_url();?>Buyer_privacypolicy"><span>Privacy Policy</span><i class="bi bi-chevron-down"></i></a>
+                  <li><a href="<?php echo base_url();?>Buyer_privacypolicy"><span>Privacy Policy</span></a>
            
 			</li>
 			    
@@ -274,14 +271,14 @@ function goBack() {
 			
 			
 			
-                  <li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
+                  <li><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span></a>
            
 			</li>
 			    
                    
 		
 		
-<li class="dropdown"><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
+<li><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span></a>
            
 			</li>
 			

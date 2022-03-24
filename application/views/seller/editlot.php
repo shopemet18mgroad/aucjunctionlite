@@ -5,11 +5,7 @@
   <div class="container py-5 h-100">
     <div class="row m-4 m-5 m-5 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row m-4 m-5 m-5 g-0">
-			  <div class="col-lg-12">
-                <div class="p-5">
+    
             
          
 
@@ -20,7 +16,7 @@
 				  
 				  
 				  
-                 <form action= "<?php echo base_url();?>Admin_editlot_basicinfo_update"
+                 <form action= "<?php echo base_url();?>Seller_editlot_basicinfo_update"
 				 method="post" enctype="multipart/form-data"> 
 			
                   <h4 class="card-title">EDIT LOT </h4>
@@ -181,12 +177,7 @@ To:
                  <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-           
-         </div>
-		   </div>
-		   </div>
-		   </div>
-		   </div>
+      
 		   </div>
 		   </div>
 		   </div>

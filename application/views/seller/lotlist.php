@@ -87,7 +87,7 @@
 					<td >  
 					
 					
-		<a href="<?php echo base_url()."Admin_editlot/index/".urldecode($proid);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
+		<a href="<?php echo base_url()."Seller_editlot/index/".urldecode($proid);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 		
 		
 

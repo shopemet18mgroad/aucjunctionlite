@@ -117,7 +117,7 @@
 
 	   ?>
 	   
-	      	   <br>to	   <br>
+	      	   <br>to<br>
 	   <?php $aucn = $sqldata1[0]->iauction_start; 
        $coole = explode('.',$aucn);
        $aucn = $coole[0];
@@ -134,17 +134,27 @@
 	<tr>
      
       <th scope="row">Upload photos* </th>
+<<<<<<< HEAD
 	   <td>  <?php $img = unserialize($sqldata1[0]->imageupload);?>
 	  
 	  
 	  <?php foreach($img as $sql){?>
+=======
+	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+>>>>>>> e30f1b5c32fdca24d751b65d2b880964c3823a8c
 	   
 	   
 	   
 	   
 
+<<<<<<< HEAD
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
+=======
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">
+	   
+>>>>>>> e30f1b5c32fdca24d751b65d2b880964c3823a8c
 	   
 	   
 	  <?php }?>
