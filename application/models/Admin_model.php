@@ -47,6 +47,10 @@ class Admin_model extends CI_Model
 				return true;
 			}
 		}
+		
+		
+	
+		
 	
 	public function getaddlotauctiondetails() {			 
 			$this->db->select('

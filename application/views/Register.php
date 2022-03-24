@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,10 +135,10 @@
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-              <input type="radio" id="radiothree" name="radiothree" value="seller"/>
-              <label for="radio-three">Seller</label>
-              <input type="radio" id="radiofour" name="radiofour" value="buyer" />
-              <label for="radio-four" >Buyer</label>
+                 <input type="radio" id="radio-three" name="switchtwo" value="COMPANY" />
+              <label for="radio-three">COMPANY</label>
+              <input type="radio" id="radio-four" name="switchtwo" value="INDIVIDUAL" />
+              <label for="radio-four">INDIVIDUAL</label>
               
           </div>
         </div>
@@ -154,10 +153,10 @@
           <div class="form-outline mb-0">
         
             <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+              placeholder=""  name="user">
             <label class="form-label" for="form3Example3">Phone Number OTP</label>
             <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="" / name="user">
+              placeholder=""  name="user">
             <label class="form-label" for="form3Example3">E-mail OTP</label>
             
           </div>

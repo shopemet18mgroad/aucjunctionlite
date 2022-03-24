@@ -43,6 +43,7 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 		$icountry  = $this->input->post('icountry');
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
+		$iotp  = $this->input->post('iotp');
 		$iaddresprof  = $this->input->post('iaddresprof');
 		
 		 $a = $_FILES['iadharcardfile']['name']; 
@@ -82,7 +83,7 @@ class Admin_seller_basicinfo_add extends CI_Controller {
 		'iemailid' => $iemailid ,'ipass' => $ipass,'iconpass' => $iconpass,
 		'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,'iicity' => $iicity, 
 		'istate' => $istate, 'icountry' => $icountry, 'ipincode' => $ipincode,
-		'icontactperson'=>$icontactperson,'iaddresprof'=>$pic_array2 );
+		'icontactperson'=>$icontactperson,'iaddresprof'=>$pic_array2,'iotp'=>$iotp);
 		
 		
 		

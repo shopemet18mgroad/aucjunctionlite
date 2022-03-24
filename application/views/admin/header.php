@@ -64,6 +64,9 @@ $(document).ready( function () {
     $('#myTable').DataTable();
 } );
 
+ $('.role').click(function() {
+  $('.role').not(this).prop('checked', false);
+});
 
 
 </style>

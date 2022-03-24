@@ -20,33 +20,37 @@ class Seller_addlotview extends CI_Controller {
 	 */
 	public function index()
 	{
-   $this->load->model('Admin_model');
-   $this->load->library('session');
+			$this->load->model('Admin_model');
+		    $this->load->library('session');
 		
 		
-	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "SELLER"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index/'.$datainserr);
-			die;
-			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-			$active = array('iemailid'=>$sess['sessi'],'aoption'=>true);
+         
+         $sl_ano = urldecode($this->uri->segment(3));
+		 $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(4)));
+
+		 $active1 = array( 'sl_ano'=>$sl_ano, 'iauctionid'=>$iauctionid,'aoption '=>true);
 		
 		
 		
 		
-	$this->load->model('Admin_model');
-  
 	
-	$query = $this->Admin_model->getaddlotauctiondetails('auction',$active);
+    
+	
+	$query = $this->Admin_model->getaddlotauctiondetails('addlot', $active1);
 	
 	$data['sqldata1']= $query;
+	
+//print_r($data['sqldata1']); die;
+
+
+	$sess = array('sessi'=>$this->session->userdata('username'));
+		$active = array('iemailid'=>$sess['sessi']);
+	
 	
 	    $this->load->view('seller/header',$sess);
 		$this->load->view('seller/addlotview',$data);
 		$this->load->view('seller/footer');
-	}
+
+		
 }
 }

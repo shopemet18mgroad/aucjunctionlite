@@ -74,6 +74,7 @@
 
 					 <td> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td><?php echo $row->icategory ?> </td>
+					<td><?php echo $row->sl_ano ?> </td>
 					<td><?php echo $row->icontactperson ?> </td>
 					
 					
@@ -88,12 +89,13 @@
 					
 					<td >  
 					
-	    <a href ="<?php echo base_url()."Admin_auctionapproval/sellerapprove/".urldecode($proid);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
+	    <a href ="<?php echo base_url()."Seller_auctionapproval/sellerapprove/".urldecode($proid);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 		
-		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+		<a href="<?php echo base_url()."
+		Seller_addlotview/index/".urldecode($row->sl_ano)."/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
 		
-		<a href ="<?php echo base_url()."Admin_auctionapproval/seller_delete/".urldecode($proid);?>">
+		<a href ="<?php echo base_url()."Seller_auctionapproval/seller_delete/".urldecode($proid);?>">
 						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 	
 

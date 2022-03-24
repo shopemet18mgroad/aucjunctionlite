@@ -8,11 +8,11 @@
         <main id="main">
     <section class="h-100 h-custom-2 gradient-custom-2">
   <div class="container py-5 h-100">
-    <div class="row m-5 d-flex justify-content-center align-items-center h-100">
+    <div class="row m-3 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">
           <div class="card-body p-0">
-            <div class="row m-5 g-0">
+            <div class="row m-3 g-0">
 			  <div class="col-lg-12">
                 <div class="p-5">
             
@@ -24,7 +24,7 @@
                     
                   </p>
 				  
-				     <div class="form-group row m-5">
+				     <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
@@ -46,14 +46,14 @@
                       </div>
                     </div>
 					
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Auction Id</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly>
                       </div>
                     </div>
 					
-						<div class="form-group row m-5">
+						<div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Type</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="irole" name="irole" onChange="meghasuma()">
@@ -68,7 +68,7 @@
                       </div>
                     </div>
 					
-                    <div class="form-group row m-5">
+                    <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Seller Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" placeholder="Seller Name" readonly>
@@ -77,13 +77,13 @@
 								
 			
                  
-                    <div class="form-group row m-5 icompanyname">
+                    <div class="form-group row m-3 icompanyname">
                       <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"   onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
                       </div>
                     </div>
-					<div class="form-group row m-5 iemailid">
+					<div class="form-group row m-3 iemailid">
                       <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
@@ -91,7 +91,7 @@
                     </div>
 					
 		
-						 <div class="form-group row m-5">
+						 <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
                       <div class="col-sm-9">
                        From: 	

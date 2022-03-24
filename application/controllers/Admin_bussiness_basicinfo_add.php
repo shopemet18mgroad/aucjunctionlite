@@ -59,6 +59,8 @@ class Admin_bussiness_basicinfo_add extends CI_Controller {
 		$icountry  = $this->input->post('icountry');
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
+      $iotp  = $this->input->post('iotp');
+		
 		
 	
 	
@@ -67,7 +69,7 @@ class Admin_bussiness_basicinfo_add extends CI_Controller {
 		$data = array('role'=>$role,'iname' => $iname, 'icontactnumber' => $icontactnumber,'iemailid' => $iemailid ,'ipass' => $ipass,
 		'iconpass' => $iconpass,'igstnumber'=>$igstnumber, 'iaddres' => $iaddres,
 		' iicity' => $iicity, 'istate' => $istate, 'icountry' => $icountry,
-		'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'icompanyname'=>$icompanyname );
+		'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'icompanyname'=>$icompanyname,'iotp'=>$iotp);
 		
 		
 		

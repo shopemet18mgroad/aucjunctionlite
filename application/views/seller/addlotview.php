@@ -28,24 +28,12 @@
 	  <td><?php echo $sqldata1[0]->isubcategory ?></td>
       
     </tr><br>
-	   <tr>
-     
-      <th scope="row">product Name </th>
-	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
-      
-    </tr><br>
-	
-	
-	
-	
-	
     <tr>
      
       <th scope="row">product Description  </th>
 	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
       
     </tr><br>
-	
 	
 	<tr>
      
@@ -62,7 +50,7 @@
        echo  $aucs;	   
 	   
 
-	   ?>	   <br>to	   <br>
+	   ?>	   <br>to <br>
 	   <?php $auce = $sqldata1[0]->iauction_end; 
        $cool = explode('.',$auce);
        $auce = $cool[0];
@@ -84,26 +72,8 @@
 	</tr>
 	
 	
-		
-	<tr>
-     
-      <th scope="row">Category </th>
-	   <td><?php echo $sqldata1[0]->icategory ?></td>
-      
-    </tr>
-	<tr>
-     
-      <th scope="row">Sub-category </th>
-	   <td><?php echo $sqldata1[0]->isubcategory ?></td>
-      
-    </tr>
 	
-	<tr>
-     
-      <th scope="row">product Description </th>
-	   <td><?php echo $sqldata1[0]->iproductdes ?></td>
-      
-    </tr>
+	
 	<tr>
      
       <th scope="row">Inspection Date </th>
@@ -119,34 +89,6 @@
 	     
 	   </td>
     </tr>
-	
-		<tr>
-     
-      <th scope="row">Current location </th>
-	   <td><?php echo $sqldata1[0]->currentlocation ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row"> Expected price</th>
-	   <td><?php echo $sqldata1[0]->imrp ?></td>
-      
-    </tr>
-	
-		<tr>
-     
-      <th scope="row"> Expected price</th>
-	   <td><?php echo $sqldata1[0]->startaucprice ?></td>
-      
-    </tr>
-	
-	
-	
-	
-	
-	
-
 	
 	<tr>
      
@@ -191,19 +133,45 @@
 	
 	<tr>
      
-      <th scope="row">Upload photos* <br> <div style="font-size:10px;color:red;">click on image to view full images </div></th>
-	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+      <th scope="row">Upload photos* </th>
+	  
+	  
+	  
+	
+	  
+	  	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+		   
+		   
+	<?php 	if($img==Null ){ ?>
+	
+	
+	<?php echo "No Image"; ?>
+	
+			
+	<?php 	}else{ ?>  
+		    <?php foreach($img as $sql) { ?>
+		   <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
+	   
 	     
 	   
-	    <?php foreach($img as $sql){?> 
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
- alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal" >
+
+ 
+ 
+ 
+		<?php } ?> 
+		<?php } ?>
 	   
-		<?php }?>
+	 
 	   
 	   </td>
+	  
+	  
+	  
+	  
+	  
       
     </tr>
 	<tbody>
@@ -232,9 +200,9 @@
       </div>
       <div class="modal-body">
     
-	
+	  <?php foreach($sqldata1 as $sqldat){?> 
 	  
-	   <?php $img = unserialize($sqldata1[0]->imageupload);?>
+	   <?php $img = unserialize($sqldat->imageupload);?>
 	  
 	  
 	  <?php foreach($img as $sql){?> 
@@ -246,7 +214,7 @@
 		
 	  <?php } ?>	
 		
-	
+	  <?php } ?>
 		
       </div>
       <div class="modal-footer">
