@@ -36,7 +36,15 @@ if($checked == "ALL"){
  <?php 
 				date_default_timezone_set('Asia/Kolkata');
 				$time =  Date('Y-m-d H:i:s');
-				$diff = (strtotime($allauc[0]->iauction_end) - strtotime($time));
+        // echo $allauc[0]->iauction_end;
+        //  echo "<br>";
+        // echo strtotime($allauc[0]->iauction_end);
+        // echo "<br>";
+        // echo strtotime($time); 
+        // echo "<br>";
+        // echo $time; 
+        // die;
+				$diff = strtotime($allauc[0]->iauction_end) - strtotime($time);
 				//$diff = abs($time - $sqldata[0]->aucclosedate_time);  
 			//$diff = strtotime($query[0]->aucclosedate_time)-strtotime($time);
 		$years = floor($diff / (365*60*60*24));  
@@ -55,7 +63,8 @@ if($diff <= 0){
     
 				?>
         <input type="hidden" id="telapsed-<?php echo $ctr;?>" value="<?php echo $diff;?>">
-        <div class="card rounded-3 mb-4">
+         <input type="hidden" id="auc-<?php echo $ctr;?>" value="<?php echo $allauc[0]->iauctionid;?>">
+        <div id="tbl-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" class="card rounded-3 mb-4">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
               <div class="col-md-2 col-lg-2 col-xl-2">
@@ -72,8 +81,8 @@ if($diff <= 0){
               
              
               <div class="col-md-4 col-lg-4 col-xl-4 h-100 ">
-              <p><span class="text-primary">Current Bid Value: </span> <?php echo $allauc[0]->cbid;?><span></p>
-              <p><span class="text-primary">My Bid Value: </span><span>1000000</p>
+              <p><span class="text-primary">Current Bid Value: </span> <span class="cbid-<?php echo $allauc[0]->iauctionid;?>"><?php echo $allauc[0]->cbid;?><span></p>
+              <p><span class="text-primary">My Bid Value: </span><span class="mybid-<?php echo $allauc[0]->iauctionid;?>">1000000</span></p>
             
               <div class="form-group">
               <input class="form-control input-sm" id="inputsm" type="text">
@@ -322,7 +331,10 @@ if($diff <= 0){
 	var totallot = 2//$('#total-lot').val();
 	//var i = 1;
 	if(totallot){
+    var ctr = 1
 				setInterval(function(){
+          ctr++;
+          //alert(ctr);
 					for(i=1;i<totallot;i++){
 					var dvar = '#telapsed-'+i;
 					
@@ -343,7 +355,10 @@ if($diff <= 0){
 			  
 			   //$(dtvar).html('Auction Closed'+i);
 		  } // you could choose not to continue on failure...
-		 
+		   if(ctr=="30"){
+         alert(ctr);
+          $("#tbl-21-3-Bike-11-9-36").slideUp();
+        }
 				}, 1000);
 		//Run Foreach loop here
 	}
