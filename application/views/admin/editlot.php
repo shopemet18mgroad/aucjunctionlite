@@ -5,11 +5,7 @@
   <div class="container py-5 h-100">
     <div class="row m-4 m-5 m-5 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row m-4 m-5 m-5 g-0">
-			  <div class="col-lg-12">
-                <div class="p-5">
+       
             
          
 
@@ -74,7 +70,7 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
+                        <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes?>" ></textarea>
                       </div>
                     </div>
 					
@@ -198,11 +194,7 @@ To:
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
            
-         </div>
-		   </div>
-		   </div>
-		   </div>
-		   </div>
+      
 		   </div>
 		   </div>
 		   </div>

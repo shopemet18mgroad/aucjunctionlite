@@ -118,6 +118,37 @@ margin-top:-600px;
   font-family: "Times New Roman", Times, serif;	 
 	 
  } 
+   
+ .option {
+	     margin-bottom:0%;
+	      text-transform: capitalize;
+           border-bottom: 1px solid transparent;
+           margin-top:1%;
+           background-color: #f1f1f1;
+           padding: 10px;
+           font-size: 18px;
+           width: 100%;
+           color: white;
+           display:block;
+		   font-family:FontAwesome, "Open Sans", Verdana, sans-serif;
+ 
+        background-color:#124265;
+        min-width:240px;
+       overflow: hidden;
+  
+  width:90px;
+  font-size: 13px;
+  white-space: nowarp;
+  z-index: -1;
+ 
+ cursor: pointer;
+        
+		
+
+}  
+   
+   
+   
       
   
   

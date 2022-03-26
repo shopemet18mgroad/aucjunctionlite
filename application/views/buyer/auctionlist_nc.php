@@ -6,15 +6,29 @@
         
         <div class="d-flex justify-content-between align-items-center">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Search" id="iproductname" name="iproductname" onkeyup="search_product()">
+			
+			
+			
+			
+			
             <div class="input-group-append">
-              <button class="btn btn-secondary aliteblue" type="button">
-                <i class="fa fa-search"></i>
+              <button class="btn btn-secondary aliteblue"  type="button" >
+			 
+			  
+			  
+                <i class="fa fa-search">
+				
+				</i>
               </button>
+			  
+			   
             </div>
         </div>
       </div>
     </div>
+	
+			<div id="select" class="select"><ul id="dp"></ul></div>
 
     </section><!-- End Breadcrumbs -->
     <section id="portfolio-details" class="portfolio-details">
@@ -104,7 +118,7 @@
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200" >
           <div class="icon-box w-100">
 		  
-          <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
+          <div class="icon d-flex justify-content-center" style=" overflow-x:visible"><?php $img = unserialize($row->imageupload)?>
 	   
 	   <?php if($img){ ?>
 	   <?php
@@ -341,5 +355,34 @@ alt="Chania" width="100px" height="100px"><?php } ?>
   <script>
   
   </script>
+    <script>
+
+ function search_product(){
+	 $("#dp").hide();
+	if(document.getElementById("iproductname").value.length = 1){
+	 $("#dp").show();
+			var contents = $('#iproductname').val(); 
+			$.get('<?php echo base_url() .'BuyerAuction_details/get_product_table/'; ?>'+contents, function(data){
+				$('#dp').html(data);
+			});
+
+					
+			}
+}
+ </script>
+ <script>
+ function getPaging(v){
+var s = v.split("|");
+	document.getElementById("iproductname").value  = s[0];
+	//document.getElementById("vname").value = s[1];
+	 $("#dp").hide();
+ }
+function getPagingnr(){
+	$("#dp").hide();
+}
+ </script> 
+ 
+ 
+</script>
   
   

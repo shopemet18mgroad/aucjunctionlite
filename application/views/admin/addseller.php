@@ -101,8 +101,8 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline form-white">
-                   	<input type="password" class="form-control form-control-lg" id="ipass" name="ipass"  maxLength="15" placeholder="password should be maximum length 15 "><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
-                      <label class="form-label" for="form3Examplea3">Password</label>
+<input type="password" class="form-control form-control-lg" id="ipass" name="ipass"  maxLength="15" placeholder="password should be maximum length 15 " ><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
+<label class="form-label" for="form3Examplea3">Password</label>
                     </div>
                   </div>
                   
@@ -371,13 +371,14 @@ function validateForm() {
     } 
  }
 </script> 
-      <script>
+   
+     <script>
   function validate_username(){
 	  var val = document.getElementById("iemailid").value;
 		if(val != ''){
 			 $.get('<?php echo base_url() .'Admin_addseller/validate_buyerid11/'; ?>'+val, function(data2){				 
 				 if($.trim(data2) == "BYE"){
-					swal("Alert!",  "Email ID Already Exists", "error");
+					swal("Alert!",  "Email Number Already Exists", "error");
 					document.getElementById("iemailid").value = "";
 					return false;
 				}else{
@@ -386,11 +387,16 @@ function validateForm() {
 			 });
 			
 		}else{
-			swal("Alert!",  "Please Enter User Email ID!", "error");
+			swal("Alert!",  "Please Enter Email ID!", "error");
 			return false;
 		}
   }
-  </script>
+  </script>     
+      
+      
+      
+      
+      
       <script>
   function validate_useraadharnumber(){
 	  var val = document.getElementById("iadharnumber").value;

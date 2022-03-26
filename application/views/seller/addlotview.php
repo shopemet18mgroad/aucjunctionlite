@@ -25,13 +25,19 @@
     <tr>
      
       <th scope="row">Sub-category </th>
-	  <td><?php echo $sqldata1[0]->isubcategory ?></td>
+	  <td><?php echo $sqldata[0]->isubcategory ?></td>
+      
+    </tr><br>
+	  <tr>
+     
+      <th scope="row">product Description  </th>
+	  <td><?php echo $sqldata[0]->iproductdes ?></td>
       
     </tr><br>
     <tr>
      
-      <th scope="row">product Description  </th>
-	  <td><?php echo $sqldata1[0]->iproductdes ?></td>
+      <th scope="row">product Name  </th>
+	  <td><?php echo $sqldata[0]->iproductname ?></td>
       
     </tr><br>
 	
@@ -79,7 +85,7 @@
       <th scope="row">Inspection Date </th>
 	 
        
-	   <td><?php $insp= $sqldata1[0]->inspectiondate;
+	   <td><?php $insp= $sqldata[0]->inspectiondate;
 	   $ter = explode('.',$insp);
        $insp = $ter[0];
        echo  $insp;	   
@@ -93,7 +99,7 @@
 	<tr>
      
       <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
-	   <td><?php echo $sqldata1[0]->imrp ?></td>
+	   <td><?php echo $sqldata[0]->imrp ?></td>
       
     </tr>	
 	
@@ -102,14 +108,14 @@
 		<tr>
      
       <th scope="row">entry free </th>
-	   <td><?php echo $sqldata1[0]->endaucprice ?></td>
+	   <td><?php echo $sqldata[0]->endaucprice ?></td>
       
     </tr>
 		<tr>
      
       <th scope="row">Inspection date and time  </th>
 	     
-	   <td><?php $inse= $sqldata1[0]->iauction_end ;
+	   <td><?php $inse= $sqldata[0]->iauction_end ;
 	   $ters = explode('.',$inse);
        $inse = $ters[0];
        echo  $inse;	   
@@ -118,7 +124,7 @@
 	   ?>
 	   
 	      	   <br>to	   <br>
-	   <?php $aucn = $sqldata1[0]->iauction_start; 
+	   <?php $aucn = $sqldata[0]->iauction_start; 
        $coole = explode('.',$aucn);
        $aucn = $coole[0];
        echo  $aucn;	 
@@ -139,7 +145,7 @@
 	  
 	
 	  
-	  	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+	  	   <td><?php $img = unserialize($sqldata[0]->imageupload)?>
 		   
 		   
 	<?php 	if($img==Null ){ ?>
@@ -200,7 +206,7 @@
       </div>
       <div class="modal-body">
     
-	  <?php foreach($sqldata1 as $sqldat){?> 
+	  <?php foreach($sqldata as $sqldat){?> 
 	  
 	   <?php $img = unserialize($sqldat->imageupload);?>
 	  

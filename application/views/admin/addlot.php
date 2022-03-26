@@ -5,11 +5,7 @@
   <div class="container py-5 h-100">
     <div class="row m-4 m-4 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row m-4 m-4 g-0">
-			  <div class="col-lg-12">
-                <div class="p-5">
+       
                   
      
             
@@ -126,7 +122,12 @@
                       </div>
                     </div>
 					
-					
+						<div class="form-group row m-5">
+                      <label for="" class="col-sm-3 col-form-label">Product Name </label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="iproductname" name="iproductname" placeholder="Product Name ">
+                      </div>
+                    </div>
 					
 					
                     <div class="form-group row m-4">
@@ -206,12 +207,7 @@
                  <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-               
-      </div>
-		   </div>
-		   </div>
-		   </div>
-		   </div>
+     
 		   </div>
 		   </div>
 		   </div>

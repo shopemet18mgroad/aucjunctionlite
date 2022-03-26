@@ -65,8 +65,10 @@ $(document).ready( function () {
 } );
 
  $('.role').click(function() {
-  $('.role').not(this).prop('checked', false);
+  $('.role').not(this).prop('checked',false);
 });
+
+
 
 
 </style>

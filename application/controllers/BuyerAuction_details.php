@@ -81,17 +81,41 @@ if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') 
 		}else{
 			$data['sqldata1'] = $this->Admin_model->get_auctionlist($config["per_page"], $page);
 		}
-        
-		//print_r($data["links"]);die;
-     //$active = array('aoption'=>true);
-	//$query = $this->Admin_model->auctionlist('auction', $active);
-	//$data['sqldata1']= $query;
-	//print_r($data['sqldata1']);die;
-
+  
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_nc',$data);
 		$this->load->view('buyer/footer');
 		}
 	
 	}
+	
+
+public function get_product_table(){
+	$dataw = urldecode($this->uri->segment(3));
+	//print_r($dataw);die;
+	$this->load->model('Admin_model');
+	$search = $this->Admin_model->get_lookalike_search('addlot','iproductname','isubcategory',$dataw);	
+	
+	if($search){
+		$tempArr = array_unique(array_column($search, 'iproductname'));
+		$search = array_intersect_key($search, $tempArr);
+		foreach($search as $sear){
+			echo "<li onclick=\"getPaging(this.id)\" id=\"".$sear['iproductname'].'|'.$sear['isubcategory']."\" class=\"option\">".$sear['iproductname']."</li>\n";
+			
+		}
+	}else{
+		echo "<li onclick=\"getPagingnr()\" value=\"1\" class=\"option\">No Results</li>";
+	}
+	
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
