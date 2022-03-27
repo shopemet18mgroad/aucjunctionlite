@@ -121,11 +121,11 @@
           
           
              <div class="d-flex justify-content-between">
-               <div class="text-center text-lg-start mt-1 pt-2 pb-5">
-            <button type="submit" name="submit" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Validate</button>
+               <div id="nb" class="text-center text-lg-start mt-1 pt-2 pb-5">
+            <button type="submit" name="submit" id="optbtn" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="return sendotp()">Validate</button>
               
-             
+      
              
              </div> 
              
@@ -135,10 +135,10 @@
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-                 <input type="radio" id="radio-three" name="switchtwo" value="COMPANY" />
-              <label for="radio-three">COMPANY</label>
-              <input type="radio" id="radio-four" name="switchtwo" value="INDIVIDUAL" />
-              <label for="radio-four">INDIVIDUAL</label>
+                 <input type="radio" id="radio-three" name="switchtwo" value="BUYER" checked/>
+              <label for="radio-three">BUYER</label>
+              <input type="radio" id="radio-four" name="switchtwo" value="SELLER"/>
+              <label for="radio-four">SELLER</label>
               
           </div>
         </div>
@@ -152,15 +152,15 @@
 
           <div class="form-outline mb-0">
         
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder=""  name="user">
+            <input type="email" id="vphotp" class="form-control form-control-lg"
+              placeholder=""  name="vphotp">
             <label class="form-label" for="form3Example3">Phone Number OTP</label>
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder=""  name="user">
+            <input type="text" id="vemailotp" class="form-control form-control-lg"
+              placeholder=""  name="vemailotp">
             <label class="form-label" for="form3Example3">E-mail OTP</label>
             
           </div>
-           <button type="submit" name="submit" class="btn btn-primary btn-lg"
+           <button type="submit" name="submit2" onclick="return validateotp()" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
   
 
@@ -196,9 +196,105 @@
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/php-email-form/validate.js"></script>
-
+	
   <!-- Template Main JS File -->
   <script src="<?php echo base_url()."web_files/";?>assets/js/main.js"></script>
+  <script src="<?php echo base_url()."web_files/";?>assets/js/custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    function sendotp() {
+	var email = $("#iemailid").val();
+	if (
+		email
+			.toLowerCase()
+			.match(
+				/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			)
+	) {
+		var phone = $("#icontactnumber").val();
+		if (phone.match(/^\d{10}$/)) {
+			var password = $("#ipass").val();
+			var confirmpassv = $("#iconpass").val();
+			if (password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/)) {
+				if (confirmpassv == password) {
+					//==============AJAX======================================
+                            //Disable Button and add Loadiing
+                            $("#optbtn").fadeOut(); 
+                            $("#iemailid").prop("readonly", true);
+                            $("#icontactnumber").prop("readonly", true);
+                            $("#ipass").prop("readonly", true);
+                            $("#iconpass").prop("readonly", true);
+                            var nb = '<button class="btn btn-primary btn-lg" type="button" disabled>'+
+                                    '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>'+
+                                    ''+
+                                    '</button>';
+                            $("#nb").html(nb);
+                         $.get('<?php echo base_url(). 'Send_otp/index/'; ?>'+encodeURIComponent(email)+'|'+phone, function(data){
+                                if(data=="OK"){
+                                    alert("Please enter OTP sent to your Email and Phone Number, Kindly do check Email in Spam Folder as well");
+                                }else{
+                                    alert("OTP Send Failed, Please Try After 30 Minutes");
+                                }
+                            });
+					//=======================================================
+				} else {
+					alert("Password and confirm Password Does Not Match");
+				}
+			} else {
+				alert(
+					"Password Should Contain 8 to 15 characters With one uppercase and at least one numeric digit and an special character"
+				);
+			}
+		} else {
+			alert("Please Enter an Valid Phone Number With Out Country code(Ex:+91)");
+		}
+		//alert(email);
+		return false;
+	}
+}
+function validateotp(){
+  	var email = $("#iemailid").val();
+    var phone = $("#icontactnumber").val();
+    var pass = $("#ipass").val();
+    var vphotp = $("#vphotp").val();
+    var vemailotp = $("#vemailotp").val();
+    var type = $('input[name="switchtwo"]:checked').val();
+    if(email != '' && phone != '' && pass != '' &&  vphotp != '' && vemailotp != ''){
+       //event.preventDefault();
+            var formData = {
+                'email': email,
+                'phone': phone,
+                'pass': pass,
+                'vphotp': vphotp,
+                'vemailotp': vemailotp,
+                'type': type
+            };
+       $.ajax({
+                url: "<?php echo base_url(). 'Send_otp/validateotp/'; ?>",
+                type: "post",
+                data: formData,
+                success: function(d) {
+                    if(d == "FAIL"){
+                      alert("Email or Mobile no OTP wrong or Expired");
+                    }else if(d == "EXT"){
+                       alert("Email or Mobile no already exists");
+                    }else if(d == "OK"){
+                       window.location = "<?php echo base_url() .'LOGIN'; ?>" 
+                    }else{
+                      alert("Email or Mobile no OTP wrong or Expired");
+                    }
+                }
+            });
+
+
+    }else{
+       alert("Non of the feilds can be left Blank");
+       return false;
+    }
+
+} 
+    </script>
 
 </body>
 
