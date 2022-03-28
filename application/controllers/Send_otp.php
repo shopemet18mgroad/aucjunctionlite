@@ -152,7 +152,7 @@ class Send_otp extends CI_Controller {
                                     echo "EXT";
                             }else{
                                 //insert into buyer
-                                $databy = array('buyercontactnumber'=>$phone,'buyeremail'=>$email,'buyerpass'=>base64_encode($pass),'bconpassword'=>base64_encode($pass), 'bverifiedemail'=>true);
+                                $databy = array('buyercontactnumber'=>$phone,'buyeremail'=>$email,'buyerpass'=>base64_encode($pass),'bconpassword'=>base64_encode($pass), 'buyeroption'=>true, 'bverifiedemail'=>true);
                                   $this->Admin_model->insert($table, $databy); 
                                   echo "OK";
 
@@ -164,7 +164,7 @@ class Send_otp extends CI_Controller {
                             if($this->Admin_model->check($table, $datselle)|| $this->Admin_model->check($table, $datsellp)){
                                  echo "EXT";
                             }else{
-                                  $datasl = array('icontactnumber'=>$phone,'iemailid'=>$email,'ipass'=>base64_encode($pass),'iconpass'=>base64_encode($pass),'sverifiedemail'=>true);
+                                  $datasl = array('icontactnumber'=>$phone,'iemailid'=>$email,'ipass'=>base64_encode($pass),'iconpass'=>base64_encode($pass),'ioption'=>true,'sverifiedemail'=>true);
                                   $this->Admin_model->insert($table, $datasl); 
                                   echo "OK";
                             }

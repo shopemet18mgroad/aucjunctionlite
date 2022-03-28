@@ -160,7 +160,7 @@
             <label class="form-label" for="form3Example3">E-mail OTP</label>
             
           </div>
-           <button type="submit" name="submit2" onclick="return validateotp()" class="btn btn-primary btn-lg"
+           <button type="submit" name="submit2" id="submit2" onclick="return validateotp()" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
   
 
@@ -259,6 +259,7 @@ function validateotp(){
     var pass = $("#ipass").val();
     var vphotp = $("#vphotp").val();
     var vemailotp = $("#vemailotp").val();
+   
     var type = $('input[name="switchtwo"]:checked').val();
     if(email != '' && phone != '' && pass != '' &&  vphotp != '' && vemailotp != ''){
        //event.preventDefault();
@@ -286,7 +287,7 @@ function validateotp(){
                     }
                 }
             });
-
+  $("#submit2").fadeOut();
 
     }else{
        alert("Non of the feilds can be left Blank");
