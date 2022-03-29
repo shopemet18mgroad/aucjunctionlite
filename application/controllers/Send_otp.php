@@ -285,13 +285,14 @@ class Send_otp extends CI_Controller {
         date_default_timezone_set('Asia/Kolkata');
 		//initaliazing the current time 
 		$time =  Date('Y-m-d H:i:s');
-        if($this->input->post('email')){
-              $email = $this->input->post('email');
-              $phone = $this->input->post('phone');
-              $pass = $this->input->post('pass');
-              $vphotp = $this->input->post('vphotp');
-              $vemailotp = $this->input->post('vemailotp');
-              $type = $this->input->post('type');
+        if($this->input->post('eorph')){
+              echo $email = $this->input->post('eorph');
+              echo $phone = $this->input->post('otp');
+              echo $pass = $this->input->post('pass');
+              echo $vphotp = $this->input->post('type');
+              echo $vemailotp = $this->input->post('emorph');
+              echo $type = $this->input->post('type');
+              die;
                $dataotpex = array('email'=>$email, 'phone'=>$phone, 'phoneotp'=>$vphotp, 'emailotp'=>$vemailotp, 'validity >='=>$time);
                  if($this->Admin_model->check('otp', $dataotpex)){
                      //Insert into buyer or seller database;

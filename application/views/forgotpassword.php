@@ -163,7 +163,7 @@ function goBack() {
             <label class="form-label" for="form3Example3">Confirm Password</label>
           </div>
            <div class="form-outline mb-2">
-            <button type="submit" name="submit2" class="btn btn-primary btn-lg"
+            <button type="submit" name="submit2" id="submit2" onclick="validateotpfrrst()" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Reset Password</button>
           </div>
           
@@ -281,44 +281,54 @@ function goBack() {
           return regex.test(email);
       }
       function validateotpfrrst(){
-    var phone = $("#ipass").val();
+    var emailph = $("#emailph").val();
     var otp = $("#otpph").val();
     var pass = $("#npass").val();
     var cpass = $("#cnpass").val();
     var type = $('input[name="switchtwo"]:checked').val();
+    var emorph;
+    if(validatePhone(emailph)){
+      emorph = "PH";
+    }else{
+      emorph = "EL";
+    }
 
     if(cpass == pass && otp != '' && pass != '' && cpass != ''){
+      var formData = {
+                'eorph': emailph,
+                'otp': otp,
+                'pass': pass,
+                'type': type,
+                'emorph': emorph
+            };
 
     }else{
-      alert("Invalid Otp or both passwords doesnt Match")
+      alert("Invalid Otp or both passwords don't match");
+     
     }
     if(email != '' && phone != '' && pass != '' &&  vphotp != '' && vemailotp != ''){
        //event.preventDefault();
-            var formData = {
-                'email': email,
-                'phone': phone,
-                'pass': pass,
-                'vphotp': vphotp,
-                'vemailotp': vemailotp,
-                'type': type
-            };
        $.ajax({
-                url: "<?php echo base_url(). 'Send_otp/validateotp/'; ?>",
+                url: "<?php echo base_url(). 'Send_otp/validateotpfrst/'; ?>",
                 type: "post",
                 data: formData,
                 success: function(d) {
+                  alert(d); 
+                  return false;
                     if(d == "FAIL"){
-                      alert("Email or Mobile no OTP wrong or Expired");
+                      alert("OTP Invalid or Expired");
                     }else if(d == "EXT"){
                        alert("Email or Mobile no already exists");
                     }else if(d == "OK"){
+                      alert("Password Reset Successfully");
                        window.location = "<?php echo base_url() .'LOGIN'; ?>" 
                     }else{
-                      alert("Email or Mobile no OTP wrong or Expired");
+                      alert("Password Reset Failed");
                     }
                 }
             });
-  $("#submit2").fadeOut();
+       
+  //$("#submit2").fadeOut();
 
     }else{
        alert("Non of the feilds can be left Blank");
