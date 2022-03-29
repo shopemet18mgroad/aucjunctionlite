@@ -69,13 +69,13 @@ function goBack() {
   <main id="main">
     <section class="vh-75 login">
   <div class="container-fluid h-custom">
-    <div class="row d-flex justify-content-center align-items-center h-75">
+    <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid mt-1 pt-5 "
+        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid mt-1 pt-1"
           />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-  <form action= "<?php echo base_url();?>Forgot_password" method="post" enctype="multipart/form-data">
+  
    
    
    
@@ -99,13 +99,13 @@ function goBack() {
             
             
 
-          <div class="divider d-flex align-items-center my-2">
+          <div class="divider d-flex align-items-center my-0">
             <p class="text-center fw-bold mx-3 mb-0">Forgot Password</p>
           </div>
 
           <!-- Email input -->
           <div class="form-outline mb-2">
-            <input type="email" id="email" name="email" class="form-control form-control-lg"
+            <input type="text" id="emailph" name="emailph" class="form-control form-control-lg"
               placeholder="" />
             <label class="form-label" for="form3Example3">Email address or Phone Number</label>
           </div>
@@ -124,29 +124,48 @@ function goBack() {
           
           
              <div class="d-flex justify-content-between">
-               <div class="text-center text-lg-start mt-1 pt-2 pb-5">
-            <button type="submit" name="submit" class="btn btn-primary btn-lg"
+               <div id="nb" class="text-center text-lg-start mt-1 pt-2 pb-5">
+            <button type="submit" name="submit" class="btn btn-primary btn-lg" id="optbtn" onclick="return sendresetpassotp()"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Submit</button>
-              
-             
-             
+
              </div>  
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
-              <input type="radio" id="radio-three" name="switch-two" value="Seller"/>
+              <input type="radio" id="radio-three" name="switch-two" value="SELLER"/>
               <label for="radio-three">Seller</label>
-              <input type="radio" id="radio-four" name="switch-two" value="Buyer" />
+              <input type="radio" id="radio-four" name="switch-two" value="BUYER" checked/>
               <label for="radio-four">Buyer</label>
           
               
           </div>
         </div>
-          
+         
       </div>
       </div>
+       <div class="divider d-flex align-items-center my-2">
+            <p class="text-center fw-bold mx-3 mb-0">Reset Password</p>
+          </div>
           
-          
+           <div class="form-outline mb-2">
+            <input type="text" id="otpph" name="otpph" class="form-control form-control-lg"
+              placeholder="" />
+            <label class="form-label" for="form3Example3">Enter OTP</label>
+          </div>
+           <div class="form-outline mb-2">
+            <input type="text" id="npass" name="npass" class="form-control form-control-lg"
+              placeholder="" />
+            <label class="form-label" for="form3Example3">New Password</label>
+          </div>
+           <div class="form-outline mb-2">
+            <input type="text" id="cpass" name="cpass" class="form-control form-control-lg"
+              placeholder="" />
+            <label class="form-label" for="form3Example3">Confirm Password</label>
+          </div>
+           <div class="form-outline mb-2">
+            <button type="submit" name="submit2" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Reset Password</button>
+          </div>
           
           
           
@@ -158,7 +177,7 @@ function goBack() {
               
               
               
-                   <p class="small fw-bold mt-0 pt-1 mb-0">Don't have an account? <a href="<?php echo base_url()."Register";?>"
+                   <p class="small fw-bold mt-0 pt-1 mb-5">Don't have an account? <a href="<?php echo base_url()."Register";?>"
                 class="link-primary">Register</a></p>
               
               
@@ -177,7 +196,7 @@ function goBack() {
               
                 
 
-        </form>
+      
       </div>
     </div>
   </div>
@@ -210,9 +229,104 @@ function goBack() {
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Template Main JS File -->
   <script src="<?php echo base_url()."web_files/";?>assets/js/main.js"></script>
+  <script>
+    function sendresetpassotp(){
+      var emailph = $("#emailph").val();
+      var type = $('input[name="switch-two"]:checked').val();
+      if(!validatePhone(emailph) && !validateEmail(emailph)){
+        alert("Please enter vaild email address or phone number");
+      }else{
+         $("#optbtn").fadeOut(); 
+          $("#emailph").prop("readonly", true);
+        var nb = '<button class="btn btn-primary btn-lg" type="button" disabled>'+
+                                    '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>'+
+                                    ''+
+                                    '</button>';
+            $("#nb").html(nb);
+         if(validatePhone(emailph)){
+           //its Phone number
+           $.get('<?php echo base_url(). 'Send_otp/checkph/'; ?>'+emailph+"/"+type, function(data){
+                                if(data=="OK"){
+                                    alert("OTP Has been send to you registered mobile no and email");
+                                }else if(data=="FAIL"){
+                                    alert("OTP Sending Failed, Try after 30 Min");
+                                }else{
+                                    alert("Phone number does not exists for "+type);
+                                }
+                            });
+         }else{
+            $.get('<?php echo base_url(). 'Send_otp/checkem/'; ?>'+encodeURIComponent(emailph)+"/"+type, function(data){
+                                if(data=="OK"){
+                                    alert("OTP Has been send to you registered mobile no and email");
+                                }else if(data=="FAIL"){
+                                    alert("OTP Sending Failed, Try after 30 Min");
+                                }else{
+                                   alert("Email does not exists for "+type);
+                                }
+                            });
+         }
+      }
+    }
+    function validatePhone(email)
+        {
+            var regex = /^\d{10}$/;
+            return regex.test(email);
+        }
+    function validateEmail(email) 
+      { 
+          var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return regex.test(email);
+      }
+      function validateotpfrrst(){
+    var phone = $("#ipass").val();
+    var otp = $("#otpph").val();
+    var pass = $("#npass").val();
+    var cpass = $("#cnpass").val();
+    var type = $('input[name="switchtwo"]:checked').val();
+
+    if(cpass == pass && otp != '' && pass != '' && cpass != ''){
+
+    }else{
+      alert("Invalid Otp or both passwords doesnt Match")
+    }
+    if(email != '' && phone != '' && pass != '' &&  vphotp != '' && vemailotp != ''){
+       //event.preventDefault();
+            var formData = {
+                'email': email,
+                'phone': phone,
+                'pass': pass,
+                'vphotp': vphotp,
+                'vemailotp': vemailotp,
+                'type': type
+            };
+       $.ajax({
+                url: "<?php echo base_url(). 'Send_otp/validateotp/'; ?>",
+                type: "post",
+                data: formData,
+                success: function(d) {
+                    if(d == "FAIL"){
+                      alert("Email or Mobile no OTP wrong or Expired");
+                    }else if(d == "EXT"){
+                       alert("Email or Mobile no already exists");
+                    }else if(d == "OK"){
+                       window.location = "<?php echo base_url() .'LOGIN'; ?>" 
+                    }else{
+                      alert("Email or Mobile no OTP wrong or Expired");
+                    }
+                }
+            });
+  $("#submit2").fadeOut();
+
+    }else{
+       alert("Non of the feilds can be left Blank");
+       return false;
+    }
+
+} 
+    </script>
 
 </body>
 
