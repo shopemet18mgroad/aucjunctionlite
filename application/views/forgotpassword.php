@@ -153,12 +153,12 @@ function goBack() {
             <label class="form-label" for="form3Example3">Enter OTP</label>
           </div>
            <div class="form-outline mb-2">
-            <input type="text" id="npass" name="npass" class="form-control form-control-lg"
+            <input type="password" id="npass" name="npass" class="form-control form-control-lg"
               placeholder="" />
             <label class="form-label" for="form3Example3">New Password</label>
           </div>
            <div class="form-outline mb-2">
-            <input type="text" id="cpass" name="cpass" class="form-control form-control-lg"
+            <input type="password" id="cpass" name="cpass" class="form-control form-control-lg"
               placeholder="" />
             <label class="form-label" for="form3Example3">Confirm Password</label>
           </div>
@@ -284,7 +284,7 @@ function goBack() {
     var emailph = $("#emailph").val();
     var otp = $("#otpph").val();
     var pass = $("#npass").val();
-    var cpass = $("#cnpass").val();
+    var cpass = $("#cpass").val();
     var type = $('input[name="switchtwo"]:checked').val();
     var emorph;
     if(validatePhone(emailph)){
@@ -303,12 +303,14 @@ function goBack() {
             };
 
     }else{
-      alert("Invalid Otp or both passwords don't match");
-     
+      alert("Passwords don't match");
+      return false;
     }
-    if(email != '' && phone != '' && pass != '' &&  vphotp != '' && vemailotp != ''){
-       //event.preventDefault();
-       $.ajax({
+    if(emailph != '' && pass != '' &&  otp != '' && emorph != ''){
+
+      //===================================Validate Password================================================
+      if(pass.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/)) {
+        $.ajax({
                 url: "<?php echo base_url(). 'Send_otp/validateotpfrst/'; ?>",
                 type: "post",
                 data: formData,
@@ -318,7 +320,7 @@ function goBack() {
                     if(d == "FAIL"){
                       alert("OTP Invalid or Expired");
                     }else if(d == "EXT"){
-                       alert("Email or Mobile no already exists");
+                       alert("No User Exists");
                     }else if(d == "OK"){
                       alert("Password Reset Successfully");
                        window.location = "<?php echo base_url() .'LOGIN'; ?>" 
@@ -327,6 +329,17 @@ function goBack() {
                     }
                 }
             });
+          return false;
+      }else{
+        alert(
+					"Password Should Contain 8 to 15 characters With one uppercase and at least one numeric digit and an special character"
+				);
+        return false;
+      }
+
+      //===================================================================================================
+       //event.preventDefault();
+       
        
   //$("#submit2").fadeOut();
 

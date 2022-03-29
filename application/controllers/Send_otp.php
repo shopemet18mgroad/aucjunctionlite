@@ -286,13 +286,52 @@ class Send_otp extends CI_Controller {
 		//initaliazing the current time 
 		$time =  Date('Y-m-d H:i:s');
         if($this->input->post('eorph')){
-              echo $email = $this->input->post('eorph');
-              echo $phone = $this->input->post('otp');
-              echo $pass = $this->input->post('pass');
-              echo $vphotp = $this->input->post('type');
-              echo $vemailotp = $this->input->post('emorph');
-              echo $type = $this->input->post('type');
-              die;
+              $emailph = $this->input->post('eorph');
+              $otp = $this->input->post('otp');
+              $pass = $this->input->post('pass');
+              $type = $this->input->post('type');
+              $emorph = $this->input->post('emorph');
+              if($emorph == "EL"){
+                $dataotpex = array('email'=>$emailph, 'emailotp'=>$otp, 'validity >='=>$time);
+              }else{
+                $dataotpex = array('phone'=>$emailph, 'phoneotp'=>$otp, 'validity >='=>$time);
+              }
+              if($this->Admin_model->check('otp', $dataotpex)){
+                            if($type == "BUYER"){
+                                $table = 'buyerdetails';
+                                $passfeild = 'buyerpass';
+                                $cpassfeild = 'bconpassword';
+                                if($emorph == "EL"){
+                                $fld = "buyeremail";
+                                }else{
+                                $fld = "buyercontactnumber";
+                                }
+                            }else{
+                                $table = 'sellerdetails';
+                                $passfeild = 'ipass';
+                                $cpassfeild = 'iconpass';
+                                if($emorph == "EL"){
+                                    $fld = "iemailid";
+                                    }else{
+                                    $fld = "icontactnumber";
+                                    }
+                            }
+                            $datachuser = array($fld=>$emailph);
+                            if($this->Admin_model->check($table, $datachuser)){
+                                $datafupotp = array($passfeild=>base64_encode($pass),$cpassfeild=>base64_encode($pass));
+                                $comp = array($fld=>$emailph);
+                                $this->Admin_model->update_custom('otp', $datafupotp, $comp, $comp);
+                                echo "OK";
+                            }else{
+                                echo "BAD";
+                            }
+              }else{
+                  echo "FAIL"; 
+              }
+
+              
+
+
                $dataotpex = array('email'=>$email, 'phone'=>$phone, 'phoneotp'=>$vphotp, 'emailotp'=>$vemailotp, 'validity >='=>$time);
                  if($this->Admin_model->check('otp', $dataotpex)){
                      //Insert into buyer or seller database;
