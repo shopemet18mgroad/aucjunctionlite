@@ -1,10 +1,10 @@
 
-	
+	<link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
 
 	 <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
-      <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
+     
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
                 <div class="col-xl-7 col-lg-9 text-center">
@@ -17,13 +17,13 @@
         
  
         
-      <div class="row ">
+      <div class="row">
         <table class="table table-striped">
   <thead>
   
     <tr>
 						 <th>
-                            Sl. No.
+                            Sl.No.
                           </th>
 						     <th>
                          Auction Id
@@ -34,14 +34,12 @@
                           <th>
 						 Seller Name
                           </th>
-						
-                       
+
                           <th>
                     Seller Company Name
                           </th>
 						  <th>
 						  Online Auction Start And End Date
-						  
 						  </th>
 						  <th>
 						 Action
@@ -64,7 +62,8 @@
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
-					<td data-label=" Sl.No."><?php echo $count ?> </td>
+					<td data-label="Sl.No."><?php echo $count ?> </td>
+
 
 
 					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
@@ -97,16 +96,26 @@
 	  </td>
 	  				
 					
+
+					 <td data-label="Auction Id">  <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					<td data-label="Category"><?php echo $row->icategory ?> </td>
+					<td data-label="Seller Name"><?php echo $row->icontactperson ?> </td>
+
+					
+					
+					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
+					
+					<td data-label="Online Auction Start And End Date"><?php echo $row->iauction_start ?><br> to <br>
+					<?php echo $row->iauction_end ?> </td>
 					
 					
 					
 					
 					
+					<td  data-label="Action">  
 					
 					
-					
-					
-					
+
 					<td data-label="Action" >
 					
 					
@@ -116,12 +125,17 @@
 		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano)."/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
 
+		<a href="<?php echo base_url()."Seller_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 		
-		<a href ="<?php echo base_url()."Admin_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
+		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+
+
+		
+		<a href ="<?php echo base_url()."Seller_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
 						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 	
 
-</td>
+
 
 
 				

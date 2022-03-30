@@ -45,6 +45,7 @@ class Admin_addlot_info extends CI_Controller {
 		 $iauctionid = $this->input->post('iauctionid');
 		 //print_r($iauctionid);die;
 	     $irole = $this->input->post('irole');
+		  $iproductname = $this->input->post('iproductname');
 		  $iemailid = $this->input->post('iemailid');
 		   $icontactperson = $this->input->post('icontactperson');
 		    $icategory = $this->input->post('icategory');
@@ -76,7 +77,7 @@ class Admin_addlot_info extends CI_Controller {
 		
 		$data = array('iauctionid'=>$iauctionid,'irole'=>$irole,'iemailid'=>$iemailid,'icontactperson' =>  $icontactperson,'icategory'=>$icategory,'isubcategory' =>$isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
-		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname); 
+		'iauction_start'=> $iauction_start, 'iauction_end' => $iauction_end,'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname,'iproductname'=>$iproductname); 
 		
 	
 		

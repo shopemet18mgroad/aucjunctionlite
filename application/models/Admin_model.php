@@ -625,9 +625,18 @@ class Admin_model extends CI_Model
 		$query = $this->db->get_where('cart_payment', $data);
 		return $query->result();
 	}	
+	
+	  public function get_lookalike_search($table,$col,$col2,$query){			  
+			$this->db->from($table);
+			$this->db->like($col,$query);
+			$this->db->or_like($col2,$query);
+			//$this->db->where('comapprove',1);
+			$q = $this->db->get();
+			return $q->result_array();
+		  
 
 	
 	}
 
-
+	  }
 

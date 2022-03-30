@@ -10,11 +10,12 @@
   <div class="container py-5 h-100">
     <div class="row m-3 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-        
+      
+          
          
               
               
-               <center>   <h4 class="card-title mt-3">START AUCTION </h4>         </center> 
+                  <h4 class="card-title">START AUCTION </h4>
                   <p class="card-description">
                     
                   </p>
@@ -90,7 +91,7 @@
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
                       <div class="col-sm-9">
                        From: 	
-                        <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" >
+                        <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
                          To: 	
 		                <input class="form-control form-control-lg" id="iauction_end" name="iauction_end" type="datetime-local" >
                       </div>
@@ -98,19 +99,18 @@
 				
 					 
                     
-                 <center><button type="submit" name="submit"  onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50 m-2">Submit</button>
+                 <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
-           </div>
+        
+		 
 		   </div>
 		   </div>
-		  
-		   
+		   </div>
 		
 		   </section>
          
       </main>
-        
        <script>
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
@@ -140,7 +140,7 @@
  if(document.getElementById("icompanyname").value.length > 1){
 	 $("#dp").show();
 			var contents = $('#icompanyname').val(); 
-			$.get('<?php echo base_url() .'admin_startauction/get_seller_table/'; ?>'+contents, function(data){
+			$.get('<?php echo base_url() .'seller_startauction/get_seller_table/'; ?>'+contents, function(data){
 				$('#dp').html(data);
 			});
 
@@ -158,7 +158,7 @@
  if(document.getElementById("iemailid").value.length > 1){
 	 $("#dpp").show();
 			var contents = $('#iemailid').val(); 
-			$.get('<?php echo base_url() .'admin_startauction/get_email_table/'; ?>'+contents, function(data){
+			$.get('<?php echo base_url() .'seller_startauction/get_email_table/'; ?>'+contents, function(data){
 				$('#dpp').html(data);
 			});
 
@@ -296,13 +296,6 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
 	
 }
   </script>
-	
-	
-	
-
-
-
-	
 	
 	
 	
