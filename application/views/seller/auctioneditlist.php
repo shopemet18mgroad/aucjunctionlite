@@ -66,18 +66,18 @@
 				<tr>												
 					<td data-label=" Sl.No."><?php echo $count ?> </td>
 
-<<<<<<< HEAD
+
 					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td data-label="Category"><?php echo $row->icategory ?> </td>
 					<td data-label=" Seller Name"><?php echo $row->icontactperson ?> </td>
 					
 					
 					<td data-label="       Seller Company Name"><?php echo $row->icompanyname ?> </td>
-=======
+
 					 <td> <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td><?php echo $row->icategory ?> </td>
 					<td><?php echo $row->icontactperson ?> </td>
->>>>>>> e30f1b5c32fdca24d751b65d2b880964c3823a8c
+
 					
 					
 		
@@ -111,12 +111,10 @@
 					
 					
 		<a href="<?php echo base_url()."Admin_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
-		
-<<<<<<< HEAD
-		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
-=======
+			<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+
 		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano)."/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
->>>>>>> e30f1b5c32fdca24d751b65d2b880964c3823a8c
+
 
 		
 		<a href ="<?php echo base_url()."Admin_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">

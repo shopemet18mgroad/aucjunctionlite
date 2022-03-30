@@ -21,7 +21,7 @@
   
     		 <tr>
 						 <th>
-                            Sl. No .
+                            Sl.No.
                           </th>
                           <th>
                            NAME

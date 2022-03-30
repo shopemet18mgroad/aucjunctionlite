@@ -70,7 +70,9 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+Auction ID:<br>22/feb/2020/98/78</p>
+                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
+                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,7 +94,9 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+      Auction ID:<br>22/feb/2020/98/78</p>
+                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
+                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -114,7 +118,9 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+     Auction ID:<br>22/feb/2020/98/78</p>
+                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
+                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

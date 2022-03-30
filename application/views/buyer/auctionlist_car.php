@@ -115,7 +115,7 @@
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			<p class="description d-flex justify-content-center" style="font-size:12px"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+			<p class="w-auto small" style="font-size:12px;word-break:break-all;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
 			
             <p class="description d-flex justify-content-center"style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2"></i><?php echo $row->imrp ?></p>
 			
@@ -123,7 +123,7 @@
 	  
             <p class="description d-flex justify-content-center"style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			
-			  <p class="description d-flex justify-content-center"style="font-size:15px"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
+			  <p class=" w-auto small"style="font-size:12px;word-break:break-all;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->iproductdes ?></p>
     
                       <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
