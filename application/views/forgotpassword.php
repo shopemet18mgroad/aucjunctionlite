@@ -285,7 +285,7 @@ function goBack() {
     var otp = $("#otpph").val();
     var pass = $("#npass").val();
     var cpass = $("#cpass").val();
-    var type = $('input[name="switchtwo"]:checked').val();
+    var type = $('input[name="switch-two"]:checked').val();
     var emorph;
     if(validatePhone(emailph)){
       emorph = "PH";
@@ -315,8 +315,7 @@ function goBack() {
                 type: "post",
                 data: formData,
                 success: function(d) {
-                  alert(d); 
-                  return false;
+                 
                     if(d == "FAIL"){
                       alert("OTP Invalid or Expired");
                     }else if(d == "EXT"){
