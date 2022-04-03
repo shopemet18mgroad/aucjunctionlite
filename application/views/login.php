@@ -143,7 +143,7 @@ function goBack() {
             <div class="switch-field justify-content-center py-3 ml-2" >
               <input type="radio" id="radio-three" name="switch-two" value="seller" />
               <label for="radio-three">Seller</label>
-              <input type="radio" id="radio-four" name="switch-two" value="buyer" />
+              <input type="radio" id="radio-four" name="switch-two" value="buyer" checked/>
               <label for="radio-four">Buyer</label>
               <input type="radio" id="radio-five" name="switch-two" value="admin" />
               <label for="radio-five">Admin</label>
