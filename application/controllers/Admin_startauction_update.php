@@ -53,22 +53,28 @@ class Admin_startauction_update extends CI_Controller {
 			$this->load->model('Admin_model');
 			
 			
-			$data2 = array('irole'=>$irole,'icategory' => $icategory, 
+          $data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
 			'iauctionid' => $iauctionid,'icompanyname' => $icompanyname,
-			'iauction_start' => $iauction_start,'iauction_end' => $iauction_end);
+			'iauction_start' => $iauction_start,'iauction_end' => $iauction_end); 
 		
 		
-
-			  
+		$data2 = array('iauctionid' => $iauctionid);
+		
+		          $updatech = array('sl_ano' => $sl_ano);
+	 	if($data2){
+				
+				   $status = $this->Admin_model->update_custom('addlot',$data2,$updatech,$updatech);
+		}
 			  $datainserr = "Data Inserted Successfully";
-			   $updatech = array('sl_ano' => $sl_ano);
+			   
+            
 
 			 
-			  $status = $this->Admin_model->update_custom('auction',$data2,$updatech,$updatech);
+			  $status = $this->Admin_model->update_custom('auction',$data,$updatech,$updatech);
+			
 		
-		header('location: '.base_url().'Admin_auctioneditlist
-		/index/'.$datainserr);
+		header('location: '.base_url().'Admin_auctioneditlist/index/'.$datainserr);
 	
 		
 		}
