@@ -38,6 +38,13 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+   
+   
+     
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /> 
+   
+   
  
 <style>
 
@@ -74,8 +81,8 @@ height:100px;
 #dp{
 background-color:#f5f5f5;
 color:#03AF463;
- list-style-type:none;
- font-size:20px;
+list-style-type:none;
+font-size:20px;
 margin-top:10px;
 }
 
@@ -124,24 +131,22 @@ margin-top:-600px;
 	      text-transform: capitalize;
            border-bottom: 1px solid transparent;
            margin-top:1%;
-           background-color: #f1f1f1;
+           background-color:#f1f1f1;
            padding: 10px;
            font-size: 18px;
-           width: 100%;
-           color: white;
-           display:block;
-		   font-family:FontAwesome, "Open Sans", Verdana, sans-serif;
- 
-        background-color:#124265;
-        min-width:240px;
-       overflow: hidden;
-  
-  width:90px;
-  font-size: 13px;
-  white-space: nowarp;
-  z-index: -1;
- 
- cursor: pointer;
+            width: 50%;
+          margin-left:10px;
+             color: white;
+            display:block;
+		   font-family:FontAwesome,"Open Sans",  Verdana,sans-serif;
+            text-align:center;
+            background-color:#124265;
+             min-width:240px;
+           overflow: hidden;
+           font-size: 13px;
+           white-space: nowarp;
+        z-index: -1;
+        cursor: pointer;
         
 		
 

@@ -80,3 +80,6 @@ $route['BuyerAuction_fridge/index/TA/(:num)'] = 'BuyerAuction_fridge/index/TA';
 $route['BuyerAuction_fridge/index/AA/(:num)'] = 'BuyerAuction_fridge/index/AA';
 $route['BuyerAuction_laptop/index/TA/(:num)'] = 'BuyerAuction_laptop/index/TA';
 $route['BuyerAuction_laptop/index/AA/(:num)'] = 'BuyerAuction_laptop/index/AA';
+
+$route['BuyerAuction_search/index/TA/(:num)'] = 'BuyerAuction_search/index/TA';
+$route['BuyerAuction_search/index/AA/(:num)'] = 'BuyerAuction_search/index/AA';

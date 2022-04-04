@@ -49,6 +49,20 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo base_url()."web_files/";?>assets/js/main.js"></script>
+  
+  
+  	    <script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+  
+  
+  
+  
+  
+  
+  
   <script>
     function addtocart(id){
       var val = $('#ch-'+id).val();

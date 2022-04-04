@@ -626,6 +626,14 @@ class Admin_model extends CI_Model
 		return $query->result();
 	}	
 	
+	
+	
+	
+	// search in buyer is used 
+	
+	
+	
+	
 	  public function get_lookalike_search($table,$col,$col2,$query){			  
 			$this->db->from($table);
 			$this->db->like($col,$query);
@@ -637,6 +645,87 @@ class Admin_model extends CI_Model
 
 	
 	}
+	  // search in buyer is used 
+	  
+ public function get_lookalike_search2($table,$col,$query){
+            $this->db->from($table);
+			$this->db->like($col,$query);
+		    $q = $this->db->get();
+			return $q->result_array();
+		}  
+ 
+ 
+ 
+ 	public function get_count_product($table,$cat) {
+		$this->db->from($table);
+		$this->db->where('iproductname=',$cat);
+		$q = $this->db->get();
+        return count($q->result_array());
+    }
+		
+	public function get_auction_todayproduct($date){
+		$this->db->from('auction');
+		$this->db->where('DATE(iauction_start)', $date);
+		$q = $this->db->get();
+		return $q->result_array();
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	  
+		
+			//In buyer only to pull cartegory of todaysearch of particular days auction.
+	
+public function get_auctionlist_todaysearch($limit,$start,$date,$iproductname){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);
+                    $this->db->where('b.iproductname=',$iproductname);
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of todaysearch of particular All Auction.
+	
+		public function get_auctionlistsearch($limit, $start,$iproductname) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.iproductname=',$iproductname);
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}	 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+	  
+	  
+	  
+	  
+	  
+	  
 
 	  }
 

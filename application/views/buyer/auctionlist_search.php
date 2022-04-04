@@ -2,10 +2,6 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
-	
-	
-	<form class="form-custom" autocomplete="off" class="form-control" onsubmit="return megha()"method="POST"  action="<?php echo base_url();?>BuyerAuction_search">
-	
       <div class="container">
         
         <div class="d-flex justify-content-between align-items-center">
@@ -17,7 +13,7 @@
 			
 			
             <div class="input-group-append">
-              <button class="btn btn-secondary aliteblue"  type="submit" name="submit" >
+              <button class="btn btn-secondary aliteblue"  type="button" >
 			 
 			  
 			  
@@ -34,13 +30,7 @@
 	
 			<div id="select" class="select"><ul id="dp"></ul></div>
 
-    </section>
-	
-	</form>
-	
-	
-	
-	<!-- End Breadcrumbs -->
+    </section><!-- End Breadcrumbs -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
@@ -103,9 +93,9 @@
                 }
             ?>
             <div class="switch-field justify-content-center py-3">
-              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
+              <input type="radio" id="radio-three" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_search/index/TA';return false;" value="TA" <?php echo $chstata;?>/>
               <label for="radio-three">Today's Auctions</label>
-              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_details/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
+              <input type="radio" id="radio-four" name="switch-two" onchange="window.location.href = '<?php echo base_url();?>BuyerAuction_search/index/AA';return false;" value="ALL" <?php echo $chstaaa;?> />
               <label for="radio-four">&nbsp;&nbsp;&nbsp;All Auctions&nbsp;&nbsp;&nbsp;&nbsp;</label>
               
           </div>
@@ -119,6 +109,18 @@
         <div class="row icon-boxes">
      
       <?php $ctr=1; foreach($sqldata1 as $row){?>
+	  
+	    <?php $meg = $row->iproductname ?>
+      
+   <?php if($meg){
+	   ?>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
       <input type="hidden" id="<?php echo "ch-".$ctr; ?>" value="<?php echo $row->iauctionid; ?>">
     
       
@@ -169,7 +171,7 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 <?php } ?>
 
        
-
+<?php } ?>
  
         <?php $ctr++; } ?>
     

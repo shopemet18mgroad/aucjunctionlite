@@ -18,7 +18,7 @@
  
         
       <div class="row ">
-        <table class="table table-striped">
+        <table class="table table-striped" id="myTable">
   <thead>
   
     <tr>
@@ -129,20 +129,7 @@
 
       </div>
 
-      <div class="row mb-5">
-        <div class="col-12 p-5">
-            <nav class="d-flex align-items-center justify-content-center">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
-          </nav>
-        </div>
-          
-      </div>
+   
     </div>
   </section>
 

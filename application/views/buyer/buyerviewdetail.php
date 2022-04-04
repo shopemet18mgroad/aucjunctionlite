@@ -12,7 +12,7 @@
    
 
 	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" >BUYER DETAILS  
-	 </div></center>
+	<a  href="<?php echo base_url()."Buyer_buyereditprofile/index/".urldecode($sqldata1[0]->buysl_no);?>"><i class="fas fa-edit m-3" style="color:white;font-size:28px;" ></i><a> </div></center>
 	    
 	
 	

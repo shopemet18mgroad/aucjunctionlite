@@ -39,9 +39,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
    
-  <script src="https:// cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
-   
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+		
 <style>
 
 
@@ -60,13 +60,7 @@ font-size:20px;
 margin-top:10px;
 }
 
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
 
- $('.role').click(function() {
-  $('.role').not(this).prop('checked',false);
-});
 
 
 

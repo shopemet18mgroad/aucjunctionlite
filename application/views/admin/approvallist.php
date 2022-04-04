@@ -59,7 +59,7 @@
                           <td data-label="Aadhaar Number"><?php echo $row->iadharnumber ?>      </td>
                         <td data-label="EMAIL"><?php echo $row->iemailid ?></td>
                         <td data-label="ROLE"><?php echo $row->role ?></td>
-                          <td data-label="Action"><?php echo $row->iname ?>
+                          <td data-label="Action">
 
 						<a href ="<?php echo base_url()."Admin_approvallist/sellerapprove/".urldecode($row->sl_no);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 						
