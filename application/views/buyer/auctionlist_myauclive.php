@@ -31,8 +31,11 @@ if($checked == "ALL"){
           
       </div>
 <?php if(count($allaucdata)){?>
+  <input type="hidden" id="cnt" value="<?php echo count($allaucdata); ?>">
+   <input type="hidden" id="user" value="<?php echo $user['sessi']; ?>">
        <?php $total = 0; $ctr = 1; foreach($allaucdata as $allauc){ $img = unserialize($allauc[0]->imageupload);?>
  <input type="hidden" id="ref-<?php echo $ctr;?>" value="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid).'|'.$ctr; ?>"><!-- hidden value to send auction id and ctr value -->
+ 
  <?php 
 				date_default_timezone_set('Asia/Kolkata');
 				$time =  Date('Y-m-d H:i:s');
@@ -63,7 +66,8 @@ if($diff <= 0){
     
 				?>
         <input type="hidden" id="telapsed-<?php echo $ctr;?>" value="<?php echo $diff;?>">
-         <input type="hidden" id="auc-<?php echo $ctr;?>" value="<?php echo $allauc[0]->iauctionid;?>">
+         <input type="hidden" id="auc-<?php echo $ctr;?>" value="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>">
+         <input type="hidden" id="rev-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" value="<?php echo $ctr;?>">
         <div id="tbl-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" class="card rounded-3 mb-4">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
@@ -81,12 +85,12 @@ if($diff <= 0){
               
              
               <div class="col-md-4 col-lg-4 col-xl-4 h-100 ">
-              <p><span class="text-primary">Current Bid Value: </span> <span class="cbid-<?php echo $allauc[0]->iauctionid;?>"><?php echo $allauc[0]->cbid;?><span></p>
-              <p><span class="text-primary">My Bid Value: </span><span class="mybid-<?php echo $allauc[0]->iauctionid;?>">1000000</span></p>
+              <p><span class="text-primary">Current Bid Value: </span> <span id="cbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->cbid;?><span></p>
+              <p><span class="text-primary">My Bid Value: </span><span id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
             
               <div class="form-group">
               <input class="form-control input-sm" id="inputsm" type="text">
-              <button type="button" class="btn btn-primary btn-sm my-2">Bid</button>
+              <button type="button" id="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" onclick="placebid(this.id)" class="btn btn-primary btn-sm my-2">Bid</button>
             </div>
 
                
@@ -328,19 +332,19 @@ if($diff <= 0){
 
    <script>
   function telapsed() {
-	var totallot = 2//$('#total-lot').val();
+	var totallot = $('#cnt').val();
+  	var user = $('#user').val();
 	//var i = 1;
 	if(totallot){
-    var ctr = 1
+    var ctr = 0
 				setInterval(function(){
           ctr++;
           //alert(ctr);
-					for(i=1;i<totallot;i++){
-					var dvar = '#telapsed-'+i;
-					
-					var dtvar = '#timer-'+i;
-					
-			  var d = $(dvar).val();
+					for(i=0;i<totallot;i++){
+            var k = i+1;
+            var dvar = '#telapsed-'+k;
+            var dtvar = '#timer-'+k;
+            var d = $(dvar).val();
 			  //alert(d);
 			var h = Math.floor(d / 3600);
 			var m = Math.floor(d % 3600 / 60);
@@ -355,15 +359,44 @@ if($diff <= 0){
 			  
 			   //$(dtvar).html('Auction Closed'+i);
 		  } // you could choose not to continue on failure...
-		   if(ctr=="30"){
-         alert(ctr);
-          $("#tbl-21-3-Bike-11-9-36").slideUp();
+       if(ctr=="30"){
+        ctr = 0;
+        //alert(encodeURIComponent(user));
+        getcurrentauctionreport_live(encodeURIComponent(user),totallot);
         }
+       
 				}, 1000);
 		//Run Foreach loop here
 	}
   	
   
+}
+function getcurrentauctionreport_live(user, totallot){
+  if(totallot){
+      for(i=0;i<totallot;i++){
+        var k = i+1;
+        var aucid = $('#auc-'+k).val();
+           $.get('<?php echo base_url() .'GetAuctionDetails/index/'; ?>'+aucid+'/'+user, function(data){
+          if(data){
+            var dataarr = data.split("|");
+            var diff = dataarr[0];
+            var rem =  dataarr[1];
+            var cbid = dataarr[2];
+            var mybid = dataarr[3];
+            if(diff <= 0){
+              $('#tbl-'+aucid).fadeOut();
+            }else{
+               $('#telapsed-'+k).val(diff);
+               $('#timer-'+k).text(rem);
+               $('#cbid-'+aucid).text(cbid);
+               $('#mybid-'+aucid).text(mybid);
+            }
+          }else{
+            alert("Unable To Fetch Data");
+          }
+        });
+      }
+  }
 }
 $(document).ready(function() {
 	setTimeout(telapsed, 1000);

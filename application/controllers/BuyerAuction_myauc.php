@@ -74,16 +74,20 @@ class BuyerAuction_myauc extends CI_Controller {
             $sess = array('sessi'=>$this->session->userdata('username'));
             $sqldata1 = $this->Admin_model->get_all_auctions_user($this->session->userdata('username'));
             $allaucarray =  array();
-    
+		    //print_r($sqldata1); die;
             foreach($sqldata1 as $sql){
-                $aucdet = $this->Admin_model->get_singleauction_live($sql->auction_id, $date);
+                $aucdet = $this->Admin_model->get_singleauction_live_3t($sql->auction_id, $this->session->userdata('username'), $date);
+				//print_r($aucdet);die;
 				if(count($aucdet)){
 					array_push($allaucarray,$aucdet);
 				}
                
             }
+			//die;
             $allauc['allaucdata'] = $allaucarray;
             $allauc['checked'] = "LIVE";
+			$allauc['user'] = $sess;
+			//$allauc['date'] = $date;
             //$active = array('buyeremail'=>$sess['sessi']);
             $this->load->view('buyer/header',$sess);
             $this->load->view('buyer/auctionlist_myauclive',$allauc);

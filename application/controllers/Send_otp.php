@@ -316,11 +316,13 @@ class Send_otp extends CI_Controller {
                                     $fld = "icontactnumber";
                                     }
                             }
+                            
                             $datachuser = array($fld=>$emailph);
+                            //print_r($datachuser); die;
                             if($this->Admin_model->check($table, $datachuser)){
                                 $datafupotp = array($passfeild=>base64_encode($pass),$cpassfeild=>base64_encode($pass));
                                 $comp = array($fld=>$emailph);
-                                $this->Admin_model->update_custom('otp', $datafupotp, $comp, $comp);
+                                $this->Admin_model->update_custom($table, $datafupotp, $comp, $comp);
                                 echo "OK";
                             }else{
                                 echo "BAD";
@@ -332,37 +334,7 @@ class Send_otp extends CI_Controller {
               
 
 
-               $dataotpex = array('email'=>$email, 'phone'=>$phone, 'phoneotp'=>$vphotp, 'emailotp'=>$vemailotp, 'validity >='=>$time);
-                 if($this->Admin_model->check('otp', $dataotpex)){
-                     //Insert into buyer or seller database;
-                        if($type == "BUYER"){
-                            $table = "buyerdetails";
-                            $datbuye = array('buyeremail'=>$email);
-                             $datbuyp = array('buyercontactnumber'=>$phone);
-                            if($this->Admin_model->check($table, $datbuye) || $this->Admin_model->check($table, $datbuyp)){
-                                    echo "EXT";
-                            }else{
-                                //insert into buyer
-                                $databy = array('buyercontactnumber'=>$phone,'buyeremail'=>$email,'buyerpass'=>base64_encode($pass),'bconpassword'=>base64_encode($pass), 'buyeroption'=>true, 'bverifiedemail'=>true);
-                                  $this->Admin_model->insert($table, $databy); 
-                                  echo "OK";
-
-                            }
-                        }else{
-                            $table = "sellerdetails";
-                            $datselle = array('iemailid'=>$email);
-                            $datsellp = array('icontactnumber'=>$phone);
-                            if($this->Admin_model->check($table, $datselle)|| $this->Admin_model->check($table, $datsellp)){
-                                 echo "EXT";
-                            }else{
-                                  $datasl = array('icontactnumber'=>$phone,'iemailid'=>$email,'ipass'=>base64_encode($pass),'iconpass'=>base64_encode($pass),'ioption'=>true,'sverifiedemail'=>true);
-                                  $this->Admin_model->insert($table, $datasl); 
-                                  echo "OK";
-                            }
-                        }
-                 }else{
-                     echo "FAIL";
-                 }
+              
         }else{
             echo "FAIL";
         }
