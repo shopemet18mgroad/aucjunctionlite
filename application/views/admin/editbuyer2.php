@@ -147,7 +147,7 @@
                   <div class="mb-4 pb-2">
                     <div class="form-outline form-white">
                   
-											<input type="email" class="form-control form-control-lg" id="buyeremail" name="buyeremail" value="<?php echo $sqldata[0]->buyeremail ?>">
+											<input type="email" class="form-control form-control-lg" id="buyeremail" name="buyeremail" value="<?php echo $sqldata[0]->buyeremail ?>"readonly>
 												<label> Email Id </label>
                     </div>
                   </div>

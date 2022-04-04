@@ -10,10 +10,14 @@
   <div class="container py-5 h-100">
     <div class="row m-3 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
+
+
+        
+ 
+
       
           
-         
-              
+
               
                   <h4 class="card-title">START AUCTION </h4>
                   <p class="card-description">
@@ -102,11 +106,21 @@
                  <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
+
+
+         </div>
+		   </div>
+		   </div>
+		  
+		   
+
+
         
 		 
 		   </div>
 		   </div>
 		   </div>
+
 		
 		   </section>
          

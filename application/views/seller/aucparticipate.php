@@ -70,7 +70,9 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+  Auction ID:<br>22/feb/2020/98/78</p>
+                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
+                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,7 +94,9 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        Auction ID:<br>22/feb/2020/98/78</p>
+                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
+                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -108,13 +112,15 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Bid Winner</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Bid winner</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+       Auction ID:<br>22/feb/2020/98/78</p>
+                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
+                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

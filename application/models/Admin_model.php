@@ -589,12 +589,26 @@ class Admin_model extends CI_Model
 					$this->db->where('a.iauction_end >',$date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
-					$query = $this->db->get("auction a");
-					 
+					$query = $this->db->get("auction a");	 
 					$result = $query->result();				
 					return $result;
 	}
 	
+	public function get_singleauction_live_3t($auctionid, $username, $date){
+		$this->db->select('*');
+					$this->db->where('a.aoption',true);
+					$this->db->where('a.iauctionid',$auctionid);
+					$this->db->where('a.iauction_start <=',$date);
+					$this->db->where('a.iauction_end >',$date);	
+					$this->db->where('c.user_email',$username);
+					$this->db->where('c.auction_id',$auctionid); 			 			
+					$this->db->from('auction a'); 
+					$this->db->join('addlot b', 'b.iauctionid=a.iauctionid', 'left');
+					$this->db->join('cart_payment c', 'c.auction_id=a.iauctionid', 'left');   
+					$query = $this->db->get();	 
+					$result = $query->result();				
+					return $result;
+	}
 	public function auctionlist() {			 
 			$this->db->select('
 					a.*,
@@ -645,6 +659,7 @@ class Admin_model extends CI_Model
 
 	
 	}
+
 	  // search in buyer is used 
 	  
  public function get_lookalike_search2($table,$col,$query){
@@ -725,7 +740,26 @@ public function get_auctionlist_todaysearch($limit,$start,$date,$iproductname){
 	  
 	  
 	  
-	  
+
+	public function UpdateLive($username, $auctionid)
+		{
+			$this->db->select('*');
+			$this->db->from('auction a'); 
+			$this->db->join('addlot b', 'b.iauctionid=a.iauctionid', 'left');
+			$this->db->join('cart_payment c', 'c.auction_id=a.iauctionid', 'left');
+			$this->db->where('c.user_email',$username);
+			$this->db->where('c.auction_id',$auctionid);       
+			$query = $this->db->get(); 
+			if($query->num_rows() != 0)
+			{
+				return $query->result_array();
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 
 	  }
 

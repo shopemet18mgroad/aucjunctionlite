@@ -140,6 +140,17 @@
 	<tr>
      
       <th scope="row">Upload photos* </th>
+
+
+	   <td>  <?php $img = unserialize($sqldata1[0]->imageupload);?>
+	  
+	  
+	  <?php foreach($img as $sql){?>
+
+	   <td><?php $img = unserialize($sqldata1[0]->imageupload)?>
+
+	   
+
 	  
 	  
 	  
@@ -158,10 +169,20 @@
 		    <?php foreach($img as $sql) { ?>
 		   <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
  alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
+
 	   
 	     
 	   
 	   
+
+
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="50px" height="50px" data-toggle="modal" data-target="#exampleModal">
+
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
+ alt="Chania" width="50px" height="50px">
+	   
+
 
 
  
