@@ -7,7 +7,8 @@
         
         <div class="d-flex justify-content-between align-items-center">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input
+			type="text" class="form-control" placeholder="Search">
             <div class="input-group-append">
               <button class="btn btn-secondary aliteblue" type="button">
                 <i class="fa fa-search"></i>
@@ -114,11 +115,11 @@
 
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
-            <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
+            <h4 class="title d-flex "><a href=""></a></h4>
 			<p class="w-auto small" style="font-size:12px;word-break:break-all;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
-            <p class="description d-flex justify-content-center"style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
-      <p class="description d-flex justify-content-center"style="font-size:12px"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center"style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+            <p class="description d-flex "style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex "style="font-size:12px"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex "style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			   <p class=" w-auto small"style="font-size:12px;word-break:break-all;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->iproductdes ?></p>
     
                       <div class="row">
@@ -222,7 +223,7 @@
     <tr>
      
       <th scope="row">product Description  </th>
-	  <td><?php echo $row->iproductdes ?></td>
+	  <td style="font-size:12px;word-break:break-all;"><?php echo $row->iproductdes ?></td>
       
     </tr><br>
 	

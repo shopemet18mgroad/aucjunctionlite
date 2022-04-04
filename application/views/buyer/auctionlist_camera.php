@@ -222,7 +222,7 @@
     <tr>
      
       <th scope="row">product Description  </th>
-	  <td><?php echo $row->iproductdes ?></td>
+	  <td style="word-break:break-all;"><?php echo $row->iproductdes ?></td>
       
     </tr><br>
 	

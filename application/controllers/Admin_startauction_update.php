@@ -67,7 +67,8 @@ class Admin_startauction_update extends CI_Controller {
 			 
 			  $status = $this->Admin_model->update_custom('auction',$data2,$updatech,$updatech);
 		
-		header('location: '.base_url().'Admin_auctioneditlist/index/'.$datainserr);
+		header('location: '.base_url().'Admin_auctioneditlist
+		/index/'.$datainserr);
 	
 		
 		}

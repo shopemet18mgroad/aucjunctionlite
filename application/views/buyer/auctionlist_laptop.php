@@ -118,7 +118,7 @@
 		<p class="w-auto small" style="font-size:12px;word-break:break-all;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
             <p class="description d-flex justify-content-center"style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
       <p class="description d-flex justify-content-center"style="font-size:12px"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center"style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+            <p class="description d-flex "style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			   <p class=" w-auto small"style="font-size:12px;word-break:break-all;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->iproductdes ?></p>
     
                       <div class="row">
