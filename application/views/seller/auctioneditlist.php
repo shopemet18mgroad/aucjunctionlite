@@ -1,5 +1,5 @@
 
-	<link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
+	
 
 	 <main id="main">
 
@@ -17,8 +17,8 @@
         
  
         
-      <div class="row">
-        <table class="table table-striped" id="myTable">
+      <div class="row ">
+        <table class="table table-striped">
   <thead>
   
     <tr>
@@ -62,73 +62,28 @@
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
-					<td data-label="Sl.No."><?php echo $count ?> </td>
-
-
-
-					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td data-label="Category"><?php echo $row->icategory ?> </td>
-					<td data-label=" Seller Name"><?php echo $row->icontactperson ?> </td>
-					
-					
-					<td data-label="       Seller Company Name"><?php echo $row->icompanyname ?> </td>
+					<td><?php echo $count ?> </td>
 
 					 <td> <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td><?php echo $row->icategory ?> </td>
 					<td><?php echo $row->icontactperson ?> </td>
-
 					
 					
-		
-     		
-	<td data-label="Auction Start and End Time"><?php $aucs= $row->iauction_start;
-	   $temp = explode('.',$aucs);
-       $aucs = $temp[0];
-       echo  $aucs;	   
-	   
-
-	   ?>	   <br>to	   <br>
-	   <?php $auce = $row->iauction_end; 
-       $cool = explode('.',$auce);
-       $auce = $cool[0];
-       echo  $auce;	 
-	  ?>
-	  </td>
-	  				
+					<td><?php echo $row->icompanyname ?> </td>
 					
-
-					 <td data-label="Auction Id">  <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td data-label="Category"><?php echo $row->icategory ?> </td>
-					<td data-label="Seller Name"><?php echo $row->icontactperson ?> </td>
-
-					
-					
-					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
-					
-					<td data-label="Online Auction Start And End Date"><?php echo $row->iauction_start ?><br> to <br>
+					<td><?php echo $row->iauction_start ?><br> to <br>
 					<?php echo $row->iauction_end ?> </td>
 					
 					
 					
 					
 					
-					<td  data-label="Action">  
+					<td >  
 					
 					
-
-					<td data-label="Action" >
-					
-					
-		<a href="<?php echo base_url()."Admin_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
-			<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($row->sl_ano);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
-
-		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano)."/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
-
-
 		<a href="<?php echo base_url()."Seller_editauction/index/".urldecode($row->sl_ano);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>
 		
-		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
-
+		<a href="<?php echo base_url()."Seller_addlotview/index/".urldecode($row->sl_ano)."/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
 
 		
 		<a href ="<?php echo base_url()."Seller_auctioneditlist/seller_delete/".urldecode($row->sl_ano);?>">
@@ -151,7 +106,20 @@
 
       </div>
 
-   
+      <div class="row mb-5">
+        <div class="col-12 p-5">
+            <nav class="d-flex align-items-center justify-content-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+          </nav>
+        </div>
+          
+      </div>
     </div>
   </section>
 

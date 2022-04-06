@@ -66,6 +66,7 @@ $adaction2 = array('sl_ano'=>$sl_ano );
 
 
 $query = $this->Admin_model->delete_data('auction',$adaction2);
+$query = $this->Admin_model->delete_data('addlot',$adaction2);
 $this->load->helper('url');
 $this->load->library('session');
 

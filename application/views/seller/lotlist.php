@@ -42,9 +42,7 @@
                           <th>
                     Seller Company Name
                           </th>
-						  <th>
-						  Online Auction Start And End Date
-						  </th>
+						 
 						  <th>
 						 Action
 						  </th>
@@ -77,14 +75,12 @@
 					<td><?php echo $row->icontactperson ?> </td>
 					<td><?php echo $row->icompanyname ?> </td>
 					
-					<td><?php echo $row->iauction_start ?><br> to <br>
-					<?php echo $row->iauction_start ?> </td>
+				
+					
+				<td>	
 					
 					
 					
-					
-					
-					<td >  
 					
 					
 		<a href="<?php echo base_url()."Seller_editlot/index/".urldecode($proid);?>"><i class="fa fa-edit m-2" style="font-size:18px;color:blue;"></i></a>

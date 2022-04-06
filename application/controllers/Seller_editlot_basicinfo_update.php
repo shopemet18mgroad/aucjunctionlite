@@ -30,14 +30,13 @@ class Seller_editlot_basicinfo_update extends CI_Controller {
 		$iproductdes = $this->input->post('iproductdes');
 		$inspectiondate	 = $this->input->post('inspectiondate');
 		$imrp = $this->input->post('imrp');
-		$sl_noadd  = $this->input->post('sl_noadd');
+	
 		$startaucprice  = $this->input->post('startaucprice');
-		$endaucprice  = $this->input->post('endaucprice	');
-		$iauction_start  = $this->input->post('iauction_start');
-		$iauction_end  = $this->input->post('iauction_end');
+	
+	
 		$imageupload  = $this->input->post('imageupload');
 		$iauctionid  = $this->input->post('iauctionid');
-        $entryfee  = $this->input->post('entryfee'); 
+        
 		 $iproductname  = $this->input->post('iproductname');
 		
 		
@@ -62,12 +61,12 @@ class Seller_editlot_basicinfo_update extends CI_Controller {
 		  $this->load->model('Admin_model');
 		  $data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
 		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
-		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,
-		'iauction_start'=> $iauction_start, 'iauction_end' =>$iauction_end,'entryfee'=>$entryfee,'imageupload'=>$pic_array1,'iproductname'=>$iproductname);
+		'imrp' => $imrp ,'startaucprice' => $startaucprice,
+		 'imageupload'=>$pic_array1,'iproductname'=>$iproductname);
 		}else{
 			  $this->load->model('Admin_model');
 				$data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
-		'imrp' => $imrp ,'startaucprice' => $startaucprice,'endaucprice' => $endaucprice,'iauction_start'=> $iauction_start,'iauction_end' =>$iauction_end,'entryfee'=>$entryfee,'iproductname'=>$iproductname);
+		'imrp' => $imrp ,'startaucprice' => $startaucprice,'iproductname'=>$iproductname);
 			
 			
 				}
@@ -75,10 +74,13 @@ class Seller_editlot_basicinfo_update extends CI_Controller {
 
 			  
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('sl_noadd ' => $sl_noadd );
+			  $updatech = array('sl_ano' => $sl_ano );
 
 			 
 			  $status = $this->Admin_model->update_custom('addlot',$data2,$updatech,$updatech);
+			 
+			  
+			  
 		
 		header('location: '.base_url().'Seller_auctioneditlist/index/'.$datainserr);
 	
