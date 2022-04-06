@@ -82,7 +82,7 @@
 	
 	<tr>
      
-      <th scope="row">Inspection Date </th>
+      <th scope="row">Inspection Till </th>
 	 
        
 	   <td><?php $insp= $sqldata[0]->inspectiondate;
@@ -112,24 +112,7 @@
       
     </tr>
 		<tr>
-     
-      <th scope="row">Inspection date and time  </th>
-	     
-	   <td><?php $inse= $sqldata[0]->iauction_end ;
-	   $ters = explode('.',$inse);
-       $inse = $ters[0];
-       echo  $inse;	   
-	   
-
-	   ?>
-	   
-	      	   <br>to	   <br>
-	   <?php $aucn = $sqldata[0]->iauction_start; 
-       $coole = explode('.',$aucn);
-       $aucn = $coole[0];
-       echo  $aucn;	 
-	  ?>
-	  </td>
+   
 	  
 	   </td>
        

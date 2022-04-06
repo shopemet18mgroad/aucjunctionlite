@@ -78,11 +78,16 @@
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory">
+			
 				<option value="Select" selected>Select</option>
 				<option value="Automobile">Automobile</option>
 				<option value="Home Appliance">Home Appliance</option>
 				<option value="Electronic Appliance">Electronic Appliance </option>
 				<option value="Mobile">Mobile</option>
+				<option value="Properties">Properties</option>
+					<option value="Furniture">Furniture</option>
+				<option value="Toys">Toys</option>
+				<option value="Fashion">Fashion</option>
 				
 				
 				
@@ -98,12 +103,16 @@
 				<option value="Select" selected>Select</option>
 				<option value="Car">Car</option>
 				<option value="Bike">Bike</option>
-                <option value="Commercial">Commercial</option>
-				<option value="Laptop" >Laptop</option>
+				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
-                <option value="TV">TV</option>
-                <option value="Washing Machine">Washing Machine</option>
-                <option value="Fridge">Fridge</option>
+				<option value="Properties">Properties</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Toys">Toys</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Fashion">Fashion</option>
 				
 				
 				

@@ -32,10 +32,15 @@
                         <select class="form-control form-control-lg" id="icategory" name="icategory" value="<?php echo $sqldata[0]->icategory ?>" >
 						<option value="<?php echo $sqldata[0]->icategory ?>"><?php echo $sqldata[0]->icategory ?></option>
 				
-				<option value="Cars">Automobile</option>
-				<option value="Bikes">Home Appliance</option>
-				<option value="Laptop">Electronic Appliance </option>
+				
+				<option value="Automobile">Automobile</option>
+				<option value="Home Appliance">Home Appliance</option>
+				<option value="Electronic Appliance">Electronic Appliance </option>
 				<option value="Mobile">Mobile</option>
+				<option value="Properties">Properties</option>
+					<option value="Furniture">Furniture</option>
+				<option value="Toys">Toys</option>
+				<option value="Fashion">Fashion</option>
 				
 				
 				
@@ -52,15 +57,18 @@
 				
 				<option value="<?php echo $sqldata[0]->isubcategory ?>"><?php echo $sqldata[0]->isubcategory ?></option>
 				
-				<option value="Cars">Cars</option>
-				<option value="Bikes">Bikes</option>
-                <option value="Commercial">Commercial</option>
-				<option value="Laptop" >Laptop</option>
+					<option value="Car">Car</option>
+				<option value="Bike">Bike</option>
+				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
-                <option value="TV">TV</option>
-                <option value="Washing Machine">Washing Machine</option>
-                <option value="Fridge">Fridge</option>
-				Sub Category
+				<option value="Properties">Properties</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Toys">Toys</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Fashion">Fashion</option>
 				
 				
 				</select>

@@ -56,7 +56,7 @@ class Home_login extends CI_Controller {
 				  if($table == "buyerdetails"){
 					  $newdata = array('username'=>$user,'auth'=>'BUYER','logged_in' => TRUE);
 						$this->session->set_userdata($newdata);
-					  header('location: '.base_url().'BuyerAuction_details');
+					  header('location: '.base_url().'buyer_buyerviewdetail');
 					  die;
 				      }else if($table == "sellerdetails"){
 					  $newdata = array('username'=>$user,'auth'=>'SELLER','logged_in' => TRUE);
