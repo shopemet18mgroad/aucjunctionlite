@@ -1,8 +1,8 @@
   <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="Seller_sellerviewdetail"><i class="fas fa-home"></i> Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" onclick="myauc()" href="Seller_aucparticipate"><i class="fa-solid fa-gavel"></i> Auctions</a>
+                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="Seller_sellerviewdetail"><i class="fas fa-home"></i><br>Home</a>
+                <a class="nav-item nav-link" data-toggle="tab" onclick="myauc()" href="Seller_aucparticipate"><i class="fa-solid fa-gavel"></i><br> Auctions</a>
                 <a class="nav-item nav-link" data-toggle="tab" onclick="cart()" href="Seller_sellerviewdetail"><i class="fas fa-shopping-cart"></i> <br>Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab" onclick="WishList()" href="Seller_sellerviewdetail"><i class="fas fa-heart"></i> WishList</a>
+                <a class="nav-item nav-link " data-toggle="tab" onclick="WishList()" href="Seller_sellerviewdetail"><i class="fas fa-heart"></i><br> WishList</a>
             </nav>
            
   <div id="preloader"></div>

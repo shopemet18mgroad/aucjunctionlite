@@ -89,7 +89,7 @@ if($diff <= 0){
               <p><span class="text-primary">My Bid Value: </span><span id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
             
               <div class="form-group">
-              <input class="form-control input-sm" id="inputsm" type="text">
+              <input class="form-control input-sm" id="inpbid" type="number" value="<?php echo $allauc[0]->cbid+1;?>">
               <button type="button" id="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" onclick="placebid(this.id)" class="btn btn-primary btn-sm my-2">Bid</button>
             </div>
 
@@ -370,6 +370,19 @@ if($diff <= 0){
 	}
   	
   
+}
+function placebid(auc){
+var bid = $('#inpbid').val();
+  if(bid != ""){
+     $.get('<?php echo base_url() .'BuyerAuction_Bid/index/'; ?>'+auc+"/"+bid, function(data){
+          // if(data=="OK"){
+          //   window.location = ""; 
+          // }
+            alert(data);
+        });
+  }else{
+    alert("Empty Bid Can not Be Placed ");
+  }
 }
 function getcurrentauctionreport_live(user, totallot){
   if(totallot){
