@@ -25,10 +25,18 @@
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
 				<option value="<?php echo $sqldata[0]->icategory ?>" selected><?php echo $sqldata[0]->icategory ?></option>
-				<option value="Cars">Cars</option>
-				<option value="Bikes">Bikes</option>
+				<option value="Car">Car</option>
+				<option value="Bike">Bike</option>
 				<option value="Laptop">Laptop</option>
 				<option value="Mobile">Mobile</option>
+				<option value="Properties">Properties</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Toys">Toys</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Fashion">Fashion</option>
 				
 				
 				

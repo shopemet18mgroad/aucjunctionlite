@@ -42,9 +42,6 @@
                           <th>
                     Seller Company Name
                           </th>
-						  <th>
-						  Online Auction Start And End Date
-						  </th>
 					
                         </tr>
                       </thead>
@@ -74,9 +71,7 @@
 					<td><?php echo $row->icategory ?> </td>
 					<td><?php echo $row->icontactperson ?> </td>
 					<td><?php echo $row->icompanyname ?> </td>
-					
-					<td><?php echo $row->iauction_start ?><br> to <br>
-					<?php echo $row->iauction_start ?> </td>
+				
 					
 					
 					
