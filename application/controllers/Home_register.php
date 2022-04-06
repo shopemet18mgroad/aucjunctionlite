@@ -28,15 +28,15 @@ class Home_register  extends CI_Controller {
 		
 		
 	
-		$role = $this->input->post('role');
+		//$role = $this->input->post('role');
          $icontactperson = $this->input->post('icontactperson');
          $switchtwo = $this->input->post('switchtwo');
          $iemailid  = $this->input->post('iemailid');
           $ipass = base64_encode($this->input->post('ipass'));
          $iconpass = base64_encode($this->input->post('iconpass'));
 		
-		 $data = array('icontactperson'=>$icontactperson,'iemailid' => $iemailid,'ipass' => $ipass,'iconpass' => $iconpass,'role'=>$switchtwo);
-		 //print_r($data);die;
+		 $data = array('icontactperson'=>$icontactperson,'iemailid' => $iemailid,'ipass' => $ipass,'iconpass' => $iconpass,'switchtwo'=>$role);
+		 print_r($data);die;
 		
 		 
 		 	$datainserr = "Data Inserted Successfully";

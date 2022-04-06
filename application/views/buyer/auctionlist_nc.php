@@ -220,7 +220,7 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 	
      
       <th scope="row"> Auction Images</th>
-	   <td><?php $img = unserialize($row->imageupload)?>
+	   <td data-toggle="modal" data-target="#exampleModal-<?php echo $count; ?>"><?php $img = unserialize($row->imageupload)?>
 	   
 	      <?php foreach($img as $sql) { ?>
 	   
@@ -359,6 +359,72 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 
   </div>
 </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-<?php echo $count; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <?php $img = unserialize($row->imageupload)?>
+	   
+	      <?php foreach($img as $sql) { ?>
+	   
+	   
+
+<img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="150px" height="150px">
+ 
+ 
+ 
+		<?php } ?> 
+	   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <?php $count++ ?>
    <?php } ?>
   </main><!-- End #main -->

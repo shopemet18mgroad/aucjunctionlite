@@ -42,7 +42,7 @@ class BuyerAuction_wishlist extends CI_Controller {
 		$allaucarray =  array();
 
 		foreach($sqldata1 as $sql){
-			$aucdet = $this->Admin_model->get_singleauction($sql->auction_id);
+			$aucdet = $this->Admin_model->get_singleauction_nd($sql->auction_id);
 			array_push($allaucarray,$aucdet);
 		}
 		$allauc['allaucdata'] = $allaucarray;

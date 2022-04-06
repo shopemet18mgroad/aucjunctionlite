@@ -1,8 +1,8 @@
   <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i> Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i> Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i><br> Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> WishList</a>
+                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="#"><i class="fas fa-home"></i> Home</a>
+                <a  class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fa-solid fa-gavel"></i> Home</a>
+                <a class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fas fa-shopping-cart"></i><br> Home</a>
+                <a class="nav-item nav-link " data-toggle="tab"onclick="home()" href="#"><i class="fas fa-heart"></i> Home</a>
             </nav>
            
   <div id="preloader"></div>
@@ -49,7 +49,20 @@
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/php-email-form/validate.js"></script>
-
+<script>
+ function home(){
+	  window.location = "<?php echo base_url() .'admin_dashboard/'; ?>" 
+ }
+ function myauc(){
+	 window.location = "<?php echo base_url() .'admin_dashboard/'; ?>" 
+ }
+ function cart(){
+	  window.location = "<?php echo base_url() .'admin_dashboard/'; ?>" 
+ }
+ function wishlist(){
+	  window.location = "<?php echo base_url() .'admin_dashboard/'; ?>" 
+ }
+</script>
   <!-- Template Main JS File -->
   <script src="<?php echo base_url()."web_files/";?>assets/js/main.js"></script>
       

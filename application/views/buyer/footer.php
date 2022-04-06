@@ -1,8 +1,8 @@
   <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i><br>Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i> Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i><br> Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> WishList</a>
+                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="BuyerAuction_details"><i class="fas fa-home"></i><br>Home</a>
+                <a class="nav-item nav-link" data-toggle="tab" onclick="myauc()" href="BuyerAuction_myauc"><i class="fa-solid fa-gavel"></i> Auctions</a>
+                <a class="nav-item nav-link" data-toggle="tab" onclick="cart()" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
+                <a class="nav-item nav-link " data-toggle="tab"onclick="wishlist()" href="BuyerAuction_wishlist"><i class="fas fa-heart"></i> WishList</a>
             </nav>
            
   <div id="preloader"></div>
@@ -57,10 +57,20 @@ $(document).ready( function () {
 } );
 </script>
   
-  
-  
-  
-  
+  <script>
+ function home(){
+	  window.location = "<?php echo base_url() .'BuyerAuction_details/'; ?>" 
+ }
+ function myauc(){
+	 window.location = "<?php echo base_url() .'BuyerAuction_myauc/'; ?>" 
+ }
+ function cart(){
+	  window.location = "<?php echo base_url() .'BuyerAuction_cart/'; ?>" 
+ }
+ function wishlist(){
+	  window.location = "<?php echo base_url() .'BuyerAuction_wishlist/'; ?>" 
+ }
+</script>
   
   
   <script>

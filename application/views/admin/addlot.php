@@ -122,7 +122,7 @@
                       </div>
                     </div>
 					
-						<div class="form-group row m-5">
+						<div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Product Name </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iproductname" name="iproductname" placeholder="Product Name ">
@@ -131,7 +131,7 @@
 					
 					
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
+                      <label for="" class="col-sm-3 col-form-label">Inspection Till</label>
                       <div class="col-sm-9">
                         <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
@@ -161,12 +161,7 @@
                       </div>
                     </div>
                     
-                       <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="endaucprice" name="endaucprice" placeholder="End Auction Price">
-                      </div>
-                    </div>
+                   
 					
 					     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">entry free </label>
@@ -177,15 +172,7 @@
 					
                    
 				  
-						 <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Inspection date<br> and time</label>
-                      <div class="col-sm-9">
-                       From: 	
-                        <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
-                         To: 	
-		<input class="form-control form-control-lg" id="iauction_end" name="iauction_end" type="datetime-local" >
-                      </div>
-                    </div>
+						
 					
 					
 					

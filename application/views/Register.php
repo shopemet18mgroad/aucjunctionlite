@@ -44,15 +44,7 @@
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li> 
-
-
-          </li>
-          <li><a class="nav-link scrollto" href="#">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#">Contact Us</a></li>
-           <li><a class="nav-link scrollto" href="#">Privacy Policy</a></li>
-        </ul>
+   
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -74,7 +66,7 @@
   
    
    
- <form action="<?php echo base_url();?>Home_register" method="post" enctype="multipart/form-data">    
+ <form action="<?php echo base_url();?>" method="post" enctype="multipart/form-data">    
    
    
    <?php 
@@ -121,8 +113,8 @@
           
           
              <div class="d-flex justify-content-between">
-               <div id="nb" class="text-center text-lg-start mt-1 pt-2 pb-5">
-            <button type="submit" name="submit" id="optbtn" class="btn btn-primary btn-lg"
+               <div id="nb" class="text-center">
+            <button type="submit" name="submit" id="optbtn" class="btn btn-primary "
               style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="return sendotp()">Validate</button>
               
       
@@ -134,7 +126,7 @@
 
                    <div class="container">
         <div class="row">
-            <div class="switch-field justify-content-center py-3 ml-2" >
+            <div class="switch-field" >
                  <input type="radio" id="radio-three" name="switchtwo" value="BUYER" checked/>
               <label for="radio-three">BUYER</label>
               <input type="radio" id="radio-four" name="switchtwo" value="SELLER"/>

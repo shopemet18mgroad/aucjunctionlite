@@ -1,8 +1,8 @@
   <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i> Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i> Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i> <br>Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> WishList</a>
+                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="Seller_sellerviewdetail"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-item nav-link" data-toggle="tab" onclick="myauc()" href="Seller_aucparticipate"><i class="fa-solid fa-gavel"></i> Auctions</a>
+                <a class="nav-item nav-link" data-toggle="tab" onclick="cart()" href="Seller_sellerviewdetail"><i class="fas fa-shopping-cart"></i> <br>Cart</a>
+                <a class="nav-item nav-link " data-toggle="tab" onclick="WishList()" href="Seller_sellerviewdetail"><i class="fas fa-heart"></i> WishList</a>
             </nav>
            
   <div id="preloader"></div>
@@ -60,7 +60,20 @@ $(document).ready( function () {
 } );
 </script>
   
- 
+ <script>
+ function home(){
+	  window.location = "<?php echo base_url() .'Seller_sellerviewdetail/'; ?>" 
+ }
+ function myauc(){
+	 window.location = "<?php echo base_url() .'Seller_aucparticipate/'; ?>" 
+ }
+ function cart(){
+	  window.location = "<?php echo base_url() .'Seller_sellerviewdetail/'; ?>" 
+ }
+ function WishList(){
+	  window.location = "<?php echo base_url() .'Seller_sellerviewdetail/'; ?>" 
+ }
+</script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

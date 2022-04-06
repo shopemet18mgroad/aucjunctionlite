@@ -205,7 +205,7 @@ class Admin_model extends CI_Model
 	//In buyer only to pull cartegory of Bike of particular All Auction.
 	
 	public function get_auctionlistbike($limit, $start) {			 
-			$this->db->select('
+			$this->db->select('get_singleauction
 					a.*,
 					b.*');
 					$this->db->limit($limit, $start);

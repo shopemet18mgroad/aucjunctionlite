@@ -90,7 +90,19 @@
     <option value="Govt Regd Company">Govt Regd Company </option>
     <option value="Ltd , Pvt Ltd , LLP, Corp">Ltd , Pvt Ltd , LLP, Corp</option>
     <option value="Partnership,Proprietorship , OPC">Partnership,Proprietorship , OPC</option>
-	 <option value="Other">Other</option>
+	 <option value="Other">Public Financial Institutions</option>
+	 <option value="Other">Foreign Companies
+</option>
+	 <option value="Other">Charitable Companies</option>
+	 <option value="Other">Government Companies</option>
+	 <option value="Other">Companies in terms of Access to Capital</option>
+	 <option value="Other">Associate Companies</option>
+	 <option value="Other">Holding and Subsidiary Companies</option>
+	  <option value="Other">Public Companies</option>
+	  <option value="Other">Private Companies</option>
+	  <option value="Other">Companies Limited by Guarantee</option>
+	  <option value="Other">Companies Limited by Shares</option>
+	 
   </select>
                         <label class="form-label" for="form3Examplev5">Type of Seller</label>
                       </div>
