@@ -5,17 +5,7 @@
   <div class="container py-5 h-100">
     <div class="row m-4 m-5 m-5 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-    
-            
-         
-
-
-                  
-				  
-				  
-				  
-				  
-				  
+   
                  <form action= "<?php echo base_url();?>Seller_editlot_basicinfo_update"
 				 method="post" enctype="multipart/form-data"> 
 			
@@ -70,33 +60,30 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
+                        <textarea class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
                       </div>
                     </div>
 				
 					 <div class="form-group row m-4">
                      
                       <div class="col-sm-9">
-                        <input type="hidden" class="form-control form-control-lg" id="sl_noadd" name="sl_noadd"  value="<?php echo $sqldata[0]->sl_noadd ?>" >
+                        <input type="hidden" class="form-control form-control-lg" id="sl_ano" name="sl_ano"  value="<?php echo $sqldata[0]->sl_ano ?>" >
                       </div>
                     </div>
 					
 					
 					
+					
+					
+					
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Inspection Date</label>
+                      <label for="" class="col-sm-3 col-form-label">Inspection Till</label>
                       <div class="col-sm-9">
                         <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
                       </div>
                     </div>
 					
-					<div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Current location </label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="currentlocation" name="currentlocation" placeholder="current location " value="<?php echo $sqldata[0]->currentlocation ?>" >
-                      </div>
-                    </div>
-                   
+				
 					
 					
                    
@@ -108,46 +95,12 @@
                     </div>
                     
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Start  Auction Price</label>
+                      <label for="" class="col-sm-3 col-form-label">Start Auction Price</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price"value="<?php echo $sqldata[0]->startaucprice ?>" >
                       </div>
                     </div>
-                    
-                       <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">End Auction Price</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="endaucprice" name="endaucprice" placeholder="endaucprice" value="<?php echo $sqldata[0]->endaucprice ?>">
-                      </div>
-                    </div>
-					
-					     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">entry free </label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="entryfee" name="entryfee" placeholder="entryfee" value="<?php echo $sqldata[0]->entryfee ?>" >
-                      </div>
-                    </div>
-					
-                   
-				  
-						 <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Inspection date and time</label>
-                      <div class="col-sm-9">
-                       From: 	
-                    
-						
-				  <input class="form-control form-control-lg " type="datetime-local"  id="iauction_start" name="iauction_start" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_start)); ?>">		
-						
-						<br>
-                         
-
-To: 
-							
-							
-   <input class="form-control form-control-lg " type="datetime-local"  id="iauction_end" name="iauction_end" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->iauction_end)); ?>">
-                      </div>
-                    </div>
-					
+                  
 					
 
 					

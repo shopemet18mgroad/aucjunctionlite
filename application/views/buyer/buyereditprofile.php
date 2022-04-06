@@ -34,7 +34,7 @@
                       <div class="form-outline">
                       
                     
-	<input type="text" class="form-control form-control-lg buyercontactnumber" id="buyercontactnumber"maxLength="10" name="buyercontactnumber" value="<?php echo $sqldata[0]->buyercontactnumber ?>">
+	<input type="text" class="form-control form-control-lg buyercontactnumber" id="buyercontactnumber"maxLength="10" name="buyercontactnumber" value="<?php echo $sqldata[0]->buyercontactnumber ?>" readonly>
 
   <label> Contact Number*</label>
 
