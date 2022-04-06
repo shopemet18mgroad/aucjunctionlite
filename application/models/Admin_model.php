@@ -184,40 +184,7 @@ class Admin_model extends CI_Model
 		
 	}
 	
-		//1.In buyer only to pull cartegory of Bike of particular days auction.
 	
-	public function get_auctionlist_todaybike($limit, $start, $date){
-		$this->db->select('
-					a.*,
-					b.*');
-					$this->db->limit($limit, $start);
-					$this->db->where('a.aoption',true);	
-					$this->db->where('b.isubcategory=','Bike');
-				
-					$this->db->where('DATE(a.iauction_start)', $date);				 			
-					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
-					'left outer');			   
-					$query = $this->db->get("auction a");
-					$result = $query->result();				
-					return $result;
-	}
-	
-	//In buyer only to pull cartegory of Bike of particular All Auction.
-	
-	public function get_auctionlistbike($limit, $start) {			 
-			$this->db->select('get_singleauction
-					a.*,
-					b.*');
-					$this->db->limit($limit, $start);
-					$this->db->where('a.aoption',true);	
-					$this->db->where('b.isubcategory=','Bike');
-					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
-					'left outer');			   
-					$query = $this->db->get("auction a");
-					$result = $query->result();				
-					return $result;
-		
-	}
 			//In buyer only to pull cartegory of Camera of particular days auction.
 	
 	public function get_auctionlist_todaycamera($limit, $start, $date){
@@ -325,7 +292,50 @@ class Admin_model extends CI_Model
 		
 	}
 	
-					//In buyer only to pull cartegory of Toys of particular days auction.
+	
+	
+	
+			//In buyer only to pull cartegory of Mobile of particular days auction.
+	
+	public function get_auctionlist_todaybike($limit, $start, $date){
+		$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Bike');
+				
+					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}
+	
+	//In buyer only to pull cartegory of Mobile of particular All Auction.
+	
+	public function get_auctionlistbike($limit, $start) {			 
+			$this->db->select('
+					a.*,
+					b.*');
+					$this->db->limit($limit, $start);
+					$this->db->where('a.aoption',true);	
+					$this->db->where('b.isubcategory=','Bike');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
+					'left outer');			   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+		
+	}
+	
+	
+	
+	
+	
+	
+			//In buyer only to pull cartegory of Mobile of particular days auction.
 	
 	public function get_auctionlist_todaytoys($limit, $start, $date){
 		$this->db->select('
@@ -343,7 +353,7 @@ class Admin_model extends CI_Model
 					return $result;
 	}
 	
-	//In buyer only to pull cartegory of Toys of particular All Auction.
+	//In buyer only to pull cartegory of Mobile of particular All Auction.
 	
 	public function get_auctionlisttoys($limit, $start) {			 
 			$this->db->select('
@@ -351,7 +361,7 @@ class Admin_model extends CI_Model
 					b.*');
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
-					$this->db->where('b.isubcategory=','Fashion');
+					$this->db->where('b.isubcategory=','Toys');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -359,9 +369,13 @@ class Admin_model extends CI_Model
 					return $result;
 		
 	}
-						//In buyer only to pull cartegory of Fashion of particular days auction.
 	
-	public function get_auctionlist_todayfashion($limit, $start, $date){
+		
+	
+		
+//In buyer only to pull cartegory of Laptop of particular days auction.
+	
+	public function get_auctionlist_todayfashion($limit, $start,$date){
 		$this->db->select('
 					a.*,
 					b.*');
@@ -377,7 +391,7 @@ class Admin_model extends CI_Model
 					return $result;
 	}
 	
-	//In buyer only to pull cartegory of Fashion of particular All Auction.
+	//In buyer only to pull cartegory of Laptop of particular All Auction.
 	
 	public function get_auctionlistfashion($limit, $start) {			 
 			$this->db->select('
@@ -393,6 +407,10 @@ class Admin_model extends CI_Model
 					return $result;
 		
 	}
+
+	
+	
+	
 //In buyer only to pull cartegory of Laptop of particular days auction.
 	
 	public function get_auctionlist_todaylaptop($limit, $start, $date){

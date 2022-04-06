@@ -85,9 +85,9 @@ class BuyerAuction_toys extends CI_Controller {
         $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $data["links"] = $this->pagination->create_links();
 		if($this->uri->segment(3) == "TA"){
-			$data['sqldata1'] = $this->Admin_model->get_auctionlist_todaybike($config["per_page"], $page, $date);
+			$data['sqldata1'] = $this->Admin_model->get_auctionlist_todaytoys($config["per_page"], $page, $date);
 		}else{
-			$data['sqldata1'] = $this->Admin_model->get_auctionlistbike($config["per_page"], $page);
+			$data['sqldata1'] = $this->Admin_model->get_auctionlisttoys($config["per_page"], $page);
 		}
         
 	

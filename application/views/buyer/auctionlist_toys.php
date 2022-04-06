@@ -115,10 +115,10 @@
 <img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
  alt="Chania" width="100px" height="100px"></div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
-			<p class="w-auto small" style="font-size:12px;word-break:break-all;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
-            <p class="description d-flex justify-content-center"style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
-      <p class="description d-flex justify-content-center"style="font-size:12px"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
-            <p class="description d-flex justify-content-center"style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
+		<p class="w-auto small" style="font-size:12px;word-break:break-all;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>
+            <p class="description d-flex "style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2" style="font-size:16px"></i><?php echo $row->imrp ?></p>
+      <p class="description d-flex "style="font-size:12px"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
+            <p class="description d-flex "style="font-size:12px"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
 			   <p class=" w-auto small"style="font-size:12px;word-break:break-all;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->iproductdes ?></p>
     
                       <div class="row">
@@ -160,16 +160,10 @@
 	  <?php $meg = $row->isubcategory ?>
       
    <?php if($meg == 'Toys'){
-	   ?>
+	 ?>
   
   <div id="1-<?php echo $count; ?>" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
-
-
-
-
-
 
 
     <!-- Modal content-->
@@ -222,7 +216,7 @@
     <tr>
      
       <th scope="row">product Description  </th>
-	  <td><?php echo $row->iproductdes ?></td>
+	  <td style="word-break:break-all;"><?php echo $row->iproductdes ?></td>
       
     </tr><br>
 	
@@ -255,34 +249,12 @@
     </tr>
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<tr>
 	
 	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
 	</tr>
 	
-	
-
-	
-			<tr>
+	<tr>
      
       <th scope="row">Inspection Date </th>
 
@@ -297,14 +269,6 @@
       
     </tr>
 	
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		<tr>
           <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
