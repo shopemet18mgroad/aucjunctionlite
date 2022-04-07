@@ -92,12 +92,23 @@
               placeholder="" name="icontactnumber" id="icontactnumber" />
             <label class="form-label" for="form3Example3">Phone Number</label>
              <input type="password"  class="form-control form-control-lg"
-              placeholder=""  name="ipass" id="ipass"/>
+              placeholder=""  name="ipass" id="ipass"/><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
             <label class="form-label" for="form3Example3">Password</label>
-             <input type="password" id="iconpass" class="form-control form-control-lg"
-              placeholder=""  name="iconpass"/>
-            <label class="form-label" for="form3Example3">Confirm Password</label>
-          </div>
+			
+			 <div class="mb-4 pb-2">
+                    <div class="form-outline form-white mm">
+                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder=""/><i class="bi bi-eye-slash errspan" id="togglePassword1"></i>
+                      <label class="form-label" for="form3Examplea3"> Confirm Password</label>
+                    </div>
+                  </div>
+			
+			
+			
+			
+			
+			
+			
+            
 
           <!-- Password input -->
     
@@ -288,6 +299,28 @@ function validateotp(){
 
 } 
     </script>
+	<script>
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#ipass');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>
+<script>
+const togglePassword1 = document.querySelector('#togglePassword1');
+const password1 = document.querySelector('#iconpass');
+togglePassword1.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+    password1.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>
 
 </body>
 
