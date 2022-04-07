@@ -37,11 +37,24 @@ class Buyer_aucparticipate extends CI_Controller {
 		$active = array('buyeremail'=>$sess['sessi']);
 		
 		
+		$ioption = array('ioption'=>true);
+		
+		
+   $query = $this->Admin_model->getdatafromtable('sellerdetails', $ioption);
+	
+	$data['sqldata1']= $query;
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
 		$this->load->view('buyer/header',$sess);
-		$this->load->view('buyer/aucparticipate');
+		$this->load->view('buyer/aucparticipate',$data);
 		$this->load->view('buyer/footer');
 			}
 	}
