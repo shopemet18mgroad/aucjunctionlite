@@ -124,7 +124,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Car');
-				
+				   $this->db->order_by('a.iauction_start','DESC');
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
@@ -142,6 +142,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Car');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -158,7 +159,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','TV');
-				
+				    $this->db->order_by('a.iauction_start','DESC');
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
@@ -176,6 +177,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','TV');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -194,6 +196,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Camera');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -212,6 +215,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Camera');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -230,6 +234,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Fridge');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -248,6 +253,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Fridge');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -266,6 +272,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Mobile');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -284,6 +291,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Mobile');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -304,6 +312,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Bike');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -322,6 +331,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Bike');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -344,6 +354,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Toys');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -362,6 +373,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Toys');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -382,6 +394,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Fashion');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -400,6 +413,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Fashion');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -420,6 +434,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Laptop');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -438,6 +453,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Laptop');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -455,6 +471,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Washing machine');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -473,6 +490,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Washing machine');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -490,6 +508,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Furniture');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -508,6 +527,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Furniture');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -527,6 +547,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Furniture');
+					$this->db->order_by('a.iauction_start','DESC');
 				
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
@@ -545,6 +566,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Properties');
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
