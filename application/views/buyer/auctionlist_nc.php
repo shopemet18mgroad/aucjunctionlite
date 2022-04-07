@@ -380,8 +380,8 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 	   
 	   
 
-<center><img class="model row" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
- alt="Chania" width="150px" height="150px"></center>
+<center><img class="model row m-2" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+ alt="Chania" width="300px" height="250px"></center>
  
  
  
