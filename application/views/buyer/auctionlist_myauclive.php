@@ -89,7 +89,7 @@ if($diff <= 0){
               <p><span class="text-primary">My Bid Value: </span><span id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
             
               <div class="form-group">
-              <input class="form-control input-sm" id="inpbid" type="number" value="<?php echo $allauc[0]->cbid+1;?>">
+              <input class="form-control input-sm" id="inpbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" type="number" value="<?php echo $allauc[0]->cbid+1;?>">
               <button type="button" id="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" onclick="placebid(this.id)" class="btn btn-primary btn-sm my-2">Bid</button>
             </div>
 
@@ -372,14 +372,25 @@ if($diff <= 0){
   
 }
 function placebid(auc){
-var bid = $('#inpbid').val();
+var bid = $('#inpbid-'+auc).val();
+//alert(bid);return false;
   if(bid != ""){
-     $.get('<?php echo base_url() .'BuyerAuction_Bid/index/'; ?>'+auc+"/"+bid, function(data){
-          // if(data=="OK"){
-          //   window.location = ""; 
-          // }
-            alert(data);
-        });
+		$.get('<?php echo base_url() .'BuyerAuction_Bid/get_currency/'; ?>'+bid, function(data){
+							let text = "You Are About to bid "+ data;
+								if (confirm(text) == true) {
+									$.get('<?php echo base_url() .'BuyerAuction_Bid/index/'; ?>'+auc+"/"+bid, function(data){
+									alert(data);
+										if(data == "Bid Placed Succesfully"){
+											var bid2 = parseInt(bid)+parseInt("1");
+											$('#inpbid-'+auc).val(bid2);
+											$('#cbid-'+auc).text(bid);
+											$('#mybid-'+auc).text(bid);
+										}
+									});
+								} else {
+									return false;
+								}
+        		});
   }else{
     alert("Empty Bid Can not Be Placed ");
   }
@@ -403,6 +414,9 @@ function getcurrentauctionreport_live(user, totallot){
                $('#timer-'+k).text(rem);
                $('#cbid-'+aucid).text(cbid);
                $('#mybid-'+aucid).text(mybid);
+							 var cbidn = parseInt(cbid) + parseInt("1");
+							 $('#inpbid-'+aucid).val(cbidn);
+							 
             }
           }else{
             alert("Unable To Fetch Data");

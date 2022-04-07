@@ -107,7 +107,7 @@ class Buyer_buyer_basicinfo_update extends CI_Controller {
 			 
 			  $status = $this->Admin_model->update_custom('buyerdetails',$data2,$updatech,$updatech);
 		
-		header('location: '.base_url().'Buyer_buyerviewdetail/index/'.$datainserr);
+		header('location: '.base_url().'BuyerAuction_details/index/'.$datainserr);
 	
 		
 		}

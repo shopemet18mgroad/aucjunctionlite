@@ -37,7 +37,7 @@
 	 <span style="font-size: 3em;color:DodgerBlue;">
   <i class="fa fa-mobile mt-3"></i>
 </span></a><br>
- <p style="color:black;font-size:12px;">Mobile</p>         </center>
+ <p style="color:black;font-size:12px;">Mobile</p>  </center>
  </div>
      </div>
 	 
