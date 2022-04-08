@@ -85,8 +85,8 @@ if($diff <= 0){
               
              
               <div class="col-md-4 col-lg-4 col-xl-4 h-100 ">
-              <p><span class="text-primary">Current Bid Value: </span> <span id="cbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->cbid;?><span></p>
-              <p><span class="text-primary">My Bid Value: </span><span id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
+              <p><span class="text-primary">Current Bid Value: </span> <span class="text-primary" id="cbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->cbid;?><span></p>
+              <p><span class="text-primary">My Bid Value: </span><span class="<?php if($allauc[0]->mybid < $allauc[0]->cbid){echo "text-danger";}else{echo "text-success";}?>" id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
             
               <div class="form-group">
               <input class="form-control input-sm" id="inpbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" type="number" value="<?php echo $allauc[0]->cbid+1;?>">
@@ -385,6 +385,7 @@ var bid = $('#inpbid-'+auc).val();
 											$('#inpbid-'+auc).val(bid2);
 											$('#cbid-'+auc).text(bid);
 											$('#mybid-'+auc).text(bid);
+                      $('#mybid-'+auc).removeClass('text-danger').addClass('text-success');
 										}
 									});
 								} else {
@@ -416,7 +417,11 @@ function getcurrentauctionreport_live(user, totallot){
                $('#mybid-'+aucid).text(mybid);
 							 var cbidn = parseInt(cbid) + parseInt("1");
 							 $('#inpbid-'+aucid).val(cbidn);
-							 
+							 if(mybid < cbid){
+                   $('#mybid-'+aucid).removeClass('text-success').addClass('text-danger');
+               }else{
+                   $('#mybid-'+aucid).removeClass('text-danger').addClass('text-success');
+               }
             }
           }else{
             alert("Unable To Fetch Data");

@@ -61,7 +61,9 @@ class BuyerAuction_Bid extends CI_Controller {
 					}else{
 						$this->Admin_model->update_custom($table2, $datafupbid2, $comp2, $comp2);
 						//insert to biding summary====================
-
+						$table3 = 'biddingdata';
+						 $databy = array('bidderusername'=>$sessi,'sauctionid'=>$aucn,'slotno'=>$aucn,'bidvalue'=>$bid,'Date_time'=>$date,'bidamount'=>$bid);
+                        $this->Admin_model->insert($table3, $databy); 
 						//============================================
 						echo "Bid Placed Succesfully";
 					}
