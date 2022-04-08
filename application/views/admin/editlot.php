@@ -68,7 +68,9 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
+                       
+					 <input style="height:100px;font-size:16px;word-break:break-all;" type="text" class="form-control form-control-lg" id="iproductdes" name="iproductdes"      value="<?php echo  $sqldata[0]->iproductdes;?>"  placeholder="description"> 
+					  
                       </div>
                     </div>
 				
@@ -87,7 +89,13 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection Till</label>
                       <div class="col-sm-9">
-                        <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
+                       
+						
+						
+						 <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->inspectiondate)) ?>"  ><br>
+						
+						
+						
                       </div>
                     </div>
 					
@@ -108,6 +116,15 @@
                         <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price"value="<?php echo $sqldata[0]->startaucprice ?>" >
                       </div>
                     </div>
+					
+					
+					  <div class="form-group row m-4">
+                      <label for="" class="col-sm-3 col-form-label">Entry Free</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="entryfee" name="entryfee" placeholder="Entry Free"value="<?php echo $sqldata[0]->entryfee ?>" >
+                      </div>
+                    </div>
+					
                   
 					
 
@@ -116,7 +133,7 @@
 					
 					
 			 <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Upload photos</label>
+                      <label for="" class="col-sm-3 col-form-label">Upload Auction photos</label>
                       <div class="col-sm-9">
                         <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price" value="<?php echo $sqldata[0]->imageupload ?>" >
 						  <?php $img = unserialize($sqldata[0]->imageupload)?>

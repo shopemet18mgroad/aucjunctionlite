@@ -30,7 +30,7 @@
     </tr><br>
 	  <tr>
      
-      <th scope="row">product Description  </th>
+      <th scope="row"  style="font-size:16px;word-break:break-all;"   >product Description  </th>
 	  <td><?php echo $sqldata[0]->iproductdes ?></td>
       
     </tr><br>
@@ -108,7 +108,7 @@
 		<tr>
      
       <th scope="row">entry free </th>
-	   <td><?php echo $sqldata[0]->endaucprice ?></td>
+	   <td><?php echo $sqldata[0]->entryfee ?></td>
       
     </tr>
 		<tr>

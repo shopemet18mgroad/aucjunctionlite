@@ -30,7 +30,7 @@
     </tr><br>
 	  <tr>
      
-      <th scope="row">product Description  </th>
+      <th scope="row" style="font-size:16px;word-break:break-all;">product Description  </th>
 	  <td><?php echo $sqldata[0]->iproductdes ?></td>
       
     </tr><br>
@@ -108,7 +108,7 @@
 		<tr>
      
       <th scope="row">entry free </th>
-	   <td><?php echo $sqldata[0]->endaucprice ?></td>
+	   <td><?php echo $sqldata[0]->entryfee ?></td>
       
     </tr>
 		<tr>
@@ -122,7 +122,7 @@
 	
 	<tr>
      
-      <th scope="row">Upload photos* </th>
+      <th scope="row"> Auction Images </th>
 	  
 	  
 	  
@@ -182,7 +182,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="example">IMAGES</h5>
+        <h5 class="modal-title" id="example"> AUCTION IMAGES</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

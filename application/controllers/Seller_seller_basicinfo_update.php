@@ -22,7 +22,7 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 	 	public function index()
 	{
 			
-		if( $role = $this->input->post('role')== 'INDIVIDUAL'){
+		if($this->input->post('role')== 'INDIVIDUAL'){
 			
 			
 			
@@ -35,7 +35,9 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		
 		
 		
-		
+		 $igstnumber = $this->input->post('igstnumber');
+ $icompanyname = $this->input->post('icompanyname'); 
+ $itypeseller = $this->input->post('itypeseller');  
 	    $iname = $this->input->post('iname'); 
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
@@ -87,21 +89,21 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		}  
 $this->load->model('Admin_model');
 			 
-if($_FILES['iadharcardfile']['name'][0] && $_FILES['iaddresprof']['name'][0]){
+if($_FILES['iadharcardfile']['name'][0] || $_FILES['iaddresprof']['name'][0]){
 	
 $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,
-			 'iaddresprof'=>$pic_array2,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
-			
+			 'iaddresprof'=>$pic_array2);
+			//print_r($data2);die;
 			 }else{
 				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);
-		
+		//print_r($data2);die;
 			 }
 			 
 
@@ -132,9 +134,7 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
 		$iemailid  = $this->input->post('iemailid');
-    $igstnumber = $this->input->post('igstnumber');
- $icompanyname = $this->input->post('icompanyname'); 
- $itypeseller = $this->input->post('itypeseller');
+		
 		
 		$iadharcardfile = $this->input->post('iadharcardfile');
 		
@@ -145,6 +145,9 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 		$ipincode  = $this->input->post('ipincode');
 		$icontactperson  = $this->input->post('icontactperson');
 		$iaddresprof  = $this->input->post('iaddresprof');
+		 $igstnumber = $this->input->post('igstnumber');
+ $icompanyname = $this->input->post('icompanyname'); 
+ $itypeseller = $this->input->post('itypeseller');
 		
 		
 		 

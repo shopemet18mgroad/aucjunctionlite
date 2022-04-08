@@ -69,7 +69,14 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
                       <div class="col-sm-9">
-                        <textarea class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " value= "<?php echo $sqldata[0]->iproductdes ?>" ></textarea>
+					  
+					  
+					  
+					 <input style="height:100px;font-size:16px;word-break:break-all;" type="text" class="form-control" id="iproductdes" name="iproductdes"      value="<?php echo  $sqldata[0]->iproductdes;?>"  placeholder="description"> 
+					  
+					  
+					  
+					
                       </div>
                     </div>
 				
@@ -88,7 +95,8 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Inspection Till</label>
                       <div class="col-sm-9">
-                        <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date " value="<?php echo $sqldata[0]->inspectiondate ?>" >
+                      		 <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" value="<?php echo date('Y-m-d\TH:i', strtotime($sqldata[0]->inspectiondate)) ?>"  ><br>
+						
                       </div>
                     </div>
 					

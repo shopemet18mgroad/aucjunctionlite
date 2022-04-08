@@ -71,7 +71,7 @@
 					<td data-label=" Seller Name"><?php echo $row->icontactperson ?> </td>
 					
 					
-					<td data-label="       Seller Company Name"><?php echo $row->icompanyname ?> </td>
+					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
 					
 					
 		

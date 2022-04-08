@@ -87,21 +87,21 @@
                       <div class="form-outline">
                        							  <select class="custom-select form-control form-control-lg " id="itypeseller"  name="itypeseller" style="border-radius:20px;">
     <option selected>Type of Seller</option>
-    <option value="Govt Regd Company">Govt Regd Company </option>
+  <option value="Govt Regd Company">Govt Regd Company </option>
     <option value="Ltd , Pvt Ltd , LLP, Corp">Ltd , Pvt Ltd , LLP, Corp</option>
     <option value="Partnership,Proprietorship , OPC">Partnership,Proprietorship , OPC</option>
-	 <option value="Other">Public Financial Institutions</option>
-	 <option value="Other">Foreign Companies
+	 <option value="Public Financial Institutions">Public Financial Institutions</option>
+	 <option value="Foreign Companies">Foreign Companies
 </option>
-	 <option value="Other">Charitable Companies</option>
-	 <option value="Other">Government Companies</option>
-	 <option value="Other">Companies in terms of Access to Capital</option>
-	 <option value="Other">Associate Companies</option>
-	 <option value="Other">Holding and Subsidiary Companies</option>
-	  <option value="Other">Public Companies</option>
-	  <option value="Other">Private Companies</option>
-	  <option value="Other">Companies Limited by Guarantee</option>
-	  <option value="Other">Companies Limited by Shares</option>
+	 <option value="Charitable Companies">Charitable Companies</option>
+	 <option value="Government Companies">Government Companies</option>
+	 <option value="Companies in terms of Access to Capital">Companies in terms of Access to Capital</option>
+	 <option value="Associate Companies">Associate Companies</option>
+	 <option value="Holding and Subsidiary Companies">Holding and Subsidiary Companies</option>
+	  <option value="Public Companies">Public Companies</option>
+	  <option value="Private Companies">Private Companies</option>
+	  <option value="Companies Limited by Guarantee">Companies Limited by Guarantee</option>
+	  <option value="Companies Limited by Shares">Companies Limited by Shares</option>
 	 
   </select>
                         <label class="form-label" for="form3Examplev5">Type of Seller</label>

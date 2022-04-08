@@ -38,7 +38,7 @@
                       <div class="form-outline">
                       
                     
-<input type="text" class="form-control form-control-lg icontactnumber" id="icontactnumber" name="icontactnumber"maxLength="10"  value="<?php echo $sqldata[0]->icontactnumber ?>">
+<input type="text" class="form-control form-control-lg icontactnumber" id="icontactnumber" name="icontactnumber"maxLength="10"  value="<?php echo $sqldata[0]->icontactnumber ?>" readonly>
 
   <label> Contact Number*</label>
 
@@ -195,10 +195,21 @@
 					
                        							  <select class="custom-select form-control form-control-lg " id="itypeseller"  name="itypeseller" style="border-radius:20px;">
     <option value="<?php echo $sqldata[0]->itypeseller ?>"><?php echo $sqldata[0]->itypeseller ?></option>
-    <option value="Govt Regd Company">Govt Regd Company </option>
+     <option value="Govt Regd Company">Govt Regd Company </option>
     <option value="Ltd , Pvt Ltd , LLP, Corp">Ltd , Pvt Ltd , LLP, Corp</option>
     <option value="Partnership,Proprietorship , OPC">Partnership,Proprietorship , OPC</option>
-	 <option value="Other">Other</option>
+	 <option value="Public Financial Institutions">Public Financial Institutions</option>
+	 <option value="Foreign Companies">Foreign Companies
+</option>
+	 <option value="Charitable Companies">Charitable Companies</option>
+	 <option value="Government Companies">Government Companies</option>
+	 <option value="Companies in terms of Access to Capital">Companies in terms of Access to Capital</option>
+	 <option value="Associate Companies">Associate Companies</option>
+	 <option value="Holding and Subsidiary Companies">Holding and Subsidiary Companies</option>
+	  <option value="Public Companies">Public Companies</option>
+	  <option value="Private Companies">Private Companies</option>
+	  <option value="Companies Limited by Guarantee">Companies Limited by Guarantee</option>
+	  <option value="Companies Limited by Shares">Companies Limited by Shares</option>
   </select>
                         <label class="form-label" for="form3Examplev5">Type of Seller</label>
                       </div>
@@ -353,7 +364,7 @@
                     </label>
                   </div>
                   
-<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer()">Update</button>
+<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validateindiviual()">Update</button>
 						
 				
 						
@@ -451,6 +462,79 @@ var inputvalues = $(this).val();
 });    
 
 </script>
+    
+ <script>
+  
+function validateindiviual(){
+   
+
+	var iname = document.getElementById("iname").value;
+    
+
+    var sl_no = document.getElementById("sl_no").value;
+ 
+    var icontactnumber = document.getElementById("icontactnumber").value;
+    var icontactperson = document.getElementById("icontactperson").value;
+      
+          
+	var iadharnumber = document.getElementById("iadharnumber").value;
+     
+	var iemailid = document.getElementById("iemailid").value;
+    
+  
+	var iaddres = document.getElementById("iaddres").value;
+        
+
+	
+    
+	var istate = document.getElementById("istate").value;
+    
+    
+ 
+	var icountry = document.getElementById("icountry").value;
+    
+	
+     
+
+   
+	
+
+if(iname == '' || sl_no == '' || icontactnumber == '' || icontactperson == ''|| iadharnumber == '' || iemailid == '' || iaddres == '' || istate == '' || icountry == '' || icontactperson == '' ){
+		swal("Alert!",  "Seller Name, Company Name, aahdar card, aahdar Number, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
+		return false;
+	}
+	else{
+        $.ajax({
+            type:'submit',
+            data: {iname:iname,sl_no:sl_no,icontactnumber:icontactnumber,icontactperson:icontactperson,iadharnumber:iadharnumber,iemailid:iemailid,iaddres:iaddres,istate:istate,icountry:icountry},
+           success:function(data){
+                swal("Success", "Data Saved Successfully", "success");
+            },
+            error:function(xhr, thrownError, ajaxOptions){
+
+            },
+        });
+    }
+	
+	if (icontactnumber.value.length < 10 || icontactnumber.value.length > 10) {
+    swal("Alert!", "Mobile No. is not valid, Please Enter 10 Digit Mobile No.", "error");
+    return false;
+  }
+  else if (icontactnumber.value == "") {
+    swal("Alert!","Please enter your Mobile No.","error");
+    return false;
+  }
+	
+	if(ipass != iconpass){
+		swal("Alert!",  "Password and Confirm Password Should Match!", "error");
+		return false;
+	}
+	
+}
+  </script>
+ 
+    
+    
  
 
 

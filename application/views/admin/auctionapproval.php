@@ -18,7 +18,7 @@
  
         
       <div class="row ">
-        <table class="table table-striped">
+        <table class="table table-striped" id="myTable">
   <thead>
   
     <tr>
@@ -79,8 +79,19 @@
 					
 					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
 					
-					<td data-label="Online Auction Start And End Date"><?php echo $row->iauction_start ?><br> to <br>
-					<?php echo $row->iauction_end ?> </td>
+						<td data-label="Auction Start and End Time"><?php $aucs= $row->iauction_start;
+	   $temp = explode('.',$aucs);
+       $aucs = $temp[0];
+       echo  $aucs;	   
+	   
+
+	   ?>	   <br>to	   <br>
+	   <?php $auce = $row->iauction_end; 
+       $cool = explode('.',$auce);
+       $auce = $cool[0];
+       echo  $auce;	 
+	  ?>
+	  </td>
 					
 					
 					

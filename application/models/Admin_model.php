@@ -90,6 +90,7 @@ class Admin_model extends CI_Model
 	public function get_count_cat($table,$cat) {
 		$this->db->from($table);
 		$this->db->where('icategory=',$cat);
+		
 		$q = $this->db->get();
         return count($q->result_array());
     }
@@ -97,6 +98,8 @@ class Admin_model extends CI_Model
 	public function get_auction_today($date){
 		$this->db->from('auction');
 		$this->db->where('DATE(iauction_start)', $date);
+		
+
 		$q = $this->db->get();
 		return $q->result_array();
 	}
@@ -106,7 +109,8 @@ class Admin_model extends CI_Model
 					b.*');
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
-					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->where('DATE(a.iauction_start)', $date);
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
