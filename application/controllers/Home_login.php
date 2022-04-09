@@ -56,7 +56,26 @@ class Home_login extends CI_Controller {
 				  if($table == "buyerdetails"){
 					  $newdata = array('username'=>$user,'auth'=>'BUYER','logged_in' => TRUE);
 						$this->session->set_userdata($newdata);
-					  header('location: '.base_url().'buyer_buyerviewdetail');
+						
+							
+	$query = $this->Admin_model->getdatafromtable('buyerdetails', $check_db);
+	$ballup = $query[0]->ballup;
+	$data['sqldata1']= $query;
+	//print_r($data['sqldata1']);die;					
+						
+						
+				  if($ballup == true){
+					  
+					   header('location: '.base_url().'BuyerAuction_details');
+					  
+					  
+					  
+				  }else{
+					  
+					   header('location: '.base_url().'buyer_buyerviewdetail');
+					  
+				  }
+				
 					  die;
 				      }else if($table == "sellerdetails"){
 					  $newdata = array('username'=>$user,'auth'=>'SELLER','logged_in' => TRUE);
