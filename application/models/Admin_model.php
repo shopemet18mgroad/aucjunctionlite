@@ -29,6 +29,18 @@ class Admin_model extends CI_Model
 		$query = $this->db->get_where($table, $data);
 		return $query->result();
 	}
+	
+	
+	public function getdatafromtable2($table)
+	{
+		$query = $this->db->get_where($table);
+		return $query->result();
+	}
+	
+	
+	
+	
+	
 	public function update_custom($table,$data,$colname,$comp) { 
 			 $this->db->set($data); 
 			 $this->db->where($colname, $comp);

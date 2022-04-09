@@ -369,7 +369,7 @@
 						
 				
 						
-						<button type="reset" name="reset" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Cancel</button>
+						<button type="reset" name="reset" value="reset"class="btn btn-light btn-lg " data-mdb-ripple-color="dark">Cancel</button>
 						</div>
                   </form>
 				  

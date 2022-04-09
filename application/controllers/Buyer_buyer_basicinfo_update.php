@@ -43,9 +43,7 @@ class Buyer_buyer_basicinfo_update extends CI_Controller {
 		$addressproof  = $this->input->post('addressproof');
 	    $buysl_no  = $this->input->post('buysl_no');
 	
-		
-		
-		
+	
 			 $a = $_FILES['buyeradharcard']['name']; 
 			 if($_FILES['buyeradharcard']['name'][0]){
 				 $pic_array1 = self::upload_files('buyeradharcard');
@@ -89,13 +87,13 @@ class Buyer_buyer_basicinfo_update extends CI_Controller {
 			 'buyeradharcard'=> $pic_array1, 'buyeraddress' => $buyeraddress,
 			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
 			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,
-			 'addressproof'=>$pic_array2 );
+			 'addressproof'=>$pic_array2,'ballup'=>true);
 			 }else{
 				 $data2 = array('buyername' => $buyername,'buyercontactnumber' => $buyercontactnumber,
 			 'buyerasdharnumber' => $buyerasdharnumber,'buyeremail' => $buyeremail ,
 			 'buyeraddress' => $buyeraddress,
 			 'bcity' => $bcity, 'buyerstate' => $buyerstate, 'buyercountry' => $buyercountry, 
-			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson
+			 'buyerpincode' => $buyerpincode,'buyercontactperson'=>$buyercontactperson,'ballup'=>true
 			 );
 			 }
 			 
