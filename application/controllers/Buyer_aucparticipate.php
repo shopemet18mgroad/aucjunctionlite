@@ -45,12 +45,13 @@ class Buyer_aucparticipate extends CI_Controller {
 					if($res[0]->iauction_end < $time){
 						array_push($comauc,$res[0]);
 						$highestvalue = $this->Admin_model->gethighestvalue($quer->auction_id);
+						//print_r($highestvalue[0]);die;
 						if($highestvalue[0]['bidderusername'] == $sess['sessi']){
 							$winner = explode('@',$highestvalue[0]['bidderusername']);
-							$windata = "WON|".$quer->auction_id.'|'.$winner[0];
+							$windata = "WON|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidvalue'];
 							array_push($worl, $windata);
 						}else{
-							$windata =  "LOST|".$quer->auction_id.'|'.$winner[0];
+							$windata =  "LOST|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidvalue'];
 							array_push($worl,$windata);
 						}
 					}
