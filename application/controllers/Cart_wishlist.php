@@ -49,7 +49,8 @@ class Cart_wishlist extends CI_Controller {
         $aucstartprice = $query[0]->startaucprice;
         $aucendprice = $query[0]->endaucprice;
         $sessi = $this->session->userdata('username');
-		set_cookie($auctionid,$auctionid, 31536000); 
+		$newaucid = $auctionid."-".$sessi;
+		set_cookie($newaucid,$newaucid, 31536000); 
 		//====================Store Value to cart===========
 		$data = array('auction_id'=>$auctionid);
 		if($this->Admin_model->check('cart_payment', $data)){
@@ -72,41 +73,45 @@ class Cart_wishlist extends CI_Controller {
 	public function removefromcart(){
 		$sessi = $this->session->userdata('username');
 		$aucid = $this->uri->segment(3);
+		$newaucid = $aucid."-".$sessi;
 		$cookieaucid = str_ireplace('-','/',$aucid);
 		$data = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi);
 		$this->Admin_model->delete_data('cart_payment', $data);
-		delete_cookie($cookieaucid);
+		delete_cookie($newaucid);
 		echo "OK";
 	}
 	public function addtowishlist(){
 		$sessi = $this->session->userdata('username');
 		$aucid = $this->uri->segment(3);
+		$newaucid = $aucid."-".$sessi;
 		$cookieaucid = str_ireplace('-','/',$aucid);
 		$data = array('cart'=>false,'wishlist'=>true,'auction'=>false);
 		$comp = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi);
 		$this->Admin_model->update_custom('cart_payment',$data,$comp,$comp);
-		delete_cookie($cookieaucid);
+		delete_cookie($newaucid);
 		echo "OK";
 		//$this->Admin_model->delete_data('', $data);
 	}
 	public function movetocart(){
 		$sessi = $this->session->userdata('username');
 		$aucid = $this->uri->segment(3);
+		$newaucid = $aucid."-".$sessi;
 		$cookieaucid = str_ireplace('-','/',$aucid);
 		$data = array('cart'=>true,'wishlist'=>false,'auction'=>false);
 		$comp = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi);
 		$this->Admin_model->update_custom('cart_payment',$data,$comp,$comp);
-		set_cookie($cookieaucid,$cookieaucid, 31536000);
+		set_cookie($newaucid,$newaucid, 31536000);
 		//delete_cookie($cookieaucid);
 		echo "OK";
 	}
 	public function removefromwishlist(){
 		$sessi = $this->session->userdata('username');
 		$aucid = $this->uri->segment(3);
+		$newaucid = $aucid."-".$sessi;
 		$cookieaucid = str_ireplace('-','/',$aucid);
 		$data = array('auction_id'=>$cookieaucid, 'user_email'=>$sessi, 'wishlist'=>true);
 		$this->Admin_model->delete_data('cart_payment', $data);
-		delete_cookie($cookieaucid);
+		delete_cookie($newaucid);
 		echo "OK";
 	}
 	
