@@ -151,7 +151,17 @@ margin-top:-600px;
 		
 
 }  
-   
+ 		.megha {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.megha::-webkit-scrollbar {
+    display: none;
+	
+	keep-scrolling::-webkit-scrollbar {
+    display: none;
+}  
    
    
       

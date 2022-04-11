@@ -90,7 +90,7 @@
           
       </div>
       
-        <div class="row icon-boxes">
+        <div class="row icon-boxes megha">
      
       <?php $ctr=1; foreach($sqldata1 as $row){?>
 	  
@@ -106,14 +106,24 @@
     
         <div class="col-md-12 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box w-100">
-            <div class="icon d-flex justify-content-center"><?php $img = unserialize($row->imageupload)?>
+          <div class="megha"><?php $img = unserialize($row->imageupload)?>
 	   
-	   
-	   
+		  
+
+		  
+	   <?php if($img){ ?>
+	   <?php
+foreach($img as $sql){
+	?>
 	   
 
-<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="100px" height="100px"></div>
+<img class="model my-1" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+alt="Chania" width="100px" height="100px"><?php } ?>
+
+<?php } else{ echo "No Images"; ?>
+<?php }?>
+
+ </div>
             <h4 class="title d-flex justify-content-center"><a href=""></a></h4>
 			
 			<p class="w-auto small" style="font-size:12px;word-break:break-all;"><b>Product Name:&nbsp;&nbsp;</b><?php echo $row->iproductname ?></p>

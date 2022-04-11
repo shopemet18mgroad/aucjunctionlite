@@ -10,7 +10,7 @@
           
         </div>
 
-       
+       <?php if(count($mycomauc)){ $i=0; foreach($mycomauc as $mycom){$worldata = explode("|",$worl[$i]);?>
 
         <div class="card rounded-3 mb-4">
           <div class="card-body p-4">
@@ -18,20 +18,21 @@
              
             
               <div class="col-md-3 col-lg-3 col-xl-3">
-                <p class="lead fw-normal mb-2" style="font-size:18px;">Auction ID:<br>22/feb/2020/98/78</p>
-                <p><span class="text-muted">Date:23-23-2909</span></p>
+                <p class="lead fw-normal mb-2" style="font-size:18px;">Auction ID: <?php echo $mycom->iauctionid; ?></p>
+                <p><span class="text-muted">Date: <?php echo str_ireplace(".000000","",$mycom->iauction_end);?></span></p>
               </div>
               
               <div class="col-md-5 col-lg-5 col-xl-5 offset-lg-1">
-			  <h5 class="mb-0"style="font-size:18px;">Auction Name :Scopio</h5><br>
-                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
+			  <h5 class="mb-0"style="font-size:18px;">Winning Bid Value : <?php  echo $worldata[3]; ?></h5>
+        <h5 class="mb-0"style="font-size:18px;">Auction Winner : <?php  echo $worldata[2]; ?></h5>
+                Result:<span class="mb-0" style="color:green;font-size:18px; "><?php echo $worldata[0];?></span>
               </div>
               <div class="col-md-2 col-lg-2 col-xl-2 text-end">
                   <div class="row">
                     <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#viewdetail">View Detail</button>
+                     <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#viewdetail-<?php echo $i; ?>">View Detail</button>
                        <!-- Button trigger modal -->
-                       <button type="button" class="btn btn-danger btn-sm my-2" data-toggle="modal" data-target="#bidsummary">Bid Summary</button>
+                       <button type="button" class="btn btn-danger btn-sm my-2" data-toggle="modal" data-target="#bidsummary-<?php echo $i; ?>">Bid Summary</button>
                        <!-- Button trigger modal -->
 			
         
@@ -43,7 +44,7 @@
             
           </div>
         </div>
-   
+   <?php $i++;}}?>
         
 
       </div>
@@ -57,10 +58,10 @@
   
   
   
-
+<?php if(count($mycomauc)){$i=0;foreach($mycomauc as $mycom){?>
 
 <!-- Modal -->
-<div class="modal fade" id="viewdetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="viewdetail-<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -83,340 +84,78 @@
 
       
       <div class="container mb-5">
-        <div class="row border border-dark">
-          
-			
-	
-	
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" > <?php echo $sqldata1[0]->role ?>    DETAILS  
-	 </div></center>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-   <table class="table table-striped" style="font-size:12px;">
-<tbody>
-    <tr>   
-   
-   	  <th scope="row">FULL NAME</th>
-   <td><?php echo $sqldata1[0]->iname ?></td>
-	  </tr>
-	 <br>
-    <tr>
-   
-	  
-	  <th scope="row">CONTACT NUMBER</th>
-	  <td><?php echo $sqldata1[0]->icontactnumber ?></td>
-      
-    </tr><br>
-    <tr>
-    	<?php $role = $sqldata1[0]->role ?>
-	
-	<?php if($role == "INDIVIDUAL" ){ ?>
-  
-	  
-	  <th scope="row">AADHAAR NUMBER</th>
-	  <td>
-	  
-	  
-  <?php $iadharnumber = $sqldata1[0]->iadharnumber ?>
-		   
-		<?php if ($iadharnumber == Null) { ?>
-			 
-		   
-		  
-<?php	 echo "NA" ; ?>
-
- 
-		<?php } else { ?>
-			
-			<?php echo "$iadharnumber" ; ?>
-		
-	
-			
-			
-	<?php	} ?>
-
-	  
-
-	  
-	  
-	  </td>
-      
-    </tr>
-		<?php	} ?>
-	
-	
-	<br>
-	
-	<tr>
-   
-	  <th scope="row">EMAIL ID</th>
-	    <td><?php echo $sqldata1[0]->iemailid ?></td>
-      
-    </tr>
-	<tr>
-     
-   
-	  <th scope="row">ADDRESS</th>
-	    <td><?php echo $sqldata1[0]->iaddres ?></td>
-      
-    </tr>
-	
-	<tr>
-     
-   
-	  <th scope="row">STATE/UNION TERY </th>
-	   <td><?php echo $sqldata1[0]->istate ?></td>
-      
-    </tr>
-	<tr>
-    
-	  <th scope="row">COUNTRY</th>
-	   <td><?php echo $sqldata1[0]->icountry ?></td>
-      
-    </tr>
-	<tr>
-     
-   
-	  <th scope="row">PINCODE</th>
-	   <td><?php echo $sqldata1[0]->ipincode ?></td>
-      
-    </tr>
-	
-	<tr>
-     
-     
-	  <th scope="row">CONTACT PERSON*</th>
-	   <td><?php echo $sqldata1[0]->icontactperson ?></td>
-      
-    </tr>
-	
-	
-	<?php $role = $sqldata1[0]->role ?>
-	
-	<?php if($role == "COMPANY" ){ ?>
-		
-	
-	
-	
-	
-	<tr>   
-
-   
-   
-   	  <th scope="row">GST NUMBER <div style="font-size:10px;color:#FF4500;">(applicable ony for company)</div></th>
-
-<td>
-
-  <?php $gst = $sqldata1[0]->igstnumber ?>
-		   
-		<?php if ($gst == Null) { ?>
-			 
-		   
-		  
-<?php	 echo "NA" ; ?>
-
- 
-		<?php } else { ?>
-			
-			<?php echo "$gst" ; ?>
-		
-	
-			
-			
-	
-
-
-
-	</td>
-  
-	  </tr>
-	  <?php }?>
-	  
-	 
-	  <tr>   
-   <th scope="row">COMPANY TYPE  ( Applicable ony for company)<div style="font-size:10px;color:#FF4500;">( Applicable ony for company)</div> </th>
-   <td>
-   
-    <?php $gst1 = $sqldata1[0]->itypeseller ?>
-		   
-		<?php if ($gst1 == Null) { ?>
-			 
-		   
-		  
-<?php	 echo "NA" ; ?>
-
- 
-		<?php } else { ?>
-			
-			<?php echo "$gst1" ; ?>
-   
-   <?php	} ?>
-
-   
-   </td>
-   
-   
-   
-	  </tr>
-	
-	
-	
-			  <tr>   
-   <th scope="row">COMPANY NAME<div style="font-size:10px;color:#FF4500;">( Applicable ony for company)</div> </th>
-   <td>
-   
-    <?php $gst2 = $sqldata1[0]->icompanyname ?>
-		   
-		<?php if ($gst2 == Null) { ?>
-			 
-		   
-		  
-<?php	 echo "NA" ; ?>
-
- 
-		<?php } else { ?>
-			
-			<?php echo "$gst2" ; ?>
-   
-   <?php	} ?>
-
-   
-   </td>
-   
-   
-   
-	  </tr>
-	
-	
-	<?php	} ?>
-	
-	
-	
-	
-	
-	<?php $role = $sqldata1[0]->role ?>
-	
-	<?php if($role == "INDIVIDUAL" ){ ?>
-	
-	
-	
-	
-	
-	<tr>
-     
-      <th scope="row">ADDRESS PROOF<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
-	   <td>
-	 
-	
-	   
-	   <?php $img = unserialize($sqldata1[0]->iaddresprof)?>
-		   
-		<?php if ($img == Null) {
-			 
-		   
-		   echo "NA"
-
- ?>  
- 
-		<?php } else { ?>
-			
-			
-			<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px"  style="border-radius:50%"
- data-toggle="modal" data-target="#exampleModal">
-			
-			
-			
-	<?php	} ?>
- 
- </td>
-    
-    </tr>
-	<?php	} ?>
-	
-	
-	<?php $role = $sqldata1[0]->role ?>
-	
-	<?php if($role == "INDIVIDUAL" ){ ?>
-	
-	<tr>
-     
-      <th scope="row">AADHAAR CARD<div style="font-size:10px;color:#FF4500;">Click on image to view full image</div></th>
-
-
-<td>
-
- <?php $img = unserialize($sqldata1[0]->iadharcardfile)?>
-		   
-		<?php if ($img == Null) {
-			 
-		   
-		   echo "NA"
-
- ?>  
- 
-		<?php } else { ?>
-			
-			
-			<img class="model" src="<?php echo base_url()."web_files/uploads/".$img[0];?>" 
- alt="Chania" width="50px" height="50px" style="border-radius:50%"  
- data-toggle="modal" data-target="#exampleModalCenter">
-			
-			
-			
-	<?php	} ?>
-
-
-	</td>
-      
-   </tr>
-	
-	<?php	} ?>
-	
-  </tbody>
-</table>
-        </div>
-          
+        <div class="">
+        <table class="table table-striped" style="">
+          <tbody>
+            <tr>
+            <th scope="row"> Auction Images</th>
+	          <td  data-toggle="modal" data-target="#exampleModal"><?php $img = unserialize($mycom->imageupload)?>
+	              <?php foreach($img as $sql) { ?>
+        <img class="model" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+        alt="Chania" width="50px" height="50px">
+            <?php } ?> 
+            </td>  
+          </tr>
+            <tr>   
+              <th scope="row">Category </th>
+              <td><?php echo $mycom->icategory;?></td>
+            </tr>
+            <tr>
+              <th scope="row">Sub-category </th>
+              <td><?php  echo $mycom->isubcategory;?></td>
+            </tr>
+            <tr>
+              <th scope="row">product Description  </th>
+              <td style="word-break:break-all;"><?php  echo $mycom->iproductdes;?></td>
+            </tr>
+            <tr>
+                <th scope="row">Auction Id </th>
+                <td><?php  echo $mycom->iauctionid;?></td>  
+              </tr>	
+            <tr>
+              <th scope="row"> Auction Start Time</th>
+            <td>
+              <?php echo $mycom->iauction_start;?>
+            </td>
+          </tr>
+          <tr>
+              <th scope="row"> Auction End Time</th>
+            <td>
+               <?php echo $mycom->iauction_end;?>
+            </td>
+          </tr>
+	        <tr>
+          <td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:20px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
+          </tr>
+          <tr>
+            <th scope="row">Inspection Date </th>
+          <td><?php echo $mycom->inspectiondate;?>
+          </td>
+          </tr>
+              <tr>
+                <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
+              <td><?php echo $mycom->imrp;?></td>
+              </tr>
+            <tr>
+              <th scope="row"> Start  Auction Price</th>
+              <td><?php echo $mycom->startaucprice;?></td>  
+            </tr>
+            <tr>
+              <th scope="row">End Auction Price  </th>
+            <td><?php echo $mycom->endaucprice;?></td> 
+            </tr>
+            <tr>
+              <th scope="row">Entry Fee </th>
+            <td><?php echo $mycom->entryfee;?></td>
+            </tr>
+           
+	      <tbody>
+	    </table>
+       </div>          
       </div>
-        
-  
-
-     
     </div>
   </section>
-
-  </main><!-- End #main -->  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-                
-                
-                
+  </main><!-- End #main -->                       
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -425,10 +164,11 @@
     </div>
   </div>
 </div>
-
+<?php $i++;}}?>
 
 <!-- Modal -->
-<div class="modal fade" id="bidsummary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<?php if(count($mybid)){$i=0;foreach($mybid as $mybi){?>
+<div class="modal fade" id="bidsummary-<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -438,9 +178,20 @@
         </button>
       </div>
       <div class="modal-body">
-      Auction ID:<br>22/feb/2020/98/78</p>
-                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
-                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
+        <table class="table table-striped" style="">
+          <tbody>
+              <tr>   
+              <th scope="row">My Bid </th>
+               <th scope="row">Date & Time</th>
+              </tr>
+              <?php if(count($mybi)){ foreach ($mybi as $myb){?>
+              <tr>   
+              <td><?php echo $myb->bidvalue;?></td>
+               <td><?php  echo str_ireplace(".000000","",$myb->Date_time);?></td>
+              </tr>
+               <?php }} ?>
+            </tbody>
+	      </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -449,30 +200,10 @@
     </div>
   </div>
 </div>
-
+<?php $i++;}}?>
 
 <!-- Modal -->
-<div class="modal fade" id="bidwinner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Bid Winner</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-     Auction ID:<br>22/feb/2020/98/78</p>
-                <p><span class="text-muted">Date:23-23-2909<br>Auction Name :Scopio</h5><br>
-                Result:<span class="mb-0" style="color:green;font-size:18px; ">Won</span>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 

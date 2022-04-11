@@ -265,10 +265,11 @@ class Send_otp extends CI_Controller {
                             $table = "sellerdetails";
                             $datselle = array('iemailid'=>$email);
                             $datsellp = array('icontactnumber'=>$phone);
+                            
                             if($this->Admin_model->check($table, $datselle)|| $this->Admin_model->check($table, $datsellp)){
                                  echo "EXT";
                             }else{
-                                  $datasl = array('icontactnumber'=>$phone,'iemailid'=>$email,'ipass'=>base64_encode($pass),'iconpass'=>base64_encode($pass),'ioption'=>true,'sverifiedemail'=>true);
+                                  $datasl = array('icontactnumber'=>$phone,'iemailid'=>$email,'ipass'=>base64_encode($pass),'iconpass'=>base64_encode($pass),'ioption'=>true,'sverifiedemail'=>true,'role'=>INDIVIDUAL);
                                   $this->Admin_model->insert($table, $datasl); 
                                   echo "OK";
                             }

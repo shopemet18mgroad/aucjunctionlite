@@ -79,7 +79,7 @@ class Admin_startauction extends CI_Controller {
 			'iauction_end' => $iauction_end );
 		
 		  
-	 $status = $this->Admin_model->insert('auction',$data);
+	
 			
 	  
 	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'icompanyname'=>$icompanyname);
@@ -90,7 +90,7 @@ class Admin_startauction extends CI_Controller {
 	if($status){
 	 $this->session->set_flashdata('txdata',$transfer);
 	
-	 
+	  $status = $this->Admin_model->insert('auction',$data);
 	 
 	 header('location: '.base_url().'admin_addlot/lotmgt');
 }else if(!$status){

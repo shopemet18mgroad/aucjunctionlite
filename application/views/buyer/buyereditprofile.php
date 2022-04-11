@@ -12,7 +12,7 @@
                 <div class="p-5">
                   <h3 class="fw-normal mb-5 text-primary">General Infomation</h3>
 
-   <form action="<?php echo base_url();?>Buyer_buyer_basicinfo_update" method="post" enctype="multipart/form-data">   
+   <form action="<?php echo base_url();?>Buyer_buyer_basicinfo_update" method="post" enctype="multipart/form-data" >   
                   <div class="row">
                  
                     <div class="col-md-12 mb-4 pb-2">
@@ -258,7 +258,7 @@
                       I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
                     </label>
                   </div>
-<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer() ">Update</button>
+<button type="submit" name="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark" onclick="return validatebuyer()" onclick="return validatebuyer()">Update</button>
 						
 				
 						
@@ -282,30 +282,35 @@
 function validatebuyer(){
 
 	var buyername = document.getElementById("buyername").value;
-	var buyercontactnumber = document.getElementById("buyercontactnumber").value;
-	var buyerasdharnumber = document.getElementById("buyerasdharnumber").value;
-	var buyeremail = document.getElementById("buyeremail").value;
-	var buyerpass = document.getElementById("buyerpass").value;
-	var bconpassword = document.getElementById("bconpassword").value;
-	var buyeradharcard = document.getElementById("buyeradharcard").value;
-	var buyeraddress = document.getElementById("buyeraddress").value;
-	var buyercity = document.getElementById("buyercity").value;
-	var buyerstate = document.getElementById("buyerstate").value;
-	var buyercountry = document.getElementById("buyercountry").value;
-	var buyerpincode = document.getElementById("buyerpincode").value;
-	var buyercontactperson = document.getElementById("buyercontactperson").value;
-	var addressproof = document.getElementById("addressproof").value;
+   
+	var buysl_no = document.getElementById("buysl_no").value;
 
+     var buyercontactnumber = document.getElementById("buyercontactnumber").value;
+          
+      var buyercontactperson = document.getElementById("buyercontactperson").value;
+     
+      var buyerasdharnumber = document.getElementById("buyerasdharnumber").value;
+
+      
+
+      var buyeremail = document.getElementById("buyeremail").value;
+     var buyeraddress = document.getElementById("buyeraddress").value;
+	 var bcity = document.getElementById("bcity").value;
+	 var buyerstate = document.getElementById("buyerstate").value;
+      var buyerpincode = document.getElementById("buyerpincode").value;
+	 var buyercountry = document.getElementById("buyercountry").value;
+            
 	
 
-if(buyername == '' || buyercontactnumber == '' ||  buyerasdharnumber == '' || buyeremail == '' ||  buyerpass == '' ||  bconpassword == '' || buyeradharcard == '' || buyeraddress == '' || buyercity == '' || buyerstate == '' || buyercountry == '' || buyerpincode == '' || buyercontactperson == '' || addressproof == ''){
-		swal("Alert!",  "Buyer Name, Company Name, Company Type, Contact Person, Contact Number, E-Mail, User Name, Password , Repeat Password, Pan, GST, Address, Street, City, State, Pin  cannot leave any field blank!", "error");
-		return false;
-	}
+
+if(buyername == ''  || buysl_no == '' || buyercontactnumber == ''|| buyercontactperson == '' || buyerasdharnumber  == ''    || buyeremail == '' || buyeraddress == '' || bcity == '' || buyerstate == '' ||  buyerpincode == '' || buyercountry == '' ){
+		swal("Alert!",  "Buyer Name, Company Name, Company Type, Contact Person, Contact Number, E-Mail, User Name,Address, Street, City, State, Pin  cannot leave any field blank!", "error");
+	return false;
+}
 	else{
         $.ajax({
             type:'submit',
-            data: {buyername:buyername,buyercontactnumber:buyercontactnumber, buyerasdharnumber: buyerasdharnumber,buyeremail:buyeremail,buyerpass:buyerpass,bconpassword:bconpassword,buyeradharcard :buyeradharcard ,buyeraddress:buyeraddress,buyercity:buyercity, buyerstate: buyerstate,buyercountry:buyercountry,buyerpincode:buyerpincode,buyercontactperson :buyercontactperson ,addressproof:addressproof,},
+            data: {buyername:buyername,buysl_no:buysl_no,buyercontactnumber:buyercontactnumber,buyercontactperson:buyercontactperson , buyerasdharnumber: buyerasdharnumber,buyeremail:buyeremail,buyeraddress:buyeraddress,bcity:bcity, buyerstate: buyerstate,buyerpincode:buyerpincode,buyercountry:buyercountry},
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },

@@ -29,6 +29,18 @@ class Admin_model extends CI_Model
 		$query = $this->db->get_where($table, $data);
 		return $query->result();
 	}
+	
+	
+	public function getdatafromtable2($table)
+	{
+		$query = $this->db->get_where($table);
+		return $query->result();
+	}
+	
+	
+	
+	
+	
 	public function update_custom($table,$data,$colname,$comp) { 
 			 $this->db->set($data); 
 			 $this->db->where($colname, $comp);
@@ -90,6 +102,7 @@ class Admin_model extends CI_Model
 	public function get_count_cat($table,$cat) {
 		$this->db->from($table);
 		$this->db->where('icategory=',$cat);
+		
 		$q = $this->db->get();
         return count($q->result_array());
     }
@@ -97,6 +110,8 @@ class Admin_model extends CI_Model
 	public function get_auction_today($date){
 		$this->db->from('auction');
 		$this->db->where('DATE(iauction_start)', $date);
+		
+
 		$q = $this->db->get();
 		return $q->result_array();
 	}
@@ -106,7 +121,8 @@ class Admin_model extends CI_Model
 					b.*');
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
-					$this->db->where('DATE(a.iauction_start)', $date);				 			
+					$this->db->where('DATE(a.iauction_start)', $date);
+					$this->db->order_by('a.iauction_start','DESC');
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   
 					$query = $this->db->get("auction a");
@@ -799,7 +815,16 @@ public function get_auctionlist_todaysearch($limit,$start,$date,$iproductname){
 				return false;
 			}
 		}
-
+		public function gethighestvalue($auc_id){
+			$this->db->select('*');
+			$this->db->select_max('bidvalue');
+			$this->db->from('biddingdata');
+			$this->db->where('sauctionid', $auc_id);
+			$q = $this->db->get();
+			return $q->result_array();
+		}
 
 	  }
+
+
 
