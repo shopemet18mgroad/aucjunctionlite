@@ -92,7 +92,7 @@ class Seller_addlot_info extends CI_Controller {
 		
 		$data = array('iauctionid'=>$iauctionid,'irole'=>$irole,'iemailid'=>$iemailid,'icontactperson' =>  $icontactperson,'icategory'=>$icategory,'isubcategory' =>$isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,
-		'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname,'iproductname'=>$iproductname); 
+		'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname,'iproductname'=>$iproductname,'iauction_start'=>$iauction_start); 
 		
 	
 		
