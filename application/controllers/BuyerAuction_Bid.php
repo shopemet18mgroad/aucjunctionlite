@@ -51,6 +51,9 @@ class BuyerAuction_Bid extends CI_Controller {
 				$datadchk = array('iauctionid'=>$aucn,'iauction_end >'=>$date);
 				if($this->Admin_model->check($table, $datadchk)){
 					$table = "addlot";
+					$timediff = array('iauctionid'=>$aucn);
+					$querydiff = $this->Admin_model->getdatafromtable($table, $timediff);
+					$diff = strtotime($querydiff[0]->iauction_end) - strtotime($date);
 					$comp = array('iauctionid'=>$aucn);
 					$datafupbid = array('cbid'=>$bid);
 					$table2 = "cart_payment";
@@ -64,8 +67,19 @@ class BuyerAuction_Bid extends CI_Controller {
 						$table3 = 'biddingdata';
 						 $databy = array('bidderusername'=>$sessi,'sauctionid'=>$aucn,'slotno'=>$aucn,'bidvalue'=>$bid,'Date_time'=>$date,'bidamount'=>$bid);
                         $this->Admin_model->insert($table3, $databy); 
-						//============================================
+						//================Change Time to 5 min in auction and lots-====
+							if($diff <= 180){
+								$comptc = array('iauctionid'=>$aucn);
+								$tableauc = "auction";
+								$tablelot = "addlot";
+								$endtime = date("Y-m-d H:i:s", strtotime("+05 minutes", strtotime($querydiff[0]->iauction_end)));  
+								$datafupbidtc = array('iauction_end'=>$endtime);
+								$this->Admin_model->update_custom($tableauc, $datafupbidtc, $comptc, $comptc);
+								$this->Admin_model->update_custom($tablelot, $datafupbidtc, $comptc, $comptc);
+							}
+						//=============================================================
 						echo "Bid Placed Succesfully";
+
 					}
 				}else{
 					echo "Auction Closed";
