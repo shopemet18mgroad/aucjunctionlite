@@ -59,7 +59,7 @@ class Seller_startauction_update extends CI_Controller {
 			'iauction_start' => $iauction_start,'iauction_end' => $iauction_end); 
 		
 		
-		$data2 = array('iauctionid' => $iauctionid);
+		$data2 = array('iauctionid' => $iauctionid,'iauction_start' => $iauction_start,'iauction_end' => $iauction_end);
 		
 		          $updatech = array('sl_ano' => $sl_ano);
 	 	if($data2){

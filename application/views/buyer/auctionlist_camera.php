@@ -129,11 +129,11 @@ alt="Chania" width="100px" height="100px"><?php } ?>
             <p class="description d-flex justify-content-start"style="font-size:12px"><b>MRP Price: </b>&nbsp;<i class="fa fa-inr mt-2"></i><?php echo $row->imrp ?></p>
       <p class="description d-flex justify-content-start"style="font-size:12px"><b>Start Price:</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
             <p class="description justify-content-start"style="font-size:12px"><b>Auction Id:</b>&nbsp;&nbsp;<?php echo $row->iauctionid ?></p>
-	 <p class=" w-auto small"style="font-size:12px;word-break:break-all;"><b>Product Description:&nbsp;&nbsp;</b><br><?php echo $row->iproductdes ?></p>
+	 
     
                       <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
-            <?php if(get_cookie($row->iauctionid) == NULL){?>
+         <?php $us = explode("@",$sessi); $newcookie = str_ireplace("/","-",$row->iauctionid)."-".$us[0]; if(get_cookie($newcookie) == NULL){?>
             <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
              <?php }else{?>
                <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>

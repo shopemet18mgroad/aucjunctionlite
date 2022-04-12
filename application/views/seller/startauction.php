@@ -53,40 +53,22 @@
                       </div>
                     </div>
 					
-						<div class="form-group row m-3">
-                      <label for="" class="col-sm-3 col-form-label">Type</label>
-                      <div class="col-sm-9">
-                        <select class="form-control form-control-lg" id="irole" name="irole" onChange="meghasuma()">
-				<option value="Select" selected>Select</option>
-				<option value="company">Company</option>
-				<option value="individual">Individual</option>
 				
-				
-				
-				
-				</select>
-                      </div>
-                    </div>
 					
                     <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Seller Name</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" placeholder="Seller Name" readonly>
+                        <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata1[0]->icontactperson?>" placeholder="Seller Name" readonly>
                       </div>
                     </div>
 								
 			
                  
-                    <div class="form-group row m-3 icompanyname">
-                      <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"   onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
-                      </div>
-                    </div>
+                   
 					<div class="form-group row m-3 iemailid">
                       <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
+                        <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php echo $sqldata1[0]->iemailid?>" placeholder="Seller User ID"   >
                       </div>
                     </div>
 					

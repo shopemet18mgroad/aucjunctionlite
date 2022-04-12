@@ -154,7 +154,7 @@ alt="Chania" width="100px" height="100px" ><?php } ?>
       <p class="description d-flex "style="font-size:12px;"><b>Start Price:</b>&nbsp;&nbsp;<?php echo $row->startaucprice ?></p>
 	  
             <p class="description d-flex "style="font-size:12px;"><b>Auction Id:</b><?php echo $row->iauctionid ?></p>
-			  <p class="description d-flex" style="font-size:12px;word-break:break-all;"><b>Product Description:&nbsp;&nbsp;</b><?php echo $row->isubcategory ?></p>
+			  
     
             <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>

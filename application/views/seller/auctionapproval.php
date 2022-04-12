@@ -35,10 +35,7 @@
 						 Seller Name
                           </th>
 						
-                       
-                          <th>
-                    Seller Company Name
-                          </th>
+                      
 						  <th>
 						  Online Auction Start And End Date
 						  </th>
@@ -70,17 +67,17 @@
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
-					<td><?php echo $count ?> </td>
+					<td data-label="                        Sl.No"><?php echo $count ?> </td>
 
-					 <td> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td><?php echo $row->icategory ?> </td>
-					<td><?php echo $row->sl_ano ?> </td>
-					<td><?php echo $row->icontactperson ?> </td>
+					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					<td data-label="Category"><?php echo $row->icategory ?> </td>
+					<td data-label="Seller Name"><?php echo $row->sl_ano ?> </td>
+					<td data-label="Action"><?php echo $row->icontactperson ?> </td>
 					
 					
-					<td><?php echo $row->icompanyname ?> </td>
+				
 					
-					<td><?php echo $row->iauction_start ?><br> to <br>
+					<td data-label="Seller Name"><?php echo $row->iauction_start ?><br> to <br>
 					<?php echo $row->iauction_end ?> </td>
 					
 					
@@ -115,20 +112,7 @@
 
       </div>
 
-      <div class="row mb-5">
-        <div class="col-12 p-5">
-            <nav class="d-flex align-items-center justify-content-center">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
-          </nav>
-        </div>
-          
-      </div>
+    
     </div>
   </section>
 
