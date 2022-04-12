@@ -82,18 +82,21 @@ class Admin_startauction extends CI_Controller {
 	
 			
 	  
-	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'icompanyname'=>$icompanyname);
+	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'icompanyname'=>$icompanyname,'iauction_start'=>$iauction_start,'iauction_end'=>$iauction_end);
+
+
+//print_r($transfer); die;
 	
-	//print_r($transfer);die;
-				
+
+		  $status = $this->Admin_model->insert('auction',$data);			
 	
 	if($status){
 	 $this->session->set_flashdata('txdata',$transfer);
-	
-	  $status = $this->Admin_model->insert('auction',$data);
-	 
 	 header('location: '.base_url().'admin_addlot/lotmgt');
 }else if(!$status){
+	
+	
+	
 	header('location: ./admin_startauction/');
 	}
 	 }
