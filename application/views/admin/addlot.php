@@ -20,9 +20,28 @@
                   <p class="card-description">
                     
                   </p>
-                  
 				  
-				  <input type="hidden" class="form-control form-control-lg" id="iauctionid" name="iauctionid" value="<?php 
+				  
+<input type="text" class="form-control form-control-lg" id="iauction_start" name="iauction_start" value="<?php 
+				  if(isset($txdata['iauction_start'])){
+					   echo $txdata['iauction_start'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>">
+				  
+				  
+<input type="text" class="form-control form-control-lg" id="iauction_end" name="iauction_end" value="<?php 
+				  if(isset($txdata['iauction_end'])){
+					   echo $txdata['iauction_end'];
+				  }else{
+					  echo "NA";
+				  }
+				  
+				 ?>">
+				  
+ <input type="hidden" class="form-control form-control-lg" id="iauctionid" name="iauctionid" value="<?php 
 				  if(isset($txdata['iauctionid'])){
 					   echo $txdata['iauctionid'];
 				  }else{
@@ -31,7 +50,7 @@
 				  
 				 ?>">
 					 
-					  <input type="hidden" class="form-control form-control-lg" id="irole" name="irole" value="<?php 
+<input type="hidden" class="form-control form-control-lg" id="irole" name="irole" value="<?php 
 				  if(isset($txdata['irole'])){
 					   echo $txdata['irole'];
 				  }else{
@@ -40,7 +59,7 @@
 				  
 				 ?>"> 
 					 
-				  <input type="hidden" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php 
+<input type="hidden" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php 
 				  if(isset($txdata['iemailid'])){
 					   echo $txdata['iemailid'];
 				  }else{
@@ -150,14 +169,10 @@
                         <input type="text" class="form-control form-control-lg" id="currentlocation" name="currentlocation" placeholder="current location ">
                       </div>
                     </div>
-                   
-					
-					
-                   
-					 <div class="form-group row m-4">
+                    <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label"> Expected price</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="imrp" name="imrp" placeholder=" Expectprice ">
+                        <input type="text" class="form-control form-control-lg" id="imrp" name="imrp" placeholder="Expect price ">
                       </div>
                     </div>
                     
@@ -198,7 +213,7 @@
 				
 					
 				
-                 <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
+                 <center><button type="submit" onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
                     <button class="btn btn-light">Cancel</button></center>
                   </form>
      
