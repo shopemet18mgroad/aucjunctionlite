@@ -28,8 +28,23 @@
               <div class="col-md-5 col-lg-5 col-xl-5">
                 <p class="lead fw-normal mb-2 text-primary"><?php echo $allauc[0]->icategory;?></p>
                 <p><span class="text-primary">Auction id: </span><?php echo $allauc[0]->iauctionid;?><span></p>
-                <p><span class="text-primary">Auction Start: </span><?php echo $allauc[0]->iauction_start;?><span></p>
-                <p><span class="text-primary">Auction End: </span><?php echo $allauc[0]->iauction_end;?><span></p>
+                <p><span class="text-primary">Auction Start: </span><?php $aucs=$allauc[0]->iauction_start;
+				 $temp = explode('.',$aucs);
+       $aucs = $temp[0];
+       echo  $aucs;	
+	   ?>	
+				
+				
+				
+				
+			
+				
+				
+                <p><span class="text-primary">Auction End: </span><?php $auce=$allauc[0]->iauction_end;
+				 $cool = explode('.',$auce);
+       $auce = $cool[0];
+       echo  $auce;	
+	   ?>	
               </div>
               
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
