@@ -23,7 +23,7 @@
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Category</label>
                       <div class="col-sm-9" >
-                        <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()"readonly>
+                        <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()" disabled>
 				<option value="<?php echo $sqldata[0]->icategory ?>" selected><?php echo $sqldata[0]->icategory ?></option>
 				<option value="Car">Car</option>
 				<option value="Bike">Bike</option>
