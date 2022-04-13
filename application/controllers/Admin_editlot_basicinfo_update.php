@@ -31,9 +31,8 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		$inspectiondate	 = $this->input->post('inspectiondate');
 		$imrp = $this->input->post('imrp');
 		$iproductname = $this->input->post('iproductname');
-	
-		$startaucprice  = $this->input->post('startaucprice');
-		$sl_ano  = $this->input->post('sl_ano');
+	    $startaucprice  = $this->input->post('startaucprice');
+		$iauctionid  = $this->input->post('iauctionid');
         $imageupload  = $this->input->post('imageupload');
 		$iauctionid  = $this->input->post('iauctionid');
         
@@ -77,7 +76,7 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 
 			  
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('sl_ano' => $sl_ano );
+			  $updatech = array('iauctionid' => $iauctionid );
 
 			 
 			  $status = $this->Admin_model->update_custom('addlot',$data2,$updatech,$updatech);
