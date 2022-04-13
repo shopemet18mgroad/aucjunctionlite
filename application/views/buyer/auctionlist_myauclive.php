@@ -337,6 +337,7 @@ if($diff <= 0){
 	//var i = 1;
 	if(totallot){
     var ctr = 0
+    var tms = 1;
 				setInterval(function(){
           ctr++;
           //alert(ctr);
@@ -361,8 +362,12 @@ if($diff <= 0){
 		  } // you could choose not to continue on failure...
        if(ctr=="30"){
         ctr = 0;
+        tms++;
         //alert(encodeURIComponent(user));
         getcurrentauctionreport_live(encodeURIComponent(user),totallot);
+        }else if(ctr=="10" && tms == 7){
+          tms=0;
+          window.location = "<?php echo base_url() .'BuyerAuction_myauc/live'; ?>" 
         }
        
 				}, 1000);
@@ -374,7 +379,7 @@ if($diff <= 0){
 function placebid(auc){
 var bid = $('#inpbid-'+auc).val();
 //alert(bid);return false;
-  if(bid != ""){
+  if(bid != "" && bid > 0){
 		$.get('<?php echo base_url() .'BuyerAuction_Bid/get_currency/'; ?>'+bid, function(data){
 							let text = "You Are About to bid "+ data;
 								if (confirm(text) == true) {
