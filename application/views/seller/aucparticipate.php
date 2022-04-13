@@ -33,6 +33,7 @@
                        <!-- Button trigger modal -->
                        <button type="button" class="btn btn-danger btn-sm my-2" data-toggle="modal" data-target="#bidsummary">Bid Summary</button>
                        <!-- Button trigger modal -->
+					   <button type="button" class="btn btn-danger btn-sm my-2" data-toggle="modal" data-target="#bidsummary">View Buyer Details</button>
 			
         
                   </div>

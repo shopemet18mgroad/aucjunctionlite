@@ -150,6 +150,7 @@ function goBack() {
             <ul>
             <li><a href="<?php echo base_url();?>Seller_startauction">Start Auction</a></li>
              <li><a href="<?php echo base_url();?>Seller_auctioneditlist">Edit Auction</a></li>
+			 <li><a href="<?php echo base_url();?>Seller_auctionwinner">Approval Auctionwinner</a></li>
             </ul>
             </li>
 			  
@@ -158,7 +159,7 @@ function goBack() {
             <ul>
 		
 				
-            <li><a href="<?php echo base_url();?>Seller_aucparticipate"> Auction participated</a></li>
+            <li><a href="<?php echo base_url();?>Seller_aucparticipate"> My Auction</a></li>
             
 			 
 			 
