@@ -156,7 +156,7 @@ function goBack() {
              <li><a href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
 			 <li><a href="<?php echo base_url();?>Admin_auctionapproval">Approve Forthcoming Auction</a></li>
              
-              <li><a href="<?php echo base_url();?>Admin_auctionwinapproval">Approve Auction Approval</a></li>
+              <li><a href="<?php echo base_url();?>Admin_auctionwinapproval"> Auction Approval</a></li>
             </ul>
             </li>
 			      	
