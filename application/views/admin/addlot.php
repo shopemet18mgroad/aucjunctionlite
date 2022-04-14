@@ -109,6 +109,7 @@
 				<option value="Washing machine">Washing machine</option>
 				<option value="Fridge">Fridge</option>
 				<option value="Camera">Camera</option>
+				<option value="Laptop">Laptop</option>
 			
 				
 		

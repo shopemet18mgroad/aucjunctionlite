@@ -21,7 +21,7 @@
                   <p class="card-description">
                     
                   </p>
-<input type="hidden" class="form-control form-control-lg" id="iauction_start" name="iauction_start" value="<?php 
+<input type="text" class="form-control form-control-lg" id="iauction_start" name="iauction_start" value="<?php 
 				  if(isset($txdata['iauction_start'])){
 					   echo $txdata['iauction_start'];
 				  }else{
@@ -31,7 +31,7 @@
 				 ?>">
 				  
 				  
-<input type="hidden" class="form-control form-control-lg" id="iauction_end" name="iauction_end" value="<?php 
+<input type="text" class="form-control form-control-lg" id="iauction_end" name="iauction_end" value="<?php 
 				  if(isset($txdata['iauction_end'])){
 					   echo $txdata['iauction_end'];
 				  }else{
@@ -105,6 +105,11 @@
 					<option value="Furniture">Furniture</option>
 				<option value="Toys">Toys</option>
 				<option value="Fashion">Fashion</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Laptop">Laptop</option>
 				
 				
 				
