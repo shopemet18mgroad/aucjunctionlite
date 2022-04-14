@@ -50,12 +50,22 @@ class Seller_startauction extends CI_Controller {
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
 		$active = array('iemailid'=>$sess['sessi']);
+		
+			$sess = array('sessi'=>$this->session->userdata('username'));
+		
+		
 $query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
 	
 	$data['sqldata1']= $query;
 		
+		
+		
+		
+		
+		
+		
 		$this->load->view('seller/header',$sess);
-		$this->load->view('Seller/startauction',$data);
+		$this->load->view('seller/startauction',$data);
 		$this->load->view('seller/footer');
 	}
 	}
@@ -74,7 +84,7 @@ $query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
 			$iauction_end = $this->input->post('iauction_end');
 			$iemailid = $this->input->post('iemailid');
 	
-			$data = array('irole'=>$irole,'icategory' => $icategory, 
+$data = array('irole'=>$irole,'icategory' => $icategory, 
 			'icontactperson' => $icontactperson,'iemailid' => $iemailid,
 			'iauctionid' => $iauctionid,
 			'icompanyname' => $icompanyname,
@@ -82,25 +92,25 @@ $query = $this->Admin_model->getdatafromtable('sellerdetails', $active);
 			'iauction_end' => $iauction_end );
 		
 		  
-	 $status = $this->Admin_model->insert('auction',$data);
+	
 			
 	  
-	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'icompanyname'=>$icompanyname);
-	
-	//print_r($transfer);die;
-				
+	$transfer = array('irole'=>$irole,'iauctionid' => $iauctionid,'icontactperson' =>$icontactperson,'date'=>$date,'iemailid'=>$iemailid,'icompanyname'=>$icompanyname,'iauction_start'=>$iauction_start,'iauction_end'=>$iauction_end);
+
+
+
+	$status = $this->Admin_model->insert('auction',$data);			
 	
 	if($status){
 	 $this->session->set_flashdata('txdata',$transfer);
-	
-	 
-	 
+
+
 	 header('location: '.base_url().'seller_addlot/lotmgt');
 }else if(!$status){
-	header('location: ./seller_startauction/');
+
+header('location: ./seller_startauction/');
 	}
 	 }
-	
 	
 public function get_seller_table(){
 	$dataw = urldecode($this->uri->segment(3));
