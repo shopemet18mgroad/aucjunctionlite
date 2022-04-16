@@ -119,18 +119,7 @@ function goBack() {
           </div>
 
           </li>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         
-         
+    
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>Admin_dashboard">Add seller</a></li>

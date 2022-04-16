@@ -28,7 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url()."web_files/";?>assets/css/style.css" rel="stylesheet">
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
   
 </head>
 
@@ -235,22 +235,25 @@
                             $("#nb").html(nb);
                          $.get('<?php echo base_url(). 'Send_otp/index/'; ?>'+encodeURIComponent(email)+'|'+phone, function(data){
                                 if(data=="OK"){
-                                    alert("Please enter OTP sent to your Email and Phone Number, Kindly do check Email in Spam Folder as well");
-                                }else{
-                                    alert("OTP Send Failed, Please Try After 30 Minutes");
+                               swal("Alert!", "Please enter OTP sent to your Email and Phone Number, Kindly do check Email in Spam Folder as well", "info");    
+                              }else{
+                                 swal("Alert!", "OTP Send Failed, Please Try After 30 Minutes", "error"); 
+                                 
                                 }
                             });
 					//=======================================================
 				} else {
-					alert("Password and confirm Password Does Not Match");
+swal("Alert!", "Password and confirm Password Does Not Match", "error"); 
+                    
 				}
 			} else {
-				alert(
-					"Password Should Contain 8 to 15 characters With one uppercase and at least one numeric digit and an special character"
-				);
+    swal("Alert!","Password Should Contain 8 to 15 characters With one uppercase and at least one numeric digit and an special character", "error"); 
+             	
 			}
 		} else {
-			alert("Please Enter an Valid Phone Number With Out Country code(Ex:+91)");
+swal("Please Enter an Valid Phone Number With Out Country code(Ex:+91)","warning");       
+            
+			
 		}
 		//alert(email);
 		return false;
@@ -280,20 +283,25 @@ function validateotp(){
                 data: formData,
                 success: function(d) {
                     if(d == "FAIL"){
-                      alert("Email or Mobile no OTP wrong or Expired");
-                    }else if(d == "EXT"){
-                       alert("Email or Mobile no already exists");
-                    }else if(d == "OK"){
+           swal("Email or Mobile no OTP wrong or Expired","warning");       
+             }else if(d == "EXT"){
+                              
+			swal("Email or Mobile no already exists","warning");       
+            }else if(d == "OK"){
                        window.location = "<?php echo base_url() .'LOGIN'; ?>" 
                     }else{
-                      alert("Email or Mobile no OTP wrong or Expired");
+     swal("Email or Mobile no OTP wrong or Expired","warning");    
+
                     }
                 }
             });
   $("#submit2").fadeOut();
 
     }else{
-       alert("Non of the feilds can be left Blank");
+        
+        swal("Non of the feilds can be left Blank","warning"); 
+        
+
        return false;
     }
 
