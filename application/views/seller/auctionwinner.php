@@ -35,6 +35,7 @@
 						 Seller Name
                           </th>
 						
+               
 						  <th>
 						  Online Auction Start And End Date
 						  </th>
@@ -68,6 +69,13 @@
 				<tr>												
 					<td data-label="Sl.No."><?php echo $count ?> </td>
 
+
+
+
+
+
+
+
 					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
 					<td data-label="Category"><?php echo $row->icategory ?> </td>
 					<td data-label="Seller Name" ><?php echo $row->icontactperson ?> </td>
@@ -94,13 +102,11 @@
 					
 					<td data-label="Action" >  
 					
-	    <a href ="<?php echo base_url()."Admin_auctionapproval/sellerapprove/".urldecode($proid);?>"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
+	    <a href =""><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 		
-		<a href="<?php echo base_url()."Admin_addlotview/index/".urldecode($proid);?>"><i class="fa fa-eye m-2" style="font-size:18px;color:grey;"></i></a>
+		<a href =""><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
+						
 
-		
-		<a href ="<?php echo base_url()."Admin_auctionapproval/seller_delete/".urldecode($proid);?>">
-						<i class="fa fa-trash m-2" style="font-size:18px;color:red"></i></a>
 	
 
 

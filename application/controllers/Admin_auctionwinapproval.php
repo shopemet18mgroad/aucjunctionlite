@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_aucparticipate extends CI_Controller {
+class Admin_auctionwinapproval extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -49,7 +49,7 @@ class Admin_aucparticipate extends CI_Controller {
 		//print_r($adac['data']); die;
 				
 		$this->load->view('admin/header',$sess);	
-		$this->load->view('admin/aucparticipate',$adac);
+		$this->load->view('admin/auctionwinapproval',$adac);
 		$this->load->view('admin/footer');
 		
 		
@@ -60,7 +60,5 @@ class Admin_aucparticipate extends CI_Controller {
 	
 	
 	
-	
-
 
 }

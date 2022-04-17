@@ -105,6 +105,11 @@
 					<option value="Furniture">Furniture</option>
 				<option value="Toys">Toys</option>
 				<option value="Fashion">Fashion</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Laptop">Laptop</option>
 				
 				
 				

@@ -30,21 +30,18 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		$iproductdes = $this->input->post('iproductdes');
 		$inspectiondate	 = $this->input->post('inspectiondate');
 		$imrp = $this->input->post('imrp');
-	
-		$startaucprice  = $this->input->post('startaucprice');
-	
-	
-		$imageupload  = $this->input->post('imageupload');
+		$iproductname = $this->input->post('iproductname');
+	    $startaucprice  = $this->input->post('startaucprice');
+		$iauctionid  = $this->input->post('iauctionid');
+        $imageupload  = $this->input->post('imageupload');
 		$iauctionid  = $this->input->post('iauctionid');
         
 		 $iproductname  = $this->input->post('iproductname');
 		  $entryfee  = $this->input->post('entryfee');
-		
-		
-		
-			 if($_FILES['imageupload']['name'][0]){
+				 
+		  if($_FILES['imageupload']['name'][0]){
 				 $pic_array1 = self::upload_files('imageupload');
-			 } 
+			 }
 		 
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
@@ -56,27 +53,30 @@ class Admin_editlot_basicinfo_update extends CI_Controller {
 		}
 		
 		 $this->load->model('Admin_model');
-		  
-		 if($_FILES['imageupload']['name'][0]){	  
-		  
-		  
 		 
-		  $data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
-		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		 
+ 
+		  
+		 if($_FILES['imageupload']['name'][0]){	
+			 
+		  
+		 $data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
+		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,'iproductname'=>$iproductname,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,
 		 'imageupload'=>$pic_array1,'iproductname'=>$iproductname,'entryfee'=>$entryfee);
-		}else{
+	 }else{
 			  $this->load->model('Admin_model');
-				$data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+				$data2 = array('icategory'=>$icategory,'iproductname'=>$iproductname,'isubcategory' => $isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,'iproductname'=>$iproductname,'entryfee'=>$entryfee);
-			
+	
+				 //print_r($data2); die;
 			
 				}
 	
 
 			  
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('sl_ano' => $sl_ano );
+			  $updatech = array('iauctionid' => $iauctionid );
 
 			 
 			  $status = $this->Admin_model->update_custom('addlot',$data2,$updatech,$updatech);

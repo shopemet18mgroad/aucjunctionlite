@@ -94,6 +94,7 @@ $data = array('irole'=>$irole,'icategory' => $icategory,
 
 	 header('location: '.base_url().'admin_addlot/lotmgt');
 }else if(!$status){
+
 header('location: ./admin_startauction/');
 	}
 	 }

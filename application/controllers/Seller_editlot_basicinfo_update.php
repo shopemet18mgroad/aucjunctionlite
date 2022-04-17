@@ -32,10 +32,10 @@ class Seller_editlot_basicinfo_update extends CI_Controller {
 		$imrp = $this->input->post('imrp');
 	
 		$startaucprice  = $this->input->post('startaucprice');
-	
+	$iauctionid  = $this->input->post('iauctionid');
 	
 		$imageupload  = $this->input->post('imageupload');
-		$iauctionid  = $this->input->post('iauctionid');
+		//$iauctionid  = $this->input->post('iauctionid');
         
 		 $iproductname  = $this->input->post('iproductname');
 		
@@ -59,14 +59,14 @@ class Seller_editlot_basicinfo_update extends CI_Controller {
 		  
 		  
 		  $this->load->model('Admin_model');
-		  $data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
-		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		   $data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory, 
+		'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,'iproductname'=>$iproductname,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,
-		 'imageupload'=>$pic_array1,'iproductname'=>$iproductname);
+		 'imageupload'=>$pic_array1,'iproductname'=>$iproductname,'entryfee'=>$entryfee);
 		}else{
 			  $this->load->model('Admin_model');
-				$data2 = array('icategory'=>$icategory,'isubcategory' => $isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
-		'imrp' => $imrp ,'startaucprice' => $startaucprice,'iproductname'=>$iproductname);
+				$data2 = array('icategory'=>$icategory,'iproductname'=>$iproductname,'isubcategory' => $isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
+		'imrp' => $imrp ,'startaucprice' => $startaucprice,'iproductname'=>$iproductname,'entryfee'=>$entryfee);
 			
 			
 				}
@@ -74,7 +74,7 @@ class Seller_editlot_basicinfo_update extends CI_Controller {
 
 			  
 			  $datainserr = "Data Inserted Successfully";
-			  $updatech = array('sl_ano' => $sl_ano );
+			  $updatech = array('iauctionid' => $iauctionid );
 
 			 
 			  $status = $this->Admin_model->update_custom('addlot',$data2,$updatech,$updatech);

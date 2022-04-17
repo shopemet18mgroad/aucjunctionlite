@@ -119,18 +119,7 @@ function goBack() {
           </div>
 
           </li>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         
-         
+    
 		   <li class="dropdown"><a href="#"><span>Seller</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>Admin_dashboard">Add seller</a></li>
@@ -155,6 +144,8 @@ function goBack() {
             <li><a href="<?php echo base_url();?>Admin_startauction">Add Auction</a></li>
              <li><a href="<?php echo base_url();?>Admin_auctioneditlist">Edit Auction</a></li>
 			 <li><a href="<?php echo base_url();?>Admin_auctionapproval">Approve Forthcoming Auction</a></li>
+             
+              <li><a href="<?php echo base_url();?>Admin_auctionwinapproval">Approve Auction Approval</a></li>
             </ul>
             </li>
 			      	

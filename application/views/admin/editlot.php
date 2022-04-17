@@ -64,6 +64,19 @@
 				</select>
                       </div>
                     </div>
+					
+						  <div class="form-group row m-4">
+                      <label for="" class="col-sm-3 col-form-label">Product Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="iproductname" name="iproductname" placeholder="Product Name"value="<?php echo $sqldata[0]->iproductname ?>" >
+                      </div>
+                    </div>
+					
+					
+					
+					
+					
+					
                    
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">product Description</label>
@@ -73,11 +86,19 @@
 					  
                       </div>
                     </div>
+					
+					
+					
+					
+					
+					
+					
+					
 				
 					 <div class="form-group row m-4">
                      
                       <div class="col-sm-9">
-                        <input type="hidden" class="form-control form-control-lg" id="sl_ano" name="sl_ano"  value="<?php echo $sqldata[0]->sl_ano ?>" >
+                        <input type="hidden" class="form-control form-control-lg" id="iauctionid" name="iauctionid"  value="<?php echo $sqldata[0]->iauctionid ?>" >
                       </div>
                     </div>
 					

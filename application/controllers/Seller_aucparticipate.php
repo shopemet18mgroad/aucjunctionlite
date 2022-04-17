@@ -34,14 +34,22 @@ class Seller_aucparticipate extends CI_Controller {
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		$active = array('iemailid'=>$sess['sessi']);
 		
+		$this->load->model('Admin_model');
+		$this->load->library('session');
+		
+		$aoption = array('aoption'=>false);
+		
+	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
+		
+		$adac['data'] = $query;
 		
 		
 		
 		
 		$this->load->view('seller/header',$sess);
-		$this->load->view('seller/aucparticipate');
+		$this->load->view('seller/aucparticipate',$adac);
 		$this->load->view('seller/footer');
 			}
 	}
