@@ -42,7 +42,7 @@ class Payusta extends CI_Controller {
 
 // Salt should be same Post Request 
 
-            If(isset($this->input->post('additionalCharges'))) {
+            If($this->input->post('additionalCharges') != NULL) {
             $additionalCharges=$this->input->post('additionalCharges');
                 $retHashSeq = $additionalCharges.'|'.$salt.'|'.$status.'|||||||||||'.$email.'|'.$firstname.'|'.$productinfo.'|'.$amount.'|'.$txnid.'|'.$key;
             }else {
@@ -54,12 +54,12 @@ class Payusta extends CI_Controller {
                 $datafupotp = array('payment_fail'=>true);
                 $comp = array('user_email'=>$email, 'cart'=>true, 'txn_id'=>$txnid);
                 $this->Admin_model->update_custom('cart_payment', $datafupotp, $comp, $comp);
-                 header('Location: ' . base_url() . '/BuyerAuction_cart/index/'$txnid.'/FAILED');
+                 header('Location: ' . base_url() . '/BuyerAuction_cart/index/'.$txnid.'/FAILED');
 		    } else {
                 $datafupotp = array('payment_status'=>true,'auction'=>true,'cart'=>false,'wishlist'=>false);
                 $comp = array('user_email'=>$email, 'cart'=>true, 'txn_id'=>$txnid);
                 $this->Admin_model->update_custom('cart_payment', $datafupotp, $comp, $comp);
-                 header('Location: ' . base_url() . '/BuyerAuction_cart/index/'$txnid.'/SUCCESS');
+                 header('Location: ' . base_url() . '/BuyerAuction_cart/index/'.$txnid.'/SUCCESS');
 		   }
         }
         public function fail(){
@@ -75,7 +75,7 @@ class Payusta extends CI_Controller {
 
 // Salt should be same Post Request 
 
-            If(isset($this->input->post('additionalCharges'))) {
+            If($this->input->post('additionalCharges') != NULL) {
                 $additionalCharges=$this->input->post('additionalCharges');
                     $retHashSeq = $additionalCharges.'|'.$salt.'|'.$status.'|||||||||||'.$email.'|'.$firstname.'|'.$productinfo.'|'.$amount.'|'.$txnid.'|'.$key;
             } else {
@@ -87,12 +87,12 @@ class Payusta extends CI_Controller {
                 $datafupotp = array('payment_fail'=>true);
                 $comp = array('user_email'=>$email, 'cart'=>true, 'txn_id'=>$txnid);
                 $this->Admin_model->update_custom('cart_payment', $datafupotp, $comp, $comp);
-                header('Location: ' . base_url() . '/BuyerAuction_cart/index/'$txnid.'/FAILED');
+                header('Location: ' . base_url() . '/BuyerAuction_cart/index/'.$txnid.'/FAILED');
 		    } else {
-                $datafupotp = array('payment_status'=>true,'auction'=>true,'cart'=>false,'wishlist'=>false);
+                 $datafupotp = array('payment_fail'=>true);
                 $comp = array('user_email'=>$email, 'cart'=>true, 'txn_id'=>$txnid);
                 $this->Admin_model->update_custom('cart_payment', $datafupotp, $comp, $comp);
-                header('Location: ' . base_url() . '/BuyerAuction_cart/index/'$txnid.'/SUCCESS');
+                header('Location: ' . base_url() . '/BuyerAuction_cart/index/'.$txnid.'/FAILED');
 		   }
         }
 }
