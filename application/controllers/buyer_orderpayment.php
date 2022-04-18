@@ -26,23 +26,18 @@ class Buyer_orderpayment extends CI_Controller {
 		
 		
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
-			$datainserr = "Invalid Login Session";
-			header('location: '.base_url().'login/index_error/'.$datainserr);
-			die;
+				$datainserr = "Invalid Login Session";
+				header('location: '.base_url().'login/index/'.$datainserr);
+				die;
 			}else{
-		$this->load->model('Admin_model');
-		
-		$sess = array('sessi'=>$this->session->userdata('username'));
-		
-		$active = array('buyeremail'=>$sess['sessi']);
-		
-		
-		
-		
-		
-		$this->load->view('buyer/header',$sess);
-		$this->load->view('buyer/orderpayment');
-		$this->load->view('buyer/footer');
-			}
+			$this->load->model('Admin_model');
+			$sess = array('sessi'=>$this->session->userdata('username'));
+			$active = array('user_email'=>$sess['sessi'], 'payment_init'=>true);
+			$table = "cart_payment";
+			$query["reports"] = $this->Admin_model->getdatafromtable($table, $active);
+			$this->load->view('buyer/header',$sess);
+			$this->load->view('buyer/orderpayment',$query);
+			$this->load->view('buyer/footer');
+		}
 	}
 }
