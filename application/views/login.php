@@ -61,17 +61,23 @@ function goBack() {
 
 	  		
 		
-<li class="dropdown"><a href="<?php echo base_url();?>buyer_aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
+<li class="dropdown"><a href="<?php echo base_url();?>aboutus"><span>About Us</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>
 			
 				
-<li class="dropdown"><a href="<?php echo base_url();?>buyer_contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
+<li class="dropdown"><a href="<?php echo base_url();?>contactus"><span>Contact Us</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>
-			  
+			 
+
+
+				
+<li class="dropdown"><a href="<?php echo base_url();?>Privacypolicy"><span>Privacy Policy</span><i class="bi bi-chevron-down"></i></a>
+           
+			</li>			 
 		 
-           <li><a class="nav-link scrollto" href="#">Privacy Policy</a></li>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
