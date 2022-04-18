@@ -32,14 +32,7 @@
 				 $temp = explode('.',$aucs);
        $aucs = $temp[0];
        echo  $aucs;	
-	   ?>	
-				
-				
-				
-				
-			
-				
-				
+	   ?>					
                 <p><span class="text-primary">Auction End: </span><?php $auce=$allauc[0]->iauction_end;
 				 $cool = explode('.',$auce);
        $auce = $cool[0];
@@ -103,10 +96,22 @@
             <button type="button" class="btn btn-outline-primary btn-lg ms-3">Apply</button>
           </div>
         </div> -->
+    <form action="<?php echo $action; ?>" method="post" name="payuForm">
+        <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY; ?>" />
+        <input type="hidden" id="hash" name="hash" value=""/>
+        <input type="hidden" id="txnid" name="txnid" value="<?php echo $txnid; ?>" />
+        <input type="hidden" name="amount" value="<?php echo $total;?>" />
+        <input type="hidden" name="email" id="email" value="<?php echo $uname;?>" />
+        <input type="hidden" name="firstname" id="firstname" value="<?php echo $fname;?>" />
+        <input type="hidden" name="productinfo" id="productinfo" value="auctions" />
+        <input type="hidden" name="surl" value="<?php echo $surl;?>" size="64" />
+        <input type="hidden" name="furl" value="<?php echo $furl;?>" size="64" />
+        <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
+    </form>
         <?php if(count($allaucdata)){?>
         <div class="card">
           <div class="card-body text-center">
-            <button type="button" class="btn btn-primary btn-block btn-lg">Proceed to Pay ₹ <?php echo $total;?>/-</button>
+            <button id="<?php echo $total;?>" type="button" onclick="startpayment(this.id)" class="btn btn-primary btn-block btn-lg">Proceed to Pay ₹ <?php echo $total;?>/-</button>
           </div>
         </div>
         <?php }?>
@@ -115,3 +120,5 @@
   </div>
 </section>
     <!-- ======= Breadcrumbs ======= -->
+  
+  

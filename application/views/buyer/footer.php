@@ -117,6 +117,25 @@ $(document).ready( function () {
           }
         });
     }
+   
+    function startpayment(amount){ 
+      var txnid = $('#txnid').val();
+      //alert(txnid);
+      $(":button").attr("disabled", true);
+        $.get('<?php echo base_url() .'BuyerAuction_Payments/index/'; ?>'+amount+"/"+txnid, function(data){
+            if(data.includes("HASH")){
+              var hash_str = data.split("|");
+              var hash = hash_str[1];
+              $('#hash').val(hash);
+              var payuForm = document.forms.payuForm;
+              payuForm.submit();
+            }else{
+              alert("Please Contact IT Admin");
+            }
+          });
+     //$(":button").removeAttr("disabled");
+    }
+
   </script>
 </body>
 
