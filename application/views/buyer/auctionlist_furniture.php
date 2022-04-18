@@ -229,6 +229,32 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 	  <td><?php echo $row->isubcategory ?></td>
       
     </tr><br>
+	
+	
+	
+	
+		
+	<tr>
+     
+      <th scope="row">product Name  </th>
+	  <td style="word-break:break-all;"><?php echo $row->iproductname ?></td>
+      
+    </tr><br>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <tr>
      
       <th scope="row">product Description  </th>
@@ -294,7 +320,7 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 	
 			<tr>
      
-      <th scope="row">Inspection Date </th>
+      <th scope="row">Inspection Till </th>
 
 	   
 	   <td><?php $insp1= $row->inspectiondate;

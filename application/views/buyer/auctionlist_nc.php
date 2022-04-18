@@ -252,6 +252,17 @@ alt="Chania" width="100px" height="100px" ><?php } ?>
 	  <td><?php echo $row->isubcategory ?></td>
       
     </tr><br>
+	   <tr>
+     
+      <th scope="row">product Name</th>
+	  <td style="word-break:break-all;"><?php echo $row->iproductname ?></td>
+      
+    </tr><br>
+	
+	
+	
+	
+	
     <tr>
      
       <th scope="row">product Description  </th>
@@ -293,7 +304,7 @@ alt="Chania" width="100px" height="100px" ><?php } ?>
 	
 	<tr>
      
-      <th scope="row">Inspection Date </th>
+      <th scope="row">Inspection Till </th>
 
 	   
 	   <td><?php $insp= $row->inspectiondate;
@@ -323,29 +334,7 @@ alt="Chania" width="100px" height="100px" ><?php } ?>
 	
 	
 	
-	<tr>
-     
-      <th scope="row">Inspection date and time  </th>
-	     
-	   <td><?php $inse= $row->iauction_end ;
-	   $ters = explode('.',$inse);
-       $inse = $ters[0];
-       echo  $inse;	   
-	   
 
-	   ?>
-	   
-	      	   <br>to<br>
-	   <?php $aucn = $row->iauction_start; 
-       $coole = explode('.',$aucn);
-       $aucn = $coole[0];
-       echo  $aucn;	 
-	  ?>
-	  </td>
-	  
-	   </td>
-       
-    </tr>
 	
 	<tbody>
 	</table>

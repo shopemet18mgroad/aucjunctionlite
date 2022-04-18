@@ -75,12 +75,86 @@
 		
 						 <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
+					  
+					  
                       <div class="col-sm-9">
-                       From: 	
-                        <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
-                         To: 	
-		                <input class="form-control form-control-lg" id="iauction_end" name="iauction_end" type="datetime-local" >
+					  
+					  
+                     
+    <div class="row justify-content-center mx-0">
+        <div class="col-lg-12">
+            <div class="card border-0">
+                <form autocomplete="off">
+				  <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="date" >
+			
+				
+                    
+                    <div class="card-body p-3 p-sm-5">
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">9:00AM - 10:00AM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">10:00AM - 11:00AM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">11:00AM - 12:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">12:00PM - 13:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">13:00PM - 14:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">14:00PM - 15:00PM</div>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">15:00PM - 16:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">16:00PM - 17:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">17:00PM - 18:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">18:00PM - 19:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">19:00PM - 20:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">20:00PM - 21:00PM</div>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">21:00PM - 22:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">22:00PM - 23:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-4 my-1 px-2">
+                                <div class="cell py-1">23:00PM - 24:00PM</div>
+                            </div>
+                        
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+							
                       </div>
+					  
+					  
+					  
                     </div>
 				
 					 
@@ -291,6 +365,9 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
 	
 	
 }
+
+
+
   </script>
 	
 	
