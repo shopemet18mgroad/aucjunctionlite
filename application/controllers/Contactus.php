@@ -21,9 +21,6 @@ class contactus extends CI_Controller {
 	public function index()
 	{ 
 		
-		 
-		
-		
 		$this->load->view('header');
 		$this->load->view('contactus');
 		$this->load->view('footer');
