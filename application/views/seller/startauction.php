@@ -85,60 +85,74 @@
         <div class="col-lg-12">
             <div class="card border-0">
                 <form autocomplete="off">
-				  <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="date" >
+				  <input class="form-control form-control-lg " id="iauction_start" name="iauction_start" type="date" >
 			
 				
                     
                     <div class="card-body p-3 p-sm-5">
                         <div class="row text-center mx-0">
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">9:00AM - 10:00AM</div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+							
+							
+                                <div class="cell py-1">
+								
+						
+ 
+    <input type="radio" class="m-1" name="action" id="track" value="track" />9:00AM - 10:00AM
+    
+					
+								
+								
+								
+								
+								
+								</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">10:00AM - 11:00AM</div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />10:00AM - 11:00AM</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">11:00AM - 12:00PM</div>
+<div class="col-md-4 col-12 my-1 px-2">
+<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />11:00AM - 12:00PM</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">12:00PM - 13:00PM</div>
+<div class="col-md-4 col-12 my-1 px-2">
+<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />12:00PM - 13:00PM</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">13:00PM - 14:00PM</div>
+<div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />13:00PM - 14:00PM</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">14:00PM - 15:00PM</div>
-                            </div>
-                        </div>
-                        <div class="row text-center mx-0">
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">15:00PM - 16:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">16:00PM - 17:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">17:00PM - 18:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">18:00PM - 19:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">19:00PM - 20:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">20:00PM - 21:00PM</div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />14:00PM - 15:00PM</div>
                             </div>
                         </div>
                         <div class="row text-center mx-0">
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">21:00PM - 22:00PM</div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />15:00PM - 16:00PM</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">22:00PM - 23:00PM</div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />16:00PM - 17:00PM</div>
                             </div>
-                            <div class="col-md-4 col-4 my-1 px-2">
-                                <div class="cell py-1">23:00PM - 24:00PM</div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />17:00PM - 18:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />18:00PM - 19:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />19:00PM - 20:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />20:00PM - 21:00PM</div>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />21:00PM - 22:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />22:00PM - 23:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />23:00PM - 24:00PM</div>
                             </div>
                         
                         </div>
@@ -160,7 +174,7 @@
 					 
                     
                  <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
-                    <button class="btn btn-light">Cancel</button></center>
+                    <button type="reset" name="reset" class="btn btn-light">Cancel</button></center>
                   </form>
 
 
@@ -182,6 +196,27 @@
          
       </main>
        <script>
+	   
+$(document).ready(function(){
+
+$('.datepicker').datepicker({
+format: 'dd-mm-yyyy',
+autoclose: true,
+startDate: '0d'
+});
+
+$('.cell').click(function(){
+$('.cell').removeClass('select');
+$(this).addClass('select');
+});
+
+});	   
+	   
+	   
+	   
+	   
+	   
+	   
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
 	  //var cat2 = document.getElementById('irefid').value;

@@ -101,7 +101,7 @@
      <button type="button" class="btn btn-danger btn-sm my-2" data-toggle="modal" data-target="#bidsummary">Bid Summary</button>
      
      
-     <button type="button" class="btn btn-success btn-sm my-2" data-toggle="modal" data-target="#buyerdetail">View Buyer Details </button>
+    
 
 
 

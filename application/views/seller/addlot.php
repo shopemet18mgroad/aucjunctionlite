@@ -211,7 +211,7 @@
 					
 				
                  <center><button type="submit " onclick="return validateaddlot()" name="submit" class="btn btn-info mr-2 w-50">Submit</button>
-                    <button class="btn btn-light">Cancel</button></center>
+                    <button type="reset" name="reset" class="btn btn-light">Cancel</button></center>
                   </form>
    
 		

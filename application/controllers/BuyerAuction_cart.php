@@ -46,6 +46,15 @@ class BuyerAuction_cart extends CI_Controller {
 			array_push($allaucarray,$aucdet);
 		}
 		$allauc['allaucdata'] = $allaucarray;
+		$allauc['txnid'] = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
+		$allauc['uname'] = $this->session->userdata('username');
+		$ftemp = explode('@',$this->session->userdata('username'));
+		$allauc['fname'] = $ftemp[0];
+		$allauc['surl'] = base_url()."Payusta/succ";
+		$allauc['furl'] = base_url()."Payusta/fail";
+		$allauc['action'] = "https://secure.payu.in/_payment";
+		$allauc['MERCHANT_KEY'] = "r7qxJl";
+
 		//$active = array('buyeremail'=>$sess['sessi']);
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_cart',$allauc);
