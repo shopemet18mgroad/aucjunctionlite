@@ -219,6 +219,27 @@
 	  <td><?php echo $row->isubcategory ?></td>
       
     </tr><br>
+	
+		
+	<tr>
+     
+      <th scope="row">product Name  </th>
+	  <td style="word-break:break-all;"><?php echo $row->iproductname ?></td>
+      
+    </tr><br>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <tr>
      
       <th scope="row">product Description  </th>

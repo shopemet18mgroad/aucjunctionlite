@@ -266,7 +266,7 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 	
 	<tr>
      
-      <th scope="row">Inspection Date </th>
+      <th scope="row">Inspection Till </th>
 
 	   
 	   <td><?php $insp1= $row->inspectiondate;
@@ -310,35 +310,7 @@ alt="Chania" width="100px" height="100px"><?php } ?>
 	
 	
 	
-	
-		<tr>
-     
-      <th scope="row">Inspection date and time  </th>
-	     
-	   <td><?php $inse11= $row->iauction_end ;
-	   $ters22 = explode('.',$inse11);
-       $inse11 = $ters22[0];
-       echo  $inse11;	   
-	   
 
-	   ?>
-	   
-	      	   <br>to	   <br>
-	   <?php $aucn1 = $row->iauction_start; 
-       $coolee = explode('.',$aucn1);
-       $aucn1 = $coolee[0];
-       echo  $aucn1;	 
-	  ?>
-	  </td>
-	  
-	   </td>
-       
-    </tr>
-	
-	
-	
-	
-	
 	
 	
 	

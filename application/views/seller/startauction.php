@@ -1,29 +1,411 @@
 
-<br>
-<br>
-<br>
-<br>
-    <div class=" col-md-4">
-      <div  class="date-picker-2" placeholder="Recipient's username" id="ttry" aria-describedby="basic-addon2"></div>
-      <span class="" id="example-popover-2"></span> </div>
-    <div id="example-popover-2-content" class="hidden"> </div>
-    <div id="example-popover-2-title" class="hidden"> </div>
+        <link href="<?php echo base_url()."web_files/";?>css/mediaform.css" rel="stylesheet" type="text/css">
+      
+		  
+		<form action="<?php echo base_url();?>Seller_startauction/insert_auc" method="post" enctype="multipart/form-data">   
+              
+		  
+        <main id="main">
+    <section class="h-100 h-custom-2 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row m-3 d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+
+
+        
+ 
+
+      
+          
+
+              
+                  <h4 class="card-title">START AUCTION </h4>
+                  <p class="card-description">
+                    
+                  </p>
+				  
+				     <div class="form-group row m-3">
+                      <label for="" class="col-sm-3 col-form-label">Category</label>
+                      <div class="col-sm-9">
+                        <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
+				<option value="Select" selected>Select</option>
+				<option value="Car">Car</option>
+				<option value="Bike">Bike</option>
+				<option value="Laptop">Laptop</option>
+				<option value="Mobile">Mobile</option>
+				<option value="Properties">Properties</option>
+				<option value="TV">TV</option>
+				<option value="Washing machine">Washing machine</option>
+				<option value="Fridge">Fridge</option>
+				<option value="Camera">Camera</option>
+				<option value="Toys">Toys</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Fashion">Fashion</option>
+				
+				</select>
+                      </div>
+                    </div>
+					
+                    <div class="form-group row m-3">
+                      <label for="" class="col-sm-3 col-form-label">Auction Id</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly>
+                      </div>
+                    </div>
+					
+				
+					
+                    <div class="form-group row m-3">
+                      <label for="" class="col-sm-3 col-form-label">Seller Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata1[0]->icontactperson?>" placeholder="Seller Name" readonly>
+                      </div>
+                    </div>
+								
+			
+                 
+                   
+					<div class="form-group row m-3 iemailid">
+                      <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php echo $sqldata1[0]->iemailid?>" placeholder="Seller User ID"   >
+                      </div>
+                    </div>
+					
+		
+						 <div class="form-group row m-3">
+                      <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
+					  
+					  
+                      <div class="col-sm-9">
+					  
+					  
+                     
+    <div class="row justify-content-center mx-0">
+        <div class="col-lg-12">
+            <div class="card border-0">
+                <form autocomplete="off">
+				  <input class="form-control form-control-lg " id="iauction_start" name="iauction_start" type="date" >
+			
+				
+                    
+                    <div class="card-body p-3 p-sm-5">
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-12 my-1 px-2">
+							
+							
+                                <div class="cell py-1">
+								
+						
+ 
+    <input type="radio" class="m-1" name="action" id="track" value="track" />9:00AM - 10:00AM
+    
+					
+								
+								
+								
+								
+								
+								</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />10:00AM - 11:00AM</div>
+                            </div>
+<div class="col-md-4 col-12 my-1 px-2">
+<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />11:00AM - 12:00PM</div>
+                            </div>
+<div class="col-md-4 col-12 my-1 px-2">
+<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />12:00PM - 13:00PM</div>
+                            </div>
+<div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />13:00PM - 14:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />14:00PM - 15:00PM</div>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />15:00PM - 16:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />16:00PM - 17:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />17:00PM - 18:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />18:00PM - 19:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />19:00PM - 20:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />20:00PM - 21:00PM</div>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-0">
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />21:00PM - 22:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />22:00PM - 23:00PM</div>
+                            </div>
+                            <div class="col-md-4 col-12 my-1 px-2">
+                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />23:00PM - 24:00PM</div>
+                            </div>
+                        
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+							
+                      </div>
+					  
+					  
+					  
+                    </div>
+				
+					 
+                    
+                 <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
+                    <button type="reset" name="reset" class="btn btn-light">Cancel</button></center>
+                  </form>
+
+
+         </div>
+		   </div>
+		   </div>
+		  
+		   
+
+
+        
+		 
+		   </div>
+		   </div>
+		   </div>
+
+		
+		   </section>
+         
+      </main>
+       <script>
+	   
+$(document).ready(function(){
+
+$('.datepicker').datepicker({
+format: 'dd-mm-yyyy',
+autoclose: true,
+startDate: '0d'
+});
+
+$('.cell').click(function(){
+$('.cell').removeClass('select');
+$(this).addClass('select');
+});
+
+});	   
+	   
+	   
+	   
+	   
+	   
+	   
+ function auction_id(){
+	 var cat = document.getElementById('icategory').value;
+	  //var cat2 = document.getElementById('irefid').value;
+	   var d = new Date();
+	   var m = d.getHours();
+	   var n = d.getMinutes();
+	   var s = d.getSeconds();
+	   var o = d.getDate();
+	   var l = d.getMonth()+1;
+	   
+
+	   
+	   
+	 if(cat == 'Select'){
+		 swal("Alert!", "Please Select Categoery First", "error");
+		 return false;
+	 }
+	 if(cat.length<21){
+		  document.getElementById('iauctionid').value = o+"/"+l+"/"+cat+"/"+m+"/"+n+"/"+s;
+	 }
+ }
+ </script>
+ <script>
+ function search_company(){
+	 $("#dp").hide();
+ if(document.getElementById("icompanyname").value.length > 1){
+	 $("#dp").show();
+			var contents = $('#icompanyname').val(); 
+			$.get('<?php echo base_url() .'seller_startauction/get_seller_table/'; ?>'+contents, function(data){
+				$('#dp').html(data);
+			});
+
+					
+ }else{
+	 return;
+ }
+}
+</script>	 
+	 
+
+   <script>
+  function search_company1(){
+	 $("#dpp").hide();
+ if(document.getElementById("iemailid").value.length > 1){
+	 $("#dpp").show();
+			var contents = $('#iemailid').val(); 
+			$.get('<?php echo base_url() .'seller_startauction/get_email_table/'; ?>'+contents, function(data){
+				$('#dpp').html(data);
+			});
+
+					
+ }else{
+	 return;
+ }
+}  
+
+</script>	
+	
+	
+	
+	
+	
+    
+    
+    <script>
+ function getPaging(v){
+	 var s = v.split("|");
+	
+	document.getElementById("icompanyname").value = s[0];
+    document.getElementById("icontactperson").value = s[1];
+	 $("#dp").hide();
+ }
+
+ $('.ltype').click(function() {
+  $('.ltype').not(this).prop('checked', false);
+});
+
+ </script>
+	 <script>
+	 function getPagin(v){
+	 var s = v.split("|");
+	
+	document.getElementById("iemailid").value = s[0];
+	
+	
+    document.getElementById("icontactperson").value = s[1];
+	 $("#dpp").hide();
+ } 
+	  $('.ltype').click(function() {
+  $('.ltype').not(this).prop('checked', false);
+});
+	 
+	</script> 
+	 
 <script>
-$('.date-picker-2').popover({
-    html : true, 
-    content: function() {
-      return $("#example-popover-2-content").html();
-    },
-    title: function() {
-      return $("#example-popover-2-title").html();
+
+ function meghasuma(){
+	 var cat = document.getElementById('irole').value;
+	 //alert(cat); return false;
+	 
+	 if(cat == 'Select'){
+		 swal("Alert!", "Please Select TYPE First", "error");
+		 return false;
+	 }
+	 if(cat == "individual"){
+		 
+		   document.getElementById('iemailid').value = "";
+		   document.getElementById('icontactperson').value = "";
+		   document.getElementById('icompanyname').value = "NA";
+		  
+		  
+		  $(".icompanyname").hide();
+		  $(".iemailid").show();
+		  
+		  $("#dp").show();
+		  $("#dpp").hide();
+		   return false;
+		   
+		   
+	 } else if(cat == "company"){
+		 
+		
+		  document.getElementById('icompanyname').value = "";
+		  document.getElementById('icontactperson').value = "";
+		   document.getElementById('iemailid').value = "NA";
+		  
+
+		  
+		  $(".icompanyname").show();
+		  $(".iemailid").hide();
+		  
+		  
+		  $("#dp").show();
+		  $("#dpp").hide();
+		  
+		  
+
+		  return false;
+		 
+	 }
+ }
+ 
+ 
+ 
+ 
+ 
+
+</script>
+
+	
+<script>
+  
+function validatestartauction(){
+
+	var icategory = document.getElementById("icategory").value;
+	var iauctionid = document.getElementById("iauctionid").value;
+	var irole = document.getElementById("irole").value;
+	var icompanyname = document.getElementById("icompanyname").value;
+	var icontactperson = document.getElementById("icontactperson").value;
+	var iemailid = document.getElementById("iemailid").value;
+	var iauction_start = document.getElementById("iauction_start").value;
+	var iauction_end = document.getElementById("iauction_end").value;
+	
+	
+	
+
+if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || iemailid == '' || iauction_end == '' || iauction_start == ''){
+		swal("Alert!",  "Category,Auction id,Type,Company Name, Contact Person, E-Mail, Start Auction,End Auction cannot leave any field blank!", "error");
+		return false;
+	}
+	else{
+        $.ajax({
+            type:'submit',
+            data: {icategory:icategory,iauctionid:iauctionid,irole:irole,icompanyname:icompanyname,iemailid:iemailid,iauction_start:iauction_start,iauction_end:iauction_end},
+           success:function(data){
+                swal("Success", "Data Saved Successfully", "success");
+            },
+
+        });
     }
-});
-$(".date-picker-2").datepicker({
-    onSelect: function(dateText) { 
-        $('#example-popover-2-title').html('<b>Avialable Appiontments</b>');
-        var html = '<button  class="btn btn-success">9:00 am – 10:00 am</button><br><button  class="btn btn-success">10:00 am – 11:00 am</button><br><button  class="btn btn-success">11:00 am – 12:00 pm</button><br><button  class="btn btn-success">12:00 pm – 1:00 pm</button><br><button  class="btn btn-success">1:00 pm – 2:00 am</button><br><button  class="btn btn-success">2:00 am – 3:00 am</button><br><button  class="btn btn-success">3:00 am – 4:00 am</button><br><button  class="btn btn-success">4:00 am – 5:00 am</button><br><button  class="btn btn-success">5:00 am – 6:00 am</button><br><button  class="btn btn-success">6:00 am – 7:00 am</button><br><button  class="btn btn-success">7:00 pm – 8:00 pm</button><br><button  class="btn btn-success">8:00 pm – 9:00 pm</button><br><button  class="btn btn-success">9:00 pm – 8:00 pm</button><br><button  class="btn btn-success">7:00 pm – 8:00 pm</button><br><button  class="btn btn-success">7:00 pm – 8:00 pm</button><br><button  class="btn btn-success">7:00 pm – 8:00 pm</button><br><button  class="btn btn-success">7:00 pm – 8:00 pm</button><br><button  class="btn btn-success">7:00 pm – 8:00 pm</button>';
-        $('#example-popover-2-content').html('Avialable Appiontments On <strong>'+dateText+'</strong><br>'+html);
-        $('.date-picker-2').popover('show');
-    }
-});
-</script> 
+	
+	
+}
+
+
+
+  </script>
+	
+	
+	
+
+
