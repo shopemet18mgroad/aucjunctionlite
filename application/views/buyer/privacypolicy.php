@@ -12,8 +12,8 @@
                    
                 </div>
 				<div class="modal-body">We value the trust you place in us. we insist upon the highest standards for secure transactions and customer information privacy. </div>
-                <div class="modal-body"><h6><b>Please read the following statement about our information gathering and dissemination practices.</b></h6>
-				<h6 style="font-size:13px;">Note:Our privacy policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically.</h6>By visiting this Website Aucjunctionlite you agree to be bound by the terms and conditions of this Privacy Policy. If you do not agree please do not use or access our Website.<br/>
+                <div class="modal-body"><h6><b>Please read the following statement about our information gathering and dissemination practices.</b></h6><br>
+				<h6 style="font-size:13px;"> Note &nbsp;:&nbsp;Our privacy policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically.</h6>By visiting this Website Aucjunctionlite you agree to be bound by the terms and conditions of this Privacy Policy. If you do not agree please do not use or access our Website.<br/>
 				 This Privacy Policy is incorporated into and subject to the Terms of Use.</div>
 				 
 				 <div class="modal-body">
