@@ -276,7 +276,7 @@ var inputvalues = $(this).val();
 });    
 </script>
 	
-    
+    <script type="text/javascript">
     
     
     

@@ -55,14 +55,17 @@ class Admin_auctioneditlist extends CI_Controller {
 	}	
 	}
 	public function seller_delete(){
+		
+		
+ $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));		
 
-$sl_ano  = urldecode($this->uri->segment(3));
+
 
 
 $this->load->model('Admin_model');
 
 
-$adaction2 = array('sl_ano'=>$sl_ano );
+$adaction2 = array('iauctionid'=>$iauctionid );
 
 
 $query = $this->Admin_model->delete_data('auction',$adaction2);
@@ -72,7 +75,7 @@ $this->load->helper('url');
 $this->load->library('session');
 
 
-if($sl_ano){
+if($iauctionid){
 header('location: '.base_url().'Admin_auctioneditlist/index/');
 }else{
 echo "BYE";
