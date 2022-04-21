@@ -18,111 +18,37 @@
 		
 		 <label style="font-weight:bold">To:</label>
   <input type="date">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <label style="font-weight:bold">FROM:</label>    
    <input type="date">  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
  <button type="button" class="btn btn-primary btn-sm my-5 pl-3" data-toggle="modal" data-target="#viewdetail">View Detail</button>
-   
-      <div class="row ">
+   <div class="row ">
         <table class="table table-striped" id="myTable">
-  <thead>
-  
-    <tr>
-						 <th>
-                            Sl.No.
-                          </th>
-						     <th>
-                         Auction Id
-                          </th>
-                          <th>
-                          Category
-                          </th>
-                          <th>
-						 Seller Name
-                          </th>
-						
+              <thead>
                
-						  <th>
-						  Online Auction Start And End Date
-						  </th>
-						  <th>
-						 Action
-						  </th>
+                  <tr>
+                    <th>Sl.No.</th>
+                    <th>AUCTION ID</th>
+                    <th>TRANSACTION ID</th>
+                    <th>USER ID</th>
+                    <th>AMOUNT</th>
+                    <th>DATE</th>
+                    <th>STATUS</th>
+                    </tr>
+              </thead>
+                  <tbody>
+                    <?php $reports = array(); if(count($reports)){ $i=1; foreach($reports as $report){?>
+                        <tr>			
+                            <td><?php echo $i;?></td>
+                            <td><?php echo $report->auction_id;?></td>
+                            <td><?php echo $report->txn_id;?></td>
+                            <td><?php echo $report->user_email;?></td>
+                            <td><?php echo $report->entry_fee;?></td>
+                            <td><?php echo $report->txn_date;?></td>
+                            <td class="<?php if($report->payment_status == "TRUE"){echo "text-success";}else {echo "text-danger";}?>"><?php if($report->payment_status == "TRUE"){echo "SUCCESS";}else {echo "FAILED";}?></td>
                         </tr>
-    
-    
-    
-  </thead>
-         <tbody>
-			  <?php 
-				if(!count($data)){
-			  ?>
-			  <tr>												
-<td colspan="12">No Data Found</td>
-</tr>
-				 <?php 
-				}
-			  ?>
-				
-					  
-                 <?php $count = 1;?>
-					
-			<?php foreach($data as $row){?>
-			
-			
- <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
-			
-				<tr>												
-					<td data-label="Sl.No."><?php echo $count ?> </td>
-
-					 <td data-label="Auction Id"> <?php echo $row->iauctionid ?></td>
-					<td data-label="Category"><?php echo $row->icategory ?> </td>
-					<td data-label="Seller Name" ><?php echo $row->icontactperson ?> </td>
-					
-					
-					
-						<td data-label="Auction Start and End Time"><?php $aucs= $row->iauction_start;
-	   $temp = explode('.',$aucs);
-       $aucs = $temp[0];
-       echo  $aucs;	   
-	   
-
-	   ?>	   <br>to	   <br>
-	   <?php $auce = $row->iauction_end; 
-       $cool = explode('.',$auce);
-       $auce = $cool[0];
-       echo  $auce;	 
-	  ?>
-	  </td>
-					
-					
-					
-					
-					
-					<td data-label="Action" >  
-					
-	    <a href =""><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
-		
-	
-
-		
-			<a href =""><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>		
-
-
-
-
-				
-				</tr>
-				<?php $count++ ?>
-				
-			<?php }?>
-  
-	
-				</tbody> 
-</table>
-        
-
+                        <?php $i++;}}?>
+                  </tbody>    					
+          </table>
       </div>
 
      
