@@ -121,7 +121,7 @@
                   <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label">Sub-category</label>
                       <div class="col-sm-9">
-                        <select class="form-control form-control-lg" id="isubcategory" name="isubcategory">
+                        <select class="form-control form-control-lg" id="isubcategory" name="isubcategory" onChange="auction_id()">
 				<option value="Select" selected>Select</option>		
 				<option value="Car">Car</option>
 				<option value="Bike">Bike</option>
@@ -232,24 +232,25 @@ function validateaddlot(){
 	var icategory = document.getElementById("icategory").value;
 	var isubcategory = document.getElementById("isubcategory").value;
 	var iproductdes = document.getElementById("iproductdes").value;
-	var inspectiondate = document.getElementById("inspectiondate").value;
+	var iproductname = document.getElementById("iproductname").value;
 	var imrp = document.getElementById("imrp").value;
+	var entryfee = document.getElementById("entryfee").value;
+	var currentlocation = document.getElementById("currentlocation").value;
+	var inspectiondate = document.getElementById("inspectiondate").value;
 	var startaucprice = document.getElementById("startaucprice").value;
-	var endaucprice = document.getElementById("endaucprice").value;
-	var iauction_start = document.getElementById("iauction_start").value;
-	var iauction_end = document.getElementById("iauction_end").value;
+	
 	var imageupload = document.getElementById("imageupload").value;
 	
 	
 
-if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate == '' || imrp == '' || startaucprice == '' || endaucprice == '' || iauction_start == '' || iauction_end == ''|| imageupload == ''){
+if(icategory == '' || isubcategory == '' || iproductdes == '' || iproductname == '' || imrp == '' || startaucprice ==  '' || imageupload == ''|| inspectiondate == ''|| currentlocation == ''|| entryfee == '' ){
 		swal("Alert!",  "Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price, End Auction Price , Inspection date and time,Upload photos, Pin  cannot leave any field blank!", "error");
 		return false;
 	}
 	else{
         $.ajax({
             type:'submit',
-            data: {icategory:icategory,isubcategory:isubcategory, iproductdes: iproductdes,inspectiondate:inspectiondate,imrp:imrp,startaucprice:startaucprice,endaucprice :endaucprice ,iauction_start:iauction_start,iauction_end:iauction_end, imageupload: imageupload},
+            data: {icategory:icategory,isubcategory:isubcategory, iproductdes: iproductdes,iproductname:iproductname,imrp:imrp,startaucprice:startaucprice,inspectiondate:inspectiondate,currentlocation:currentlocation,entryfee:entryfee, imageupload: imageupload},
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
@@ -260,3 +261,26 @@ if(icategory == '' || isubcategory == '' || iproductdes == '' || inspectiondate 
     }
 }
 </script>	
+       <script>
+ function auction_id(){
+	 var cat = document.getElementById('icategory').value;
+	  //var cat2 = document.getElementById('irefid').value;
+	   var d = new Date();
+	   var m = d.getHours();
+	   var n = d.getMinutes();
+	   var s = d.getSeconds();
+	   var o = d.getDate();
+	   var l = d.getMonth()+1;
+	   
+
+	   
+	   
+	 if(cat == 'Select'){
+		 swal("Alert!", "Please Select Categoery First", "error");
+		 return false;
+	 }
+	 if(cat.length<21){
+		  document.getElementById('iauctionid').value = o+"/"+l+"/"+cat+"/"+m+"/"+n+"/"+s;
+	 }
+ }
+ </script>
