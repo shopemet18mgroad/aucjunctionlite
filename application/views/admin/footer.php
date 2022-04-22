@@ -70,6 +70,16 @@
 $(document).ready( function () {
     $('#myTable').DataTable();
 } );
+function getdateforrep(){
+      var to  = $('#to').val();
+      var from = $('#from').val();
+      if(to != '' && from != ''){
+         window.location = "<?php echo base_url() .'Admin_transactionhistory/index/'; ?>"+to+"/"+from; 
+      }else{
+        alert("Please Select Date");
+      }
+
+    }
 </script>
   
   

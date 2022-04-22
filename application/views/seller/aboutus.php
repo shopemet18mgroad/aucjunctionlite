@@ -11,10 +11,10 @@
                     <h5 class="modal-title" id="exampleModalLabel"><b>About us</b></h5>
 
                 </div>
-				<div class="modal-body">Aucjunctionlite a brand/subsidiary of Shopemet Networks Pvt Ltd</div>
-                <div class="modal-body">Aucjunctionlite (Brand/Subsidiary)was Founded in March 2020 in Silicon City Of India.</div>
+				<div class="modal-body">Aucjunctionlite a brand/subsidiary of Shopemet Networks Pvt Ltd .</div>
+                <div class="modal-body">Aucjunctionlite (Brand/Subsidiary)was Founded in  2022 in Silicon City Of India.</div>
 				
-				 <div class="modal-body">Aucjunctionlite ie Shopemet Networks Pvt Ltd boasts of its people-friendly environment, with a  team  for new challenges, and constantly innovating.   we continuously strive to provide the best raw materials experience to our Industrial and other customers. Our core team has over years of combined experience in Smelting, Manufacturing, Internet, Technology, Operations Management and Retail, primarily in Silicon City.</div>
+				 <div class="modal-body">Aucjunctionlite is a Shopemet Networks Pvt Ltd boasts of its people-friendly environment, with a  team  for new challenges, and constantly innovating.   we continuously strive to provide the best raw materials experience to our Industrial and other customers. Our core team has over years of combined experience in Smelting, Manufacturing, Internet, Technology, Operations Management and Retail, primarily in Silicon City.</div>
 				 
 				 <div class="modal-body">Here at Aucjunctionlite, our customers/buyers, Sellers/Suppliers and their interest is our topmost priority. We consistently strive to deliver the best-in class trusted New Rawmaterials and other manufacturing material procurement experience by providing a wide selection of products across diverse categories Like –1.Metals New, 2.Metals Secondary, 3.Ferrous,  4.Non Ferrous, 5.Minor Metals, 6.Industrial Supplies, 8.Construction materials, 9.Plastics, 10.Papers and other Raw Materials  - at the best price with seller and buyer negotiations!</div>
 				 

@@ -16,14 +16,52 @@
           
         </div>
       <?php if(count($allaucdata)){?>
-       <?php $total = 0; foreach($allaucdata as $allauc){ $img = unserialize($allauc[0]->imageupload);?>
+       <?php $total = 0;  foreach($allaucdata as $allauc){ ?>
+ 
+ 
+ 
+	   
+	   
+	   
+	   
+	   
+	   
 
         <div class="card rounded-3 mb-4">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
-              <div class="col-md-2 col-lg-2 col-xl-2">
-                <img src="<?php echo base_url()."web_files/uploads/".$img[0];?>"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+              <div class="col-md-2 col-lg-2 col-xl-2 " class="img-fluid rounded-3" >
+			  
+			  
+ <?php  $img = unserialize($allauc[0]->imageupload);?>
+ 
+ 
+ 
+  
+
+		  
+	   <?php if($img){ ?>
+	   <?php
+foreach($img as $sql){
+	?>
+	   
+
+<img class="model my-1" src="<?php echo base_url()."web_files/uploads/".$sql;?>" 
+alt="Chania" width="50px" height="50px" >
+<?php } ?>
+
+<?php } else{ echo "No Images"; ?>
+<?php }?>
+	   
+				
+				
+				
+				
+				
+				
+				
+				
+                  
               </div>
               <div class="col-md-5 col-lg-5 col-xl-5">
                 <p class="lead fw-normal mb-2 text-primary"><?php echo $allauc[0]->icategory;?></p>
@@ -100,7 +138,7 @@
         <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY; ?>" />
         <input type="hidden" id="hash" name="hash" value=""/>
         <input type="hidden" id="txnid" name="txnid" value="<?php echo $txnid; ?>" />
-        <input type="hidden" name="amount" value="<?php echo $total;?>" />
+        <input type="hidden" name="amount" value="<?php if(isset($total)){echo $total;}?>" />
         <input type="hidden" name="email" id="email" value="<?php echo $uname;?>" />
         <input type="hidden" name="firstname" id="firstname" value="<?php echo $fname;?>" />
         <input type="hidden" name="productinfo" id="productinfo" value="auctions" />

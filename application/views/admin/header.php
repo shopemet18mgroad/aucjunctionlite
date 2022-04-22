@@ -152,8 +152,7 @@ function goBack() {
 	   <li class="dropdown"><a href="<?php echo base_url();?>"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
 		
-				
-            <li><a href="<?php echo base_url();?>Admin_aucparticipate"> Auction participated</a></li>
+
 			
             <li><a href="<?php echo base_url();?>Admin_transactionhistory"> All Transaction History</a></li>
 			 
