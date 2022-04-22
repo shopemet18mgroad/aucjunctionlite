@@ -30,24 +30,26 @@ class Admin_transactionhistory extends CI_Controller {
 			die;
 			}else{
 		$this->load->model('Admin_model');
-		
 		$sess = array('sessi'=>$this->session->userdata('username'));
-		
 		$active = array('aname'=>$sess['sessi']);
-
+		$fromdate = $this->uri->segment(3);
+		$todate = $this->uri->segment(4);
 		$this->load->model('Admin_model');
 		$this->load->library('session');
+		if($fromdate != null && $todate != null){
+			$aoption = array('payment_init'=>true, 'txn_date >='=>$fromdate, 'txn_date <='=>$todate);
+			$query = $this->Admin_model->getdatafromtable('cart_payment',$aoption);
+			//print_r($query);die;
+			$adac['data'] = $query;
+			$adac['from'] = $fromdate;
+			$adac['to'] = $todate;
+		}else{
+			$adac['data'] = array();
+			$adac['from'] = "NA";
+			$adac['to'] = "NA";
+		}
 		
-
-		
-		
-		$aoption = array('aoption'=>false);
-		
-	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
-		
-		$adac['data'] = $query;
-		//print_r($adac['data']); die;
-				
+		//print_r($adac['data']); die;		
 		$this->load->view('admin/header',$sess);	
 		$this->load->view('admin/transactionhistory',$adac);
 		$this->load->view('admin/footer');
