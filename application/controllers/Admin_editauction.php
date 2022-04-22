@@ -38,12 +38,6 @@ class Admin_editauction extends CI_Controller {
 		$active = array('aname'=>$sess['sessi']);
 		
 
-		
-		
-		
-		
-		
-			
  $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));		
 
 
@@ -52,7 +46,7 @@ class Admin_editauction extends CI_Controller {
 $this->load->model('Admin_model');
 
 
-$adaction2 = array('iauctionid'=>$iauctionid );
+$active = array('iauctionid'=>$iauctionid );
 
 	
 	$query = $this->Admin_model->getdatafromtable('auction', $active);
