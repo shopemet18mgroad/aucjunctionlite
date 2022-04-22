@@ -56,13 +56,16 @@ class Seller_auctioneditlist extends CI_Controller {
 	}
 	public function seller_delete(){
 
-$sl_ano  = urldecode($this->uri->segment(3));
+		
+ $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));		
+
+
 
 
 $this->load->model('Admin_model');
 
 
-$adaction2 = array('sl_ano'=>$sl_ano );
+$adaction2 = array('iauctionid'=>$iauctionid );
 
 
 $query = $this->Admin_model->delete_data('auction',$adaction2);
