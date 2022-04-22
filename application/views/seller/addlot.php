@@ -225,33 +225,30 @@
 	<script> 
 function validateaddlot(){
 
-	var icategory = document.getElementById("icategory").value;
+
+var icategory = document.getElementById("icategory").value;
 	var isubcategory = document.getElementById("isubcategory").value;
+	var iproductname = document.getElementById("iproductname").value;
 	var iproductdes = document.getElementById("iproductdes").value;
 	var inspectiondate = document.getElementById("inspectiondate").value;
 	var imrp = document.getElementById("imrp").value;
 	var startaucprice = document.getElementById("startaucprice").value;
-	var endaucprice = document.getElementById("endaucprice").value;
-	var iauction_start = document.getElementById("iauction_start").value;
-	var iauction_end = document.getElementById("iauction_end").value;
-	var imageupload = document.getElementById("imageupload").value;
+     var imageupload = document.getElementById("imageupload").value;
 	
 	
 
-if(icategory == '' || isubcategory == '' || iproductdes === '' || inspectiondate == '' || imrp == '' || startaucprice == '' || endaucprice == '' || iauction_start == '' || iauction_end == ''|| imageupload == ''){
-		swal("Alert!",  "Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price, End Auction Price , Inspection date and time,Upload photos, Pin  cannot leave any field blank!", "error");
+if(icategory == '' || isubcategory == '' || iproductdes === '' || inspectiondate == '' || imrp == '' || startaucprice == '' || imageupload == ''){
+		swal("Alert!",  "Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price,Upload photos, Cannot leave any field blank!", "error");
 		return false;
 	}
 	else{
         $.ajax({
             type:'submit',
-            data: {icategory:icategory,isubcategory:isubcategory, iproductdes: iproductdes,inspectiondate:inspectiondate,imrp:imrp,startaucprice:startaucprice,endaucprice :endaucprice ,iauction_start:iauction_start,iauction_end:iauction_end, imageupload: imageupload},
+            data: {icategory:icategory,isubcategory:isubcategory, iproductdes: iproductdes,inspectiondate:inspectiondate,imrp:imrp,startaucprice:startaucprice,imageupload: imageupload},
            success:function(data){
                 swal("Success", "Data Saved Successfully", "success");
             },
-            error:function(xhr, throw m-5nError, ajaxOptions){
-
-            },
+           
         });
     }
 }
