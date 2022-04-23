@@ -261,26 +261,4 @@ if(icategory == '' || isubcategory == '' || iproductdes == '' || iproductname ==
     }
 }
 </script>	
-       <script>
- function auction_id(){
-	 var cat = document.getElementById('icategory').value;
-	  //var cat2 = document.getElementById('irefid').value;
-	   var d = new Date();
-	   var m = d.getHours();
-	   var n = d.getMinutes();
-	   var s = d.getSeconds();
-	   var o = d.getDate();
-	   var l = d.getMonth()+1;
-	   
-
-	   
-	   
-	 if(cat == 'Select'){
-		 swal("Alert!", "Please Select Categoery First", "error");
-		 return false;
-	 }
-	 if(cat.length<21){
-		  document.getElementById('iauctionid').value = o+"/"+l+"/"+cat+"/"+m+"/"+n+"/"+s;
-	 }
- }
- </script>
+     
