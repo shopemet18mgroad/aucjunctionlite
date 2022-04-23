@@ -134,7 +134,15 @@ alt="Chania" width="100px" height="100px"><?php } ?>
     
                       <div class="row">
             <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
+			
+			
+			
+			
+			
+			
               <?php $us = explode("@",$sessi); $newcookie = str_ireplace("/","-",$row->iauctionid)."-".$us[0]; if(get_cookie($newcookie) == NULL){?>
+			  
+			  
             <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-warning btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
              <?php }else{?>
                <button type="button" id="bt-<?php echo $ctr; ?>" class="btn btn-success btn-sm" onclick="addtocart(<?php echo $ctr; ?>)"><i class="fa fa-check" aria-hidden="true"></i> Added</button>
