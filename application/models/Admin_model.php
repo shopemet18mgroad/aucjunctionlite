@@ -140,7 +140,7 @@ class Admin_model extends CI_Model
 					$this->db->limit($limit, $start);
 					$this->db->where('a.aoption',true);	
 					$this->db->where('b.isubcategory=','Car');
-				   $this->db->order_by('a.iauction_start','DESC');
+				    $this->db->order_by('a.iauction_start','DESC');
 					$this->db->where('DATE(a.iauction_start)', $date);				 			
 					$this->db->join('addlot b','a.iauctionid=b.iauctionid',
 					'left outer');			   

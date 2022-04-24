@@ -46,9 +46,16 @@ class Seller_editauction extends CI_Controller {
 		
 			$this->load->model('Admin_model');
 		
-     $sl_ano = urldecode($this->uri->segment(3));
-	
-	$active = array('sl_ano'=>$sl_ano);
+		
+ $iauctionid = urldecode(str_ireplace('-','/',$this->uri->segment(3)));		
+
+
+
+
+$this->load->model('Admin_model');
+
+
+$adaction2 = array('iauctionid'=>$iauctionid );
 	
 	$query = $this->Admin_model->getdatafromtable('auction', $active);
 	

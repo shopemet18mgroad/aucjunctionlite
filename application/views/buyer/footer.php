@@ -70,8 +70,8 @@ $(document).ready( function () {
  function wishlist(){
 	  window.location = "<?php echo base_url() .'BuyerAuction_wishlist/'; ?>" 
  }
-</script>
-  
+</script>  
+
   
   <script>
     function addtocart(id){

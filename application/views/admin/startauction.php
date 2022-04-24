@@ -31,7 +31,7 @@
 				<option value="Mobile">Mobile</option>
 				<option value="Properties">Properties</option>
 				<option value="TV">TV</option>
-				<option value="Washing machine">Washing machine</option>
+				<option value="Washing_machine">Washing machine</option>
 				<option value="Fridge">Fridge</option>
 				<option value="Camera">Camera</option>
 				<option value="Toys">Toys</option>
