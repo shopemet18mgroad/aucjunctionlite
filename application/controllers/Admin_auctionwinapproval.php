@@ -30,24 +30,28 @@ class Admin_auctionwinapproval extends CI_Controller {
 			die;
 			}else{
 		$this->load->model('Admin_model');
-		
 		$sess = array('sessi'=>$this->session->userdata('username'));
-		
 		$active = array('aname'=>$sess['sessi']);
-
 		$this->load->model('Admin_model');
-		$this->load->library('session');
-		
-
-		
-		
-		$aoption = array('aoption'=>false);
-		
-	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
-		
+		$this->load->library('session');	
+		date_default_timezone_set('Asia/Kolkata');
+		$time =  Date('Y-m-d H:i:s');
+		// Get Auction =================================================
+		$query = array();
+		$hbid = array();
+		$aoption = array('aoption'=>true,'winnerapproval'=>false,'iauction_end <'=>$time);
+		$query = $this->Admin_model->getdatafromtable('auction',$aoption);
+		if(count($query)){
+			foreach($query as $quer){
+				$highestvalue = $this->Admin_model->gethighestvalue($quer->iauctionid);
+				array_push($hbid, $highestvalue);
+			}
+		}
+//die;
+		//===========================================
 		$adac['data'] = $query;
-		//print_r($adac['data']); die;
-				
+		$adac['hbid'] = $hbid;
+		//print_r($adac['data']); die;		
 		$this->load->view('admin/header',$sess);	
 		$this->load->view('admin/auctionwinapproval',$adac);
 		$this->load->view('admin/footer');

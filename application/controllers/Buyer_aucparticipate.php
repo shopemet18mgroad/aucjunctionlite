@@ -29,7 +29,7 @@ class Buyer_aucparticipate extends CI_Controller {
 		$comauc = array();
 		$worl = array();
 		$mybidsum = array();
-
+		$cart_payments_approval = array();
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "BUYER"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index/'.$datainserr);
@@ -43,6 +43,7 @@ class Buyer_aucparticipate extends CI_Controller {
 			if(count($query)){
 				foreach($query as $quer){
 					$res = $this->Admin_model->get_singleauction_nd($quer->auction_id);
+					array_push($cart_payments_approval,$quer);
 					if($res[0]->iauction_end < $time){
 						array_push($comauc,$res[0]);
 						$highestvalue = $this->Admin_model->gethighestvalue($quer->auction_id);
@@ -53,6 +54,7 @@ class Buyer_aucparticipate extends CI_Controller {
 								$windata = "WON|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidvalue'];
 								array_push($worl, $windata);
 							}else{
+								$winner = explode('@',$highestvalue[0]['bidderusername']);
 								$windata =  "LOST|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidvalue'];
 								array_push($worl,$windata);
 							}
@@ -72,6 +74,7 @@ class Buyer_aucparticipate extends CI_Controller {
 			$data['mycomauc']= $comauc;
 			$data['worl']= $worl;
 			$data['mybid']= $mybidsum;
+			$data['cart_pay']= $cart_payments_approval;
 		
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/aucparticipate',$data);

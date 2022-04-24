@@ -80,6 +80,25 @@ function getdateforrep(){
       }
 
     }
+    function approvewin(v){
+     $.get('<?php echo base_url() .'Admin_winnerapproval/adminapprove/'; ?>'+v, function(data){
+           if(data == "OK"){
+            window.location = "<?php echo base_url() .'Admin_auctionwinapproval/'; ?>" 
+           }else{
+             alert(data);
+           }
+           
+        });
+    }
+    function approvelos(v){
+     $.get('<?php echo base_url() .'Admin_winnerapproval/adminreject/'; ?>'+v, function(data){
+          if(data == "OK"){
+            window.location = "<?php echo base_url() .'Admin_auctionwinapproval/'; ?>" 
+           }else{
+             alert(data);
+           }
+        });
+    }
 </script>
   
   

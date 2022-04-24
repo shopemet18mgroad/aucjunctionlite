@@ -18,33 +18,31 @@
  
         
       <div class="row ">
+		  
         <table class="table table-striped" id="myTable">
   <thead>
   
-    <tr>
-						 <th>
-                            Sl.No.
-                          </th>
-						     <th>
-                         Auction Id
-                          </th>
-                          <th>
-                          Category
-                          </th>
-                          <th>
-						 Seller Name
-                          </th>
-						
-               
-						  <th>
-						  Online Auction Start And End Date
-						  </th>
-						  <th>
+    				<tr>
+						<th>
+						Sl.No.
+						</th>
+						<th>
+						Auction Id
+						</th>
+						<th>
+						Category
+						</th>
+					
+						<th>
+						Bid Value
+						</th>
+						<th>
+						Winner Username
+						</th>
+						<th>
 						 Action
-						  </th>
-                        </tr>
-    
-    
+						</th>
+                    </tr>
     
   </thead>
          <tbody>
@@ -61,7 +59,7 @@
 					  
                  <?php $count = 1;?>
 					
-			<?php foreach($data as $row){?>
+			<?php $i=0; foreach($data as $row){?>
 			
 			
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
@@ -69,54 +67,18 @@
 				<tr>												
 					<td data-label="Sl.No."><?php echo $count ?> </td>
 
-
-
-
-
-
-
-
-					 <td data-label="Auction Id"> <a href ="<?php echo base_url()."Admin_viewforthcomingauction/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					 <td data-label="Auction Id"> <?php echo $row->iauctionid ?></td>
 					<td data-label="Category"><?php echo $row->icategory ?> </td>
-					<td data-label="Seller Name" ><?php echo $row->icontactperson ?> </td>
-					
-					
-					
-						<td data-label="Auction Start and End Time"><?php $aucs= $row->iauction_start;
-	   $temp = explode('.',$aucs);
-       $aucs = $temp[0];
-       echo  $aucs;	   
-	   
-
-	   ?>	   <br>to	   <br>
-	   <?php $auce = $row->iauction_end; 
-       $cool = explode('.',$auce);
-       $auce = $cool[0];
-       echo  $auce;	 
-	  ?>
-	  </td>
-					
-					
-					
-					
-					
+		<td data-label="Seller bid amount" ><?php if($hbid[$i][0]['bidamount'] != ""){echo $hbid[$i][0]['bidamount'];}else{echo "No Bid";}?> </td>			
+		<td data-label="Seller bidderusername" ><?php if($hbid[$i][0]['bidderusername'] != ""){echo $hbid[$i][0]['bidderusername'];}else{echo "No Bidder";}?> </td>		
 					<td data-label="Action" >  
-					
-	    <a href =""><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
-		
-		<a href =""><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>
-						
-
-	
-
-
-
-
-				
+	    <a id="<?php echo urlencode($proid."|".$hbid[$i][0]['bidderusername']);?>" onclick="approvewinseller(this.id)"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
+			<a id="<?php echo urlencode($proid."|".$hbid[$i][0]['bidderusername']);?>" onclick="approvelosseller(this.id)"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>		
+			</td>
 				</tr>
 				<?php $count++ ?>
 				
-			<?php }?>
+			<?php $i++;}?>
   
 	
 				</tbody> 
@@ -129,7 +91,7 @@
     </div>
   </section>
 
-  </main><!-- End #main -->
+  </main>
 
 	
 	
