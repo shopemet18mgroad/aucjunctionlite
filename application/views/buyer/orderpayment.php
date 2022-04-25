@@ -30,7 +30,7 @@
                             <td><?php echo $report->txn_id;?></td>
                             <td><?php echo $report->entry_fee;?></td>
                             <td><?php echo $report->txn_date;?></td>
-                            <td class="<?php if($report->payment_status == TRUE){echo "text-success";}else {echo "text-danger";}?>"><?php if($report->payment_status == TRUE){echo "SUCCESS";}else {echo "FAILED";}?></td>
+                            <td class="<?php if($report->payment_status == TRUE){echo "text-success";}else {echo "text-danger";}?>"><?php if($report->payment_status == TRUE){echo "<b>SUCCESS</b>";}else {echo "<b>FAILED</b>";}?></td>
                         </tr>
                         <?php $i++;}}?>
                   </tbody>    					
