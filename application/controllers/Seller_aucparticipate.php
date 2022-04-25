@@ -76,10 +76,10 @@ class Seller_aucparticipate extends CI_Controller {
 			$data['worl']= $worl;
 			$data['mybid']= $mybidsum;
 			$data['cart_pay']= $cart_payments_approval;
-		
+		$fstatus['aucforf'] = true;
 		$this->load->view('seller/header',$sess);
 		$this->load->view('seller/aucparticipate',$data);
-		$this->load->view('seller/footer');
+		$this->load->view('seller/footer',$fstatus);
 			}
 	}
 }

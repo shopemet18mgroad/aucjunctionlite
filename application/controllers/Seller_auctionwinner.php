@@ -50,10 +50,11 @@ class Seller_auctionwinner extends CI_Controller {
 			}
 		}
 		$adac['data'] = $query;
-		$adac['hbid'] = $hbid;		
+		$adac['hbid'] = $hbid;	
+		$fstatus['cart'] = true;	
 		$this->load->view('seller/header',$sess);	
 		$this->load->view('seller/auctionwinner',$adac);
-		$this->load->view('seller/footer');
+		$this->load->view('seller/footer',$fstatus);
 		
 		
 		
