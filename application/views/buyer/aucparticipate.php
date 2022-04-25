@@ -12,20 +12,20 @@
 
        <?php if(count($mycomauc)){ $i=0; foreach($mycomauc as $mycom){$worldata = explode("|",$worl[$i]);?>
 
-        <div class="card rounded-3 mb-4" style="font-family: sans-serif;">
-          <div class="card-body p-4" style="font-family: sans-serif;">
-            <div class="row d-flex justify-content-between align-items-center" style="font-family: sans-serif;">
+        <div class="card rounded-3 mb-4">
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-between align-items-center">
              
             
-              <div class="col-md-3 col-lg-3 col-xl-3" style="font-family: sans-serif;">
-                <p class="lead fw-normal mb-2 text-muted" style="font-size:16px;">Auction ID: <?php echo $mycom->iauctionid; ?></p>
+              <div class="col-md-3 col-lg-3 col-xl-3">
+                <p class="lead fw-normal mb-2" style="font-size:18px;">Auction ID: <?php echo $mycom->iauctionid; ?></p>
                 <p><span class="text-muted">Date: <?php echo str_ireplace(".000000","",$mycom->iauction_end);?></span></p>
               </div>
               
-              <div class="col-md-5 col-lg-5 col-xl-5 offset-lg-1" style="font-family: sans-serif;">
-			  <h5 class="mb-0 text-muted"style="font-size:16px;font-family:sans-serif;">Winning Bid Value :<span style="color:black;font-size:18px;"> <b><?php  echo $worldata[3]; ?></b></span></h5><br>
-        <h5 class="mb-0 text-muted"style="font-size:16px;">Auction Winner : <?php  echo $worldata[2]; ?></h5><br>
-               <h5> <span class="text-muted">Result:</span>&nbsp;<span class="mb-0  " style="color:green;font-size:18px;font-family: sans-serif; "><b><?php echo $worldata[0];?></span></b></h5>
+              <div class="col-md-5 col-lg-5 col-xl-5 offset-lg-1">
+			  <h5 class="mb-0"style="font-size:18px;">Winning Bid Value : <?php  echo $worldata[3]; ?></h5>
+        <h5 class="mb-0"style="font-size:18px;">Auction Winner : <?php  echo $worldata[2]; ?></h5>
+                Result:<span class="mb-0" style="color:green;font-size:18px; "><?php echo $worldata[0];?></span>
               </div>
               <div class="col-md-2 col-lg-2 col-xl-2 text-end">
                   <div class="row">
@@ -115,34 +115,13 @@
             <tr>
               <th scope="row"> Auction Start Time</th>
             <td>
-			
-			<?php $aucs = $mycom->iauction_start;
-	   $temp = explode('.',$aucs);
-       $aucs = $temp[0];
-       echo  $aucs;
-			
-			?>
-			
-             
+              <?php echo $mycom->iauction_start;?>
             </td>
           </tr>
           <tr>
               <th scope="row"> Auction End Time</th>
             <td>
-			
-			
-			
-               
-			   
-			   <?php $auce = $mycom->iauction_end; 
-       $cool = explode('.',$auce);
-       $auce = $cool[0];
-       echo  $auce;	 
-	  ?>
-			   
-			   
-			   
-			   
+               <?php echo $mycom->iauction_end;?>
             </td>
           </tr>
 	        <tr>
@@ -150,38 +129,25 @@
           </tr>
           <tr>
             <th scope="row">Inspection Date </th>
-          <td>
-		  
-		  
-		  <?php $auce1 =$mycom->inspectiondate; 
-       $cool1 = explode('.',$auce1);
-       $auce1 = $cool1[0];
-       echo  $auce;	 
-	  ?>
-		  
-		  
-		  
-		  
-		  
+          <td><?php echo $mycom->inspectiondate;?>
           </td>
           </tr>
               <tr>
                 <th scope="row">MRP <i class="fa fa-inr" style="font-size:18px"></i></th>
               <td><?php echo $mycom->imrp;?></td>
               </tr>
-			  <tr>
-              <th scope="row">Entry Fee </th>
-            <td><?php echo $mycom->entryfee;?></td>
-            </tr>
             <tr>
               <th scope="row"> Start  Auction Price</th>
               <td><?php echo $mycom->startaucprice;?></td>  
             </tr>
             <tr>
               <th scope="row">End Auction Price  </th>
-            <td><?php echo $mycom->cbid;?></td> 
+            <td><?php echo $mycom->endaucprice;?></td> 
             </tr>
-            
+            <tr>
+              <th scope="row">Entry Fee </th>
+            <td><?php echo $mycom->entryfee;?></td>
+            </tr>
            
 	      <tbody>
 	    </table>
