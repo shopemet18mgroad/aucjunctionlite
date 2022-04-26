@@ -1,5 +1,5 @@
   <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="#"><i class="fas fa-home"></i> <br>Home</a>
+                 <a class="nav-item nav-link active"  data-toggle="tab" onclick="home()" href="#"><i class="fas fa-home"></i> <br>Home</a>
                 <a  class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fa-solid fa-gavel"></i><br>Auctions</a>
                 <a class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
                 <a class="nav-item nav-link " data-toggle="tab"onclick="home()" href="#"><i class="fas fa-heart"></i><br>Wishlist</a>
@@ -26,20 +26,7 @@
       </div>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+   
 
   <!-- Vendor JS Files -->
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/purecounter/purecounter.js"></script>
