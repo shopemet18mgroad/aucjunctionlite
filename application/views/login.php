@@ -76,7 +76,7 @@ function goBack() {
 <li class="dropdown"><a href="<?php echo base_url();?>Privacypolicy"><span>Privacy Policy</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>			 
-		 
+	
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
