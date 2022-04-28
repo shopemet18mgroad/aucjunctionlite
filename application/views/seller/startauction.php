@@ -10,14 +10,10 @@
   <div class="container py-5 h-100">
     <div class="row m-3 d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
-
-
-        
- 
-
       
           
-
+         
+              
               
                   <h4 class="card-title">START AUCTION </h4>
                   <p class="card-description">
@@ -53,170 +49,69 @@
                       </div>
                     </div>
 					
+						<div class="form-group row m-3">
+                      <label for="" class="col-sm-3 col-form-label">Type</label>
+                      <div class="col-sm-9">
+                        <select class="form-control form-control-lg" id="irole" name="irole" onChange="meghasuma()">
+				<option value="Select" selected>Select</option>
+				<option value="company">Company</option>
+				<option value="individual">Individual</option>
 				
+				
+				
+				
+				</select>
+                      </div>
+                    </div>
 					
                     <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Seller Name</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" value="<?php echo $sqldata1[0]->icontactperson?>" placeholder="Seller Name" readonly>
+                        <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" placeholder="Seller Name" readonly>
                       </div>
                     </div>
 								
 			
                  
-                   
+                    <div class="form-group row m-3 icompanyname">
+                      <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-lg icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"   onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
+                      </div>
+                    </div>
 					<div class="form-group row m-3 iemailid">
                       <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" value="<?php echo $sqldata1[0]->iemailid?>" placeholder="Seller User ID"   >
+                        <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
                       </div>
                     </div>
 					
 		
 						 <div class="form-group row m-3">
                       <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
-					  
-					  
                       <div class="col-sm-9">
-					  
-					  
-                     
-    <div class="row justify-content-center mx-0">
-        <div class="col-lg-12">
-            <div class="card border-0">
-                <form autocomplete="off">
-				  <input class="form-control form-control-lg " id="iauction_start" name="iauction_start" type="date" >
-			
-				
-                    
-                    <div class="card-body p-3 p-sm-5">
-                        <div class="row text-center mx-0">
-                            <div class="col-md-4 col-12 my-1 px-2">
-							
-							
-                                <div class="cell py-1">
-								
-						
- 
-    <input type="radio" class="m-1" name="action" id="track" value="track" />9:00AM - 10:00AM
-    
-					
-								
-								
-								
-								
-								
-								</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />10:00AM - 11:00AM</div>
-                            </div>
-<div class="col-md-4 col-12 my-1 px-2">
-<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />11:00AM - 12:00PM</div>
-                            </div>
-<div class="col-md-4 col-12 my-1 px-2">
-<div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />12:00PM - 13:00PM</div>
-                            </div>
-<div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />13:00PM - 14:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />14:00PM - 15:00PM</div>
-                            </div>
-                        </div>
-                        <div class="row text-center mx-0">
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />15:00PM - 16:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />16:00PM - 17:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />17:00PM - 18:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />18:00PM - 19:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />19:00PM - 20:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />20:00PM - 21:00PM</div>
-                            </div>
-                        </div>
-                        <div class="row text-center mx-0">
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />21:00PM - 22:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />22:00PM - 23:00PM</div>
-                            </div>
-                            <div class="col-md-4 col-12 my-1 px-2">
-                                <div class="cell py-1"><input type="radio" class="m-1" name="action" id="track" value="track" />23:00PM - 24:00PM</div>
-                            </div>
-                        
-                        </div>
-                       
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-							
+                       From: 	
+                        <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
+                         To: 	
+		                <input class="form-control form-control-lg" id="iauction_end" name="iauction_end" type="datetime-local" >
                       </div>
-					  
-					  
-					  
                     </div>
 				
 					 
                     
                  <center><button type="submit" name="submit" onclick ="return validatestartauction()" class="btn btn-info mr-2 w-50">Submit</button>
-                    <button type="reset" name="reset" class="btn btn-light">Cancel</button></center>
+                    <button class="btn btn-light">Cancel</button></center>
                   </form>
-
-
-         </div>
-		   </div>
-		   </div>
-		  
-		   
-
-
         
 		 
 		   </div>
 		   </div>
 		   </div>
-
 		
 		   </section>
          
       </main>
        <script>
-	   
-$(document).ready(function(){
-
-$('.datepicker').datepicker({
-format: 'dd-mm-yyyy',
-autoclose: true,
-startDate: '0d'
-});
-
-$('.cell').click(function(){
-$('.cell').removeClass('select');
-$(this).addClass('select');
-});
-
-});	   
-	   
-	   
-	   
-	   
-	   
-	   
  function auction_id(){
 	 var cat = document.getElementById('icategory').value;
 	  //var cat2 = document.getElementById('irefid').value;
@@ -400,9 +295,6 @@ if(icategory == '' || iauctionid == '' || irole == '' || icompanyname == '' || i
 	
 	
 }
-
-
-
   </script>
 	
 	

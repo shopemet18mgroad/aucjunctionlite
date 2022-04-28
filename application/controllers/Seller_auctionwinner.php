@@ -30,27 +30,31 @@ class Seller_auctionwinner extends CI_Controller {
 			die;
 			}else{
 		$this->load->model('Admin_model');
-		
 		$sess = array('sessi'=>$this->session->userdata('username'));
-		
 		$active = array('aname'=>$sess['sessi']);
-
 		$this->load->model('Admin_model');
 		$this->load->library('session');
-		
 
 		
-		
-		$aoption = array('aoption'=>false);
-		
-	$query = $this->Admin_model->getdatafromtable('auction',$aoption);
-		
+		date_default_timezone_set('Asia/Kolkata');
+		$time =  Date('Y-m-d H:i:s');
+		// Get Auction =================================================
+		$query = array();
+		$hbid = array();
+		$aoption = array('aoption'=>true,'winnerapproval'=>false,'iauction_end <'=>$time, 'iemailid'=>$this->session->userdata('username'));
+		$query = $this->Admin_model->getdatafromtable('auction',$aoption);
+		if(count($query)){
+			foreach($query as $quer){
+				$highestvalue = $this->Admin_model->gethighestvalue($quer->iauctionid);
+				array_push($hbid, $highestvalue);
+			}
+		}
 		$adac['data'] = $query;
-		//print_r($adac['data']); die;
-				
+		$adac['hbid'] = $hbid;	
+		$fstatus['cart'] = true;	
 		$this->load->view('seller/header',$sess);	
 		$this->load->view('seller/auctionwinner',$adac);
-		$this->load->view('seller/footer');
+		$this->load->view('seller/footer',$fstatus);
 		
 		
 		

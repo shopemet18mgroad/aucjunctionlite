@@ -1,5 +1,5 @@
   <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="#"><i class="fas fa-home"></i> <br>Home</a>
+                 <a class="nav-item nav-link active"  data-toggle="tab" onclick="home()" href="#"><i class="fas fa-home"></i> <br>Home</a>
                 <a  class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fa-solid fa-gavel"></i><br>Auctions</a>
                 <a class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
                 <a class="nav-item nav-link " data-toggle="tab"onclick="home()" href="#"><i class="fas fa-heart"></i><br>Wishlist</a>
@@ -26,20 +26,7 @@
       </div>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+   
 
   <!-- Vendor JS Files -->
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/purecounter/purecounter.js"></script>
@@ -79,6 +66,25 @@ function getdateforrep(){
         alert("Please Select Date");
       }
 
+    }
+    function approvewin(v){
+     $.get('<?php echo base_url() .'Admin_winnerapproval/adminapprove/'; ?>'+v, function(data){
+           if(data == "OK"){
+            window.location = "<?php echo base_url() .'Admin_auctionwinapproval/'; ?>" 
+           }else{
+             alert(data);
+           }
+           
+        });
+    }
+    function approvelos(v){
+     $.get('<?php echo base_url() .'Admin_winnerapproval/adminreject/'; ?>'+v, function(data){
+          if(data == "OK"){
+            window.location = "<?php echo base_url() .'Admin_auctionwinapproval/'; ?>" 
+           }else{
+             alert(data);
+           }
+        });
     }
 </script>
   

@@ -44,7 +44,7 @@ class Cart_wishlist extends CI_Controller {
         $auctionid = $query[0]->iauctionid;
         $auctionst = $query[0]->iauction_start;
         $auctioned = $query[0]->iauction_end;
-        $auctionimrp = $query[0]->imrp;
+        $auctionimrp = $query[0]->entryfee;
         $auctionsub = $query[0]->isubcategory;
         $aucstartprice = $query[0]->startaucprice;
         $aucendprice = $query[0]->endaucprice;
@@ -58,6 +58,7 @@ class Cart_wishlist extends CI_Controller {
 			echo "DE|".$rid;
 		}else{
 			$data = array('auction_id'=>$auctionid, 'entry_fee'=>$auctionimrp, 'cart'=>true, 'wishlist'=>false,'auction'=>false, 'user_email'=>$sessi);
+			print_r($data);die;
 		 	$this->Admin_model->insert('cart_payment', $data);
 		 	echo "DI|".$rid;
 		}
