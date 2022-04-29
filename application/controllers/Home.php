@@ -20,6 +20,6 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		header('location: '.base_url().'Login');
+		header('location: '.base_url().'Welcome1');
 	}
 }

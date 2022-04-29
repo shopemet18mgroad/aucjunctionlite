@@ -29,6 +29,46 @@
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url()."web_files/";?>assets/css/style.css" rel="stylesheet">
+  	
+<style>
+
+
+
+.suma{
+	width:300px;
+	height:100px;
+	margin-top:-450px;
+	margin-left:20px;
+}
+
+.cart{
+padding-top:500px;
+}
+.cart{
+padding-top:500px;
+}
+
+
+}
+.slide-progress-bar {
+            width: 1118px;
+            background-color: red;
+            transition: width 10s linear;
+            display: inline-block;
+            vertical-align: middle;
+			
+        }
+
+        .progress-bar {
+            height: 15px;
+            background-color:orange;
+            width: 10%;
+            position: relative;
+            transition: linear;
+			margin-top:-350px;
+        }
+
+</style>
 
   
 </head>
@@ -47,53 +87,26 @@
 
 
   <main id="main">
-    <section class="h-100 mt-5 cart">
-  <div class="container h-100 py-5">
+    <section class="h-100 cart">
+  <div class="container h-100 ">
     <div class="row d-flex justify-content-center align-items-center h-100">
  
 		  
-	
-<style>
 
-
-
-.suma{
-	width:130px;
-	height:80px;
-	margin-top:-800px;
-	margin-left:-20px;
-}
-
-.cart{
-padding-top:500px;
-}
-.cart{
-padding-top:500px;
-}
-.progress{
-margin-top:-350px;
-}
-
-</style>
 
         <div class="modal-dialog modal-lg" role="document">
             
-                <div class="modal-header">
-                  
-
-                </div>
 				
  <center><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="suma">
   </center>        
             </div>
-		    <center>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;margin-left:10px;"></div>
-</div>
-	</center>
+		   
 
 
-
+ <div class="slide-progress-bar " >
+        <div class="progress-bar" style="border-radius:20px;" id="progress-bar"></div>
+        <!--progress-bar-->
+ </div>
   
         </div>
     </div>
@@ -101,18 +114,55 @@ margin-top:-350px;
 
 </section>
     <!-- ======= Breadcrumbs ======= -->
-
+	
 
   </main><!-- End #main -->
   
-  
-  
-                         
+  <script>
+ var elem = document.getElementById("progress-bar");
+    var width = 0;
 
+    function progressBar() {
+        resetProgressBar();
+
+        id = setInterval(frame, 1000);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width+=20;
+                elem.style.width = width + '%';
+				 elem.innerHTML = width  + "%";
+				 
+		if(width >= 100){
+				window.location = "Register";
+			}		 
+				 
+
+				
+				
+            }
+        }
+    }
+
+   
+
+    function resetProgressBar() {
+        width = 0;
+      elem.style.width = width + '%';
+
+		
+		
+    }
+    
+     progressBar();
+  </script> 
+   
   
-  
-  
-  
+  </body>
+
+  </html>
   
   
   

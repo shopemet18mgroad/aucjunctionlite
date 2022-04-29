@@ -35,23 +35,7 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"<a href="#"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-   
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
+  
   <main id="main">
     <section class="vh-75 login">
   <div class="container-fluid h-custom">
@@ -182,15 +166,8 @@
 
   <!-- ======= Footer ======= -->
  
-            <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i> <br>Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i><br> Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i><br> Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> <br>WishList</a>
-            </nav>
-           
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="<?php echo base_url()."web_files/";?>assets/vendor/purecounter/purecounter.js"></script>
