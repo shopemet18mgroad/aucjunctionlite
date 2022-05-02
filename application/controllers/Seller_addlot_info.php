@@ -74,14 +74,15 @@ class Seller_addlot_info extends CI_Controller {
 		 $imageupload  = $this->input->post('imageupload');
 		  $entryfee  = $this->input->post('entryfee');
 		  $iproductname  = $this->input->post('iproductname');
-		   $commission  = $this->input->post('commission');
-		 
+
+		  $commission = $this->input->post('commission');
+
 		
 		
 	
-		$a =  $_FILES['imageupload']['name'];
+		$a = $_FILES['imageupload']['name'];
 	    $pic_array1 = self::upload_files('imageupload');
-		
+		//print_r($a);die;
 	   if(!count($pic_array1)){
 			echo '<script language="javascript">';
 			echo 'alert("Documents Upload Failed")';  //not showing an alert box.
@@ -93,7 +94,9 @@ class Seller_addlot_info extends CI_Controller {
 		
 		$data = array('iauctionid'=>$iauctionid,'irole'=>$irole,'iemailid'=>$iemailid,'icontactperson' =>  $icontactperson,'icategory'=>$icategory,'isubcategory' =>$isubcategory,'iproductdes' => $iproductdes, 'inspectiondate' => $inspectiondate,
 		'imrp' => $imrp ,'startaucprice' => $startaucprice,
-		'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname,'iproductname'=>$iproductname,'iauction_start'=>$iauction_start,'iauction_end'=>$iauction_end,'commission'=>$commission); 
+
+		'imageupload' => $pic_array1,'entryfee'=>$entryfee,'icompanyname'=>$icompanyname,'iproductname'=>$iproductname,'iauction_start'=>$iauction_start,'iauction_end'=>$iauction_end ,'commission'=>$commission); 
+
 		
 	
 		

@@ -15,8 +15,8 @@
 			
 	
 	
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" > <?php echo $sqldata1[0]->role ?>    DETAILS  
-	<a  href="<?php echo base_url()."Seller_editseller/index/".urldecode($sqldata1[0]->sl_no);?>"><i class="fas fa-edit" style="font-size:28px;" ></i><a> </div></center>
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:black; font-size:30px;" > <?php echo $sqldata1[0]->role ?>    DETAILS  
+	<a  href="<?php echo base_url()."Seller_editseller/index/".urldecode($sqldata1[0]->sl_no);?>"><i class="fas fa-edit "  style="font-size:28px;color:black;" ></i><a> </div></center>
 	
 	
 	

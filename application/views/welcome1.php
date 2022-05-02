@@ -1,4 +1,3 @@
-   
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,12 +43,7 @@
 .cart{
 padding-top:500px;
 }
-.cart{
-padding-top:800px;
-}
 
-
-}
 .slide-progress-bar {
             width: 1118px;
             background-color: red;
@@ -61,6 +55,7 @@ padding-top:800px;
 
         .progress-bar {
             height: 15px;
+
             background-color:#D2691E;
             width: 10%;
             position: relative;

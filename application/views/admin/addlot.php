@@ -422,7 +422,7 @@ function validateaddlot(){
 	
 
 if(icategory == '' || isubcategory == '' || iproductdes == '' || iproductname == '' || imrp == '' || startaucprice ==  '' || imageupload == ''|| inspectiondate == ''|| currentlocation == ''|| entryfee == '' ){
-		swal("Alert!",  "Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price, End Auction Price , Inspection date and time,Upload photos, Pin  cannot leave any field blank!", "error");
+		swal("Alert!","Category, Sub-category, product Description, Inspection Date, Expected price, Start  Auction Price, End Auction Price , Inspection date and time,Upload photos, Pin  cannot leave any field blank!", "error");
 		return false;
 	}
 	else{

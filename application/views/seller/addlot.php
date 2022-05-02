@@ -398,7 +398,35 @@
                     </div>
                     
                 
-					
+				   <div class="form-group row m-5">
+                      <label for="" class="col-sm-3 col-form-label">Commision</label>
+                      <div class="col-sm-9">
+                        <select class="form-control form-control-lg" id="commission" name="commission">
+				
+				<option value="0">0%</option>
+				<option value="1">1%</option>
+				<option value="2">2%</option>
+				<option value="3">3%</option>
+				<option value="4">4%</option>
+				<option value="5">5%</option>
+				
+				
+				
+				
+				</select>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+				
 					
 					
 					

@@ -74,9 +74,12 @@
 					<td data-label="Seller Name" ><?php echo $row->iemailid ?> </td>
 		<td data-label="Seller bid amount" ><?php if($hbid[$i][0]['bidamount'] != ""){echo $hbid[$i][0]['bidamount'];}else{echo "No Bid";}?> </td>			
 		<td data-label="Seller bidderusername" ><?php if($hbid[$i][0]['bidderusername'] != ""){echo $hbid[$i][0]['bidderusername'];}else{echo "No Bidder";}?> </td>		
-					<td data-label="Action" >
+
 
 					
+
+					<td data-label="Action" >  
+
 	    <a id="<?php echo urlencode($proid."|".$hbid[$i][0]['bidderusername']);?>" onclick="approvewin(this.id)"><i class="fa fa-check m-2" style="font-size:18px;color:green;"></i></a>
 			<a id="<?php echo urlencode($proid."|".$hbid[$i][0]['bidderusername']);?>" onclick="approvelos(this.id)"><i class="fas fa-ban m-2" style="font-size:18px;color:red"></i></a>		
 			</td>
