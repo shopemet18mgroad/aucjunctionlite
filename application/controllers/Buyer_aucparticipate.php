@@ -50,10 +50,10 @@ class Buyer_aucparticipate extends CI_Controller {
 							if(count($highestvalue) && $highestvalue[0]['bidderusername'] != null){
 								if($highestvalue[0]['bidderusername'] == $sess['sessi']){
 								$winner = explode('@',$highestvalue[0]['bidderusername']);
-								$windata = "WON|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidvalue'];
+								$windata = "WON|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidamount'];
 								array_push($worl, $windata);
 							}else{
-								$windata =  "LOST|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidvalue'];
+								$windata =  "LOST|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidamount'];
 								array_push($worl,$windata);
 							}
 						}else{

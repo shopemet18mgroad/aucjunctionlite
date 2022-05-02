@@ -38,7 +38,7 @@ class Seller_seller_basicinfo_update extends CI_Controller {
 		 $igstnumber = $this->input->post('igstnumber');
  $icompanyname = $this->input->post('icompanyname'); 
  $itypeseller = $this->input->post('itypeseller');  
-	    $iname = $this->input->post('iname'); 
+	   
 		$sl_no = $this->input->post('sl_no');
 		$icontactnumber = $this->input->post('icontactnumber');
 		$iadharnumber  = $this->input->post('iadharnumber');
@@ -91,7 +91,7 @@ $this->load->model('Admin_model');
 			 
 if($_FILES['iadharcardfile']['name'][0] || $_FILES['iaddresprof']['name'][0]){
 	
-$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+$data2 = array('icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,
 			 'iadharcardfile'=> $pic_array1, 'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
@@ -99,7 +99,7 @@ $data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
 			 'iaddresprof'=>$pic_array2);
 			//print_r($data2);die;
 			 }else{
-				$data2 = array('iname' => $iname, 'icontactnumber' => $icontactnumber,
+				$data2 = array('icontactnumber' => $icontactnumber,
 			 'iadharnumber' => $iadharnumber,'iemailid' => $iemailid ,'iaddres' => $iaddres,
 			 'iicity' => $iicity,'istate' => $istate, 'icountry' => $icountry, 
 			 'ipincode' => $ipincode,'icontactperson'=>$icontactperson,'itypeseller'=>$itypeseller,'igstnumber'=>$igstnumber,'icompanyname'=>$icompanyname);

@@ -35,7 +35,7 @@ class Seller_editauction extends CI_Controller {
 		
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		
-		$active = array('aname'=>$sess['sessi']);
+		//$active = array('aname'=>$sess['sessi']);
 		
 
 		
@@ -57,7 +57,7 @@ $this->load->model('Admin_model');
 
 $adaction2 = array('iauctionid'=>$iauctionid );
 	
-	$query = $this->Admin_model->getdatafromtable('auction', $active);
+	$query = $this->Admin_model->getdatafromtable('auction',$adaction2);
 	
 	$data['sqldata']= $query;
 	

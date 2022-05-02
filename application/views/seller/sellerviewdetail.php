@@ -29,11 +29,19 @@
 	
    <table class="table table-striped" style="font-size:12px;">
 <tbody>
-    <tr>   
-   
-   	  <th scope="row">FULL NAME</th>
-   <td><?php echo $sqldata1[0]->iname ?></td>
-	  </tr>
+  
+  	<tr>
+     
+     
+	  <th scope="row">Full Name</th>
+	   <td><?php echo $sqldata1[0]->icontactperson ?></td>
+      
+    </tr>
+	
+  
+  
+  
+  
 	 <br>
     <tr>
    
@@ -117,14 +125,7 @@
       
     </tr>
 	
-	<tr>
-     
-     
-	  <th scope="row">CONTACT PERSON*</th>
-	   <td><?php echo $sqldata1[0]->icontactperson ?></td>
-      
-    </tr>
-	
+
 	
 	<?php $role = $sqldata1[0]->role ?>
 	

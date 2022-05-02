@@ -107,8 +107,8 @@
 	
 		<tr>
      
-      <th scope="row">entry free </th>
-	   <td><?php echo $sqldata[0]->entryfee ?></td>
+      <th scope="row">commission</th>
+	   <td><?php echo $sqldata[0]->commission ?></td>
       
     </tr>
 		<tr>

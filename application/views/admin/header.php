@@ -155,6 +155,7 @@ function goBack() {
 
 			
             <li><a href="<?php echo base_url();?>Admin_transactionhistory"> All Transaction History</a></li>
+			<li><a href="<?php echo base_url();?>Admin_totalcommissionrecived"> Total Commission Recieved</a></li>
 			 
 			 
             </ul>

@@ -288,29 +288,29 @@ if($diff <= 0){
 	
 	
 	
-	<tr>
+<!--	<tr>
      
       <th scope="row">Inspection date and time  </th>
 	     
-	   <td><?php $inse= $row[0]->iauction_end ;
-	   $ters = explode('.',$inse);
-       $inse = $ters[0];
-       echo  $inse;	   
+	   <td><?php //$inse= $row[0]->iauction_end ;
+	  // $ters = explode('.',$inse);
+       //$inse = $ters[0];
+       //echo  $inse;	   
 	   
 
 	   ?>
 	   
 	      	   <br>to	   <br>
-	   <?php $aucn = $row[0]->iauction_start; 
-       $coole = explode('.',$aucn);
-       $aucn = $coole[0];
-       echo  $aucn;	 
+	   <?php// $aucn = $row[0]->iauction_start; 
+      // $coole = explode('.',$aucn);
+       //$aucn = $coole[0];
+       //echo  $aucn;	 
 	  ?>
 	  </td>
 	  
 	   </td>
        
-    </tr>
+    </tr>-->
 	
 	<tbody>
 	</table>

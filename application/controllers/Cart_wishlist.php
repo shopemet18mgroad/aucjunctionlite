@@ -44,7 +44,7 @@ class Cart_wishlist extends CI_Controller {
         $auctionid = $query[0]->iauctionid;
         $auctionst = $query[0]->iauction_start;
         $auctioned = $query[0]->iauction_end;
-        $auctionimrp = $query[0]->imrp;
+        $auctionimrp = $query[0]->entryfee;
         $auctionsub = $query[0]->isubcategory;
         $aucstartprice = $query[0]->startaucprice;
         $aucendprice = $query[0]->endaucprice;

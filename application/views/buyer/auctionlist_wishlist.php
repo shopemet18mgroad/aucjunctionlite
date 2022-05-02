@@ -41,7 +41,7 @@
               </div>
               
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 class="mb-0 text-primary">₹<?php $total = $total + $allauc[0]->imrp; echo $allauc[0]->imrp;?></h5>
+                <h5 class="mb-0 text-primary">₹<?php $total = $total + $allauc[0]->entryfee; echo $allauc[0]->entryfee;?></h5>
               </div>
               <div class="col-md-2 col-lg-2 col-xl-2 d-flex">
               <button type="button" id="<?php echo str_ireplace("/","-",$allauc[0]->iauctionid);?>" onclick="movetocart(this.id)" class="btn btn-outline-primary btn-sm ms-3"><i class="fa fa-shopping-cart fa-lg"></i></button>

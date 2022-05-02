@@ -817,7 +817,7 @@ public function get_auctionlist_todaysearch($limit,$start,$date,$iproductname){
 		}
 		public function gethighestvalue($auc_id){
 			$this->db->select('*');
-			$this->db->select_max('bidvalue');
+			$this->db->select_max('bidamount');
 			$this->db->from('biddingdata');
 			$this->db->where('sauctionid', $auc_id);
 			$q = $this->db->get();

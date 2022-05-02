@@ -142,7 +142,7 @@
             </tr>
             <tr>
               <th scope="row">End Auction Price  </th>
-            <td><?php echo $mycom->endaucprice;?></td> 
+            <td><?php echo $mycom->cbid;?></td> 
             </tr>
             <tr>
               <th scope="row">Entry Fee </th>

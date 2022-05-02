@@ -164,12 +164,7 @@
                       </div>
                     </div>
 					
-					<div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Current location </label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-lg" id="currentlocation" name="currentlocation" placeholder="current location ">
-                      </div>
-                    </div>
+					
                     <div class="form-group row m-4">
                       <label for="" class="col-sm-3 col-form-label"> Expected price</label>
                       <div class="col-sm-9">
@@ -183,6 +178,189 @@
                         <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
                     </div>
+					
+					
+					
+				
+								<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+								<script type="text/javascript">
+									var citiesByState = {
+												Odisha: ["Bhubaneswar", "Puri", "Cuttack"],
+										Maharashtra: ["Ahmednagar","Akola","Amravati","Aurangabad","Beed","Bhandara","Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli","	Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Mumbai Suburban","Nagpur","Nanded","Nandurbar","Nashik","Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri"," Sangli","Satara","Sindhudurg","Solapur","Thane","Wardha","Washim","Yavatmal"],
+									Kerala: ["kochi", "Kanpur","Alappuzha","Ernakulam","Idukki","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"],
+										Karnataka: ["Bengaluru","Dakshina-Kannada", "Hubli-Dharwad", "Mysuru", "Kalaburagi", "Mangaluru", "Dakshina Kannada", "Belagavi", "Davanagere", "Ballari", "Vijayapura", "Shivamogga", "Tumakuru", "Raichur", "Bidar", "Hosapete", "Vijayanagara", "Gadag-Betageri", "Gadag", "Robertsonpete", "Kolara", "Hassan", "Bhadravati", "Gokak", "Belagavi", "Udupi", "Mandya", "Chikkamagaluru", "Gangavati", "Koppal", "Bagalkote", "Ranebennuru", "Haveri"],
+										ArunachalPradesh: ["Itanagar"],
+										AndhraPradesh: ["Visakhapatnam","Vizanagaram","Srikakulam","East Godavari","West Godavari","krishna","Guntur","prakasam","Kurnool","Nellore","Kadapa","Chittoor","Anantapur","vijyawada"],
+										Assam: ["Dispur"],
+										Bihar: ["Patna"],
+                                        
+										Chhattisgarh: ["Naya Raipur"],
+										Goa: ["Panaji"],
+										Gujarat: ["Gandhinagar"],
+										Haryana: ["Chandigarh"],
+										HimchalaPradesh: ["Shimla"],
+										Jharkhand: ["Ranchi"],
+										
+										MadhyaPradesh: ["Bhopal"],
+										
+										Manipur: ["Imphal"],
+										Meghalaya: ["Shillong"],
+										Mizoram: ["Aizawl"],
+										Nagaland: ["Kohima"],
+										Odisha: ["Bhubaneswar"],
+										Punjab: ["Chandigarh"],
+										Rajasthan: ["Jaipur"],
+										Sikkim: ["Gangtok"],
+										TamilNadu: ["Ariyalur","Chennai","Coimbatore","Chengalpattu",
+	"Cuddalore","Dharmapuri","Dindigul","Erode","Kallakurichi","Kanchipuram	","	Kanyakumari	","	Karur"," Krishnagiri","Madurai","Mayiladuthurai","Nagapattinam","Namakkal","Nilgiris","Perambalur","Pudukkottai","Ramanathapuram","	Ranipet	","Salem","Sivagangai","Tenkasi","Thanjavur	","	Theni","Thoothukudi	","Tiruchirappalli","Tirunelveli","	Tirupattur","Tiruppur ","Tiruvallur	","	Tiruvannamalai","Tiruvarur","Vellore","Viluppuram","Virudhunagar"],
+										Telangana: ["Adilabad",
+"Bhadradri Kothagudem",
+"Hyderabad Jagtial",
+"Jangaon",
+"Jayashankar Bhoopalpally",
+"Jogulamba Gadwal",
+"Kamareddy",
+"Karimnagar",
+"Khammam",
+"Komaram Bheem Asifabad",
+"Mahabubabad",
+"Mahabubnagar",
+"Mancherial",
+"Medak",
+"Medchal",
+"Nagarkurnool",
+"Nalgonda",
+"Nirmal",
+"Nizamabad",
+"Peddapalli",
+"Rajanna Sircilla",
+"RangareddySangareddy",
+"Siddipet",
+"Suryapet",
+"Vikarabad",
+"Wanaparthy",
+"Warangal (Rural)",
+"Warangal (Urban)","Yadadri Bhuvanagiri"],
+										Tripura: ["Agartala"],
+										UttarPradesh: ["Lucknow"],
+										Uttarakhand: ["Dehradun"],
+										WestBengal: ["Kolkata"],
+									}
+
+									function makeSubmenu(value) {
+										if (value.length == 0) document.getElementById("pcities").innerHTML = "<option></option>";
+										else {
+											var citiesOptions = "";
+											for (cityId in citiesByState[value]) {
+												citiesOptions += "<option>" + citiesByState[value][cityId] + "</option>";
+											}
+											document.getElementById("pcities").innerHTML = citiesOptions;
+										}
+									}
+
+									function displaySelected() {
+										var country = document.getElementById("pstates").value;
+										var city = document.getElementById("pcities").value;
+										alert(country + "\n" + city);
+									}
+
+									function resetSelection() {
+										document.getElementById("pstates").selectedIndex = 0;
+										document.getElementById("pcities").selectedIndex = 0;
+									}
+								</script>
+
+								  <div class="form-group row m-4">
+	  
+	   	<label for="" class="col-sm-3 col-form-label">State</label>
+				 <div class="col-sm-9">	
+
+								<body onload="resetSelection()">
+									<select class="form-control form-control-lg " id="pstates" name="pstates" size="1" onchange="makeSubmenu(this.value)">
+										<option value="" disabled selected>Choose State</option>
+										<option>Odisha</option>
+										<option>Maharashtra</option>
+										<option>Kerala</option>
+										<option>ArunachalPradesh</option>
+										<option>AndhraPradesh</option>
+										<option>Assam</option>
+										<option>Chhattisgarh</option>
+										<option>Goa</option>
+										<option>Gujarat</option>
+										<option>Haryana</option>
+										<option>HimchalaPradesh</option>
+										<option>Jharkhand</option>
+										<option>Karnataka</option>
+										<option>Kerala</option>
+										<option>MadhyaPradesh</option>
+										<option>Manipur</option>
+										<option>Meghalaya</option>
+										<option>Mizoram</option>
+										<option>Nagaland</option>
+										<option>Odisha</option>
+										<option>Punjab</option>
+										<option>Rajasthan</option>
+										<option>Sikkim</option>
+										<option>TamilNadu</option>
+										<option>Telangana</option>
+										<option>Tripura</option>
+										<option>UttarKhand </option>
+										<option>UttarPradesh</option>
+										<option>WestBengal</option>
+										<option>Andaman and nicobar</option>
+										<option>Chandigarh</option>
+										<option>Dadra and Nagar Haveli and Daman & Diu</option>
+										<option>Jammu and kashmir</option>
+										<option>ladakh</option>
+										<option>puduchery</option>
+									</select>
+
+
+							</div>
+							</div>
+							
+							
+							  <div class="form-group row m-4">
+							
+
+							
+							
+							
+							
+								
+								<label for="" class="col-sm-3 col-form-label">City</label>
+								
+								<div class="col-sm-9">
+								<select class="form-control form-control-lg" id="pcities" name="pcities" size="1">
+									<option value="" disabled selected>Choose City</option>
+									<option></option>
+								</select>
+							</div>				
+					
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
                     
                    
 					

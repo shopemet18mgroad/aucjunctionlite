@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_auctionwinapproval extends CI_Controller {
+class Admin_totalcommissionrecived extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -32,28 +32,26 @@ class Admin_auctionwinapproval extends CI_Controller {
 		$this->load->model('Admin_model');
 		$sess = array('sessi'=>$this->session->userdata('username'));
 		$active = array('aname'=>$sess['sessi']);
+		$fromdate = $this->uri->segment(3);
+		$todate = $this->uri->segment(4);
 		$this->load->model('Admin_model');
-		$this->load->library('session');	
-		date_default_timezone_set('Asia/Kolkata');
-		$time =  Date('Y-m-d H:i:s');
-		// Get Auction =================================================
-		$query = array();
-		$hbid = array();
-		$aoption = array('aoption'=>true,'winnerapproval'=>false,'iauction_end <'=>$time);
-		$query = $this->Admin_model->getdatafromtable('auction',$aoption);
-		if(count($query)){
-			foreach($query as $quer){
-				$highestvalue = $this->Admin_model->gethighestvalue($quer->iauctionid);
-				array_push($hbid, $highestvalue);
-			}
+		$this->load->library('session');
+		if($fromdate != null && $todate != null){
+			$aoption = array('payment_init'=>true, 'txn_date >='=>$fromdate, 'txn_date <='=>$todate);
+			$query = $this->Admin_model->getdatafromtable('cart_payment',$aoption);
+			//print_r($query);die;
+			$adac['data'] = $query;
+			$adac['from'] = $fromdate;
+			$adac['to'] = $todate;
+		}else{
+			$adac['data'] = array();
+			$adac['from'] = "NA";
+			$adac['to'] = "NA";
 		}
-//die;
-		//===========================================
-		$adac['data'] = $query;
-		$adac['hbid'] = $hbid;
+		
 		//print_r($adac['data']); die;		
 		$this->load->view('admin/header',$sess);	
-		$this->load->view('admin/auctionwinapproval',$adac);
+		$this->load->view('admin/totalcommissionrecived',$adac);
 		$this->load->view('admin/footer');
 		
 		
