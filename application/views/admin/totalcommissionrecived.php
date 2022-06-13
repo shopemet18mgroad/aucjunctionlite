@@ -20,7 +20,7 @@
   <input type="date" id="to">
     <label style="font-weight:bold">To:</label>    
    <input type="date" id="from">  
- <button type="button" class="btn btn-primary btn-sm my-5 pl-3" data-toggle="modal" data-target="#viewdetail" onclick="getdateforrep()">View Detail</button>
+ <button type="button" class="btn btn-primary btn-sm my-5 pl-3" data-toggle="modal" data-target="#viewdetail" onclick="getdateforrepcom()">View Detail</button>
  <?PHP IF($from != "NA" && $to != "NA"){?>
   <p class="font-weight-bolder text-primary">Date Selected From : <?php echo $from;?> To : <?php echo $to;?></p>
   <?PHP }?>
@@ -44,11 +44,11 @@
                         <tr>			
                             <td><?php echo $i;?></td>
                             <td><?php echo $report->auction_id;?></td>
-                            <td><?php echo $report->txn_id;?></td>
+                            <td><?php echo $report->iemailid;?></td>
+                            <td><?php echo $report->cbid;?></td>
                             <td><?php echo $report->user_email;?></td>
-                            <td><?php echo $report->entry_fee;?></td>
-                            <td><?php echo $report->txn_date;?></td>
-                            <td class="<?php if($report->payment_status){echo "text-success";}else {echo "text-danger";}?>"><?php if($report->payment_status){echo "SUCCESS";}else {echo "FAILED";}?></td>
+                            <td><?php echo $report->commission;?></td>
+                            <td><?php $com_amt = ($report->cbid*$report->commission)/100; echo $com_amt;?></td>
                         </tr>
                         <?php $i++;}}?>
                   </tbody>    					

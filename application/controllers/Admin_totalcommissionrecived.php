@@ -22,8 +22,7 @@ class Admin_totalcommissionrecived extends CI_Controller {
 	{
 			$this->load->model('Admin_model');
 		$this->load->library('session');
-		
-		
+
 	if(!$this->session->has_userdata('username')|| $this->session->userdata('auth') != "ADMIN"){
 			$datainserr = "Invalid Login Session";
 			header('location: '.base_url().'login/index_error/'.$datainserr);
@@ -37,9 +36,7 @@ class Admin_totalcommissionrecived extends CI_Controller {
 		$this->load->model('Admin_model');
 		$this->load->library('session');
 		if($fromdate != null && $todate != null){
-			$aoption = array('payment_init'=>true, 'txn_date >='=>$fromdate, 'txn_date <='=>$todate);
-			$query = $this->Admin_model->getdatafromtable('cart_payment',$aoption);
-			//print_r($query);die;
+			$query = $this->Admin_model->get_auctionlist_winner($fromdate, $todate);
 			$adac['data'] = $query;
 			$adac['from'] = $fromdate;
 			$adac['to'] = $todate;

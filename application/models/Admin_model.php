@@ -129,7 +129,21 @@ class Admin_model extends CI_Model
 					$result = $query->result();				
 					return $result;
 	}
-		
+	public function get_auctionlist_winner($fromdate, $todate){
+		$this->db->select('
+					a.*,
+					b.*,c.*');
+					$this->db->join('addlot b','a.iauctionid=b.iauctionid','Left');	
+					$this->db->join('cart_payment c','c.auction_id=a.iauctionid', 'Inner');  	
+					$this->db->where('a.winnerapproval',1);	
+					$this->db->where('DATE(a.iauction_end) >=', $fromdate);
+					$this->db->where('DATE(a.iauction_end) <=', $todate);
+					$this->db->where('c.approvalstatus',1); 	
+					$this->db->order_by('a.iauction_start','DESC');	   
+					$query = $this->db->get("auction a");
+					$result = $query->result();				
+					return $result;
+	}	
 	
 	// 1.In buyer only to pull cartegory of car of particular days auction.
 	

@@ -67,6 +67,16 @@ function getdateforrep(){
       }
 
     }
+    function getdateforrepcom(){
+      var to  = $('#to').val();
+      var from = $('#from').val();
+      if(to != '' && from != ''){
+         window.location = "<?php echo base_url() .'Admin_totalcommissionrecived/index/'; ?>"+to+"/"+from; 
+      }else{
+        alert("Please Select Date");
+      }
+
+    }
     function approvewin(v){
      $.get('<?php echo base_url() .'Admin_winnerapproval/adminapprove/'; ?>'+v, function(data){
            if(data == "OK"){

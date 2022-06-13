@@ -131,7 +131,7 @@ padding-top:500px;
 				 elem.innerHTML = width  + "%";
 				 
 		if(width >= 100){
-				window.location = "Register";
+				window.location = "Login";
 			}		 
 				 
 
