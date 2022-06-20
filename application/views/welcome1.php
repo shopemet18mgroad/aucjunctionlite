@@ -34,9 +34,9 @@
 
 
 .suma{
-	width:300px;
-	height:100px;
-	margin-top:-990px;
+	width:200px;
+	height:200px;
+	margin-top:-400px;
 	margin-left:20px;
 }
 
@@ -60,7 +60,7 @@ padding-top:500px;
             width: 10%;
             position: relative;
             transition: linear;
-			margin-top:-450px;
+			margin-top:-250px;
         }
 
 </style>
