@@ -151,7 +151,7 @@ class Send_otp extends CI_Controller {
         $smsgatewaysender = "AUCJUN";
         $smsgatewayMSG = "OTP%20for%20login%20transaction%20on%20Aucjunction%20Lite%20is%20%20".$otpp."%20and%20valid%20till%2030%20mins.%20Do%20not%20share%20this%20OTP%20with%20anyone%20for%20security%20reasons.";
          $subject = 'Welcome To Aucjunction';
-        $from = 'Aucjunction Lite';              // Pass here your mail id
+        $from = 'shopemet18mgroad@gmail.com';              // Pass here your mail id
         $emailContent = '<!DOCTYPE><html><head>
         </head><body>
         <div class="container">
