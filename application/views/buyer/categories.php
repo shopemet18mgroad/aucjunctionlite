@@ -1,11 +1,11 @@
    <main id="main">
     <section class="h-100 mt-5 cart">
-  <div class="container py-2">
-    
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
       
             </div>
             
-          
+          </div>
          
    
    <div class="container  mr-5 mb-5 ">
