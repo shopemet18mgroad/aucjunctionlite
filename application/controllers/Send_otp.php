@@ -47,7 +47,7 @@ class Send_otp extends CI_Controller {
         $smsgatewaysender = "AUCJUN";
         $smsgatewayMSG = "OTP%20for%20login%20transaction%20on%20Aucjunction%20Lite%20is%20%20".$otpp."%20and%20valid%20till%2030%20mins.%20Do%20not%20share%20this%20OTP%20with%20anyone%20for%20security%20reasons.";
          $subject = 'Welcome To Aucjunction';
-        $from = 'shopemet18mgroad@gmail.com';              // Pass here your mail id
+        $from = 'shopemetnetworks@outlook.com';              // Pass here your mail id
         $emailContent = '<!DOCTYPE><html><head>
         </head><body>
         <div class="container">
@@ -59,11 +59,12 @@ class Send_otp extends CI_Controller {
         </div>
         </div></body></html>"';
         $config['protocol']    = 'smtp';
-        $config['smtp_host']    = 'ssl://smtp.gmail.com';
-        $config['smtp_port']    = '465';
-        $config['smtp_timeout'] = '60';
-        $config['smtp_user']    = 'shopemet18mgroad@gmail.com';    //Important
-        $config['smtp_pass']    = '18mgroadnew';  //Important
+        $config['smtp_host']    = 'smtp-mail.outlook.com';
+        $config['smtp_port']    = '587';
+		$config['smtp_crypto']    = 'tls';
+        $config['smtp_timeout'] = '60'; 
+        $config['smtp_user']    = 'shopemetnetworks@outlook.com';    //Important
+        $config['smtp_pass']    = 'Bangalore@123';  //Important
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'html'; // or html
@@ -83,7 +84,7 @@ class Send_otp extends CI_Controller {
             if($this->email->send()){
                 //===========SMS Gateway==============
             $smsgatewaymsgcon = "http://bhashsms.com/api/sendmsg.php?user=".$smsgatewayuser."&pass=".$smsgatewaypass."&sender=".$smsgatewaysender."&phone=".$phone."&text=".$smsgatewayMSG."&priority=ndnd&stype=normal";
-                if(readfile($smsgatewaymsgcon)){
+                if(file_get_contents($smsgatewaymsgcon)){
                     echo "OK";
                 }else{
                     echo "FAIL";
@@ -108,7 +109,7 @@ class Send_otp extends CI_Controller {
                 if($this->email->send()){
                     //===========SMS Gateway==============
                 $smsgatewaymsgcon = "http://bhashsms.com/api/sendmsg.php?user=".$smsgatewayuser."&pass=".$smsgatewaypass."&sender=".$smsgatewaysender."&phone=".$phone."&text=".$smsgatewayMSG."&priority=ndnd&stype=normal";
-                    if(readfile($smsgatewaymsgcon)){
+                    if(file_get_contents($smsgatewaymsgcon)){
                         echo "OK";
                     }else{
                         echo "FAIL";
@@ -151,7 +152,7 @@ class Send_otp extends CI_Controller {
         $smsgatewaysender = "AUCJUN";
         $smsgatewayMSG = "OTP%20for%20login%20transaction%20on%20Aucjunction%20Lite%20is%20%20".$otpp."%20and%20valid%20till%2030%20mins.%20Do%20not%20share%20this%20OTP%20with%20anyone%20for%20security%20reasons.";
          $subject = 'Welcome To Aucjunction';
-        $from = 'shopemet18mgroad@gmail.com';              // Pass here your mail id
+        $from = 'shopemetnetworks@outlook.com';              // Pass here your mail id
         $emailContent = '<!DOCTYPE><html><head>
         </head><body>
         <div class="container">
@@ -163,11 +164,12 @@ class Send_otp extends CI_Controller {
         </div>
         </div></body></html>"';
         $config['protocol']    = 'smtp';
-        $config['smtp_host']    = 'ssl://smtp.gmail.com';
-        $config['smtp_port']    = '465';
-        $config['smtp_timeout'] = '60';
-        $config['smtp_user']    = 'shopemet18mgroad@gmail.com';    //Important
-        $config['smtp_pass']    = '18mgroadnew';  //Important
+        $config['smtp_host']    = 'smtp-mail.outlook.com';
+        $config['smtp_port']    = '587';
+		$config['smtp_crypto']    = 'tls';
+        $config['smtp_timeout'] = '60'; 
+        $config['smtp_user']    = 'shopemetnetworks@outlook.com';    //Important
+        $config['smtp_pass']    = 'Bangalore@123';  //Important
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'html'; // or html
@@ -186,7 +188,7 @@ class Send_otp extends CI_Controller {
             if($this->email->send()){
                 //===========SMS Gateway==============
             $smsgatewaymsgcon = "http://bhashsms.com/api/sendmsg.php?user=".$smsgatewayuser."&pass=".$smsgatewaypass."&sender=".$smsgatewaysender."&phone=".$phone."&text=".$smsgatewayMSG."&priority=ndnd&stype=normal";
-                if(readfile($smsgatewaymsgcon)){
+                if(file_get_contents($smsgatewaymsgcon)){
                     return "OK";
                 }else{
                     return "FAIL";
@@ -211,7 +213,7 @@ class Send_otp extends CI_Controller {
                 if($this->email->send()){
                     //===========SMS Gateway==============
                 $smsgatewaymsgcon = "http://bhashsms.com/api/sendmsg.php?user=".$smsgatewayuser."&pass=".$smsgatewaypass."&sender=".$smsgatewaysender."&phone=".$phone."&text=".$smsgatewayMSG."&priority=ndnd&stype=normal";
-                    if(readfile($smsgatewaymsgcon)){
+                    if(file_get_contents($smsgatewaymsgcon)){
                         return "OK";
                     }else{
                        return "FAIL";
