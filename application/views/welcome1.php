@@ -31,19 +31,22 @@
   	
 <style>
 
-
-
 .suma{
 	width:200px;
 	height:200px;
-	margin-top:-400px;
+	margin-top:-990px;
 	margin-left:20px;
 }
 
 .cart{
 padding-top:500px;
 }
+.cart{
+padding-top:800px;
+}
 
+
+}
 .slide-progress-bar {
             width: 1118px;
             background-color: red;
@@ -55,12 +58,11 @@ padding-top:500px;
 
         .progress-bar {
             height: 15px;
-
             background-color:#D2691E;
             width: 10%;
             position: relative;
             transition: linear;
-			margin-top:-250px;
+			margin-top:-400px;
         }
 
 </style>
