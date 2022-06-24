@@ -52,12 +52,11 @@ class BuyerAuction_myauc extends CI_Controller {
 		}
 		$allauc['allaucdata'] = $allaucarray;
         $allauc['checked'] = "ALL";
-		$fstatus['aucforf'] = true;
 		//print_r( $allauc);die;
 		//$active = array('buyeremail'=>$sess['sessi']);
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_myauc',$allauc);
-		$this->load->view('buyer/footer',$fstatus);
+		$this->load->view('buyer/footer');
 		}
 		}
         public function live(){
@@ -88,12 +87,11 @@ class BuyerAuction_myauc extends CI_Controller {
             $allauc['allaucdata'] = $allaucarray;
             $allauc['checked'] = "LIVE";
 			$allauc['user'] = $sess;
-			$fstatus['aucforf'] = true;
 			//$allauc['date'] = $date;
             //$active = array('buyeremail'=>$sess['sessi']);
             $this->load->view('buyer/header',$sess);
             $this->load->view('buyer/auctionlist_myauclive',$allauc);
-            $this->load->view('buyer/footer',$fstatus);
+            $this->load->view('buyer/footer');
         
             }
 

@@ -46,11 +46,10 @@ class BuyerAuction_wishlist extends CI_Controller {
 			array_push($allaucarray,$aucdet);
 		}
 		$allauc['allaucdata'] = $allaucarray;
-		$fstatus['wish'] = true;
 		//$active = array('buyeremail'=>$sess['sessi']);
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_wishlist',$allauc);
-		$this->load->view('buyer/footer',$fstatus);
+		$this->load->view('buyer/footer');
 	
 		}
 		}

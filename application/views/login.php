@@ -76,7 +76,7 @@ function goBack() {
 <li class="dropdown"><a href="<?php echo base_url();?>Privacypolicy"><span>Privacy Policy</span><i class="bi bi-chevron-down"></i></a>
            
 			</li>			 
-	
+		 
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -206,11 +206,11 @@ function goBack() {
 
   <!-- ======= Footer ======= -->
  
-          <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link <?php if(isset($home)){echo "active";}else if(!isset($home) && !isset($aucforf) && !isset($cart) && !isset($wish)){echo "active";}?>"  data-toggle="tab" href="#"><i class="fas fa-home"></i><br>Home</a>
-                <a class="nav-item nav-link <?php if(isset($aucforf)){echo "active";}?>" data-toggle="tab" href="#"><i class="fa-solid fa-gavel"></i> <br>Auctions</a>
-                <a class="nav-item nav-link <?php if(isset($cart)){echo "active";}?>" data-toggle="tab" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
-                <a class="nav-item nav-link <?php if(isset($wish)){echo "active";}?>" data-toggle="tab" href="#"><i class="fas fa-heart"></i><br> WishList</a>
+            <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
+                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i><br> Home</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i><br> Auctions</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i><br> Cart</a>
+                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i><br> WishList</a>
             </nav>
            
   <div id="preloader"></div>

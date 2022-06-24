@@ -13,7 +13,7 @@
  
 
 
-	<center>  <div class="ab w-100" style="background-color:#2196f363;color:black; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
+	<center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>AUCTION  DETAILS  </div></center>
 	
    <table class="table table-striped" style="colorgrey;font-size15px;">
 <tbody>
@@ -74,7 +74,7 @@
 	
 	<tr>
 	
-	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:black; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
+	<td colspan=2><center>  <div class="ab w-100" style="background-color:#2196f363;color:white; font-size:30px;" ><i><!--<?php //echo //$sqldata1[0]->role ?>--></i>LOT  DETAILS  </div></center></td>
 	</tr>
 	
 	

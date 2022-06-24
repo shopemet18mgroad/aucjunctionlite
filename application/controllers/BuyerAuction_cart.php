@@ -56,10 +56,9 @@ class BuyerAuction_cart extends CI_Controller {
 		$allauc['MERCHANT_KEY'] = "r7qxJl";
 
 		//$active = array('buyeremail'=>$sess['sessi']);
-		$fstatus['cart'] = true;
 		$this->load->view('buyer/header',$sess);
 		$this->load->view('buyer/auctionlist_cart',$allauc);
-		$this->load->view('buyer/footer',$fstatus);
+		$this->load->view('buyer/footer');
 	
 		}
 		}

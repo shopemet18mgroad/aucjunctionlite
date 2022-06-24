@@ -1,3 +1,4 @@
+   
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +31,8 @@
   <link href="<?php echo base_url()."web_files/";?>assets/css/style.css" rel="stylesheet">
   	
 <style>
+
+
 
 .suma{
 	width:200px;

@@ -265,21 +265,15 @@ if($diff <= 0){
       
     </tr>
 	
-		<!--<tr>
+		<tr>
      
       <th scope="row"> Start  Auction Price</th>
-	   <td><?php //echo $row->startaucprice ?></td>
+	   <td><?php echo $row[0]->startaucprice ?></td>
       
     </tr>
 	
+		
 		<tr>
-     
-      <th scope="row">End Auction Price  </th>
-	   <td><?php //echo $row->endaucprice ?></td>
-      
-    </tr> 
-	
-		<tr>-->
      
       <th scope="row">Entry Fee </th>
 	   <td><?php echo $row[0]->entryfee ?></td>
@@ -288,6 +282,29 @@ if($diff <= 0){
 	
 	
 	
+<!--	<tr>
+     
+      <th scope="row">Inspection date and time  </th>
+	     
+	   <td><?php //$inse= $row[0]->iauction_end ;
+	  // $ters = explode('.',$inse);
+       //$inse = $ters[0];
+       //echo  $inse;	   
+	   
+
+	   ?>
+	   
+	      	   <br>to	   <br>
+	   <?php// $aucn = $row[0]->iauction_start; 
+      // $coole = explode('.',$aucn);
+       //$aucn = $coole[0];
+       //echo  $aucn;	 
+	  ?>
+	  </td>
+	  
+	   </td>
+       
+    </tr>-->
 	
 	<tbody>
 	</table>

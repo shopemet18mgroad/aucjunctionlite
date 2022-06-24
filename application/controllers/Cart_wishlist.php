@@ -58,7 +58,6 @@ class Cart_wishlist extends CI_Controller {
 			echo "DE|".$rid;
 		}else{
 			$data = array('auction_id'=>$auctionid, 'entry_fee'=>$auctionimrp, 'cart'=>true, 'wishlist'=>false,'auction'=>false, 'user_email'=>$sessi);
-			print_r($data);die;
 		 	$this->Admin_model->insert('cart_payment', $data);
 		 	echo "DI|".$rid;
 		}
