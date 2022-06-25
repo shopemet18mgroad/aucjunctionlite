@@ -16,7 +16,7 @@
 
 
 <br><br><br>
-<b><span class="ab">Aucjunctionlite</span></b>
+<b><span class="ab">Ajbidpro</span></b>
 <br>
 <b>Brand/Subsidiary of Shopemet Networks Pvt Ltd.</b>
 <br>

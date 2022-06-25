@@ -1,9 +1,7 @@
-
-	
-
-	 <main id="main">
+ <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
+	      <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
      
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
@@ -14,7 +12,6 @@
         </div>
 
         </div>
-        
  
         
       <div class="row ">
@@ -62,14 +59,15 @@
  <?php $proid = str_ireplace('/','-',$row->iauctionid); ?>
 			
 				<tr>												
-					<td><?php echo $count ?> </td>
+					
+					<td data-label=" Sl.No."><?php echo $count ?> </td>
 
-					 <td> <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
-					<td><?php echo $row->icategory ?> </td>
-					<td><?php echo $row->icontactperson ?> </td>
+					<td data-label="Auction Id"> <a href ="<?php echo base_url()."Seller_lotlist/index/".urldecode($proid);?>" ><?php echo $row->iauctionid ?></a></td>
+					<td data-label="Category"><?php echo $row->icategory ?> </td>
+					<td data-label="Seller Name"><?php echo $row->icontactperson ?> </td>
 					
 					
-					<td><?php echo $row->icompanyname ?> </td>
+					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
 					
 					<td data-label="Auction Start and End Time"><?php $aucs= $row->iauction_start;
 	   $temp = explode('.',$aucs);

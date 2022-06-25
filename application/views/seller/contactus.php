@@ -20,7 +20,7 @@
              </div>
 		</center>
 				
-				<div class="modal-body">Aucjunctionlite Brand/Subsidiary of Shopemet Networks Pvt Ltd. </div>
+				<div class="modal-body">Ajbidpro Brand/Subsidiary of Shopemet Networks Pvt Ltd. </div>
                 <div class="modal-body">Plot No 179, Second floor C.D Street, Opp. N T Pet, Mysore road cross, Bengaluru, Bengaluru District, Karnataka, India, 560002.<br><br><br>
 				Corp Off – Plo No 23, 3rd Floor, Hari Prem Complex
 				Binnamangala, Indiranagar 1st Stage, Bangalore<br/>
@@ -37,7 +37,7 @@
 				 
 				 <div class="modal-body">
 				  Ph No : 080-42332722 / +91-9945454505<br/>
-				 Email : admin@Aucjunctionlite.com / admin@shopemet.com
+				 Email : admin@Ajbidpro.com / admin@shopemet.com
 </div>
 
 		

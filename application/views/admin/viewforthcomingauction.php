@@ -1,7 +1,7 @@
  <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
-     
+      <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
                 <div class="col-xl-7 col-lg-9 text-center">
@@ -61,16 +61,16 @@
 			
 			
 				<tr>												
-					<td><?php echo $count ?> </td>
+					<td data-label=" Sl.No."><?php echo $count ?> </td>
 				
-					 <td><?php echo $row->iproductdes ?></a></td>
-					<td><?php echo $row->iemailid ?> </td>
-					<td><?php echo $row->iauctionid ?> </td>
+					<td data-label="Product Description"><?php echo $row->iproductdes ?></a></td>
+					<td data-label="Email"><?php echo $row->iemailid ?> </td>
+					<td data-label="Auction Id"><?php echo $row->iauctionid ?> </td>
 					
 					
-					<td><?php echo $row->icategory ?> </td>
-					<td><?php echo $row->icontactperson ?> </td>
-					<td><?php echo $row->icompanyname ?> </td>
+					<td data-label="Category"><?php echo $row->icategory ?> </td>
+					<td data-label="Seller Name"><?php echo $row->icontactperson ?> </td>
+					<td data-label="Seller Company Name"><?php echo $row->icompanyname ?> </td>
 				
 					
 					
