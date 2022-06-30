@@ -53,7 +53,7 @@ class Cart_wishlist extends CI_Controller {
 		$newaucid = $this->uri->segment(3)."-".$nsessi[0];
 		set_cookie($newaucid,$newaucid, 31536000); 
 		//====================Store Value to cart===========
-		$data = array('auction_id'=>$auctionid);
+		$data = array('auction_id'=>$auctionid,'user_email'=>$sessi);
 		if($this->Admin_model->check('cart_payment', $data)){
 			echo "DE|".$rid;
 		}else{
