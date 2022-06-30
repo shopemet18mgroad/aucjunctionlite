@@ -25,7 +25,7 @@
               <div class="col-md-5 col-lg-5 col-xl-5 offset-lg-1">
 			  <h5 class="mb-0"style="font-size:18px;">Winning Bid Value : <?php  echo $worldata[3]; ?></h5>
         <h5 class="mb-0"style="font-size:18px;">Auction Winner : <?php  echo $worldata[2]; ?></h5>
-                Result:<span class="mb-0" style="color:green;font-size:18px; "><?php echo $worldata[0];?></span>
+
               </div>
               <div class="col-md-2 col-lg-2 col-xl-2 text-end">
                   <div class="row">
@@ -142,7 +142,7 @@
             </tr>
             <tr>
               <th scope="row">End Auction Price  </th>
-            <td><?php echo $mycom->cbid;?></td> 
+            <td><?php echo $mycom->endaucprice;?></td> 
             </tr>
             <tr>
               <th scope="row">Entry Fee </th>

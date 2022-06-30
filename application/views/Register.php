@@ -283,7 +283,7 @@ function validateotp(){
                               
 			swal("Email or Mobile no already exists","warning");       
             }else if(d == "OK"){
-                       window.location = "<?php echo base_url() .'LOGIN'; ?>" 
+                       window.location = "<?php echo base_url() .'login'; ?>" 
                     }else{
      swal("Email or Mobile no OTP wrong or Expired","warning");    
 

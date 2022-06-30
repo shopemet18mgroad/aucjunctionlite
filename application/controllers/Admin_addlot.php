@@ -62,6 +62,7 @@ class Admin_addlot extends CI_Controller {
 		 
 		 
 		$flashdata['txdata'] = $this->session->flashdata('txdata');
+		$this->session->unset_userdata('txdata');
 		$this->load->view('admin/header',$sess);
 		$this->load->view('admin/addlot', $flashdata);
 		$this->load->view('admin/footer');

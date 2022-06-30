@@ -1,10 +1,8 @@
 
-	 <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
-
 	 <main id="main">
 
     <section id="hero" class="d-flex align-items-center">
-     
+      <link href="<?php echo base_url()."web_files/";?>css/tablestyle.css" rel="stylesheet" type="text/css">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mt-5">
                 <div class="col-xl-7 col-lg-9 text-center">
@@ -18,11 +16,11 @@
  
         
       <div class="row ">
-		  
         <table class="table table-striped" id="myTable">
   <thead>
   
-    				<tr>
+    <tr>
+					
 						<th>
 						Sl.No.
 						</th>

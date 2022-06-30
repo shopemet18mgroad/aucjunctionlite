@@ -23,7 +23,7 @@ class Admin_startauction extends CI_Controller {
         
         // Load session library
         $this->load->library('session');
-      
+      $this->session->keep_flashdata('txdata');
 		$this->load->helper('url');
 		$this->load->helper('date');
 	

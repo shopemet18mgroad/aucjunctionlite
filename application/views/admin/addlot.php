@@ -1,4 +1,3 @@
-
   	  
         <main id="main">
     <section class="h-100 h-custom-2 gradient-custom-2">
