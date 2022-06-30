@@ -53,6 +53,7 @@ class Buyer_aucparticipate extends CI_Controller {
 								$windata = "WON|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidamount'];
 								array_push($worl, $windata);
 							}else{
+								$winner = explode('@',$highestvalue[0]['bidderusername']);
 								$windata =  "LOST|".$quer->auction_id.'|'.$winner[0]."|".$highestvalue[0]['bidamount'];
 								array_push($worl,$windata);
 							}
