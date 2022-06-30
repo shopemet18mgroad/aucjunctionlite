@@ -279,13 +279,15 @@ function validateotp(){
                 success: function(d) {
                     if(d == "FAIL"){
            swal("Email or Mobile no OTP wrong or Expired","warning");       
-             }else if(d == "EXT"){
-                              
+             }else if(d == "EXT"){                      
 			swal("Email or Mobile no already exists","warning");       
             }else if(d == "OK"){
+
+              swal("User registered successful","success");
+
                        window.location = "<?php echo base_url() .'login'; ?>" 
                     }else{
-     swal("Email or Mobile no OTP wrong or Expired","warning");    
+                      swal("User registered successful","success");    
 
                     }
                 }
