@@ -89,7 +89,13 @@ if($diff <= 0){
               <p><span class="text-primary">My Bid Value: </span><span class="<?php if($allauc[0]->mybid < $allauc[0]->cbid){echo "text-danger";}else{echo "text-success";}?>" id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
             
               <div class="form-group">
-              <input class="form-control input-sm" id="inpbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" type="number" value="<?php echo $out = ($allauc[0]->startaucprice + $allauc[0]->cbid)+1;?>">
+              <input class="form-control input-sm" id="inpbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" type="number" value="<?php
+				if($allauc[0]->startaucprice < $allauc[0]->cbid){
+					echo $out = ($allauc[0]->cbid)+1;
+				}else{
+					echo $out = ($allauc[0]->startaucprice + $allauc[0]->cbid)+1;
+				}
+			  ?>">
               <button type="button" id="<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" onclick="placebid(this.id)" class="btn btn-primary btn-sm my-2">Bid</button>
             </div>
 
