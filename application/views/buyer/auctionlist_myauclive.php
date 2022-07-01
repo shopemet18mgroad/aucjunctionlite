@@ -90,6 +90,7 @@ if($diff <= 0){
               <p><span class="text-primary">My Bid Value: </span><span class="<?php if($allauc[0]->mybid < $allauc[0]->cbid){echo "text-danger";}else{echo "text-success";}?>" id="mybid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>"><?php echo $allauc[0]->mybid;?></span></p>
             
               <div class="form-group">
+			   <input class="form-control input-sm" type="hidden" id="cbidref-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" value="<?php echo $allauc[0]->cbid;?>"/>
               <input class="form-control input-sm" id="inpbid-<?php echo str_ireplace('/','-',$allauc[0]->iauctionid);?>" type="number" value="<?php
 				if($allauc[0]->startaucprice < $allauc[0]->cbid){
 					echo $out = ($allauc[0]->cbid)+1;
@@ -379,7 +380,13 @@ if($diff <= 0){
 }
 function placebid(auc){
 var bid = $('#inpbid-'+auc).val();
-//alert(bid);return false;
+var cbid = $('#cbidref-'+auc).val();
+var checkdiff = bid - cbid;
+if(checkdiff > 10){
+  alert("Bid Value Should not exceed 10 More than current bid value");
+  return false;
+}
+//alert(cbid);return false;
   if(bid != "" && bid > 0){
 		$.get('<?php echo base_url() .'BuyerAuction_Bid/get_currency/'; ?>'+bid, function(data){
 							let text = "You Are About to bid "+ data;
