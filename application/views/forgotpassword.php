@@ -322,7 +322,7 @@ function goBack() {
                        alert("No User Exists");
                     }else if(d == "OK"){
                       alert("Password Reset Successfully");
-                       window.location = "<?php echo base_url() .'LOGIN'; ?>" 
+                       window.location = "<?php echo base_url() .'login'; ?>" 
                     }else{
                       alert("Password Reset Failed");
                     }
