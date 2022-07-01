@@ -76,8 +76,9 @@ if($diff <= 0){
                   class="img-fluid rounded-3" alt="Cotton T-shirt">
               </div>
               <div class="col-md-6 col-lg-6 col-xl-6 divid_left ">
-                <p class="lead fw-normal mb-2 text-primary"><?php echo $allauc[0]->icategory;?></p>
-				 <p><span class="text-primary">Product Name: </span>IFB Washing Machine<span></p>
+             
+
+				 <p><span class="text-primary">Product Name: </span><?php echo $allauc[0]->icategory;?></p><span></p>
                 <p><span class="text-primary">Auction id: </span><?php echo $allauc[0]->iauctionid;?><span></p>
 				  <p><span class="text-primary">Time Elapsed: </span><span class="text-success" id="timer-<?php echo $ctr;?>"><?php echo $Remaining;?><span></p>
 				<button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#1-<?php echo $ctr; ?>">View Details</button>
