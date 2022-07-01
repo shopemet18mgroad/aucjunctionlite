@@ -381,10 +381,12 @@ if($diff <= 0){
 function placebid(auc){
 var bid = $('#inpbid-'+auc).val();
 var cbid = $('#cbidref-'+auc).val();
-var checkdiff = bid - cbid;
-if(checkdiff > 10){
-  alert("Bid Value Should not exceed 10 More than current bid value");
-  return false;
+var checkdiff = Math.abs(bid - cbid);
+if(cbid != "0"){
+	if(checkdiff > 10){
+	  alert("Bid Value Should not exceed 10 More than current bid value");
+	  return false;
+	}
 }
 //alert(cbid);return false;
   if(bid != "" && bid > 0){
