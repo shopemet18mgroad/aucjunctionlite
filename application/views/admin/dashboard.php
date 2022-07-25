@@ -21,7 +21,7 @@
 			<div id="services" class="container-fluid text-center">
 			
 			
-  <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" alt="logo"/ width="240px;" height="100px"></a> </h2>
+  <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" alt="logo"/ width="200px;" height="130px"></a> </h2>
   <h5>SELECT ANY ONE OPTION FOR REGISTRATION</h5>
   <br>
   <div class="row slideanim w-100" >

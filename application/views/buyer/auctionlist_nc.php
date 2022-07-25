@@ -50,12 +50,7 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
-                <div class="swiper-slide">
-                  <a href="#"
-                      ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
-                    /></a>
-                    <!-- <h1>One Junction For All Auctions</h1> -->
-                </div>
+                
 
                 <div class="swiper-slide">
                   <img src="<?php echo base_url()."web_files/";?>assets/img/portfolio/portfolio-2.jpg" alt="">

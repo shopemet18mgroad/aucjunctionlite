@@ -32,15 +32,28 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
   
 </head>
-
+<style>
+.img-fluid1{
+	margin-left:70px;
+	  width: 50%;
+  height:50%;
+}
+</style>
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
+ <h1 class="logo"<a href="#"
+            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
+          /></a><i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
 
-      <h1 class="logo"<a href="#"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a></h1>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>	 </h1>
+      
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -57,7 +70,7 @@
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-75">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid mt-1 pt-5 "
+        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid1 mt-1 pt-5 "
           />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -80,7 +93,7 @@
         ?>
          
 
-          <div class="divider d-flex align-items-center my-3 pt-5">
+          <div class="divider d-flex align-items-center my-4 pt-5">
             <p class="text-center fw-bold mx-3 mb-0">New User Registration</p>
           </div>
 

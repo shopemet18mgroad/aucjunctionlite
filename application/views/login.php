@@ -32,7 +32,34 @@
 
   
 </head>
+<style>
+.img-fluid1{
+	margin-left:70px;
+	  width: 50%;
+  height:50%;
+}
+.form-outline{
+  font-family: "Times New Roman", Times, serif;
+  
+}
 
+.d-flex{
+  font-family: "Times New Roman", Times, serif;
+}
+
+.dropdown{
+  font-family: "Times New Roman", Times, serif;
+}
+
+.link-danger{
+  font-family: "Times New Roman", Times, serif;
+  margin-right:70px;
+}
+
+
+
+
+</style>
 <body>
 
   <!-- ======= Header ======= -->
@@ -90,7 +117,13 @@ function goBack() {
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-75">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid mt-1 pt-5 "
+	  
+	  
+	  
+	  
+	  
+	  
+        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid1 mt-1 pt-5 "
           />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -110,7 +143,7 @@ function goBack() {
           </div>
 
           <!-- Email input -->
-          <div class="form-outline mb-2">
+          <div class="form-outline mb-2 margin-left:-60px;">
             <input type="email" id="user" class="form-control form-control-lg"
               placeholder="" name="user"/>
             <label class="form-label" for="form3Example3">Email address</label>
@@ -131,7 +164,7 @@ function goBack() {
                 Remember me
               </label>
             </div>
-            <a href="<?php echo base_url()."ForgotPassword";?>" class="link-danger">Forgot password?</a>
+            <a href="<?php echo base_url()."ForgotPassword";?>" class="link-danger"><b>Forgot password?</b></a>
           </div>
           
           
@@ -139,7 +172,7 @@ function goBack() {
              <div class="d-flex justify-content-between">
                <div class="text-center text-lg-start mt-1 pt-2 pb-5">
             <button type="submit" name="submit" class="btn btn-primary btn-sm"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              style="padding-left: 1.5rem; padding-right: 2.5rem;">Login</button>
               
              
              
@@ -172,8 +205,8 @@ function goBack() {
               
               
               
-                   <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="<?php echo base_url()."Register";?>"
-                class="link-primary">Register</a></p>
+                   <p class="small fw-bold my-1 pt-1">Don't have an account? <a href="<?php echo base_url()."Register";?>"
+                class="link-primary"><b>Register</b></a></p>
               
               
               

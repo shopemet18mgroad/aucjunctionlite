@@ -23,8 +23,8 @@ class Seller_startauction extends CI_Controller {
         
         // Load session library
         $this->load->library('session');
-      
-		$this->load->helper('url');
+         $this->session->keep_flashdata('txdata');
+         $this->load->helper('url');
 		$this->load->helper('date');
 	
 		date_default_timezone_set("Asia/Kolkata");

@@ -62,6 +62,7 @@ class Seller_addlot extends CI_Controller {
 		 
 		 
 		$flashdata['txdata'] = $this->session->flashdata('txdata');
+		$this->session->unset_userdata('txdata');
 		$this->load->view('seller/header',$sess);
 		$this->load->view('seller/addlot', $flashdata);
 		$this->load->view('seller/footer');
