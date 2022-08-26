@@ -74,14 +74,14 @@ margin-top:10px;
 
 <body>
 
-  <header id="header" class="fixed-top">
+ <header id="header" class="fixed-top" style="background-color:#00C0A3;opacity:0.9;">
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
           /></a>
 		  
-	 <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+	 <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#ffffff"; font-size:20px;"></i>                           
 
 <script>
 function goBack() {

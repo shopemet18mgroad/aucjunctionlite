@@ -1,8 +1,9 @@
-  <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link <?php if(isset($home)){echo "active";}else if(!isset($home) && !isset($aucforf) && !isset($cart) && !isset($wish)){echo "active";}?>"  data-toggle="tab" onclick="home()" href="Seller_sellerviewdetail"><i class="fas fa-home"></i><br>Home</a>
-                <a class="nav-item nav-link <?php if(isset($aucforf)){echo "active";}?>" data-toggle="tab" onclick="myauc()" href="Seller_aucparticipate"><i class="fa-solid fa-gavel"></i><br> Auctions</a>
-                <a class="nav-item nav-link <?php if(isset($cart)){echo "active";}?>" data-toggle="tab" onclick="cart()" href="Seller_sellerviewdetail"><i class="fa fa-check"></i> <br>Approve</a>
-                <a class="nav-item nav-link <?php if(isset($wish)){echo "active";}?>" data-toggle="tab" onclick="WishList()" href="Seller_sellerviewdetail"><i class="fas fa-heart"></i><br> WishList</a>
+  <nav class="nav nav-pills nav-justified mobile-bottom-nav "style="background-color:#00C0A3;opacity:0.9;">
+  
+                 <a class="nav-item nav-link <?php if(isset($home)){echo "active";}else if(!isset($home) && !isset($aucforf) && !isset($cart) && !isset($wish)){echo "active";}?>"  data-toggle="tab" onclick="home()" href="Seller_sellerviewdetail"><i class="fas fa-home"style="color:#ffffff"></i><br><span style="color:#ffffff;">Home</span></a>
+                <a class="nav-item nav-link <?php if(isset($aucforf)){echo "active";}?>" data-toggle="tab" onclick="myauc()" href="Seller_aucparticipate"><i class="fa-solid fa-gavel"style="color:#ffffff"></i><br><span style="color:#ffffff;"> Auctions</span></a>
+                <a class="nav-item nav-link <?php if(isset($cart)){echo "active";}?>" data-toggle="tab" onclick="cart()" href="Seller_sellerviewdetail"><i class="fa fa-check"style="color:#ffffff"></i> <br><span style="color:#ffffff;">Approve</span></a>
+                <a class="nav-item nav-link <?php if(isset($wish)){echo "active";}?>" data-toggle="tab" onclick="WishList()" href="Seller_sellerviewdetail"><i class="fas fa-heart"style="color:#ffffff"></i><br> <span style="color:#ffffff;">WishList</span></a>
             </nav>
            
   <div id="preloader"></div>

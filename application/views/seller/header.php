@@ -83,7 +83,7 @@ margin-top:10px;
 
 <body>
 
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top"style="background-color:#00C0A3;opacity:0.9;">
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="#"
@@ -92,7 +92,7 @@ margin-top:10px;
           
           
           
-                    				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+                    				  <i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#ffffff; font-size:20px;"></i>                           
 
 <script>
 function goBack() {
@@ -136,7 +136,7 @@ function goBack() {
      
         
 
-		   <li class="dropdown"><a href="#"><span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
+		   <li class="dropdown"><a href="#"><span>Accounts</span> <i class="bi bi-chevron-down"style="color:#ffffff;"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>Seller_sellerviewdetail">My account</a></li>
 
@@ -153,7 +153,7 @@ function goBack() {
          
 		  
           
-		     <li class="dropdown"><a href="#"><span>Auction</span> <i class="bi bi-chevron-down"></i></a>
+		     <li class="dropdown"><a href="#"><span>Auction</span> <i class="bi bi-chevron-down"style="color:#ffffff;"></i></a>
             <ul>
             <li><a href="<?php echo base_url();?>Seller_startauction">Start Auction</a></li>
              <li><a href="<?php echo base_url();?>Seller_auctioneditlist">Edit Auction</a></li>
@@ -162,7 +162,7 @@ function goBack() {
             </li>
 			  
 			 
-			     <li class="dropdown"><a href="<?php echo base_url();?>"><span>Reports</span> <i class="bi bi-chevron-down"></i></a>
+			     <li class="dropdown"><a href="<?php echo base_url();?>"><span>Reports</span> <i class="bi bi-chevron-down"style="color:#ffffff;"></i></a>
             <ul>
 		
 				
@@ -172,7 +172,7 @@ function goBack() {
 			 
             </ul>
             </li>
-			  <li class="dropdown"><a href="<?php echo base_url();?>"><span>Policy</span> <i class="bi bi-chevron-down"></i></a>
+			  <li class="dropdown"><a href="<?php echo base_url();?>"><span >Policy</span> <i class="bi bi-chevron-down"style="color:#ffffff;"></i></a>
             <ul>
 		
 				

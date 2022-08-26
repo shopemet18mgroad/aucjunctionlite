@@ -1,8 +1,8 @@
-  <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" onclick="home()" href="BuyerAuction_details"><i class="fas fa-home"></i><br>Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" onclick="myauc()" href="BuyerAuction_myauc"><i class="fa-solid fa-gavel"></i> <br>Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" onclick="cart()" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab"onclick="wishlist()" href="BuyerAuction_wishlist"><i class="fas fa-heart"></i><br> WishList</a>
+  <nav class="nav nav-pills nav-justified mobile-bottom-nav"style="background-color:#00C0A3;opacity:0.9";>
+                 <a class="nav-item nav-link "style="color:#ffffff;"  data-toggle="tab" onclick="home()" href="BuyerAuction_details"><i class="fas fa-home"></i><br>Home</a>
+                <a class="nav-item nav-link"style="color:#ffffff;" data-toggle="tab" onclick="myauc()" href="BuyerAuction_myauc"><i class="fa-solid fa-gavel"></i> <br>Auctions</a>
+                <a class="nav-item nav-link"style="color:#ffffff;" data-toggle="tab" onclick="cart()" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
+                <a class="nav-item nav-link " style="color:#ffffff;"data-toggle="tab"onclick="wishlist()" href="BuyerAuction_wishlist"><i class="fas fa-heart"></i><br> WishList</a>
             </nav>
            
   <div id="preloader"></div>

@@ -9,7 +9,7 @@
         <div class="row justify-content-center mt-5">
                 <div class="col-xl-7 col-lg-9 text-center">
            <a href="#"
-            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="220px"
+            ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" width="100px"
           /></a>
 		  
         </div>

@@ -36,12 +36,12 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" style="background-color:#00C0A3;">
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"<a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a><i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+          /></a><i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#ffffff"; font-size:20px;"></i>                           
 
 <script>
 function goBack() {
@@ -56,9 +56,9 @@ function goBack() {
 
 
           </li>
-          <li><a class="nav-link scrollto" href="#">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#">Contact Us</a></li>
-           <li><a class="nav-link scrollto" href="#">Privacy Policy</a></li>
+          <li><a class="nav-link scrollto" href="#"style="color:#ffffff"><b>About Us</b></a></li>
+          <li><a class="nav-link scrollto" href="#"style="color:#ffffff"><b>Contact Us</b></a></li>
+           <li><a class="nav-link scrollto" href="#"style="color:#ffffff"><b>Privacy Policy</b></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -71,8 +71,7 @@ function goBack() {
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid mt-1 pt-1"
-          />
+       
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
   
@@ -100,14 +99,15 @@ function goBack() {
             
 
           <div class="divider d-flex align-items-center my-0">
-            <p class="text-center fw-bold mx-3 mb-0">Forgot Password</p>
+            <p class="text-center fw-bold mx-3 mb-0"style="color:#ffffff"><b>Forgot Password</b></p>
           </div>
 
+<br><br><br>
           <!-- Email input -->
           <div class="form-outline mb-2">
             <input type="text" id="emailph" name="emailph" class="form-control form-control-lg"
               placeholder="" />
-            <label class="form-label" for="form3Example3">Email address or Phone Number</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Email address or Phone Number</b></label>
           </div>
 
           <!-- Password input -->
@@ -126,16 +126,16 @@ function goBack() {
              <div class="d-flex justify-content-between">
                <div id="nb" class="text-center text-lg-start mt-1 pt-2 pb-5">
             <button type="submit" name="submit" class="btn btn-primary btn-lg" id="optbtn" onclick="return sendresetpassotp()"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Submit</button>
+              style="padding-left: 2.5rem; padding-right: 2.5rem; font-size:15px;"><b>Submit</b></button>
 
              </div>  
                    <div class="container">
         <div class="row">
             <div class="switch-field justify-content-center py-3 ml-2" >
               <input type="radio" id="radio-three" name="switch-two" value="SELLER"/>
-              <label for="radio-three">Seller</label>
+              <label for="radio-three"><b>Seller</b></label>
               <input type="radio" id="radio-four" name="switch-two" value="BUYER" checked/>
-              <label for="radio-four">Buyer</label>
+              <label for="radio-four"><b>Buyer</b></label>
           
               
           </div>
@@ -144,27 +144,27 @@ function goBack() {
       </div>
       </div>
        <div class="divider d-flex align-items-center my-2">
-            <p class="text-center fw-bold mx-3 mb-0">Reset Password</p>
+            <p class="text-center fw-bold mx-3 mb-0"style="color:#ffffff"><b>Reset Password</b></p>
           </div>
           
            <div class="form-outline mb-2">
             <input type="text" id="otpph" name="otpph" class="form-control form-control-lg"
               placeholder="" />
-            <label class="form-label" for="form3Example3">Enter OTP</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Enter OTP</b></label>
           </div>
            <div class="form-outline mb-2">
             <input type="password" id="npass" name="npass" class="form-control form-control-lg"
               placeholder="" />
-            <label class="form-label" for="form3Example3">New Password</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>New Password</b></label>
           </div>
            <div class="form-outline mb-2">
             <input type="password" id="cpass" name="cpass" class="form-control form-control-lg"
               placeholder="" />
-            <label class="form-label" for="form3Example3">Confirm Password</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Confirm Password</b></label>
           </div>
            <div class="form-outline mb-2">
             <button type="submit" name="submit2" id="submit2" onclick="validateotpfrrst()" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Reset Password</button>
+              style="padding-left: 2.5rem; padding-right: 2.5rem;"><b>Reset Password</b></button>
           </div>
           
           
@@ -177,8 +177,8 @@ function goBack() {
               
               
               
-                   <p class="small fw-bold mt-0 pt-1 mb-5">Don't have an account? <a href="<?php echo base_url()."Register";?>"
-                class="link-primary">Register</a></p>
+                   <p class="small fw-bold mt-0 pt-1 mb-5"style="color:#ffffff">Don't have an account? <a href="<?php echo base_url()."Register";?>"
+                class="link-primary"><b>Register</b></a></p>
               
               
               
@@ -210,12 +210,11 @@ function goBack() {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
- 
-            <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link "  data-toggle="tab" href="#nav-home"><i class="fas fa-home"></i> Home</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"></i> Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"></i> Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"></i> WishList</a>
+ <nav class="nav nav-pills nav-justified mobile-bottom-nav" style="background-color:#00C0A3;">
+                 <a class="nav-item nav-link "style="color:#ffffff;"  data-toggle="tab" href="#nav-home"><i class="fas fa-home"   style="color:#ffffff;"></i><br> <b>Home</b></a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"style="color:#ffffff;"></i><br> <b>Auctions</b></a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"style="color:#ffffff;"></i><br><b> Cart</b></a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"style="color:#ffffff;"></i><br><b> WishList</b></a>
             </nav>
            
   <div id="preloader"></div>

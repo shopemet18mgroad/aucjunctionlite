@@ -1,4 +1,34 @@
+<style>
+/* GLOBAL STYLES */
 
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+</style>
 <main id="main">
 
 
@@ -20,9 +50,11 @@
                 
 			<div id="services" class="container-fluid text-center">
 			
-			
-  <h2> <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" alt="logo"/ width="200px;" height="130px"></a> </h2>
-  <h5>SELECT ANY ONE OPTION FOR REGISTRATION</h5>
+
+  <div class="typewriter">
+  <h1>AJBIDPRO-Auction Bidding Platform</h1>
+</div>
+
   <br>
   <div class="row slideanim w-100" >
     <div class="col-sm-6">

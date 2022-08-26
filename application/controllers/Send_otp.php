@@ -68,7 +68,7 @@ class Send_otp extends CI_Controller {
 		$config['smtp_crypto']    = 'tls';
         $config['smtp_timeout'] = '60'; 
         $config['smtp_user']    = 'shopemetnetworks@outlook.com';    //Important
-        $config['smtp_pass']    = 'Bangalore@123';  //Important
+        $config['smtp_pass']    = 'Charith_dev';  //Important
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'html'; // or html
@@ -174,7 +174,7 @@ class Send_otp extends CI_Controller {
 		$config['smtp_crypto']    = 'tls';
         $config['smtp_timeout'] = '60'; 
         $config['smtp_user']    = 'shopemetnetworks@outlook.com';    //Important
-        $config['smtp_pass']    = 'Bangalore@123';  //Important
+        $config['smtp_pass']    = 'Charith_dev';  //Important
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'html'; // or html

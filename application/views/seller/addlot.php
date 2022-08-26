@@ -17,7 +17,7 @@
 				
 				
 				
-                  <h4 class="card-title">ADD LOT </h4>
+                  <h4 class="card-title"style="color:#000000;"><b>ADD LOT </b></h4>
                   <p class="card-description">
                     
                   </p>
@@ -92,7 +92,7 @@
                   
                   
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Category</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Category</b></label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory">
 			
@@ -119,7 +119,7 @@
                     
                     
                   <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Sub-category</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Sub-category</b></label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="isubcategory" name="isubcategory">
 				<option value="Select" selected>Select</option>
@@ -148,14 +148,14 @@
 					
 					
 					<div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Product Name </label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Product Name</b> </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iproductname" name="iproductname" placeholder="Product Name ">
                       </div>
                     </div>
                    
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">product Description</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>product Description</b></label>
                       <div class="col-sm-9">
                         <textarea row m-4s="4" cols="5" class="form-control form-control-lg" id="iproductdes" name="iproductdes" placeholder="product Description " ></textarea>
                       </div>
@@ -165,7 +165,7 @@
 					
 					
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Inspection Till</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Inspection Till</b></label>
                       <div class="col-sm-9">
                         <input type="datetime-local" class="form-control form-control-lg" id="inspectiondate" name="inspectiondate" placeholder="Inspection Date ">
                       </div>
@@ -177,14 +177,14 @@
 					
                    
 					 <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label"> Expected price</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"> <b>Expected price</b></label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="imrp" name="imrp" placeholder=" Expectprice ">
                       </div>
                     </div>
                     
                     <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Start  Auction Price</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Start  Auction Price</b></label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="startaucprice" name="startaucprice" placeholder="Start Auction Price">
                       </div>
@@ -281,7 +281,7 @@
 
 								  <div class="form-group row m-4">
 	  
-	   	<label for="" class="col-sm-3 col-form-label">State</label>
+	   	<label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>State</b></label>
 				 <div class="col-sm-9">	
 
 								<body onload="resetSelection()">
@@ -337,10 +337,10 @@
 							
 							
 								
-								<label for="" class="col-sm-3 col-form-label">City</label>
+								<label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>City</b></label>
 								
 								<div class="col-sm-9">
-								<select class="form-control form-control-lg" id="pcities" name="pcities" size="1">
+								<select class="form-control form-control-lg"style="color:#000000;" id="pcities" name="pcities" size="1">
 									<option value="" disabled selected>Choose City</option>
 									<option></option>
 								</select>
@@ -379,7 +379,7 @@
 					
 					
 					   <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Commision</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Commision</b></label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="commission" name="commission">
 				
@@ -404,8 +404,8 @@
 					
 					
 			 <div class="form-group row m-4">
-                      <label for="" class="col-sm-3 col-form-label">Upload photos</label>
-                      <div class="col-sm-9">
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b>Upload photos</b></label>
+                      <div class="col-sm-9"style="color:#000000;">
                         <input type="file" class="mt-3" id="imageupload" name="imageupload[]" multiple placeholder="End Auction Price">
                       </div>
                     </div>

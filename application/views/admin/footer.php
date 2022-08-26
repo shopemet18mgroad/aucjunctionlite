@@ -1,8 +1,8 @@
-  <nav class="nav nav-pills nav-justified mobile-bottom-nav ">
-                 <a class="nav-item nav-link active"  data-toggle="tab" onclick="home()" href="#"><i class="fas fa-home"></i> <br>Home</a>
-                <a  class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fa-solid fa-gavel"></i><br>Auctions</a>
-                <a class="nav-item nav-link" data-toggle="tab" onclick="home()" href="#"><i class="fas fa-shopping-cart"></i><br> Cart</a>
-                <a class="nav-item nav-link " data-toggle="tab"onclick="home()" href="#"><i class="fas fa-heart"></i><br>Wishlist</a>
+  <nav class="nav nav-pills nav-justified mobile-bottom-nav" style="background-color:#00C0A3;opacity:0.9;">
+                 <a class="nav-item nav-link "style="color:#ffffff;"  data-toggle="tab" href="#nav-home"><i class="fas fa-home"   style="color:#ffffff;"></i><br> Home</a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"style="color:#ffffff;"></i><br> Auctions</a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"style="color:#ffffff;"></i><br> Cart</a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"style="color:#ffffff;"></i><br> WishList</a>
             </nav>
            
   <div id="preloader"></div>

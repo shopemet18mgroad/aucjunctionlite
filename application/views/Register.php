@@ -42,11 +42,11 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top"style="background-color:#00C0A3;">
     <div class="container d-flex align-items-center justify-content-between">
  <h1 class="logo"<a href="#"
             ><img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid"
-          /></a><i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#808080; font-size:20px;"></i>                           
+          /></a><i class="fas fa-arrow-left m-3"   onclick="goBack()" style="float:left;color:#ffffff; font-size:20px;"></i>                           
 
 <script>
 function goBack() {
@@ -66,12 +66,11 @@ function goBack() {
   </header><!-- End Header -->
 
   <main id="main">
-    <section class="vh-75 login">
+    <section class="vh-75 login" style="overflow:excess;">
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-75">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="<?php echo base_url()."web_files/";?>assets/img/aucjunction.png" class="img-fluid1 mt-1 pt-5 "
-          />
+       
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
       
@@ -94,25 +93,25 @@ function goBack() {
          
 
           <div class="divider d-flex align-items-center my-4 pt-5">
-            <p class="text-center fw-bold mx-3 mb-0">New User Registration</p>
+            <p class="text-center fw-bold mx-3 mb-0" style="color:#ffffff"><b>New User Registration</b><p>
           </div>
 
           <!-- Email input -->
           <div class="form-outline mb-2">
             <input type="email" id="iemailid" class="form-control form-control-lg"
               placeholder=""  name="iemailid"/>
-            <label class="form-label" for="form3Example3">Email address </label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Email address </b></label>
             <input type="text" class="form-control form-control-lg"
               placeholder="" name="icontactnumber" id="icontactnumber" />
-            <label class="form-label" for="form3Example3">Phone Number</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Phone Number</b></label>
              <input type="password"  class="form-control form-control-lg"
-              placeholder=""  name="ipass" id="ipass"/><i class="bi bi-eye-slash errspan" id="togglePassword"></i>
-            <label class="form-label" for="form3Example3">Password</label>
+              placeholder=""  name="ipass" id="ipass"/><i class="bi bi-eye-slash errspan" id="togglePassword"style="color:#ffffff"></i>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Password</b></label>
 			
 			 <div class="mb-4 pb-2">
                     <div class="form-outline form-white mm">
-                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder=""/><i class="bi bi-eye-slash errspan" id="togglePassword1"></i>
-                      <label class="form-label" for="form3Examplea3"> Confirm Password</label>
+                    <input type="password" class="form-control form-control-lg" id="iconpass" name="iconpass" maxLength="15" placeholder=""/><i class="bi bi-eye-slash errspan" id="togglePassword1"style="color:#ffffff"></i>
+                      <label class="form-label" for="form3Examplea3"style="color:#ffffff"><b> Confirm Password</b></label>
                     </div>
                   </div>
 			
@@ -140,7 +139,7 @@ function goBack() {
              <div class="d-flex justify-content-between">
                <div id="nb" class="text-center">
             <button type="submit" name="submit" id="optbtn" class="btn btn-primary "
-              style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="return sendotp()">Validate</button>
+              style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="return sendotp()"><b>Validate<b/></button>
               
       
              
@@ -153,9 +152,9 @@ function goBack() {
         <div class="row">
             <div class="switch-field" >
                  <input type="radio" id="radio-three" name="switchtwo" value="BUYER" checked/>
-              <label for="radio-three">BUYER</label>
+              <label for="radio-three"><b>BUYER</b></label>
               <input type="radio" id="radio-four" name="switchtwo" value="SELLER"/>
-              <label for="radio-four">SELLER</label>
+              <label for="radio-four"><b>SELLER</b></label>
               
           </div>
         </div>
@@ -164,21 +163,21 @@ function goBack() {
       </div>
       </div>
        <div class="divider d-flex align-items-center my-1">
-            <p class="text-center fw-bold mx-3 mb-0">Validate Email & Phone Number</p>
+            <p class="text-center fw-bold mx-3 mb-0"style="color:#ffffff"><b>Validate Email & Phone Number</b></p>
           </div>
 
           <div class="form-outline mb-0">
         
             <input type="email" id="vphotp" class="form-control form-control-lg"
               placeholder=""  name="vphotp">
-            <label class="form-label" for="form3Example3">Phone Number OTP</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>Phone Number OTP</b></label>
             <input type="text" id="vemailotp" class="form-control form-control-lg"
               placeholder=""  name="vemailotp">
-            <label class="form-label" for="form3Example3">E-mail OTP</label>
+            <label class="form-label" for="form3Example3"style="color:#ffffff"><b>E-mail OTP</b></label>
             
           </div>
-           <button type="submit" name="submit2" id="submit2" onclick="return validateotp()" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+           <button type="submit" name="submit2" id="submit2" onclick="return validateotp()" class="btn btn-primary btn-sm"
+              style="padding-left: 1rem; padding-right: 1rem;padding-bottom:60px;font-size:20px;height:20px;"><center><b>Register</b></center></button>
   
 
       </div>
@@ -195,7 +194,12 @@ function goBack() {
 
   <!-- ======= Footer ======= -->
  
-         
+     <nav class="nav nav-pills nav-justified mobile-bottom-nav" style="background-color:#00C0A3;">
+                 <a class="nav-item nav-link "style="color:#ffffff;"  data-toggle="tab" href="#nav-home"><i class="fas fa-home"   style="color:#ffffff;"></i><br><b> Home</b></a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile"><i class="fa-solid fa-gavel"style="color:#ffffff;"></i><br><b> Auctions</b></a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile2"><i class="fas fa-shopping-cart"style="color:#ffffff;"></i><br><b> Cart</b></a>
+                <a class="nav-item nav-link "style="color:#ffffff;" data-toggle="tab" href="#nav-profile3"><i class="fas fa-heart"style="color:#ffffff;"></i><br> <b>WishList</b></a>
+            </nav>    
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

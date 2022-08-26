@@ -15,13 +15,13 @@
          
               
               
-                  <h4 class="card-title">START AUCTION </h4>
+                  <h4 class="card-title"style="color:#000000;"><b>START AUCTION </b></h4>
                   <p class="card-description">
                     
                   </p>
 				  
 				     <div class="form-group row m-3">
-                      <label for="" class="col-sm-3 col-form-label">Category</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b> Category</b> </label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="icategory" name="icategory" onChange="auction_id()">
 				<option value="Select" selected>Select</option>
@@ -43,14 +43,14 @@
                     </div>
 					
                     <div class="form-group row m-3">
-                      <label for="" class="col-sm-3 col-form-label">Auction Id</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b> Auction Id</b> </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iauctionid" name="iauctionid" placeholder="Auction Id" readonly>
                       </div>
                     </div>
 					
 						<div class="form-group row m-3">
-                      <label for="" class="col-sm-3 col-form-label">Type</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b> Type</b> </label>
                       <div class="col-sm-9">
                         <select class="form-control form-control-lg" id="irole" name="irole" onChange="meghasuma()">
 				<option value="Select" selected>Select</option>
@@ -65,7 +65,7 @@
                     </div>
 					
                     <div class="form-group row m-3">
-                      <label for="" class="col-sm-3 col-form-label">Seller Name</label>
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b> Seller Name</b> </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="icontactperson" name="icontactperson" placeholder="Seller Name" readonly>
                       </div>
@@ -73,14 +73,14 @@
 								
 			
                  
-                    <div class="form-group row m-3 icompanyname">
-                      <label for="" class="col-sm-3 col-form-label icompanyname">Seller Company Name</label>
+                    <div class="form-group row m-3 icompanyname"style="color:#000000;">
+                      <label for="" class="col-sm-3 col-form-label icompanyname"><b> Seller Company Name</b> </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg icompanyname" id="icompanyname" name="icompanyname" placeholder="Seller Company Name"   onkeyup="search_company()"><div id="select" class="select"><ul id="dp"></ul></div>  
                       </div>
                     </div>
 					<div class="form-group row m-3 iemailid">
-                      <label for="" class="col-sm-3 col-form-label iemailid ">Seller User Id</label>
+                      <label for="" class="col-sm-3 col-form-label iemailid "style="color:#000000;"><b> Seller User Id</b> </label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control form-control-lg" id="iemailid" name="iemailid" placeholder="Seller User ID"   onkeyup="search_company1()"><div id="select" class="select"><ul id="dpp"></ul></div>  
                       </div>
@@ -88,11 +88,11 @@
 					
 		
 						 <div class="form-group row m-3">
-                      <label for="" class="col-sm-3 col-form-label">Online Auction Start And End Date</label>
-                      <div class="col-sm-9">
-                       From: 	
+                      <label for="" class="col-sm-3 col-form-label"style="color:#000000;"><b> Online Auction Start And End Date</b> </label>
+                      <div class="col-sm-9"style="color:#000000;">
+                       <b>From:</b> 	
                         <input class="form-control form-control-lg" id="iauction_start" name="iauction_start" type="datetime-local" ><br>
-                         To: 	
+                        <b> To: </b>	
 		                <input class="form-control form-control-lg" id="iauction_end" name="iauction_end" type="datetime-local" >
                       </div>
                     </div>

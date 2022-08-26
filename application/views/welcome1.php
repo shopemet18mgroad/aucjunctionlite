@@ -35,9 +35,9 @@
 
 
 .suma{
-	width:200px;
-	height:200px;
-	margin-top:-990px;
+	width:130px;
+	height:130px;
+	margin-top:-1200px;
 	margin-left:20px;
 }
 
@@ -57,11 +57,12 @@ padding-top:800px;
             display: inline-block;
             vertical-align: middle;
 			
+			
         }
 
         .progress-bar {
             height: 15px;
-            background-color:#D2691E;
+            background-color:#FF8C00;
             width: 10%;
             position: relative;
             transition: linear;
